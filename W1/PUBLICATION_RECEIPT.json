@@ -1,6 +1,6 @@
 {
   "schema": "FHS5.PLP.W1.PublicationReceipt@public-1",
-  "generated_at": null,
+  "generated_at": "2026-11-24T22:47:51+08:00",
   "repository": {
     "full_name": "shw097-team/FHS-5",
     "html_url": "https://github.com/shw097-team/FHS-5",
@@ -20,5 +20,23 @@
     "statement": "The user explicitly requested pushing the W1 execution results and evidence to shw097-team/FHS-5.",
     "not_original_acceptance": true
   },
-  "commit": null
+  "commit": {
+    "sha": "2d263cd4001e8cefde679795370498394d6a5de0",
+    "short": "2d263cd",
+    "branch": "main",
+    "message": "FHS-5_PLP W1 author execution, evidence, and reference adapter (AUTHOR_LOCAL_EXECUTION_COMPLETE_WITH_14_NAMED_HOLDS)",
+    "remote_head_verified": true
+  },
+  "verification": {
+    "public_checks": {
+      "replay_hashes": "REPLAY_OK 58 files",
+      "w1_guard": "PASS 671 checks",
+      "m22_guard": "PASS 13 cases",
+      "run_cases": "PASS 9/9 + 4 NOT_RUN",
+      "run_harness": "PASS 17/17"
+    },
+    "public_primary_tree_sha256": "a338748aa0eac8f069154df435bac12d725ef96e6c84171140073f5564a472aa",
+    "public_manifest_tree_sha256_before_receipt": "fed825e210ec0057961903bef3007b7c4b0288f67bfe05b774dd9ee7274efe53",
+    "not_original_acceptance": true
+  }
 }

@@ -1,10 +1,11 @@
 {
   "schema": "FHS5.PLP.W1.PublicSeal@public-1",
-  "public_manifest_sha256": "09e9155f7d70bd1eaddeafac4ccf311e3a4ad4dc5b371d6636a0b127d4b744cf",
-  "public_tree_sha256": "fed825e210ec0057961903bef3007b7c4b0288f67bfe05b774dd9ee7274efe53",
+  "public_manifest_sha256": "ff28f8f51ee1f76052c5db4a07d5238d4bf694cc91475111b4c836738edd04d6",
+  "public_tree_sha256": "03c63ae74d4e3b29a2468f47bb0c66ccb68043d033807d9e6be51df06afde0a6",
   "primary_public_manifest_sha256": "fa2be77107eee60dc4c98eeb0cb844517336eaae61fb4ef6747f1f112ac5ef68",
   "primary_public_tree_sha256": "a338748aa0eac8f069154df435bac12d725ef96e6c84171140073f5564a472aa",
   "file_count": 92,
+  "commit": "2d263cd4001e8cefde679795370498394d6a5de0",
   "claim_ceiling": "AUTHOR_DESIGN_ONLY",
   "not_claimed": [
     "PI_READY",

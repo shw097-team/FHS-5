@@ -2,13 +2,13 @@
   "schema": "FHS5.PLP.W1.PublicManifest@public-1",
   "public_export": true,
   "file_count": 92,
-  "total_bytes": 1792336,
-  "tree_sha256": "fed825e210ec0057961903bef3007b7c4b0288f67bfe05b774dd9ee7274efe53",
+  "total_bytes": 1793327,
+  "tree_sha256": "03c63ae74d4e3b29a2468f47bb0c66ccb68043d033807d9e6be51df06afde0a6",
   "files": [
     {
       "path": "PUBLICATION_RECEIPT.json",
-      "bytes": 1009,
-      "sha256": "67abd14e556102ff339db0bc5c7a2727d39995dbd6b33a1c18a5a2063522ec9e"
+      "bytes": 1808,
+      "sha256": "1e43c1fd9beca3fc399ca219326b3e58c15c8ff86967279d8fcf68ce6af1d41c"
     },
     {
       "path": "PUBLIC_PRIMARY_INDEX.json",
@@ -22,8 +22,8 @@
     },
     {
       "path": "PUBLIC_SCOPE.json",
-      "bytes": 5558,
-      "sha256": "001b11c64abea6eb2574d830673e92768c5d26f09799d5cea60fbf4956f1de57"
+      "bytes": 5750,
+      "sha256": "5a914898ed459ed6f50a569afc169c589d0036eb841562c3c534debc67024e88"
     },
     {
       "path": "README.md",

@@ -111,7 +111,10 @@
   "security_scan": {
     "exact_token_hits": 0,
     "github_pat_pattern_hits": 0,
-    "api_key_filename_hits": 0
+    "api_key_filename_hits": 0,
+    "absolute_path_hits_in_public_evidence": 0,
+    "verified_at": "2026-11-24T22:47:51+08:00",
+    "method": "exact token compare + github_pat pattern + absolute-root scan over W1/evidence"
   },
   "not_original_acceptance": true
 }
