@@ -1,0 +1,92 @@
+{
+  "schema": "FHS5.PLP.W1.NamedHolds@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "count": 14,
+  "holds": [
+    {
+      "id": "W1_HOST_NINE_GRID",
+      "gap": "ChatGPT/Hermes all states; Codex last three",
+      "owner": "各 Host Owner",
+      "resume_minimum": "每 Host manifest/LoadedSHA/Invocation/Consumer readback"
+    },
+    {
+      "id": "W1_PLUGIN_ALIAS",
+      "gap": "sbl-tpm-sp vs tpm-sp-plp alias identity",
+      "owner": "Plugin/Host Owner",
+      "resume_minimum": "original manifest/Loaded ID"
+    },
+    {
+      "id": "W1_ABI_BOUND",
+      "gap": "Guide/Bridge proposal-2 consumer crosswalk",
+      "owner": "ABI Owner",
+      "resume_minimum": "field→target→loss→readback"
+    },
+    {
+      "id": "W1_W0_INPUT",
+      "gap": "W0 author pack only, no Host raw",
+      "owner": "W0 Wave Owner",
+      "resume_minimum": "author Source/Case/Proposal"
+    },
+    {
+      "id": "W0_PRIMARY_RECEIPT_STALE",
+      "gap": "4222/6dbd vs 3986/18ad",
+      "owner": "W0 Curator/Human Owner",
+      "resume_minimum": "recompute or written confirmation"
+    },
+    {
+      "id": "W0-A_CASE_SELECTION",
+      "gap": "6 candidates, no owner designation",
+      "owner": "Original Project/Source Owner",
+      "resume_minimum": "designation or typed ReasonedNA"
+    },
+    {
+      "id": "W0-B_NOT_ADMITTED",
+      "gap": "13 prerequisites UNBOUND",
+      "owner": "Original Issuer/Repo/Host",
+      "resume_minimum": "13 typed receipts"
+    },
+    {
+      "id": "ORIGINAL_READER_UNBOUND",
+      "gap": "no canonical reader",
+      "owner": "Reader Owner",
+      "resume_minimum": "same-scope typed readback"
+    },
+    {
+      "id": "ORACLE_FIXTURE_UNBOUND",
+      "gap": "original case oracle/fixture absent",
+      "owner": "Case Owner",
+      "resume_minimum": "same-case bytes"
+    },
+    {
+      "id": "HOST_CAPABILITY_UNBOUND",
+      "gap": "three-host capabilities absent",
+      "owner": "Host Owner",
+      "resume_minimum": "seven-stage raw"
+    },
+    {
+      "id": "CHECKER_PUBLISHER_UNBOUND",
+      "gap": "no protected checker/publisher",
+      "owner": "Checker/Publisher",
+      "resume_minimum": "distinct receipt"
+    },
+    {
+      "id": "SOURCE_REFERENCE_HASH_CONFLICT",
+      "gap": "same-name different-SHA family",
+      "owner": "Source Curator",
+      "resume_minimum": "authorized replacement/exclusion"
+    },
+    {
+      "id": "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+      "gap": "1011 identity list absent",
+      "owner": "W0-C Owner",
+      "resume_minimum": "original ID list"
+    },
+    {
+      "id": "HOLD_CR-DOC04-STATE-MAP",
+      "gap": "T4/T5 DOC04 state map",
+      "owner": "Original Reader/DOC04 Owner",
+      "resume_minimum": "same-scope DOC04 readback"
+    }
+  ],
+  "result": "NAMED_HOLDS_PRESERVED"
+}

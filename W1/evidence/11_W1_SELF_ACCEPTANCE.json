@@ -1,0 +1,97 @@
+{
+  "schema": "FHS5.PLP.W1.SelfAcceptance@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "claim_ceiling": "AUTHOR_DESIGN_ONLY",
+  "verdict": "AUTHOR_LOCAL_EXECUTION_COMPLETE_WITH_14_NAMED_HOLDS",
+  "status": "SELF_CHECK_ONLY",
+  "checks": [
+    {
+      "id": "AC-01",
+      "check": "15 normative files present",
+      "observed": 15,
+      "evidence": "03/04 identity + guard",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-02",
+      "check": "16 sources pinned",
+      "observed": 16,
+      "evidence": "03_W1_S0_SOURCE_FREEZE.json",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-03",
+      "check": "13 cases with fixture/oracle",
+      "observed": 13,
+      "evidence": "06_W1_S3_ABI_AND_CASES.json",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-04",
+      "check": "9 local rule cases pass",
+      "observed": 9,
+      "evidence": "evidence/raw/case_rule_results.json",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-05",
+      "check": "17/17 mutants rejected",
+      "observed": 17,
+      "evidence": "02_W1_HARNESS_LOOP.json",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-06",
+      "check": "22/22 reference adapter checks",
+      "observed": 22,
+      "evidence": "13_W1_REFERENCE_ADAPTER_RESULTS.json",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-07",
+      "check": "6 WP dry-consume accounted",
+      "observed": 6,
+      "evidence": "14_W1_WP_DRY_CONSUME.json",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-08",
+      "check": "21 host cells + 12 children accounted",
+      "observed": 33,
+      "evidence": "08_W1_S5_HOST_OBSERVATION.json",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-09",
+      "check": "14 named holds preserved",
+      "observed": 14,
+      "evidence": "12_W1_NAMED_HOLDS.json",
+      "status": "PASS"
+    },
+    {
+      "id": "AC-10",
+      "check": "ZIP clean-room 4/4 commands",
+      "observed": 4,
+      "evidence": "05_W1_S2_STRUCTURE.json",
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "checks": 10,
+    "pass": 10,
+    "fail": 0,
+    "author_local_open": 0,
+    "original_domain_holds": 14
+  },
+  "not_claimed": [
+    "PI_READY",
+    "PD_BOUND",
+    "EXECUTION_ADMITTED",
+    "NATIVE_PASS",
+    "INDEPENDENT_PASS",
+    "RELEASED",
+    "MISSION_COMPLETE"
+  ],
+  "statement": "All author-executable W1 ECP and TQAEP items are closed locally; original Host/Runner/Checker/Publisher items remain named HOLDs."
+}

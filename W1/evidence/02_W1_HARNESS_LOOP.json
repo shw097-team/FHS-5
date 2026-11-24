@@ -1,0 +1,70 @@
+{
+  "schema": "FHS5.PLP.W1.HarnessLoop@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "iterations": [
+    {
+      "iteration": 0,
+      "phase": "DETECT",
+      "input": "owner-selected primary baseline",
+      "baseline_checks": {
+        "w1_guard": "PASS",
+        "m22": "PASS",
+        "replay": "PASS",
+        "harness": "17/17"
+      },
+      "open": [
+        {
+          "id": "F-13",
+          "severity": "P2",
+          "title": "stale TQAEP command token"
+        },
+        {
+          "id": "F-14",
+          "severity": "P3",
+          "title": "evidence raw names retired root"
+        },
+        {
+          "id": "F-15",
+          "severity": "P3",
+          "title": "primary metadata absolute retired root"
+        }
+      ]
+    },
+    {
+      "iteration": 1,
+      "phase": "REPAIR",
+      "actions": [
+        "replace TQAEP command with primary token",
+        "recompute TQAEP projection",
+        "regenerate case/harness/host-probe raw",
+        "rebuild FileManifest/PrimaryManifest/index/ZIP/seal",
+        "record POST_PROMOTION_REPAIR_RECEIPT"
+      ]
+    },
+    {
+      "iteration": 2,
+      "phase": "VERIFY",
+      "results": {
+        "w1_guard": "PASS 671 checks",
+        "m22": "PASS 13 cases",
+        "replay": "PASS 58 files",
+        "run_cases": "PASS 9/9 + 4 NOT_RUN",
+        "harness": "PASS 17/17",
+        "adapter": "PASS 22/22",
+        "zip_extract": "PASS 4/4 commands"
+      }
+    },
+    {
+      "iteration": 3,
+      "phase": "ACCEPT",
+      "author_local_open": 0,
+      "named_holds": 14,
+      "verdict": "AUTHOR_LOCAL_EXECUTION_COMPLETE_WITH_NAMED_HOLDS"
+    }
+  ],
+  "convergence": {
+    "same_first_fail_without_new_delta": 0,
+    "unbounded_retry": 0
+  },
+  "claim_ceiling": "AUTHOR_DESIGN_ONLY"
+}

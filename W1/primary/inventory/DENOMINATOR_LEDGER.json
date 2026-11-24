@@ -1,0 +1,215 @@
+{
+ "schema": "FHS5.PLP.W1.DenominatorLedger@local-1",
+ "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+ "wave_id": "W1",
+ "claim": "Denominators are preserved and separated. None is a W1 completion gate; IDs not supplied stay UNBOUND with an owner.",
+ "families": [
+  {
+   "family": "USER_SUBINTENT",
+   "count": "56",
+   "source_locator": "B01:58",
+   "id_list_state": "USER_SUBINTENT_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Original PI Reader",
+   "constraint": "U01–U16 與 56 子義分屬不同 namespace；不得縮分母"
+  },
+  {
+   "family": "REVIEWER_TOOL",
+   "count": "35",
+   "source_locator": "M:1008;M:1078",
+   "id_list_state": "REVIEWER_TOOL_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "B01 Reviewer Owner",
+   "constraint": "35 類原工具未全獲主文選型，不得以本地 35 測試抵帳"
+  },
+  {
+   "family": "FHS_WP",
+   "count": "22",
+   "source_locator": "M:1008;M:1128",
+   "id_list_state": "FHS_WP_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "FHS Profile Owner",
+   "constraint": "非 FHS 不強制 22 WP；FHS Profile 逐項另綁"
+  },
+  {
+   "family": "FHS_EDGE",
+   "count": "36",
+   "source_locator": "M:1008;M:1128",
+   "id_list_state": "FHS_EDGE_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "FHS Profile Owner",
+   "constraint": "不得轉成非 FHS 全域 Gate"
+  },
+  {
+   "family": "FHS_H1",
+   "count": "50",
+   "source_locator": "M:1008;M:1128",
+   "id_list_state": "FHS_H1_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "FHS Profile Owner",
+   "constraint": "原 H1 身份保留"
+  },
+  {
+   "family": "FHS_MODEGATE",
+   "count": "39",
+   "source_locator": "M:1008;M:1128",
+   "id_list_state": "FHS_MODEGATE_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "FHS Profile Owner",
+   "constraint": "不得新增第 40 個自創 Gate"
+  },
+  {
+   "family": "FHS_ORACLE",
+   "count": "96",
+   "source_locator": "M:1008;M:1128",
+   "id_list_state": "FHS_ORACLE_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "FHS Case Owner",
+   "constraint": "原 Oracle 未得者 UNBOUND"
+  },
+  {
+   "family": "FHS_CELL",
+   "count": "192",
+   "source_locator": "M:1008;M:1128",
+   "id_list_state": "FHS_CELL_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "FHS Case Owner",
+   "constraint": "192 Cell 不作 W1 Fit"
+  },
+  {
+   "family": "TOOL_NEED",
+   "count": "485",
+   "source_locator": "ME:E5;M:1008",
+   "id_list_state": "VERIFIED_485_SEE_TOOL_LEDGER",
+   "w1_disposition": "W1_SLICE_8_AFFECTED",
+   "owner": "W1/W0-C Tool Owner",
+   "constraint": "485 全 ID 在 inventory/TOOL_IDENTITY_LEDGER.json；HostFit 全 UNBOUND"
+  },
+  {
+   "family": "W0C_IDENTITY",
+   "count": "1011",
+   "source_locator": "CTRL:§3 D04",
+   "id_list_state": "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "W0-C Owner",
+   "constraint": "576 ID＋435 slot；0 install，不宣 W1/W4 Fit"
+  },
+  {
+   "family": "QA26",
+   "count": "26",
+   "source_locator": "B01:24;B01:44",
+   "id_list_state": "QA26_ID_LIST_IN_B01_NAMESPACE",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Reviewer Plugin Owner",
+   "constraint": "QA26 逐案不與 local 26 抵銷"
+  },
+  {
+   "family": "C16",
+   "count": "16",
+   "source_locator": "CTRL:§4",
+   "id_list_state": "C16_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Bridge Owner",
+   "constraint": "C16/36/47 各自分母"
+  },
+  {
+   "family": "C36",
+   "count": "36",
+   "source_locator": "CTRL:§4",
+   "id_list_state": "C36_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Bridge Owner",
+   "constraint": "同上"
+  },
+  {
+   "family": "C47",
+   "count": "47",
+   "source_locator": "CTRL:§4",
+   "id_list_state": "C47_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Bridge Owner",
+   "constraint": "同上"
+  },
+  {
+   "family": "FAR_T20",
+   "count": "20",
+   "source_locator": "M:1127",
+   "id_list_state": "FAR_T20_ID_LIST_UNBOUND",
+   "w1_disposition": "OUT_OF_W1_SCOPE",
+   "owner": "FAR Owner",
+   "constraint": "W3 受影，不在 W1 執行"
+  },
+  {
+   "family": "FARP30",
+   "count": "30",
+   "source_locator": "M:1127",
+   "id_list_state": "FARP30_ID_LIST_UNBOUND",
+   "w1_disposition": "OUT_OF_W1_SCOPE",
+   "owner": "FAR Owner",
+   "constraint": "W3 受影"
+  },
+  {
+   "family": "FARP35",
+   "count": "35",
+   "source_locator": "M:1127",
+   "id_list_state": "FARP35_ID_LIST_UNBOUND",
+   "w1_disposition": "OUT_OF_W1_SCOPE",
+   "owner": "FAR Owner",
+   "constraint": "W3 受影；不與 Reviewer 35 混算"
+  },
+  {
+   "family": "BRIDGE_LOCAL38",
+   "count": "38",
+   "source_locator": "B03:256",
+   "id_list_state": "BRIDGE_LOCAL38_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Bridge Owner",
+   "constraint": "歷史 local 38，NOT_RERUN"
+  },
+  {
+   "family": "BRIDGE_LOCAL28",
+   "count": "28",
+   "source_locator": "B03:256",
+   "id_list_state": "BRIDGE_LOCAL28_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Bridge Owner",
+   "constraint": "v1.1 新增 local 28，NOT_RERUN"
+  },
+  {
+   "family": "BRIDGE_TOTAL66",
+   "count": "66",
+   "source_locator": "B03:256",
+   "id_list_state": "BRIDGE_TOTAL66_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Bridge Owner",
+   "constraint": "38+28 歷史自報；不得冒三 Host Native"
+  },
+  {
+   "family": "GUIDE_SEM17",
+   "count": "17",
+   "source_locator": "B02:163;B02:281",
+   "id_list_state": "GUIDE_SEM17_ID_LIST_UNBOUND",
+   "w1_disposition": "RETAIN_DENOMINATOR",
+   "owner": "Guide Owner",
+   "constraint": "CG-SEM01..17 全 NOT_RUN"
+  },
+  {
+   "family": "W0_CASE24",
+   "count": "24",
+   "source_locator": "W1M:§02.3;05:§3",
+   "id_list_state": "W0_CASE24_VERIFIED_IN_MD",
+   "w1_disposition": "AFFECTED_8_DISPOSED",
+   "owner": "W0 Curator",
+   "constraint": "8 UPDATE／16 RETAIN 已在 05"
+  },
+  {
+   "family": "W1_CASE13",
+   "count": "13",
+   "source_locator": "W1M:663-675",
+   "id_list_state": "W1_CASE13_VERIFIED",
+   "w1_disposition": "W1_AUTHORED",
+   "owner": "W1 Author",
+   "constraint": "clause 逐字對 W1M；規則實跑只 LOCAL_RULE"
+  }
+ ]
+}

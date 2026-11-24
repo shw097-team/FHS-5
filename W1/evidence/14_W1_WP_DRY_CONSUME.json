@@ -1,0 +1,72 @@
+{
+  "schema": "FHS5.PLP.W1.WpDryConsume@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "wps": [
+    {
+      "wp": "WM1-P01",
+      "name": "Identity/Reuse",
+      "input": "host_claims[] + inventory ledgers",
+      "operation": "enumerate 21 host cells, 9 U-017 + 3 U-028 children, plugin alias state",
+      "output": "HostCapabilityLedger (21 cells, 12 children)",
+      "consumer": "W4 / Host Owner",
+      "evidence": "08_W1_S5_HOST_OBSERVATION.json",
+      "state": "AUTHOR_DRY_CONSUME_PASS"
+    },
+    {
+      "wp": "WM1-P02",
+      "name": "ABI Crosswalk",
+      "input": "01 §5-§7 + B02/B03",
+      "operation": "7 seams, 5 namespaces, 4 independent digests, field loss/readback",
+      "output": "Crosswalk table (7/5/4)",
+      "consumer": "Bridge/Guide ABI Owner",
+      "evidence": "06_W1_S3_ABI_AND_CASES.json",
+      "state": "AUTHOR_DRY_CONSUME_PASS"
+    },
+    {
+      "wp": "WM1-P03",
+      "name": "Four APIs/BodyResolver",
+      "input": "pack manifest + TQAEP + sources",
+      "operation": "inspect/explain/render/compare + body span resolution",
+      "output": "22/22 reference adapter checks",
+      "consumer": "Executor / Host Consumer",
+      "evidence": "13_W1_REFERENCE_ADAPTER_RESULTS.json",
+      "state": "AUTHOR_REFERENCE_IMPL_PASS"
+    },
+    {
+      "wp": "WM1-P04",
+      "name": "Host Actual Read",
+      "input": "container probe + host claims",
+      "operation": "attempt seven stages per host; no installer/loader/consumer receipt",
+      "output": "21 rows, 0 installed, 0 consumed",
+      "consumer": "W4 / Host Owner",
+      "evidence": "08_W1_S5_HOST_OBSERVATION.json",
+      "state": "HOLD_HOST_PENDING"
+    },
+    {
+      "wp": "WM1-P05",
+      "name": "Adversarial ABI",
+      "input": "17 mutant families + security fixtures",
+      "operation": "scope/unknown/path/secret/claim/receipt/duplicate-key mutations",
+      "output": "17/17 rejected",
+      "consumer": "Reviewer / W3",
+      "evidence": "02_W1_HARNESS_LOOP.json",
+      "state": "AUTHOR_DRY_CONSUME_PASS"
+    },
+    {
+      "wp": "WM1-P06",
+      "name": "AsBuilt/Next",
+      "input": "08 handoff + S0-S5",
+      "operation": "W2/W3/W4 interface extraction and NotCovered",
+      "output": "5 interface rows, NotCovered list",
+      "consumer": "W2 Program",
+      "evidence": "09_W1_S6_HANDOFF.json",
+      "state": "AUTHOR_DRY_CONSUME_PASS_WITH_NOT_COVERED"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "pass": 5,
+    "hold": 1
+  },
+  "claim_ceiling": "AUTHOR_DESIGN_ONLY"
+}

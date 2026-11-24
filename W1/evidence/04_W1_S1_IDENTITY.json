@@ -1,0 +1,19 @@
+{
+  "schema": "FHS5.PLP.W1.S1Identity@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+    "scope": "W1 Guide/Bridge ABI + 3-Host consumption + Contract Context author pack; SOURCE_READ+ISOLATED_DRAFT_WRITE+LOCAL_CHECK+LOCAL_PACKAGE; no repo/host/native/release write",
+    "wave_id": "W1",
+    "batch_id": "W1-PACK-01",
+    "source_manifest_sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47"
+  },
+  "md_headers_checked": 10,
+  "json_identities_checked": 5,
+  "case_scopes_checked": 13,
+  "doc_mismatch": [],
+  "json_mismatch": [],
+  "case_scope_mismatch": [],
+  "result": "PASS"
+}

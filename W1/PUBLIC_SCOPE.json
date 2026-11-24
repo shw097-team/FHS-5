@@ -1,0 +1,117 @@
+{
+  "schema": "FHS5.PLP.W1.PublicScope@public-1",
+  "public_export": true,
+  "included": [
+    "primary/ 15 normative files, 16 sources, 13 fixtures, 13 oracles, 2 inventory ledgers",
+    "evidence/ 3 author reports (review, appendix, post-promotion addendum)",
+    "check/ 5 read-only check scripts",
+    "impl/ author reference adapter",
+    "evidence/ sanitized S0-S6, closure matrix, self-acceptance, holds, adapter and WP results"
+  ],
+  "excluded": [
+    "API keys, tokens, credentials",
+    "raw ACL / SID / OS principal records",
+    "local raw command logs and local-only absolute roots",
+    "local full-delivery ZIP and DELIVERY_SEAL.json",
+    "W0/W1 upstream copies outside the pinned pack"
+  ],
+  "redaction": {
+    "replacement_counts": {
+      "C:\\Users\\user\\Downloads\\FHS-5": 16,
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\10_FINAL_DELIVERY\\FHS-5_PLP_W0_PRIMARY": 2,
+      "C:\\Users\\user": 12,
+      "C:\\Users\\user\\Documents\\Codex\\2026-11-24\\w1-start-thin-prompt\\work\\W1_EXEC_20261124": 4
+    },
+    "per_file": {
+      "01_W1_EXECUTION_RECEIPT.json": {
+        "source_sha256": "d460e5f5118ccbe77fdc98b6dc17d0d8be1095e4c6a24258b1056519084aead2",
+        "public_sha256": "d460e5f5118ccbe77fdc98b6dc17d0d8be1095e4c6a24258b1056519084aead2",
+        "replacements": {}
+      },
+      "02_W1_HARNESS_LOOP.json": {
+        "source_sha256": "88a6642d43d9a5923458c0b0a0678671bf575f3e7d8a9e8b859b6203df5f8d8f",
+        "public_sha256": "88a6642d43d9a5923458c0b0a0678671bf575f3e7d8a9e8b859b6203df5f8d8f",
+        "replacements": {}
+      },
+      "03_W1_S0_SOURCE_FREEZE.json": {
+        "source_sha256": "056ee976254a74465387c2a2abd2ac6994e2e6ab8a0ffb3d505b69618e0ed271",
+        "public_sha256": "dc52a2e9a889f6e9624b21f17d630c37ad9488aa78df84d60b2fc1e118a538b0",
+        "replacements": {
+          "C:\\Users\\user\\Downloads\\FHS-5": 16,
+          "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\10_FINAL_DELIVERY\\FHS-5_PLP_W0_PRIMARY": 2
+        }
+      },
+      "04_W1_S1_IDENTITY.json": {
+        "source_sha256": "949f05454a578161a14a5a3f9278fa73ca3a5f807a5cc3e544d5e19a8246e1ef",
+        "public_sha256": "949f05454a578161a14a5a3f9278fa73ca3a5f807a5cc3e544d5e19a8246e1ef",
+        "replacements": {}
+      },
+      "05_W1_S2_STRUCTURE.json": {
+        "source_sha256": "c5a95bed61725e3864c28113b27106123c4f26cccc630c69c545ee45b2add095",
+        "public_sha256": "f202f2cc6db6da7785a9f0be86fb5a3b59fe180eac2e8c0d5e9bf14b018a3f12",
+        "replacements": {
+          "C:\\Users\\user": 11,
+          "C:\\Users\\user\\Documents\\Codex\\2026-11-24\\w1-start-thin-prompt\\work\\W1_EXEC_20261124": 3
+        }
+      },
+      "06_W1_S3_ABI_AND_CASES.json": {
+        "source_sha256": "78b9d24dbae93aa813767053578cb811972509695a4a715a2cb195867d09ff97",
+        "public_sha256": "78b9d24dbae93aa813767053578cb811972509695a4a715a2cb195867d09ff97",
+        "replacements": {}
+      },
+      "07_W1_S4_TQAEP_COVERAGE.json": {
+        "source_sha256": "7436dd804d30c604b56f1a3b042f226504031688d9a72e5d23e2b4bf5a5f8988",
+        "public_sha256": "7436dd804d30c604b56f1a3b042f226504031688d9a72e5d23e2b4bf5a5f8988",
+        "replacements": {}
+      },
+      "08_W1_S5_HOST_OBSERVATION.json": {
+        "source_sha256": "c6a58f03da11701f6bdf6146113019e26703c912638aa12ff9cd5d151ba33d4a",
+        "public_sha256": "c6a58f03da11701f6bdf6146113019e26703c912638aa12ff9cd5d151ba33d4a",
+        "replacements": {}
+      },
+      "09_W1_S6_HANDOFF.json": {
+        "source_sha256": "02fd44fa6721030cea8d58e7f3cb145853aa6d48c8d866be1ba659b14a89edac",
+        "public_sha256": "02fd44fa6721030cea8d58e7f3cb145853aa6d48c8d866be1ba659b14a89edac",
+        "replacements": {}
+      },
+      "10_W1_ECP_TQAEP_CLOSURE_MATRIX.json": {
+        "source_sha256": "729fdaae6c249a21b3c38a6688c973d7ad88baa6404775b3a36d5ef9f2db452b",
+        "public_sha256": "729fdaae6c249a21b3c38a6688c973d7ad88baa6404775b3a36d5ef9f2db452b",
+        "replacements": {}
+      },
+      "11_W1_SELF_ACCEPTANCE.json": {
+        "source_sha256": "386ad5c282a7bace43d34cbd2977912cd0c2f8c5b8fcb0729186d4df4b404c75",
+        "public_sha256": "386ad5c282a7bace43d34cbd2977912cd0c2f8c5b8fcb0729186d4df4b404c75",
+        "replacements": {}
+      },
+      "12_W1_NAMED_HOLDS.json": {
+        "source_sha256": "a0fef9299f9daf64997610f5b900b8d40ba17d096c605ed5e9400d802b0f7ca4",
+        "public_sha256": "a0fef9299f9daf64997610f5b900b8d40ba17d096c605ed5e9400d802b0f7ca4",
+        "replacements": {}
+      },
+      "13_W1_REFERENCE_ADAPTER_RESULTS.json": {
+        "source_sha256": "7a56ba1a148e77261595c8deda8d95e4b7f6a64e3f74db4c4f6000589b8b91e3",
+        "public_sha256": "7a56ba1a148e77261595c8deda8d95e4b7f6a64e3f74db4c4f6000589b8b91e3",
+        "replacements": {}
+      },
+      "14_W1_WP_DRY_CONSUME.json": {
+        "source_sha256": "67659882d3e5f7315a5bcdcc06c50c2ef933f02a6be27307b2b4d991c534b9ce",
+        "public_sha256": "67659882d3e5f7315a5bcdcc06c50c2ef933f02a6be27307b2b4d991c534b9ce",
+        "replacements": {}
+      },
+      "17_W1_DELIVERY_AUDIT.json": {
+        "source_sha256": "566ab746aa64587dbe0640d9d38f469358fab6147e87f783e80494983ce59dd8",
+        "public_sha256": "9ed8c9f8cd81ae2fbf55fcfb6690d1ef5572898b7d0c2ad8cc70befa93ee5491",
+        "replacements": {
+          "C:\\Users\\user\\Documents\\Codex\\2026-11-24\\w1-start-thin-prompt\\work\\W1_EXEC_20261124": 1
+        }
+      }
+    }
+  },
+  "security_scan": {
+    "exact_token_hits": 0,
+    "github_pat_pattern_hits": 0,
+    "api_key_filename_hits": 0
+  },
+  "not_original_acceptance": true
+}

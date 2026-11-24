@@ -1,0 +1,174 @@
+{
+  "schema": "FHS5.PLP.W1.DeliveryAudit@local-1",
+  "claim_ceiling": "AUTHOR_DESIGN_ONLY",
+  "root": "<WORKSPACE>",
+  "checks": [
+    {
+      "id": "FM-01",
+      "ok": true,
+      "detail": 58
+    },
+    {
+      "id": "FM-02",
+      "ok": true,
+      "detail": {
+        "extra": [],
+        "missing": []
+      }
+    },
+    {
+      "id": "FM-03",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "FM-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "MD-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "JSON-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "TQ-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "TQ-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "TQ-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "TQ-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "HOLD-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "CLAIM-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "PM-01",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "PM-02",
+      "ok": true,
+      "detail": {
+        "pack": 59,
+        "evidence": 14,
+        "check": 5,
+        "top_level_records": 3,
+        "total": 81
+      }
+    },
+    {
+      "id": "PM-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "PM-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "SEAL-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "SEAL-02",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "SEAL-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "SEAL-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "ZIP-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "ZIP-02",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "ZIP-03",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "ZIP-04",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "IDX-01",
+      "ok": true,
+      "detail": {
+        "rows": 15,
+        "bad": []
+      }
+    },
+    {
+      "id": "W0-01",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "W0-02",
+      "ok": true,
+      "detail": {
+        "entries": 34,
+        "mismatch": 1
+      }
+    },
+    {
+      "id": "W0-03",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "summary": {
+    "total": 28,
+    "pass": 28,
+    "fail": 0
+  },
+  "verdict": "PASS_LOCAL",
+  "seal": {
+    "primary_manifest_sha256": "334afcd4a0d2c49c5cd96113ebadaae519f4ab26113f7a1c0bea3343f1cf3c0e",
+    "delivery_index_sha256": "1bf640c7710242f5802589752204756d36237eec174fafd6e61ba58062d0c342",
+    "zip_sha256": "87d71cc07ddf483df8bc272cb5690b53e230f8bcd4e4ceec4a082ac77a3a48f8",
+    "tree_sha256": "1e08a0309ef44990f1885618d653cf13f8a3596b4d8734ece7af4f6b680b2782"
+  }
+}

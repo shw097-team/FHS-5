@@ -1,0 +1,249 @@
+{
+  "run_at": "2026-11-24T22:10:48+08:00",
+  "pack": "C:\\Users\\user\\Documents\\Codex\\2026-11-24\\w1-start-thin-prompt\\work\\W1_EXEC_20261124\\FHS-5_PLP_W1_PRIMARY",
+  "positive": {
+    "m22": {
+      "rc": 0,
+      "out": {
+        "case_count": 13,
+        "claim_ceiling": "AUTHOR_DESIGN_ONLY",
+        "native": "NOT_VERIFIED",
+        "observation_count": 0,
+        "original_reader": "UNBOUND",
+        "release": "NOT_GRANTED",
+        "status": "AUTHOR_LOCAL_LINKS_ONLY",
+        "wave": "W1"
+      }
+    },
+    "w1": {
+      "rc": 0,
+      "out": {
+        "cases": 13,
+        "checks": 671,
+        "claim_ceiling": "AUTHOR_DESIGN_ONLY",
+        "json": 5,
+        "md": 10,
+        "native": "NOT_VERIFIED",
+        "normative": 15,
+        "original_reader": "UNBOUND",
+        "release": "NOT_GRANTED",
+        "sources": 16,
+        "status": "W1_AUTHOR_LOCAL_LINKS_ONLY",
+        "w0_dispositions": 24,
+        "wps": 6
+      }
+    }
+  },
+  "negatives": [
+    {
+      "id": "H1_source_byte",
+      "group": "H1 Source/W0",
+      "mutation": "flip one byte in sources/M.md",
+      "expect_token": "SOURCE_SHA_MISMATCH",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "SOURCE_SHA_MISMATCH:M",
+      "w1_rc": 2,
+      "w1_first_fail": "sm_source_sha:M",
+      "rejected": true
+    },
+    {
+      "id": "H2_missing_normative",
+      "group": "H2 Pack",
+      "mutation": "delete 08_AS_BUILT_AND_HANDOFF.md",
+      "expect_token": "REQUIRED_FILE_MISSING",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "REQUIRED_FILE_MISSING:08_AS_BUILT_AND_HANDOFF.md",
+      "w1_rc": 2,
+      "w1_first_fail": "normative_present:08_AS_BUILT_AND_HANDOFF.md",
+      "rejected": true
+    },
+    {
+      "id": "H2b_placeholder",
+      "group": "H2 Pack",
+      "mutation": "append TODO to 07_EVIDENCE_AND_CHECKER.md",
+      "expect_token": "PLACEHOLDER_BODY",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "PLACEHOLDER_BODY:07_EVIDENCE_AND_CHECKER.md",
+      "w1_rc": 2,
+      "w1_first_fail": "doc_no_placeholder:07_EVIDENCE_AND_CHECKER.md",
+      "rejected": true
+    },
+    {
+      "id": "H3_child_missing",
+      "group": "H3 Trace/coverage",
+      "mutation": "rename U-028/Hermes/Swarm child row",
+      "expect_token": "u028_child",
+      "guard": "w1",
+      "m22_rc": 0,
+      "m22_first_fail": null,
+      "w1_rc": 2,
+      "w1_first_fail": "u028_child:Swarm",
+      "rejected": true
+    },
+    {
+      "id": "H4_projection_drift",
+      "group": "H2 Pack",
+      "mutation": "change one case clause_text in WaveControl only",
+      "expect_token": "TQAEP_CASE_MISMATCH",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "TQAEP_CASE_MISMATCH",
+      "w1_rc": 2,
+      "w1_first_fail": "tq_cases_equal:",
+      "rejected": true
+    },
+    {
+      "id": "H5_path_traversal",
+      "group": "H5 Security",
+      "mutation": "set case fixture_path to ../outside.json",
+      "expect_token": "PATH_TRAVERSAL",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "PATH_TRAVERSAL",
+      "w1_rc": 2,
+      "w1_first_fail": "PATH_TRAVERSAL:../outside.json",
+      "rejected": true
+    },
+    {
+      "id": "H6_fake_claims",
+      "group": "H6 Effect/Host/claim",
+      "mutation": "set all four claims true",
+      "expect_token": "ORIGINAL_OR_LOCAL_SUCCESS_CLAIM_UNVERIFIED",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "ORIGINAL_OR_LOCAL_SUCCESS_CLAIM_UNVERIFIED",
+      "w1_rc": 2,
+      "w1_first_fail": "claims_false:",
+      "rejected": true
+    },
+    {
+      "id": "H6b_fake_receipt",
+      "group": "H6 Effect/Host/claim",
+      "mutation": "insert success-shaped execution_admission_receipt",
+      "expect_token": "ORIGINAL_RECEIPT_UNVERIFIABLE",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "ORIGINAL_RECEIPT_UNVERIFIABLE:execution_admission_receipt",
+      "w1_rc": 2,
+      "w1_first_fail": "receipt_null:execution_admission_receipt",
+      "rejected": true
+    },
+    {
+      "id": "H7_scope_drift",
+      "group": "H2 Pack",
+      "mutation": "change batch_id inside 03_DEV_ECP.md identity header",
+      "expect_token": "CONTRACT_SCOPE_MISMATCH",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "CONTRACT_SCOPE_MISMATCH:03_DEV_ECP.md",
+      "w1_rc": 2,
+      "w1_first_fail": "doc_identity:03_DEV_ECP.md",
+      "rejected": true
+    },
+    {
+      "id": "H8_duplicate_key",
+      "group": "H5 Security",
+      "mutation": "duplicate schema key in 02_ORIGINAL_CONTRACT_REFS.json",
+      "expect_token": "JSON_DUPLICATE_KEY",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "JSON_DUPLICATE_KEY:schema",
+      "w1_rc": 2,
+      "w1_first_fail": "JSON_DUPLICATE_KEY:schema",
+      "rejected": true
+    },
+    {
+      "id": "H9_cg_req_row",
+      "group": "H3 Trace/coverage",
+      "mutation": "delete the CG-R2-REQ-11 row",
+      "expect_token": "cg_req_row",
+      "guard": "w1",
+      "m22_rc": 0,
+      "m22_first_fail": null,
+      "w1_rc": 2,
+      "w1_first_fail": "cg_req_row:11",
+      "rejected": true
+    },
+    {
+      "id": "H9_pcb_fr_row",
+      "group": "H3 Trace/coverage",
+      "mutation": "delete the PCB-FR17 row",
+      "expect_token": "pcb_fr_row",
+      "guard": "w1",
+      "m22_rc": 0,
+      "m22_first_fail": null,
+      "w1_rc": 2,
+      "w1_first_fail": "pcb_fr_row:17",
+      "rejected": true
+    },
+    {
+      "id": "H9_clause_truncate",
+      "group": "H3 Trace/coverage",
+      "mutation": "truncate cases[0].clause_text in both projections",
+      "expect_token": "CASE_SOURCE_CLAUSE_MISMATCH",
+      "guard": "m22",
+      "m22_rc": 2,
+      "m22_first_fail": "CASE_SOURCE_CLAUSE_MISMATCH:W1-HOST-01",
+      "w1_rc": 2,
+      "w1_first_fail": "case_clause_exact:W1-HOST-01",
+      "rejected": true
+    },
+    {
+      "id": "H9_kind_flip",
+      "group": "H3 Trace/coverage",
+      "mutation": "flip W1-HOST-02 kind to POS",
+      "expect_token": "case_kind_map",
+      "guard": "w1",
+      "m22_rc": 0,
+      "m22_first_fail": null,
+      "w1_rc": 2,
+      "w1_first_fail": "case_kind_map:W1-HOST-02",
+      "rejected": true
+    },
+    {
+      "id": "H9_firstfail_drift",
+      "group": "H3 Trace/coverage",
+      "mutation": "drift cases[4].expected_raw.first_fail",
+      "expect_token": "case_oracle_firstfail",
+      "guard": "w1",
+      "m22_rc": 2,
+      "m22_first_fail": "CASE_ORACLE_FIRSTFAIL_MISMATCH:W1-ABI-01",
+      "w1_rc": 2,
+      "w1_first_fail": "case_oracle_firstfail:W1-ABI-01",
+      "rejected": true
+    },
+    {
+      "id": "H9_source_count_text",
+      "group": "H2 Pack",
+      "mutation": "change source count text 16 to 17",
+      "expect_token": "source_count_text",
+      "guard": "w1",
+      "m22_rc": 0,
+      "m22_first_fail": null,
+      "w1_rc": 2,
+      "w1_first_fail": "source_count_text:00_WAVE_RUN_MANIFEST.md",
+      "rejected": true
+    },
+    {
+      "id": "H9_extra_file",
+      "group": "H2 Pack",
+      "mutation": "add an unlisted fixture",
+      "expect_token": "fm_covers_all",
+      "guard": "w1",
+      "m22_rc": 0,
+      "m22_first_fail": null,
+      "w1_rc": 2,
+      "w1_first_fail": "fm_covers_all:missing=['fixtures/EXTRA.json'] extra=[]",
+      "rejected": true
+    }
+  ],
+  "summary": {
+    "positive_pass": true,
+    "negatives_pass": true,
+    "negatives": "17/17",
+    "verdict": "SELF_CHECK_PASS_WITH_NAMED_HOLDS"
+  }
+}

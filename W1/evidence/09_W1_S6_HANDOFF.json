@@ -1,0 +1,69 @@
+{
+  "schema": "FHS5.PLP.W1.S6Handoff@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "interfaces": [
+    {
+      "producer": "inspect_package.source_refs[]",
+      "consumer": "W2 02_ORIGINAL_CONTRACT_REFS.refs[]",
+      "transform": "filter kind=source; recompute SHA/span",
+      "loss": "unresolved_refs[] retained",
+      "neg": "SOURCE_IDENTITY_HOLD",
+      "state": "DESIGN_READY_NOT_CONSUMED"
+    },
+    {
+      "producer": "inspect_package.effect_constraints[]",
+      "consumer": "W2 01 effect_constraints[]",
+      "transform": "advisory only; no token",
+      "loss": "unknown effect retained",
+      "neg": "EFFECT_UNBOUND",
+      "state": "DESIGN_READY_NOT_CONSUMED"
+    },
+    {
+      "producer": "ContextBundle.context_sha256",
+      "consumer": "W2 03/04 pre.context_ref",
+      "transform": "copy + recompute",
+      "loss": "scope mismatch stops",
+      "neg": "CONTEXT_SCOPE_MISMATCH",
+      "state": "DESIGN_READY_NOT_CONSUMED"
+    },
+    {
+      "producer": "HostCapabilityLedger.host_claims[]",
+      "consumer": "W2 02 host_refs[]",
+      "transform": "observation type preserved",
+      "loss": "NOT_OBSERVED not promoted",
+      "neg": "W2_HOST_BIND",
+      "state": "DESIGN_READY_NOT_CONSUMED"
+    },
+    {
+      "producer": "compare_context.changed[]",
+      "consumer": "W2 change_cone[]",
+      "transform": "exact (kind,path,sha)",
+      "loss": "no semantic inference",
+      "neg": "DELTA_UNVERIFIED",
+      "state": "DESIGN_READY_NOT_CONSUMED"
+    }
+  ],
+  "w3_inputs": [
+    "13 cases",
+    "ExpectedRaw",
+    "author raw",
+    "W1_ABI_BOUND",
+    "W0_PRIMARY_RECEIPT_STALE"
+  ],
+  "w4_inputs": [
+    "3x7 host grid",
+    "Hermes 3 children",
+    "Generic applicability",
+    "claim ceiling"
+  ],
+  "not_covered": [
+    "original Host consumption",
+    "original 17/66/24 cases",
+    "Runner/Checker/Publisher",
+    "W0-A designation",
+    "W0-B admission",
+    "CH-07 byte recovery",
+    "W2-W4 construction"
+  ],
+  "result": "HANDOFF_DESIGN_READY"
+}

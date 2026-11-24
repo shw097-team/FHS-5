@@ -1,0 +1,200 @@
+{
+  "schema": "FHS5.PLP.W1.S5HostObservation@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "probe": "FHS5.PLP.W1.ContainerProbe@local-1\nobserved_at=2026-11-24T22:13:09+08:00\ncontainer=Codex desktop local execution host\nplatform=Windows-10-10.0.26200-SP0\npython=3.11.9\ngit=present\n\nChatGPT: Selected=NOT_OBSERVED Loaded=NOT_OBSERVED Installed=NOT_OBSERVED Bound=NOT_OBSERVED Invoked=NOT_OBSERVED ActualServed=NOT_OBSERVED Consumed=NOT_OBSERVED\nCodex: Selected=SESSION_CAPABILITY Loaded=SKILL_BYTES_READ_LOCAL Bound=PLUGIN_PATH_LOCAL Invoked=LOCAL_TOOL_CALLS Installed=NOT_OBSERVED ActualServed=NOT_OBSERVED Consumed=NOT_OBSERVED\nHermes: Selected=NOT_OBSERVED Loaded=NOT_OBSERVED Installed=NOT_OBSERVED Bound=NOT_OBSERVED Invoked=NOT_OBSERVED ActualServed=NOT_OBSERVED Consumed=NOT_OBSERVED\nHermes/Kanban=HERMES_KANBAN_NOT_OBSERVED\nHermes/Delegation=HERMES_DELEGATION_NOT_OBSERVED\nHermes/Swarm=HERMES_SWARM_NOT_OBSERVED\n\nclaim_ceiling=AUTHOR_DESIGN_ONLY\nlocal_evidence_is_not_host_admission=true\nno_install_register_bind_or_start_performed=true\n",
+  "hosts": [
+    {
+      "host": "ChatGPT",
+      "stage": "Selected",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "ChatGPT",
+      "stage": "Loaded",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "ChatGPT",
+      "stage": "Installed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "ChatGPT",
+      "stage": "Bound",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "ChatGPT",
+      "stage": "Invoked",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "ChatGPT",
+      "stage": "ActualServed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "ChatGPT",
+      "stage": "Consumed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Codex",
+      "stage": "Selected",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": "SESSION_CAPABILITY",
+      "credit_state": "LOCAL_ONLY_NOT_HOST_STAGE",
+      "receipt": null
+    },
+    {
+      "host": "Codex",
+      "stage": "Loaded",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": "SKILL_BYTES_READ_LOCAL",
+      "credit_state": "LOCAL_ONLY_NOT_HOST_STAGE",
+      "receipt": null
+    },
+    {
+      "host": "Codex",
+      "stage": "Installed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Codex",
+      "stage": "Bound",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": "PLUGIN_PATH_LOCAL",
+      "credit_state": "LOCAL_ONLY_NOT_HOST_STAGE",
+      "receipt": null
+    },
+    {
+      "host": "Codex",
+      "stage": "Invoked",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": "LOCAL_TOOL_CALLS",
+      "credit_state": "LOCAL_ONLY_NOT_HOST_STAGE",
+      "receipt": null
+    },
+    {
+      "host": "Codex",
+      "stage": "ActualServed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Codex",
+      "stage": "Consumed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Hermes",
+      "stage": "Selected",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Hermes",
+      "stage": "Loaded",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Hermes",
+      "stage": "Installed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Hermes",
+      "stage": "Bound",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Hermes",
+      "stage": "Invoked",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Hermes",
+      "stage": "ActualServed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    },
+    {
+      "host": "Hermes",
+      "stage": "Consumed",
+      "observation": "NOT_OBSERVED",
+      "local_evidence": null,
+      "credit_state": "NOT_OBSERVED",
+      "receipt": null
+    }
+  ],
+  "counts": {
+    "cells": 21,
+    "observed": 0,
+    "local_only": 4,
+    "consumed": 0
+  },
+  "hermes_children": [
+    {
+      "child_id": "U-028/Hermes/Kanban",
+      "state": "HERMES_KANBAN_NOT_OBSERVED",
+      "consumer": null
+    },
+    {
+      "child_id": "U-028/Hermes/Delegation",
+      "state": "HERMES_DELEGATION_NOT_OBSERVED",
+      "consumer": null
+    },
+    {
+      "child_id": "U-028/Hermes/Swarm",
+      "state": "HERMES_SWARM_NOT_OBSERVED",
+      "consumer": null
+    }
+  ],
+  "cross_host_substitution": "DENIED",
+  "result": "HOST_PENDING_WITH_CONTAINER_ONLY_PROBE"
+}

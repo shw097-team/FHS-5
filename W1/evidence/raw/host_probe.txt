@@ -1,0 +1,17 @@
+FHS5.PLP.W1.ContainerProbe@local-1
+observed_at=2026-11-24T22:13:09+08:00
+container=Codex desktop local execution host
+platform=Windows-10-10.0.26200-SP0
+python=3.11.9
+git=present
+
+ChatGPT: Selected=NOT_OBSERVED Loaded=NOT_OBSERVED Installed=NOT_OBSERVED Bound=NOT_OBSERVED Invoked=NOT_OBSERVED ActualServed=NOT_OBSERVED Consumed=NOT_OBSERVED
+Codex: Selected=SESSION_CAPABILITY Loaded=SKILL_BYTES_READ_LOCAL Bound=PLUGIN_PATH_LOCAL Invoked=LOCAL_TOOL_CALLS Installed=NOT_OBSERVED ActualServed=NOT_OBSERVED Consumed=NOT_OBSERVED
+Hermes: Selected=NOT_OBSERVED Loaded=NOT_OBSERVED Installed=NOT_OBSERVED Bound=NOT_OBSERVED Invoked=NOT_OBSERVED ActualServed=NOT_OBSERVED Consumed=NOT_OBSERVED
+Hermes/Kanban=HERMES_KANBAN_NOT_OBSERVED
+Hermes/Delegation=HERMES_DELEGATION_NOT_OBSERVED
+Hermes/Swarm=HERMES_SWARM_NOT_OBSERVED
+
+claim_ceiling=AUTHOR_DESIGN_ONLY
+local_evidence_is_not_host_admission=true
+no_install_register_bind_or_start_performed=true

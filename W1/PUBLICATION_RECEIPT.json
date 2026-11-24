@@ -1,0 +1,24 @@
+{
+  "schema": "FHS5.PLP.W1.PublicationReceipt@public-1",
+  "generated_at": null,
+  "repository": {
+    "full_name": "shw097-team/FHS-5",
+    "html_url": "https://github.com/shw097-team/FHS-5",
+    "default_branch": "main",
+    "remote_url_without_token": true
+  },
+  "payload": {
+    "primary_tree_sha256": "1e08a0309ef44990f1885618d653cf13f8a3596b4d8734ece7af4f6b680b2782",
+    "primary_zip_sha256": "87d71cc07ddf483df8bc272cb5690b53e230f8bcd4e4ceec4a082ac77a3a48f8",
+    "pack_file_manifest_sha256": "63d72020190e2de5243fdfd395e174e0a5e7197f21b489025e736bdc2c61f97a",
+    "tqaep_md_sha256": "e7677cdea16ab7e65d2d5669d01d5ff3f2fd2147eeb8b625756a432e2500d14f",
+    "claim_ceiling": "AUTHOR_DESIGN_ONLY",
+    "execution_claim": "AUTHOR_LOCAL_EXECUTION_ONLY"
+  },
+  "authorization": {
+    "kind": "HUMAN_OWNER_EXPLICIT_PUBLIC_PUSH",
+    "statement": "The user explicitly requested pushing the W1 execution results and evidence to shw097-team/FHS-5.",
+    "not_original_acceptance": true
+  },
+  "commit": null
+}

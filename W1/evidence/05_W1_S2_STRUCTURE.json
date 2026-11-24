@@ -1,0 +1,119 @@
+{
+  "schema": "FHS5.PLP.W1.S2Structure@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "commands": [
+    {
+      "name": "w1_guard",
+      "command": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe check/w1_guard.py --pack-root FHS-5_PLP_W1_PRIMARY --delivery-root .",
+      "cwd": "<WORKSPACE>",
+      "exit": 0,
+      "elapsed_s": 0.175,
+      "stdout_sha256": "b38b4bf4722a5a1b9b428f39cd2a039f1d3245306a1dbf51a1c294a70d6e6070",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "raw/w1_guard.stdout.txt",
+      "stderr_path": "raw/w1_guard.stderr.txt"
+    },
+    {
+      "name": "m22_guard",
+      "command": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe check/m22_guard_ref.py check-pack --pack-root FHS-5_PLP_W1_PRIMARY",
+      "cwd": "<WORKSPACE>",
+      "exit": 0,
+      "elapsed_s": 0.318,
+      "stdout_sha256": "720430f79062c8b1f4ceba7e0105a5520c8e8c55b76e5efb821e781964b01fb0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "raw/m22_guard.stdout.txt",
+      "stderr_path": "raw/m22_guard.stderr.txt"
+    },
+    {
+      "name": "replay_hashes",
+      "command": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe check/replay_hashes.py --root FHS-5_PLP_W1_PRIMARY",
+      "cwd": "<WORKSPACE>",
+      "exit": 0,
+      "elapsed_s": 0.126,
+      "stdout_sha256": "233915c33ba8bca481a7d0204ac56d8ba6152811061113c8a4ebf704d8ba35b4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "raw/replay_hashes.stdout.txt",
+      "stderr_path": "raw/replay_hashes.stderr.txt"
+    }
+  ],
+  "guard": {
+    "checks": 671,
+    "status": "W1_AUTHOR_LOCAL_LINKS_ONLY"
+  },
+  "m22": {
+    "cases": 13,
+    "observations": 0,
+    "status": "AUTHOR_LOCAL_LINKS_ONLY"
+  },
+  "replay": {
+    "files": 58,
+    "sources": 16,
+    "cases": 13,
+    "mismatches": [],
+    "status": "REPLAY_OK"
+  },
+  "harness": {
+    "positives_pass": true,
+    "negatives": "17/17",
+    "verdict": "SELF_CHECK_PASS_WITH_NAMED_HOLDS"
+  },
+  "zip": {
+    "schema": "FHS5.PLP.W1.ZipVerification@local-1",
+    "zip_sha256": "87d71cc07ddf483df8bc272cb5690b53e230f8bcd4e4ceec4a082ac77a3a48f8",
+    "zip_bytes": 544767,
+    "seal_zip_sha256": "87d71cc07ddf483df8bc272cb5690b53e230f8bcd4e4ceec4a082ac77a3a48f8",
+    "zip_sha_match": true,
+    "entry_count": 83,
+    "entry_hash_mismatches": [],
+    "extraction_dir_label": "<TEMP>/FHS-5_PLP_W1_PRIMARY",
+    "extracted_checks": [
+      {
+        "name": "extract_w1_guard",
+        "command": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe check/w1_guard.py --pack-root FHS-5_PLP_W1_PRIMARY --delivery-root .",
+        "cwd": "<USER_HOME>\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{c619d423-753e-4e85-87f5-49a09d957b4e}\\Temp\\w1zip-6p_4xyc7\\FHS-5_PLP_W1_PRIMARY",
+        "exit": 0,
+        "elapsed_s": 0.312,
+        "stdout_sha256": "b38b4bf4722a5a1b9b428f39cd2a039f1d3245306a1dbf51a1c294a70d6e6070",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "raw/extract_w1_guard.stdout.txt",
+        "stderr_path": "raw/extract_w1_guard.stderr.txt"
+      },
+      {
+        "name": "extract_m22_guard",
+        "command": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe check/m22_guard_ref.py check-pack --pack-root FHS-5_PLP_W1_PRIMARY",
+        "cwd": "<USER_HOME>\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{c619d423-753e-4e85-87f5-49a09d957b4e}\\Temp\\w1zip-6p_4xyc7\\FHS-5_PLP_W1_PRIMARY",
+        "exit": 0,
+        "elapsed_s": 0.348,
+        "stdout_sha256": "720430f79062c8b1f4ceba7e0105a5520c8e8c55b76e5efb821e781964b01fb0",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "raw/extract_m22_guard.stdout.txt",
+        "stderr_path": "raw/extract_m22_guard.stderr.txt"
+      },
+      {
+        "name": "extract_replay",
+        "command": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe check/replay_hashes.py --root FHS-5_PLP_W1_PRIMARY",
+        "cwd": "<USER_HOME>\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{c619d423-753e-4e85-87f5-49a09d957b4e}\\Temp\\w1zip-6p_4xyc7\\FHS-5_PLP_W1_PRIMARY",
+        "exit": 0,
+        "elapsed_s": 0.13,
+        "stdout_sha256": "233915c33ba8bca481a7d0204ac56d8ba6152811061113c8a4ebf704d8ba35b4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "raw/extract_replay.stdout.txt",
+        "stderr_path": "raw/extract_replay.stderr.txt"
+      },
+      {
+        "name": "extract_run_cases",
+        "command": "<USER_HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe check/run_cases.py --pack-root FHS-5_PLP_W1_PRIMARY",
+        "cwd": "<USER_HOME>\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{c619d423-753e-4e85-87f5-49a09d957b4e}\\Temp\\w1zip-6p_4xyc7\\FHS-5_PLP_W1_PRIMARY",
+        "exit": 0,
+        "elapsed_s": 0.124,
+        "stdout_sha256": "19a9a0eb8aac7f15acf95fcb625290efc79a0ff6491b504174d032ef751fdb72",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "raw/extract_run_cases.stdout.txt",
+        "stderr_path": "raw/extract_run_cases.stderr.txt"
+      }
+    ],
+    "extracted_all_exit_zero": true,
+    "claim_ceiling": "AUTHOR_DESIGN_ONLY"
+  },
+  "result": "PASS_LOCAL"
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "FHS5.PLP.W0.PrimaryReceipt@local-1",
+  "primary_id": "W0-PRIMARY-20261124-01",
+  "selection_id": "W0-PRIMARY-SEL-20261124-01",
+  "promoted_at": "2026-11-24T11:03:05+08:00",
+  "promoted_from": "W0-CAND-20261124-03",
+  "primary_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\10_FINAL_DELIVERY\\FHS-5_PLP_W0_PRIMARY",
+  "candidate_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\10_FINAL_DELIVERY\\FHS-5_PLP_W0_REPAIRED_CANDIDATE",
+  "candidate_manifest_sha256": "f5e8f33c015482c41ee58da2d716b2e68717452171388dd9ee749061ec89b549",
+  "candidate_delivery_index_sha256": "a7abecd0e94c680a57621ef518b168071bf8f7b92e959f6b492b7d60340b24f4",
+  "normative_files": 15,
+  "body_resolver_sources": 13,
+  "appendix": "FHS-5_PLP_W0_證據型附錄.md",
+  "review_report": "FHS-5_PLP_W0_驗收審查與修補定案報告.md",
+  "claim_ceiling": "OWNER_AUTHORIZED_EXECUTABLE_SELECTION_WITH_ORIGINAL_DOMAIN_HOLDS",
+  "original_domain": "UNBOUND",
+  "holds": [
+    "W0-A_CASE_SELECTION",
+    "W0-B_NOT_ADMITTED",
+    "ORIGINAL_READER_UNBOUND",
+    "ORACLE_FIXTURE_UNBOUND",
+    "HOST_CAPABILITY_UNBOUND",
+    "CHECKER_PUBLISHER_UNBOUND",
+    "SOURCE_REFERENCE_HASH_CONFLICT",
+    "W0C_DENOMINATOR_ID_LIST_UNBOUND"
+  ],
+  "closeout_ref": "10_FINAL_DELIVERY/FHS-5_PLP_W0_CLOSEOUT.md",
+  "w1_w4_package_ref": "10_FINAL_DELIVERY/FHS-5_PLP_W0_CLOSEOUT_FOR_W1_W4.md",
+  "mission_handoff_ref": "10_FINAL_DELIVERY/FHS5_W0_MISSION_HANDOFF.json",
+  "promotion_authority": "HUMAN_OWNER_LOCAL_PROMOTION_NOT_ORIGINAL_ISSUER",
+  "t4_t5_formal_transition": "HOLD_CR-DOC04-STATE-MAP",
+  "selected_files": [
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 6835,
+      "sha256": "22eebb6c002179b6e7401c29b3c1a2877a208b73b68f1e62f50c0b63f786ef7f"
+    },
+    {
+      "path": "PACKAGE_FILE_MANIFEST.json",
+      "bytes": 5706,
+      "sha256": "bcb93066f2f0c3841d7ee05c3cc306f0ab74a88512381e5ee99f0badb6887a4b"
+    },
+    {
+      "path": "00_WAVE_RUN_MANIFEST.json",
+      "bytes": 35150,
+      "sha256": "527bc8fda1f09549022b14a32e0c80426657dbdddc2b041af2e21fc5d63131d0"
+    },
+    {
+      "path": "00_WAVE_RUN_MANIFEST.md",
+      "bytes": 5790,
+      "sha256": "656e5d3245d99427014c0a0fd98a0223d52c96b3aeb5f517d58210ff33b0aba6"
+    },
+    {
+      "path": "01_SOURCE_SCOPE_AND_CONSTRUCTION.md",
+      "bytes": 9312,
+      "sha256": "b38d390c8b72d227fbead24a4c4daecf3a9620d63de19cc0bc9153bdc13551c2"
+    },
+    {
+      "path": "02_ORIGINAL_CONTRACT_REFS.json",
+      "bytes": 1571,
+      "sha256": "81d4090227038d8ebbfde63307fb220357d76964d37bb73c7dbc602ed96bcce6"
+    },
+    {
+      "path": "03_DEV_ECP.md",
+      "bytes": 5219,
+      "sha256": "f86e35e955eac119ab5cbffe9b8c669436608c716c474384e99031e2cdea7f89"
+    },
+    {
+      "path": "04_OPS_ECP.md",
+      "bytes": 4998,
+      "sha256": "92131ad43685ae2fc12289f7e15778e7c48442007d50715026f861dbc6975353"
+    },
+    {
+      "path": "05_PLANNED_TQAEP.json",
+      "bytes": 32038,
+      "sha256": "c7a2eb493bcf0bd795756f1f0bb124a7fa5b544a213a5440448f6d83c9549177"
+    },
+    {
+      "path": "05_PLANNED_TQAEP.md",
+      "bytes": 8175,
+      "sha256": "88ca6d0c7d85b06936c00bd1c4a5073b08cfc6305c200a5cdc331ba61b9ce5bc"
+    },
+    {
+      "path": "06_PERMISSION_STOP_RESUME.md",
+      "bytes": 5189,
+      "sha256": "04f5d51f2114c8e90b549f94a02e847174f69910ab80c5dd6cd02429fa31a48c"
+    },
+    {
+      "path": "07_EVIDENCE_AND_CHECKER.md",
+      "bytes": 3878,
+      "sha256": "b11f359bf3cff10c6643998bceb698219e53bc839970a3a7021b3d42fdbfd85c"
+    },
+    {
+      "path": "08_AS_BUILT_AND_HANDOFF.md",
+      "bytes": 3689,
+      "sha256": "4bb54b5f86aab647833b7ac10f5726f481ddcf0977399aa0e94974ced96e9413"
+    },
+    {
+      "path": "09_README_RUN_ORDER.md",
+      "bytes": 3559,
+      "sha256": "22f776d382264188497c72ed72bd3285eb47a2ed7a0090b6f6cd0388cf8b2491"
+    },
+    {
+      "path": "W0_START_THIN_PROMPT.md",
+      "bytes": 2795,
+      "sha256": "0629179ff67516384e01c86990587d5eba405e079e66c6adf9175b49ee11c305"
+    }
+  ],
+  "primary_manifest_sha256": "f2d6e3dc2f7e56384c02ab401babdd81a6690754c9074233431a9080c579f648",
+  "primary_manifest_tree_sha256": "f27263d8e0894fcbf897e38b050dcc894d8873860f7e00271aa30a4c6f5f9446",
+  "primary_manifest_file_count": 34
+}

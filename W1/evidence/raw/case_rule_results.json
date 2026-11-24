@@ -1,0 +1,136 @@
+{
+  "schema": "FHS5.PLP.W1.CaseRuleRun@local-1",
+  "claim_ceiling": "AUTHOR_LOCAL_RULE_ONLY",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "pack": "C:\\Users\\user\\Documents\\Codex\\2026-11-24\\w1-start-thin-prompt\\work\\W1_EXEC_20261124\\FHS-5_PLP_W1_PRIMARY",
+  "summary": {
+    "total": 13,
+    "executed": 9,
+    "passed": 9,
+    "not_run": 4,
+    "failed": 0
+  },
+  "results": [
+    {
+      "case_id": "W1-HOST-01",
+      "kind": "POS",
+      "executable": false,
+      "predicate": "requires_original_runner",
+      "expected": null,
+      "status": "NOT_RUN",
+      "observed": null,
+      "reason": "requires original Bridge/Host executor or W0 PRIMARY tree outside pack; POS not proven by local rule"
+    },
+    {
+      "case_id": "W1-HOST-02",
+      "kind": "NEG",
+      "executable": true,
+      "predicate": "reject_cross_host_substitution",
+      "expected": "HOST_ABI_DRIFT",
+      "status": "PASS",
+      "observed": "HOST_ABI_DRIFT"
+    },
+    {
+      "case_id": "W1-HOST-03",
+      "kind": "NEG",
+      "executable": true,
+      "predicate": "reject_skill_read_as_invoked",
+      "expected": "HOST_PENDING",
+      "status": "PASS",
+      "observed": "HOST_PENDING"
+    },
+    {
+      "case_id": "W1-HERMES-01",
+      "kind": "POS",
+      "executable": false,
+      "predicate": "requires_original_runner",
+      "expected": null,
+      "status": "NOT_RUN",
+      "observed": null,
+      "reason": "requires original Bridge/Host executor or W0 PRIMARY tree outside pack; POS not proven by local rule"
+    },
+    {
+      "case_id": "W1-ABI-01",
+      "kind": "NEG",
+      "executable": true,
+      "predicate": "reject_same_suffix_direct",
+      "expected": "EXPLICIT_REVIEW_REQUIRED",
+      "status": "PASS",
+      "observed": "EXPLICIT_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "W1-ABI-02",
+      "kind": "NEG",
+      "executable": true,
+      "predicate": "reject_unnormalized_upgrade",
+      "expected": "LOSSY_MIGRATION",
+      "status": "PASS",
+      "observed": "LOSSY_MIGRATION"
+    },
+    {
+      "case_id": "W1-SEC-01",
+      "kind": "SEC",
+      "executable": true,
+      "predicate": "mark_injected_instruction",
+      "expected": "UNTRUSTED_SOURCE_DATA",
+      "status": "PASS",
+      "observed": "UNTRUSTED_SOURCE_DATA"
+    },
+    {
+      "case_id": "W1-API-01",
+      "kind": "POS",
+      "executable": false,
+      "predicate": "requires_original_runner",
+      "expected": null,
+      "status": "NOT_RUN",
+      "observed": null,
+      "reason": "requires original Bridge/Host executor or W0 PRIMARY tree outside pack; POS not proven by local rule"
+    },
+    {
+      "case_id": "W1-R3-01",
+      "kind": "POS",
+      "executable": false,
+      "predicate": "requires_original_runner",
+      "expected": null,
+      "status": "NOT_RUN",
+      "observed": null,
+      "reason": "requires original Bridge/Host executor or W0 PRIMARY tree outside pack; POS not proven by local rule"
+    },
+    {
+      "case_id": "W1-R3-02",
+      "kind": "NEG",
+      "executable": true,
+      "predicate": "reject_skill_bytes_as_loaded",
+      "expected": "HOST_PENDING",
+      "status": "PASS",
+      "observed": "HOST_PENDING"
+    },
+    {
+      "case_id": "W1-R3-03",
+      "kind": "NEG",
+      "executable": true,
+      "predicate": "reject_missing_effect_resume",
+      "expected": "ABI_LOSSY_CROSSWALK",
+      "status": "PASS",
+      "observed": "ABI_LOSSY_CROSSWALK"
+    },
+    {
+      "case_id": "W1-R3-04",
+      "kind": "EDGE",
+      "executable": true,
+      "predicate": "bound_workspace_drift",
+      "expected": "WORKSPACE_DRIFT_BOUNDED",
+      "status": "PASS",
+      "observed": "WORKSPACE_DRIFT_BOUNDED"
+    },
+    {
+      "case_id": "W1-R3-05",
+      "kind": "NEG",
+      "executable": true,
+      "predicate": "reject_identity_only_restore",
+      "expected": "EVIDENCE_LAUNDERING",
+      "status": "PASS",
+      "observed": "EVIDENCE_LAUNDERING"
+    }
+  ]
+}

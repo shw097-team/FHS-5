@@ -1,5 +1,13 @@
 # FHS-5_PLP W0 — Control Pack, Closeout and Evidence
 
+## W1 — Author Control Pack and Execution Evidence
+
+`W1/` contains the owner-authorized W1 public reference export: 15 normative files, 16 sources, 13 fixtures/oracles, S0–S6 execution evidence, a 67-item ECP/TQAEP closure matrix, 14 named holds, and an executable author reference adapter.
+
+Status: `AUTHOR_LOCAL_EXECUTION_COMPLETE_WITH_14_NAMED_HOLDS`; claim ceiling `AUTHOR_DESIGN_ONLY`; not Original Acceptance.
+
+Start at [`W1/README.md`](W1/README.md).
+
 This is the owner-authorized **public reference export** of the FHS-5_PLP W0 execution. It is a **HANDOFF_CANDIDATE**, not Original Acceptance.
 
 ## Start here

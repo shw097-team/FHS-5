@@ -1,0 +1,57 @@
+{
+  "schema": "FHS5.PLP.W1.ExecutionReceipt@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "wave_id": "W1",
+  "batch_id": "W1-PACK-01",
+  "selection_id": "W1-PRIMARY-SEL-20261124-01",
+  "repair_id": "W1-PRIMARY-REPAIR-20261124-02",
+  "executed_at": "2026-11-24T22:26:09+08:00",
+  "authority": "HUMAN_OWNER_TASK_INSTRUCTION_LOCAL_EXECUTION_NOT_ORIGINAL_ISSUER",
+  "effect": [
+    "SOURCE_READ",
+    "ISOLATED_DRAFT_WRITE",
+    "LOCAL_CHECK",
+    "LOCAL_PACKAGE",
+    "AUTHOR_REFERENCE_IMPL"
+  ],
+  "claim_ceiling": "AUTHOR_DESIGN_ONLY",
+  "execution_claim": "AUTHOR_LOCAL_EXECUTION_ONLY",
+  "inputs": {
+    "w0_closeout": "FHS5_W0_CLOSEOUT_PRIMARY_HANDOFF_20261124.md",
+    "w0_patch03": "FHS5_W0_PATCH03_HANDOFF_20261124.md",
+    "w1_primary_pack_file_manifest_sha256": "63d72020190e2de5243fdfd395e174e0a5e7197f21b489025e736bdc2c61f97a",
+    "source_manifest_sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47",
+    "w0_primary_tree_sha256": "f27263d8e0894fcbf897e38b050dcc894d8873860f7e00271aa30a4c6f5f9446"
+  },
+  "outputs": {
+    "primary_tree_sha256": "1e08a0309ef44990f1885618d653cf13f8a3596b4d8734ece7af4f6b680b2782",
+    "primary_manifest_sha256": "334afcd4a0d2c49c5cd96113ebadaae519f4ab26113f7a1c0bea3343f1cf3c0e",
+    "delivery_index_sha256": "1bf640c7710242f5802589752204756d36237eec174fafd6e61ba58062d0c342",
+    "zip_sha256": "87d71cc07ddf483df8bc272cb5690b53e230f8bcd4e4ceec4a082ac77a3a48f8",
+    "execution_manifest_sha256": "SEE 16_W1_EXECUTION_SEAL.json",
+    "execution_seal_sha256": "SEE 16_W1_EXECUTION_SEAL.json"
+  },
+  "results": {
+    "s0": "PASS_LOCAL_16_OF_16_PACK_PINS",
+    "s1": "PASS",
+    "s2": "PASS_LOCAL",
+    "s3": "PASS_AUTHOR_LOCAL",
+    "s4": "AUTHOR_LOCAL_COVERAGE_COMPLETE_WITH_2_HOST_HOLDS",
+    "s5": "HOST_PENDING_WITH_CONTAINER_ONLY_PROBE",
+    "s6": "HANDOFF_DESIGN_READY",
+    "ecp_tqaep_closure": "AUTHOR_LOCAL_CLOSURE_COMPLETE_WITH_NAMED_ORIGINAL_HOLDS",
+    "self_acceptance": "AUTHOR_LOCAL_EXECUTION_COMPLETE_WITH_14_NAMED_HOLDS"
+  },
+  "author_local_open": 0,
+  "named_holds": 14,
+  "not_claimed": [
+    "PI_READY",
+    "PD_BOUND",
+    "EXECUTION_ADMITTED",
+    "NATIVE_PASS",
+    "INDEPENDENT_PASS",
+    "RELEASED",
+    "MISSION_COMPLETE"
+  ]
+}

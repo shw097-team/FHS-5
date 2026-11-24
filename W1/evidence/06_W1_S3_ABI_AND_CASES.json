@@ -1,0 +1,240 @@
+{
+  "schema": "FHS5.PLP.W1.S3AbiCases@local-1",
+  "run_id": "W1-EXEC-20261124-01",
+  "claim_ceiling": "AUTHOR_DESIGN_ONLY",
+  "case_rules": {
+    "total": 13,
+    "executed": 9,
+    "passed": 9,
+    "not_run": 4,
+    "failed": 0
+  },
+  "cases": [
+    {
+      "case_id": "W1-HOST-01",
+      "kind": "POS",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "NOT_RUN",
+      "execution_state": "ORIGINAL_HOST_RAW_HOLD",
+      "expected_first_fail": "HOST_PENDING",
+      "fixture_sha256": "168aa72567745ebce907c951076323fd2db527e35502ec1ed912f309632a3fda",
+      "oracle_sha256": "c92846be150cfcfbd9400e5bf23d50ad73b1ca897d10e921ad3120e387573e68",
+      "clause_sha256": "40669f09442fca3afdf01fc33524db72f0c900d47e7d1204ac314f6503f8d8af"
+    },
+    {
+      "case_id": "W1-HOST-02",
+      "kind": "NEG",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "HOST_ABI_DRIFT",
+      "fixture_sha256": "9159143898ac741d8726390d60e776d3065ab40e7cfd3d48027d861c6f5ccea9",
+      "oracle_sha256": "0af129228279a3b0fa80bd00a696175c6aa649ac7ad2e5f239b434ae0ffaa9fe",
+      "clause_sha256": "430f97959350687e82e5fced221eb8b9f906d80d0a0e56d4751d97c2d0580e5c"
+    },
+    {
+      "case_id": "W1-HOST-03",
+      "kind": "NEG",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "HOST_PENDING",
+      "fixture_sha256": "1d7de26b5528bf6819d9647d52cc54e6c40c1b9adafb752f216422e6d41cc1a6",
+      "oracle_sha256": "f91f4fbb09a9c66c2f6f6aee9848f9774bc98d3a1c9195c48c6d95aabb55cf6f",
+      "clause_sha256": "58647608a213bec4462e0d5fd552219eca8be37490e33d996c74754833577c6e"
+    },
+    {
+      "case_id": "W1-HERMES-01",
+      "kind": "POS",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "NOT_RUN",
+      "execution_state": "ORIGINAL_HOST_RAW_HOLD",
+      "expected_first_fail": "REQUIRED_CHILD_MISSING",
+      "fixture_sha256": "8f9f784917c312770e052406e59e06aa7cc35296e176fe06cdd8ba7cd730d79a",
+      "oracle_sha256": "101103bdcc2475558c02de4162efb5e10a93aa729db8a4b5e4315d928be9edbf",
+      "clause_sha256": "8e24dd3c733c9aba554d34a0e63124eb0620ed8c3f31f175ae06cea1fcb9438b"
+    },
+    {
+      "case_id": "W1-ABI-01",
+      "kind": "NEG",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "EXPLICIT_REVIEW_REQUIRED",
+      "fixture_sha256": "a0e18b8bfabc41c97d7b2ab368cbda5e6e310d35fd2713cbde4e62868b4de196",
+      "oracle_sha256": "09e608cd0fae844eac6caac5e5ed5d8f100b1ef484c9f1d21066305865867f19",
+      "clause_sha256": "64c1d6f20fadc8d40900233ac8e22e14262e2155d802239083872fb7ce0db5a9"
+    },
+    {
+      "case_id": "W1-ABI-02",
+      "kind": "NEG",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "LOSSY_MIGRATION",
+      "fixture_sha256": "9a62f6d1912f1ebf707202882c47916f4e9bcae1420a820fa031358a022f9ae6",
+      "oracle_sha256": "ea236a6629f8f12222f5d90140a9d2362488b8449da998b4f1d6f1ed6ec90c2f",
+      "clause_sha256": "77e839f899739797d5da774fc11a08481548bc770b57ae8ba2739755db6d8e15"
+    },
+    {
+      "case_id": "W1-SEC-01",
+      "kind": "SEC",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "UNTRUSTED_SOURCE_DATA",
+      "fixture_sha256": "3a0c56efde4454937375624e485e92f975f68e4862d10b9de4bc8e7c5ab0fc67",
+      "oracle_sha256": "284675cc464e870b419ffe5e5cec54a9a252cffcf5238b32c020d5b5b45fc82d",
+      "clause_sha256": "3b06be1d14a2275853e2a60091f82dbb14c0a14af762534437f3c2c1f63e98e0"
+    },
+    {
+      "case_id": "W1-API-01",
+      "kind": "POS",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "NOT_RUN",
+      "execution_state": "AUTHOR_REFERENCE_IMPL_PASS",
+      "expected_first_fail": "BODY_RESOLVER_UNBOUND",
+      "fixture_sha256": "5d94e2ddb9cce903900b66ba55e03cf434d899eab321914c0d87ce0817bf0745",
+      "oracle_sha256": "0d3c5e3256dd4c6cfba30788c5c875222efa0fea50b5d1f842f09fd01ef97443",
+      "clause_sha256": "aa81b87eeecfbe160c31e9b1400483259187d882a81a012a871291619dab94ae"
+    },
+    {
+      "case_id": "W1-R3-01",
+      "kind": "POS",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "NOT_RUN",
+      "execution_state": "AUTHOR_LOCAL_INSPECT_PASS_WITH_NAMED_FINDING",
+      "expected_first_fail": "AUTHOR_REVIEW_PARTIAL",
+      "fixture_sha256": "c786785e330bf09060b60fe9e8767f637345331f51ab512f1e00a59d210d54bf",
+      "oracle_sha256": "6f256ac33dafe2a7c21d7cb5a39c099578ba60427d03d280c6923277877d4be3",
+      "clause_sha256": "aa05a4948d41f8600a90845cb256c160678193c740a3cf2324daac24fee7defa"
+    },
+    {
+      "case_id": "W1-R3-02",
+      "kind": "NEG",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "HOST_PENDING",
+      "fixture_sha256": "52a2009c258c18faa016c8a4a813ca6ac10c2f3b8dc9dcdb60064ed5be0c5f3d",
+      "oracle_sha256": "6c3b0182b44a2fc850eac9773c85047fb7ba38aae9b533bf04228c5677853aac",
+      "clause_sha256": "d868f98b891b76a8b40ccf4819d2ec5333d582af0ac1942984afa8a7e04cd556"
+    },
+    {
+      "case_id": "W1-R3-03",
+      "kind": "NEG",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "ABI_LOSSY_CROSSWALK",
+      "fixture_sha256": "066909b9f3228bca6064a0e4437e3e06183b2e63806ab6653a2323038e0a42ba",
+      "oracle_sha256": "ce7e1e2092f85091bf9e95337092de7af4b1df8e1e81e1718815007df5ed6caa",
+      "clause_sha256": "fa6ff7a7d89803e6c0d6c00d8a933104f6aee44e45da1358fe0dcb6aa1bb9af8"
+    },
+    {
+      "case_id": "W1-R3-04",
+      "kind": "EDGE",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "WORKSPACE_DRIFT_BOUNDED",
+      "fixture_sha256": "c6cc18e9c9459f3d7ee260973cb8a4d95d246685ece659675b443120c2534a36",
+      "oracle_sha256": "b8321db4c322bff2e04baf85d914aa4b4a5360c669987ccb5aeebf8e0aa13eda",
+      "clause_sha256": "502408723a47bede72f38be933d0ddc3c5fe53faed89716e11bdc18d371d0783"
+    },
+    {
+      "case_id": "W1-R3-05",
+      "kind": "NEG",
+      "canonical_state": "AUTHOR_PLANNED_NOT_LIVE",
+      "local_rule_status": "PASS",
+      "execution_state": "PASS",
+      "expected_first_fail": "EVIDENCE_LAUNDERING",
+      "fixture_sha256": "59552d7790f88b818f79883d42a5894dfc8a295b80957c5d2eff06ce3f592da2",
+      "oracle_sha256": "1c6ccd0a53d14f40058fef76ee51d89762c00290280333e3b452c37d43f10b45",
+      "clause_sha256": "85c8c7c3de7b875b0258c0b820b50d6c9bbbc28aedba1e230af6ac2d143f0979"
+    }
+  ],
+  "wps": [
+    {
+      "wp": "WM1-P01",
+      "name": "Identity/Reuse",
+      "input": "host_claims[] + inventory ledgers",
+      "operation": "enumerate 21 host cells, 9 U-017 + 3 U-028 children, plugin alias state",
+      "output": "HostCapabilityLedger (21 cells, 12 children)",
+      "consumer": "W4 / Host Owner",
+      "evidence": "08_W1_S5_HOST_OBSERVATION.json",
+      "state": "AUTHOR_DRY_CONSUME_PASS"
+    },
+    {
+      "wp": "WM1-P02",
+      "name": "ABI Crosswalk",
+      "input": "01 §5-§7 + B02/B03",
+      "operation": "7 seams, 5 namespaces, 4 independent digests, field loss/readback",
+      "output": "Crosswalk table (7/5/4)",
+      "consumer": "Bridge/Guide ABI Owner",
+      "evidence": "06_W1_S3_ABI_AND_CASES.json",
+      "state": "AUTHOR_DRY_CONSUME_PASS"
+    },
+    {
+      "wp": "WM1-P03",
+      "name": "Four APIs/BodyResolver",
+      "input": "pack manifest + TQAEP + sources",
+      "operation": "inspect/explain/render/compare + body span resolution",
+      "output": "22/22 reference adapter checks",
+      "consumer": "Executor / Host Consumer",
+      "evidence": "13_W1_REFERENCE_ADAPTER_RESULTS.json",
+      "state": "AUTHOR_REFERENCE_IMPL_PASS"
+    },
+    {
+      "wp": "WM1-P04",
+      "name": "Host Actual Read",
+      "input": "container probe + host claims",
+      "operation": "attempt seven stages per host; no installer/loader/consumer receipt",
+      "output": "21 rows, 0 installed, 0 consumed",
+      "consumer": "W4 / Host Owner",
+      "evidence": "08_W1_S5_HOST_OBSERVATION.json",
+      "state": "HOLD_HOST_PENDING"
+    },
+    {
+      "wp": "WM1-P05",
+      "name": "Adversarial ABI",
+      "input": "17 mutant families + security fixtures",
+      "operation": "scope/unknown/path/secret/claim/receipt/duplicate-key mutations",
+      "output": "17/17 rejected",
+      "consumer": "Reviewer / W3",
+      "evidence": "02_W1_HARNESS_LOOP.json",
+      "state": "AUTHOR_DRY_CONSUME_PASS"
+    },
+    {
+      "wp": "WM1-P06",
+      "name": "AsBuilt/Next",
+      "input": "08 handoff + S0-S5",
+      "operation": "W2/W3/W4 interface extraction and NotCovered",
+      "output": "5 interface rows, NotCovered list",
+      "consumer": "W2 Program",
+      "evidence": "09_W1_S6_HANDOFF.json",
+      "state": "AUTHOR_DRY_CONSUME_PASS_WITH_NOT_COVERED"
+    }
+  ],
+  "adapter": {
+    "total": 22,
+    "passed": 22,
+    "failed": 0,
+    "verdict": "AUTHOR_REFERENCE_IMPL_PASS",
+    "result_path": "13_W1_REFERENCE_ADAPTER_RESULTS.json"
+  },
+  "api_surface": [
+    "inspect_package",
+    "explain_slice",
+    "render_agent_context",
+    "compare_context"
+  ],
+  "body_resolver": {
+    "path_containment": "PASS",
+    "duplicate_key": "PASS",
+    "strict_utf8": "PASS",
+    "sha_span": "PASS",
+    "full_clause_not_excerpt": "PASS"
+  },
+  "result": "PASS_AUTHOR_LOCAL"
+}

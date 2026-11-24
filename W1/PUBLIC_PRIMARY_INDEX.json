@@ -1,0 +1,94 @@
+{
+  "schema": "FHS5.PLP.W1.PublicPrimaryIndex@public-1",
+  "primary_id": "FHS-5_PLP_W1_PRIMARY",
+  "public_export": true,
+  "normative": [
+    {
+      "path": "primary/00_WAVE_RUN_MANIFEST.md",
+      "bytes": 7018,
+      "sha256": "66f566863b8ff6b972f4b0edc6077c25b7219cf35948dad9378c61d1b5adb896"
+    },
+    {
+      "path": "primary/00_WAVE_RUN_MANIFEST.json",
+      "bytes": 31876,
+      "sha256": "212863778f4a390fb5867774b117bfe5d1031229614542d150b227ba152242eb"
+    },
+    {
+      "path": "primary/01_SOURCE_SCOPE_AND_CONSTRUCTION.md",
+      "bytes": 22004,
+      "sha256": "6a61d9b5ab401c4c6c584ce51028ff8f5136215f491487e36b14717c3814d718"
+    },
+    {
+      "path": "primary/02_ORIGINAL_CONTRACT_REFS.json",
+      "bytes": 1644,
+      "sha256": "b0ab99f24e9bf4df6a1221059730458ba3114557d6e38afdd0fd3ac1317e2daf"
+    },
+    {
+      "path": "primary/03_DEV_ECP.md",
+      "bytes": 6302,
+      "sha256": "5ab52cebd19e5822ee4035fb9b0f880cc1d256a82841f3c8b4f607fdfd15037f"
+    },
+    {
+      "path": "primary/04_OPS_ECP.md",
+      "bytes": 5513,
+      "sha256": "87591f5b710376987dd5c45ca2dbd3530e3e3b979fa578cb8c6e53ea366b8ff6"
+    },
+    {
+      "path": "primary/05_PLANNED_TQAEP.md",
+      "bytes": 8786,
+      "sha256": "e7677cdea16ab7e65d2d5669d01d5ff3f2fd2147eeb8b625756a432e2500d14f"
+    },
+    {
+      "path": "primary/05_PLANNED_TQAEP.json",
+      "bytes": 22034,
+      "sha256": "69d7c35cad1da708e41dbdcb343b3a17b059f4ee8d70a4f7678c7fd84db67a5b"
+    },
+    {
+      "path": "primary/06_PERMISSION_STOP_RESUME.md",
+      "bytes": 6659,
+      "sha256": "7d5114bf6e6cd75ec3d50b2925974d0a4c48d842aa209f2d3d30f9c85ca6e9a5"
+    },
+    {
+      "path": "primary/07_EVIDENCE_AND_CHECKER.md",
+      "bytes": 4008,
+      "sha256": "f02eea4e6e390fdbb870b4d73dcc97ba2af55b377f9bbacc1557bd3ae70ee11b"
+    },
+    {
+      "path": "primary/08_AS_BUILT_AND_HANDOFF.md",
+      "bytes": 4808,
+      "sha256": "62e53cce751b24dbbeba48b3b7d32588e22d5c1ac07d4cb7224b7fdac4c26560"
+    },
+    {
+      "path": "primary/09_README_RUN_ORDER.md",
+      "bytes": 4070,
+      "sha256": "8838433b0c36c9185f9b8af3d49ddfb00749774ba2f797b6cf1f2f5a580f59f4"
+    },
+    {
+      "path": "primary/PACKAGE_FILE_MANIFEST.json",
+      "bytes": 9730,
+      "sha256": "63d72020190e2de5243fdfd395e174e0a5e7197f21b489025e736bdc2c61f97a"
+    },
+    {
+      "path": "primary/SOURCE_MANIFEST.json",
+      "bytes": 7904,
+      "sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47"
+    },
+    {
+      "path": "primary/W1_START_THIN_PROMPT.md",
+      "bytes": 2964,
+      "sha256": "f51ee80069f380bd5bb3015146e012a06fd6d0a0a708b9f92fecf7d43bac08bb"
+    }
+  ],
+  "counts": {
+    "normative": 15,
+    "sources": 16,
+    "fixtures": 13,
+    "oracles": 13,
+    "inventory": 2,
+    "evidence_reports": 0
+  },
+  "source_manifest_sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47",
+  "package_file_manifest_sha256": "63d72020190e2de5243fdfd395e174e0a5e7197f21b489025e736bdc2c61f97a",
+  "tqaep_md_sha256": "e7677cdea16ab7e65d2d5669d01d5ff3f2fd2147eeb8b625756a432e2500d14f",
+  "self_hash_policy": "PUBLIC_PRIMARY_INDEX.json does not list itself."
+}
