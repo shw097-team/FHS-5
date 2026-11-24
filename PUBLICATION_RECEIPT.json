@@ -1,0 +1,59 @@
+{
+  "schema": "FHS5.PLP.W0.PublicationReceipt@public-1",
+  "generated_at": "2026-11-24T11:30:00+08:00",
+  "repository": {
+    "full_name": "shw097-team/FHS-5",
+    "html_url": "https://github.com/shw097-team/FHS-5",
+    "visibility": "public",
+    "default_branch": "main",
+    "initial_commit": "3228a21dd1d86647548ddbc8daeec4e40eefd701",
+    "initial_commit_message": "FHS-5_PLP W0 primary, closeout, and evidence (HANDOFF_CANDIDATE)",
+    "remote_url_without_token": true
+  },
+  "payload": {
+    "file_count": 51,
+    "primary_origin_tree": "f27263d8e0894fcbf897e38b050dcc894d8873860f7e00271aa30a4c6f5f9446",
+    "public_primary_manifest_tree": "81c235ba69105b654c8853ef5e46390dc4bc1c378c566c8b92f9887854b453e5",
+    "workspace_manifest_tree_at_publication": "d64d499f17dba8bb1e99ec51dfc0bdb4a55b6b1d55926066feda2d63263a317f",
+    "source_manifest_sha256": "22eebb6c002179b6e7401c29b3c1a2877a208b73b68f1e62f50c0b63f786ef7f",
+    "package_file_manifest_sha256": "bcb93066f2f0c3841d7ee05c3cc306f0ab74a88512381e5ee99f0badb6887a4b",
+    "claim_ceiling": "AUTHOR_CONTROL_PACK_CANDIDATE_PASS_WITH_HOLDS",
+    "original_domain": "UNBOUND",
+    "t4_t5_formal_transition": "HOLD_CR-DOC04-STATE-MAP"
+  },
+  "content": {
+    "included": [
+      "primary/ 15 normative files + 13 body-resolver sources + evidence appendix + review report + candidate receipt",
+      "closeout/ W0 closeout + W1-W4 single-MD package + public primary selection + MissionHandoff",
+      "evidence/ harness/self-check public summaries + closure matrices + trace/changed verification + guard/ACL/discovery/source public summaries",
+      "README.md / NOTICE.md / SECURITY.md"
+    ],
+    "excluded": [
+      "API KEY directory and any credential",
+      "raw ACL files / SID records / principal records",
+      "raw 2,609-row external path disposition inventory (aggregate summaries only)",
+      "audit input reports and patch scripts containing local absolute paths",
+      "duplicate candidate root (LastGood remains in the local workspace)"
+    ]
+  },
+  "security_scan": {
+    "exact_token_hits": 0,
+    "github_pat_ghp_gho_hits": 0,
+    "akia_private_key_hits": 0,
+    "sid_host_apikey_hits": 0,
+    "raw_external_root_labels_hits": 0,
+    "false_positive_sk_hits": 4,
+    "false_positive_review": "task-pinned / issue-to-task strings; not secrets",
+    "token_committed": false
+  },
+  "authorization": {
+    "kind": "HUMAN_OWNER_EXPLICIT_PUBLIC_PUSH",
+    "statement": "User explicitly authorized pushing the 51-file sanitized staging to shw097-team/FHS-5.",
+    "not_original_acceptance": true
+  },
+  "notes": [
+    "This repository is a public reference export, not Original Reader/Issuer/Checker/Publisher acceptance.",
+    "T4/T5 formal transition remains HOLD_CR-DOC04-STATE-MAP.",
+    "The receipt itself is added in a second commit; the initial publication commit is recorded above."
+  ]
+}
