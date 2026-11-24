@@ -1,0 +1,40 @@
+{
+  "schema": "FHS5.PLP.OriginalContractRefs@proposal-2",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "subject_id": "FHS-5_PLP/W0",
+    "scope": "W0-A/B/C AUTHOR CONTROL PACK; SOURCE_READ+ISOLATED_DRAFT_WRITE; W0-B NOT_ADMITTED",
+    "wave_id": "W0",
+    "batch_id": "W0-CODEX-REPAIR-20261123-01",
+    "source_manifest_sha256": "22eebb6c002179b6e7401c29b3c1a2877a208b73b68f1e62f50c0b63f786ef7f"
+  },
+  "original_pi_ref": null,
+  "original_pd_ref": null,
+  "original_ecp_ref": null,
+  "original_tqaep_ref": null,
+  "dev_ecp_ref": null,
+  "ops_ecp_ref": null,
+  "original_effect_registry_ref": null,
+  "original_case_registry_ref": null,
+  "original_oracle_ref": null,
+  "original_safety_ref": null,
+  "original_workorder_ref": null,
+  "execution_admission_ref": null,
+  "original_reader_state": "UNBOUND",
+  "original_reader_name": null,
+  "original_reader_version": null,
+  "effect_registry_state": "UNBOUND",
+  "case_registry_state": "UNBOUND",
+  "oracle_registry_state": "UNBOUND",
+  "safety_registry_state": "UNBOUND",
+  "original_issuer_state": "UNBOUND",
+  "body_resolver_state": "UNBOUND",
+  "notes": [
+    "All original refs are null because no typed original reader receipt was supplied.",
+    "A path, hash, schema string or plausible ID is not an Original Reader acknowledgement.",
+    "overseer/case-oracle/issuer/host receipts must be supplied by the original domain owners."
+  ],
+  "human_owner_selection_ref": "W0-EXEC-SEL-20261124-01",
+  "human_owner_selection_state": "RECORDED_NOT_ORIGINAL_ISSUER",
+  "original_domain_receipts_state": "UNBOUND"
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "FHS5.PLP.W0.PublicSourceVerifySummary@public-1",
+  "public_export": true,
+  "sources": 13,
+  "bytes_lines_sha_verified": 13,
+  "source_manifest_sha256": "22eebb6c002179b6e7401c29b3c1a2877a208b73b68f1e62f50c0b63f786ef7f",
+  "package_file_manifest_sha256": "bcb93066f2f0c3841d7ee05c3cc306f0ab74a88512381e5ee99f0badb6887a4b"
+}

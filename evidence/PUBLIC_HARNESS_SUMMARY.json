@@ -1,0 +1,114 @@
+{
+  "schema": "FHS5.PLP.W0.PublicHarnessSummary@public-1",
+  "public_export": true,
+  "origin_sha256": "5a4c3c52d32ec8b603a77cc7ad79ab49ca13a32680604a2518a1455a27ea9d25",
+  "summary": {
+    "total": 18,
+    "pass": 18,
+    "fail": 0
+  },
+  "status": "PASS_WITH_ORIGINAL_HOLDS",
+  "iterations": [
+    {
+      "iteration": 0,
+      "phase": "DETECT",
+      "open": 9,
+      "source": "W0_POST_PATCH_CHALLENGE_ROUND2"
+    },
+    {
+      "iteration": 1,
+      "phase": "REPAIR",
+      "repaired": 9,
+      "actions": [
+        "6-root discovery",
+        "ACL UTF-8 + deployed/original",
+        "trace final-state",
+        "changed/scripts",
+        "lineage",
+        "substantive self-check",
+        "closure counts"
+      ]
+    },
+    {
+      "iteration": 2,
+      "phase": "VERIFY",
+      "pass": 18,
+      "fail": 0,
+      "original_holds": 2
+    }
+  ],
+  "checks": [
+    {
+      "id": "manifest_ok",
+      "status": "PASS"
+    },
+    {
+      "id": "pack_28",
+      "status": "PASS"
+    },
+    {
+      "id": "tqaep_24",
+      "status": "PASS"
+    },
+    {
+      "id": "w0c_1011",
+      "status": "PASS"
+    },
+    {
+      "id": "discovery_6_roots",
+      "status": "PASS"
+    },
+    {
+      "id": "discovery_all_roots",
+      "status": "PASS"
+    },
+    {
+      "id": "discovery_sqs",
+      "status": "PASS"
+    },
+    {
+      "id": "acl_utf8",
+      "status": "PASS"
+    },
+    {
+      "id": "trace_final",
+      "status": "PASS"
+    },
+    {
+      "id": "changed_ok",
+      "status": "PASS"
+    },
+    {
+      "id": "scripts_13",
+      "status": "PASS"
+    },
+    {
+      "id": "selfcheck_ok",
+      "status": "PASS"
+    },
+    {
+      "id": "overclaim_scan",
+      "status": "PASS"
+    },
+    {
+      "id": "challenge_7",
+      "status": "PASS"
+    },
+    {
+      "id": "audit_11",
+      "status": "PASS"
+    },
+    {
+      "id": "candidate_15",
+      "status": "PASS"
+    },
+    {
+      "id": "lineage",
+      "status": "PASS"
+    },
+    {
+      "id": "guard",
+      "status": "PASS"
+    }
+  ]
+}

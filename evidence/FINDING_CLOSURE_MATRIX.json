@@ -1,0 +1,161 @@
+{
+  "schema": "FHS5.PLP.W0.FindingClosureMatrix@local-1",
+  "generated_at": "2026-11-24T10:38:36+08:00",
+  "patch_id": "W0-PATCH-20261124-01",
+  "audit_sha256": "b1ba9f47d22c956dcb000aa8a382e5fd5e821194cac8290e7d00deb1cccfdbfb",
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "P1",
+      "title": "W0-A discovery incomplete and truncated flag wrong",
+      "requirement": "Full enumerate + classify + owner designation; correct truncated; include G1/G2/G4.",
+      "remediation": "All 6 roots fully enumerated; 1,821 project-relevant case/oracle-like files dispositioned; SQS-LEGACY-REGRESSION-013 added as a case+oracle candidate; summary no longer claims a global 5.",
+      "evidence": [
+        "03_W0A/W0A_CASE_DISCOVERY_REPORT.json",
+        "09_CHALLENGE_REMEDIATION/CASE_ORACLE_DISPOSITION.jsonl",
+        "09_CHALLENGE_REMEDIATION/CASE_ORACLE_DISPOSITION.csv"
+      ],
+      "status": "CLOSED_LOCAL_DISCOVERY_COMPLETE_ALL_6_ROOTS",
+      "remaining": "Original domain action only: Original Owner must designate a candidate or record typed ReasonedNA."
+    },
+    {
+      "id": "F-02",
+      "severity": "P2",
+      "title": "External discovery had no authorization/ACL record",
+      "requirement": "Record mode, principal, roots, exclusions and no credential read.",
+      "remediation": "Added DISCOVERY_AUTHORIZATION block: LOCAL_DISCOVERY_ENUMERATION, OS principal, per-root totals, skipped reasons, credential-store exclusion, and content-read policy.",
+      "evidence": [
+        "03_W0A/W0A_CASE_DISCOVERY_REPORT.json#authorization",
+        "08_AUDIT_REMEDIATION/DISCOVERY_AUTHORIZATION.json"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: None for local discovery; Original Source Owner authority is still not claimed."
+    },
+    {
+      "id": "F-03",
+      "severity": "P2",
+      "title": "13 SOURCE_READ entries lacked ACL/principal",
+      "requirement": "Add acl_ref/principal/mode or downgrade read class and hold.",
+      "remediation": "Captured live icacls for all 13 sources at BUILD_STAGING, DEPLOYED and ORIGINAL; deployed/original refs and hashes added to the source ledger.",
+      "evidence": [
+        "08_AUDIT_REMEDIATION/READ_ACL_LEDGER.json",
+        "03_W0A/W0A_SOURCE_READ_LEDGER.json",
+        "09_CHALLENGE_REMEDIATION/READ_ACL_DEPLOYED/",
+        "09_CHALLENGE_REMEDIATION/READ_ACL_ORIGINAL/"
+      ],
+      "status": "CLOSED_LOCAL_DEPLOYED_AND_ORIGINAL_ACL",
+      "remaining": "Original domain action only: Original Source Owner ACL acknowledgement remains UNBOUND."
+    },
+    {
+      "id": "F-04",
+      "severity": "P2",
+      "title": "Author guard red lights lacked characterisation; selection first_fail empty",
+      "requirement": "Add typed interpretation; make selection_guard first_fail non-empty.",
+      "remediation": "GUARD_RESULTS now carries interpretation for pack/m22/selection guards; selection_guard v2 emits explicit first_fail and supports digest relocation.",
+      "evidence": [
+        "06_EVIDENCE/GUARD_RESULTS.json",
+        "06_EVIDENCE/scripts/author_supplied/selection_guard.py"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: None."
+    },
+    {
+      "id": "F-05",
+      "severity": "P3",
+      "title": "2/13 original_path stale (missing OLD\\)",
+      "requirement": "Correct locators or add candidates; keep bytes stable.",
+      "remediation": "Added SOURCE_LOCATOR_CORRECTION overlay; corrected CTRLW0/STARTW0 locators match the copies; canonical pack bytes unchanged.",
+      "evidence": [
+        "08_AUDIT_REMEDIATION/SOURCE_LOCATOR_CORRECTION.json"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: None."
+    },
+    {
+      "id": "F-06",
+      "severity": "P3",
+      "title": "Selection receipt embeds author absolute path",
+      "requirement": "Use digest/identity validation or a relocated receipt.",
+      "remediation": "selection_guard v2 default mode validates digests and returns RELOCATED_SELECTION_VALID_BY_DIGEST; strict path mode still fails closed.",
+      "evidence": [
+        "01_INPUT/SELECTION/RELOCATED_SELECTION_RECEIPT.json",
+        "06_EVIDENCE/GUARD_RESULTS.json"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: None; path is provenance only."
+    },
+    {
+      "id": "F-07",
+      "severity": "P3",
+      "title": "CSV UTF-8 BOM",
+      "requirement": "Write UTF-8 without BOM or declare utf-8-sig.",
+      "remediation": "Rewrote CSV without BOM; first header is `set`; 485 rows.",
+      "evidence": [
+        "05_W0C/W0C_485_TOOLNEED_LEDGER.csv"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: None."
+    },
+    {
+      "id": "F-08",
+      "severity": "P3",
+      "title": "Deployment not atomic and no before-SHA",
+      "requirement": "Stage tmp + rename; record target before/after SHA.",
+      "remediation": "Deployment step uses per-file tmp+os.replace and records before_tree_sha256 / after_tree_sha256 in DEPLOYMENT_RECEIPT.",
+      "evidence": [
+        "DEPLOYMENT_RECEIPT.json",
+        "08_AUDIT_REMEDIATION/REMEDIATION_RECEIPT.json"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: Final before/after SHAs are generated at deployment."
+    },
+    {
+      "id": "F-09",
+      "severity": "P3",
+      "title": "15-file identity wording",
+      "requirement": "Say 14 file records + 1 top-level; SOURCE_MANIFEST has no identity.",
+      "remediation": "Updated identity check output, precheck, summary and compliance wording.",
+      "evidence": [
+        "02_PRECHECK/01_IDENTITY_CONSISTENCY.json"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: None."
+    },
+    {
+      "id": "F-10",
+      "severity": "P3",
+      "title": "FirstFail token drift",
+      "requirement": "Map local subcodes to package tokens.",
+      "remediation": "Added TOKEN_MAP and package_first_fail to all 7 NT records.",
+      "evidence": [
+        "08_AUDIT_REMEDIATION/TOKEN_MAP.json",
+        "06_EVIDENCE/GUARD_RESULTS.json"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: None."
+    },
+    {
+      "id": "F-11",
+      "severity": "P3",
+      "title": "Claim ceiling vocabulary",
+      "requirement": "Map receipt ceiling to selection ceiling.",
+      "remediation": "Added CLAIM_CEILING_MAP; receipt uses selection ceiling as effective value.",
+      "evidence": [
+        "08_AUDIT_REMEDIATION/CLAIM_CEILING_MAP.json",
+        "00_START_HERE/W0_EXECUTION_RECEIPT.json"
+      ],
+      "status": "CLOSED_LOCAL",
+      "remaining": "Original domain action only: None."
+    }
+  ],
+  "summary": {
+    "total": 11,
+    "closed_local": 11,
+    "partial": 0,
+    "p1": 1,
+    "p2": 3,
+    "p3": 7,
+    "overall": "11/11_CLOSED_LOCAL_2_ORIGINAL_DOMAIN_ACTIONS_OPEN",
+    "original_domain_holds_unchanged": true
+  }
+}

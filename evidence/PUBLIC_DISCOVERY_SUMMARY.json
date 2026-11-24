@@ -1,0 +1,20 @@
+{
+  "schema": "FHS5.PLP.W0.PublicDiscoverySummary@public-1",
+  "public_export": true,
+  "roots_scanned": 5,
+  "rows": 2609,
+  "by_semantic_class": {
+    "DOC_OR_SPEC": 1906,
+    "TEST_OR_CODE": 695,
+    "DATA_OR_ARCHIVE": 6,
+    "SEMANTIC_CASE_ORACLE": 2
+  },
+  "by_disposition": {
+    "RECORD_ONLY_CASE_ORACLE_LIKE": 1906,
+    "RECORD_ONLY_CODE_OR_TEST": 695,
+    "NOT_CASE_DATA_OR_ARCHIVE": 6,
+    "CANDIDATE_MEMBER_SQS_LEGACY_REGRESSION_013": 2
+  },
+  "unclassified_rows": 0,
+  "note": "Root labels and raw paths are excluded from the public export."
+}

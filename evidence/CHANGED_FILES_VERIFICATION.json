@@ -1,0 +1,30 @@
+{
+  "schema": "FHS5.PLP.W0.ChangedFilesVerification@local-3",
+  "generated_at": "2026-11-24T11:05:08+08:00",
+  "entries": 302,
+  "mismatches": [],
+  "status": "PASS",
+  "scope_excludes": [
+    "08_AUDIT_REMEDIATION/CHANGED_FILES.json",
+    "08_AUDIT_REMEDIATION/CHANGED_FILES_VERIFICATION.json",
+    "09_CHALLENGE_REMEDIATION/DEPLOYMENT_HISTORY.json",
+    "09_CHALLENGE_REMEDIATION/ITERATION_LEDGER.json",
+    "09_CHALLENGE_REMEDIATION/PATCH_ITERATION_LOG.md",
+    "09_CHALLENGE_REMEDIATION/REMEDIATION_INVOCATION.json",
+    "09_CHALLENGE_REMEDIATION/SELF_CHECK_ONLY.json",
+    "09_CHALLENGE_REMEDIATION/SELF_CHECK_REPORT.json",
+    "09_CHALLENGE_REMEDIATION/SELF_GOVERNANCE.md",
+    "09_CHALLENGE_REMEDIATION/TRACE_VERIFICATION.json",
+    "09_CHALLENGE_REMEDIATION/WRITE_LEDGER.json",
+    "10_FINAL_DELIVERY/HARNESS_LOG.md",
+    "10_FINAL_DELIVERY/HARNESS_RESULT.json",
+    "99_TRACE/execution_trace.ndjson",
+    "DEPLOYMENT_RECEIPT.json",
+    "DEPLOYMENT_VERIFICATION.json",
+    "MANIFEST.json"
+  ],
+  "manifest_files_ref": "MANIFEST.json.file_count",
+  "manifest_tree_sha256_ref": "MANIFEST.json.tree_sha256",
+  "full_tree_manifest_verified": true,
+  "scope_note": "All changed entries verified; full tree manifest verified separately."
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "FHS5.PLP.W0.PublicAclSummary@public-1",
+  "public_export": true,
+  "sources": 13,
+  "deployed_live_match": 13,
+  "original_live_match": 13,
+  "original_owner_ack": "UNBOUND",
+  "utf8": true
+}

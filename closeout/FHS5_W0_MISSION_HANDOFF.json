@@ -1,0 +1,26 @@
+{
+  "schema": "SBL.MissionHandoff@1",
+  "abi_version": "1",
+  "subject_sha256": "f27263d8e0894fcbf897e38b050dcc894d8873860f7e00271aa30a4c6f5f9446",
+  "source_manifest_sha256": "22eebb6c002179b6e7401c29b3c1a2877a208b73b68f1e62f50c0b63f786ef7f",
+  "receiver": "FHS-5_PLP_W1_W4_AUTHOR",
+  "artifact_refs": [
+    "10_FINAL_DELIVERY/PRIMARY_SELECTION.json",
+    "10_FINAL_DELIVERY/FHS-5_PLP_W0_PRIMARY/PRIMARY_MANIFEST.json",
+    "10_FINAL_DELIVERY/FHS-5_PLP_W0_PRIMARY/PRIMARY_DELIVERY_INDEX.json",
+    "10_FINAL_DELIVERY/FHS-5_PLP_W0_CLOSEOUT.md",
+    "10_FINAL_DELIVERY/FHS-5_PLP_W0_CLOSEOUT_FOR_W1_W4.md",
+    "10_FINAL_DELIVERY/FHS-5_PLP_W0_PRIMARY/FHS-5_PLP_W0_證據型附錄.md",
+    "10_FINAL_DELIVERY/FHS-5_PLP_W0_PRIMARY/FHS-5_PLP_W0_驗收審查與修補定案報告.md"
+  ],
+  "effect_class": "READ_ONLY",
+  "affected_scope": [
+    "FHS-5_PLP/W0",
+    "FHS-5_PLP/W1",
+    "FHS-5_PLP/W2",
+    "FHS-5_PLP/W3",
+    "FHS-5_PLP/W4"
+  ],
+  "resume_predicate": "Original Owner supplies typed W0-A case designation or ReasonedNA, W0-B Issuer/Repo/Host/WorkOrder/Admission/WriteSet/Reader/Recovery, and W0-C Profile Owner adjudication; W1-W4 may start read-only write-back planning from PRIMARY_SELECTION and this handoff.",
+  "claim_ceiling": "HANDOFF_CANDIDATE"
+}

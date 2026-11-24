@@ -1,0 +1,36 @@
+{
+  "schema": "FHS5.PLP.W0.CandidateReceipt@local-1",
+  "candidate_id": "W0-CAND-20261124-03",
+  "patch_id": "W0-PATCH-20261124-03",
+  "generated_at": "2026-11-24T10:43:26+08:00",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "subject_id": "FHS-5_PLP/W0",
+    "scope": "W0-A/B/C AUTHOR CONTROL PACK; SOURCE_READ+ISOLATED_DRAFT_WRITE; W0-B NOT_ADMITTED",
+    "wave_id": "W0",
+    "batch_id": "W0-CODEX-REPAIR-20261123-01",
+    "source_manifest_sha256": "22eebb6c002179b6e7401c29b3c1a2877a208b73b68f1e62f50c0b63f786ef7f"
+  },
+  "claim_ceiling": "AUTHOR_CONTROL_PACK_CANDIDATE_PASS_WITH_HOLDS",
+  "original_domain": "UNBOUND",
+  "normative_files": 15,
+  "body_resolver_sources": 13,
+  "appendix": "FHS-5_PLP_W0_證據型附錄.md",
+  "review_report": "FHS-5_PLP_W0_驗收審查與修補定案報告.md",
+  "pk_summary": {
+    "total": 14,
+    "pass": 13,
+    "hold": 1,
+    "fail": 0,
+    "hold_id": "PK-Q08"
+  },
+  "holds": [
+    "W0-A_CASE_SELECTION",
+    "W0-B_NOT_ADMITTED",
+    "ORIGINAL_READER_UNBOUND",
+    "ORACLE_FIXTURE_UNBOUND",
+    "HOST_CAPABILITY_UNBOUND",
+    "CHECKER_PUBLISHER_UNBOUND",
+    "W0C_DENOMINATOR_ID_LIST_UNBOUND"
+  ]
+}

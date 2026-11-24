@@ -1,0 +1,50 @@
+{
+  "schema": "FHS5.PLP.W0.PublicGuardSummary@public-1",
+  "public_export": true,
+  "local_guard_summary": {
+    "positive_checks": 11,
+    "positive_pass": 10,
+    "positive_fail": 0,
+    "holds_characterised": 1,
+    "negative_tests": 7,
+    "negative_detected": 7,
+    "overall": "PASS_WITH_CHARACTERISED_HOLD"
+  },
+  "negative_tests": [
+    {
+      "test_id": "NT01_SOURCE_BYTE_TAMPER",
+      "expected": "SOURCE_INTEGRITY_FAILED",
+      "detected": true
+    },
+    {
+      "test_id": "NT02_PATH_ESCAPE",
+      "expected": "PATH_OUTSIDE_ROOT",
+      "detected": true
+    },
+    {
+      "test_id": "NT03_FAKE_RECEIPT_STRING",
+      "expected": "ORIGINAL_RECEIPT_NOT_TYPED",
+      "detected": true
+    },
+    {
+      "test_id": "NT04_CLAIMS_TRUE_INJECTION",
+      "expected": "CLAIM_CEILING_VIOLATION",
+      "detected": true
+    },
+    {
+      "test_id": "NT05_PROJECTION_MISMATCH",
+      "expected": "TQAEP_PROJECTION_MISMATCH",
+      "detected": true
+    },
+    {
+      "test_id": "NT06_UNKNOWN_EFFECT_TOKEN",
+      "expected": "EFFECT_MAPPING_UNVERIFIED",
+      "detected": true
+    },
+    {
+      "test_id": "NT07_PERMIT_STRING_NO_TYPED_ADMISSION",
+      "expected": "W0-B_NOT_ADMITTED",
+      "detected": true
+    }
+  ]
+}

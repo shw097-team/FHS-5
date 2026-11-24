@@ -1,0 +1,102 @@
+{
+  "schema": "FHS5.PLP.W0.PublicSelfCheckSummary@public-1",
+  "public_export": true,
+  "origin_sha256": "0315ebef1f879f5b8e40eca87ed6bcdc72a1f7ed957936cc67acebb93b546894",
+  "local_checks": {
+    "total": 22,
+    "pass": 22,
+    "fail": 0
+  },
+  "status": "PASS_WITH_ORIGINAL_HOLDS",
+  "not_an_acceptance": true,
+  "checks": [
+    {
+      "id": "manifest_220",
+      "status": "PASS"
+    },
+    {
+      "id": "pack_28",
+      "status": "PASS"
+    },
+    {
+      "id": "tqaep_24",
+      "status": "PASS"
+    },
+    {
+      "id": "w0c_1011",
+      "status": "PASS"
+    },
+    {
+      "id": "discovery_6_roots",
+      "status": "PASS"
+    },
+    {
+      "id": "discovery_all_roots",
+      "status": "PASS"
+    },
+    {
+      "id": "sqs_candidate",
+      "status": "PASS"
+    },
+    {
+      "id": "acl_deployed_13",
+      "status": "PASS"
+    },
+    {
+      "id": "acl_original_13",
+      "status": "PASS"
+    },
+    {
+      "id": "trace_219",
+      "status": "PASS"
+    },
+    {
+      "id": "changed_80",
+      "status": "PASS"
+    },
+    {
+      "id": "scripts_13",
+      "status": "PASS"
+    },
+    {
+      "id": "guard_10_0_1",
+      "status": "PASS"
+    },
+    {
+      "id": "negative_7_7",
+      "status": "PASS"
+    },
+    {
+      "id": "selection_strict_2",
+      "status": "PASS"
+    },
+    {
+      "id": "selection_digest_0",
+      "status": "PASS"
+    },
+    {
+      "id": "g4_3_tests",
+      "status": "PASS"
+    },
+    {
+      "id": "challenge_7",
+      "status": "PASS"
+    },
+    {
+      "id": "audit_11",
+      "status": "PASS"
+    },
+    {
+      "id": "overclaim_scan",
+      "status": "PASS"
+    },
+    {
+      "id": "candidate_15",
+      "status": "PASS"
+    },
+    {
+      "id": "no_self_acceptance",
+      "status": "PASS"
+    }
+  ]
+}

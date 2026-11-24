@@ -1,0 +1,15 @@
+{
+  "schema": "FHS5.PLP.W0.TraceVerification@local-3",
+  "generated_at": "2026-11-24T11:05:08+08:00",
+  "mode": "FINAL_STATE",
+  "scope_excludes": [
+    "99_TRACE/execution_trace.ndjson",
+    "MANIFEST.json"
+  ],
+  "file_count_excluding_self": 316,
+  "trace_event_count_including_self_and_header": 317,
+  "self_event_written": false,
+  "mismatches": [],
+  "status": "PASS",
+  "count_note": "events = 1 header + one FINAL_STATE per file; no self event is written."
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "FHS5.PLP.W0.ChallengeClosureMatrix@local-1",
+  "generated_at": "2026-11-24T10:38:36+08:00",
+  "patch_id": "W0-PATCH-20261124-02",
+  "challenge_sha256": "91c41d2b296979ed27437d95cdaf9b853580917170792d91a2027cdda2934679",
+  "findings": [
+    {
+      "id": "CH-01",
+      "severity": "P2",
+      "title": "F-01 classification only GPT",
+      "remediation": "All 6 roots scanned; 1,821 project-relevant files dispositioned; SQS case+oracle candidate added.",
+      "evidence": [
+        "03_W0A/W0A_CASE_DISCOVERY_REPORT.json",
+        "09_CHALLENGE_REMEDIATION/CASE_ORACLE_DISPOSITION.jsonl"
+      ],
+      "status": "CLOSED_LOCAL"
+    },
+    {
+      "id": "CH-02",
+      "severity": "P2",
+      "title": "ACL evidence bound to build path",
+      "remediation": "Captured DEPLOYED and ORIGINAL icacls for 13/13 sources; live-match recorded.",
+      "evidence": [
+        "08_AUDIT_REMEDIATION/READ_ACL_LEDGER.json",
+        "09_CHALLENGE_REMEDIATION/READ_ACL_DEPLOYED/",
+        "09_CHALLENGE_REMEDIATION/READ_ACL_ORIGINAL/"
+      ],
+      "status": "CLOSED_LOCAL"
+    },
+    {
+      "id": "CH-03",
+      "severity": "P2",
+      "title": "Trace stale",
+      "remediation": "Old trace superseded; new FINAL_STATE trace generated with per-file bytes/SHA.",
+      "evidence": [
+        "99_TRACE/execution_trace.ndjson",
+        "09_CHALLENGE_REMEDIATION/TRACE_VERIFICATION.json"
+      ],
+      "status": "CLOSED_LOCAL"
+    },
+    {
+      "id": "CH-04",
+      "severity": "P2",
+      "title": "11/11 overclaim",
+      "remediation": "Matrix/status/compliance/receipt updated to 11/11 CLOSED_LOCAL with 2 original actions and no partial.",
+      "evidence": [
+        "08_AUDIT_REMEDIATION/FINDING_CLOSURE_MATRIX.json",
+        "00_START_HERE/STATUS_BOARD.md"
+      ],
+      "status": "CLOSED_LOCAL"
+    },
+    {
+      "id": "CH-05",
+      "severity": "P2",
+      "title": "CHANGED_FILES stale",
+      "remediation": "Changed-file ledger regenerated after all edits; 100% hash self-check.",
+      "evidence": [
+        "08_AUDIT_REMEDIATION/CHANGED_FILES.json",
+        "08_AUDIT_REMEDIATION/CHANGED_FILES_VERIFICATION.json"
+      ],
+      "status": "CLOSED_LOCAL"
+    },
+    {
+      "id": "CH-06",
+      "severity": "P3",
+      "title": "Patch commands/scripts not indexed",
+      "remediation": "Patch scripts copied to 06_EVIDENCE/scripts/audit_remediation; SCRIPTS/COMMAND_LOG updated.",
+      "evidence": [
+        "06_EVIDENCE/scripts/SCRIPTS.json",
+        "06_EVIDENCE/COMMAND_LOG.md"
+      ],
+      "status": "CLOSED_LOCAL"
+    },
+    {
+      "id": "CH-07",
+      "severity": "P3",
+      "title": "Deployment lineage incomplete",
+      "remediation": "Deployment history, before-source, removed_files and counts are explicit.",
+      "evidence": [
+        "DEPLOYMENT_RECEIPT.json",
+        "09_CHALLENGE_REMEDIATION/DEPLOYMENT_HISTORY.json"
+      ],
+      "status": "CLOSED_LOCAL"
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "closed_local": 7,
+    "partial": 0,
+    "status": "7/7_CLOSED_LOCAL"
+  }
+}
