@@ -9,3 +9,5 @@
 *.pyc
 07_CONSUMER/tmp/
 07_CONSUMER/neg_work/
+07_CONSUMER/runs/*/candidate/
+07_CONSUMER/runs/*/root/
