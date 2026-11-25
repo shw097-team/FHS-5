@@ -1,6 +1,6 @@
 {
   "schema": "FHS5.W0NF.EvidenceManifest@1",
-  "generated_at": "2026-11-25T07:23:02+00:00",
+  "generated_at": "2026-11-25T07:28:48+00:00",
   "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
@@ -3610,8 +3610,8 @@
     },
     {
       "path": "tools/consumer.py",
-      "bytes": 18371,
-      "sha256": "349c294cf3b9c3d60e0186c7f8cf6decd6f9c1544653c4025f8682d1801289ed"
+      "bytes": 18375,
+      "sha256": "9192bd2f06979061d45e5288a9263d942e1aac9eb49e393e8c075770e2d62f46"
     },
     {
       "path": "tools/consumer_negatives.py",

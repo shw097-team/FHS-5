@@ -355,7 +355,7 @@ def main():
     receipt_path = run_dir / "receipt.json"
     lib.write_json(receipt_path, receipt)
     if consumed:
-    lib.write_json(out_root / "LATEST.json",
+        lib.write_json(out_root / "LATEST.json",
                        {"run_id": run_id, "receipt": str(receipt_path)})
 
     if a.publish_manifest and consumed:
