@@ -1,0 +1,21 @@
+test_asset_digest (W1.check.test_w1_nf_reader.NFMutationTests.test_asset_digest) ... ok
+test_byte_flip (W1.check.test_w1_nf_reader.NFMutationTests.test_byte_flip) ... ok
+test_dag_cycle (W1.check.test_w1_nf_reader.NFMutationTests.test_dag_cycle) ... ok
+test_drop_dev_id (W1.check.test_w1_nf_reader.NFMutationTests.test_drop_dev_id) ... ok
+test_duplicate_json_key (W1.check.test_w1_nf_reader.NFMutationTests.test_duplicate_json_key) ... ok
+test_identity_mismatch (W1.check.test_w1_nf_reader.NFMutationTests.test_identity_mismatch) ... ok
+test_missing_pack_file (W1.check.test_w1_nf_reader.NFMutationTests.test_missing_pack_file) ... ok
+test_nan_value (W1.check.test_w1_nf_reader.NFMutationTests.test_nan_value) ... ok
+test_path_traversal (W1.check.test_w1_nf_reader.NFMutationTests.test_path_traversal) ... ok
+test_seal_mismatch (W1.check.test_w1_nf_reader.NFMutationTests.test_seal_mismatch) ... ok
+test_compare_cross_scope_rejected (W1.check.test_w1_nf_reader.NFReaderTests.test_compare_cross_scope_rejected) ... ok
+test_compare_same_subject (W1.check.test_w1_nf_reader.NFReaderTests.test_compare_same_subject) ... ok
+test_explain_full_sections (W1.check.test_w1_nf_reader.NFReaderTests.test_explain_full_sections) ... ok
+test_inspect_real_pack (W1.check.test_w1_nf_reader.NFReaderTests.test_inspect_real_pack) ... ok
+test_render_marks_untrusted (W1.check.test_w1_nf_reader.NFReaderTests.test_render_marks_untrusted) ... ok
+test_resolve_body_span (W1.check.test_w1_nf_reader.NFReaderTests.test_resolve_body_span) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.997s
+
+OK

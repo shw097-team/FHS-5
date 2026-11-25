@@ -1,0 +1,987 @@
+{
+  "schema": "FHS5.PLP.W1.SourceManifest.NF@1",
+  "pack_version": "W1-NF-r2-CODEX-PRIMARY",
+  "artifact_id": "FHS5-PLP/W1/CONTROL_PACK/2026-11-25-nf-r2",
+  "project_id": "FHS-5_PLP",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1-NF-01",
+  "wave_id": "W1",
+  "batch_id": "W1-NF-01",
+  "profile": "generic-codx-native-first",
+  "nf_adr": [
+    "NF01",
+    "NF02",
+    "NF03",
+    "NF04",
+    "NF05",
+    "NF06",
+    "NF07",
+    "NF08",
+    "NF09",
+    "NF10"
+  ],
+  "claim_ceiling": "W1_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
+  "not_claimed": [
+    "W1_NF_VALIDATED",
+    "NATIVE_PASS",
+    "INDEPENDENT_PASS",
+    "RELEASED",
+    "M-DONE",
+    "GPT_CHAT_PASS",
+    "GPT_WORK_PASS",
+    "HERMES_PASS"
+  ],
+  "claimed_now": [
+    "W1_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
+    "W1_EXECUTION_READY"
+  ],
+  "authority": {
+    "owner_decisions": [
+      {
+        "id": "OWNER-W1-NF-r2-20261125",
+        "date": "2026-11-25",
+        "timezone": "Asia/Taipei",
+        "decision": "select this repaired W1 six-file pack as primary and authorize scoped, reversible W1 DEV/minimal OPS construction",
+        "source": "user request in this thread: execute the W1 CODEX thin PROMPT; its text records the pre-authorization",
+        "scope": "W1-NF-01",
+        "not_covered": [
+          "W2-W4",
+          "seven-volume formal adoption",
+          "remote/public release",
+          "secrets",
+          "cross-root or irreversible effects",
+          "arbitrary host install"
+        ]
+      }
+    ],
+    "adoption": "ADOPTED_SCOPED_THIS_ROUND_FOR_W1_PRIMARY; seven-volume adoption remains pending",
+    "scope_grant": "W1_NF_SCOPED_CONSTRUCTION_PREAUTHORIZED",
+    "actual_grant": "READ_ONLY_SOURCES + ISOLATED_DELIVERY_WRITE + SCOPED W1 WORKTREE WRITE (user-authorized escalated write)",
+    "repo_acl": "worktree C:\\Projects\\Agent_Workspace\\FHS-5_W1_NF_r2 WRITE_OK; original FHS-5_Workspace tree unchanged/read-only",
+    "os_acl": "sandbox workspace-write plus approved escalated worktree write; source root read-only",
+    "principal": "LOCAL_WINDOWS_USER (not original host principal)",
+    "expiry": null,
+    "revoke": "Owner may revoke or narrow at any time"
+  },
+  "product_scope": {
+    "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+    "scope": "W1-NF-01",
+    "target_root": "C:\\Projects\\Agent_Workspace\\FHS-5_W1_NF_r2",
+    "worktree_branch": "codex/w1-nf-r2-20261125",
+    "base_commit": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+    "effect_classes": [
+      "READ",
+      "DRAFT",
+      "DEV",
+      "OPS"
+    ],
+    "repo_head_probe": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+    "branch_probe": "codex/b0-nf-20261125"
+  },
+  "pack_files": [
+    {
+      "path": "00_W1_PI_PD.md",
+      "sha256": "f6dd84cbfad05e8e3d452f0e6f5c6f9539e149573bec51c396c60b91bf76f8d1",
+      "bytes": 34565,
+      "lines": 349
+    },
+    {
+      "path": "01_W1_DEV_ECP.md",
+      "sha256": "772557b0749759ca2893b72ed99feb049cf38446e8100f8713bcb38ab4d499af",
+      "bytes": 20729,
+      "lines": 200
+    },
+    {
+      "path": "02_W1_OPS_ECP.md",
+      "sha256": "14b1571ab26474c325c2f001c8fddee7cc81c4abbec79152e669c6f5766d44e5",
+      "bytes": 12290,
+      "lines": 110
+    },
+    {
+      "path": "03_W1_TQAEP.md",
+      "sha256": "66a53d2854debafc599b8a4f6611aa44236d099d380d93828c43aa20e227c691",
+      "bytes": 19804,
+      "lines": 213
+    },
+    {
+      "path": "04_W1_START_THIN_PROMPT.md",
+      "sha256": "a4b0f9cb750d8374ef649c78215d489c434706eb05693e5f63b92b6d17905eb9",
+      "bytes": 10028,
+      "lines": 120
+    }
+  ],
+  "digest_contract": {
+    "file_sha256": "sha256 of exact file bytes; CRLF not normalized",
+    "pack_manifest_sha256": "sha256 of raw 05_W1_SOURCE_MANIFEST.json bytes; recorded outside 05",
+    "source_set_sha256": "sha256 of UTF-8 LF lines 'id|sha256|bytes\\n' sorted by id, for sources with real sha256",
+    "source_set_sha256_value": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+    "context_sha256": "sha256(context_utf8 bytes); context includes subject/scope/source refs/constraints/untrusted markers",
+    "package_tree_sha256": "sha256 of UTF-8 LF lines 'path|bytes|sha256\\n' sorted",
+    "legacy_package_sha256": "only mapped when an old consumer explicitly proves equivalence; otherwise EXPLICIT_REVIEW/loss"
+  },
+  "sources": [
+    {
+      "id": "PLAN",
+      "role": "pack plan / method",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\FHS-5_PLP_W1_執行控制小包_CODEX_Native-first_高保留全量精簡重構_工程方案.md",
+      "bytes": 86117,
+      "sha256": "999f3e3bf917cde57cc6ea8069a750e26356e103d5529990506809a7f0091a90",
+      "lines": 518,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "WORKCTRL",
+      "role": "GPT WORK pack control",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\FHS-5_PLP_W1_CODEX_Native-first_GPT_WORK_最小執行控制包.md",
+      "bytes": 32464,
+      "sha256": "ef18e6a87aa4ee8ca12b76194b07c16bdc5631b7fd5531a8079f621510029659",
+      "lines": 113,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "CODEXCTRL",
+      "role": "CODEX repair control",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\FHS-5_PLP_W1_CODEX_Native-first_CODEX_最小執行控制包.md",
+      "bytes": 40674,
+      "sha256": "f01a8110cfedaacf13b986531b536096db4d3e4e42a5d1049d3df67f9a36d4ff",
+      "lines": 167,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "STARTCTRL",
+      "role": "CODEX thin start prompt",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\FHS-5_PLP_W1_CODEX_Native-first_CODEX_啟動薄PROMPT.md",
+      "bytes": 3518,
+      "sha256": "ef99fbca090b7913799aecc3f3a5c2510f7bff0afdaae56f33d8105d5550b39e",
+      "lines": 11,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1M",
+      "role": "W1M NF-r2 normative",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_WM\\FHS-5_PLP_W1M_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "bytes": 99289,
+      "sha256": "a91c4ed36cc2977372a5333bce068abe6a5e222b95cda5fe5dc81ef6cfe6c9c1",
+      "lines": 1202,
+      "read_level": "KEY_SECTIONS",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1M-EVIDENCE",
+      "role": "W1M evidence attachment",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_WM\\15_WM1_4_NF_20261125\\02_EVIDENCE\\FHS-5_PLP_W1M_CODEX-NATIVE-FIRST_證據附件.md",
+      "bytes": 8185,
+      "sha256": "b32068f591f69e681da1534809fcd36f81986bf16afc60c0b73b3af703407e87",
+      "lines": 124,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1M-CLOSEOUT",
+      "role": "W1M closeout/handoff",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_WM\\15_WM1_4_NF_20261125\\03_DELIVERY\\FHS-5_PLP_W1M_W4M_重構_CLOSEOUT_HANDOFF.md",
+      "bytes": 14191,
+      "sha256": "e13c36a7b7f9aa7620cf4d474e79635ac137bd600523b1198ac9031b03590bda",
+      "lines": 182,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1M-OLD",
+      "role": "W1M wm-v5 lineage",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_WM\\OLD\\FHS-5_PLP_W1M_完整實質正文.md",
+      "bytes": 71612,
+      "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+      "lines": 884,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "M",
+      "role": "M r3 product lineage",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_總藍圖\\FHS-5_PLP_總藍圖_2026-11-21_r3_高保留全量升級修補_完整實質正文.md",
+      "bytes": 325511,
+      "sha256": "2026da4b847c1368e44e4488443b6ba58416b269fc7c67b3c1faed8cfd19f2c7",
+      "lines": 3016,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0M",
+      "role": "W0M CODEX-FIRST-r4",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\W0M_CODEX_FIRST\\FHS-5_PLP_W0M_完整實質正文_CODEX-FIRST-r4.md",
+      "bytes": 108861,
+      "sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+      "lines": 1191,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "H0",
+      "role": "W0 handoff v3",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_HANDOFF.md",
+      "bytes": 3265,
+      "sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+      "lines": 67,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "C0",
+      "role": "W0 closeout",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_CLOSEOUT.md",
+      "bytes": 21927,
+      "sha256": "23cfa1f640227c0f3ede052faacbeb14364f5a9337ca436970449de500827b3f",
+      "lines": 290,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0-05",
+      "role": "W0 source manifest",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST\\05_W0_SOURCE_MANIFEST.json",
+      "bytes": 18821,
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+      "lines": 489,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0M-ADMISSION",
+      "role": "WM/W0M/W1M admission writeback",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_NF_CODEX_20261125_01\\UPSTREAM_WRITEBACK\\WM__W0M_W1M_ADMISSION.md",
+      "bytes": 810,
+      "sha256": "aab38714754df4e6fc16daa339da24a60ae560cc95491756ae7967b4252f098c",
+      "lines": 14,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B00NF",
+      "role": "PROG-00 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROG-00_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "bytes": 126626,
+      "sha256": "cdd1d76ec20fad19bff96153b11a65a1d0ba98074e4d68d2abfaae5a72c89797",
+      "lines": 908,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B01NF",
+      "role": "PROJ-01 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-01_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "bytes": 68023,
+      "sha256": "aa823374dabce5218611a248fda3c8f68a7f0b0d6b51ffa2e4915f7aec4d0392",
+      "lines": 574,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B02NF",
+      "role": "PROJ-02 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-02_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "bytes": 65006,
+      "sha256": "37022f33e5a67ad3165b0a47d36b359255f13719047fa71508e2b80624fc3884",
+      "lines": 596,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B03NF",
+      "role": "PROJ-03 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-03_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "bytes": 56268,
+      "sha256": "a13a9df4252a557a3e246035f136295fe1cad5990e828f9ec3d5df083307db98",
+      "lines": 490,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B04NF",
+      "role": "PROJ-04 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-04_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "bytes": 57182,
+      "sha256": "fb529a784b7d929f15a23ed63ea82b7d5f5117e927311b1f164eb005da469323",
+      "lines": 506,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B05NF",
+      "role": "PROJ-05 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-05_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "bytes": 67845,
+      "sha256": "794d91cc8080715886d5dc30b92e74b1f123fbe0aee47256bf1e84d749648dfe",
+      "lines": 557,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-RUNHARNESS",
+      "role": "repo W1/check/run_harness.py (canonical repo copy; Downloads lineage copy differs)",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+      "path": "W1\\check\\run_harness.py",
+      "bytes": 11420,
+      "sha256": "3384841787d4d68c1c56fbb62dfe1776720b02205d58ffbf30c9e915a957dd9f",
+      "lines": 234,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-00JSON",
+      "role": "old W1 primary 00_WAVE_RUN_MANIFEST.json",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\00_WAVE_RUN_MANIFEST.json",
+      "bytes": 31876,
+      "sha256": "212863778f4a390fb5867774b117bfe5d1031229614542d150b227ba152242eb",
+      "lines": 766,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-00MD",
+      "role": "old W1 primary 00_WAVE_RUN_MANIFEST.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\00_WAVE_RUN_MANIFEST.md",
+      "bytes": 7018,
+      "sha256": "66f566863b8ff6b972f4b0edc6077c25b7219cf35948dad9378c61d1b5adb896",
+      "lines": 76,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-01",
+      "role": "old W1 primary 01_SOURCE_SCOPE_AND_CONSTRUCTION.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\01_SOURCE_SCOPE_AND_CONSTRUCTION.md",
+      "bytes": 22004,
+      "sha256": "6a61d9b5ab401c4c6c584ce51028ff8f5136215f491487e36b14717c3814d718",
+      "lines": 205,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-02",
+      "role": "old W1 primary 02_ORIGINAL_CONTRACT_REFS.json",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\02_ORIGINAL_CONTRACT_REFS.json",
+      "bytes": 1644,
+      "sha256": "b0ab99f24e9bf4df6a1221059730458ba3114557d6e38afdd0fd3ac1317e2daf",
+      "lines": 40,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-03",
+      "role": "old W1 primary 03_DEV_ECP.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\03_DEV_ECP.md",
+      "bytes": 6302,
+      "sha256": "5ab52cebd19e5822ee4035fb9b0f880cc1d256a82841f3c8b4f607fdfd15037f",
+      "lines": 76,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-04",
+      "role": "old W1 primary 04_OPS_ECP.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\04_OPS_ECP.md",
+      "bytes": 5513,
+      "sha256": "87591f5b710376987dd5c45ca2dbd3530e3e3b979fa578cb8c6e53ea366b8ff6",
+      "lines": 67,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-05JSON",
+      "role": "old W1 primary 05_PLANNED_TQAEP.json",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\05_PLANNED_TQAEP.json",
+      "bytes": 22034,
+      "sha256": "ba6405919707f799c30441bb7ee9f3fe58ccbcf35e588d708d0a40ff5064ca90",
+      "lines": 446,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-05MD",
+      "role": "old W1 primary 05_PLANNED_TQAEP.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\05_PLANNED_TQAEP.md",
+      "bytes": 8797,
+      "sha256": "48233e467dfeb1c8611f77d6b725e467fa1288020b9c29438faf9b7d1f530ef4",
+      "lines": 103,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-06",
+      "role": "old W1 primary 06_PERMISSION_STOP_RESUME.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\06_PERMISSION_STOP_RESUME.md",
+      "bytes": 6659,
+      "sha256": "7d5114bf6e6cd75ec3d50b2925974d0a4c48d842aa209f2d3d30f9c85ca6e9a5",
+      "lines": 81,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-07",
+      "role": "old W1 primary 07_EVIDENCE_AND_CHECKER.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\07_EVIDENCE_AND_CHECKER.md",
+      "bytes": 4008,
+      "sha256": "f02eea4e6e390fdbb870b4d73dcc97ba2af55b377f9bbacc1557bd3ae70ee11b",
+      "lines": 50,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-08",
+      "role": "old W1 primary 08_AS_BUILT_AND_HANDOFF.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\08_AS_BUILT_AND_HANDOFF.md",
+      "bytes": 4808,
+      "sha256": "62e53cce751b24dbbeba48b3b7d32588e22d5c1ac07d4cb7224b7fdac4c26560",
+      "lines": 56,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-09",
+      "role": "old W1 primary 09_README_RUN_ORDER.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\09_README_RUN_ORDER.md",
+      "bytes": 4070,
+      "sha256": "8838433b0c36c9185f9b8af3d49ddfb00749774ba2f797b6cf1f2f5a580f59f4",
+      "lines": 60,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-PFM",
+      "role": "old W1 primary PACKAGE_FILE_MANIFEST.json",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\PACKAGE_FILE_MANIFEST.json",
+      "bytes": 9730,
+      "sha256": "7dc11eba6d2a063f12758ca31ed5a91b25f026a6409134e00e04d2bd49bbbabb",
+      "lines": 305,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-SM",
+      "role": "old W1 primary SOURCE_MANIFEST.json",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\SOURCE_MANIFEST.json",
+      "bytes": 7904,
+      "sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47",
+      "lines": 189,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-START",
+      "role": "old W1 primary W1_START_THIN_PROMPT.md",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+      "path": "FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\W1_START_THIN_PROMPT.md",
+      "bytes": 2964,
+      "sha256": "f51ee80069f380bd5bb3015146e012a06fd6d0a0a708b9f92fecf7d43bac08bb",
+      "lines": 45,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-ECP-MATRIX",
+      "role": "67 ECP closure matrix (parsed; 38 DEV + 29 OPS)",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+      "path": "W1\\evidence\\10_W1_ECP_TQAEP_CLOSURE_MATRIX.json",
+      "bytes": 25518,
+      "sha256": "729fdaae6c249a21b3c38a6688c973d7ad88baa6404775b3a36d5ef9f2db452b",
+      "lines": 739,
+      "read_level": "FULL_67_ROWS",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-EXEC-REPORT",
+      "role": "old W1 execution report",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+      "path": "W1\\evidence\\W1_EXECUTION_REPORT.md",
+      "bytes": 3354,
+      "sha256": "3379fb8965137d1a76ee16e07cca57b7701632c337de51185a93148cb98cd9c0",
+      "lines": 61,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-HOLDS",
+      "role": "old W1 14 named holds",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+      "path": "W1\\evidence\\12_W1_NAMED_HOLDS.json",
+      "bytes": 2755,
+      "sha256": "a0fef9299f9daf64997610f5b900b8d40ba17d096c605ed5e9400d802b0f7ca4",
+      "lines": 92,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-IMPL",
+      "role": "old bridge reference implementation (legacy parser reference)",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+      "path": "W1\\impl\\w1_bridge_reference.py",
+      "bytes": 36580,
+      "sha256": "dc0d1041a473a96493c887f279f75dcc1eca077c39242de47faffd44e12050a8",
+      "lines": 939,
+      "read_level": "CODE_READ",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0-GUIDE",
+      "role": "W0 guide.py (Touch1/Touch2 reference; single evidence_sha legacy)",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+      "path": "13_W0_NF_CODEX_20261125\\tools\\guide.py",
+      "bytes": 6216,
+      "sha256": "6be9b02bcc8207b36793351c3e4b5d447b485780e2a7ff0295d1d9dba21799e8",
+      "lines": 154,
+      "read_level": "CODE_READ",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0-TPMCONTRACTS",
+      "role": "W0 tpm_contracts.py (four-contract reference)",
+      "availability": "LOCAL_VERIFIED",
+      "source_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+      "path": "13_W0_NF_CODEX_20261125\\tools\\tpm_contracts.py",
+      "bytes": 11913,
+      "sha256": "e49e94eda45ea8117a9a3da6fa21f1f77749606ad0d4ba6f5f8fd78f369a4193",
+      "lines": 267,
+      "read_level": "CODE_READ",
+      "rights": "READ_ONLY_LOCAL"
+    }
+  ],
+  "upstream_handoff": {
+    "w0_handoff_id": "W0-NF-HANDOFF-20261125-03",
+    "pack_ref": "W0-NF-r3-CODEX-PRIMARY / FHS5-PLP/W0/PACK-NF-20261125-03",
+    "pack_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+    "w0m_sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+    "candidate_commit": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "candidate_preimage": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+    "evidence_manifest_sha256": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93",
+    "consumer_manifest_sha256": "e490b88efeea4489893dabd1bf33f61c926e61a82d34aeb1414ad9f6fe55d360",
+    "closeout_sha256": "23cfa1f640227c0f3ede052faacbeb14364f5a9337ca436970449de500827b3f",
+    "handoff_sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+    "w1m_sha256": "a91c4ed36cc2977372a5333bce068abe6a5e222b95cda5fe5dc81ef6cfe6c9c1",
+    "plan_sha256": "999f3e3bf917cde57cc6ea8069a750e26356e103d5529990506809a7f0091a90",
+    "workctrl_sha256": "ef18e6a87aa4ee8ca12b76194b07c16bdc5631b7fd5531a8079f621510029659",
+    "codexctrl_sha256": "f01a8110cfedaacf13b986531b536096db4d3e4e42a5d1049d3df67f9a36d4ff"
+  },
+  "lineage": {
+    "old_primary_selection": "W1-PRIMARY-SEL-20261124-01",
+    "old_repair": "W1-PRIMARY-REPAIR-20261124-02",
+    "old_source_manifest_sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47",
+    "old_15_to_6_ref": "appendix E2",
+    "ecp_67": 67,
+    "dev_38": 38,
+    "ops_29": 29,
+    "cases_13": 13,
+    "wp_6": 6,
+    "acc_12": 12,
+    "holds_14": 14,
+    "w0_receipts_44": "10 sample + 24 original + 10 NF; historical, not W1 product"
+  },
+  "assets": [
+    {
+      "case_id": "W1-ABI-01",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-ABI-01.json",
+      "bytes": 822,
+      "sha256": "a0e18b8bfabc41c97d7b2ab368cbda5e6e310d35fd2713cbde4e62868b4de196"
+    },
+    {
+      "case_id": "W1-ABI-02",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-ABI-02.json",
+      "bytes": 800,
+      "sha256": "9a62f6d1912f1ebf707202882c47916f4e9bcae1420a820fa031358a022f9ae6"
+    },
+    {
+      "case_id": "W1-API-01",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-API-01.json",
+      "bytes": 768,
+      "sha256": "5d94e2ddb9cce903900b66ba55e03cf434d899eab321914c0d87ce0817bf0745"
+    },
+    {
+      "case_id": "W1-HERMES-01",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-HERMES-01.json",
+      "bytes": 776,
+      "sha256": "8f9f784917c312770e052406e59e06aa7cc35296e176fe06cdd8ba7cd730d79a"
+    },
+    {
+      "case_id": "W1-HOST-01",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-HOST-01.json",
+      "bytes": 769,
+      "sha256": "168aa72567745ebce907c951076323fd2db527e35502ec1ed912f309632a3fda"
+    },
+    {
+      "case_id": "W1-HOST-02",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-HOST-02.json",
+      "bytes": 786,
+      "sha256": "9159143898ac741d8726390d60e776d3065ab40e7cfd3d48027d861c6f5ccea9"
+    },
+    {
+      "case_id": "W1-HOST-03",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-HOST-03.json",
+      "bytes": 739,
+      "sha256": "1d7de26b5528bf6819d9647d52cc54e6c40c1b9adafb752f216422e6d41cc1a6"
+    },
+    {
+      "case_id": "W1-R3-01",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-R3-01.json",
+      "bytes": 796,
+      "sha256": "c786785e330bf09060b60fe9e8767f637345331f51ab512f1e00a59d210d54bf"
+    },
+    {
+      "case_id": "W1-R3-02",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-R3-02.json",
+      "bytes": 744,
+      "sha256": "52a2009c258c18faa016c8a4a813ca6ac10c2f3b8dc9dcdb60064ed5be0c5f3d"
+    },
+    {
+      "case_id": "W1-R3-03",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-R3-03.json",
+      "bytes": 879,
+      "sha256": "066909b9f3228bca6064a0e4437e3e06183b2e63806ab6653a2323038e0a42ba"
+    },
+    {
+      "case_id": "W1-R3-04",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-R3-04.json",
+      "bytes": 802,
+      "sha256": "c6cc18e9c9459f3d7ee260973cb8a4d95d246685ece659675b443120c2534a36"
+    },
+    {
+      "case_id": "W1-R3-05",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-R3-05.json",
+      "bytes": 769,
+      "sha256": "59552d7790f88b818f79883d42a5894dfc8a295b80957c5d2eff06ce3f592da2"
+    },
+    {
+      "case_id": "W1-SEC-01",
+      "kind": "fixture",
+      "path": "assets/fixtures/W1-SEC-01.json",
+      "bytes": 774,
+      "sha256": "3a0c56efde4454937375624e485e92f975f68e4862d10b9de4bc8e7c5ab0fc67"
+    },
+    {
+      "case_id": "W1-ABI-01",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-ABI-01.json",
+      "bytes": 565,
+      "sha256": "09e608cd0fae844eac6caac5e5ed5d8f100b1ef484c9f1d21066305865867f19"
+    },
+    {
+      "case_id": "W1-ABI-02",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-ABI-02.json",
+      "bytes": 549,
+      "sha256": "ea236a6629f8f12222f5d90140a9d2362488b8449da998b4f1d6f1ed6ec90c2f"
+    },
+    {
+      "case_id": "W1-API-01",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-API-01.json",
+      "bytes": 520,
+      "sha256": "0d3c5e3256dd4c6cfba30788c5c875222efa0fea50b5d1f842f09fd01ef97443"
+    },
+    {
+      "case_id": "W1-HERMES-01",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-HERMES-01.json",
+      "bytes": 524,
+      "sha256": "101103bdcc2475558c02de4162efb5e10a93aa729db8a4b5e4315d928be9edbf"
+    },
+    {
+      "case_id": "W1-HOST-01",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-HOST-01.json",
+      "bytes": 512,
+      "sha256": "c92846be150cfcfbd9400e5bf23d50ad73b1ca897d10e921ad3120e387573e68"
+    },
+    {
+      "case_id": "W1-HOST-02",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-HOST-02.json",
+      "bytes": 551,
+      "sha256": "0af129228279a3b0fa80bd00a696175c6aa649ac7ad2e5f239b434ae0ffaa9fe"
+    },
+    {
+      "case_id": "W1-HOST-03",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-HOST-03.json",
+      "bytes": 545,
+      "sha256": "f91f4fbb09a9c66c2f6f6aee9848f9774bc98d3a1c9195c48c6d95aabb55cf6f"
+    },
+    {
+      "case_id": "W1-R3-01",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-R3-01.json",
+      "bytes": 519,
+      "sha256": "6f256ac33dafe2a7c21d7cb5a39c099578ba60427d03d280c6923277877d4be3"
+    },
+    {
+      "case_id": "W1-R3-02",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-R3-02.json",
+      "bytes": 543,
+      "sha256": "6c3b0182b44a2fc850eac9773c85047fb7ba38aae9b533bf04228c5677853aac"
+    },
+    {
+      "case_id": "W1-R3-03",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-R3-03.json",
+      "bytes": 557,
+      "sha256": "ce7e1e2092f85091bf9e95337092de7af4b1df8e1e81e1718815007df5ed6caa"
+    },
+    {
+      "case_id": "W1-R3-04",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-R3-04.json",
+      "bytes": 560,
+      "sha256": "b8321db4c322bff2e04baf85d914aa4b4a5360c669987ccb5aeebf8e0aa13eda"
+    },
+    {
+      "case_id": "W1-R3-05",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-R3-05.json",
+      "bytes": 557,
+      "sha256": "1c6ccd0a53d14f40058fef76ee51d89762c00290280333e3b452c37d43f10b45"
+    },
+    {
+      "case_id": "W1-SEC-01",
+      "kind": "oracle",
+      "path": "assets/oracles/W1-SEC-01.json",
+      "bytes": 568,
+      "sha256": "284675cc464e870b419ffe5e5cec54a9a252cffcf5238b32c020d5b5b45fc82d"
+    }
+  ],
+  "checks": {
+    "validator": "tools/nf_pack_guard.py",
+    "mutation_suite": "tools/run_mutations.py",
+    "result_location": "evidence/SEAL.json and appendix E7",
+    "reader_tests": "16/16 PASS",
+    "first_operation": "inspect PASS (5 files / 38 DEV / 29 OPS / 13 cases / 26 assets / 42 sources / 14 holds)",
+    "product_actual": "NOT_RUN"
+  },
+  "dag": {
+    "nodes": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06"
+    ],
+    "edges": [
+      [
+        "P01",
+        "P02"
+      ],
+      [
+        "P02",
+        "P03"
+      ],
+      [
+        "P03",
+        "P04"
+      ],
+      [
+        "P02",
+        "P05"
+      ],
+      [
+        "P03",
+        "P05"
+      ],
+      [
+        "P04",
+        "P05"
+      ],
+      [
+        "P04",
+        "P06"
+      ],
+      [
+        "P05",
+        "P06"
+      ]
+    ]
+  },
+  "holds": [
+    "W1_HOST_NINE_GRID",
+    "W1_PLUGIN_ALIAS",
+    "W1_ABI_BOUND",
+    "W1_W0_INPUT",
+    "W0_PRIMARY_RECEIPT_STALE",
+    "W0-A_CASE_SELECTION",
+    "W0-B_NOT_ADMITTED",
+    "ORIGINAL_READER_UNBOUND",
+    "ORACLE_FIXTURE_UNBOUND",
+    "HOST_CAPABILITY_UNBOUND",
+    "CHECKER_PUBLISHER_UNBOUND",
+    "SOURCE_REFERENCE_HASH_CONFLICT",
+    "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+    "HOLD_CR-DOC04-STATE-MAP"
+  ],
+  "readiness": {
+    "w1_technically_ready": "OBSERVED_FROM_H0",
+    "w1_execution_ready": "READY",
+    "w1_execution_ready_since": "2026-11-25",
+    "w1_execution_ready_evidence": {
+      "worktree": "C:\\Projects\\Agent_Workspace\\FHS-5_W1_NF_r2",
+      "branch": "codex/w1-nf-r2-20261125",
+      "base_commit": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+      "entry": "W1/impl/w1_nf_reader.py",
+      "tests": "W1/check/test_w1_nf_reader.py (16/16 PASS)",
+      "first_operation": "inspect",
+      "first_operation_raw": "W1/evidence/nf_r2_inspect_probe.json",
+      "acl": "worktree write OK",
+      "bootstrap": "BOOTSTRAP_CONSUME_ACTUAL"
+    },
+    "w1_nf_validated": "NOT_RUN",
+    "independent": "NOT_RUN",
+    "release": "NOT_ADMITTED",
+    "bootstrap": "BOOTSTRAP_CONSUME_ACTUAL",
+    "blocker": null
+  },
+  "implementation": {
+    "entry": "W1/impl/w1_nf_reader.py",
+    "tests": "W1/check/test_w1_nf_reader.py",
+    "api": [
+      "inspect_package",
+      "explain_slice",
+      "render_agent_context",
+      "compare_context",
+      "resolve_body"
+    ],
+    "test_result": "16/16 PASS",
+    "first_operation_raw": "W1/evidence/nf_r2_inspect_probe.json",
+    "product_scope": "W1-NF-01",
+    "final_product_consumed": "NOT_RUN"
+  },
+  "unresolved_refs": [
+    {
+      "id": "product_actual",
+      "reason": "13 cases / full TPM/Guide/Bridge/consumer not executed; final product consumed NOT_RUN",
+      "owner": "W1 Case Owner",
+      "next": "D3-D5 in worktree"
+    },
+    {
+      "id": "independent_consumer",
+      "reason": "independent consumer and second non-briefcheck pack not yet built",
+      "owner": "W1 Maker/Consumer",
+      "next": "D4"
+    },
+    {
+      "id": "seven_volume_adoption",
+      "reason": "WM__W0M_W1M_ADMISSION.md says WORKSPACE_REVISION_PENDING_ADOPTION",
+      "owner": "Owner",
+      "next": "formal adoption if W2+ needs it; not a W1 doc blocker"
+    },
+    {
+      "id": "gpt_chat_work_hermes",
+      "reason": "no real host mount/observation",
+      "owner": "Host Owner",
+      "next": "separate qualification"
+    },
+    {
+      "id": "windows_link_attack",
+      "reason": "no symlink privilege in this environment; WSL2 not a Windows substitute",
+      "owner": "Security Checker",
+      "next": "test on a Windows host with real privilege"
+    },
+    {
+      "id": "remote_push",
+      "reason": "token available but push not yet performed/verified",
+      "owner": "Owner/Repo",
+      "next": "verify ls-remote then push branch"
+    }
+  ],
+  "manifest_self_hash": "EXTERNAL_RECORD_ONLY",
+  "external_seal": "evidence/SEAL.json"
+}

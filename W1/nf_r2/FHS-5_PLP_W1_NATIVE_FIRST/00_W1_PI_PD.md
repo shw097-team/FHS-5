@@ -1,0 +1,349 @@
+# FHS-5_PLP_W1_NATIVE_FIRST｜00 W1 PI／PD（主用修補定案）
+
+**File ID**：`FHS5-PLP/W1/CONTROL_PACK/00_W1_PI_PD`
+**pack_version**：`W1-NF-r2-CODEX-PRIMARY`｜**artifact_id**：`FHS5-PLP/W1/CONTROL_PACK/2026-11-25-nf-r2`
+**project_id**：`FHS-5_PLP`｜**subject_id**：`FHS-5_PLP/W1/CONTROL_PACK`｜**scope**：`W1-NF-01`
+**wave_id**：`W1`｜**batch_id**：`W1-NF-01`｜**date**：2026-11-25（Asia/Taipei）
+**source_manifest_ref**：`05_W1_SOURCE_MANIFEST.json`（第六身份 `source_manifest_sha256` 由讀回 05 原始 bytes 衍生，不寫入 05 本身，也不寫入本檔）
+
+**Claim ceiling**：`W1_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION`（文件與主用選定層；不代表產品實跑）。
+**Not claimed**：`W1_NF_VALIDATED`、`NATIVE_PASS`、`INDEPENDENT_PASS`、`RELEASED`、`M-DONE`、`GPT_CHAT_PASS`、`GPT_WORK_PASS`、`HERMES_PASS`。
+**Execution readiness**：`W1_EXECUTION_READY = READY`（2026-11-25；主用＋同域施工授權＋真 H0/六檔 bootstrap＋repo worktree ACL＋`w1_nf_reader.py` entry＋首個合法 `inspect` 操作；**不等於**最終 W1 product consumed／validated）。
+
+> 本檔是 W1 當期唯一主包的五份正文之一。文中 `PLANNED`／`NOT_RUN` 是產品驗收狀態；本輪產品 actual 一律未執行。文件義務與產品 PASS 分開，不以文件合格冒充 W1 產品已通過。
+
+---
+
+## 0｜本輪有效 Owner 裁決、主用選定與效力邊界
+
+| 項 | 實際內容 |
+|---|---|
+| 裁決主體 | 唯一 Human OWNER & issuer（本 thread 使用者） |
+| 裁決日期／時區 | 2026-11-25（Asia/Taipei） |
+| 裁決原文語義 | 「對『W1_Native-first_交付』執行『FHS-5_PLP_W1_CODEX_Native-first_CODEX_啟動薄PROMPT』」；該薄 PROMPT 明示「Owner 本輪已預授權合格修補定案直接升格主用＋授權可施工，無須再次逐 WP 核簽」 |
+| 主用選定 | 本交付根 `W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST/` 之 `W1-NF-r2-CODEX-PRIMARY` 六檔，為 W1 當期文件主用 |
+| 施工授權 | 限 W1 同域、受界、可逆的本地產品 DEV 與最小 OPS：真調用、必要本地啟用、讀回、回復；每操作仍須當期核實 root／ACL／principal／policy／WriteSet |
+| 不涵蓋 | W2–W4 產品、全系統七冊正式採納、任意 Host 安裝、跨根／不可逆效果、使用者資料效果、密鑰讀取、public release／push、GitHub 寫入 |
+| 不重簽 | 合格定案的主用選用與同域必要修補不再逐 WP 向 Owner 請求簽核；真未覆蓋衝突或新 scope 才集中提出一次最小裁決請求 |
+
+**制定與事實分離**：本裁定是「選用＋同域施工授權」，不是 OS ACL、Repo policy、第三方 consent 或外部 Host 的權限。上表不使 `C:\Projects\Agent_Workspace\FHS-5_Workspace` 或其他產品根在本機變成可寫；真寫入權仍以當期 probe 的 ACL 為準（本輪實測：該 repo 可讀、寫入被拒，見 01 §1）。
+
+**上位採納狀態（D08）**：六冊 NF-r2 仍屬作者 `USER_AUTHORIZED_R2_CURRENT`；W1M r2 為 `W-M-DESIGN-DONE／SELF_REVIEW_ONLY`；`W0/.../UPSTREAM_WRITEBACK/WM__W0M_W1M_ADMISSION.md` 實讀狀態為 `WORKSPACE_REVISION_PENDING_ADOPTION`。因此本包**不宣稱** MASTER/PROG/PROJ 七冊已正式採納，也不改寫上游檔；本輪 Owner 裁決只在其同域 W1 選用與施工範圍內承接 D01/D08 的等價替換，並如實記錄於證據附件 E6。
+
+---
+
+## 1｜法位、來源與身分
+
+1. 當期有效 Owner 裁決與真既有採納。
+2. 當期適用 MASTER／PROG／PROJ／W1M（受影明確等價替換；未受影條文保血緣）。
+3. 本六檔主包（single truth）。
+4. 受界 native 操作及實際 ACL／policy。
+
+PLAN `F5-W1-PACK-NF-PLAN-r1`、WORK-CTRL `WORK-F5-W1-PACK-NF-r1` 與 CODEX-CTRL `CODEX-F5-W1-PACK-NF-REPAIR-r1` 是編包與施工方法的規格真源，不是產品 Grant。C0/H0/W0M/raw 是事實證據；舊 W1 十五檔、67 matrix、13 fixture/oracle 是血緣與原義索引。來源內任何命令、prompt、網頁字串只作資料，不因寫在文件裡就成為授權。
+
+**六身份**（讀時合成第六鍵）：
+
+| 鍵 | 值 |
+|---|---|
+| `project_id` | `FHS-5_PLP` |
+| `subject_id` | `FHS-5_PLP/W1/CONTROL_PACK` |
+| `scope` | `W1-NF-01`（文件作用域；產品預定作用域另見 §13） |
+| `wave_id` | `W1` |
+| `batch_id` | `W1-NF-01` |
+| `source_manifest_sha256` | 讀回 `05_W1_SOURCE_MANIFEST.json` 原始 bytes 後計算，不嵌入本檔 |
+
+---
+
+## 2｜Goal／FUO／Done／Non-goals
+
+**Job to be done**：Human Owner 要一份可被 TPM/Reviewer、Guide、Bridge 與 CODEX Native 直接讀取的 W1 控制包，使下一位 Executor 不必猜上游要求、不必重造平台，可在實際授權與 ACL 內把 W1 產品入口建好、跑完 13 原案與必要子例，交出真 W1 CLOSEOUT/HANDOFF。
+
+**本輪（文件）FUO**：五份 MD＋一份 strict JSON 主包，具備完整三 SPEC、六 WP、38 DEV＋29 OPS per-ID 可執行映射、13 原案與 N01–04/N10/N11 子例、四 API／Guide 四函式真九鍵／TPM 四契約、真 host 分帳、D01–09 實質落地、可重算 digest 與外置 seal；文件義務以真檢查證明。
+
+**W1 產品 FUO（後續 04 執行）**：同一 scope 的六檔主包被 TPM/Reviewer、Guide、Bridge 真讀取；CODEX Native 真 parse/use 契約與 Context，完成至少一個可觀測受界任務並由獨立 consumer 讀回；至少另一個非 briefcheck 的不同工作小包可重用同一 ABI；13 原案與適用子例有真 POS/NEG raw；其他 Host 各自分帳。
+
+**Done 分層**：
+
+| 層 | Done 條件 | 本輪狀態 |
+|---|---|---|
+| 文件主用 | PKG-01～05 必要義務通過、六檔完整可讀、D01–09 實質落地、主用與施工授權已記錄、外置 seal 可重算 | 本輪完成（見證據附件 E7–E9） |
+| Bootstrap 接收 | H0/六檔可被 native 讀取並回報 next/op/inputs/expected/stop | 本輪真執行（DOC_CHECK_ACTUAL／BOOTSTRAP_CONSUME_ACTUAL） |
+| W1 產品 | P01–P06、D1–D7、O1–O6、13 案真跑、獨立 Checker/Consumer | `NOT_RUN`（本輪不做） |
+| 正式准入 | `W1_NF_VALIDATED`／Independent／Release | `NOT_CLAIMED` |
+| `W1_EXECUTION_READY` | 主用／同域授權＋bootstrap＋實際入口／root／ACL／inputs＋首個合法操作 | **READY（2026-11-25）**：worktree `codex/w1-nf-r2-20261125`、`W1/impl/w1_nf_reader.py`、16/16 tests、`inspect` raw；最終產品 consumed 仍 `NOT_RUN` |
+
+**Non-goals**：不建第二 Runtime／Queue／Dispatcher／Issuer／Reader／Registry；不把 W0 briefcheck 或 44 receipts 當 W1；不把 13 案 PASS 當全產品；不提前做 W2–W4；不修改 W0/M/B/WM/W1M/舊 primary/oracle；不讀密鑰；不發布 GitHub；不以文件主用冒充產品驗收。
+
+---
+
+## 3｜Product SPEC：P01–P06 與 12 ACC
+
+| ID | 產品要求（可觀測） | IO | ACC／NEG | Consumer |
+|---|---|---|---|---|
+| `P01` | 真 H0、六檔、六冊、W1M、舊 W1 code/manifest、plugin alias、version、rights 與 14 HOLD 完成一次 freeze；選兩個不同真工作小包 | manifest/root/plugin → SourceIndex／CapabilityLedger | A01/A05；錯 pin、同名異 SHA、alias 推定拒 | P02/P04 |
+| `P02` | 15→6 與 ABI 逐欄 crosswalk：source→target→type→required→transform→loss→readback；unknown 保留或拒 | 舊 15/6、Guide/Bridge/TPM → ABICrosswalk／LossLedger | A04/A06；同尾碼、drop unknown、缺 B／effect／resume 拒 | P03/P05 |
+| `P03` | 建／修六檔 reader、四 API＋BodyResolver、TPM 四契約/Reviewer、Guide 四函式/兩模式/九鍵；真 entry/version | 真六檔/root/span → ContextBundle／ContractBundle／ThinPrompt | A02/A04；path/UTF8/duplicate/hash/span 不符拒 | P04/P05/W2 |
+| `P04` | CODEX 正式入口真載入/調用；Native 真 parse/use Context 完成受界任務；獨立 consumer readback；不同小包再用 | P03 entry/context → Invocation／Served／Consumed raw | A03/A05；skill bytes≠Loaded、exit0≠served、只 hash 不算 consumed | P06/W4 |
+| `P05` | 13 原案＋N01–04/N10/N11 子例；真 fixture/oracle/runner；獨立反證與 OFF／安全／雙期／假 receipt | frozen case → AdversarialABIReport／NotCovered | A02/A03/A04；每負例 fail-closed，未跑 NOT_RUN | P03/P06 |
+| `P06` | P04/P05 raw、獨立 Checker/Consumer 分開、actual/expected/NotCovered、manifest/fresh receive、受影 upstream changeset | all actual raw → W1 CLOSEOUT／HANDOFF | A06/claim；未驗不升格、合法 partial 可交 | W2/W3/W4 |
+
+**12 ACC**（6 原＋6 CODEX）：
+
+| ACC | 可觀測 | NEG／FirstFail | 本輪 |
+|---|---|---|---|
+| `W1-A01` Source | 5+1 檔與來源真 SHA／bytes／identity／rights | 同名異 SHA、假 digest、錯 root | DOC_CHECK_ACTUAL |
+| `W1-A02` Body | 四 API 回完整 Clause/Parent/Child/NEG/Exception/span | heading/excerpt、錯 span、path escape | DESIGN_WALKTHROUGH（產品 NOT_RUN） |
+| `W1-A03` Host | 每 Host 七階段與 21 格分證 | 跨 Host／跨階段互抵 | 部分 probe；產品 NOT_RUN |
+| `W1-A04` ABI | 逐欄 source→target→loss→readback | 同尾碼、unknown drop | DESIGN_WALKTHROUGH |
+| `W1-A05` Split | 15→6、67/13/6/14、六 WP dry-consume | 只列檔名、漏 ID | DOC_CHECK_ACTUAL（附件 E2/E3） |
+| `W1-A06` Claim | 六維 claim 分帳 | 作者自簽 Independent／Release | DOC_CHECK_ACTUAL |
+| `W1-CODEX-01` | 主包被 TPM/Reviewer/Guide/Bridge/consumer 真讀 | 只跑 W0 sample | PLANNED |
+| `W1-CODEX-02` | Guide 兩模式、四函式、九鍵真雙期 | 單 evidence_sha、caller bool、假 PARK | PLANNED |
+| `W1-CODEX-03` | Bridge 四 API、完整 body、六檔直讀 | 越界、注入、heading-only | PLANNED |
+| `W1-CODEX-04` | TPM 四契約同工作身份、Reviewer 真 Finding | 0 defects 冒全產品、Reviewer 改 subject | PLANNED |
+| `W1-CODEX-05` | 第二個非 briefcheck 小包重用 ABI | 固定 sample 硬碼 | PLANNED |
+| `W1-CODEX-06` | 多 Host 分帳 | 一 Host 抵另一 | PLANNED |
+
+**五方與 bypass**：TPM/Reviewer、Guide、Bridge、Native、Consumer 可按需獨立；合法 direct file/Git 直讀可 bypass Guide/Bridge，但 bypass 不抵 SP 產品驗收，也不得跳過安全、scope 或 identity。
+
+---
+
+## 4｜Architecture SPEC：NF01–10、single truth、七 Seam
+
+| ADR | 規則 | 反證 |
+|---|---|---|
+| `NF01` | CODEX Native 是唯一主工程調度／恢復；五方 SP 按需組合；不建第二 Runtime/Queue/Dispatcher/Issuer | 另建調度器、裸 executor 冒充五方 PASS |
+| `NF02` | Generic 不預設 HGK/FABRIC/SBL/FHS/PIPD/HERMES 運行契約；Legacy 明示 Profile | 以舊 provider 缺失阻 Generic；env flag 當 OFF |
+| `NF03` | 真 file/Git/process/tester/oracle/consumer 承接原 Reader/Registry/Runner/ACK | 無 OriginalReader 即停讀；假 ACK |
+| `NF04` | HardEdge 需當期原義／安全／具名 producer／取得或建造路徑；post 不反卡同 op | W4/publisher 倒卡 W1；cycle |
+| `NF05` | 設計≠授權；READ/DRAFT/DEV/OPS/USER/RELEASE 分帳；未知 effect fail closed | permit=true 或路徑推定發權 |
+| `NF06` | 七 Seam 是資料交換，不是七 Gate；direct 合法，但不抵 SP 驗收 | 以 bypass 冒產品 PASS |
+| `NF07` | W0 先證；W2–W4 不倒卡 W1；後波 planned 不冒 actual | 以 W2 READY／W4 Release 作 W1 前件 |
+| `NF08` | 六檔 single truth；舊十五檔只作版本隔離 projection | 雙 canonical、自循環 digest |
+| `NF09` | 原 ID／Case／Receipt／分母／observation 分帳 | 44 receipts 抵 QA26/485；policy unit 冒 E2E |
+| `NF10` | FirstFail→ChangeCone→最小修補→受影重驗；保 LastGood；無 delta 不重派 | 無限 loop、假 PARK、全域 HOLD |
+
+**單人 Owner/issuer**：同一自然人可持多個技術角色，但不因此成為第二 issuer，也不免除 Maker／Checker／Consumer 證據分立；真要求不同 principal 時必須真不同，缺則 NotCovered。
+
+**七 Seam**（資料邊，不是 Gate）：
+
+| Seam | Producer → Consumer | 受影資料 | 失敗 |
+|---|---|---|---|
+| `SM01` | Source → TPM/Reviewer | raw SHA/span/version、Req/Child/NEG/Exception | `SOURCE_IDENTITY_HOLD` |
+| `SM02` | PI → PD | PI revision、ACC、constraint、capability、typed WP edge | `SPLIT_UNVERIFIED` |
+| `SM03` | PD → DEV/OPS ECP／TQAEP | op、root、exact WriteSet、preimage、expected、fixture/oracle | `ECP_NOT_GRANT` |
+| `SM04` | Pack → Guide | 5+1 identity/digest、Goal/FUO/Done/Scope/Effect/next | `SOURCE_IDENTITY_HOLD` |
+| `SM05` | Guide/Bridge → Native | 完整 clause、source ref、constraint、context SHA、missing | `CONTEXT_SCOPE_MISMATCH` |
+| `SM06` | Native → Challenge/FAR | 五 pin、argv/exit/raw、Finding/NotCovered | `EVIDENCE_LAUNDERING` |
+| `SM07` | FAR/delta → Guide/Consumer | 雙期九鍵、advice、next/stop/resume、readback | `DELTA_UNVERIFIED` |
+
+**Digest domains（D03）**：
+
+| 名稱 | 定義 | 不相等於 |
+|---|---|---|
+| `file_sha256` | 該檔原始 bytes 的 SHA-256（CRLF 不 normalize） | manifest／source-set／context |
+| `pack_manifest_sha256` | `sha256(raw 05_W1_SOURCE_MANIFEST.json bytes)` | 五 MD 的 file_sha256 |
+| `source_set_sha256` | 對已排序的 `id|sha256|bytes` 行以 UTF-8＋LF 串接後 SHA-256（本包 05 `digest_contract` 明定） | package tree／context |
+| `context_sha256` | `sha256(context_utf8 bytes)`；context 必含 subject/scope/source refs/constraints/untrusted markers | package／manifest |
+| `package_tree_sha256` | 對 `path|bytes|sha256` 排序、UTF-8＋LF 串接後 SHA-256（若需） | 單檔 SHA |
+| legacy `package_sha256` | 僅在舊 consumer 明示等價時映射，否則 loss／EXPLICIT_REVIEW | 新 manifest SHA |
+
+---
+
+## 5｜Program SPEC：六 WP、typed DAG 與每 WP 契約
+
+| WP | Input → Operation → Output | Consumer | ACC／NEG | 本輪 |
+|---|---|---|---|---|
+| `WM1-P01` Identity/Reuse | H0/六檔/六冊/W1M/舊 15/impl/plugins → pins、alias、entry、rights、14 HOLD → `CapabilityLedger` | P02/P04 | A01/A05；錯 pin/alias 拒；不要求三 Host installed | DOC_CHECK_ACTUAL（H0/六檔 bootstrap） |
+| `WM1-P02` ABI Crosswalk | 舊 15/6、Guide/Bridge/TPM → 逐欄 source/target/type/required/transform/loss/readback；兩個包 | P03/P05 | A04/A06；缺 B／effect／resume、同尾碼冒兼容拒 | DESIGN_WALKTHROUGH |
+| `WM1-P03` Reader/四 API | 真六檔/root/span → inspect/explain/render/compare、Guide 四函式、TPM 四契約 | Native/P04/W2 | A02/A04；path/UTF8/duplicate/hash/span 拒 | PLANNED（entry 未建） |
+| `WM1-P04` Host Actual Read | P03 entry → CODEX loader/invoke/served/consumed；不同包 | P06/W4 | A03；skill bytes≠Loaded；其他 Host 分帳 | PLANNED（CLI 存在，W1 entry 未建） |
+| `WM1-P05` Adversarial ABI | 凍結 case → source drift/scope/unknown/clause/path/secret/legacy/OFF/假 ACK/多鍵 | P02/P03 | 每負例 fail-closed；未跑 NOT_RUN | DESIGN_WALKTHROUGH＋13 case planned |
+| `WM1-P06` AsBuilt/Next | P04/P05/pins/delta → actual/NotCovered/checker/consumer/handoff | W2/W3/W4 | 未驗 Host 不升格；partial 誠實 | PLANNED |
+
+**DAG**：`P01→P02→P03→P04`；`P02→P05`；`P03→P05`；`P04→P05`；`P04→P06`；`P05→P06`。P05 的 FAIL 回 P02/P03 新 revision，不是同輪 cycle。
+
+**Edge 類型**：`HARD_PRE`（同 op 真必要）、`OPTIONAL_INFO`（可用則用）、`POST_EVIDENCE`（後驗，不倒卡）、`DEFERRED`（後波）、`UNVERIFIED`（證據不足）。`P04` 最終 `Consumed` 是 `POST_EVIDENCE`，不是 P03 前件；W1 `bootstrap receive` 才是准入前件。
+
+---
+
+## 6｜TPM/Reviewer、Guide、Bridge 契約
+
+### 6.1 TPM/Reviewer 四契約
+
+TPM 以同一 work identity 產四類契約：PI（語義、ACC、約束）、PD（綁定後的 capability/typed edge）、DEV ECP（build effect）、OPS ECP（host effect）、TQAEP（frozen oracle）。PI 與 PD 不互相吞併；DEV 與 OPS 的 effect 不可互換。Reviewer 唯讀，輸出八欄 Finding（`id,severity,class,subject_sha,command,exit,raw_sha256,reproduction`；不適用 null＋理由）＋source/target、expected/observed、FirstFail/root/ChangeCone、next/stop/resume。`0 defects` 只對其 scope 有效，不冒全產品。
+
+保留原分母：TPM `F01–F14`、`U01–U16`、`QA26`、35 tools；未取得的 10 authority/reader 真 ID 明示 `UNBOUND`，不造 ID、不以 0 defects 核銷。
+
+### 6.2 Guide 四函式與兩模式
+
+原具名函式與 NF 名稱並存，逐欄 crosswalk，不假簽名相同：
+
+| 原函式 | NF 候選 | 輸入 → 輸出 | 必測 |
+|---|---|---|---|
+| `inspect_guide_request(req, root)` | `receive_package(pack_ref, root)` | request/root → package identity/digest、Goal/FUO/Done/Scope/Effect/Owner/Next/Stop/Resume | 錯 SHA、跨 scope、request claim 冒 source |
+| `select_bounded_advice(ctx, req)` | `select_advice(view, mode, evidence)` | context/view/mode/evidence → advice（`advice≠Grant`） | unknown effect、缺 evidence、advice 升權 |
+| `render_thin_prompt(ctx, advice)` | `render_thin(prompt_view)` | view → UTF-8 thin prompt、source locators、untrusted markers | 缺必要 clause、secret、injection、scope 擴張 |
+| `reconcile_guide_delta(before, after, original_verifier=None)` | `compare_material(before, after)` | 兩期 material → comparable、added/removed/changed、unknown | 缺期、單 SHA、caller bool、跨 subject |
+
+模式：`PACKAGE_FIRST` 有足夠真 body 直接出 thin；`CONTEXT_AUGMENTED` 只補缺的 context（Bridge 按需／原文直讀），不得擴 Scope。`permission_state=NONE_GRANTED`。
+
+**九鍵真雙期**：`subject, scope, source_sha, repo_head, host_id, policy_epoch, oracle_sha, world_raw_sha, first_fail`。每鍵都有真 producer／receipt／locator；非 Git 的 `repo_head` 用採納的 non-git snapshot 身份或明示不適用，不填假 commit。判定：
+
+| 狀態 | 條件 |
+|---|---|
+| `DELTA_UNVERIFIED` | 缺任一必要鍵、缺 before/after、無真 verifier、單 evidence_sha、caller `verified=true` |
+| `NEW_SUBJECT_REVIEW_REQUIRED` | subject 或 scope 跨域 |
+| `NEW_MATERIAL_EVIDENCE`（NF `NEW_DELTA`） | 同域且至少一鍵實質不同（含 candidate/oracle/world raw/first_fail） |
+| `PARK_NO_DELTA` 候選 | 九鍵全真相同，且無其他影響差額；僅為候選，不是自動 close |
+
+`candidate_sha`／`evidence_sha` 另列 identity，不冒充九鍵。
+
+### 6.3 Bridge 四 API 與 BodyResolver
+
+| API | Request → Response | 失敗 |
+|---|---|---|
+| `inspect_package(manifest, root)` | 授權 root、manifest path、expected identity/sha → source_refs、requirements、effect_constraints、verification_refs、unresolved_refs、manifest digest | `SOURCE_INTEGRITY_FAILED`、`PACKAGE_INCOMPLETE_LOCAL`、`PATH_OUTSIDE_ROOT` |
+| `explain_slice(view, *, kinds=None)` | view/kinds → clause_refs、parent、children（含 NEG/Exception）、missing、semantic_state | `SEMANTICS_ORIGINAL_READER_UNBOUND`、heading-only |
+| `render_agent_context(explanation)` | explanation/target_host/scope → context_utf8、source_locators、untrusted_markers、context_sha256、missing | `CONTEXT_SCOPE_MISMATCH`、`UNTRUSTED_SOURCE_DATA` |
+| `compare_context(before, after)` | 同 subject/scope 兩期 → comparable、added/removed/changed exact tuple、unknown | `COMPARE_CROSS_SUBJECT_DENY`、`DELTA_UNVERIFIED` |
+
+BodyResolver：授權 root 先 canonicalize；拒 absolute、UNC、drive-relative、`..`、alias、symlink/junction/reparse 出界、duplicate JSON key、非法 UTF-8、NaN、schema/type/missing、SHA/span drift；讀前讀後核 identity 與 resolved path（TOCTOU）；size limit（8MB／256 files／100000 lines 候選，可 stream/snapshot 但不靜默截斷）；回 `source_local_id, raw_sha256, line_start/end, line_sha256, full_text, path_scope, reader_state`。原域 canonical 未取得時 `UNBOUND`，Generic 以真來源＋實質 Reviewer 獨立證，不假 OriginalReader ACK。
+
+**Schema dispatch（D04）**：`inspect_package` 先讀 05 `schema=FHS5.PLP.W1.SourceManifest.NF@1`，direct 讀五 MD；舊 15 檔 parser 僅在 `manifest.schema` 為 legacy 時啟用，且輸出 `projection_of_sha256`。六檔直讀是主路，舊投影不是前置。
+
+---
+
+## 7｜Host、七階段、21 格、U-017／U-028
+
+七階段 `Selected → Loaded → Installed → Bound → Invoked → ActualServed → Consumed` 逐階獨立；不得跳階或互推。內建 native entry 無安裝階段時，可用 `REASONED_NA_NATIVE_ENTRY` 記「不適用＋理由」，但**不是 Installed PASS**；真掛載承諾仍需真 loader/manifest。
+
+| Host | Selected | Loaded | Installed | Bound | Invoked | ActualServed | Consumed |
+|---|---|---|---|---|---|---|---|
+| CODEX | `OBSERVED_LOCAL`（`codex-cli 0.164.0` 可執行） | `NOT_OBSERVED`（W1 六檔尚未被 plugin/loader 載入） | `REASONED_NA_NATIVE_ENTRY`（CLI 內建；不證 W1 產品） | `NOT_OBSERVED` | `NOT_OBSERVED`（W1 entry 未建） | `NOT_OBSERVED` | `NOT_OBSERVED` |
+| GPT CHAT | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` |
+| GPT WORK | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` | `NOT_OBSERVED` |
+| HERMES | `DEFERRED` | `DEFERRED` | `DEFERRED` | `DEFERRED` | `DEFERRED` | `DEFERRED` | `DEFERRED` |
+
+21 格＝3 原 Host×7；GPT CHAT/WORK 為新分列，不覆寫原 21 格。`U-017` 九 child（ChatGPT/Codex/Hermes × Loaded/Invoked/ActualServed）與 `U-028` 三 child（Hermes Kanban/Delegation/Swarm）原名保留；本輪皆 `NOT_OBSERVED`，不假 PASS。
+
+---
+
+## 8｜具名工具、資產與權利（防降級）
+
+| 工具／資產 | 實際版本或 pin | 入口／locator | 權利／Fit | W1 處置 | Consumer |
+|---|---|---|---|---|---|
+| `plp-tpm-review` | `1.0.1`（本地 plugin cache） | `C:\Users\user\.codex\plugins\cache\created-by-me-remote\plp-tpm-review\1.0.1` | 本地可用；10 authority/reader 真 ID 未得 | `REUSE_METHOD`；不宣 Independent | Reviewer |
+| `sbl-tpm-sp` | `0.3.1-rc.1` | 本地 plugin cache；`SKILL.md` 可讀 | skill 可讀 ≠ Host loaded | `REUSE_METHOD`／`HOST_PENDING` | TPM |
+| `tpm-sp-plp` alias | 未見同 manifest | — | 名稱相似不認同 | `UNBOUND`；不自動安裝 | P01 |
+| `w1_bridge_reference.py` | repo 本地 `W1/impl/`：36,580 B／`dc0d1041…`／939 lines；GitHub blob `c8cdd58d…` 為同檔血緣 | `C:\Projects\Agent_Workspace\FHS-5_Workspace\W1\impl\w1_bridge_reference.py` | 唯讀 legacy parser／BodyResolver 參考；NOTICE 無 license | `REUSE_AS_LEGACY_REFERENCE`；不直接判新 schema PASS | W1 NF reader／Bridge |
+| 舊 `check/{replay_hashes,w1_guard,m22_guard_ref,run_cases,run_harness}.py` | repo `run_harness.py`：11,420 B／`33848417…`；Downloads 舊 primary 另存 11,369 B／`64f4c85b…` | repo `W1/check/` | 作者 local 檢查；只證舊 schema；兩份副本不同不混稱 | `HISTORICAL_REUSE_SCOPED` | Pack Checker |
+| W0 `tools/guide.py`／`tpm_contracts.py` | repo 本地：6,216 B／`6be9b02b…`；11,913 B／`e49e94ed…` | `13_W0_NF_CODEX_20261125\tools\` | 歷史 Guide Touch2 仍單 `evidence_sha`；TPM 固定 cache | `REUSE_METHOD`；W1 以真九鍵規格承接 | W2 |
+| `OpenSpec` | CLI 存在（`openspec.ps1`）；`openspec --version` 實測 `2.0.0` | `Get-Command openspec`／`--version` | 只證 CLI／版本存在，不證 W1 change 已用 | `OPTIONAL_INFO`；不建第二 canonical、不強制安裝 | P02 |
+| 13 fixture/oracle | 26 檔，逐檔 SHA（05 assets） | 本包 `assets/fixtures|oracles` | 原作者本地 fixture，非原 Host raw | `FROZEN_REFERENCE` | P05 |
+| W1 67 matrix | repo 本地 25,518 B／`729fdaae…`／739 lines；解析 67 rows（38＋29） | `W1\evidence\10_W1_ECP_TQAEP_CLOSURE_MATRIX.json` | 原矩陣真 bytes；Git blob SHA-1 `7ed2649a…` 另記 | `READ_VERIFIED`；01/02 逐 ID 對位 | 01/02/P05 |
+| W1 report／holds | repo 本地 3,354 B／`3379fb89…`；2,755 B／`a0fef929…` | `W1\evidence\W1_EXECUTION_REPORT.md`／`12_W1_NAMED_HOLDS.json` | 歷史實際結果；不是 W1 產品 PASS | `HISTORICAL_REPORTED` | 03/E5 |
+
+所有具名技術保留原名／版本／entry／rights／consumer／fit／NoFit；未知不補造。未取得原 runner 不偽造命令或 exit。
+
+---
+
+## 9｜W0 基線與歷史實證（只讀，不重跑）
+
+| pin | 實際值 | 本輪核實 |
+|---|---|---|
+| handoff_id | `W0-NF-HANDOFF-20261125-03` | H0 實讀 |
+| W0 pack | `W0-NF-r3-CODEX-PRIMARY`／`FHS5-PLP/W0/PACK-NF-20261125-03` | 05 SHA 實算 |
+| W0 manifest SHA | `e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8` | 本地 05 實算一致 |
+| W0M SHA | `c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5` | 本地 r4 實算一致 |
+| candidate commit | `bb66a276aae8c5d6aef549832c523587fc47d247` | 歷史 pin，不重跑 |
+| oracle SHA | `112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6` | 歷史 pin |
+| evidence manifest | `50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93` | 歷史 pin |
+| consumer manifest | `e490b88efeea4489893dabd1bf33f61c926e61a82d34aeb1414ad9f6fe55d360` | 歷史 pin |
+| C0／H0 raw SHA | `23cfa1f6…`／`21ed2267…` | 本地實算一致 |
+
+歷史 44 receipts（10 sample＋24 original＋10 NF）、32 Challenge、NF-T08 22 checks/9 negatives、803 clean-receive、694/694 evidence SHA、10/10 negatives 為 W0 實證，**不是** W1 13/67 的產品結果；667/673/782 為不同階段口徑。M1 CRLF raw、M2 雙失敗 parity、M3 真材料消費必須入反證；WSL2 symlink 不冒 Windows。
+
+**14 Named HOLD（原名保留；owner／next 見 03 與附件 E5）**：
+
+| HOLD | W1 處置 |
+|---|---|
+| `W1_HOST_NINE_GRID` | CODEX 真格位／consumer；GPT CHAT/WORK 各自、HERMES 後置；U-017 九 child、U-028 三 child 保 |
+| `W1_PLUGIN_ALIAS` | 真 manifest／LoadedID／version／entry 同一性；名稱相似不認同 |
+| `W1_ABI_BOUND` | 逐欄 crosswalk／consumer readback；錯 scope 拒 |
+| `W1_W0_INPUT` | H0 已有 clean-receive；W1 用當期真 IO，不以舊作者 15 檔作唯一入口 |
+| `W0_PRIMARY_RECEIPT_STALE` | 歷史 4222 vs 3986 保留，不修舊；新 H0 另核 |
+| `W0-A_CASE_SELECTION` | 只作 W0 Generic 歷史；W1 不同包選取按 scope |
+| `W0-B_NOT_ADMITTED` | 原 13 原域不宣 close；W1 建造按當期真 grant，W2 擴展 |
+| `ORIGINAL_READER_UNBOUND` | Generic 真 file/Git/Reviewer；原域 canonical 另驗，不 universal |
+| `ORACLE_FIXTURE_UNBOUND` | W1 逐 Case 真 fixture/oracle/runner；舊原域未得另列 |
+| `HOST_CAPABILITY_UNBOUND` | 真本地入口；真需啟用才 OPS；其他 Host 分帳 |
+| `CHECKER_PUBLISHER_UNBOUND` | Checker、Consumer 真分立；W1 不等 W4 Publisher |
+| `SOURCE_REFERENCE_HASH_CONFLICT` | 同名異 SHA 只停受影；SourceFreeze／合法替換／再釘選 |
+| `W0C_DENOMINATOR_ID_LIST_UNBOUND` | W4/Profile 435 slot 保留；不阻 Generic W1 |
+| `HOLD_CR-DOC04-STATE-MAP` | 原 T4/T5 DOC04 另帳；非 W1 通用前件 |
+
+---
+
+## 10｜Effect、權限、Stop／Resume、UNKNOWN
+
+| Effect | 本輪實際 | Issuer | 必要前件 | 停止範圍 | Resume |
+|---|---|---|---|---|---|
+| `READ` | 允許（已授權來源） | 不需原 issuer | source ACL／SHA | 讀錯根／來源不符 | 真 bytes／pin 一致 |
+| `DRAFT` | 允許（本交付根） | 不需原 issuer | 隔離根＋preimage | 越出交付根 | 合法根＋diff／cleanup |
+| `DEV` | 文件層＋repo worktree `OBSERVED_LOCAL`：`W1/impl/w1_nf_reader.py`；原樹未改 | Owner scoped grant ×2（本輪使用者明示 repo 寫權） | live root/HEAD/ACL/exact WriteSet/preimage | 停受影檔／repo | 新 grant 或權限恢復＋preimage |
+| `OPS` | 最小本地 invoke `OBSERVED_LOCAL`（reader CLI）；Host install/service `NOT_ADMITTED` | Host Owner／OS principal | HostID/principal/policy/entry/receiver | 停該 Host 該階段 | typed host receipt |
+| `USER` | 不適用 | consent owner | 資料範圍／補償 | 停資料效果 | 原 consent |
+| `RELEASE` | `NOT_ADMITTED` | Publisher | rights/license/secret/remote policy | 停發布 | Publisher receipt |
+
+`permission_state=NONE_GRANTED`；`advice≠Grant`；`ECP≠Grant`；`exit 0≠served`；`git revert≠OPS restore`；`UNKNOWN` 先 readback/reconcile，已成效 no-op，未成效且同 grant 才重試。
+
+---
+
+## 11｜W1-D01–D09 實質處置（精確替換與落點）
+
+| ID | 原條款／缺陷 | 本包替換（可施工） | 落點 | 效力 |
+|---|---|---|---|---|
+| `W1-D01` | W1M §00.6 L139／§05.B L589／§08.6 L872–881／§11.5 L1090–1097 之「W1 只 READ/DRAFT/context；DEV/OPS 屬 W2」與 §01.4／§03.B／§07.8 的正式 reader/contract 建造矛盾；全 N/A 掩蓋真 host effect | 編包階段：READ/DRAFT/local check。W1 產品階段：在本輪 Owner 同域 scoped grant＋真 ACL/root 下，允許必要本地 DEV（六檔 reader、TPM/Guide/Bridge/consumer 建造與修補）與最小本地 OPS（invoke、必要可逆 activation、restore／uninstall）；W2 另驗通用 protected effect/recovery。無權不做；不把 install 預設 mandatory；未知 effect fail closed。 | 00 §2/§10；01 D1–D7；02 O1–O6；04 | 本輪 Owner 同域承接（`ADOPTED_SCOPED_THIS_ROUND`）；不擴 OS/Repo/Host 權 |
+| `W1-D02` | §02.4B 大量 `PROFILE_ONLY` 可能連 Generic 安全責任一起刪 | `PROFILE_ONLY` 只隔離原域 typed receipt／ref；每項仍保留 live root、preimage、exact WriteSet、真 callable、ACL、post/readback、recovery、未知 effect fail closed。原 27 原域 HOLD 不假 close。 | 01 §2 全 38 列；02 §2 全 29 列 | `IMPLEMENTED_IN_PACK` |
+| `W1-D03` | `package_sha256`／`source_manifest_sha256`／`source_set_sha`／`context_sha256` 混用；舊封存有自循環風險 | 採 §4 digest 分域；05 只記五 MD file SHA；外置 seal 記 05 SHA；五 MD 不嵌最終 05 SHA；第六身份讀時合成；legacy 投影另算。 | 00 §4；05 `digest_contract`；附件 E8 | `IMPLEMENTED_IN_PACK` |
+| `W1-D04` | 舊 API 寫死 15 檔／缺 OriginalReader 即停 Generic／無新 schema 逐欄映射 | `inspect_package` schema-dispatch 直讀六檔 05；BodyResolver 真 file/Git/span；Generic 以真來源＋Reviewer 證；舊 15 parser 僅 legacy；原 canonical claim 保 `UNBOUND`。 | 00 §6.3；01 DEV-ADP-03/D2；03 N02 | `IMPLEMENTED_IN_PACK` |
+| `W1-D05` | 四具名函式與 NF 名稱不同；九鍵曾被單 `evidence_sha` 承載 | 保兩組原名＋逐欄 crosswalk；九鍵每鍵真 producer/verifier；缺期／單 SHA／caller bool → `DELTA_UNVERIFIED`；跨域 → `NEW_SUBJECT_REVIEW_REQUIRED`；同域實質差 → `NEW_MATERIAL_EVIDENCE`；全同才 `PARK_NO_DELTA` 候選。 | 00 §6.2；03 N03；04 SPEC | `IMPLEMENTED_IN_PACK` |
+| `W1-D06` | 七階段被當固定 install 順序；W1_EXECUTION_READY 以最終 product consumed 自扣 | 階段按真 entry 逐階證；內建入口可 `REASONED_NA_NATIVE_ENTRY`（非 PASS）；bootstrap H0/六檔接收是准入前件，最終 W1 product consumed 是後驗；不以 P04/P06 倒卡 P03。 | 00 §7；02 §4；04 DONE | `IMPLEMENTED_IN_PACK` |
+| `W1-D07` | 「13 案之外不新增分母」可能省掉 Guide/TPM/六檔新子義 | 13 原 ID／語義／POS/NEG/child 不減；N01–04/N10/N11 作具名子例，獨立分母；N05–09/N12 保本波必要部分與後波全量；不把 13 PASS 當全產品。 | 03 §2–§3 | `IMPLEMENTED_IN_PACK` |
+| `W1-D08` | 六冊 author current 不等正式採納；W1M 仍 `NOT CURRENT`；PLAN4 §16.2 需有效裁決 | 本輪只承接 W1 同域主用＋scoped construction；不宣七冊／全系統採納；`WM__W0M_W1M_ADMISSION.md` 的 `WORKSPACE_REVISION_PENDING_ADOPTION` 原樣記錄；其他 scope 需新裁決。 | 00 §0；附件 E6/E9 | `ADOPTED_SCOPED_THIS_ROUND`（限 W1） |
+| `W1-D09` | 歷史 667/694／絕對路徑／CH-07 identity-only／CRLF 混帳 | 採當期 C0/H0/consumer pins；來源用可攜相對 locator＋source root；fresh receive 重算 raw；CH-07 只記 identity，不冒可還原 bytes；CRLF 不 normalize 後 hash。 | 00 §9；05 sources；03 N11 | `IMPLEMENTED_IN_PACK` |
+
+---
+
+## 12｜15→6 遷移（單一主包）
+
+| 舊檔 | 新落點 | 必須保留的實質 |
+|---|---|---|
+| `00_WAVE_RUN_MANIFEST.md/.json` | 00＋05 | 六身份、Goal/FUO/Done、effect、claim、holds、host ledger；不把 author Done 複製成產品 Done |
+| `01_SOURCE_SCOPE_AND_CONSTRUCTION.md` | 00/01/02 | source/scope、P01–06、四 API、BodyResolver、七 Seam、W0 D01–08 |
+| `02_ORIGINAL_CONTRACT_REFS.json` | 05＋00 | 原 PI/PD/ECP/TQAEP refs；缺 ref null＋reason，不發假 ACK |
+| `03_DEV_ECP.md` | 01 | 38 ID、pre/post、WriteSet、readback、restore、admission；不繼承 universal registry |
+| `04_OPS_ECP.md` | 02 | 29 ID、Host/ACL/receiver、activation/invoke/serve/consume、recovery |
+| `05_PLANNED_TQAEP.md/.json` | 03 | 13 ID、原分母、fixture/oracle、ExpectedRaw、observation 層 |
+| `06_PERMISSION_STOP_RESUME.md` | 00/01/02/04 | 單人 issuer、scoped grant、stop/resume、UNKNOWN reconcile |
+| `07_EVIDENCE_AND_CHECKER.md` | 03＋證據附件 | 五 pin、NotCovered、Checker/Consumer 分立、未跑 actual=null |
+| `08_AS_BUILT_AND_HANDOFF.md` | 00 expected＋真 W1 CLOSEOUT | LastGood/ChangeCone/接收；作者 AsBuilt 不冒產品 |
+| `09_README_RUN_ORDER.md` | 00 DAG＋04 | 真下一合法動作、依賴方向、有限修補 |
+| `W1_START_THIN_PROMPT.md` | 04 | GOAL/SOURCE/SPEC/EXECUTE/HARNESS LOOP/DONE；不再定義新權限 |
+| `SOURCE_MANIFEST.json` | 05 | 來源 bytes/SHA/span/rights/selection；歷史 16/17 分帳 |
+| `PACKAGE_FILE_MANIFEST.json` | 05＋外置 seal | SHA/self exclude/path/duplicate/bytes；舊投影需才生成 |
+
+舊十五檔只在真舊 consumer 需要時生成 projection，不作第二 canonical。
+
+---
+
+## 13｜W2–W4 欄級交接
+
+| 下游 | W1 交出 | 不作為 W1 前件 |
+|---|---|---|
+| W2 | 六檔/ABI/effect schema/scope/entry/consumer pins、DEV/OPS candidate、`W1_UPSTREAM_CHANGESET.md` | W2 protected effect／全 recovery／多效果矩陣 |
+| W3 | frozen candidate／oracle／fixture、ExpectedRaw、作者 raw、`W1_ABI_BOUND` 等 HOLD、compare/九鍵接口 | W3 全 FAR／Challenge／Publisher |
+| W4 | Host 21 格＋U-017/U-028、profile/fit/NotCovered、claim ceiling | W4 Independent／Release／public push |
+
+W1 產品 scope 預定：`FHS-5_PLP/W1/CONTROL_PACK` 之六檔直讀、四 API、Guide/TPM、CODEX 主 Host 與第二不同小包；實作 root 由 04 依真 repo/ACL late-bind，不在本檔預先寫死。

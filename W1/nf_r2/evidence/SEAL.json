@@ -1,0 +1,48 @@
+{
+  "seal_version": 1,
+  "generated_at": "2026-11-25T00:00:00+08:00",
+  "pack_version": "W1-NF-r2-CODEX-PRIMARY",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1-NF-01",
+  "verdict": "W1_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
+  "authority_ref": "OWNER-W1-NF-r2-20261125",
+  "pack_manifest_sha256": "a7b1ef358c8e7a9740e5f1ef487ecd7777ded0a1f8246daee562cba909810a80",
+  "pack_files": [
+    {
+      "path": "00_W1_PI_PD.md",
+      "sha256": "f6dd84cbfad05e8e3d452f0e6f5c6f9539e149573bec51c396c60b91bf76f8d1",
+      "bytes": 34565,
+      "lines": 349
+    },
+    {
+      "path": "01_W1_DEV_ECP.md",
+      "sha256": "772557b0749759ca2893b72ed99feb049cf38446e8100f8713bcb38ab4d499af",
+      "bytes": 20729,
+      "lines": 200
+    },
+    {
+      "path": "02_W1_OPS_ECP.md",
+      "sha256": "14b1571ab26474c325c2f001c8fddee7cc81c4abbec79152e669c6f5766d44e5",
+      "bytes": 12290,
+      "lines": 110
+    },
+    {
+      "path": "03_W1_TQAEP.md",
+      "sha256": "66a53d2854debafc599b8a4f6611aa44236d099d380d93828c43aa20e227c691",
+      "bytes": 19804,
+      "lines": 213
+    },
+    {
+      "path": "04_W1_START_THIN_PROMPT.md",
+      "sha256": "a4b0f9cb750d8374ef649c78215d489c434706eb05693e5f63b92b6d17905eb9",
+      "bytes": 10028,
+      "lines": 120
+    }
+  ],
+  "asset_count": 26,
+  "assets_tree_sha256": "1d71d4b14aa71a678cf10cea6a66a00d08af3fee1fc08fdf842c0c9100f3bf92",
+  "source_set_sha256": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+  "w1_execution_ready": "READY",
+  "product_actual": "NOT_RUN",
+  "notes": "external seal; not embedded in 05. 05 does not embed this file's hash."
+}
