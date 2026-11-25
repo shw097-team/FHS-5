@@ -13,7 +13,7 @@
 - **oracle_sha256**：`112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6`
 - **evidence_ref**：`10_EVIDENCE/EVIDENCE_MANIFEST.json`
 - **evidence_manifest_sha256**：`34e4f85515e3bcda2979acfcc532b457ebb3a3772c7d9f0afa8c29fadafe21f1`
-- **consumer_manifest_sha256**：`8029a199fab5b46396f7e5eb51896e9d3e63850bf571a17b89cac735f125e2fe`
+- **consumer_manifest_sha256**：`4f0e2fccd4010165f038a64cbb4c7807288c59955221359888d9a0b19aef4415`
 - **case_set**：SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44
 - **target_consumer**：W1 / CODEX Native（`tools/consumer.py`，`W1-consumer/CODEX-Native-1`）
 - **consumer_version**：`@2`
@@ -52,6 +52,11 @@ W1–W4 全分母、FHS 485、HERMES／GPT Host、不同 principal 簽章、Publ
 |---|---|---|
 | `w1_technical_readiness` | `W1_TECHNICALLY_READY` | W0 validated＋真 handoff＋consumer 真讀回 |
 | `w1_execution_readiness` | `NOT_CLAIMED` | 尚缺上位採納、W1M／下一包一致與 W1 真入口／授權 |
+
+## publication_state
+
+`LOCAL_COMMIT_ONLY_PUSH_BLOCKED`：local `f8732527`；remote main `43ac758`。
+詳見 `PUBLICATION_STATUS.md`；不宣已上推。
 
 ## stop／resume
 
