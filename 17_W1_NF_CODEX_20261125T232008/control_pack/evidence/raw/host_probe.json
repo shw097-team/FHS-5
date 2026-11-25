@@ -1,0 +1,39 @@
+{
+  "record_type": "HOST_PROBE_LOCAL",
+  "date": "2026-11-25",
+  "timezone": "Asia/Taipei",
+  "os": "Windows",
+  "python": "3.11.9",
+  "git": "2.53.0.windows.1",
+  "codex_cli": "codex-cli 0.164.0",
+  "codex_exec_help": "AVAILABLE (non-interactive entry)",
+  "openspec_cli": "2.0.0",
+  "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+  "source_root_access": "READ_ONLY (sandbox)",
+  "repo_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+  "repo_branch": "codex/b0-nf-20261125",
+  "repo_head": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+  "repo_remote": "https://github.com/shw097-team/FHS-5.git",
+  "repo_read": "OK",
+  "repo_write_probe": "DENIED (WriteAllText: Access to the path is denied)",
+  "repo_git_status": "UNVERIFIED (read-only tree; git cannot create index lock)",
+  "delivery_root": "C:\\Users\\user\\Documents\\Codex\\2026-11-25\\new-chat-11\\outputs\\W1_Native-first_CODEX_主用修補_交付",
+  "delivery_write": "OK",
+  "windows_symlink_privilege": "NOT_TESTED / NOT_ASSUMED",
+  "wsl2_substitute": "NOT_ACCEPTED_AS_WINDOWS",
+  "host_stage_observation": {
+    "CODEX": {
+      "Selected": "OBSERVED_LOCAL",
+      "Loaded": "NOT_OBSERVED",
+      "Installed": "REASONED_NA_NATIVE_ENTRY",
+      "Bound": "NOT_OBSERVED",
+      "Invoked": "NOT_OBSERVED",
+      "ActualServed": "NOT_OBSERVED",
+      "Consumed": "NOT_OBSERVED"
+    },
+    "GPT_CHAT": "NOT_OBSERVED",
+    "GPT_WORK": "NOT_OBSERVED",
+    "HERMES": "DEFERRED"
+  },
+  "notes": "CLI presence proves container capability only, not W1 plugin loaded/served/consumed."
+}

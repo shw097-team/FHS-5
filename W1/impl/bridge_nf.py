@@ -24,6 +24,7 @@ from pathlib import Path
 
 import body_resolver as br
 import nf_reader as reader
+import tpm_contracts_nf as tpm
 import w1_nf_reader as base
 
 NFError = base.NFError
@@ -76,6 +77,7 @@ def inspect_package(manifest: str, root: str | None = None,
         reqs.append({"id": i, "kind": "DEV", "source": "01_W1_DEV_ECP.md"})
     for i in insp["ids"]["ops"][:29]:
         reqs.append({"id": i, "kind": "OPS", "source": "02_W1_OPS_ECP.md"})
+    fidelity = verify_field_fidelity(str(pack_root))
     return {
         "schema": "FHS5.PLP.W1.BridgeInspect@1",
         "subject_id": insp["identity"]["subject_id"],
@@ -104,17 +106,80 @@ def inspect_package(manifest: str, root: str | None = None,
         "counts": insp["counts"],
         "read_only": True,
         "wrote_bytes": 0,
+        "field_fidelity": fidelity["rows"],
+        "missing": fidelity["missing"],
+        "fidelity_state": fidelity["state"],
     }
+
+
+def verify_field_fidelity(pack_root: str) -> dict:
+    """Real source value -> transform -> contract value -> readback per field."""
+    root = br.canonical_root(pack_root)
+    man_name = sorted(p.name for p in root.glob("*SOURCE_MANIFEST*.json"))[0]
+    man, _ = br.load_json_strict(br.resolve_inside(root, man_name), man_name)
+    wi = {"project_id": man["project_id"], "subject_id": man["subject_id"] or "NA",
+          "scope": man["scope"], "wave_id": man["wave_id"],
+          "batch_id": man["batch_id"], "work_id": "FIDELITY"}
+    if not man.get("subject_id"):
+        wi["subject_id"] = man["scope"].split(";")[0].strip()[:60]
+    contracts = tpm.build_contracts(str(root), wi)
+    insp = reader.inspect_package(root)
+    rows = []
+
+    def row(field, source_value, target_value, transform="identity", loss="NONE"):
+        ok = str(source_value) == str(target_value)
+        rows.append({"field": field, "source_value": str(source_value)[:120],
+                     "target_value": str(target_value)[:120],
+                     "transform": transform,
+                     "loss": loss if ok else "EXPLICIT_REVIEW",
+                     "readback": ok})
+
+    pi = contracts["views"]["PI"]
+    pd = contracts["views"]["PD"]
+    row("subject_id", man.get("subject_id"), pi.get("subject_id"))
+    row("scope", man.get("scope"), pi.get("scope"))
+    row("work_id", wi["work_id"], pi.get("work_id"))
+    row("profile", contracts["profile"], contracts["profile"])
+    row("pack_files", len(man.get("pack_files") or []),
+        insp["counts"]["pack_files"], "count")
+    row("dev_rows", contracts["views"]["DEV"]["count"], insp["counts"]["dev"], "count")
+    row("ops_rows", contracts["views"]["OPS"]["count"], insp["counts"]["ops"], "count")
+    row("cases", contracts["views"]["TQAEP"]["count"], insp["counts"]["cases"], "count")
+    row("assets", len(man.get("assets") or []), insp["counts"]["assets"], "count")
+    row("dag_nodes", len((man.get("dag") or {}).get("nodes") or []),
+        len(insp["dag"]["topological_order"]), "count")
+    row("capability", len((man.get("implementation") or {}).get("api") or []),
+        len(pd.get("capability") or []), "count")
+    row("manifest_sha", insp["pack_manifest_sha256"],
+        contracts.get("manifest_sha256"), "sha256-of-manifest")
+    missing = [r["field"] for r in rows if not r["readback"]]
+    return {"schema": "FHS5.PLP.W1.FieldFidelity@1", "rows": rows,
+            "missing": missing,
+            "state": "COMPLETE" if not missing else "EXPLICIT_REVIEW"}
 
 
 def explain_slice(pack_root: str, view: str = "all", kinds=None) -> dict:
     root = br.canonical_root(pack_root)
     if view not in VIEWS:
         raise NFError("VIEW_UNKNOWN", view)
-    insp = reader.inspect_package(root)
+    try:
+        insp = reader.inspect_package(root)
+    except NFError as exc:
+        if exc.token != "PACK_INCOMPLETE_LOCAL":
+            raise
+        insp = reader.inspect_generic(root)
     ident = insp["identity"]
     target, prefixes = VIEWS[view]
-    selected = base.PACK_FILES if target is None else [target]
+    if target is None:
+        selected = base.PACK_FILES
+    elif (root / target).is_file():
+        selected = [target]
+    else:
+        prefix = target.split("_", 1)[0]
+        cands = sorted(p.name for p in root.glob(prefix + "_*.md"))
+        selected = cands[:1]
+    if not selected:
+        raise NFError("PACK_INCOMPLETE_LOCAL", view)
     sections = []
     for name in selected:
         p = br.resolve_inside(root, name)
@@ -186,7 +251,9 @@ def render_agent_context(explanation: dict, target_host: str = "Codex",
     allowed = {"Codex", "ChatGPT", "GPT_WORK", "Hermes"}
     if target_host not in allowed:
         raise NFError("UNKNOWN_TARGET_HOST", target_host)
-    ident = explanation["identity"]
+    ident = dict(explanation["identity"])
+    ident["subject_id"] = ident.get("subject_id") or "UNBOUND_SUBJECT"
+    ident["scope"] = ident.get("scope") or "UNBOUND_SCOPE"
     if scope is not None and scope != ident["scope"]:
         raise NFError("CONTEXT_SCOPE_MISMATCH", f"{scope} != {ident['scope']}")
     lines = [

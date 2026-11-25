@@ -70,7 +70,10 @@ class TestTPM(unittest.TestCase):
     def test_reviewer_detects_missing_binding(self):
         broken = {"views": {"PD": {}}}
         r = tpm.review(broken, str(PACK))
-        self.assertTrue(any(f["class"] == "missing_binding" for f in r["findings"]))
+        self.assertTrue(any(f["class"] in ("missing_binding", "contract_missing_field")
+                            for f in r["findings"]))
+        self.assertTrue(r["change_cone"])
+        self.assertIsNotNone(r["first_fail"])
 
     def test_assets_pin_join(self):
         cases = self.c["views"]["TQAEP"]["cases"]

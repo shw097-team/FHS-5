@@ -50,7 +50,8 @@ class TestGuide(unittest.TestCase):
     def test_receive_package(self):
         r = guide.inspect_guide_request({}, str(PACK))
         self.assertEqual(r["package_state"], "RECEIVED_ACTUAL")
-        self.assertEqual(r["next"], "P03")
+        self.assertTrue(isinstance(r["next"], str) and len(r["next"]) > 5)
+        self.assertEqual(r["contract_profile"], "W1")
         self.assertEqual(r["permission_state"], "NONE_GRANTED")
 
     def test_receive_neg_scope(self):

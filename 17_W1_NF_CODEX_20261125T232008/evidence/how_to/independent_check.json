@@ -1,0 +1,208 @@
+{
+  "checker_id": "independent-checker-r4",
+  "mode": "read-only",
+  "subject": {
+    "candidate": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3",
+    "delivery": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\17_W1_NF_CODEX_20261125T232008",
+    "checked_at": "2026-11-25T23:30+08:00"
+  },
+  "manifest_recompute": {
+    "checked": 100,
+    "mismatches": [],
+    "declared_file_count": 100,
+    "missing_files": []
+  },
+  "seal_binding": {
+    "ok": true,
+    "recomputed_manifest_sha256": "cd0ca55ebcd1d4d077eaf0802122c78c19c5d9aebd40250f548ae5ff2b41082e",
+    "seal_evidence_manifest_sha256": "cd0ca55ebcd1d4d077eaf0802122c78c19c5d9aebd40250f548ae5ff2b41082e"
+  },
+  "pack_check": {
+    "manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "pin": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "digest_matches_pin": true,
+    "counts": {
+      "md": 5,
+      "dev": 38,
+      "ops": 29,
+      "cases": 13,
+      "assets": 26,
+      "sources": 42,
+      "holds": 14
+    },
+    "expected": {
+      "pack_md_files": 5,
+      "dev_ids": 38,
+      "ops_ids": 29,
+      "cases": 13,
+      "assets": 26,
+      "sources": 42,
+      "holds": 14
+    },
+    "counts_match_expected": true
+  },
+  "tests": {
+    "count": 74,
+    "ok": true,
+    "output_tail": "Ran 74 tests in 2.349s\n\nOK",
+    "run_location": "checker_out/candidate_copy (copied; see writes_to_candidate)",
+    "pack_env": "W1_PACK=<candidate frozen pack>"
+  },
+  "cases": {
+    "total": 20,
+    "verdicts": {
+      "PASS": 19,
+      "DEFERRED": 1
+    },
+    "digest_split_ok": true,
+    "fail_cases": [],
+    "pass_without_execution": [],
+    "unexecuted": [
+      {
+        "case_id": "W1-HERMES-01",
+        "verdict": "DEFERRED",
+        "reason": "Hermes host not mounted in this environment"
+      }
+    ],
+    "raw_hash_mismatches": 0
+  },
+  "host": {
+    "consumed": true,
+    "sessions": [
+      "01a2134b-0117-7393-83fe-63f07e89a19e",
+      "01a2134b-2ce2-79c1-8716-e9a1f78556fc"
+    ],
+    "sessions_distinct": true,
+    "stages": {
+      "Selected": "OBSERVED_LOCAL",
+      "Loaded": "OBSERVED_LOCAL",
+      "Installed": "REASONED_NA_NATIVE_ENTRY",
+      "Bound": "OBSERVED_LOCAL",
+      "Invoked": "OBSERVED_LOCAL",
+      "ActualServed": "OBSERVED_LOCAL",
+      "Consumed": "OBSERVED_LOCAL"
+    },
+    "stages_nonconstant": true,
+    "stage_values": [
+      "OBSERVED_LOCAL",
+      "REASONED_NA_NATIVE_ENTRY"
+    ],
+    "served_text_sha256": "b90dca5b88135a630c4cd20d20b097179eb2c93f1057ebce9bc60e2e05d4caad",
+    "served_sha_present": true,
+    "per_package_value_check": {
+      "pkgs": {
+        "fixture_sha256_matches": true,
+        "oracle_sha256_matches": true,
+        "subject_matches": true,
+        "scope_matches": true
+      },
+      "pkg2": null
+    }
+  },
+  "closure": {
+    "rows": 118,
+    "counts": {
+      "EVIDENCED": 17,
+      "COVERED_BY_SHARED_OPERATION": 62,
+      "EXERCISED_INDIVIDUALLY": 2,
+      "NOT_APPLICABLE_THIS_ROUND": 1,
+      "DEFERRED": 3,
+      "PASS": 18,
+      "NOT_OBSERVED": 1,
+      "HOLD_PRESERVED_NOT_CLOSED": 14
+    },
+    "pass_without_evidence": 0,
+    "dangling_refs": 9,
+    "dangling_ref_rows": [
+      "P06",
+      "DEV-PROH-01",
+      "DEV-PROH-02",
+      "DEV-PROH-03",
+      "DEV-PROH-04",
+      "DEV-RB-01",
+      "DEV-RB-02",
+      "DEV-RB-03",
+      "DEV-RB-04"
+    ]
+  },
+  "w2": {
+    "accepted": true,
+    "checks": 23,
+    "grant_issued": false,
+    "permission_state": "NONE_GRANTED",
+    "seal_manifest_binding": "ea5aaa2566c7b7c7a13bc55d893675b936653e22b6864f359368f3eed0ac5c49",
+    "seal_binding_matches_delivered_manifest": false
+  },
+  "claim_audit": {
+    "files_scanned": 178,
+    "token_occurrences": 131,
+    "affirmative_claims": 0,
+    "not_claimed_array_occurrences": 128,
+    "upstream_enum_mentions": [
+      {
+        "file": "W1/primary/sources/M.md",
+        "line": 1049,
+        "token": "RELEASED",
+        "note": "release state table with a negative qualifier"
+      },
+      {
+        "file": "W1/primary/sources/W0MB.md",
+        "line": 246,
+        "token": "NATIVE_PASS",
+        "note": "W0-B target-state table with Host/Issuer HOLD"
+      },
+      {
+        "file": "W1/primary/sources/WM.md",
+        "line": 1427,
+        "token": "RELEASED",
+        "note": "release-state enum list"
+      }
+    ],
+    "conclusion": "No committed document asserts W1_NF_VALIDATED, RELEASED, INDEPENDENT_PASS or NATIVE_PASS for this candidate as an achieved state. CLOSEOUT line 9 explicitly disclaims RELEASED; all other occurrences are entries inside not_claimed arrays or upstream state tables."
+  },
+  "writes_to_candidate": false,
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "medium",
+      "class": "stale_seal_binding",
+      "detail": "W2_RECEIVE_RECEIPT.json self-reports check 'seal_manifest_binding' ok with ea5aaa2566c7b7c7a13bc55d893675b936653e22b6864f359368f3eed0ac5c49, but the delivered EVIDENCE_MANIFEST.json recomputes to cd0ca55ebcd1d4d077eaf0802122c78c19c5d9aebd40250f548ae5ff2b41082e (equal to DELIVERY_SEAL.evidence_manifest_sha256). The ea5aaa value matches neither the raw bytes nor LF-normalized or canonical-JSON forms of the delivered manifest, so the receipt binds a different manifest revision. make_delivery4.py loads the W2 receipt and then rewrites closeout/handoff/changeset and regenerates the manifest (lines 261-286), and the receipt timestamp (15:21:20Z) precedes the seal (15:21:41Z).",
+      "evidence": "W2_RECEIVE_RECEIPT.json:checks[seal_manifest_binding].detail=ea5aaa25..., DELIVERY_SEAL.json:evidence_manifest_sha256=cd0ca55e..., make_delivery4.py:261-295"
+    },
+    {
+      "id": "F-02",
+      "severity": "medium",
+      "class": "dangling_evidence_ref",
+      "detail": "9 of 117 closure rows cite an independent_check.json artifact that does not exist anywhere in the delivery, pack, or evidence tree. One of them (P06) carries verdict EVIDENCED, i.e. a pass-equivalent claim whose evidence reference cannot be resolved. The other 8 are COVERED_BY_SHARED_OPERATION.",
+      "evidence": "W1_CLOSURE_MATRIX.json rows P06, DEV-PROH-01, DEV-PROH-02, DEV-PROH-03, DEV-PROH-04, DEV-RB-01, DEV-RB-02, DEV-RB-03, DEV-RB-04; refs: evidence/independent_check.json, how_to/independent_check.json, independent_check.json; W1_CLOSURE_MATRIX.md:22,49-56"
+    },
+    {
+      "id": "F-03",
+      "severity": "medium",
+      "class": "host_identity_gap",
+      "detail": "The second host package was served a contract with subject equal to the literal string 'None' and next_action null; pkg2.value_check is null, so no subject/scope/fixture join was performed for it, yet its stage row and the global ledger still record Bound/Invoked/ActualServed/Consumed as OBSERVED_LOCAL. The receipt contains only one global stage_evidence block (Invoked argv for work_b / W0) and one served text sha, so package A has no per-package served digest in the receipt.",
+      "evidence": "evidence/host/pkgB_w0_artifact.json:subject=\"None\"; evidence/host/host_receipt.json:per_package.pkg2.value_check=null, stage_evidence.Invoked.argv (subject=None), stage_evidence.ActualServed"
+    },
+    {
+      "id": "F-04",
+      "severity": "low",
+      "class": "weak_digest_separation",
+      "detail": "In all 20 case rows source_sha equals pack_sha (both the pack pin 61f34a08...). The six digest fields are not all identical (candidate_sha 681fe5b6..., case_set_sha256 63a59b87..., per-case oracle and evidence differ), so the required 'not all the same' split holds, but two of the six declared domains collapse.",
+      "evidence": "evidence/cases.json cases[*].source_sha == cases[*].pack_sha"
+    },
+    {
+      "id": "F-05",
+      "severity": "low",
+      "class": "run_id_mismatch",
+      "detail": "Evidence run id 20261125T232032 (cases.json, host_receipt.json) differs from the delivery/manifest/seal run id 20261125T232008. This is consistent with a later evidence sub-run packaged into the delivery, but the ids are not unified.",
+      "evidence": "evidence/cases.json:run_id; evidence/host/host_receipt.json:run_id; DELIVERY_SEAL.json:run_id"
+    },
+    {
+      "id": "F-06",
+      "severity": "low",
+      "class": "stage_hardcode_risk",
+      "detail": "The 7-stage ledger is byte-identical in the global ledger and in both packages, and only two distinct values occur (OBSERVED_LOCAL x6, REASONED_NA_NATIVE_ENTRY x1). stage_evidence provides distinct per-stage detail, so this is not proof of hardcoding, but the per-package rows carry no independent per-package evidence.",
+      "evidence": "evidence/host/host_receipt.json:stage_ledger, per_package.pkgs.row, per_package.pkg2.row"
+    }
+  ]
+}

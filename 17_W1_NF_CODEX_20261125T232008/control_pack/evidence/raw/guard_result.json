@@ -1,0 +1,69 @@
+{
+  "root": "C:\\Users\\user\\Documents\\Codex\\2026-11-25\\new-chat-11\\outputs\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST",
+  "checks": [
+    {
+      "check": "pack_root_layout",
+      "result": "PASS",
+      "detail": "5 MD + 05 + assets/ + tools/ only"
+    },
+    {
+      "check": "manifest_schema_identity",
+      "result": "PASS",
+      "detail": "FHS5.PLP.W1.SourceManifest.NF@1"
+    },
+    {
+      "check": "pack_files_digest",
+      "result": "PASS",
+      "detail": "5/5 bytes/sha256/lines exact"
+    },
+    {
+      "check": "md_identity_version",
+      "result": "PASS",
+      "detail": "all five MD carry identity + version + manifest ref"
+    },
+    {
+      "check": "digest_domains",
+      "result": "PASS",
+      "detail": "declared"
+    },
+    {
+      "check": "id_sets",
+      "result": "PASS",
+      "detail": "DEV=38 OPS=29 CASES=13"
+    },
+    {
+      "check": "dag_topology",
+      "result": "PASS",
+      "detail": "P01->P02->P03->P04->P05->P06"
+    },
+    {
+      "check": "assets",
+      "result": "PASS",
+      "detail": "26/26 exact, 13 cases x 2"
+    },
+    {
+      "check": "sources",
+      "result": "PASS",
+      "detail": "42 domains checked"
+    },
+    {
+      "check": "source_set_digest",
+      "result": "PASS",
+      "detail": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c"
+    },
+    {
+      "check": "upstream_pins",
+      "result": "PASS",
+      "detail": "H0/W0/W0M/oracle/evidence/consumer"
+    },
+    {
+      "check": "external_seal",
+      "result": "PASS",
+      "detail": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
+    }
+  ],
+  "rejects": [],
+  "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "asset_count": 26,
+  "result": "PASS"
+}

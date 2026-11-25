@@ -1,0 +1,43 @@
+{
+  "schema": "FHS5.PLP.W1.Observation@1",
+  "case_id": "W1-ABI-02",
+  "kind": "NEG",
+  "requirement_ref": "W1M 09.1; B03 05",
+  "child": null,
+  "subject": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1-NF-01",
+  "profile": "generic-codx-native-first",
+  "host": "LOCAL",
+  "candidate_sha": "77ec4191f23ead19d3894447283b4435fc7f7ca7e36c36e48452bb8d9982f109",
+  "source_sha": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+  "pack_sha": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "case_set_sha256": "63a59b874485e44cd7d37c1186e9d615402ab49f4f5e86285713c2b54645cbce",
+  "oracle_sha256": "ea236a6629f8f12222f5d90140a9d2362488b8449da998b4f1d6f1ed6ec90c2f",
+  "runner_id": "check/run_cases_nf.py",
+  "runner_version": "1.0.0",
+  "argv": [
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\W1\\impl\\run_cases_nf.py",
+    "W1-ABI-02"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\17_W1_NF_CODEX_20261125T232008\\control_pack\\FHS-5_PLP_W1_NATIVE_FIRST",
+  "timeout_ms": 120000,
+  "expected": {
+    "expect_token": "LOSSY_MIGRATION"
+  },
+  "first_fail": null,
+  "checker_id": null,
+  "consumer_id": null,
+  "recovery_ref": null,
+  "executor": "w1-exec",
+  "run_id": "20261125T233359",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "observed": {
+    "token": "LOSSY_MIGRATION",
+    "detail": "missing effect,resume",
+    "matched_expected_token": true
+  },
+  "exit": 2,
+  "verdict": "PASS",
+  "duration_ms": 0
+}

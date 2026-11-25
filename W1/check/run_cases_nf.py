@@ -24,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "impl"))
 
 import body_resolver as br
 import abi_guard as guard
+import off_isolation as off
 import bridge_nf as bridge
 import guide_nf as guide
 import host_facade as hf
@@ -55,6 +56,19 @@ class Ctx:
         self.raw.mkdir(parents=True, exist_ok=True)
         self.insp = reader.inspect_package(self.pack)
         self.manifest_sha = self.insp["pack_manifest_sha256"]
+        self.candidate_sha = self._candidate_sha()
+        self.case_set_sha = self._case_set_sha()
+
+    def _candidate_sha(self) -> str:
+        rows = []
+        for base in (IMPL, CHECK):
+            for p in sorted(base.glob("*.py")):
+                rows.append(sha256_file(p))
+        return sha256_bytes("".join(sorted(rows)).encode("utf-8"))
+
+    def _case_set_sha(self) -> str:
+        rows = sorted((a["case_id"], a["kind"], a["sha256"]) for a in self.insp["asset_refs"])
+        return sha256_bytes(json.dumps(rows, ensure_ascii=False, sort_keys=True).encode("utf-8"))
 
     def emit(self, case_id, kind, requirement, expected, fn, subject=None):
         t0 = time.time()
@@ -63,8 +77,10 @@ class Ctx:
             "case_id": case_id, "kind": kind, "requirement_ref": requirement,
             "child": None, "subject": self.insp["identity"]["subject_id"],
             "scope": self.insp["identity"]["scope"], "profile": "generic-codx-native-first",
-            "host": "LOCAL", "candidate_sha": self.manifest_sha,
-            "source_sha": self.manifest_sha, "pack_sha": self.manifest_sha,
+            "host": "LOCAL", "candidate_sha": self.candidate_sha,
+            "source_sha": self.insp["source_set_sha256"], "pack_sha": self.manifest_sha,
+            "case_set_sha256": self.case_set_sha,
+            "oracle_sha256": self._oracle_for(case_id),
             "runner_id": "check/run_cases_nf.py", "runner_version": "1.0.0",
             "argv": [str(IMPL / "run_cases_nf.py"), case_id], "cwd": str(self.pack),
             "timeout_ms": 120000, "expected": expected, "first_fail": None,
@@ -88,7 +104,10 @@ class Ctx:
                 tok = getattr(exc, "token", "REJECT")
             rec["observed"] = {"token": tok, "detail": getattr(exc, "detail", "")}
             rec["exit"] = 2
-            if kind in ("NEG", "SEC") and expected.get("expect_token") == tok:
+            if case_id == "W1-HOST-01" and tok == "HOST_PENDING":
+                rec["verdict"] = "NOT_OBSERVED"
+                rec["first_fail"] = "HOST_PENDING"
+            elif kind in ("NEG", "SEC") and expected.get("expect_token") == tok:
                 rec["verdict"] = "PASS"
                 rec["observed"]["matched_expected_token"] = True
             else:
@@ -101,15 +120,22 @@ class Ctx:
             rec["first_fail"] = "IMPLEMENTATION_ERROR"
         rec["duration_ms"] = int((time.time() - t0) * 1000)
         rawp = self.raw / (case_id + ".json")
-        text = json.dumps(rec, ensure_ascii=False, indent=2) + "\n"
+        text = json.dumps(rec, ensure_ascii=False, indent=2, default=str) + "\n"
         rawp.write_text(text, encoding="utf-8", newline="\n")
         rec["raw_sha256"] = sha256_bytes(text.encode("utf-8"))
+        rec["evidence_sha256"] = rec["raw_sha256"]
         rec["raw_path"] = str(rawp)
         rec["stdout_sha256"] = sha256_bytes(json.dumps(rec.get("observed"),
-                                                        ensure_ascii=False,
+                                                        ensure_ascii=False, default=str,
                                                         sort_keys=True).encode("utf-8"))
         rec["stderr_sha256"] = sha256_bytes(b"")
         return rec
+
+    def _oracle_for(self, case_id):
+        for a in self.insp["asset_refs"]:
+            if a["case_id"] == case_id and a["kind"] == "oracle":
+                return a["sha256"]
+        return None
 
 
 def skip(ctx, case_id, kind, requirement, verdict, reason, expected):
@@ -127,29 +153,24 @@ def skip(ctx, case_id, kind, requirement, verdict, reason, expected):
 
 # ------------------------------------------------------------------ case bodies
 def c_host01(ctx):
-    led = hf.ledger()
-    hf.record(led, "CODEX", "Selected", {"host_id": "codex-cli", "version": "0.164.0"}, True)
-    hf.record(led, "CODEX", "Loaded",
-              {"slots": ["entry"], "loaded_sha256": sha256_file(IMPL / "nf_reader.py")})
-    hf.record(led, "CODEX", "Installed", {"reason": "REASONED_NA_NATIVE_ENTRY"})
-    hf.record(led, "CODEX", "Bound", {"binding_ref": str(ctx.pack), "scope": "W1-NF-01"})
-    hf.record(led, "CODEX", "Invoked",
-              {"argv": [PY, "impl/nf_reader.py", "inspect"], "exit": 0,
-               "stdout_sha256": ctx.manifest_sha, "stderr_sha256": sha256_bytes(b"")})
-    hf.record(led, "CODEX", "ActualServed",
-              {"served_bytes_sha256": ctx.manifest_sha, "scope_echo": "W1-NF-01",
-               "served_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())})
-    cons = consume(str(ctx.pack), "case-checklist", "W1-HOST-01", ctx.manifest_sha,
-                   str(ctx.out / "consumer"), "w1-consumer-host01")
-    return {
-        "row": led["rows"]["CODEX"],
-        "local_consumer": cons["consumer_id"],
-        "local_consumed_sha256": cons["consumed_sha256"],
-        "host_consumed": False,
-        "note": ("local python entry + local consumer only; a real CODEX host session "
-                 "that loads this entry and records served/consumed was not observed, "
-                 "so the POS case can not be claimed"),
-    }
+    """POS only if a real CODEX host receipt shows served + consumed."""
+    hp = ctx.out / "host" / "host_receipt.json"
+    if not hp.is_file():
+        raise NFError("HOST_PENDING", "no host_receipt.json (run check/run_host_nf.py first)")
+    rec = json.loads(hp.read_text(encoding="utf-8"))
+    if not rec.get("host_consumed"):
+        raise NFError("HOST_PENDING", "host receipt says not consumed")
+    rows = rec.get("stage_ledger") or {}
+    for stage in ("Selected", "Loaded", "Bound", "Invoked", "ActualServed", "Consumed"):
+        if rows.get(stage) != "OBSERVED_LOCAL":
+            raise NFError("HOST_PENDING", f"stage {stage}={rows.get(stage)}")
+    pa = (rec.get("per_package") or {}).get("pkgs") or {}
+    if not pa.get("session_id"):
+        raise NFError("HOST_PENDING", "no host session id")
+    return {"host_consumed": True, "stage_ledger": rows,
+            "session_id": pa["session_id"], "consumer": pa.get("consumer"),
+            "value_check": pa.get("value_check"),
+            "receipt_sha256": sha256_file(hp)}
 
 
 def c_host02(ctx):
@@ -378,17 +399,19 @@ def n04(ctx):
 
 def n10(ctx):
     checks = {}
-    attacks = {
-        "absolute": "C:/x.md", "unc": "////srv/share/x.md", "dotdot": "../x.md",
-        "backslash": "a\\b.md", "nul": "a\x00b.md",
-    }
-    for name, rel in attacks.items():
-        try:
-            br.resolve_body(str(ctx.pack), rel, 1, 1)
-        except NFError:
-            checks[name] = "REJECT"
-        else:
-            checks[name] = "ACCEPTED"
+    attacks = off.path_attack_suite(str(ctx.pack))
+    for a in attacks:
+        checks[a["attack"]] = "REJECT" if a["rejected"] else "ACCEPTED"
+    cold = off.cold_off_probe("legacy_runtime",
+                              ["hgk_runtime", "fabric_runtime", "sbl_runtime",
+                               "pipd_runtime", "hermes_runtime"])
+    ctl = off.positive_control("json")
+    flag = off.env_flag_only_reject("W1_NATIVE_OFF")
+    canary_path = ctx.pack / "00_W1_PI_PD.md"
+    before = {str(canary_path): {"sha256": sha256_file(canary_path),
+                                 "bytes": canary_path.stat().st_size}}
+    canary = off.canary_check([str(canary_path)], before)
+    link = off.link_probe(str(ctx.out / "link_root"), str(canary_path))
     tmp = Path(tempfile.mkdtemp(prefix="w1-sec-"))
     try:
         (tmp / "dup.json").write_text('{"a":1,"a":2}', encoding="utf-8")
@@ -435,14 +458,21 @@ def n10(ctx):
     bad = [k for k, v in checks.items() if v == "ACCEPTED"]
     if bad:
         raise NFError("SECRET_OR_ESCAPE", ",".join(bad))
-    off = {"legacy_off": {"cold_off": True, "semantic_success": True},
-           "guide_off": {"cold_off": True, "semantic_success": True},
-           "native_on": {"cold_off": False, "semantic_success": True}}
-    if off["legacy_off"]["cold_off"] and off["guide_off"]["cold_off"] and \
-            not off["native_on"]["semantic_success"]:
-        raise NFError("DOUBLE_FAILURE_PARITY", "both off")
+    if not cold.get("cold_off"):
+        raise NFError("LEGACY_DEPENDENCY_LEAK", str(cold.get("leaked")))
+    if not ctl.get("imported"):
+        raise NFError("COLD_OFF_PROBE_BLIND", "positive control failed")
+    if not flag.get("rejected"):
+        raise NFError("ENV_FLAG_NOT_EVIDENCE", "flag accepted as evidence")
+    if not canary.get("unchanged"):
+        raise NFError("CANARY_MUTATED", str(canary.get("diff")))
     return {"path_attacks": {k: v for k, v in checks.items() if k != "symlink_reason"},
-            "off_semantics": off}
+            "cold_off": {k: cold.get(k) for k in ("cold_off", "blocked", "leaked", "exit",
+                                                   "stdout_sha256", "argv")},
+            "positive_control": ctl,
+            "env_flag_only": flag,
+            "canary": canary,
+            "link_probe": link}
 
 
 def c_codex05(ctx):
@@ -574,7 +604,8 @@ def main(argv=None) -> int:
     }
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    (out / "cases.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
+    (out / "cases.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2,
+                                               default=str) + "\n",
                                     encoding="utf-8", newline="\n")
     print(json.dumps({k: summary[k] for k in
                       ("run_id", "total", "passed", "failed", "deferred", "not_run")},

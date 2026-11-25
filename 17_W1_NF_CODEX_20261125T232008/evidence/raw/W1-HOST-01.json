@@ -1,0 +1,86 @@
+{
+  "schema": "FHS5.PLP.W1.Observation@1",
+  "case_id": "W1-HOST-01",
+  "kind": "POS",
+  "requirement_ref": "W1M 09.1 L889-908 / M 11.7 U-017",
+  "child": null,
+  "subject": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1-NF-01",
+  "profile": "generic-codx-native-first",
+  "host": "LOCAL",
+  "candidate_sha": "77ec4191f23ead19d3894447283b4435fc7f7ca7e36c36e48452bb8d9982f109",
+  "source_sha": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+  "pack_sha": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "case_set_sha256": "63a59b874485e44cd7d37c1186e9d615402ab49f4f5e86285713c2b54645cbce",
+  "oracle_sha256": "c92846be150cfcfbd9400e5bf23d50ad73b1ca897d10e921ad3120e387573e68",
+  "runner_id": "check/run_cases_nf.py",
+  "runner_version": "1.0.0",
+  "argv": [
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\W1\\impl\\run_cases_nf.py",
+    "W1-HOST-01"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\17_W1_NF_CODEX_20261125T232008\\control_pack\\FHS-5_PLP_W1_NATIVE_FIRST",
+  "timeout_ms": 120000,
+  "expected": {
+    "codify": "CODEX Consumed raw"
+  },
+  "first_fail": null,
+  "checker_id": null,
+  "consumer_id": null,
+  "recovery_ref": null,
+  "executor": "w1-exec",
+  "run_id": "20261125T233359",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "observed": {
+    "host_consumed": true,
+    "stage_ledger": {
+      "Selected": "OBSERVED_LOCAL",
+      "Loaded": "OBSERVED_LOCAL",
+      "Installed": "REASONED_NA_NATIVE_ENTRY",
+      "Bound": "OBSERVED_LOCAL",
+      "Invoked": "OBSERVED_LOCAL",
+      "ActualServed": "OBSERVED_LOCAL",
+      "Consumed": "OBSERVED_LOCAL"
+    },
+    "session_id": "01a21357-4482-7d33-9c59-8b28d01e44f9",
+    "consumer": {
+      "consumer_id": "cons_pkgs",
+      "argv": [
+        "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\17_W1_NF_CODEX_20261125T232008\\evidence\\host\\consumer_cons_pkgs.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "63cda580696f1a5c20cd5cfc5b4478e752eff09412a30ee1b77e6ed00eba489b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parsed": {
+        "checks": {
+          "has_identity": true,
+          "scope_present": true,
+          "artifact_not_empty": true,
+          "required_keys_present": true,
+          "case_row_present": true
+        },
+        "payload_sha256": "8e937c698d65e4cc96878e119faa6261735b50a3db3ab82f5390ab70b4f69bbf",
+        "consumed_sha256": "8e937c698d65e4cc96878e119faa6261735b50a3db3ab82f5390ab70b4f69bbf",
+        "pack_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+        "action": "parse_and_use_host_artifact",
+        "readback": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\17_W1_NF_CODEX_20261125T232008\\evidence\\host\\readback_cons_pkgs.json"
+      },
+      "readback_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\17_W1_NF_CODEX_20261125T232008\\evidence\\host\\readback_cons_pkgs.json",
+      "readback_exists": true,
+      "readback_sha256": "417240d8cbfd915e2e932e42d23b8d71e6a37be91bec7ae505349a0d61b38af4"
+    },
+    "value_check": {
+      "fixture_sha256_matches": true,
+      "oracle_sha256_matches": true,
+      "subject_matches": true,
+      "scope_matches": true
+    },
+    "receipt_sha256": "4fb8b95e50d8a7a51f81de9098231a5527dd9eb1dea7906939c32540556c0e67"
+  },
+  "exit": 0,
+  "verdict": "PASS",
+  "duration_ms": 50
+}

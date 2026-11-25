@@ -31,6 +31,7 @@ from pathlib import Path
 
 import body_resolver as br
 import bridge_nf as bridge
+import tpm_contracts_nf as tpm
 import w1_nf_reader as base
 
 NFError = base.NFError
@@ -157,6 +158,15 @@ def inspect_guide_request(req: dict, root: str) -> dict:
         raise NFError("CONTEXT_SCOPE_MISMATCH", "request scope != package scope")
     if req.get("claim_over_package") is True and req.get("claim_kind") != "read":
         raise NFError("FALSE_AUTHORITY", "request claim tries to upgrade package")
+    r = br.canonical_root(root)
+    man_name = sorted(p.name for p in r.glob("*SOURCE_MANIFEST*.json"))[0]
+    man, _ = br.load_json_strict(br.resolve_inside(r, man_name), man_name)
+    wi = {"project_id": man["project_id"], "subject_id": man["subject_id"],
+          "scope": man["scope"], "wave_id": man["wave_id"],
+          "batch_id": man["batch_id"], "work_id": "GUIDE-RECEIVE"}
+    contracts = tpm.build_contracts(str(r), wi)
+    pi = contracts["views"]["PI"]
+    thin = _thin_nav(r)
     return {
         "schema": "FHS5.PLP.W1.GuideReceive@1",
         "package_state": "RECEIVED_ACTUAL",
@@ -165,17 +175,38 @@ def inspect_guide_request(req: dict, root: str) -> dict:
         "manifest_sha256": insp["manifest_sha256"],
         "manifest_bytes": insp["manifest_bytes"],
         "source_refs_count": len(insp["source_refs"]),
-        "goal": "build and verify the W1 NF-r2 product entry",
-        "fuo": "inspect/explain/render/compare over the six-file pack",
-        "done": ["four APIs POS+NEG", "nine keys dual period", "13 cases",
-                 "independent consumer", "closeout + handoff"],
-        "effect": "READ_ONLY_LOCAL",
-        "owner": "OWNER-W1-NF-r2-20261125",
-        "next": "P03",
-        "stop": "wrong pin / missing body / scope drift",
-        "resume": "same subject+scope typed receipt",
+        "goal": pi["goal"],
+        "fuo": pi["fuo"],
+        "done": pi["done"],
+        "effect": contracts["views"]["PD"]["effect_class"],
+        "owner": pi.get("owner") or contracts["views"]["PD"].get("owner"),
+        "next": thin.get("next"),
+        "stop": thin.get("stop"),
+        "resume": thin.get("resume"),
+        "contract_profile": contracts["profile"],
         "permission_state": "NONE_GRANTED",
     }
+
+
+def _thin_nav(root: Path) -> dict:
+    """Derive next/stop/resume from the frozen thin-start section, not constants."""
+    out = {}
+    candidates = sorted(root.glob("04_*.md"))
+    if not candidates:
+        return out
+    text = br.decode_utf8(br.read_bounded(candidates[0], candidates[0].name),
+                          candidates[0].name)
+    for key, marker in (("next", "## NEXT"), ("stop", "## STOP"),
+                        ("resume", "## RESUME")):
+        on = False
+        for line in text.splitlines():
+            if line.strip().startswith(marker):
+                on = True
+                continue
+            if on and line.strip():
+                out[key] = line.strip().lstrip("- ").strip()[:400]
+                break
+    return out
 
 
 def select_bounded_advice(ctx: dict, req: dict) -> dict:
@@ -241,8 +272,16 @@ def reconcile_guide_delta(before: dict, after: dict, original_verifier=None) -> 
     """Nine-key dual-period reconcile; caller bool / single SHA never suffice."""
     if not before or not after:
         return _delta_unverified("missing period")
-    if original_verifier is not None and not callable(original_verifier):
-        return _delta_unverified("verifier not callable")
+    verifier_receipt = None
+    if original_verifier is not None:
+        if not callable(original_verifier):
+            return _delta_unverified("verifier not callable")
+        try:
+            verifier_receipt = original_verifier(before, after)
+        except Exception as exc:
+            return _delta_unverified(f"verifier raised: {type(exc).__name__}")
+        if not isinstance(verifier_receipt, dict) or verifier_receipt.get("verified") is not True:
+            return _delta_unverified("verifier did not verify")
     if before.get("caller_verified") or after.get("caller_verified"):
         return _delta_unverified("caller boolean is not verification")
     kb = produce_nine_keys(before)
@@ -256,6 +295,7 @@ def reconcile_guide_delta(before: dict, after: dict, original_verifier=None) -> 
             "state": "NEW_SUBJECT_REVIEW_REQUIRED",
             "before": kb, "after": ka,
             "changed_keys": [], "single_evidence_sha": False,
+            "verifier_receipt": verifier_receipt,
         }
     changed = [k for k in NINE_KEYS if kb[k] != ka[k]]
     if not changed:
@@ -265,6 +305,7 @@ def reconcile_guide_delta(before: dict, after: dict, original_verifier=None) -> 
             "candidate": True,
             "note": "nine keys identical; PARK is a candidate, not an automatic close",
             "before": kb, "after": ka, "changed_keys": [],
+            "verifier_receipt": verifier_receipt,
         }
     return {
         "schema": "FHS5.PLP.W1.GuideDelta@1",
@@ -272,6 +313,7 @@ def reconcile_guide_delta(before: dict, after: dict, original_verifier=None) -> 
         "before": kb, "after": ka,
         "changed_keys": changed,
         "changed_detail": {k: {"before": kb[k], "after": ka[k]} for k in changed},
+        "verifier_receipt": verifier_receipt,
     }
 
 

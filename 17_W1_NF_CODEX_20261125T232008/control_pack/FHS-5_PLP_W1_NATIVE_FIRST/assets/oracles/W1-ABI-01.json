@@ -1,0 +1,17 @@
+{
+  "schema": "FHS5.W1.AuthorOracle@1",
+  "case_id": "W1-ABI-01",
+  "kind": "NEG",
+  "state": "AUTHOR_ORACLE_PINNED",
+  "expected_state": "REFUSE_EXPECTED",
+  "first_fail": "EXPLICIT_REVIEW_REQUIRED",
+  "required_observations": [
+    "source_span_matches_clause_text",
+    "no_cross_scope_or_cross_host_substitution",
+    "no_fake_receipt_or_release"
+  ],
+  "checker": "SELF_CHECK_ONLY now; original Protected Checker unbound",
+  "executable": true,
+  "oracle_procedure": "reject_same_suffix_direct",
+  "expect_error": "EXPLICIT_REVIEW_REQUIRED"
+}

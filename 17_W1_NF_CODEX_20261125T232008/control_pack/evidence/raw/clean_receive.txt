@@ -1,0 +1,4 @@
+  "pack_manifest_sha256": "a7b1ef358c8e7a9740e5f1ef487ecd7777ded0a1f8246daee562cba909810a80",
+  "asset_count": 26,
+  "result": "PASS"
+}

@@ -1,0 +1,14 @@
+﻿{
+ "run_id": "20261125T233359",
+ "host_consumed": true,
+ "stage_ledger": {
+  "Selected": "OBSERVED_LOCAL",
+  "Loaded": "OBSERVED_LOCAL",
+  "Installed": "REASONED_NA_NATIVE_ENTRY",
+  "Bound": "OBSERVED_LOCAL",
+  "Invoked": "OBSERVED_LOCAL",
+  "ActualServed": "OBSERVED_LOCAL",
+  "Consumed": "OBSERVED_LOCAL"
+ }
+}
+{"pkgA_exit": 0, "pkgB_exit": 0, "pkgA_artifact": true, "pkgB_artifact": true}
