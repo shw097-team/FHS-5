@@ -227,7 +227,7 @@ policy T 案是 `policy.py` 的單元測試，不是候選產品碼的行為。
 
 - `tools/consumer.py` v3：先核 identity／pack／seal／W0M／candidate／oracle／handoff／evidence **667 檔索引**（SHA/bytes／路徑 confinement），全部通過才跑 POS/NEG。
 - 每次 run 唯一 `run_id`＋獨立 `runs/<id>/` raw，不覆寫。
-- 正向：**781 checks**、`consumed=true`、POS 0/COMPLETE、NEG 2/MISSING。
+- 正向：**782 checks**、`consumed=true`、POS 0/COMPLETE、NEG 2/MISSING。
 - 負例 10 個全部 `cli_executed=false`：wrong pack／candidate／oracle／evidence、mutated raw、missing file、bad schema、duplicate pin、cross subject、path escape。
 - NF-T10 由 consumer 收據最終化，Checker 不重複自簽；Consumer Manifest 外部 `.sha256` 釘住。
 
@@ -246,4 +246,6 @@ policy T 案是 `policy.py` 的單元測試，不是候選產品碼的行為。
 | Bridge | `w1_bridge_reference` import 阻斷＋Native direct reader | 9 cases 同集合；pack SHA 相同；direct 不依賴 Bridge |
 | FAR | 停用 FAR 路徑，v2 clone 套 `12'` diff | patch exit 0；post==v3；suite 0；probe 0；`far_tool_invoked=false` |
 
-**Claims**：`B0_NF_VALIDATED`、`W0_NF_VALIDATED`；`W1_TECHNICALLY_READY`（consumer 781 checks／10 negatives）；`W1_EXECUTION_READY=NOT_CLAIMED`。
+**Claims**：`B0_NF_VALIDATED`、`W0_NF_VALIDATED`；`W1_TECHNICALLY_READY`（consumer 782 checks／10 negatives）；`W1_EXECUTION_READY=NOT_CLAIMED`。
+
+

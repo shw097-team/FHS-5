@@ -1,6 +1,6 @@
 {
   "schema": "FHS5.W0NF.EvidenceManifest@1",
-  "generated_at": "2026-11-25T06:50:49+00:00",
+  "generated_at": "2026-11-25T06:52:35+00:00",
   "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
@@ -3537,6 +3537,11 @@
       "path": "tools/far_run.py",
       "bytes": 6248,
       "sha256": "bb725243facdb746870bbcb051840ae6c4b68e619f56e06c5eebfd1916203cae"
+    },
+    {
+      "path": "tools/finalize_consumer_manifest.py",
+      "bytes": 2036,
+      "sha256": "451b0b2cd38dbbb564fb5c9d0e144d688b80c0dfb76efaffd7e6ec1624a956fb"
     },
     {
       "path": "tools/finalize_t10.py",

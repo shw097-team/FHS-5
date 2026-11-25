@@ -1,10 +1,10 @@
 {
   "schema": "FHS5.W0NF.ConsumerManifest@2",
-  "run_id": "final-20261125145049",
-  "consumer_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\runs\\final-20261125145049\\receipt.json",
-  "consumer_receipt_sha256": "d2b0291237ac1329a6c0c8d0306fe550dc43d3410011fb63d52c654df16a5204",
-  "evidence_manifest_sha256": "d854e31bc71e0404afba4b93d3f50b4c2f8aafa369132f510974ad7a63129d8d",
-  "handoff_sha256": "0f2d57a259b3902cde8f587a74100443dbe33a0b02bac03f74cb74252b3a16ba",
+  "run_id": "final-20261125145236",
+  "consumer_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\runs\\final-20261125145236\\receipt.json",
+  "consumer_receipt_sha256": "1939204e7f7dc7ffb1456c04ec9505b1fe257606e358f362c14e58cdb6afafe3",
+  "evidence_manifest_sha256": "dd3cc73c6704529e9368a86662d1269b7c5fa9f8f1af6a2035ab4a2aaabc0560",
+  "handoff_sha256": "7e3529679ffe9116fc117ed0db0c51e73071e57b10dab99321e17ff3af0a62f2",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
     "head": "bb66a276aae8c5d6aef549832c523587fc47d247",
@@ -13,10 +13,10 @@
   "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
   "consumed": true,
   "raw": {
-    "neg.meta.json": "4f325fbebfa00f1e195c9936549e57e1666a2d27aae022dee06830efe29857c6",
+    "neg.meta.json": "7d54be36a25a2bd9ff634c52e6e5cf4b748611f1f5d634ff33d116e3102cc6dd",
     "neg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "neg.stdout.txt": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
-    "pos.meta.json": "90094302d7dc7ec4aa11b72d11f10847a8d3bf18194b343272bd6e9b05ef0e00",
+    "pos.meta.json": "e968e99d89bb65522fdc3959b9f618a86c6eda5fcd4fc82b7730ff248c9f993b",
     "pos.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "pos.stdout.txt": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33"
   },
@@ -24,5 +24,21 @@
     "HERMES/GPT host execution",
     "W1 product execution",
     "release"
-  ]
+  ],
+  "claims": {
+    "W1_technical": "W1_TECHNICALLY_READY",
+    "W1_execution": "NOT_CLAIMED",
+    "release": "NOT_CLAIMED",
+    "different_principal_independence": "NOT_CLAIMED",
+    "other_hosts": "NOT_CLAIMED"
+  },
+  "claim_derivation": {
+    "receipt_consumed": true,
+    "receipt_validated": true,
+    "checks": 782,
+    "negatives_rejected": true,
+    "evidence_B0": true,
+    "evidence_W0": true,
+    "evidence_sha_match": true
+  }
 }

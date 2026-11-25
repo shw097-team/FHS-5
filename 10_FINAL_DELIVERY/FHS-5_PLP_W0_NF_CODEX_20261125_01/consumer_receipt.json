@@ -1,14 +1,14 @@
 {
   "schema": "FHS5.W0NF.ConsumerReceipt@3",
-  "run_id": "final-20261125145049",
-  "created_at": "2026-11-25T06:50:50+00:00",
+  "run_id": "final-20261125145236",
+  "created_at": "2026-11-25T06:52:37+00:00",
   "consumer_id": "W1-consumer/CODEX-Native-1 (separate process)",
   "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
   "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
   "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\09_DELIVERY\\W0_HANDOFF.md",
-  "handoff_sha256": "0f2d57a259b3902cde8f587a74100443dbe33a0b02bac03f74cb74252b3a16ba",
+  "handoff_sha256": "7e3529679ffe9116fc117ed0db0c51e73071e57b10dab99321e17ff3af0a62f2",
   "evidence_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
-  "evidence_manifest_sha256": "d854e31bc71e0404afba4b93d3f50b4c2f8aafa369132f510974ad7a63129d8d",
+  "evidence_manifest_sha256": "dd3cc73c6704529e9368a86662d1269b7c5fa9f8f1af6a2035ab4a2aaabc0560",
   "validation_ok": true,
   "failure_code": null,
   "checks": [
@@ -172,7 +172,7 @@
       "id": "EVIDENCE-PIN",
       "ok": true,
       "detail": {
-        "sha": "d854e31bc71e0404afba4b93d3f50b4c2f8aafa369132f510974ad7a63129d8d"
+        "sha": "dd3cc73c6704529e9368a86662d1269b7c5fa9f8f1af6a2035ab4a2aaabc0560"
       }
     },
     {
@@ -198,7 +198,7 @@
     {
       "id": "EVIDENCE-FILE-COUNT",
       "ok": true,
-      "detail": 672
+      "detail": 673
     },
     {
       "id": "EVIDENCE-FILE-01_PACK/EXTERNAL_SEAL.json",
@@ -3469,6 +3469,11 @@
       "id": "EVIDENCE-FILE-tools/far_run.py",
       "ok": true,
       "detail": "tools/far_run.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/finalize_consumer_manifest.py",
+      "ok": true,
+      "detail": "tools/finalize_consumer_manifest.py"
     },
     {
       "id": "EVIDENCE-FILE-tools/finalize_t10.py",
