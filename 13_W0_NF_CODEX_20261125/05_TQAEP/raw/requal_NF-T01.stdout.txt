@@ -1,0 +1,34 @@
+{
+  "verdict": "PASS",
+  "control_ok": true,
+  "entries": [
+    [
+      "briefcheck_pos",
+      true
+    ],
+    [
+      "briefcheck_neg",
+      true
+    ],
+    [
+      "reviewer",
+      true
+    ],
+    [
+      "reviewer_double_fail_negative",
+      true
+    ],
+    [
+      "guide",
+      true
+    ],
+    [
+      "bridge_inspect",
+      true
+    ],
+    [
+      "bridge_explain",
+      true
+    ]
+  ]
+}

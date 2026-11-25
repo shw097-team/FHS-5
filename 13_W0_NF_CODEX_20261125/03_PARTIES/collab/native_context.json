@@ -1,0 +1,39 @@
+{
+  "schema": "FHS5.W0NF.NativeContext@1",
+  "context_sha256": "3003b44cf1eac48aae09d81402f4583c331b1b80f12a4937d6a62f78249795cf",
+  "context_sha_match": true,
+  "cases_in_context": [
+    "SAMPLE-R1",
+    "SAMPLE-R10",
+    "SAMPLE-R2",
+    "SAMPLE-R3",
+    "SAMPLE-R5",
+    "SAMPLE-R6",
+    "SAMPLE-R7",
+    "SAMPLE-R8",
+    "SAMPLE-R9"
+  ],
+  "cases_expected": [
+    "SAMPLE-R1",
+    "SAMPLE-R10",
+    "SAMPLE-R2",
+    "SAMPLE-R3",
+    "SAMPLE-R5",
+    "SAMPLE-R6",
+    "SAMPLE-R7",
+    "SAMPLE-R8",
+    "SAMPLE-R9"
+  ],
+  "case_set_match": true,
+  "source_locators_ok": true,
+  "clause_hashes_present": true,
+  "resume_state": "RESUME",
+  "resume_finding": "CH-F-W0NF-001",
+  "native_runs": {
+    "pos_exit": 0,
+    "neg_exit": 2,
+    "pos_ok": true,
+    "neg_ok": true
+  },
+  "verdict": "CONTEXT_CONSUMED"
+}

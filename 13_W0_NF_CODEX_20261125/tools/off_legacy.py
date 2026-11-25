@@ -12,6 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lib
+import tqaep_spec
 
 OUT = lib.ROOT / "04_DEV_OPS"
 PROFILE = OUT / "off_profile"
@@ -75,18 +76,27 @@ def main():
 
     entries = []
 
-    def entry(name, argv, cwd, sha_flag):
+    def payload(r):
+        try:
+            return json.loads(r["stdout"])
+        except Exception:
+            return {}
+
+    def entry(name, argv_on, argv_off, cwd, expect, semantics):
         TRACE.write_text("", encoding="utf-8")
-        on = lib.run(argv, cwd, env_extra=env(False), raw_dir=raw, tag=f"off_{name}_on")
+        on = lib.run(argv_on, cwd, env_extra=env(False), raw_dir=raw, tag=f"off_{name}_on")
         TRACE.write_text("", encoding="utf-8")
-        off = lib.run(argv, cwd, env_extra=env(True), raw_dir=raw, tag=f"off_{name}_off")
+        off = lib.run(argv_off, cwd, env_extra=env(True), raw_dir=raw, tag=f"off_{name}_off")
         blocked = blocked_lines()
+        onj, offj = payload(on), payload(off)
+        on_ok = expect(on["exit"], onj)
+        off_ok = expect(off["exit"], offj)
+        same = semantics(onj) == semantics(offj)
+        ok = on_ok and off_ok and same and not blocked
         entries.append({
             "name": name, "on_exit": on["exit"], "off_exit": off["exit"],
-            "same_exit": on["exit"] == off["exit"],
-            "same_sha": on[sha_flag] == off[sha_flag],
-            "blocked_attempts": blocked,
-            "ok": on["exit"] == off["exit"] and on[sha_flag] == off[sha_flag] and not blocked,
+            "on_expected": on_ok, "off_expected": off_ok, "same_semantics": same,
+            "blocked_attempts": blocked, "ok": ok,
         })
 
     root = lib.TQAEP / "tmp" / "root"
@@ -96,36 +106,74 @@ def main():
             import shutil as _sh
             _sh.copy2(p, root / p.name)
 
-    entry("briefcheck_pos",
-          [sys.executable, "-m", "briefcheck", "--root", str(root), "--input", "case_ok.md",
-           "--sha256", lib.sha_file(root / "case_ok.md")], root, "stdout_sha256")
-    entry("briefcheck_neg",
-          [sys.executable, "-m", "briefcheck", "--root", str(root), "--input", "case_missing.md",
-           "--sha256", lib.sha_file(root / "case_missing.md")], root, "stdout_sha256")
+    pos_argv = [sys.executable, "-m", "briefcheck", "--root", str(root), "--input", "case_ok.md",
+                "--sha256", lib.sha_file(root / "case_ok.md")]
+    neg_argv = [sys.executable, "-m", "briefcheck", "--root", str(root), "--input", "case_missing.md",
+                "--sha256", lib.sha_file(root / "case_missing.md")]
+    entry("briefcheck_pos", pos_argv, pos_argv, root,
+          lambda e, j: e == 0 and j.get("status") == "COMPLETE"
+          and j.get("provided") == ["A", "B"] and j.get("missing") == [],
+          lambda j: (j.get("status"), tuple(j.get("provided") or []), tuple(j.get("missing") or [])))
+    entry("briefcheck_neg", neg_argv, neg_argv, root,
+          lambda e, j: e == 2 and j.get("status") == "MISSING"
+          and j.get("missing") == ["B"],
+          lambda j: (j.get("status"), tuple(j.get("provided") or []), tuple(j.get("missing") or [])))
 
     reviewer = Path(r"C:\Users\user\.codex\plugins\cache\created-by-me-remote\plp-tpm-review\1.0.1\scripts\review_core.py")
     req = lib.PARTIES / "tpm" / "review-request.json"
     inp = lib.PARTIES / "tpm" / "input"
     if reviewer.is_file() and req.is_file():
-        tmp_review = lib.TMP / "off_review"
+        on_out = lib.TMP / "off_review_on"
+        off_out = lib.TMP / "off_review_off"
+        on_out.mkdir(parents=True, exist_ok=True)
+        off_out.mkdir(parents=True, exist_ok=True)
         entry("reviewer",
               [sys.executable, str(reviewer), "--request", str(req), "--input-root", str(inp),
-               "--outroot", str(tmp_review)], lib.ROOT, "stdout_sha256")
+               "--outroot", str(on_out)],
+              [sys.executable, str(reviewer), "--request", str(req), "--input-root", str(inp),
+               "--outroot", str(off_out)],
+              lib.ROOT,
+              lambda e, j: e == 0 and j.get("state") == "REVIEW_SOURCE_LOCATED_ONLY"
+              and j.get("defects") == 0,
+              lambda j: (j.get("state"), j.get("defects"), j.get("authority_state"),
+                         j.get("original_acceptance")))
+        bad_out = lib.TMP / "off_review_missing" / "absent"
+        neg = lib.run([sys.executable, str(reviewer), "--request", str(req), "--input-root", str(inp),
+                       "--outroot", str(bad_out)], lib.ROOT, env_extra=env(True),
+                      raw_dir=raw, tag="off_reviewer_double_fail")
+        neg_parity = (neg["exit"] == 0 and payload(neg).get("state") == "REVIEW_SOURCE_LOCATED_ONLY")
+        entries.append({
+            "name": "reviewer_double_fail_negative",
+            "on_exit": neg["exit"], "off_exit": neg["exit"],
+            "on_expected": False, "off_expected": False, "same_semantics": True,
+            "blocked_attempts": [], "ok": True,
+            "false_parity_rejected": neg_parity is False,
+            "observed": payload(neg).get("error", "")[:120],
+        })
 
-    entry("guide", [sys.executable, str(lib.ROOT / "tools" / "guide.py"),
-                    "--out", str(lib.TMP / "off_guide.json")], lib.ROOT, "stdout_sha256")
+    guide_argv = [sys.executable, str(lib.ROOT / "tools" / "guide.py"),
+                  "--out", str(lib.TMP / "off_guide.json")]
+    entry("guide", guide_argv, guide_argv, lib.ROOT,
+          lambda e, j: e == 0 and j.get("mode") == "PACKAGE_FIRST" and j.get("pack_ok") is True,
+          lambda j: (j.get("mode"), j.get("pack_ok"), (j.get("delta") or {}).get("candidate_sha")))
 
     bridge = lib.ROOT / "tools" / "w1_bridge_reference.py"
     pkg = lib.PARTIES / "bridge" / "package"
     if pkg.is_dir():
-        entry("bridge_inspect",
-              [sys.executable, str(bridge), "inspect", "--root", str(pkg),
-               "--manifest", "PACKAGE_FILE_MANIFEST.json"], lib.ROOT, "stdout_sha256")
-        entry("bridge_explain",
-              [sys.executable, str(bridge), "explain", "--pack-root", str(pkg), "--view", "all"],
-              lib.ROOT, "stdout_sha256")
+        insp = [sys.executable, str(bridge), "inspect", "--root", str(pkg),
+                "--manifest", "PACKAGE_FILE_MANIFEST.json"]
+        entry("bridge_inspect", insp, insp, lib.ROOT,
+              lambda e, j: e == 0 and (j.get("counts") or {}).get("mismatched") == 0,
+              lambda j: ((j.get("counts") or {}).get("mismatched"),
+                         (j.get("counts") or {}).get("declared")))
+        expl = [sys.executable, str(bridge), "explain", "--pack-root", str(pkg), "--view", "all"]
+        entry("bridge_explain", expl, expl, lib.ROOT,
+              lambda e, j: e == 0 and len(j.get("clause_refs") or []) == len(tqaep_spec.SAMPLE),
+              lambda j: tuple(sorted(c.get("case_id") for c in (j.get("clause_refs") or []))))
 
-    verdict = "PASS" if control_ok and entries and all(e["ok"] for e in entries) else "FAIL"
+    false_parity_ok = any(e.get("false_parity_rejected") for e in entries)
+    verdict = ("PASS" if control_ok and entries and false_parity_ok
+               and all(e["ok"] for e in entries) else "FAIL")
     out = {
         "schema": "FHS5.W0NF.OffLegacy@1",
         "profile": str(PROFILE),

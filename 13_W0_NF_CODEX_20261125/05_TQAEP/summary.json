@@ -5,7 +5,7 @@
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
   "case_set_sha": "9624e71d5eb33714619fee0b764abe091eb66995346404a8cd8d43e3ffec7512",
-  "receipts_index_sha": "5d4f27f1c958008513ffd4e0cddd539c8f2d9f99d3fa63a90b20d758214f3f0d",
+  "receipts_index_sha": "19e57b0d9b12757fc98bba6fbf8804f3506fcf510ed6debb4a549b2bc2d3c4e1",
   "fixtures": {
     "junction_ok": true,
     "junction_detail": "Junction created for C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root\\escape_dir <<===>> C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQA",

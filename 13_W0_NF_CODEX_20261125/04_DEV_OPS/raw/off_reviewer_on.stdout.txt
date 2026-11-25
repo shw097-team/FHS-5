@@ -1,1 +1,1 @@
-{"state": "REVIEW_FAIL_CLOSED", "error": "OUTPUT_ROOT_NOT_FOUND"}
+{"state": "REVIEW_SOURCE_LOCATED_ONLY", "authority_state": "UNBOUND", "defects": 0, "unbound": 10, "output": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\off_review_on\\review-72c6899e5542dc194cd82657", "claim_ceiling": "AUTHOR_DESIGN_ONLY", "original_acceptance": "NOT_ASSERTED", "review_design_state": "EXTERNAL_READER_UNBOUND"}

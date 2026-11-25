@@ -68,8 +68,7 @@
       "SAMPLE-R1",
       "SAMPLE-R2",
       "SAMPLE-R3",
-      "SAMPLE-R4",
-      "NF-R01"
+      "SAMPLE-R4"
     ],
     "case_ids": [
       "F5-W0-T01",
@@ -91,5 +90,21 @@
       "full U26/QA26/38+28/C16 denominators",
       "release"
     ]
+  },
+  "contract_context": {
+    "pins": {
+      "pi": "43ea6ea2093bc9ebb6a82c8cc189b5d360f3ae6332e227018a2ad25d88b60e52",
+      "pd": "01de8c3032da4f8191884d6642977ad496136967420e7fbfa183c2256b4e8961",
+      "dev_ecp": "72e37bf93b2b214ed7642deae310a3aca08eec6bf1764234680d561830222a68",
+      "ops_ecp": "241538cd949e6aeacd07f55550fa7af7aa8fcfbd99030f14210898e3ad9274a8"
+    },
+    "requirement_ids": [
+      "SAMPLE-R1",
+      "SAMPLE-R2",
+      "SAMPLE-R3",
+      "SAMPLE-R4"
+    ],
+    "source_manifest_match": true,
+    "contract_count": 4
   }
 }

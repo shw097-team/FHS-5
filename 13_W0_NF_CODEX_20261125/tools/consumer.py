@@ -135,7 +135,7 @@ def run_validation(pack: Path, repo: Path, handoff: Path, evidence: Path,
     v.add("CANDIDATE-PIN", head == h["candidate_commit"], {"head": head}, "PIN_MISMATCH_CANDIDATE")
     v.add("CANDIDATE-CLEAN", status == "", status, "CANDIDATE_DIRTY")
 
-    oracle_path = lib.TQAEP / "oracle.json"
+    oracle_path = pack.parent.parent / "05_TQAEP" / "oracle.json"
     oracle = load(oracle_path)
     osha = lib.sha_file(oracle_path)
     info["oracle_sha256"] = osha
@@ -261,26 +261,46 @@ def run_validation(pack: Path, repo: Path, handoff: Path, evidence: Path,
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--pack", default=str(lib.PACK))
-    ap.add_argument("--repo", default=str(lib.REPO))
-    ap.add_argument("--handoff", required=True)
-    ap.add_argument("--evidence-manifest", required=True)
-    ap.add_argument("--evidence-root", default=str(lib.ROOT))
+    ap.add_argument("--root", default=str(lib.ROOT))
+    ap.add_argument("--pack")
+    ap.add_argument("--repo")
+    ap.add_argument("--handoff")
+    ap.add_argument("--evidence-manifest")
+    ap.add_argument("--evidence-root")
+    ap.add_argument("--out-root")
     ap.add_argument("--run-id", default=None)
     ap.add_argument("--allow-pending-t10", action="store_true")
     ap.add_argument("--expect-reject", action="store_true")
     ap.add_argument("--publish-manifest", action="store_true")
     a = ap.parse_args()
 
+    delivery_root = Path(a.root).resolve()
+    pack = Path(a.pack).resolve() if a.pack else delivery_root / "01_PACK" / "FHS-5_PLP_W0_NATIVE_FIRST"
+    handoff = Path(a.handoff).resolve() if a.handoff else delivery_root / "09_DELIVERY" / "W0_HANDOFF.md"
+    evidence = (Path(a.evidence_manifest).resolve() if a.evidence_manifest
+                else delivery_root / "10_EVIDENCE" / "EVIDENCE_MANIFEST.json")
+    evidence_root = Path(a.evidence_root).resolve() if a.evidence_root else delivery_root
+    out_root = Path(a.out_root).resolve() if a.out_root else delivery_root / "07_CONSUMER"
+    out_root.mkdir(parents=True, exist_ok=True)
     run_id = a.run_id or (datetime.now().strftime("%Y%m%dT%H%M%S") + "-" + uuid.uuid4().hex[:8])
-    run_dir = CONSUMER_ROOT / "runs" / run_id
+    run_dir = out_root / "runs" / run_id
     if run_dir.exists():
         raise SystemExit("RUN_ID_EXISTS")
     run_dir.mkdir(parents=True)
-    pack, repo = Path(a.pack).resolve(), Path(a.repo).resolve()
-    handoff, evidence = Path(a.handoff).resolve(), Path(a.evidence_manifest).resolve()
+    if a.repo:
+        repo = Path(a.repo).resolve()
+    else:
+        bundle = delivery_root / "02_CANDIDATE" / "repo.bundle"
+        repo = run_dir / "candidate"
+        cl = lib.run(["git", "clone", "--quiet", str(bundle), str(repo)], run_dir,
+                     raw_dir=run_dir / "raw", tag="materialize_clone")
+        commit = pin_from(handoff.read_text(encoding="utf-8"), "candidate_commit")
+        co = lib.run(["git", "-C", str(repo), "checkout", "--quiet", commit], run_dir,
+                     raw_dir=run_dir / "raw", tag="materialize_checkout")
+        if cl["exit"] != 0 or co["exit"] != 0:
+            raise SystemExit("CANDIDATE_MATERIALIZE_FAILED")
 
-    v, info = run_validation(pack, repo, handoff, evidence, Path(a.evidence_root), a.allow_pending_t10)
+    v, info = run_validation(pack, repo, handoff, evidence, evidence_root, a.allow_pending_t10)
     validation_ok = v.done()
     cli = {"executed": False}
 
@@ -335,7 +355,7 @@ def main():
     receipt_path = run_dir / "receipt.json"
     lib.write_json(receipt_path, receipt)
     if consumed:
-        lib.write_json(CONSUMER_ROOT / "LATEST.json",
+    lib.write_json(out_root / "LATEST.json",
                        {"run_id": run_id, "receipt": str(receipt_path)})
 
     if a.publish_manifest and consumed:
@@ -354,9 +374,9 @@ def main():
             "raw": raw,
             "not_claimed": receipt["not_claimed"],
         }
-        lib.write_json(CONSUMER_ROOT / "CONSUMER_MANIFEST.json", cm)
-        lib.write_json(CONSUMER_ROOT / "CONSUMER_MANIFEST.sha256",
-                       {"sha256": lib.sha_file(CONSUMER_ROOT / "CONSUMER_MANIFEST.json")})
+        lib.write_json(out_root / "CONSUMER_MANIFEST.json", cm)
+        lib.write_json(out_root / "CONSUMER_MANIFEST.sha256",
+                       {"sha256": lib.sha_file(out_root / "CONSUMER_MANIFEST.json")})
 
     print(json.dumps({"run_id": run_id, "consumed": consumed, "validation_ok": validation_ok,
                       "failure_code": receipt["failure_code"], "cli_executed": cli.get("executed"),

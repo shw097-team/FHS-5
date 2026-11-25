@@ -12,7 +12,7 @@
     {
       "from": "TPM",
       "to": "GUIDE",
-      "pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+      "pin": "21ceac2a0abef24eba83cb0ca8776c0ebfb114f3b5428e75489f9ee3369e37e3"
     },
     {
       "from": "GUIDE",
@@ -22,7 +22,7 @@
     {
       "from": "BRIDGE",
       "to": "NATIVE",
-      "pin": "dc0d1041a473a96493c887f279f75dcc1eca077c39242de47faffd44e12050a8"
+      "pin": "3003b44cf1eac48aae09d81402f4583c331b1b80f12a4937d6a62f78249795cf"
     },
     {
       "from": "NATIVE",
@@ -60,6 +60,14 @@
     },
     {
       "id": "TPM-SOURCE-LINK",
+      "ok": true
+    },
+    {
+      "id": "TPM-GUIDE-CONTRACT-CONSUMED",
+      "ok": true
+    },
+    {
+      "id": "BRIDGE-NATIVE-CONTEXT-CONSUMED",
       "ok": true
     },
     {

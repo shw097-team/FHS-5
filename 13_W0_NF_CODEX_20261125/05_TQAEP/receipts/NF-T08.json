@@ -1,5 +1,5 @@
 {
-  "run_id": "NF-T08-20261125T144156",
+  "run_id": "NF-T08-20261125T152247",
   "case_id": "NF-T08",
   "candidate_ref": "02_CANDIDATE/repo",
   "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
@@ -15,30 +15,29 @@
   ],
   "fixture_sha": null,
   "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
-  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "argv": [
     "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
     "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\collab_chain.py",
     "--mode",
     "full"
   ],
-  "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+  "runtime": "Python 3.11.9",
   "exit": 0,
-  "stdout_sha": "8551f5da610d0179fa2bbe34cd6002f64f809f9f06ee0999eb2a80fd07f2497c",
+  "stdout_sha": "15c63aaf973d190ba171a893f9df7aec13f2a8d02f1d045901027e740aa52317",
   "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "pre_state": null,
   "post_state": null,
   "recovery_ref": null,
   "expected": {
     "chain": "COMBINED_OK",
-    "negatives": "NEGATIVES_REJECTED"
+    "negatives": "NEGATIVES_REJECTED",
+    "failure": "UNREPRODUCED"
   },
   "observed": {
+    "ok": true,
     "chain_verdict": "COMBINED_OK",
-    "chain_exit": 0,
-    "negatives_verdict": "NEGATIVES_REJECTED",
-    "negatives_exit": 0,
-    "failure_code": null,
+    "checks": 22,
     "segments": [
       {
         "from": "SOURCE",
@@ -48,7 +47,7 @@
       {
         "from": "TPM",
         "to": "GUIDE",
-        "pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+        "pin": "21ceac2a0abef24eba83cb0ca8776c0ebfb114f3b5428e75489f9ee3369e37e3"
       },
       {
         "from": "GUIDE",
@@ -58,7 +57,7 @@
       {
         "from": "BRIDGE",
         "to": "NATIVE",
-        "pin": "dc0d1041a473a96493c887f279f75dcc1eca077c39242de47faffd44e12050a8"
+        "pin": "3003b44cf1eac48aae09d81402f4583c331b1b80f12a4937d6a62f78249795cf"
       },
       {
         "from": "NATIVE",
@@ -81,7 +80,7 @@
         "pin": "40c212262987b994ccf65998cc7de56c2c1c11d14f49cb852c40cd9f38168e80"
       }
     ],
-    "negative_cases": [
+    "negatives": [
       [
         "missing_raw",
         true
@@ -109,6 +108,14 @@
       [
         "cross_subject",
         true
+      ],
+      [
+        "contracts_not_consumed",
+        true
+      ],
+      [
+        "context_not_consumed",
+        true
       ]
     ]
   },
@@ -118,25 +125,5 @@
   "consumer_ref": null,
   "not_covered": [],
   "execution_kind": "composite-collab-chain",
-  "sub_runs": {
-    "chain": {
-      "argv": [
-        "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
-        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\collab_chain.py",
-        "--mode",
-        "full"
-      ],
-      "exit": 0
-    },
-    "negatives": {
-      "argv": [
-        "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
-        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\collab_chain.py",
-        "--mode",
-        "negatives"
-      ],
-      "exit": 0
-    }
-  },
   "artifact": "03_PARTIES/collab/chain.json"
 }

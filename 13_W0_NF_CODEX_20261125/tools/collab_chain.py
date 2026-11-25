@@ -33,6 +33,7 @@ def load_dataset() -> dict:
     guide_start = lib.load_json(lib.PARTIES / "guide" / "thin_start.json")
     guide_resume = lib.load_json(lib.PARTIES / "guide" / "thin_resume.json")
     bridge = lib.load_json(lib.PARTIES / "bridge" / "bridge_summary.json")
+    native_ctx = lib.load_json(lib.PARTIES / "collab" / "native_context.json")
     chall = lib.load_json(lib.PARTIES / "challenge" / "challenge_prepatch.json")
     far = lib.load_json(lib.PARTIES / "far" / "far.json")
     oracle = lib.load_json(lib.TQAEP / "oracle.json")
@@ -46,6 +47,7 @@ def load_dataset() -> dict:
         "guide_start": guide_start,
         "guide_resume": guide_resume,
         "bridge": bridge,
+        "native_ctx": native_ctx,
         "dev": dev,
         "chall": chall,
         "far": far,
@@ -82,6 +84,21 @@ def validate(ds: dict) -> tuple[bool, str | None, dict]:
     ck("TPM-SOURCE-LINK", any(p.get("sha256") == pack["sha"]
                               for p in lib.load_json(lib.PARTIES / "tpm" / "pi.json")["source_refs"]),
        "TPM_SOURCE_MISMATCH")
+    cc = ds["guide_start"].get("contract_context")
+    contract_pins = {k: lib.sha_file(lib.PARTIES / "tpm" / f"{k}.json")
+                     for k in ("pi", "pd", "dev_ecp", "ops_ecp")}
+    ck("TPM-GUIDE-CONTRACT-CONSUMED",
+       bool(cc) and cc.get("pins") == contract_pins
+       and cc.get("source_manifest_match") is True
+       and len(cc.get("requirement_ids") or []) >= 4,
+       "CONTRACT_CONTEXT_MISSING")
+    nc = ds["native_ctx"]
+    ck("BRIDGE-NATIVE-CONTEXT-CONSUMED",
+       nc.get("verdict") == "CONTEXT_CONSUMED" and nc.get("case_set_match") is True
+       and nc.get("context_sha_match") is True and nc.get("source_locators_ok") is True
+       and (nc.get("native_runs") or {}).get("pos_ok") is True
+       and (nc.get("native_runs") or {}).get("neg_ok") is True,
+       "CONTEXT_NOT_CONSUMED")
     # Guide start -> Bridge -> native run
     gs = ds["guide_start"]
     ck("GUIDE-START", gs.get("pack_ok") is True and gs.get("mode") == "PACKAGE_FIRST"
@@ -130,9 +147,9 @@ def validate(ds: dict) -> tuple[bool, str | None, dict]:
     ck("RETEST-CANDIDATE", (dev.get("commit") or {}).get("head") == ds["head"], "RETEST_CANDIDATE")
     segments = [
         {"from": "SOURCE", "to": "TPM", "pin": pack["sha"]},
-        {"from": "TPM", "to": "GUIDE", "pin": gs.get("pack_digest")},
+        {"from": "TPM", "to": "GUIDE", "pin": lib.canonical_sha(contract_pins)},
         {"from": "GUIDE", "to": "BRIDGE", "pin": gs.get("pack_digest")},
-        {"from": "BRIDGE", "to": "NATIVE", "pin": br["bridge_sha256"]},
+        {"from": "BRIDGE", "to": "NATIVE", "pin": nc.get("context_sha256")},
         {"from": "NATIVE", "to": "CHALLENGE", "pin": ch["finding"]["raw_sha256"]},
         {"from": "CHALLENGE", "to": "FAR", "pin": far["finding"]["id"]},
         {"from": "FAR", "to": "GUIDE-RESUME", "pin": far.get("chosen")},
@@ -153,6 +170,11 @@ NEGATIVES = [
      "PREIMAGE_MISMATCH"),
     ("cross_subject", lambda d: d["guide_resume"]["delta"].__setitem__("subject_id", "FHS-5_PLP/W2"),
      "SUBJECT_MISMATCH"),
+    ("contracts_not_consumed", lambda d: d["guide_start"].__setitem__("contract_context", None),
+     "CONTRACT_CONTEXT_MISSING"),
+    ("context_not_consumed",
+     lambda d: d["native_ctx"].__setitem__("verdict", "CONTEXT_NOT_CONSUMED"),
+     "CONTEXT_NOT_CONSUMED"),
 ]
 
 

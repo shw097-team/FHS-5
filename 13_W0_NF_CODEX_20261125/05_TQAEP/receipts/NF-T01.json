@@ -1,5 +1,5 @@
 {
-  "run_id": "NF-T01-20261125T144153",
+  "run_id": "NF-T01-20261125T152246",
   "case_id": "NF-T01",
   "candidate_ref": "02_CANDIDATE/repo",
   "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
@@ -15,25 +15,88 @@
   ],
   "fixture_sha": null,
   "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
-  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "argv": [
     "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
     "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\off_legacy.py"
   ],
-  "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+  "runtime": "Python 3.11.9",
   "exit": 0,
-  "stdout_sha": "d5d40836528b00ecb5decadbbf60e46e9caaf945ffccd47a0368221e81cc3365",
+  "stdout_sha": "aac8603bcf74ac73fa43f23ace6b196f9c99fb3fe954d4517092a99e0d95ca84",
   "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "pre_state": null,
   "post_state": null,
   "recovery_ref": null,
   "expected": {
-    "status": "PASS",
-    "exit": 0
+    "verdict": "PASS",
+    "failure": "OFF_FAIL"
   },
   "observed": {
+    "ok": true,
     "verdict": "PASS",
-    "exit": 0
+    "entries": [
+      [
+        "briefcheck_pos",
+        true,
+        true,
+        true,
+        true,
+        null
+      ],
+      [
+        "briefcheck_neg",
+        true,
+        true,
+        true,
+        true,
+        null
+      ],
+      [
+        "reviewer",
+        true,
+        true,
+        true,
+        true,
+        null
+      ],
+      [
+        "reviewer_double_fail_negative",
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      [
+        "guide",
+        true,
+        true,
+        true,
+        true,
+        null
+      ],
+      [
+        "bridge_inspect",
+        true,
+        true,
+        true,
+        true,
+        null
+      ],
+      [
+        "bridge_explain",
+        true,
+        true,
+        true,
+        true,
+        null
+      ]
+    ],
+    "control": {
+      "blocked": true,
+      "allowed": true,
+      "blocked_stderr": "cent call last):\r\n  File \"<string>\", line 1, in <module>\r\n  File \"C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\04_DEV_OPS\\off_profile\\sitecustomize.py\", line 12, in find_spec\r\n    raise ImportError(\"FHS5_LEGACY_BLOCKED:\" + fullname)\r\nImportError: FHS5_LEGACY_BLOCKED:hgk_core\r\n"
+    }
   },
   "verdict": "PASS",
   "first_fail": "",

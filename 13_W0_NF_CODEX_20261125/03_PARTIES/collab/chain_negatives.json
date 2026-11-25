@@ -42,8 +42,20 @@
       "expected": "SUBJECT_MISMATCH",
       "got": "SUBJECT_MISMATCH",
       "rejected": true
+    },
+    {
+      "name": "contracts_not_consumed",
+      "expected": "CONTRACT_CONTEXT_MISSING",
+      "got": "CONTRACT_CONTEXT_MISSING",
+      "rejected": true
+    },
+    {
+      "name": "context_not_consumed",
+      "expected": "CONTEXT_NOT_CONSUMED",
+      "got": "CONTEXT_NOT_CONSUMED",
+      "rejected": true
     }
   ],
   "verdict": "NEGATIVES_REJECTED",
-  "count": 7
+  "count": 9
 }

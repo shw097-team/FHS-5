@@ -42,17 +42,40 @@ def body_sufficient(pack: Path) -> tuple[bool, list[str]]:
     return (not missing, missing)
 
 
-def touch1(pack: Path, requested_scope: str, goal: str) -> dict:
+def touch1(pack: Path, requested_scope: str, goal: str, contracts: Path | None = None) -> dict:
     pc = pack_check(pack)
     suff, missing = body_sufficient(pack)
     mode = "PACKAGE_FIRST" if suff else "CONTEXT_AUGMENTED"
     allowed = str(pack.resolve())
     scope_ok = Path(requested_scope).resolve().is_relative_to(Path(allowed))
+    contract_context = None
+    if contracts is not None and contracts.is_dir():
+        pins = {}
+        reqs = None
+        for name in ("pi", "pd", "dev_ecp", "ops_ecp"):
+            p = contracts / f"{name}.json"
+            if p.is_file():
+                pins[name] = lib.sha_file(p)
+        pi_path = contracts / "pi.json"
+        if pi_path.is_file():
+            pi = lib.load_json(pi_path)
+            reqs = [c.get("id") for c in pi.get("children") or []]
+            source_ok = any(s.get("sha256") == lib.sha_file(pack / "05_W0_SOURCE_MANIFEST.json")
+                            for s in pi.get("source_refs") or [])
+        else:
+            source_ok = False
+        contract_context = {
+            "pins": pins,
+            "requirement_ids": reqs or [],
+            "source_manifest_match": bool(source_ok),
+            "contract_count": len(pins),
+        }
     delta = {
         "source_sha": lib.sha_file(pack / "05_W0_SOURCE_MANIFEST.json"),
         "candidate_sha": lib.git("rev-parse", "HEAD"),
         "evidence_sha": None,
-        "requirement_ids": ["SAMPLE-R1", "SAMPLE-R2", "SAMPLE-R3", "SAMPLE-R4", "NF-R01"],
+        "requirement_ids": (contract_context or {}).get("requirement_ids")
+        or ["SAMPLE-R1", "SAMPLE-R2", "SAMPLE-R3", "SAMPLE-R4", "NF-R01"],
         "case_ids": ["F5-W0-T01", "F5-W0-T03", "F5-W0-T06", "F5-W0-T13", "NF-T01"],
         "findings": [],
         "next_action": "execute B0 current READY slice",
@@ -77,6 +100,7 @@ def touch1(pack: Path, requested_scope: str, goal: str) -> dict:
         "limits": ["local CODEX scope", "no external admin/release", "no HERMES/GPT host claim"],
         "delta_keys": NINE,
         "delta": delta,
+        "contract_context": contract_context,
     }
 
 
@@ -113,8 +137,10 @@ def main():
     ap.add_argument("--requested-scope", default=str(lib.PACK))
     ap.add_argument("--out", default=str(lib.PARTIES / "guide" / "thin_start.json"))
     ap.add_argument("--resume-evidence", default="")
+    ap.add_argument("--contracts", default="")
     a = ap.parse_args()
-    start = touch1(Path(a.pack), a.requested_scope, a.goal)
+    start = touch1(Path(a.pack), a.requested_scope, a.goal,
+                   Path(a.contracts) if a.contracts else None)
     lib.write_json(Path(a.out), start)
     resumed = touch2(start, a.resume_evidence)
     resume_path = Path(a.out).with_name("thin_resume.json")
