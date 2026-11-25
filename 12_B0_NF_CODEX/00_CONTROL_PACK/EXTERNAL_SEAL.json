@@ -35,8 +35,8 @@
   "manifest_self_hash": "EXTERNAL_RECORD_ONLY",
   "evidence_appendix": {
     "path": "FHS-5_PLP_W0_Native-first_CODEX_修補證據型附錄.md",
-    "sha256": "f1fe41a602ccae3db1ad9f84e85ddab373a6c1dd22443430b0127a2a352a2fd6",
-    "bytes": 20291
+    "sha256": "eed985b68e079d640d2d6ee7a84d093d0e636f1aea29841310c8f2005482648e",
+    "bytes": 20021
   },
   "claim_ceiling": "PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
   "not_claimed": [
@@ -46,5 +46,5 @@
     "W1-W4 complete",
     "RELEASED"
   ],
-  "note": "CODEX-first r3 external seal; appendix outside pack root."
+  "note": "CODEX-first r3 external seal; appendix normalized LF; outside pack root."
 }
