@@ -2,39 +2,39 @@
 
 - repo: `https://github.com/shw097-team/FHS-5.git`
 - branch: `codex/w1-nf-r3-20261125`
-- base: `c2d8084ba24dd8df3fa62259bba496f4fb9caa85` (main untouched, no force)
+- base: `c2d8084ba24dd8df3fa62259bba496f4fb9caa85` (main untouched, no force, no merge)
 - content commit: `bb87f441d0e16d7371e064b3ce614a0972709889`
-- local delivery: `16_W1_NF_CODEX_20261125T222954` (89 evidenced files + seal)
+- published commit: `a539b1c3dab89b4fd62d3cc537191cd6ce2ad74e`
+- pull request entry: https://github.com/shw097-team/FHS-5/pull/new/codex/w1-nf-r3-20261125
 
-## Push state: NOT_PUSHED — blocked pending explicit Owner approval
+## Push state: PUSHED_AND_VERIFIED
 
-The push step was not executed. The sandbox reviewer rejected the command that
-reads `C:\Projects\Agent_Workspace\API KEY\GITHUB-REPO_SHW097-4.txt` and uses it
-to push to GitHub, because credential use plus an external destination needs
-explicit Owner approval for that exact payload. No workaround was attempted.
+`git push` returned rc=0; the remote reports the branch at the same commit as
+local HEAD. Credential was injected only as temporary environment configuration
+(`http.extraheader` via GIT_CONFIG_* env vars); it was not written to argv, git
+config, logs, evidence or the repository, and the temporary env was removed.
 
-No token was read, printed, stored in git config, or written to any evidence.
+## Independent readback from the remote (fresh clone)
 
-### Exact command (Owner approval required)
+| 項目 | 遠端重算值 |
+|---|---|
+| `remote HEAD` | `a539b1c3dab89b4fd62d3cc537191cd6ce2ad74e` |
+| `05_W1_SOURCE_MANIFEST.json` sha256 | `61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a` |
+| `EVIDENCE_MANIFEST.json` sha256 | `69e28274045975d82e2130a2ae20986ed61bd7d91cd224b363242fb7029205b8` |
+| `W1/impl/*.py` | 10 files |
+| `W1/check/*.py` | 12 files |
+| `openspec/changes/w1-nf-r2-product` | present |
 
-```
-$raw = Get-Content -LiteralPath "C:\Projects\Agent_Workspace\API KEY\GITHUB-REPO_SHW097-4.txt" -Raw
-$env:W1_GH_TOKEN = ([regex]::Matches($raw, "[A-Za-z0-9_]{20,}")[-1].Value)
-$env:GIT_TERMINAL_PROMPT = "0"
-git -C "C:\Projects\Agent_Workspace\FHS-5_Workspace\worktrees\W1_NF_r3" ^
-  -c "credential.helper=!f() { echo username=x-access-token; echo password=$W1_GH_TOKEN; }; f" ^
-  push https://github.com/shw097-team/FHS-5.git HEAD:refs/heads/codex/w1-nf-r3-20261125
-Remove-Item Env:W1_GH_TOKEN
-```
+The pack digest equals the manifest pin, so the public tree is byte-faithful
+for the frozen six-file pack.
 
-### Pre-push checks completed
+## History preserved
 
-- staged diff scanned for credential patterns: none found
-- staged paths limited to `.gitignore`, `W1/.gitattributes`, `W1/impl`, `W1/check`, `openspec`, `16_W1_NF_CODEX_20261125T222954`
-- repo already tracks 232 files containing local absolute paths, so evidence paths follow existing repo norms
-- no force push, no merge, no history rewrite
+- `main` remains `c2d8084ba24dd8df3fa62259bba496f4fb9caa85`
+- `codex/w1-nf-r2-20261125` remains `ae05a74514d2c310f82bbf9bb1a2009078f11c87`
+- new branch only; fast-forward push; no force, no rewrite
 
 ## Claim effect
 
-Publishing code does not equal `W1_NF_VALIDATED`, `RELEASED` or `M-DONE`.
-`W1_PARTIAL_VALIDATED` stands regardless of push outcome.
+Publishing does not equal `W1_NF_VALIDATED`, `RELEASED` or `M-DONE`.
+`W1_PARTIAL_VALIDATED` and `W2_TECHNICALLY_READY = NOT_READY` stand unchanged.

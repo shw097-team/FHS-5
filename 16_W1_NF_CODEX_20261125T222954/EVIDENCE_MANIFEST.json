@@ -6,7 +6,7 @@
   "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
   "repo": {
     "branch": "codex/w1-nf-r3-20261125",
-    "head": "bb87f441d0e16d7371e064b3ce614a0972709889",
+    "head": "a539b1c3dab89b4fd62d3cc537191cd6ce2ad74e",
     "base": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85"
   },
   "file_count": 89,
@@ -424,12 +424,12 @@
     {
       "path": "FHS-5_PLP_W1_CLOSEOUT.md",
       "bytes": 9608,
-      "sha256": "d47cb89944bbaaa2555c0684bf80aff26c72e0417f81f923b51656bcc90ad8bf"
+      "sha256": "13f5ec5479173ae4558e399631327f9a9784180d4f31a516d63807d654b9964e"
     },
     {
       "path": "FHS-5_PLP_W1_HANDOFF.md",
       "bytes": 2599,
-      "sha256": "5772e147265bcf20cb8db42497bcc1f6fb266dbf5e4d385b03b52a7bfff6b702"
+      "sha256": "3f4c6e0f250c65a8e49023a5bae266415fc23f9b0b05dfd407d3df2d99df9a5f"
     },
     {
       "path": "make_delivery.py",
@@ -438,8 +438,8 @@
     },
     {
       "path": "PUBLICATION_STATUS.md",
-      "bytes": 1864,
-      "sha256": "a802d4c451b5ea9054d51d0f98ca92c325c4f41aa9a8bdb1b2d8c99db6c01411"
+      "bytes": 1743,
+      "sha256": "43d548fdbd1375f806d186fc0f2253a9faa2f43c7ae5113e88c62c11deec0580"
     },
     {
       "path": "README.md",
@@ -454,7 +454,7 @@
     {
       "path": "W1_UPSTREAM_CHANGESET.md",
       "bytes": 1993,
-      "sha256": "b8ff19aff4a8f9998a995af9e97c67095fb712b2472a2d87b7c6ebf98823c619"
+      "sha256": "d236420b9043edb59c542395207c0d83ccfb5281a4e178809f725b4465fe9853"
     }
   ],
   "tests": "63",

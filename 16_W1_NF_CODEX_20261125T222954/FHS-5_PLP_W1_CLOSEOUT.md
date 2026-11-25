@@ -5,7 +5,7 @@
 **project_id**：`FHS-5_PLP`｜**subject_id**：`FHS-5_PLP/W1/CONTROL_PACK`｜**scope**：`W1-NF-01`
 **wave_id**：`W1`｜**batch_id**：`W1-NF-01`｜**date**：2026-11-25（Asia/Taipei）
 **pack_manifest_sha256**：`61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a`
-**repo**：`codex/w1-nf-r3-20261125`｜`content_commit` `bb87f441d0e16d7371e064b3ce614a0972709889`｜`head` `bb87f441d0e16d7371e064b3ce614a0972709889`｜base `c2d8084ba24dd8df3fa62259bba496f4fb9caa85`
+**repo**：`codex/w1-nf-r3-20261125`｜`content_commit` `a539b1c3dab89b4fd62d3cc537191cd6ce2ad74e`｜`head` `a539b1c3dab89b4fd62d3cc537191cd6ce2ad74e`｜base `c2d8084ba24dd8df3fa62259bba496f4fb9caa85`
 **claim ceiling**：`W1_PARTIAL_VALIDATED`｜`W2_TECHNICALLY_READY = NOT_READY`
 **不宣稱**：`W1_NF_VALIDATED`、`INDEPENDENT_PASS`、`RELEASED`、`M-DONE`、`GPT_CHAT_PASS`、`GPT_WORK_PASS`、`HERMES_PASS`、`W2_EXECUTION_READY`
 
