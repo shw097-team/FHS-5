@@ -1,3 +1,9 @@
+# FHS-5｜Current: B0-NF CODEX-first
+
+最新交付：12_B0_NF_CODEX/README.md（W0-NF-r3-CODEX-PRIMARY、B0 five-party evidence、W0 closeout）。
+
+---
+
 # FHS-5_PLP W0 — Control Pack, Closeout and Evidence
 
 ## W1 — Author Control Pack and Execution Evidence
