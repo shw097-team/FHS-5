@@ -12,7 +12,7 @@
 - **candidate_preimage**：`5eab43de2d3f67d6afbb1c5f6bc390e2c391da36`
 - **oracle_sha256**：`112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6`
 - **evidence_ref**：`10_EVIDENCE/EVIDENCE_MANIFEST.json`
-- **evidence_manifest_sha256**：`dd3cc73c6704529e9368a86662d1269b7c5fa9f8f1af6a2035ab4a2aaabc0560`
+- **evidence_manifest_sha256**：`50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93`
 - **consumer_manifest_sha256**：SEE `07_CONSUMER/CONSUMER_MANIFEST.sha256`
 - **case_set**：SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44
 - **target_consumer**：W1 / CODEX Native（`tools/consumer.py`，`W1-consumer/CODEX-Native-1`）
@@ -26,7 +26,7 @@
 | exit | `0`；最新 `run_id`／receipt 以 `07_CONSUMER/LATEST.json` 為準 |
 | raw | `07_CONSUMER/runs/<run_id>/raw/pos.*`、`neg.*` |
 | action | 先核 identity／pack／seal／W0M／candidate／oracle／handoff／evidence 667 檔索引與路徑，再重跑 POS/NEG |
-| result | `consumed=true`；782 checks；10 個錯 pin／raw／schema／路徑負例全部 fail-closed 且 `cli_executed=false` |
+| result | `consumed=true`；實際 checks／negatives 以 `07_CONSUMER/LATEST.json` 與 `negatives.json` 為準；錯 pin／raw／schema／路徑負例全部 fail-closed 且 `cli_executed=false` |
 
 ## next_legal_action
 
@@ -50,7 +50,7 @@ W1–W4 全分母、FHS 485、HERMES／GPT Host、不同 principal 簽章、Publ
 
 | 層 | 值 | 理由 |
 |---|---|---|
-| `w1_technical_readiness` | `W1_TECHNICALLY_READY` | W0 validated（44/44）＋真 handoff＋consumer 782 checks／10 negatives 真讀回 |
+| `w1_technical_readiness` | `W1_TECHNICALLY_READY` | W0 validated（44/44）＋真 handoff＋clean-receive consumer 真讀回（見 Consumer Manifest 推導） |
 | `w1_execution_readiness` | `NOT_CLAIMED` | 尚缺上位採納、W1M／下一包一致與 W1 真入口／授權 |
 
 ## publication_state

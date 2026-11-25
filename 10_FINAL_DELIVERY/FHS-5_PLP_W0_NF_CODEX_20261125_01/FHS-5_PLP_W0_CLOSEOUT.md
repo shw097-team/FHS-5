@@ -130,7 +130,7 @@ Combined：`NF-T08` 收據串接契約→Guide→DEV→OPS→Challenge→FAR→`
 | Checker | `tools/challenge.py`；separate process＋isolated copy（不寫 subject `.git`）；same OS principal（如實記錄） |
 | Oracle | `05_TQAEP/oracle.json`，SHA `112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6` |
 | Case set | 44 receipts；`case_set` SHA 見 `challenge.json` pins |
-| Checker pins | source `fc460883…`；candidate `bb66a27`；evidence `5d4f27f1…`（43 candidate receipts，checker 重算，排除 consumer-staged T10）；oracle `112f2902…`；case_set `9624e71d…` |
+| Checker pins | source `fc460883…`；candidate `bb66a27`；evidence `19e57b0d…`（43 candidate receipts，checker 重算，排除 consumer-staged T10）；oracle `112f2902…`；case_set `9624e71d…` |
 | Verdict | `PASS`；32 checks；0 findings |
 | Consumer | `07_CONSUMER/CONSUMER_MANIFEST.json` 釘住 receipt＋raw；handoff 另釘其 SHA |
 | FirstFail | red `INVALID_ROOT_TRACEBACK`；已修補並只回歸受影 cone |
@@ -227,7 +227,7 @@ policy T 案是 `policy.py` 的單元測試，不是候選產品碼的行為。
 
 - `tools/consumer.py` v3：先核 identity／pack／seal／W0M／candidate／oracle／handoff／evidence **667 檔索引**（SHA/bytes／路徑 confinement），全部通過才跑 POS/NEG。
 - 每次 run 唯一 `run_id`＋獨立 `runs/<id>/` raw，不覆寫。
-- 正向：**782 checks**、`consumed=true`、POS 0/COMPLETE、NEG 2/MISSING。
+- 正向：前輪 782 checks；本輪 clean-receive **803 checks**（§15），POS 0/COMPLETE、NEG 2/MISSING。
 - 負例 10 個全部 `cli_executed=false`：wrong pack／candidate／oracle／evidence、mutated raw、missing file、bad schema、duplicate pin、cross subject、path escape。
 - NF-T10 由 consumer 收據最終化，Checker 不重複自簽；Consumer Manifest 外部 `.sha256` 釘住。
 
@@ -247,5 +247,44 @@ policy T 案是 `policy.py` 的單元測試，不是候選產品碼的行為。
 | FAR | 停用 FAR 路徑，v2 clone 套 `12'` diff | patch exit 0；post==v3；suite 0；probe 0；`far_tool_invoked=false` |
 
 **Claims**：`B0_NF_VALIDATED`、`W0_NF_VALIDATED`；`W1_TECHNICALLY_READY`（consumer 782 checks／10 negatives）；`W1_EXECUTION_READY=NOT_CLAIMED`。
+
+## 14｜FINAL-HANDOFF-RECONCILE（M1／M2／M3）
+
+### M1｜Evidence bytes 與 HANDOFF pin
+
+- 根因：147 個文字證據在加入 Git 時被 clean filter CRLF→LF；working bytes 仍與原 Manifest 相符，但 blob／GitHub raw 不符。
+- 處置：以 `hash-object -w --no-filters`＋`update-index --cacheinfo` 還原原 CRLF blob（oracle 1 檔＋其餘 146 檔），不改內容、不改歷史 PASS。
+- 統計：673 索引；526 blob 原本相符；**147 需 CRLF 還原**；0 無法解析。
+- 驗證：fresh clone 673/673 SHA 相符；oracle 回復原 pin `112f2902…`；`git ls-files --eol` 顯示 `i/crlf w/crlf attr/-text`。
+- HANDOFF／Consumer：凍結 HANDOFF，從遠端 clone 以 bundle 重建 candidate 後執行 final Consumer（見 §15）。
+
+### M2｜Reviewer ON／OFF 正向
+
+- 根因：ON／OFF 共用同一 outroot 且未建立，Reviewer 兩邊 `OUTPUT_ROOT_NOT_FOUND` exit 2，parity 只比 exit／SHA 而誤判 PASS。
+- 修補：ON／OFF 各自獨立 output root；expected semantics 為 exit 0、`REVIEW_SOURCE_LOCATED_ONLY`、`defects=0`；比較 state／defects／authority_state。
+- 結果：ON／OFF 皆 exit 0、state 相同、0 blocked attempts。
+- 負例：兩邊同時使用不存在 outroot → 兩邊失敗；新判定 `false_parity_rejected=true`，不給 parity PASS。
+
+### M3｜協作查缺與最終 Consumer
+
+- NF-T08 新增必要材料消費：Guide 實際載入四契約 pins（`contract_context`）；Native 實際解析 Bridge `context_utf8` 的 9 個 case／locator／clause hash 並跑 POS/NEG（`native_context.json`）。
+- 協作鏈：**8 segments／22 checks**；負例由 7 增至 **9**（另含 contracts_not_consumed、context_not_consumed），全部拒絕。
+- Final Consumer：改為 `--root`＋bundle 重建 candidate，可在乾淨 clone 消費；不得回讀原 workspace。clean-receive 結果見 §15。
+
+## 15｜Clean-receive 最終 Consumer（實際結果）
+
+| 項 | 值 |
+|---|---|
+| 接收位置 | fresh `git clone https://github.com/shw097-team/FHS-5` at `9909d5c` |
+| Candidate | 由 `02_CANDIDATE/repo.bundle` 重建，checkout `bb66a27`；未讀原 workspace repo |
+| Evidence | `50c158e3…`（694 檔索引；clone 內 694/694 SHA 相符） |
+| HANDOFF | 凍結 bytes；receipt `handoff_sha256` 與 clone 內 HANDOFF 完全相符 |
+| Consumer | exit 0；`consumed=true`；**803 checks**；POS `COMPLETE`、NEG `MISSING ["B"]` |
+| 負例 | 10/10 fail-closed、`cli_executed=false`（wrong pack/candidate/oracle/evidence、mutated raw、missing、schema、duplicate、cross-subject、path escape） |
+| Consumer Manifest | `3c8bc500186d70b309a3853bfce83ed1933ba335cb575e9ab90d459aa4840bf6` |
+| Receipt | `07_CONSUMER/clean_receive/receipt.json`，SHA `992ab97f…` |
+
+**W1 technical** 由 Consumer Manifest 推導：`receipt_consumed=true`、`handoff_bytes_match=true`、
+`evidence_bytes_match=true`、`negatives_rejected=true`、`evidence_B0/W0=true`。
 
 

@@ -54,3 +54,17 @@
 | Regression | 44/44 receipts；challenge PASS（43 candidate receipts）；consumer consumed；10+7 negatives rejected |
 | last_good_ref | 前輪 evidence `cb71b632…`＋candidate `bb66a27` |
 | resume_predicate | 新 candidate 或 oracle 變更；W1M 採納；Host 權限改變 |
+
+## FINAL-HANDOFF-RECONCILE（M1／M2／M3）
+
+| 欄 | 內容 |
+|---|---|
+| M1 Finding | GitHub blobs 與 Evidence Manifest 147 檔 bytes 不符；oracle raw `60bafa…` vs pin `112f29…` |
+| M1 Root cause | Git clean filter 在加入時把 CRLF 轉 LF；working bytes 未變 |
+| M1 Decision | 以 byte-preserving `hash-object --no-filters`／`update-index` 還原 147 個 CRLF blob，不改 Manifest |
+| M2 Finding | Reviewer ON／OFF 共用不存在的 outroot，雙失敗仍 parity PASS |
+| M2 Decision | 獨立 outroot＋expected semantics；雙失敗負例拒絕 |
+| M3 Finding | 契約／context 未真正被下游消費；consumer 依賴 workspace 絕對路徑 |
+| M3 Decision | contract_context＋native_context 真實消費；`--root`＋bundle 重建 candidate；clean clone 803 checks |
+| Impact | tools、NF-T01/T08 receipts、Evidence／Consumer manifests、HANDOFF freeze、delivery docs |
+| last_good_ref | Oracle `112f2902…`；Candidate `bb66a27`；evidence `50c158e3…` |

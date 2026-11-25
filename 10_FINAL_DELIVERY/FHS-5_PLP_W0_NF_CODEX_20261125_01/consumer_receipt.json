@@ -1,14 +1,14 @@
 {
   "schema": "FHS5.W0NF.ConsumerReceipt@3",
-  "run_id": "final-20261125145236",
-  "created_at": "2026-11-25T06:52:37+00:00",
+  "run_id": "clean-20261125153758",
+  "created_at": "2026-11-25T07:38:00+00:00",
   "consumer_id": "W1-consumer/CODEX-Native-1 (separate process)",
-  "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
-  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
-  "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\09_DELIVERY\\W0_HANDOFF.md",
-  "handoff_sha256": "7e3529679ffe9116fc117ed0db0c51e73071e57b10dab99321e17ff3af0a62f2",
-  "evidence_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
-  "evidence_manifest_sha256": "dd3cc73c6704529e9368a86662d1269b7c5fa9f8f1af6a2035ab4a2aaabc0560",
+  "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final\\13_W0_NF_CODEX_20261125\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final_out\\runs\\clean-20261125153758\\candidate",
+  "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final\\13_W0_NF_CODEX_20261125\\09_DELIVERY\\W0_HANDOFF.md",
+  "handoff_sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+  "evidence_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final\\13_W0_NF_CODEX_20261125\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
+  "evidence_manifest_sha256": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93",
   "validation_ok": true,
   "failure_code": null,
   "checks": [
@@ -67,7 +67,7 @@
     {
       "id": "SEAL-PRESENT",
       "ok": true,
-      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\01_PACK\\EXTERNAL_SEAL.json"
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final\\13_W0_NF_CODEX_20261125\\01_PACK\\EXTERNAL_SEAL.json"
     },
     {
       "id": "SEAL-PACK-PINS",
@@ -172,7 +172,7 @@
       "id": "EVIDENCE-PIN",
       "ok": true,
       "detail": {
-        "sha": "dd3cc73c6704529e9368a86662d1269b7c5fa9f8f1af6a2035ab4a2aaabc0560"
+        "sha": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93"
       }
     },
     {
@@ -198,7 +198,7 @@
     {
       "id": "EVIDENCE-FILE-COUNT",
       "ok": true,
-      "detail": 673
+      "detail": 694
     },
     {
       "id": "EVIDENCE-FILE-01_PACK/EXTERNAL_SEAL.json",
@@ -684,6 +684,41 @@
       "id": "EVIDENCE-FILE-03_PARTIES/collab/chain_negatives.json",
       "ok": true,
       "detail": "03_PARTIES/collab/chain_negatives.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/native_context.json",
+      "ok": true,
+      "detail": "03_PARTIES/collab/native_context.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/raw/native_context_neg.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/collab/raw/native_context_neg.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/raw/native_context_neg.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/collab/raw/native_context_neg.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/raw/native_context_neg.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/collab/raw/native_context_neg.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/raw/native_context_pos.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/collab/raw/native_context_pos.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/raw/native_context_pos.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/collab/raw/native_context_pos.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/raw/native_context_pos.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/collab/raw/native_context_pos.stdout.txt"
     },
     {
       "id": "EVIDENCE-FILE-03_PARTIES/far/far.json",
@@ -1334,6 +1369,21 @@
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_on.stdout.txt",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_guide_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_double_fail.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_double_fail.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_double_fail.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_double_fail.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_double_fail.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_double_fail.stdout.txt"
     },
     {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_off.meta.json",
@@ -2224,6 +2274,51 @@
       "id": "EVIDENCE-FILE-05_TQAEP/raw/path_unc.stdout.txt",
       "ok": true,
       "detail": "05_TQAEP/raw/path_unc.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T01.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T01.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T01.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T01.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T01.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T01.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T08-chain.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T08-chain.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T08-chain.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T08-chain.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T08-chain.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T08-chain.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T08-neg.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T08-neg.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T08-neg.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T08-neg.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/requal_NF-T08-neg.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/requal_NF-T08-neg.stdout.txt"
     },
     {
       "id": "EVIDENCE-FILE-05_TQAEP/raw/SAMPLE-R4.observed.json",
@@ -3501,6 +3596,11 @@
       "detail": "tools/lib.py"
     },
     {
+      "id": "EVIDENCE-FILE-tools/native_context.py",
+      "ok": true,
+      "detail": "tools/native_context.py"
+    },
+    {
       "id": "EVIDENCE-FILE-tools/off_bridge.py",
       "ok": true,
       "detail": "tools/off_bridge.py"
@@ -3529,6 +3629,11 @@
       "id": "EVIDENCE-FILE-tools/policy_cli.py",
       "ok": true,
       "detail": "tools/policy_cli.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/requalify.py",
+      "ok": true,
+      "detail": "tools/requalify.py"
     },
     {
       "id": "EVIDENCE-FILE-tools/scope_probe.py",

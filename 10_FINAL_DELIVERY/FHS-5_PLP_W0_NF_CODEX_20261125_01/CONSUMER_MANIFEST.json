@@ -1,30 +1,42 @@
 {
-  "schema": "FHS5.W0NF.ConsumerManifest@2",
-  "run_id": "final-20261125145236",
-  "consumer_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\runs\\final-20261125145236\\receipt.json",
-  "consumer_receipt_sha256": "1939204e7f7dc7ffb1456c04ec9505b1fe257606e358f362c14e58cdb6afafe3",
-  "evidence_manifest_sha256": "dd3cc73c6704529e9368a86662d1269b7c5fa9f8f1af6a2035ab4a2aaabc0560",
-  "handoff_sha256": "7e3529679ffe9116fc117ed0db0c51e73071e57b10dab99321e17ff3af0a62f2",
+  "schema": "FHS5.W0NF.ConsumerManifest@3",
+  "run_id": "clean-20261125153758",
+  "receiving_position": "fresh git clone of the published commit; candidate rebuilt from repo.bundle",
+  "consumer_receipt": "07_CONSUMER/clean_receive/receipt.json",
+  "consumer_receipt_sha256": "992ab97f7cde786439f58da3e06de4ad61584470e29a30fd0f127560e2e91e4d",
+  "handoff_sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+  "evidence_manifest_sha256": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
     "head": "bb66a276aae8c5d6aef549832c523587fc47d247",
-    "tree": "b69c54ded7ee10b7424c4900acbf6125b1ce025b"
+    "tree": "b69c54ded7ee10b7424c4900acbf6125b1ce025b",
+    "preimage": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "fixtures": {
+      "case_ambiguous.md": "01eb4f730a6abedf73cab7a23c309b734e52e255f23acc8883061987029dd221",
+      "case_bad_path.md": "66da16f375f3eed88719783f0128c22102440d6a390ded73c865ef2780c18f31",
+      "case_bad_utf8.md": "551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313",
+      "case_dup.md": "bb62042e22a0d3ffd1310a2b19a2917d22114a6b726bd0fee88429de7ef2d4ee",
+      "case_malformed.md": "9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508",
+      "case_missing.md": "eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019",
+      "case_ok.md": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece"
+    }
   },
   "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
   "consumed": true,
   "raw": {
-    "neg.meta.json": "7d54be36a25a2bd9ff634c52e6e5cf4b748611f1f5d634ff33d116e3102cc6dd",
+    "materialize_checkout.meta.json": "a02b16c2a7424f9f29a2b9143a28b2694885340524140af7b8613679f8ba76f7",
+    "materialize_checkout.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "materialize_checkout.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "materialize_clone.meta.json": "2609e740f895b9db3094f928b798074708fcb9ebe2d3806accf9b75cc569e434",
+    "materialize_clone.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "materialize_clone.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neg.meta.json": "1a69c8ff89d300cbd1ba601382938e78cb24e6730b784553a5d0632e5d73f85a",
     "neg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "neg.stdout.txt": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
-    "pos.meta.json": "e968e99d89bb65522fdc3959b9f618a86c6eda5fcd4fc82b7730ff248c9f993b",
+    "pos.meta.json": "29379bf13741293c4e4877312e78a12912f9cdf83d2eaae4d5d1a3cb98e2b48b",
     "pos.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "pos.stdout.txt": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33"
   },
-  "not_claimed": [
-    "HERMES/GPT host execution",
-    "W1 product execution",
-    "release"
-  ],
   "claims": {
     "W1_technical": "W1_TECHNICALLY_READY",
     "W1_execution": "NOT_CLAIMED",
@@ -35,10 +47,11 @@
   "claim_derivation": {
     "receipt_consumed": true,
     "receipt_validated": true,
-    "checks": 782,
+    "checks": 803,
+    "handoff_bytes_match": true,
+    "evidence_bytes_match": true,
     "negatives_rejected": true,
     "evidence_B0": true,
-    "evidence_W0": true,
-    "evidence_sha_match": true
+    "evidence_W0": true
   }
 }

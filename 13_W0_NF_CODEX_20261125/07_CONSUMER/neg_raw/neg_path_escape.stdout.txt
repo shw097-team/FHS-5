@@ -1,10 +1,10 @@
 {
-  "run_id": "20261125T144345-295ee05d",
+  "run_id": "20261125T153732-6e9ccd9f",
   "consumed": false,
   "validation_ok": false,
   "failure_code": "PATH_DOTDOT",
   "cli_executed": false,
-  "checks": 777,
+  "checks": 804,
   "failed": [
     "EVIDENCE-PATH-../escape.txt"
   ]

@@ -9,11 +9,13 @@
     "--evidence-root",
     "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
     "--allow-pending-t10",
-    "--expect-reject"
+    "--expect-reject",
+    "--repo",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo"
   ],
   "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "exit": 0,
-  "stdout_sha256": "9f59c22ae574a0d3fa523c790e347eada35e0d8a9cf96e08fba11df9b22f8d1e",
+  "stdout_sha256": "17b5a678e832095534e3b679f513ef3e5e6f5e971a88279bc2c0e158fdb52f89",
   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "timestamp": "2026-11-25T06:43:39+00:00"
+  "timestamp": "2026-11-25T07:37:24+00:00"
 }

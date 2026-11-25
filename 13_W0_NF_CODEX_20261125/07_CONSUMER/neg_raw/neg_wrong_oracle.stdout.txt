@@ -1,10 +1,10 @@
 {
-  "run_id": "20261125T144339-a2835b77",
+  "run_id": "20261125T153724-b856114c",
   "consumed": false,
   "validation_ok": false,
   "failure_code": "PIN_MISMATCH_ORACLE",
   "cli_executed": false,
-  "checks": 776,
+  "checks": 803,
   "failed": [
     "ORACLE-PIN"
   ]

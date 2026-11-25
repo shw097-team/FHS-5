@@ -2,9 +2,9 @@
   "schema": "FHS5.W0NF.ConsumerNegatives@1",
   "positive": {
     "exit": 0,
-    "run_id": "20261125T144336-01f1adf3",
+    "run_id": "20261125T153721-8ca1126e",
     "consumed": true,
-    "checks": 776
+    "checks": 803
   },
   "negative_cases": [
     {
@@ -13,7 +13,7 @@
       "got": "PIN_MISMATCH_PACK",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144337-ebe59cea"
+      "run_id": "20261125T153722-fc213387"
     },
     {
       "name": "wrong_candidate",
@@ -21,7 +21,7 @@
       "got": "PIN_MISMATCH_CANDIDATE",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144338-cd4e05c6"
+      "run_id": "20261125T153723-73e3e30a"
     },
     {
       "name": "wrong_oracle",
@@ -29,7 +29,7 @@
       "got": "PIN_MISMATCH_ORACLE",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144339-a2835b77"
+      "run_id": "20261125T153724-b856114c"
     },
     {
       "name": "wrong_evidence",
@@ -37,7 +37,7 @@
       "got": "PIN_MISMATCH_EVIDENCE",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144339-f2219581"
+      "run_id": "20261125T153725-3e5c3230"
     },
     {
       "name": "mutated_raw",
@@ -45,7 +45,7 @@
       "got": "EVIDENCE_HASH_MISMATCH",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144340-7fda84c2"
+      "run_id": "20261125T153726-12bae3b9"
     },
     {
       "name": "missing_file",
@@ -53,7 +53,7 @@
       "got": "MISSING_FILE",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144342-48b915ac"
+      "run_id": "20261125T153727-ec524596"
     },
     {
       "name": "bad_schema",
@@ -61,7 +61,7 @@
       "got": "EVIDENCE_SCHEMA",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144343-67754451"
+      "run_id": "20261125T153728-99d1656c"
     },
     {
       "name": "duplicate_pin",
@@ -69,7 +69,7 @@
       "got": "DUPLICATE_PIN",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144343-0cad8c38"
+      "run_id": "20261125T153729-f46ea14a"
     },
     {
       "name": "cross_subject",
@@ -77,7 +77,7 @@
       "got": "EVIDENCE_CANDIDATE_MISMATCH",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144344-fc833c5c"
+      "run_id": "20261125T153730-073673f5"
     },
     {
       "name": "path_escape",
@@ -85,7 +85,7 @@
       "got": "PATH_DOTDOT",
       "rejected": true,
       "cli_executed": false,
-      "run_id": "20261125T144345-295ee05d"
+      "run_id": "20261125T153732-6e9ccd9f"
     }
   ],
   "all_rejected": true,

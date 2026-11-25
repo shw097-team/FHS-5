@@ -1,10 +1,10 @@
 {
-  "run_id": "20261125T144340-7fda84c2",
+  "run_id": "20261125T153726-12bae3b9",
   "consumed": false,
   "validation_ok": false,
   "failure_code": "EVIDENCE_HASH_MISMATCH",
   "cli_executed": false,
-  "checks": 776,
+  "checks": 803,
   "failed": [
     "EVIDENCE-FILE-04_DEV_OPS/raw/green_v3.meta.json"
   ]

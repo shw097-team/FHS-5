@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "git",
+    "-C",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\runs\\20261125T153221-eff07250\\candidate",
+    "checkout",
+    "--quiet",
+    "0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\runs\\20261125T153221-eff07250",
+  "exit": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "c696c81ce31d0a5b276eb91fc507bd3220a007e5407140a6b893b98db4726625",
+  "timestamp": "2026-11-25T07:32:21+00:00"
+}

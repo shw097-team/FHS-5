@@ -1,10 +1,10 @@
 {
-  "run_id": "20261125T144338-cd4e05c6",
+  "run_id": "20261125T153723-73e3e30a",
   "consumed": false,
   "validation_ok": false,
   "failure_code": "PIN_MISMATCH_CANDIDATE",
   "cli_executed": false,
-  "checks": 776,
+  "checks": 803,
   "failed": [
     "CANDIDATE-PIN"
   ]

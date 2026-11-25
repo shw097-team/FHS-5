@@ -227,7 +227,7 @@ policy T 案是 `policy.py` 的單元測試，不是候選產品碼的行為。
 
 - `tools/consumer.py` v3：先核 identity／pack／seal／W0M／candidate／oracle／handoff／evidence **667 檔索引**（SHA/bytes／路徑 confinement），全部通過才跑 POS/NEG。
 - 每次 run 唯一 `run_id`＋獨立 `runs/<id>/` raw，不覆寫。
-- 正向：**782 checks**、`consumed=true`、POS 0/COMPLETE、NEG 2/MISSING。
+- 正向：前輪 782 checks；本輪 clean-receive **803 checks**（§15），POS 0/COMPLETE、NEG 2/MISSING。
 - 負例 10 個全部 `cli_executed=false`：wrong pack／candidate／oracle／evidence、mutated raw、missing file、bad schema、duplicate pin、cross subject、path escape。
 - NF-T10 由 consumer 收據最終化，Checker 不重複自簽；Consumer Manifest 外部 `.sha256` 釘住。
 
@@ -270,5 +270,21 @@ policy T 案是 `policy.py` 的單元測試，不是候選產品碼的行為。
 - NF-T08 新增必要材料消費：Guide 實際載入四契約 pins（`contract_context`）；Native 實際解析 Bridge `context_utf8` 的 9 個 case／locator／clause hash 並跑 POS/NEG（`native_context.json`）。
 - 協作鏈：**8 segments／22 checks**；負例由 7 增至 **9**（另含 contracts_not_consumed、context_not_consumed），全部拒絕。
 - Final Consumer：改為 `--root`＋bundle 重建 candidate，可在乾淨 clone 消費；不得回讀原 workspace。clean-receive 結果見 §15。
+
+## 15｜Clean-receive 最終 Consumer（實際結果）
+
+| 項 | 值 |
+|---|---|
+| 接收位置 | fresh `git clone https://github.com/shw097-team/FHS-5` at `9909d5c` |
+| Candidate | 由 `02_CANDIDATE/repo.bundle` 重建，checkout `bb66a27`；未讀原 workspace repo |
+| Evidence | `50c158e3…`（694 檔索引；clone 內 694/694 SHA 相符） |
+| HANDOFF | 凍結 bytes；receipt `handoff_sha256` 與 clone 內 HANDOFF 完全相符 |
+| Consumer | exit 0；`consumed=true`；**803 checks**；POS `COMPLETE`、NEG `MISSING ["B"]` |
+| 負例 | 10/10 fail-closed、`cli_executed=false`（wrong pack/candidate/oracle/evidence、mutated raw、missing、schema、duplicate、cross-subject、path escape） |
+| Consumer Manifest | `3c8bc500186d70b309a3853bfce83ed1933ba335cb575e9ab90d459aa4840bf6` |
+| Receipt | `07_CONSUMER/clean_receive/receipt.json`，SHA `992ab97f…` |
+
+**W1 technical** 由 Consumer Manifest 推導：`receipt_consumed=true`、`handoff_bytes_match=true`、
+`evidence_bytes_match=true`、`negatives_rejected=true`、`evidence_B0/W0=true`。
 
 

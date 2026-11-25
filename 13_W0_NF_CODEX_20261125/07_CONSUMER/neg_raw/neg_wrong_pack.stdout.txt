@@ -1,10 +1,10 @@
 {
-  "run_id": "20261125T144337-ebe59cea",
+  "run_id": "20261125T153722-fc213387",
   "consumed": false,
   "validation_ok": false,
   "failure_code": "PIN_MISMATCH_PACK",
   "cli_executed": false,
-  "checks": 776,
+  "checks": 803,
   "failed": [
     "HANDOFF-PACK-PIN"
   ]

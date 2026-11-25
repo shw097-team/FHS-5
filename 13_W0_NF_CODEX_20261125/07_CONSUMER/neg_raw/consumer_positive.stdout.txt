@@ -1,9 +1,9 @@
 {
-  "run_id": "20261125T144336-01f1adf3",
+  "run_id": "20261125T153721-8ca1126e",
   "consumed": true,
   "validation_ok": true,
   "failure_code": null,
   "cli_executed": true,
-  "checks": 776,
+  "checks": 803,
   "failed": []
 }

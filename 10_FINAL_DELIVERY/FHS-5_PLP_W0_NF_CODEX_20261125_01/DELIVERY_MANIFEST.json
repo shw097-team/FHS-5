@@ -1,7 +1,7 @@
 {
   "schema": "FHS5.W0NF.DeliveryManifest@1",
   "delivery_id": "FHS-5_PLP_W0_NF_CODEX_20261125_01",
-  "round": "W0-NF-HARDEN-20261125-02",
+  "round": "W0-NF-FINAL-HANDOFF-RECONCILE",
   "evidence_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "claims": {
     "B0": "B0_NF_VALIDATED",
@@ -9,7 +9,7 @@
     "W1_technical": "W1_TECHNICALLY_READY",
     "W1_execution": "NOT_CLAIMED",
     "release": "NOT_CLAIMED",
-    "publication": "PUSHED_e49b7b5_DOCS_PENDING"
+    "publication": "PUSHED_9909d5c_RESULTS_PENDING"
   },
   "files": [
     {
@@ -19,43 +19,43 @@
     },
     {
       "path": "CONSUMER_MANIFEST.json",
-      "bytes": 1986,
-      "sha256": "6df7d1bdf29d6985421e2f48080e36e9fe38699048cf151f6eeaa5bb10f526d5"
+      "bytes": 3313,
+      "sha256": "3c8bc500186d70b309a3853bfce83ed1933ba335cb575e9ab90d459aa4840bf6"
     },
     {
       "path": "CONSUMER_MANIFEST.sha256",
       "bytes": 86,
-      "sha256": "37b5a65c5e0420fb3e096e11e547bb96fa5c0d2806702fea1cd0cac21148a50b"
+      "sha256": "6ef5670d20d540f138af16a58314c1a8c920d95bb3441456bed781fb085d27fd"
     },
     {
       "path": "consumer_receipt.json",
-      "bytes": 121433,
-      "sha256": "1939204e7f7dc7ffb1456c04ec9505b1fe257606e358f362c14e58cdb6afafe3"
+      "bytes": 125273,
+      "sha256": "992ab97f7cde786439f58da3e06de4ad61584470e29a30fd0f127560e2e91e4d"
     },
     {
       "path": "EVIDENCE_MANIFEST.json",
-      "bytes": 129540,
-      "sha256": "dd3cc73c6704529e9368a86662d1269b7c5fa9f8f1af6a2035ab4a2aaabc0560"
+      "bytes": 133342,
+      "sha256": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93"
     },
     {
       "path": "EVIDENCE_MANIFEST.sha256",
       "bytes": 66,
-      "sha256": "7f585f961f14c2dd91650f05db0fd5f914341ce7aee99d82c236d999d17f140e"
+      "sha256": "1978cd16e0f1933640d26adaa8ad0d77635af6f81b136db14c6a94e2595a8a3e"
     },
     {
       "path": "FHS-5_PLP_W0_CLOSEOUT.md",
-      "bytes": 18863,
-      "sha256": "d5942bda07e5dfcf9c2d5f680b665fff9386400fc2bdae22ecacd429e8a321d8"
+      "bytes": 21832,
+      "sha256": "3323346771b4298a34b71dae46a0dc559bc86f944485a8ff055f1324274e4679"
     },
     {
       "path": "FHS-5_PLP_W0_HANDOFF.md",
-      "bytes": 3176,
-      "sha256": "5d91ceaa14eb4be294ecfb16d89b0af10fcf72ef4b79acf098e3e9350eb56626"
+      "bytes": 3265,
+      "sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579"
     },
     {
       "path": "PUBLICATION_STATUS.md",
-      "bytes": 1043,
-      "sha256": "ed13a835b08f72fed064389a575a7e8d98161a7e0c488eecaf124e72d99aa0d7"
+      "bytes": 957,
+      "sha256": "73a44516c888c1f1c2b3d9f3d7f88b9e18a3897c259a288c745617a17456dd3a"
     },
     {
       "path": "README.md",
@@ -109,8 +109,8 @@
     },
     {
       "path": "W0_UPSTREAM_CHANGESET.md",
-      "bytes": 4447,
-      "sha256": "c0fc2c2a1240890af3757482c0052b0a78e8998617c7f99ebdc2e4d2cf103620"
+      "bytes": 5439,
+      "sha256": "af2f153e8b4204dac8fa22e5868047ae2161773600a6456729b8478a09fd7a6e"
     }
   ]
 }
