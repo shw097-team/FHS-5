@@ -12,7 +12,7 @@
 - **candidate_preimage**：`5eab43de2d3f67d6afbb1c5f6bc390e2c391da36`
 - **oracle_sha256**：`112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6`
 - **evidence_ref**：`10_EVIDENCE/EVIDENCE_MANIFEST.json`
-- **evidence_manifest_sha256**：`0068c3c01749611ff5066b1d3f1a7d7ff7adb5e64cd5286e9b68dd96b4871fa9`
+- **evidence_manifest_sha256**：`da8137ef8801000ee100d00b29c4021a919f8644e13e5a6b52cb070f83c7b63b`
 - **consumer_manifest_sha256**：SEE `07_CONSUMER/CONSUMER_MANIFEST.sha256`
 - **case_set**：SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44
 - **target_consumer**：W1 / CODEX Native（`tools/consumer.py`，`W1-consumer/CODEX-Native-1`）

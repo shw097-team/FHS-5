@@ -1,6 +1,6 @@
 {
   "schema": "FHS5.W0NF.EvidenceManifest@1",
-  "generated_at": "2026-11-25T07:28:48+00:00",
+  "generated_at": "2026-11-25T07:29:34+00:00",
   "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
@@ -3660,8 +3660,8 @@
     },
     {
       "path": "tools/lib.py",
-      "bytes": 6157,
-      "sha256": "4d53128d38304939fc4cbaaddafcbb0d3797d4f97163fd083ae009d2ed951bb7"
+      "bytes": 6261,
+      "sha256": "7ec2cf2df0bedc8c18f45837c9853cba383d62fd6d36f9d1ee9d1ed5adba086f"
     },
     {
       "path": "tools/native_context.py",

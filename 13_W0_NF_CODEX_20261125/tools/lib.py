@@ -112,10 +112,16 @@ def run(
             + "\n",
             encoding="utf-8",
         )
+        def _rel(p: Path) -> str:
+            try:
+                return str(p.relative_to(ROOT))
+            except ValueError:
+                return str(p)
+
         result["raw_refs"] = {
-            "stdout": str((raw_dir / f"{name}.stdout.txt").relative_to(ROOT)),
-            "stderr": str((raw_dir / f"{name}.stderr.txt").relative_to(ROOT)),
-            "meta": str((raw_dir / f"{name}.meta.json").relative_to(ROOT)),
+            "stdout": _rel(raw_dir / f"{name}.stdout.txt"),
+            "stderr": _rel(raw_dir / f"{name}.stderr.txt"),
+            "meta": _rel(raw_dir / f"{name}.meta.json"),
         }
     return result
 
