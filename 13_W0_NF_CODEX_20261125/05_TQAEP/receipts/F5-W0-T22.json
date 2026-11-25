@@ -1,0 +1,86 @@
+{
+  "run_id": "F5-W0-T22-20261125T134202",
+  "case_id": "F5-W0-T22",
+  "candidate_ref": "02_CANDIDATE/repo",
+  "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "source_refs": [
+    {
+      "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "path": "02_CANDIDATE/repo/requirements.md",
+      "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ],
+  "fixture_sha": null,
+  "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\policy_cli.py",
+    "--case",
+    "T22"
+  ],
+  "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+  "exit": 0,
+  "stdout_sha": "fbfaa09fd775af90a3d7c880bbe0d8311a32f68048579f6a0ab35dacbec271c0",
+  "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "pre_state": null,
+  "post_state": null,
+  "recovery_ref": null,
+  "expected": {
+    "exit": 0,
+    "status": "CLOSEOUT_ADVICE",
+    "controls_ok": true
+  },
+  "observed": {
+    "exit": 0,
+    "status": "CLOSEOUT_ADVICE",
+    "controls": [
+      {
+        "got": "RELEASE_NOT_CLAIMED",
+        "name": "none",
+        "ok": true,
+        "want": "RELEASE_NOT_CLAIMED"
+      },
+      {
+        "got": "RELEASE_NOT_CLAIMED",
+        "name": "checker_only",
+        "ok": true,
+        "want": "RELEASE_NOT_CLAIMED"
+      },
+      {
+        "got": "PENDING_PUBLISHER",
+        "name": "both",
+        "ok": true,
+        "want": "PENDING_PUBLISHER"
+      }
+    ],
+    "observed": {
+      "both": {
+        "exit": 0,
+        "release": "PENDING_PUBLISHER",
+        "status": "RELEASE_CANDIDATE"
+      },
+      "checker": {
+        "exit": 0,
+        "reason": "no publisher signature",
+        "release": "RELEASE_NOT_CLAIMED",
+        "status": "CLOSEOUT_ADVICE"
+      },
+      "none": {
+        "exit": 0,
+        "reason": "no independent checker receipt",
+        "release": "RELEASE_NOT_CLAIMED",
+        "status": "CLOSEOUT_ADVICE"
+      }
+    }
+  },
+  "verdict": "PASS",
+  "first_fail": "",
+  "checker_identity": "maker-run; independent check in 06_CHECKER",
+  "consumer_ref": null,
+  "not_covered": [],
+  "execution_kind": "subprocess"
+}

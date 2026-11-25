@@ -1,0 +1,7 @@
+{
+  "direct_exit": 0,
+  "direct_bridge_modules": [],
+  "control_bridge_modules": [
+    "w1_bridge_reference"
+  ]
+}

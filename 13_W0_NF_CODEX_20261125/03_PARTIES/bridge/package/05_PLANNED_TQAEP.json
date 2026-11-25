@@ -1,0 +1,135 @@
+{
+  "schema": "FHS5.W0NF.PlannedTQAEP@1",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "subject_id": "FHS-5_PLP/W0",
+    "scope": "FHS-5/W0/B0-NF",
+    "wave_id": "FHS-5_PLP/W0",
+    "batch_id": "FHS-5/W0/B0-NF",
+    "source_manifest_sha256": "c9c16ebab535037414994c7db8bb5b9faac57dd0023fbda4a2345e7777984399"
+  },
+  "cases": [
+    {
+      "case_id": "SAMPLE-R1",
+      "kind": "POS",
+      "requirement_ref": "SAMPLE-R1",
+      "fixture_path": "cases/case_ok.md",
+      "oracle_path": "cases/oracle_R1.json",
+      "fixture_sha256": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+      "oracle_sha256": "1a11158230587b2d6f740904fa43cd98f3d15474aeb53b215b965e0b39b2f57a",
+      "clause_text": "SAMPLE-R1｜受權 root 內 UTF-8 Markdown；input 為 root 內相對路徑；核 SHA-256。",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "case_id": "SAMPLE-R2",
+      "kind": "NEG",
+      "requirement_ref": "SAMPLE-R2",
+      "fixture_path": "cases/case_missing.md",
+      "oracle_path": "cases/oracle_R2.json",
+      "fixture_sha256": "eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019",
+      "oracle_sha256": "5cc7ef6ec48520c7cc89561907752160840a9bbdf28a62acf19962509eda25ca",
+      "clause_text": "A和B各有獨立必要 Child；SAMPLE-R2｜parent PASS 若且唯若 A、B 都存在、已勾選且唯一。",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "case_id": "SAMPLE-R3",
+      "kind": "NEG",
+      "requirement_ref": "SAMPLE-R3",
+      "fixture_path": "cases/case_dup.md",
+      "oracle_path": "cases/oracle_R3.json",
+      "fixture_sha256": "bb62042e22a0d3ffd1310a2b19a2917d22114a6b726bd0fee88429de7ef2d4ee",
+      "oracle_sha256": "09a8fac1ffb497f1c342ecdc8023d9e6c89d2f64e4bce5117f6865fda51a28a8",
+      "clause_text": "SAMPLE-R3｜stdout 為穩定 UTF-8 JSON：`source_sha256`, `provided`, `missing`, `status`；不回寫來源；exit 0=完整，2=缺項，3=無效/越權。",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "case_id": "SAMPLE-R5",
+      "kind": "NEG",
+      "requirement_ref": "SAMPLE-R5",
+      "fixture_path": "cases/case_bad_utf8.md",
+      "oracle_path": "cases/oracle_R5.json",
+      "fixture_sha256": "551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313",
+      "oracle_sha256": "7cb00eb8d315d05783da45f6d64c32b52bc8a976f2b2f714588e60e3e5074d74",
+      "clause_text": "SAMPLE-R5",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "case_id": "SAMPLE-R6",
+      "kind": "NEG",
+      "requirement_ref": "SAMPLE-R6",
+      "fixture_path": "cases/case_ok.md",
+      "oracle_path": "cases/oracle_R6.json",
+      "fixture_sha256": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+      "oracle_sha256": "aa120a1f217aad0a29aba34320999faadac09bbc967a726b5f3582f68d257158",
+      "clause_text": "SAMPLE-R6",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "case_id": "SAMPLE-R7",
+      "kind": "NEG",
+      "requirement_ref": "SAMPLE-R7",
+      "fixture_path": "cases/case_ambiguous.md",
+      "oracle_path": "cases/oracle_R7.json",
+      "fixture_sha256": "01eb4f730a6abedf73cab7a23c309b734e52e255f23acc8883061987029dd221",
+      "oracle_sha256": "14a562252c3d1c86db87240e1ac02993cd2334c6590f13663ee2b3b01a1b2c46",
+      "clause_text": "SAMPLE-R7",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "case_id": "SAMPLE-R8",
+      "kind": "NEG",
+      "requirement_ref": "SAMPLE-R8",
+      "fixture_path": "cases/case_malformed.md",
+      "oracle_path": "cases/oracle_R8.json",
+      "fixture_sha256": "9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508",
+      "oracle_sha256": "e51dd0e531254b026eb8c5bed328ff94124936a785d24d38e54bc0f8ab5a0c48",
+      "clause_text": "SAMPLE-R8",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "case_id": "SAMPLE-R9",
+      "kind": "POS",
+      "requirement_ref": "SAMPLE-R9",
+      "fixture_path": "cases/case_ok.md",
+      "oracle_path": "cases/oracle_R9.json",
+      "fixture_sha256": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+      "oracle_sha256": "e1ff176d5bf5c32a4a5e8ef2cea59ffac140d3a700e7136c511507ddcced2261",
+      "clause_text": "SAMPLE-R9",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "case_id": "SAMPLE-R10",
+      "kind": "POS",
+      "requirement_ref": "SAMPLE-R10",
+      "fixture_path": "cases/case_ok.md",
+      "oracle_path": "cases/oracle_R10.json",
+      "fixture_sha256": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+      "oracle_sha256": "e650d2581c7d38fbe0f61d8eff096bc27d35858a786705f093a68e63d6a39b92",
+      "clause_text": "SAMPLE-R10",
+      "clause_start_line": 1,
+      "clause_end_line": 1,
+      "requirement_source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ],
+  "not_covered": [
+    "full W1 38+28",
+    "C16/EC-36/local47",
+    "FARP30/local35"
+  ]
+}

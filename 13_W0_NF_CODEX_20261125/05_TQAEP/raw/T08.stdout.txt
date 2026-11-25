@@ -1,0 +1,1 @@
+{"controls": [{"got": true, "name": "code", "ok": true, "want": true}], "controls_ok": true, "exit": 0, "observed": {"code_exists": true, "console_entry": false}, "status": "BIND_EXISTING"}

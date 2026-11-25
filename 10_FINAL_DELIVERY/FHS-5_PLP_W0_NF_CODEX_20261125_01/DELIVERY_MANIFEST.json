@@ -1,0 +1,109 @@
+{
+  "schema": "FHS5.W0NF.DeliveryManifest@1",
+  "delivery_id": "FHS-5_PLP_W0_NF_CODEX_20261125_01",
+  "evidence_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+  "claims": {
+    "B0": "B0_NF_VALIDATED",
+    "W0": "W0_NF_VALIDATED",
+    "W1_technical": "W1_TECHNICALLY_READY",
+    "W1_execution": "NOT_CLAIMED",
+    "release": "NOT_CLAIMED"
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 9,
+      "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+    },
+    {
+      "path": "CONSUMER_MANIFEST.json",
+      "bytes": 1265,
+      "sha256": "8029a199fab5b46396f7e5eb51896e9d3e63850bf571a17b89cac735f125e2fe"
+    },
+    {
+      "path": "CONSUMER_MANIFEST.sha256",
+      "bytes": 86,
+      "sha256": "e0881dc0c00d95b450dcd36713f627c98023e95c48dcc401fa1eabe97b37bdd6"
+    },
+    {
+      "path": "consumer_receipt.json",
+      "bytes": 1106,
+      "sha256": "6916cf421653f6640821d40917da3e18597428638886e4c9b6c66b7dd4809be0"
+    },
+    {
+      "path": "EVIDENCE_MANIFEST.json",
+      "bytes": 106121,
+      "sha256": "34e4f85515e3bcda2979acfcc532b457ebb3a3772c7d9f0afa8c29fadafe21f1"
+    },
+    {
+      "path": "EVIDENCE_MANIFEST.sha256",
+      "bytes": 66,
+      "sha256": "ea1b17e825fa76aecd465f76fd803f4a861a97ca5c81ea1ade65d542366a4571"
+    },
+    {
+      "path": "FHS-5_PLP_W0_CLOSEOUT.md",
+      "bytes": 15403,
+      "sha256": "c000599853d215a812065b42e5be43f3c796d687452ac3da323fcee9cc3b7ffd"
+    },
+    {
+      "path": "FHS-5_PLP_W0_HANDOFF.md",
+      "bytes": 2924,
+      "sha256": "2823b4ab3de00097504d4adf32728e0d3ee16f6378067db3c13f7e2337085fe6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1797,
+      "sha256": "de9409a904ac0acb94c7f528ffcf5eb116710f546031591614275d19e36f9d59"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 1577,
+      "sha256": "602a92674f5e22383ea21818cbbf6cae63ced25a904fcc5712604d48f753e090"
+    },
+    {
+      "path": "UPSTREAM_WRITEBACK/MASTER__W0_STATUS.md",
+      "bytes": 1159,
+      "sha256": "6200fc9b4aca2a01a04eaeea5c4dbe8518e6284ca3dad3cfd38121cd07f3729b"
+    },
+    {
+      "path": "UPSTREAM_WRITEBACK/PROG-00__SEAMS_AND_DENOMINATORS.md",
+      "bytes": 1063,
+      "sha256": "b24a1a9a0bc4e6aa699d356926cf8be02b09049f2cbb8a10375ab26fc4a3b96f"
+    },
+    {
+      "path": "UPSTREAM_WRITEBACK/PROJ-01__REVIEWER_GATES.md",
+      "bytes": 686,
+      "sha256": "8916baf8fffe8aedd3ff711ff2808dfc486c39e6943c9923d9a8a3456210d3ba"
+    },
+    {
+      "path": "UPSTREAM_WRITEBACK/PROJ-02__GUIDE_TOUCH.md",
+      "bytes": 609,
+      "sha256": "39e1c23d57c2f513ba6ea6109824726ed4a7f94a756adffaec9b5b4b09bb48c7"
+    },
+    {
+      "path": "UPSTREAM_WRITEBACK/PROJ-03__BRIDGE_APIS.md",
+      "bytes": 717,
+      "sha256": "a5bcb8ba83de67fdb697be5404aed4d2794a1e1d78566892f4cc99e2bc2eaeec"
+    },
+    {
+      "path": "UPSTREAM_WRITEBACK/PROJ-04__CHALLENGE_PINS.md",
+      "bytes": 808,
+      "sha256": "618c44ff2fb25e6cd9f6766fe3c56387a48d4a19e6f220e42554c268ba24b377"
+    },
+    {
+      "path": "UPSTREAM_WRITEBACK/PROJ-05__FAR_FINDING.md",
+      "bytes": 614,
+      "sha256": "f610bb04c3ba307e09233f5ec2a805bad515bd852fde99237c503fa67df3dbf0"
+    },
+    {
+      "path": "UPSTREAM_WRITEBACK/WM__W0M_W1M_ADMISSION.md",
+      "bytes": 810,
+      "sha256": "aab38714754df4e6fc16daa339da24a60ae560cc95491756ae7967b4252f098c"
+    },
+    {
+      "path": "W0_UPSTREAM_CHANGESET.md",
+      "bytes": 3166,
+      "sha256": "f88942ada1f28baa21fd8ae7ef6f039aad71bfb6c6d4b1474fbe93403a70d25d"
+    }
+  ]
+}

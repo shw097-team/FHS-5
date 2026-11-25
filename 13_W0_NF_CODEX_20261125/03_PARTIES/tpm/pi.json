@@ -1,0 +1,51 @@
+{
+  "contract": "PI",
+  "contract_id": "FHS5-W0NF-PI-20261125-01",
+  "project_id": "FHS-5_PLP",
+  "subject_id": "FHS-5_PLP/W0",
+  "batch_id": "FHS-5/W0/B0-NF",
+  "source_refs": [
+    {
+      "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "path": "02_CANDIDATE/repo/requirements.md",
+      "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ],
+  "parent": {
+    "id": "SAMPLE",
+    "statement": "briefcheck produces a fail-closed A/B completeness verdict"
+  },
+  "children": [
+    {
+      "id": "SAMPLE-R1",
+      "statement": "UTF-8 Markdown in an approved root; relative input; SHA-256 verified"
+    },
+    {
+      "id": "SAMPLE-R2",
+      "statement": "A and B are independent required children; parent passes iff both present, checked and unique"
+    },
+    {
+      "id": "SAMPLE-R3",
+      "statement": "stable UTF-8 JSON; no source write; exit 0/2/3"
+    },
+    {
+      "id": "SAMPLE-R4",
+      "statement": "idempotent twice; one reversible output write with readback"
+    }
+  ],
+  "negative_cases": [
+    "absolute",
+    "dotdot",
+    "UNC",
+    "symlink/junction/reparse",
+    "invalid UTF-8",
+    "SHA mismatch",
+    "duplicate",
+    "ambiguous",
+    "malformed"
+  ],
+  "acceptance": "every child and negative case has fixture+argv+expected exit+oracle"
+}

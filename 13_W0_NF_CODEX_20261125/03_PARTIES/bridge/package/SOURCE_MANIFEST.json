@@ -1,0 +1,59 @@
+{
+  "schema": "FHS5.W0NF.BridgeSourceManifest@1",
+  "sources": [
+    {
+      "source_id": "00",
+      "path": "00_W0_PI_PD.md",
+      "role": "W0_PACK",
+      "version": "W0-NF-r3-CODEX-PRIMARY",
+      "sha256": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11",
+      "bytes": 31783,
+      "lines": 411
+    },
+    {
+      "source_id": "01",
+      "path": "01_W0_DEV_ECP.md",
+      "role": "W0_PACK",
+      "version": "W0-NF-r3-CODEX-PRIMARY",
+      "sha256": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6",
+      "bytes": 11556,
+      "lines": 211
+    },
+    {
+      "source_id": "02",
+      "path": "02_W0_OPS_ECP.md",
+      "role": "W0_PACK",
+      "version": "W0-NF-r3-CODEX-PRIMARY",
+      "sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747",
+      "bytes": 11075,
+      "lines": 229
+    },
+    {
+      "source_id": "03",
+      "path": "03_W0_TQAEP.md",
+      "role": "W0_PACK",
+      "version": "W0-NF-r3-CODEX-PRIMARY",
+      "sha256": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb",
+      "bytes": 13805,
+      "lines": 182
+    },
+    {
+      "source_id": "04",
+      "path": "04_W0_START_THIN_PROMPT.md",
+      "role": "W0_PACK",
+      "version": "W0-NF-r3-CODEX-PRIMARY",
+      "sha256": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554",
+      "bytes": 7780,
+      "lines": 155
+    },
+    {
+      "source_id": "05",
+      "path": "05_W0_SOURCE_MANIFEST.json",
+      "role": "W0_PACK",
+      "version": "W0-NF-r3-CODEX-PRIMARY",
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+      "bytes": 18821,
+      "lines": 489
+    }
+  ]
+}

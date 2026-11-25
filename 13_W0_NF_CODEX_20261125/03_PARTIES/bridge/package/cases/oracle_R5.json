@@ -1,0 +1,8 @@
+{
+  "case": "SAMPLE-R5",
+  "fixture": "case_bad_utf8.md",
+  "expected": {
+    "exit": 3,
+    "status": "INVALID_ENCODING"
+  }
+}

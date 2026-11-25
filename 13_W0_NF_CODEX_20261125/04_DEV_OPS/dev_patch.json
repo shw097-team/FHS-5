@@ -1,0 +1,33 @@
+{
+  "schema": "FHS5.W0NF.DevPatch@1",
+  "preimage": {
+    "head": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "briefcheck.py": "8f51ca0d8dae84d579081b750d7985f783511df521a451988d1a86d41c9cb191",
+    "tests/test_briefcheck.py": "842a08e60d504d114fa27460777e7adba159c9df6ff8b512ee29428090ec3a35"
+  },
+  "red": {
+    "exit": 1,
+    "stdout_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "first_fail": "INVALID_ROOT_TRACEBACK",
+    "raw": "04_DEV_OPS/raw/red_v2.*"
+  },
+  "patch": {
+    "path": "04_DEV_OPS/patch_12prime.diff",
+    "sha256": "d785e3ee3cdcbb608c49dbf91baa044d112efcec961ff4010cf5c57733f725af"
+  },
+  "retest": {
+    "probe_exit": 0,
+    "suite_exit": 0,
+    "suite_stdout_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "commit": {
+    "exit": 0,
+    "head": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "subject": "candidate v3 (12'): invalid root fails closed as INVALID_PATH"
+  },
+  "write_set": [
+    "briefcheck.py",
+    "tests/test_briefcheck.py"
+  ],
+  "verdict": "PASS"
+}

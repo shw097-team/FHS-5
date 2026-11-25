@@ -1,0 +1,235 @@
+{
+  "schema": "FHS5.W0NF.ChallengeSmoke@1",
+  "mode": "smoke",
+  "claim_ceiling": "CHECKER_ROLE_SEPARATED_SAME_PRINCIPAL",
+  "checker_identity": "tools/challenge.py in a separate process over an isolated copy (no subject .git write); same OS principal",
+  "candidate": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "worktree": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\06_CHECKER\\smoke\\checker-wt",
+  "pins": {
+    "source": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+    "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "evidence": null,
+    "oracle": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+    "case_set": "9624e71d5eb33714619fee0b764abe091eb66995346404a8cd8d43e3ffec7512"
+  },
+  "checks": [
+    {
+      "id": "PACK-PINS",
+      "ok": true,
+      "observed": {
+        "pack_ok": true
+      }
+    },
+    {
+      "id": "CANDIDATE-PIN",
+      "ok": true,
+      "observed": {
+        "head": "bb66a276aae8c5d6aef549832c523587fc47d247",
+        "summary": "bb66a276aae8c5d6aef549832c523587fc47d247"
+      }
+    },
+    {
+      "id": "ORACLE-PIN",
+      "ok": true,
+      "observed": {
+        "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6"
+      }
+    },
+    {
+      "id": "FIX-case_ambiguous.md",
+      "ok": true,
+      "observed": {
+        "file": "case_ambiguous.md",
+        "sha": "01eb4f730a6abedf73cab7a23c309b734e52e255f23acc8883061987029dd221"
+      }
+    },
+    {
+      "id": "FIX-case_bad_path.md",
+      "ok": true,
+      "observed": {
+        "file": "case_bad_path.md",
+        "sha": "66da16f375f3eed88719783f0128c22102440d6a390ded73c865ef2780c18f31"
+      }
+    },
+    {
+      "id": "FIX-case_bad_utf8.md",
+      "ok": true,
+      "observed": {
+        "file": "case_bad_utf8.md",
+        "sha": "551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313"
+      }
+    },
+    {
+      "id": "FIX-case_dup.md",
+      "ok": true,
+      "observed": {
+        "file": "case_dup.md",
+        "sha": "bb62042e22a0d3ffd1310a2b19a2917d22114a6b726bd0fee88429de7ef2d4ee"
+      }
+    },
+    {
+      "id": "FIX-case_malformed.md",
+      "ok": true,
+      "observed": {
+        "file": "case_malformed.md",
+        "sha": "9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508"
+      }
+    },
+    {
+      "id": "FIX-case_missing.md",
+      "ok": true,
+      "observed": {
+        "file": "case_missing.md",
+        "sha": "eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019"
+      }
+    },
+    {
+      "id": "FIX-case_ok.md",
+      "ok": true,
+      "observed": {
+        "file": "case_ok.md",
+        "sha": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece"
+      }
+    },
+    {
+      "id": "SUITE",
+      "ok": true,
+      "observed": {
+        "exit": 0,
+        "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "id": "MUTANT-DETECTABLE",
+      "ok": true,
+      "observed": {
+        "mutant_exit": 0,
+        "expected_for_good_candidate": 3,
+        "note": "a fail-open mutant must not match the oracle"
+      }
+    },
+    {
+      "id": "CASE-case_ok.md",
+      "ok": true,
+      "observed": {
+        "exit": 0,
+        "status": "COMPLETE"
+      }
+    },
+    {
+      "id": "CASE-case_missing.md",
+      "ok": true,
+      "observed": {
+        "exit": 2,
+        "status": "MISSING"
+      }
+    },
+    {
+      "id": "CASE-case_dup.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "status": "INVALID_DUP"
+      }
+    },
+    {
+      "id": "CASE-case_ambiguous.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "status": "INVALID_FORMAT"
+      }
+    },
+    {
+      "id": "CASE-case_malformed.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "status": "INVALID_FORMAT"
+      }
+    },
+    {
+      "id": "CASE-case_bad_utf8.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "status": "INVALID_ENCODING"
+      }
+    },
+    {
+      "id": "SHA-MISMATCH",
+      "ok": true,
+      "observed": {
+        "exit": 3
+      }
+    },
+    {
+      "id": "PATH-dd",
+      "ok": true,
+      "observed": {
+        "exit": 3
+      }
+    },
+    {
+      "id": "PATH-abs",
+      "ok": true,
+      "observed": {
+        "exit": 3
+      }
+    },
+    {
+      "id": "PATH-unc",
+      "ok": true,
+      "observed": {
+        "exit": 3
+      }
+    },
+    {
+      "id": "PATH-jct",
+      "ok": true,
+      "observed": {
+        "exit": 3
+      }
+    },
+    {
+      "id": "NO-WRITE",
+      "ok": true,
+      "observed": {
+        "candidate_changed": false,
+        "oracle_changed": false
+      }
+    },
+    {
+      "id": "NO-GIT-WRITE",
+      "ok": true,
+      "observed": {
+        "before": {
+          "HEAD": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+          "index": "e0790a50b96afd0f1fb7a3e81a00ee597c65dac118fa1d21dbb1f53f1cff44d5",
+          "worktrees": []
+        },
+        "after": {
+          "HEAD": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+          "index": "e0790a50b96afd0f1fb7a3e81a00ee597c65dac118fa1d21dbb1f53f1cff44d5",
+          "worktrees": []
+        }
+      }
+    }
+  ],
+  "findings": [],
+  "not_verified": [
+    {
+      "id": "PATH-symlink",
+      "reason": "symlink privilege"
+    }
+  ],
+  "verdict": "PASS",
+  "symlink_tested": false,
+  "not_covered": [
+    "full C16/EC-36/local47",
+    "different-principal independence",
+    "HERMES/GPT host execution",
+    "release",
+    "symlink creation (OS privilege); junction tested"
+  ]
+}

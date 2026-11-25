@@ -1,0 +1,6 @@
+{
+  "contracts": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\03_PARTIES\\tpm\\tpm_gate.json",
+  "dev_patch": "PASS",
+  "challenge_checks": true,
+  "far_raw_finding": true
+}

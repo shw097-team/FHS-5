@@ -1,0 +1,1 @@
+{"controls": [{"got": true, "name": "detect_registry", "ok": true, "want": true}], "controls_ok": true, "exit": 0, "observed": {"no_registry_symbols": true, "ops_verdict": "PASS"}, "status": "EFFECT_OK"}

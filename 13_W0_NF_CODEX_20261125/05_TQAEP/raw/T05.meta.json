@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\policy_cli.py",
+    "--case",
+    "T05",
+    "--pack",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+    "--requested",
+    "C:\\Users\\user\\Downloads\\FHS-5"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root",
+  "exit": 3,
+  "stdout_sha256": "4658818e2119291171895a59366c47f39f3633140b902dc5d9f663fbe1690885",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T05:18:34+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "case": "SAMPLE-R7",
+  "fixture": "case_ambiguous.md",
+  "expected": {
+    "exit": 3,
+    "status": "INVALID_FORMAT"
+  }
+}

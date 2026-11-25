@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-c",
+    "import sys, json; import briefcheck; print(json.dumps(sorted(m for m in sys.modules if not m.startswith('_'))))"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "exit": 0,
+  "stdout_sha256": "70a28521de72c3ddb41a11a42ff8fcb23562319935d31f7097d74f1dbf2c2465",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T05:18:19+00:00"
+}

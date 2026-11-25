@@ -1,0 +1,17 @@
+test_r10_reversible_output (test_briefcheck.BriefcheckTests.test_r10_reversible_output) ... ok
+test_r11_missing_root (test_briefcheck.BriefcheckTests.test_r11_missing_root) ... ok
+test_r12_root_is_file (test_briefcheck.BriefcheckTests.test_r12_root_is_file) ... ok
+test_r1_ok (test_briefcheck.BriefcheckTests.test_r1_ok) ... ok
+test_r2_missing_b (test_briefcheck.BriefcheckTests.test_r2_missing_b) ... ok
+test_r3_duplicate_a (test_briefcheck.BriefcheckTests.test_r3_duplicate_a) ... ok
+test_r4_path_escape (test_briefcheck.BriefcheckTests.test_r4_path_escape) ... ok
+test_r5_bad_utf8 (test_briefcheck.BriefcheckTests.test_r5_bad_utf8) ... ok
+test_r6_hash_mismatch (test_briefcheck.BriefcheckTests.test_r6_hash_mismatch) ... ok
+test_r7_ambiguous (test_briefcheck.BriefcheckTests.test_r7_ambiguous) ... ok
+test_r8_malformed (test_briefcheck.BriefcheckTests.test_r8_malformed) ... ok
+test_r9_stable (test_briefcheck.BriefcheckTests.test_r9_stable) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.414s
+
+OK

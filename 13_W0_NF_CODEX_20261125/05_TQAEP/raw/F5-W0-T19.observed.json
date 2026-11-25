@@ -1,0 +1,11 @@
+{
+  "no_raw": {
+    "exit": 3,
+    "status": "FALSE_CLOSE",
+    "reason": "no raw evidence"
+  },
+  "with_raw": {
+    "exit": 0,
+    "status": "CLOSE_PERMITTED"
+  }
+}

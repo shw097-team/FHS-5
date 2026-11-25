@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\created-by-me-remote\\plp-tpm-review\\1.0.1\\scripts\\review_core.py",
+    "--request",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\03_PARTIES\\tpm\\review-request.json",
+    "--input-root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\03_PARTIES\\tpm\\input",
+    "--outroot",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\03_PARTIES\\tpm\\review"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+  "exit": 0,
+  "stdout_sha256": "f2f4ae1b7e7f4287f4a1b5a7555ffe641275a3d0b8980f2bc5a941a4d5336c91",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T04:57:27+00:00"
+}

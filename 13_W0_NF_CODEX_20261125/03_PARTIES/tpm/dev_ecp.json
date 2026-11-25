@@ -1,0 +1,39 @@
+{
+  "contract": "DEV_ECP",
+  "contract_id": "FHS5-W0NF-DEV-20261125-01",
+  "pd_ref": "FHS5-W0NF-PD-20261125-01",
+  "sample": "briefcheck",
+  "argv": [
+    "python",
+    "-m",
+    "briefcheck",
+    "--root",
+    "<root>",
+    "--input",
+    "<rel>",
+    "--sha256",
+    "<sha>"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "env": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONPATH": "<candidate repo>"
+  },
+  "timeout_s": 30,
+  "expected": {
+    "0": "COMPLETE",
+    "2": "MISSING",
+    "3": "INVALID_* / SHA_MISMATCH"
+  },
+  "write_set": [
+    "briefcheck.py",
+    "tests/test_briefcheck.py"
+  ],
+  "rollback": "git checkout -- <write-set paths> to the frozen preimage commit; no source overwrite",
+  "source_refs": [
+    {
+      "path": "02_CANDIDATE/repo/requirements.md",
+      "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "FHS5.W0NF.ConsumerManifest@1",
+  "consumer_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\consumer_receipt.json",
+  "consumer_receipt_sha256": "6916cf421653f6640821d40917da3e18597428638886e4c9b6c66b7dd4809be0",
+  "evidence_manifest": "10_EVIDENCE\\EVIDENCE_MANIFEST.json",
+  "evidence_manifest_sha256": "34e4f85515e3bcda2979acfcc532b457ebb3a3772c7d9f0afa8c29fadafe21f1",
+  "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "consumed": true,
+  "wrong_pin_refused": true,
+  "raw": {
+    "consumer_neg.meta.json": "f7ac597ba6e967d59f6acd70bb93e84ab7c1d18a16e322aa81fc8b516d5f66fd",
+    "consumer_neg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "consumer_neg.stdout.txt": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
+    "consumer_pos.meta.json": "2be6fedb64452f7898d31c0475611de8232fa1746fc5efe38f716bdc9a775c67",
+    "consumer_pos.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "consumer_pos.stdout.txt": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33"
+  }
+}

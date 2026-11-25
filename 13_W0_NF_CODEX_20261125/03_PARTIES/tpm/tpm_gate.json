@@ -1,0 +1,105 @@
+{
+  "schema": "FHS5.W0NF.TPMGate@1",
+  "generated_at": "2026-11-25T04:57:27+00:00",
+  "pack": {
+    "manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+    "pack_version": "W0-NF-r3-CODEX-PRIMARY",
+    "files": [
+      {
+        "path": "00_W0_PI_PD.md",
+        "sha256": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11",
+        "bytes": 31783,
+        "declared_sha256": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11",
+        "declared_bytes": 31783,
+        "ok": true
+      },
+      {
+        "path": "01_W0_DEV_ECP.md",
+        "sha256": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6",
+        "bytes": 11556,
+        "declared_sha256": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6",
+        "declared_bytes": 11556,
+        "ok": true
+      },
+      {
+        "path": "02_W0_OPS_ECP.md",
+        "sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747",
+        "bytes": 11075,
+        "declared_sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747",
+        "declared_bytes": 11075,
+        "ok": true
+      },
+      {
+        "path": "03_W0_TQAEP.md",
+        "sha256": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb",
+        "bytes": 13805,
+        "declared_sha256": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb",
+        "declared_bytes": 13805,
+        "ok": true
+      },
+      {
+        "path": "04_W0_START_THIN_PROMPT.md",
+        "sha256": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554",
+        "bytes": 7780,
+        "declared_sha256": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554",
+        "declared_bytes": 7780,
+        "ok": true
+      }
+    ],
+    "all_ok": true,
+    "s33_sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5"
+  },
+  "repo": {
+    "repo_root": "C:/Projects/Agent_Workspace/FHS-5_Workspace/13_W0_NF_CODEX_20261125/02_CANDIDATE/repo",
+    "head": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "branch": "master",
+    "dirty_entries": [
+      "?? __pycache__/briefcheck.cpython-311.pyc"
+    ],
+    "clean": false
+  },
+  "contracts": {
+    "pi": "43ea6ea2093bc9ebb6a82c8cc189b5d360f3ae6332e227018a2ad25d88b60e52",
+    "pd": "01de8c3032da4f8191884d6642977ad496136967420e7fbfa183c2256b4e8961",
+    "dev_ecp": "72e37bf93b2b214ed7642deae310a3aca08eec6bf1764234680d561830222a68",
+    "ops_ecp": "241538cd949e6aeacd07f55550fa7af7aa8fcfbd99030f14210898e3ad9274a8"
+  },
+  "gates": {
+    "missing_b": {
+      "gate": "G-MISSING-B",
+      "exit": 2,
+      "status": "REQUIRED_CHILD_MISSING",
+      "missing": [
+        "B"
+      ],
+      "parent_verdict": "FAIL"
+    },
+    "source_positive": {
+      "gate": "G-NO-SOURCE",
+      "exit": 0,
+      "status": "SOURCE_BOUND",
+      "admitted": true
+    },
+    "source_negative": {
+      "gate": "G-NO-SOURCE",
+      "exit": 3,
+      "status": "SOURCE_UNBOUND",
+      "admitted": false
+    }
+  },
+  "reviewer": {
+    "exit": 0,
+    "stdout": {
+      "state": "REVIEW_SOURCE_LOCATED_ONLY",
+      "authority_state": "UNBOUND",
+      "defects": 0,
+      "unbound": 10,
+      "output": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\03_PARTIES\\tpm\\review\\review-72c6899e5542dc194cd82657",
+      "claim_ceiling": "AUTHOR_DESIGN_ONLY",
+      "original_acceptance": "NOT_ASSERTED",
+      "review_design_state": "EXTERNAL_READER_UNBOUND"
+    },
+    "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "claim_ceiling": "AUTHOR_DESIGN_ONLY"
+  }
+}

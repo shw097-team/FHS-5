@@ -1,0 +1,13 @@
+{
+  "case": "SAMPLE-R1",
+  "fixture": "case_ok.md",
+  "expected": {
+    "exit": 0,
+    "status": "COMPLETE",
+    "provided": [
+      "A",
+      "B"
+    ],
+    "missing": []
+  }
+}

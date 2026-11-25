@@ -1,0 +1,6 @@
+{
+  "exit": 3,
+  "status": "NO_DELTA_REWRITE_DENIED",
+  "allowed_attempts": 1,
+  "held": true
+}

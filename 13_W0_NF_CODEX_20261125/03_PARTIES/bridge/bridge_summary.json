@@ -1,0 +1,74 @@
+{
+  "schema": "FHS5.W0NF.BridgeRun@1",
+  "impl": "REUSE 11_W1_EXECUTION_20261124/impl/w1_bridge_reference.py (copied)",
+  "bridge_sha256": "dc0d1041a473a96493c887f279f75dcc1eca077c39242de47faffd44e12050a8",
+  "package": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\03_PARTIES\\bridge\\package",
+  "package_manifest_sha256": "e0aa76d1d1b943badf0cbeb96fdd446e23ac791b4bea15dc336b648399624e1f",
+  "results": {
+    "inspect": {
+      "exit": 0,
+      "stdout_sha": "4cc553cef9af7f8f896cf53986ff7dd03f43058982de658df983e1ef30f9a3fd"
+    },
+    "inspect_counts": {
+      "declared": 24,
+      "actual": 25,
+      "missing": 0,
+      "mismatched": 0,
+      "undeclared": 0,
+      "sources": 6,
+      "cases": 9,
+      "primary_manifest_entries": 0,
+      "primary_manifest_matches": 0,
+      "primary_manifest_mismatched": 0
+    },
+    "explain": {
+      "exit": 0,
+      "stdout_sha": "60c68824e38d2e7708ce76ba1f5d26ef1b4cb83c85c8d0ec54164903d3094c5d"
+    },
+    "explain_missing": [],
+    "explain_cases": 9,
+    "render": {
+      "exit": 0,
+      "stdout_sha": "1b651d7645023f042ad0c36bf1431f0f69a3e4b6394ae32650e7e39dbd9a18f2"
+    },
+    "render_context_sha": "3003b44cf1eac48aae09d81402f4583c331b1b80f12a4937d6a62f78249795cf",
+    "compare": {
+      "exit": 0,
+      "stdout_sha": "888208e129383b6eaaa26b0ed24cdf7b941f8bbde91dccb80e5c561d8e89caa5"
+    },
+    "compare_changed": [
+      "cases/case_ok.md"
+    ],
+    "path_escape": {
+      "exit": 0,
+      "codes": [
+        "PATH_OUTSIDE_ROOT"
+      ],
+      "mismatched": 1,
+      "refused": true
+    },
+    "scope_drift": {
+      "exit": 0,
+      "stdout": "SCOPE_DENIED",
+      "refused": true
+    },
+    "cross_subject": {
+      "exit": 2,
+      "stderr": ""
+    }
+  },
+  "reconciliation_notes": [
+    "declared excludes PACKAGE_FILE_MANIFEST.json itself; actual includes it, so actual = declared + 1.",
+    "primary_manifest is null because this W0 view has no W1 primary manifest; primary_manifest_entries=0 is expected, not a silent pass."
+  ],
+  "security": {
+    "path_escape_refused": true,
+    "scope_drift_refused": true,
+    "cross_subject_refused": true
+  },
+  "claim_ceiling": "AUTHOR_REFERENCE_IMPL_REUSED; NOT W1 38+28 DENOMINATOR",
+  "not_covered": [
+    "Bridge 38+28 full denominator",
+    "Host install/register/invoke"
+  ]
+}

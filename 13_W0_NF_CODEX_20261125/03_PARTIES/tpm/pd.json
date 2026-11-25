@@ -1,0 +1,37 @@
+{
+  "contract": "PD",
+  "contract_id": "FHS5-W0NF-PD-20261125-01",
+  "pi_ref": "FHS5-W0NF-PI-20261125-01",
+  "repo_context": {
+    "repo_root": "C:/Projects/Agent_Workspace/FHS-5_Workspace/13_W0_NF_CODEX_20261125/02_CANDIDATE/repo",
+    "head": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "branch": "master",
+    "dirty_entries": [
+      "?? __pycache__/briefcheck.cpython-311.pyc"
+    ],
+    "clean": false
+  },
+  "capability": {
+    "python": "3.11.9",
+    "git": "git version 2.53.0.windows.1",
+    "sandbox": "CODEX workspace sandbox; writes confined to authorized engineering root"
+  },
+  "write_set": [
+    {
+      "path": "briefcheck.py",
+      "change": "modified",
+      "preimage": "8f51ca0d8dae84d579081b750d7985f783511df521a451988d1a86d41c9cb191"
+    },
+    {
+      "path": "tests/test_briefcheck.py",
+      "change": "modified",
+      "preimage": "842a08e60d504d114fa27460777e7adba159c9df6ff8b512ee29428090ec3a35"
+    }
+  ],
+  "baseline": {
+    "head": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "branch": "master",
+    "clean": false
+  },
+  "claim_ceiling": "LOCAL_CODEX_SCOPED_CONSTRUCTION"
+}

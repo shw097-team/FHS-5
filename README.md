@@ -1,6 +1,8 @@
-# FHS-5｜Current: B0-NF CODEX-first
+# FHS-5｜Current: W0-NF CODEX-first validated
 
-最新交付：12_B0_NF_CODEX/README.md（W0-NF-r3-CODEX-PRIMARY、B0 five-party evidence、W0 closeout）。
+最新交付：`13_W0_NF_CODEX_20261125`（B0_NF_VALIDATED／W0_NF_VALIDATED；44 receipts；Challenge 31 checks）與 final delivery 目錄 `10_FINAL_DELIVERY/FHS-5_PLP_W0_NF_CODEX_20261125_01`。
+
+歷史：`12_B0_NF_CODEX`（B0 representative／W0 partial）。
 
 ---
 
@@ -57,3 +59,4 @@ This is the owner-authorized **public reference export** of the FHS-5_PLP W0 exe
 - T4/T5 formal transition is `HOLD_CR-DOC04-STATE-MAP`.
 - This repository is not a license grant or original acceptance; see `NOTICE.md`.
 - No credentials, raw ACLs, or raw external path inventories are included.
+

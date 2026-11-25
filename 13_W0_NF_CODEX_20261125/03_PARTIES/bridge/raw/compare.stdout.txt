@@ -1,0 +1,19 @@
+{
+  "schema": "FHS5.PLP.W1.CompareContext@author-reference-1",
+  "claim_ceiling": "AUTHOR_REFERENCE_IMPL_ONLY",
+  "comparable": true,
+  "subject_id": "FHS-5_PLP/W0",
+  "scope": "FHS-5/W0/B0-NF",
+  "added": [],
+  "removed": [],
+  "changed": [
+    {
+      "path": "cases/case_ok.md",
+      "before_sha256": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+      "after_sha256": "50f2a394639a26410ef05fafe688520e9b8a815673825862f9acb72591a0367e"
+    }
+  ],
+  "exact_tuple": true,
+  "semantic_inference": false,
+  "state": "AUTHOR_LOCAL_COMPARE_ONLY"
+}

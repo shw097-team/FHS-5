@@ -1,0 +1,277 @@
+{
+  "schema": "FHS5.W0NF.Ops@1",
+  "generated_at": "2026-11-25T05:18:19+00:00",
+  "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "host": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "git": {
+      "argv": [
+        "git",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "git version 2.53.0.windows.1",
+      "stderr": ""
+    },
+    "codex": {
+      "argv": [
+        "codex",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "codex-cli 0.169.0-alpha.11.1",
+      "stderr": ""
+    },
+    "host_ref": "CODEX-LOCAL-dab97dce04ed",
+    "principal_ref": "principal-12dc3e86dd73445f",
+    "policy": "FHS5-CODEX-FIRST-2026-11-25",
+    "sandbox_roots": [
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125"
+    ],
+    "hermes": "HOST_SERVING_UNVERIFIED (compatibility only; not a W0 gate)"
+  },
+  "steps": {
+    "O1_probe": {
+      "os": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.9",
+      "git": {
+        "argv": [
+          "git",
+          "--version"
+        ],
+        "exit": 0,
+        "stdout": "git version 2.53.0.windows.1",
+        "stderr": ""
+      },
+      "codex": {
+        "argv": [
+          "codex",
+          "--version"
+        ],
+        "exit": 0,
+        "stdout": "codex-cli 0.169.0-alpha.11.1",
+        "stderr": ""
+      },
+      "host_ref": "CODEX-LOCAL-dab97dce04ed",
+      "principal_ref": "principal-12dc3e86dd73445f",
+      "policy": "FHS5-CODEX-FIRST-2026-11-25",
+      "sandbox_roots": [
+        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125"
+      ],
+      "hermes": "HOST_SERVING_UNVERIFIED (compatibility only; not a W0 gate)"
+    },
+    "O2_cli": {
+      "pos": {
+        "exit": 0,
+        "stdout_sha": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33",
+        "verdict": "EFFECT_VERIFIED"
+      },
+      "neg": {
+        "exit": 2,
+        "stdout_sha": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
+        "verdict": "EFFECT_VERIFIED"
+      }
+    },
+    "O3_output": {
+      "before_absent": true,
+      "after_sha": "9a76c7e7457283d67bd32adf875f7bafa21bc9b032b039be4c0ef71320c06039",
+      "after_bytes": 141,
+      "source_unchanged": true,
+      "readback": {
+        "missing": [],
+        "provided": [
+          "A",
+          "B"
+        ],
+        "source_sha256": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+        "status": "COMPLETE"
+      },
+      "verdict": "PASS"
+    },
+    "O4_restore": {
+      "restored_absent": true,
+      "source_sha": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+      "verdict": "PASS"
+    },
+    "O5_off": {
+      "import_trace": {
+        "exit": 0,
+        "stdout": "{\"missing\":[],\"provided\":[\"A\",\"B\"],\"source_sha256\":\"9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece\",\"status\":\"COMPLETE\"}",
+        "modules": [
+          "_abc",
+          "_blake2",
+          "_bz2",
+          "_codecs",
+          "_codecs_tw",
+          "_collections",
+          "_collections_abc",
+          "_compression",
+          "_distutils_hack",
+          "_frozen_importlib_external",
+          "_functools",
+          "_hashlib",
+          "_io",
+          "_json",
+          "_locale",
+          "_lzma",
+          "_multibytecodec",
+          "_operator",
+          "_signal",
+          "_sitebuiltins",
+          "_sre",
+          "_stat",
+          "_weakrefset",
+          "_winapi",
+          "abc",
+          "argparse",
+          "bz2",
+          "codecs",
+          "collections",
+          "contextlib",
+          "copyreg",
+          "encodings",
+          "encodings.aliases",
+          "encodings.cp950",
+          "encodings.utf_8",
+          "enum",
+          "errno",
+          "fnmatch",
+          "functools",
+          "genericpath",
+          "gettext",
+          "hashlib",
+          "importlib",
+          "importlib._abc",
+          "importlib.machinery",
+          "importlib.util",
+          "io",
+          "ipaddress",
+          "itertools",
+          "json",
+          "json.decoder",
+          "json.encoder",
+          "json.scanner",
+          "keyword",
+          "locale",
+          "lzma",
+          "marshal",
+          "nt",
+          "ntpath",
+          "operator",
+          "os",
+          "pathlib",
+          "posix",
+          "posixpath",
+          "re",
+          "re._casefix",
+          "re._compiler",
+          "re._constants",
+          "re._parser",
+          "reprlib",
+          "runpy",
+          "shutil",
+          "site",
+          "sitecustomize",
+          "stat",
+          "threading",
+          "time",
+          "types",
+          "urllib",
+          "urllib.parse",
+          "usercustomize",
+          "warnings",
+          "winreg",
+          "zipimport",
+          "zlib"
+        ],
+        "legacy_imports": [],
+        "raw": {
+          "stdout": "04_DEV_OPS\\raw\\o5_clean.stdout.txt",
+          "stderr": "04_DEV_OPS\\raw\\o5_clean.stderr.txt",
+          "meta": "04_DEV_OPS\\raw\\o5_clean.meta.json"
+        }
+      },
+      "module_list": {
+        "modules": [
+          "abc",
+          "argparse",
+          "briefcheck",
+          "builtins",
+          "codecs",
+          "collections",
+          "copyreg",
+          "encodings",
+          "encodings.aliases",
+          "encodings.cp950",
+          "encodings.utf_8",
+          "enum",
+          "errno",
+          "fnmatch",
+          "functools",
+          "genericpath",
+          "gettext",
+          "hashlib",
+          "io",
+          "ipaddress",
+          "itertools",
+          "json",
+          "json.decoder",
+          "json.encoder",
+          "json.scanner",
+          "keyword",
+          "marshal",
+          "nt",
+          "ntpath",
+          "operator",
+          "os",
+          "os.path",
+          "pathlib",
+          "posixpath",
+          "re",
+          "re._casefix",
+          "re._compiler",
+          "re._constants",
+          "re._parser",
+          "reprlib",
+          "site",
+          "stat",
+          "sys",
+          "time",
+          "types",
+          "urllib",
+          "urllib.parse",
+          "warnings",
+          "winreg",
+          "zipimport"
+        ],
+        "legacy_modules": [],
+        "exit": 0
+      },
+      "marked_run_exit": 0,
+      "parity": true,
+      "detector_control": true,
+      "detector_control_modules": [
+        "hgk_core"
+      ],
+      "legacy_modules": [],
+      "verdict": "PASS"
+    },
+    "O6_consumer": {
+      "state": "PENDING_FINAL_HANDOFF",
+      "note": "final consumer readback runs after CLOSEOUT/HANDOFF"
+    }
+  },
+  "legacy_imports": [],
+  "impure_modules": [],
+  "parity": true,
+  "parity_meaning": "environment-marker invariance; NOT an ON/OFF code branch",
+  "detector_control": true,
+  "verdict": "PASS",
+  "not_claimed": [
+    "EXTERNAL_GRANT",
+    "OS_ADMIN",
+    "PUBLISHER_RELEASE",
+    "HERMES_COMPATIBILITY_PASS"
+  ]
+}

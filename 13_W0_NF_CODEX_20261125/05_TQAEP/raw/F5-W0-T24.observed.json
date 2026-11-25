@@ -1,0 +1,15 @@
+{
+  "generic": {
+    "exit": 0,
+    "status": "GENERIC_OK",
+    "full_485": "DEFER"
+  },
+  "fhs": {
+    "exit": 3,
+    "status": "PROFILE_GATE_DRIFT",
+    "missing_ids": [
+      "FHS-02"
+    ],
+    "full_485": "DEFER"
+  }
+}

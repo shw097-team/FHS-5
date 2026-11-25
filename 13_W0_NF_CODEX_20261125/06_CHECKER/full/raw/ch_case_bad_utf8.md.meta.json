@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-m",
+    "briefcheck",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\06_CHECKER\\full\\root",
+    "--input",
+    "case_bad_utf8.md",
+    "--sha256",
+    "551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\06_CHECKER\\full\\root",
+  "exit": 3,
+  "stdout_sha256": "19cb4d93561216312bae565f2534ace85063b079ec808202b206946fa03c12ee",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T05:43:09+00:00"
+}

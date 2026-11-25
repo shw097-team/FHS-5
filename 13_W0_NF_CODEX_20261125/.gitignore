@@ -1,0 +1,10 @@
+05_TQAEP/tmp/
+02_CANDIDATE/repo/
+06_CHECKER/*/checker-wt/
+06_CHECKER/*/mutant/
+06_CHECKER/*/mut_root/
+06_CHECKER/*/root/
+06_CHECKER/*/outside/
+**/__pycache__/
+*.pyc
+07_CONSUMER/tmp/

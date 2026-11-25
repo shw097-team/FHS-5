@@ -1,0 +1,107 @@
+{
+  "run_id": "F5-W0-T06-20261125T134200",
+  "case_id": "F5-W0-T06",
+  "candidate_ref": "02_CANDIDATE/repo",
+  "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "source_refs": [
+    {
+      "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "path": "02_CANDIDATE/repo/requirements.md",
+      "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ],
+  "fixture_sha": null,
+  "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "argv": [
+    "python",
+    "tools/tqaep_run.py",
+    "--case",
+    "F5-W0-T06"
+  ],
+  "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+  "exit": 3,
+  "stdout_sha": "d0a1ba03e623e36373804561f9b84d092166616e3a96d86de631d61fb8cfabd2",
+  "stderr_sha": null,
+  "pre_state": null,
+  "post_state": null,
+  "recovery_ref": null,
+  "expected": {
+    "exit": 3,
+    "status": "INVALID_PATH",
+    "no_canary_leak": true
+  },
+  "observed": {
+    "dotdot": {
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "ok": true,
+      "leak": false,
+      "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+    },
+    "absolute": {
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "ok": true,
+      "leak": false,
+      "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+    },
+    "unc": {
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "ok": true,
+      "leak": false,
+      "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+    },
+    "junction": {
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "ok": true,
+      "leak": false,
+      "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+    }
+  },
+  "verdict": "PASS",
+  "first_fail": "",
+  "checker_identity": "maker-run; independent check in 06_CHECKER",
+  "consumer_ref": null,
+  "not_covered": [
+    "symlink creation refused by OS privilege"
+  ],
+  "junction_tested": true,
+  "symlink_tested": false,
+  "execution_kind": "composite-path-suite",
+  "sub_runs": {
+    "dotdot": {
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "ok": true,
+      "leak": false,
+      "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+    },
+    "absolute": {
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "ok": true,
+      "leak": false,
+      "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+    },
+    "unc": {
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "ok": true,
+      "leak": false,
+      "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+    },
+    "junction": {
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "ok": true,
+      "leak": false,
+      "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+    }
+  }
+}

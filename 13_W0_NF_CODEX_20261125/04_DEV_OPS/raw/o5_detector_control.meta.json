@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-X",
+    "importtime",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\detector_control\\ctrl_probe.py"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\detector_control",
+  "exit": 0,
+  "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+  "stderr_sha256": "8f633695bd4ca6e23f952421a50af61d84f122e341d56d16101d867fa2290a01",
+  "timestamp": "2026-11-25T05:18:19+00:00"
+}

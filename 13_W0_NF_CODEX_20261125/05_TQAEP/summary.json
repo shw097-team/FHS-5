@@ -1,0 +1,290 @@
+{
+  "schema": "FHS5.W0NF.TQAEPResult@1",
+  "generated_at": "2026-11-25T05:42:04+00:00",
+  "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+  "case_set_sha": "9624e71d5eb33714619fee0b764abe091eb66995346404a8cd8d43e3ffec7512",
+  "receipts_index_sha": "7f28891cb8ab94261ff3eec82c4f2ef4cf9a371dcf56451ff98edb032cc6c31b",
+  "fixtures": {
+    "junction_ok": true,
+    "junction_detail": "Junction created for C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root\\escape_dir <<===>> C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQA",
+    "symlink_ok": false
+  },
+  "counts": {
+    "total": 44,
+    "pass": 44,
+    "fail": 0
+  },
+  "cases": [
+    {
+      "case_id": "SAMPLE-R1",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R1.json"
+    },
+    {
+      "case_id": "SAMPLE-R2",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R2.json"
+    },
+    {
+      "case_id": "SAMPLE-R3",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R3.json"
+    },
+    {
+      "case_id": "SAMPLE-R5",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R5.json"
+    },
+    {
+      "case_id": "SAMPLE-R6",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R6.json"
+    },
+    {
+      "case_id": "SAMPLE-R7",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R7.json"
+    },
+    {
+      "case_id": "SAMPLE-R8",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R8.json"
+    },
+    {
+      "case_id": "SAMPLE-R9",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R9.json"
+    },
+    {
+      "case_id": "SAMPLE-R10",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R10.json"
+    },
+    {
+      "case_id": "SAMPLE-R4",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/SAMPLE-R4.json"
+    },
+    {
+      "case_id": "F5-W0-T01",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T01.json"
+    },
+    {
+      "case_id": "F5-W0-T02",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T02.json"
+    },
+    {
+      "case_id": "F5-W0-T03",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T03.json"
+    },
+    {
+      "case_id": "F5-W0-T04",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T04.json"
+    },
+    {
+      "case_id": "F5-W0-T05",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T05.json"
+    },
+    {
+      "case_id": "F5-W0-T06",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T06.json"
+    },
+    {
+      "case_id": "F5-W0-T07",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T07.json"
+    },
+    {
+      "case_id": "F5-W0-T08",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T08.json"
+    },
+    {
+      "case_id": "F5-W0-T09",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T09.json"
+    },
+    {
+      "case_id": "F5-W0-T10",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T10.json"
+    },
+    {
+      "case_id": "F5-W0-T11",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T11.json"
+    },
+    {
+      "case_id": "F5-W0-T12",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T12.json"
+    },
+    {
+      "case_id": "F5-W0-T13",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T13.json"
+    },
+    {
+      "case_id": "F5-W0-T14",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T14.json"
+    },
+    {
+      "case_id": "F5-W0-T15",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T15.json"
+    },
+    {
+      "case_id": "F5-W0-T16",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T16.json"
+    },
+    {
+      "case_id": "F5-W0-T17",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T17.json"
+    },
+    {
+      "case_id": "F5-W0-T18",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T18.json"
+    },
+    {
+      "case_id": "F5-W0-T19",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T19.json"
+    },
+    {
+      "case_id": "F5-W0-T20",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T20.json"
+    },
+    {
+      "case_id": "F5-W0-T21",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T21.json"
+    },
+    {
+      "case_id": "F5-W0-T22",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T22.json"
+    },
+    {
+      "case_id": "F5-W0-T23",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T23.json"
+    },
+    {
+      "case_id": "F5-W0-T24",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/F5-W0-T24.json"
+    },
+    {
+      "case_id": "NF-T01",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T01.json"
+    },
+    {
+      "case_id": "NF-T02",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T02.json"
+    },
+    {
+      "case_id": "NF-T03",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T03.json"
+    },
+    {
+      "case_id": "NF-T04",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T04.json"
+    },
+    {
+      "case_id": "NF-T05",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T05.json"
+    },
+    {
+      "case_id": "NF-T06",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T06.json"
+    },
+    {
+      "case_id": "NF-T07",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T07.json"
+    },
+    {
+      "case_id": "NF-T08",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T08.json"
+    },
+    {
+      "case_id": "NF-T09",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T09.json"
+    },
+    {
+      "case_id": "NF-T10",
+      "verdict": "PASS",
+      "first_fail": "",
+      "rec": "05_TQAEP/receipts/NF-T10.json"
+    }
+  ],
+  "not_covered": [
+    "full W1 38+28, C16/EC-36/local47, FARP30/local35, U26/QA26 denominators",
+    "FHS 485 full regression (DEFER)",
+    "HERMES/GPT host execution"
+  ]
+}

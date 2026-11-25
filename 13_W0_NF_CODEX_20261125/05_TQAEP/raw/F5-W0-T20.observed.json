@@ -1,0 +1,12 @@
+{
+  "new": {
+    "exit": 0,
+    "status": "REQUALIFY",
+    "action": "re-assess affected cone only"
+  },
+  "identical": {
+    "exit": 3,
+    "status": "NO_DELTA_REWRITE_DENIED",
+    "action": "HOLD"
+  }
+}

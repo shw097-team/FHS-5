@@ -1,0 +1,38 @@
+{
+  "schema": "FHS5.W0NF.GuideThinResume@1",
+  "state": "HOLD_NO_DELTA",
+  "exit": 0,
+  "message": "same source/candidate/evidence/FirstFail; no homogeneous redispatch",
+  "delta": {
+    "source_sha": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+    "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "evidence_sha": null,
+    "requirement_ids": [
+      "SAMPLE-R1",
+      "SAMPLE-R2",
+      "SAMPLE-R3",
+      "SAMPLE-R4",
+      "NF-R01"
+    ],
+    "case_ids": [
+      "F5-W0-T01",
+      "F5-W0-T03",
+      "F5-W0-T06",
+      "F5-W0-T13",
+      "NF-T01"
+    ],
+    "findings": [],
+    "next_action": "execute B0 current READY slice",
+    "stop_conditions": [
+      "pack digest mismatch",
+      "no write-set/preimage",
+      "path escape/secret",
+      "false permit"
+    ],
+    "not_covered": [
+      "HERMES/GPT host execution",
+      "full U26/QA26/38+28/C16 denominators",
+      "release"
+    ]
+  }
+}

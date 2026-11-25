@@ -1,0 +1,1 @@
+{"controls": [{"got": true, "name": "far_not_required", "ok": true, "want": true}], "controls_ok": true, "exit": 0, "observed": {"dev_verdict": "PASS", "far_used": false}, "status": "DIRECT_FIX_OK"}

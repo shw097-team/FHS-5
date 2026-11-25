@@ -1,0 +1,30 @@
+{
+  "dotdot": {
+    "exit": 3,
+    "status": "INVALID_PATH",
+    "ok": true,
+    "leak": false,
+    "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "absolute": {
+    "exit": 3,
+    "status": "INVALID_PATH",
+    "ok": true,
+    "leak": false,
+    "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "unc": {
+    "exit": 3,
+    "status": "INVALID_PATH",
+    "ok": true,
+    "leak": false,
+    "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "junction": {
+    "exit": 3,
+    "status": "INVALID_PATH",
+    "ok": true,
+    "leak": false,
+    "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  }
+}

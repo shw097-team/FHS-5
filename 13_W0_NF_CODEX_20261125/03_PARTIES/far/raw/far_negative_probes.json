@@ -1,0 +1,16 @@
+{
+  "no_raw": {
+    "exit": 3,
+    "status": "FALSE_CLOSE",
+    "reason": "no raw evidence"
+  },
+  "with_raw_in_scope": {
+    "exit": 0,
+    "status": "CLOSE_PERMITTED"
+  },
+  "out_of_scope": {
+    "exit": 3,
+    "status": "FALSE_CLOSE",
+    "reason": "outside owner scope"
+  }
+}
