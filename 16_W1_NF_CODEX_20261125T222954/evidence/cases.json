@@ -1,6 +1,6 @@
 {
   "schema": "FHS5.PLP.W1.CaseSummary@1",
-  "run_id": "20261125T222956",
+  "run_id": "20261125T224523",
   "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\control_pack\\FHS-5_PLP_W1_NATIVE_FIRST",
   "manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
   "total": 20,
@@ -38,7 +38,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -58,8 +58,8 @@
       },
       "exit": 0,
       "verdict": "NOT_OBSERVED",
-      "duration_ms": 109,
-      "raw_sha256": "6b3c87c81018037d89db6bda325802ee240b1853e9623f76296c1d28999675e6",
+      "duration_ms": 120,
+      "raw_sha256": "d9fbdadaffc75e7a5ba98371b9808bc1624b319506901e8fefc4f9231f8e56a4",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-HOST-01.json",
       "stdout_sha256": "56c59716bcc08eaeacd0150ca848b0908fe16fbf908e43f546bac7f428585490",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -93,7 +93,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -104,7 +104,7 @@
       "exit": 2,
       "verdict": "PASS",
       "duration_ms": 0,
-      "raw_sha256": "a82bd6e37678925cc4b4173a8a3aa06c937e453d81fceeff292e9b14d9d0c0fc",
+      "raw_sha256": "bcd64c2164cd32c8eb6702d44819aa6bf3a5599384cb038171851de20e078290",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-HOST-02.json",
       "stdout_sha256": "ada1355850d587813db462a5c68350c13de9821554348681d7565a648910b9ac",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -138,7 +138,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -149,7 +149,7 @@
       "exit": 2,
       "verdict": "PASS",
       "duration_ms": 0,
-      "raw_sha256": "3ab6f6d921ecba7139debba49043376c2e72f5ea88f1da27abb9ce09ea9b1323",
+      "raw_sha256": "7dd3821b180d348834d47aded975cf1e835e64bb79d96145c7667be4d3ee9e43",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-HOST-03.json",
       "stdout_sha256": "65c5852b1449dc3c74d9d9b8f84dda41f9c2a635eb4b562dd64d71003decce0b",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -173,7 +173,7 @@
       "reason": "Hermes host not mounted in this environment",
       "raw_sha256": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "note": "not executed: no fabricated exit or hash"
     },
     {
@@ -205,7 +205,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -216,7 +216,7 @@
       "exit": 2,
       "verdict": "PASS",
       "duration_ms": 0,
-      "raw_sha256": "45214a7e637a2aec6dc75de92866a49ae28ac654b8fda233c8defeedc2c5e095",
+      "raw_sha256": "42a0a13720a48238475cf5773da2c1991307d6cd37ed2ca9ee7dd32cfdf58f4f",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-ABI-01.json",
       "stdout_sha256": "241a77e6376bbbe1075d218d10cd21d1d0963e565a51624806da02278976929c",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -250,7 +250,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -261,7 +261,7 @@
       "exit": 2,
       "verdict": "PASS",
       "duration_ms": 0,
-      "raw_sha256": "b1c70f199a973633862376d2fa63007db8a156465460bef6f65319ab62922caf",
+      "raw_sha256": "2bd12a82c3d108edb9fe9a0e444d34e128e31a3ed8bd68c932da01ff16fa7829",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-ABI-02.json",
       "stdout_sha256": "c01305b7da68f3eb43dc8f8a129fdb6a5cbb19ee3f0f88238d15ac22015cd43a",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -296,7 +296,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -305,8 +305,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 70,
-      "raw_sha256": "b478ed9df434ef014652beb9d8e07e6d88cc0aab563a3fe5712735167ebe43c8",
+      "duration_ms": 83,
+      "raw_sha256": "ca9f2745918f1f7037deb4e6e2d1194f675c3de2ef3b2c42b8909bbe2f2394e2",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-SEC-01.json",
       "stdout_sha256": "09d04f0f364f0e52f2646ae7de34a525e391eb1b75f49614497faf29a14290b1",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -341,7 +341,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -351,8 +351,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 67,
-      "raw_sha256": "d2c074e69c25713b531e8bc22df481751b56bd959b4fc4e165ea6bea116ed21d",
+      "duration_ms": 87,
+      "raw_sha256": "829f18e18508c8feeee01f2f9237f5aab417dea54f55cfa17c7c54f28f88c1e8",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-API-01.json",
       "stdout_sha256": "d633c22ba55bc5e1442c6ae387626ccbdf4e4ef8143afa4d1c6a606cff7b2936",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -386,7 +386,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -411,7 +411,7 @@
       "exit": 0,
       "verdict": "PASS",
       "duration_ms": 0,
-      "raw_sha256": "628e522f8a9156f73edae2b857fb4cf60decaf7a7eb96f738dbba512c6e16cbc",
+      "raw_sha256": "478d3a9350fe6044170e42bfaac72df3a17b9b08c1ebd6fa9b3ebace35ed6d2e",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-R3-01.json",
       "stdout_sha256": "c236e364e4197c3bd508c4f2030dacc9fcfcf0eecb032108151dc1d38c77eb8e",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -445,7 +445,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -456,7 +456,7 @@
       "exit": 2,
       "verdict": "PASS",
       "duration_ms": 0,
-      "raw_sha256": "bc4c0d2d1e5c990f98ab0fc530ef7b768fa90e532ffd15b5c9ddd2e65797b2c5",
+      "raw_sha256": "be7804a205a733c0ac00d9f398795831282dfb77253861ca3f07c0ef973143b6",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-R3-02.json",
       "stdout_sha256": "5eda96f7bfd4f828eb9cc6c50cc3e2557c86c081d0b911e5b7a3330ec4f0fc36",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -490,20 +490,20 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
         "token": "ABI_LOSSY_CROSSWALK",
-        "detail": "dag/effect missing",
+        "detail": "dag missing",
         "matched_expected_token": true
       },
       "exit": 2,
       "verdict": "PASS",
       "duration_ms": 1,
-      "raw_sha256": "f7bd5a7d09d71940bbbbae91434acf9d7cb0a112a6359ae1becf5dcf15df2df6",
+      "raw_sha256": "f43ef3500a77281ab104d8220433bd07d843e49dedfa19114ad5047935e1e7fe",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-R3-03.json",
-      "stdout_sha256": "3c10e1e1716ce1dba7639e866cc69bce340a9163172d2819f84daa61982c8778",
+      "stdout_sha256": "34bc0972c685a091757b2d67a15a88b6bc3d7f5952dd9c0334fc0927fdb63fea",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
@@ -535,7 +535,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -545,8 +545,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 41,
-      "raw_sha256": "042830643c1388ae0a39db307bd8087ae2e3cc95f812abfc5311fb491a7f8093",
+      "duration_ms": 56,
+      "raw_sha256": "1a50c36498b5c20031c178d4232c15ee771bfe86c2185f3d8f807e5d12d3f9bb",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-R3-04.json",
       "stdout_sha256": "6baab9d923a89cdc20f7ebf201f028f3b3cd1701d79abb8c731200af3454504a",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -580,7 +580,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -591,7 +591,7 @@
       "exit": 2,
       "verdict": "PASS",
       "duration_ms": 0,
-      "raw_sha256": "18a1c76d6d1edf677357dca7380938c63a959f2a4f68ac6598653ae75aabc540",
+      "raw_sha256": "25467b4ee1f828dd1660fdb0d6bb6df7dab44544c7e5c4e120882f9f4b876702",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-R3-05.json",
       "stdout_sha256": "5aa707cf7cd81169e93739612e37efea5b946d73c6d9f2f98f8d5af005009c70",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -625,7 +625,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -643,8 +643,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 37,
-      "raw_sha256": "1ff3b1e45638d9c3c54decbe1041e115d604f35d4fe24cdf47b00e700cd394b2",
+      "duration_ms": 49,
+      "raw_sha256": "d275b6850b8e31a012630e50409449379c689106d31ddfd80715424e351c1b10",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\N01.json",
       "stdout_sha256": "37962c830bbab6d0e5d6f2afed08d972a1f8c911d2b4f4a0214cb5169c27e6c9",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -678,7 +678,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -688,8 +688,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 194,
-      "raw_sha256": "6371ddf8fe4b043cd0f0b744cfe6474c200f8cc42aeae911638f62505e95bdef",
+      "duration_ms": 232,
+      "raw_sha256": "d1e92b3d90282f18cdc553edeb6471306e5cc289cf7267bda53abd18c19ba6dd",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\N02.json",
       "stdout_sha256": "183be79072ff64295a15f7c7f9d8bd083022ff137ca4f35ed179230fa3db4ff8",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -723,7 +723,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -737,8 +737,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 9,
-      "raw_sha256": "50104962c0a3f5a14bd6dc8fa5f58f0d7f73f0c8993f58625f5790ab477ad0eb",
+      "duration_ms": 12,
+      "raw_sha256": "357625c396fe6da618c9705e3ef88051b035247c36e102675316ce006c7f445b",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\N03.json",
       "stdout_sha256": "b6435c7f5b4693d8302e7f5ceca4e33d2a1c0612701d713e12c8a14ff9c4df5a",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -772,7 +772,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -790,8 +790,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 95,
-      "raw_sha256": "893752d7b4f06a8b9e1b9f1cd7ab54dc8b45308a428b4c7c54a194cd42d6c37e",
+      "duration_ms": 110,
+      "raw_sha256": "0ad8b33cb3d2a0f7e8d990f06b480e4d46ac277af4db69aeafcfe7db70daa8cc",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\N04.json",
       "stdout_sha256": "70a55bd5b9bce4c1548c2038f9569e0e1b78442568091b6ab66db5cce5067423",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -825,7 +825,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -858,8 +858,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 22,
-      "raw_sha256": "a1bc192210600799d01dbe9f670453bda4cc0e6b501d2c634e9e2df2c4a271f8",
+      "duration_ms": 27,
+      "raw_sha256": "6c219447404de54def57015afb5c8f8b2716ea83d72010e6db4db0c1eda69039",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\N10.json",
       "stdout_sha256": "7936a3bf5cadbb2b12eb0dc547e5fccf095dbc559285cd73316d998fab059049",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -893,7 +893,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -912,8 +912,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 155,
-      "raw_sha256": "7f773d6add994e2507b6b69f805e92f693ebdd460d05121240b172faa2619cb3",
+      "duration_ms": 167,
+      "raw_sha256": "9cbcdbed0f95e9fb9628b6bafd6bd6b1c35e87f8ff3fc0b83a30b51a365d8472",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\N11.json",
       "stdout_sha256": "5adf0dbc9f8534f3d88c65be6042913d7286bf91f2e8b873312c1f97537aa133",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -947,7 +947,7 @@
       "consumer_id": null,
       "recovery_ref": null,
       "executor": "w1-exec",
-      "run_id": "20261125T222956",
+      "run_id": "20261125T224523",
       "python": "3.11.9",
       "platform": "Windows-10-10.0.26200-SP0",
       "observed": {
@@ -966,8 +966,8 @@
       },
       "exit": 0,
       "verdict": "PASS",
-      "duration_ms": 51,
-      "raw_sha256": "b9baca2d2d6fed2aba73a7f42be29d5697d49e2c23cb2f02fed5387cf80c05a9",
+      "duration_ms": 55,
+      "raw_sha256": "1d9770aed6048f507759cb04199bee2624e019b7daddc7cf7ed156c89acce83f",
       "raw_path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\evidence\\raw\\W1-CODEX-05.json",
       "stdout_sha256": "b3451c5f578689234b9821b507eb77cbff9fa4f4205d0954f0319c44d559e8ae",
       "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"

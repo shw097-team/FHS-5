@@ -1,0 +1,340 @@
+{
+  "checker_id": "independent-checker/w1-nf-r3/20261125",
+  "mode": "independent-readonly",
+  "candidate": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3",
+  "delivery_dir": "16_W1_NF_CODEX_20261125T222954",
+  "observed_git": {
+    "head": "bb87f441d0e16d7371e064b3ce614a0972709889",
+    "branch": "codex/w1-nf-r3-20261125",
+    "head_subject": "W1 NF-r3: build and verify the W1 product entry (reader/bridge/guide/TPM/consumer/runner)"
+  },
+  "manifest_recompute": {
+    "checked": 86,
+    "mismatches": [],
+    "declared_file_count": 86,
+    "listed_files": 86,
+    "bytes_mismatches": [],
+    "missing": [],
+    "on_disk_total": 90,
+    "unlisted_on_disk_meta": [
+      ".gitattributes",
+      "DELIVERY_SEAL.json",
+      "EVIDENCE_MANIFEST.json",
+      "EVIDENCE_MANIFEST.sha256"
+    ],
+    "manifest_self_sha256": "74fb7b322a029a08621090e1749491c7e2e141a358fe80a22fbd45badd27b786",
+    "delivery_seal_evidence_manifest_sha256": "74fb7b322a029a08621090e1749491c7e2e141a358fe80a22fbd45badd27b786",
+    "seal_matches_manifest": true,
+    "sidecar_entries": 86,
+    "manifest_vs_sidecar_diffs": []
+  },
+  "pack_check": {
+    "pack_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\control_pack\\FHS-5_PLP_W1_NATIVE_FIRST",
+    "manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "pin": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "digest_matches_pin": true,
+    "md_count": 5,
+    "manifest_count": 1,
+    "assets": {
+      "total": 26,
+      "fixtures": 13,
+      "oracles": 13,
+      "digest_ok": true
+    },
+    "dev_ids": 38,
+    "ops_ids": 29,
+    "case_ids": 13,
+    "case_token_matches_in_03": 14,
+    "sources": 42,
+    "source_unique_ids": 42,
+    "holds": 14,
+    "holds_unique": 14,
+    "source_set_sha256": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+    "source_set_matches_declared": true,
+    "case_count_note": "regex found 14 W1-*-NN tokens in 03_W1_TQAEP.md; W1-NF-01 is the scope id, leaving 13 case ids (matches the reader CASES list)",
+    "guard_verify": {
+      "result": "REJECT",
+      "token": "SOURCE_MISSING",
+      "detail": "PLAN"
+    },
+    "sources_present": 17,
+    "sources_missing": 25,
+    "sources_digest_diff": 0,
+    "missing_source_ids": [
+      "PLAN",
+      "WORKCTRL",
+      "CODEXCTRL",
+      "STARTCTRL",
+      "B00NF",
+      "B01NF",
+      "B02NF",
+      "B03NF",
+      "B04NF",
+      "B05NF",
+      "W1OLD-00JSON",
+      "W1OLD-00MD",
+      "W1OLD-01",
+      "W1OLD-02",
+      "W1OLD-03",
+      "W1OLD-04",
+      "W1OLD-05JSON",
+      "W1OLD-05MD",
+      "W1OLD-06",
+      "W1OLD-07",
+      "W1OLD-08",
+      "W1OLD-09",
+      "W1OLD-PFM",
+      "W1OLD-SM",
+      "W1OLD-START"
+    ]
+  },
+  "tests": {
+    "ran": true,
+    "count": 63,
+    "ok": true,
+    "exit_code": 0,
+    "command": "python -B -m unittest discover -s W1\\check -p \"test_*.py\"",
+    "output_tail": "Ran 63 tests in 1.486s\n\nOK\nEXITCODE=0"
+  },
+  "cases": {
+    "total": 20,
+    "verdicts": {
+      "W1-HOST-01": "NOT_OBSERVED",
+      "W1-HOST-02": "PASS",
+      "W1-HOST-03": "PASS",
+      "W1-HERMES-01": "DEFERRED",
+      "W1-ABI-01": "PASS",
+      "W1-ABI-02": "PASS",
+      "W1-SEC-01": "PASS",
+      "W1-API-01": "PASS",
+      "W1-R3-01": "PASS",
+      "W1-R3-02": "PASS",
+      "W1-R3-03": "PASS",
+      "W1-R3-04": "PASS",
+      "W1-R3-05": "PASS",
+      "N01": "PASS",
+      "N02": "PASS",
+      "N03": "PASS",
+      "N04": "PASS",
+      "N10": "PASS",
+      "N11": "PASS",
+      "W1-CODEX-05": "PASS"
+    },
+    "summary": {
+      "PASS": 18,
+      "NOT_OBSERVED": 1,
+      "DEFERRED": 1,
+      "FAIL": 0,
+      "NOT_RUN": 0
+    },
+    "exit_code": 0,
+    "without_second_pack": {
+      "total": 19,
+      "summary": {
+        "DEFERRED": 1,
+        "NOT_OBSERVED": 1,
+        "PASS": 17
+      }
+    },
+    "delivered_verdicts_match_reproduction": true,
+    "raw_and_stdout_hashes_verified": false,
+    "pass_without_real_artifact": []
+  },
+  "adversarial": {
+    "path_traversal": {
+      "engine": "body_resolver.resolve_body / resolve_inside",
+      "all_rejected": true,
+      "results": {
+        "dotdot": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "dotdot_nested": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "dot_segment": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "drive_forward": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "drive_back": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "drive_relative": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "unc_back": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "unc_forward": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "absolute_forward": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "backslash": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "nul": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        },
+        "empty": {
+          "resolve_body": "PATH_OUTSIDE_ROOT",
+          "resolve_inside": "PATH_OUTSIDE_ROOT"
+        }
+      }
+    },
+    "duplicate_json_key": {
+      "all_rejected": true,
+      "results": {
+        "top_level": "STRICT_JSON_REJECT",
+        "nested": "STRICT_JSON_REJECT",
+        "control_valid": null,
+        "inspect_pack_manifest_dup": "STRICT_JSON_REJECT"
+      }
+    },
+    "wrong_manifest_pin": {
+      "all_rejected": true,
+      "results": {
+        "bridge_inspect": "SOURCE_INTEGRITY_FAILED",
+        "bridge_inspect_short": "SOURCE_INTEGRITY_FAILED",
+        "consumer": "SOURCE_INTEGRITY_FAILED"
+      }
+    },
+    "positive_controls": {
+      "inspect_pin": true,
+      "bridge_correct_pin": "ACCEPTED",
+      "consumer_correct_pin": "ACCEPTED",
+      "consumer_readback": true
+    }
+  },
+  "claim_audit": {
+    "tokens_checked": [
+      "W1_NF_VALIDATED",
+      "INDEPENDENT_PASS",
+      "RELEASED",
+      "NATIVE_PASS"
+    ],
+    "positive_claim_found": false,
+    "claim_ceiling": "W1_PARTIAL_VALIDATED",
+    "claim_ceiling_evidence": [
+      "DELIVERY_SEAL.json:7",
+      "FHS-5_PLP_W1_CLOSEOUT.md:9"
+    ],
+    "all_token_hits_are_negative_or_hold_context": true,
+    "context_examples": [
+      "FHS-5_PLP_W1_CLOSEOUT.md:10 (不宣稱 list)",
+      "05_W1_SOURCE_MANIFEST.json:25-28 (not_claimed list)",
+      "00_W1_PI_PD.md:10 / :72 (not claimed)",
+      "PUBLICATION_STATUS.md:6 (W1_NF_VALIDATED is not claimed)",
+      "W1/check/run_harness.py:102 (H6_fake_claims mutation fixture, not a delivery claim)"
+    ],
+    "inspect_claims": {
+      "pack_primary": true,
+      "w1_execution_ready": "READY",
+      "w1_nf_validated": "NOT_RUN",
+      "independent": "NOT_RUN",
+      "release": "NOT_ADMITTED"
+    },
+    "delivery_claim_referencing_absent_file": {
+      "file": "16_W1_NF_CODEX_20261125T222954/FHS-5_PLP_W1_CLOSEOUT.md",
+      "line": 131,
+      "text": "證據/結果：evidence/independent_check.json",
+      "referenced_path_exists": false,
+      "referenced_path_in_evidence_manifest": false
+    },
+    "dangling_references": [
+      {
+        "file": "FHS-5_PLP_W1_CLOSEOUT.md",
+        "line": 131,
+        "target": "evidence/independent_check.json",
+        "exists": false
+      },
+      {
+        "file": "make_delivery.py",
+        "line": 152,
+        "target": "evidence/independent_check.json",
+        "exists": false,
+        "note": "generator embeds the reference only; never writes the file"
+      }
+    ],
+    "stated_vs_actual_head": {
+      "stated": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+      "actual": "bb87f441d0e16d7371e064b3ce614a0972709889",
+      "locations": [
+        "FHS-5_PLP_W1_CLOSEOUT.md:8",
+        "FHS-5_PLP_W1_HANDOFF.md:5",
+        "W1_UPSTREAM_CHANGESET.md:28"
+      ]
+    }
+  },
+  "writes_to_candidate": 0,
+  "writes_to_candidate_method": "ran every python invocation with PYTHONDONTWRITEBYTECODE=1 and python -B; final sweep: 0 files under the candidate have LastWriteTime > 2026-11-25 22:33:00 (newest existing mtime 22:32:08); all --out/report paths are outside the candidate",
+  "findings": [
+    {
+      "id": "F1-independent-check-evidence-absent",
+      "severity": "medium",
+      "class": "claim_without_evidence",
+      "detail": "CLOSEOUT §5 cites evidence/independent_check.json as the independent-check result, but the file is absent from the delivery and is not among the 86 files listed in EVIDENCE_MANIFEST.json; make_delivery.py only embeds the text reference and never writes the file.",
+      "evidence": "FHS-5_PLP_W1_CLOSEOUT.md:131; make_delivery.py:152; Test-Path 16_W1_NF_CODEX_20261125T222954/evidence/independent_check.json = False; EVIDENCE_MANIFEST.json files=86 (no independent_check.json)"
+    },
+    {
+      "id": "F2-negative-cases-use-runner-local-helpers",
+      "severity": "medium",
+      "class": "validation_depth",
+      "detail": "Four PASS observations exercise helper functions defined inside run_cases_nf.py, not any W1/impl product code: W1-ABI-01 -> crosswalk_version_guard(), W1-ABI-02 -> abi_completeness(), W1-R3-03 -> require_effect_resume(), W1-R3-05 -> a hardcoded claim dict. Those PASS verdicts do not evidence the implementation rejecting a real malformed artifact.",
+      "evidence": "W1/check/run_cases_nf.py:171 def crosswalk_version_guard; :183 def abi_completeness; :261 def require_effect_resume; :282 def c_r3_05; grep found these defs only in run_cases_nf.py, none in W1/impl/*.py"
+    },
+    {
+      "id": "F3-stated-head-is-base-not-delivered-commit",
+      "severity": "low",
+      "class": "identity_pin_inaccuracy",
+      "detail": "Closeout/handoff/changeset state repo HEAD = c2d8084... (the base), but the worktree HEAD is bb87f441... on the same branch. The stated HEAD is not the delivered commit.",
+      "evidence": "git rev-parse HEAD = bb87f441d0e16d7371e064b3ce614a0972709889; FHS-5_PLP_W1_CLOSEOUT.md:8; FHS-5_PLP_W1_HANDOFF.md:5; W1_UPSTREAM_CHANGESET.md:28"
+    },
+    {
+      "id": "F4-derived-exit-and-argv-fields",
+      "severity": "low",
+      "class": "evidence_semantics",
+      "detail": "Each observation's exit is derived in-process (0 normal return, 2 NFError, 1 other exception) and argv points at run_cases_nf.py; it is not a subprocess exit code. Raw/stdout hashes are genuine (recomputed), and the unexecuted W1-HERMES-01 is DEFERRED with exit=null and raw_sha256=null, so no unexecuted case is marked PASS.",
+      "evidence": "W1/check/run_cases_nf.py:77,89,98 (exit assignments), :120 (skip exit None / raw_sha256 None); independent recompute: 20/20 raw_ok=True, 20/20 stdout_ok=True; W1-HERMES-01 verdict=DEFERRED exit=None raw_sha=None"
+    },
+    {
+      "id": "F5-second-pack-env-gate",
+      "severity": "low",
+      "class": "reproducibility",
+      "detail": "Without W1_SECOND_PACK the runner emits 19 observations and omits W1-CODEX-05 entirely (absent, not NOT_RUN). The delivered 20-count depends on an external env var plus a second W0 pack.",
+      "evidence": "my run without env: total=19 (17 PASS / 1 NOT_OBSERVED / 1 DEFERRED); with W1_SECOND_PACK: total=20 (18 PASS); W1/check/run_cases_nf.py:577"
+    },
+    {
+      "id": "F6-pack-guard-rejects-on-missing-sources",
+      "severity": "low",
+      "class": "source_coverage",
+      "detail": "nf_pack_guard.py verify REJECTs with SOURCE_MISSING(PLAN): only 17 of 42 declared LOCAL_VERIFIED sources are present at probe time; 25 are absent and none of the present ones differ. The product reader downgrades absent recorded sources to LOCAL_MISSING_RECORDED (amendment A1) and inspect.json records 25 missing. The closeout's '42 sources 逐筆稽核' wording overstates digest-verification coverage.",
+      "evidence": "nf_pack_guard.py verify -> {result:REJECT, token:SOURCE_MISSING, detail:PLAN}; enumeration present=17 missing=25 digest_diff=0; evidence/inspect.json source_local_missing=25; FHS-5_PLP_W1_CLOSEOUT.md §1 table row '42 sources 逐筆稽核'"
+    },
+    {
+      "id": "F7-manifest-lists-86-of-90-files",
+      "severity": "info",
+      "class": "manifest_scope",
+      "detail": "EVIDENCE_MANIFEST.json lists 86 evidence files while the delivery dir holds 90. The 4 unlisted files are bundle meta (.gitattributes, DELIVERY_SEAL.json, EVIDENCE_MANIFEST.json, EVIDENCE_MANIFEST.sha256). No listed file is missing and no listed sha/bytes mismatch.",
+      "evidence": "on_disk=90 listed=86 unlisted=['.gitattributes','DELIVERY_SEAL.json','EVIDENCE_MANIFEST.json','EVIDENCE_MANIFEST.sha256']; checked=86 sha_mismatches=0 bytes_mismatches=0"
+    }
+  ],
+  "limitations": [
+    "Checker and maker share the same OS principal; this is not a different-principal independence claim.",
+    "The 25 absent sources are external local paths outside the candidate; I verified their absence and did not fetch remote content.",
+    "The default unittest pack path is the Downloads copy; I verified its 05 manifest sha256 equals the pinned 61f34a... so it is byte-identical for the manifest."
+  ]
+}

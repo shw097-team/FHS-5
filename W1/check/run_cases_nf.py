@@ -23,6 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "impl"))
 
 import body_resolver as br
+import abi_guard as guard
 import bridge_nf as bridge
 import guide_nf as guide
 import host_facade as hf
@@ -165,29 +166,13 @@ def c_host03(ctx):
 
 
 def c_abi01(ctx):
-    return crosswalk_version_guard("Guide@2", "Bridge@2", explicit_crosswalk=False)
-
-
-def crosswalk_version_guard(src, dst, explicit_crosswalk=False):
-    if src.rsplit("@", 1)[-1] == dst.rsplit("@", 1)[-1] and not explicit_crosswalk:
-        raise NFError("EXPLICIT_REVIEW_REQUIRED", src + "->" + dst)
-    return {"ok": True}
+    return guard.crosswalk_version_guard("Guide@2", "Bridge@2", explicit_crosswalk=False)
 
 
 def c_abi02(ctx):
     proposal = {"name": "proposal-1", "fields": {"id": "x", "goal": "y"},
                 "unknown_fields": ["effect", "resume"]}
-    return abi_completeness(proposal)
-
-
-def abi_completeness(obj):
-    required = {"id", "goal", "effect", "resume"}
-    have = set(obj.get("fields") or {})
-    if required - have:
-        raise NFError("LOSSY_MIGRATION", "missing " + ",".join(sorted(required - have)))
-    if obj.get("unknown_fields"):
-        raise NFError("LOSSY_MIGRATION", "unknown dropped")
-    return {"ok": True}
+    return guard.abi_completeness(proposal)
 
 
 def c_sec01(ctx):
@@ -254,14 +239,7 @@ def c_r3_03(ctx):
     man, _ = br.load_json_strict(ctx.pack / base.MANIFEST)
     broken = dict(man)
     broken.pop("dag", None)
-    require_effect_resume(broken)
-    return {"ok": True}
-
-
-def require_effect_resume(obj):
-    if "dag" not in obj:
-        raise NFError("ABI_LOSSY_CROSSWALK", "dag/effect missing")
-    return True
+    return guard.require_effect_resume(broken)
 
 
 def c_r3_04(ctx):
@@ -282,9 +260,7 @@ def c_r3_04(ctx):
 def c_r3_05(ctx):
     claim = {"identity_only": True, "content_bytes_available": False,
              "claim": "CH-07 old bytes restorable"}
-    if claim["identity_only"] and not claim["content_bytes_available"]:
-        raise NFError("EVIDENCE_LAUNDERING", "identity-only cannot restore bytes")
-    return {"ok": True}
+    return guard.restore_claim_check(claim)
 
 
 # ------------------------------------------------------------------- subcases
@@ -574,10 +550,16 @@ def main(argv=None) -> int:
         rec = ctx.emit(sid, "SUBCASE", "03 2", {"real": True}, lambda f=fn: f(ctx))
         rec["child"] = sid
         obs.append(rec)
-    if os.environ.get("W1_SECOND_PACK"):
+    second = os.environ.get("W1_SECOND_PACK")
+    if second and Path(second).is_dir():
         obs.append(ctx.emit("W1-CODEX-05", "ACC",
                             "00 3 W1-CODEX-05; D4 second package",
                             {"same_abi": True}, lambda: c_codex05(ctx)))
+    else:
+        obs.append(skip(ctx, "W1-CODEX-05", "ACC",
+                        "00 3 W1-CODEX-05; D4 second package", "NOT_RUN",
+                        "second package path not provided (W1_SECOND_PACK unset)", 
+                        {"same_abi": True}))
     summary = {
         "schema": "FHS5.PLP.W1.CaseSummary@1",
         "run_id": RUN_ID,

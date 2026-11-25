@@ -25,5 +25,5 @@
 
 - 來源根（唯讀）：見 05 `sources.source_root`
 - 本輪工作根：`C:\Projects\Agent_Workspace\FHS-5_Workspace\worktrees\W1_NF_r3`
-- 分支：`codex/w1-nf-r3-20261125`｜HEAD：`c2d8084ba24dd8df3fa62259bba496f4fb9caa85`
+- 分支：`codex/w1-nf-r3-20261125`｜HEAD：`bb87f441d0e16d7371e064b3ce614a0972709889`
 - base：`c2d8084ba24dd8df3fa62259bba496f4fb9caa85`（main，未 force、未改歷史）

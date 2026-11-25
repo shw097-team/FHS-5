@@ -1,7 +1,7 @@
 ﻿python : test_neg_absolute (test_body_resolver.TestBodyResolver.test_neg_absolute) ... ok
-At C:\Users\user\Documents\Codex\2026-11-25\new-chat-12\work\w1build\stage_and_run.ps1:57 char:1
-+ python -m unittest discover -s "W1\check" -p "test_*.py" -v 2>&1 |
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At C:\Users\user\Documents\Codex\2026-11-25\new-chat-12\work\w1build\finalize.ps1:28 char:1
++ python -B -m unittest discover -s "W1\check" -p "test_*.py" -v 2>&1 |
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (test_neg_absolu...bsolute) ... ok:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
@@ -69,6 +69,6 @@ test_reviewer_detects_subject_mutation (test_tpm_contracts.TestTPM.test_reviewer
 test_reviewer_readonly (test_tpm_contracts.TestTPM.test_reviewer_readonly) ... ok
 
 ----------------------------------------------------------------------
-Ran 63 tests in 1.348s
+Ran 63 tests in 1.543s
 
 OK

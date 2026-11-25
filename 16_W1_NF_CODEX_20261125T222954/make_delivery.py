@@ -36,6 +36,9 @@ test_count = m.group(1) if m else "?"
 tests_ok = ("OK" in tests_txt.splitlines()[-1]) if tests_txt.strip() else False
 head = sh(["git", "rev-parse", "HEAD"])
 branch = sh(["git", "branch", "--show-current"])
+content_commit = sh(["git", "log", "-1", "--format=%H", "--",
+                     "16_W1_NF_CODEX_" + RUN_ID]) or "UNCOMMITTED"
+dirty = bool(sh(["git", "status", "--porcelain"]))
 main_sha = "c2d8084ba24dd8df3fa62259bba496f4fb9caa85"
 pack_sha = cases["manifest_sha256"]
 passed = cases["passed"]
@@ -64,7 +67,7 @@ closeout = f"""# FHS-5_PLP W1 CLOSEOUT（CODEX Native-first 主用修補定案�
 **project_id**：`FHS-5_PLP`｜**subject_id**：`FHS-5_PLP/W1/CONTROL_PACK`｜**scope**：`W1-NF-01`
 **wave_id**：`W1`｜**batch_id**：`W1-NF-01`｜**date**：2026-11-25（Asia/Taipei）
 **pack_manifest_sha256**：`{pack_sha}`
-**repo**：`{branch}` @ `{head}`（base `{main_sha}`）
+**repo**：`{branch}`｜`content_commit` `{content_commit}`｜`head` `{head}`｜base `{main_sha}`
 **claim ceiling**：`W1_PARTIAL_VALIDATED`｜`W2_TECHNICALLY_READY = NOT_READY`
 **不宣稱**：`W1_NF_VALIDATED`、`INDEPENDENT_PASS`、`RELEASED`、`M-DONE`、`GPT_CHAT_PASS`、`GPT_WORK_PASS`、`HERMES_PASS`、`W2_EXECUTION_READY`
 
@@ -148,9 +151,21 @@ closeout = f"""# FHS-5_PLP W1 CLOSEOUT（CODEX Native-first 主用修補定案�
 
 ## 5｜獨立檢查（另一 session，唯讀）
 
-- 檢查者：另一 Codex 子 session，對凍結候選唯讀重跑，不修改 subject／oracle。
-- 命令與結果：`evidence/independent_check.json`。
-- 限制：同一 OS principal（本機使用者），不虛構不同 principal。
+- 檢查者：另一 Codex 子 session，對凍結候選唯讀重跑，`writes_to_candidate = 0`。
+- 結果：`evidence/independent_check.json`（manifest 重算、pack 計數、63 tests、20 列 verdict、三類對抗探測）。
+- 檢查者提出的 7 項 finding 與處置：
+
+| ID | 級別 | 內容 | 本輪處置 |
+|---|---|---|---|
+| F1 | medium | CLOSEOUT 引用了尚不存在的 `evidence/independent_check.json` | 已改為真實引用；檢查報告已納入交付 |
+| F2 | medium | ABI-01/02、R3-03、R3-05 只測 runner 內部 helper | 已抽出 `W1/impl/abi_guard.py`，runner 改呼叫產品碼 |
+| F3 | low | docs 的 HEAD 寫成 base commit | 改記 `content_commit`（首次引入交付的 commit）與 `head` 分欄 |
+| F4 | low | exit 於同進程推導 | 保留並明示：非 OS 子進程 exit，觀測欄 `exit` 為 runner 判定碼 |
+| F5 | low | 第二包需環境變數才跑 | 改為無條件產出一列；缺第二包時記 `NOT_RUN` + 原因 |
+| F6 | low | 舊 guard 對 25 個缺席來源 REJECT | 屬 amendment A1 的預期行為，見 `W1_UPSTREAM_CHANGESET.md` |
+| F7 | info | manifest 只列 86/90 檔（4 個是 manifest/seal 自身） | 明示排除規則，避免自循環 digest |
+
+- 限制：同一 OS principal（本機使用者）；session 分立，不虛構不同 principal。
 
 ---
 
@@ -171,7 +186,7 @@ handoff = f"""# FHS-5_PLP W1 HANDOFF（W2 技術接收候選）
 
 **File ID**：`FHS5-PLP/W1/HANDOFF/NF-r3`
 **run_id**：`{RUN_ID}`｜**pack_manifest_sha256**：`{pack_sha}`
-**repo**：`{branch}` @ `{head}`
+**repo**：`{branch}`｜`content_commit` `{content_commit}`｜`head` `{head}`
 **status**：`W2_TECHNICALLY_READY = NOT_READY`（見 §5 缺口）
 
 ---

@@ -2,7 +2,7 @@
 
 **File ID**：`FHS5-PLP/W1/HANDOFF/NF-r3`
 **run_id**：`20261125T222954`｜**pack_manifest_sha256**：`61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a`
-**repo**：`codex/w1-nf-r3-20261125` @ `c2d8084ba24dd8df3fa62259bba496f4fb9caa85`
+**repo**：`codex/w1-nf-r3-20261125`｜`content_commit` `bb87f441d0e16d7371e064b3ce614a0972709889`｜`head` `bb87f441d0e16d7371e064b3ce614a0972709889`
 **status**：`W2_TECHNICALLY_READY = NOT_READY`（見 §5 缺口）
 
 ---
