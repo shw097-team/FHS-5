@@ -8,7 +8,7 @@
 
 **Claim ceiling**：`W1_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION`（文件與主用選定層；不代表產品實跑）。
 **Not claimed**：`W1_NF_VALIDATED`、`NATIVE_PASS`、`INDEPENDENT_PASS`、`RELEASED`、`M-DONE`、`GPT_CHAT_PASS`、`GPT_WORK_PASS`、`HERMES_PASS`。
-**Execution readiness**：`W1_EXECUTION_READY = READY`（2026-11-25；主用＋同域施工授權＋真 H0/六檔 bootstrap＋repo worktree ACL＋`w1_nf_reader.py` entry＋首個合法 `inspect` 操作；**不等於**最終 W1 product consumed／validated）。
+**Execution readiness**：`W1_EXECUTION_READY = READY`（2026-11-25；主用＋同域施工授權＋真 H0/六檔 bootstrap＋repo worktree ACL＋`w1_nf_reader.py` entry＋首個合法 `inspect` 操作；repo branch `codex/w1-nf-r2-20261125` commit `8d250c6…` 已驗 remote；**不等於**最終 W1 product consumed／validated）。
 
 > 本檔是 W1 當期唯一主包的五份正文之一。文中 `PLANNED`／`NOT_RUN` 是產品驗收狀態；本輪產品 actual 一律未執行。文件義務與產品 PASS 分開，不以文件合格冒充 W1 產品已通過。
 

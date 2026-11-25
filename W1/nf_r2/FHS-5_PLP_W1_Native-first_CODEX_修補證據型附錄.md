@@ -314,12 +314,12 @@
 
 | 檔 | 候選 bytes／SHA | 定案 bytes／SHA |
 |---|---|---|
-| `00_W1_PI_PD.md` | 11,684／`d2975f5a…` | 34,565／`f6dd84cb…` |
-| `01_W1_DEV_ECP.md` | 9,107／`a9b30e83…` | 20,729／`772557b0…` |
+| `00_W1_PI_PD.md` | 11,684／`d2975f5a…` | 34,639／`345cfdb8…` |
+| `01_W1_DEV_ECP.md` | 9,107／`a9b30e83…` | 20,804／`257c6dac…` |
 | `02_W1_OPS_ECP.md` | 7,022／`a01d84b5…` | 12,290／`14b1571a…` |
 | `03_W1_TQAEP.md` | 6,371／`1f2ea48b…` | 19,804／`66a53d28…` |
-| `04_W1_START_THIN_PROMPT.md` | 1,892／`167cbf7b…` | 10,028／`a4b0f9cb…` |
-| `05_W1_SOURCE_MANIFEST.json` | 16,518／`0ddcf3c0…` | 35,780／`a7b1ef35…` |
+| `04_W1_START_THIN_PROMPT.md` | 1,892／`167cbf7b…` | 10,066／`2a5ad071…` |
+| `05_W1_SOURCE_MANIFEST.json` | 16,518／`0ddcf3c0…` | 35,959／`61f34a08…` |
 
 **10 個 finding（全文見 `candidate_findings.json`）**：
 
@@ -371,18 +371,18 @@
 
 | 檔 | bytes | lines | SHA-256 |
 |---|---:|---:|---|
-| `00_W1_PI_PD.md` | 34,565 | 349 | `f6dd84cbfad05e8e3d452f0e6f5c6f9539e149573bec51c396c60b91bf76f8d1` |
-| `01_W1_DEV_ECP.md` | 20,729 | 200 | `772557b0749759ca2893b72ed99feb049cf38446e8100f8713bcb38ab4d499af` |
+| `00_W1_PI_PD.md` | 34,639 | 349 | `345cfdb846ab69a1d45acda7011f280218ff6b2642b19d5dd675c75b61e984c1` |
+| `01_W1_DEV_ECP.md` | 20,804 | 200 | `257c6dac294699a81111ea654cf135b3e55ddf0cde27e36c8bf3e7c8399bcb4c` |
 | `02_W1_OPS_ECP.md` | 12,290 | 110 | `14b1571ab26474c325c2f001c8fddee7cc81c4abbec79152e669c6f5766d44e5` |
 | `03_W1_TQAEP.md` | 19,804 | 213 | `66a53d2854debafc599b8a4f6611aa44236d099d380d93828c43aa20e227c691` |
-| `04_W1_START_THIN_PROMPT.md` | 10,028 | 120 | `a4b0f9cb750d8374ef649c78215d489c434706eb05693e5f63b92b6d17905eb9` |
-| `05_W1_SOURCE_MANIFEST.json` | 35,780 | 987 | `a7b1ef358c8e7a9740e5f1ef487ecd7777ded0a1f8246daee562cba909810a80` |
+| `04_W1_START_THIN_PROMPT.md` | 10,066 | 120 | `2a5ad071f6438f57528032f0f7d6fd1dc687dfec91aca67415f228d80296eb47` |
+| `05_W1_SOURCE_MANIFEST.json` | 35,959 | 990 | `61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a` |
 
 **外置 seal**：`evidence/SEAL.json`。
 
 | 欄 | 值 |
 |---|---|
-| `pack_manifest_sha256` | `a7b1ef358c8e7a9740e5f1ef487ecd7777ded0a1f8246daee562cba909810a80`（= sha256(raw 05)） |
+| `pack_manifest_sha256` | `61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a`（= sha256(raw 05)） |
 | `pack_files` | 5 MD bytes/SHA/lines 全 match（本表） |
 | `asset_count` | 26 |
 | `assets_tree_sha256` | `1d71d4b14aa71a678cf10cea6a66a00d08af3fee1fc08fdf842c0c9100f3bf92` |
@@ -402,8 +402,8 @@
 **Verdict**：`W1_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION`。
 **Reason**：六檔完整可讀；D01–09 實質落地；38/29/13/6/12/14 與 Guide/Bridge/TPM 分母保；PKG-01–05 文件必要義務通過；5+1 digest/identity/DAG/assets/sources/seal 可重算；12 個 mutation fail-closed；W1 reader 16/16＋首個 `inspect` 真操作；主用／同域施工授權及 `W1_EXECUTION_READY=READY` 已由本輪 Owner 裁決與真 ACL 記錄；最終產品 actual 未冒 PASS。
 
-**NotCovered**：13 案真跑、完整 TPM/Guide 九鍵、獨立 consumer 與第二不同包、CODEX 最終 served/consumed、GPT CHAT/WORK、HERMES 三 child、Windows symlink/reparse 真攻擊、W2–W4、Independent、Release、public push（token 已備但尚未執行）。
+**NotCovered**：13 案真跑、完整 TPM/Guide 九鍵、獨立 consumer 與第二不同包、CODEX 最終 served/consumed、GPT CHAT/WORK、HERMES 三 child、Windows symlink/reparse 真攻擊、W2–W4、Independent、Release。Repo push 已對 `shw097-team/FHS-5` 的 `codex/w1-nf-r2-20261125` 執行並驗證（first push `8d250c6…`）；main 未動。
 
 **本輪停止點**：文件主用、bootstrap、W1 reader entry、首個 `inspect` 操作完成；`W1_EXECUTION_READY=READY`。D3–D5 未完成，故不得以本附錄或六檔替代 W1 CLOSEOUT/HANDOFF，也不得把文件 PASS 當 `W1_NF_VALIDATED`。
 
-**Next**：`04_W1_START_THIN_PROMPT.md` → D3 TPM/Guide 九鍵 → D4 獨立 consumer＋第二包 → 13 案／N01–04/N10/N11 → P06／Handoff → commit/push `codex/w1-nf-r2-20261125`。若真 Host 權不足，只停受影，不逐 WP 重簽。
+**Next**：`04_W1_START_THIN_PROMPT.md` → D3 TPM/Guide 九鍵 → D4 獨立 consumer＋第二包 → 13 案／N01–04/N10/N11 → P06／Handoff → 後續 commit/push 同 `codex/w1-nf-r2-20261125`。若真 Host 權不足，只停受影，不逐 WP 重簽。

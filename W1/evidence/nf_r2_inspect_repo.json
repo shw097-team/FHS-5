@@ -3,15 +3,15 @@
   "claim_ceiling": "W1_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
   "root": "C:\\Projects\\Agent_Workspace\\FHS-5_W1_NF_r2\\W1\\nf_r2\\FHS-5_PLP_W1_NATIVE_FIRST",
   "manifest_path": "05_W1_SOURCE_MANIFEST.json",
-  "pack_manifest_sha256": "a7b1ef358c8e7a9740e5f1ef487ecd7777ded0a1f8246daee562cba909810a80",
-  "pack_manifest_bytes": 35780,
+  "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "pack_manifest_bytes": 35959,
   "identity": {
     "project_id": "FHS-5_PLP",
     "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
     "scope": "W1-NF-01",
     "wave_id": "W1",
     "batch_id": "W1-NF-01",
-    "source_manifest_sha256": "a7b1ef358c8e7a9740e5f1ef487ecd7777ded0a1f8246daee562cba909810a80"
+    "source_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
   },
   "pack_version": "W1-NF-r2-CODEX-PRIMARY",
   "counts": {
@@ -26,15 +26,15 @@
   "file_refs": [
     {
       "path": "00_W1_PI_PD.md",
-      "bytes": 34565,
-      "sha256": "f6dd84cbfad05e8e3d452f0e6f5c6f9539e149573bec51c396c60b91bf76f8d1",
+      "bytes": 34639,
+      "sha256": "345cfdb846ab69a1d45acda7011f280218ff6b2642b19d5dd675c75b61e984c1",
       "lines": 349,
       "role": null
     },
     {
       "path": "01_W1_DEV_ECP.md",
-      "bytes": 20729,
-      "sha256": "772557b0749759ca2893b72ed99feb049cf38446e8100f8713bcb38ab4d499af",
+      "bytes": 20804,
+      "sha256": "257c6dac294699a81111ea654cf135b3e55ddf0cde27e36c8bf3e7c8399bcb4c",
       "lines": 200,
       "role": null
     },
@@ -54,8 +54,8 @@
     },
     {
       "path": "04_W1_START_THIN_PROMPT.md",
-      "bytes": 10028,
-      "sha256": "a4b0f9cb750d8374ef649c78215d489c434706eb05693e5f63b92b6d17905eb9",
+      "bytes": 10066,
+      "sha256": "2a5ad071f6438f57528032f0f7d6fd1dc687dfec91aca67415f228d80296eb47",
       "lines": 120,
       "role": null
     }
@@ -862,6 +862,7 @@
       "tests": "W1/check/test_w1_nf_reader.py (16/16 PASS)",
       "first_operation": "inspect",
       "first_operation_raw": "W1/evidence/nf_r2_inspect_probe.json",
+      "repo_commit": "8d250c6c9d88d4c6d3c53117f396d39ab7a4596d",
       "acl": "worktree write OK",
       "bootstrap": "BOOTSTRAP_CONSUME_ACTUAL"
     },
@@ -911,12 +912,6 @@
       "reason": "no symlink privilege in this environment; WSL2 not a Windows substitute",
       "owner": "Security Checker",
       "next": "test on a Windows host with real privilege"
-    },
-    {
-      "id": "remote_push",
-      "reason": "token available but push not yet performed/verified",
-      "owner": "Owner/Repo",
-      "next": "verify ls-remote then push branch"
     }
   ],
   "semantic_state": "NF_PACK_READ_ACTUAL",

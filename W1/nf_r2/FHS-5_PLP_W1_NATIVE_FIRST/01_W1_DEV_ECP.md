@@ -28,7 +28,7 @@
 | Git | `2.53.0.windows.1` | `git --version` |
 | CODEX CLI | `codex-cli 0.164.0`（`codex.ps1`）；`codex exec --help` 可讀 | `codex --version`／`exec --help`；只證非互動入口存在，不證 W1 plugin loaded |
 | OpenSpec | `2.0.0`（`openspec.ps1`） | `openspec --version`；只證 CLI 存在 |
-| 網路／GitHub | 本輪尚未以 token 測試 push；credential 檔存在 | push 前以 `git ls-remote` 驗；不把 local commit 當 remote |
+| 網路／GitHub | `ls-remote`／push 成功；remote branch `codex/w1-nf-r2-20261125` = `8d250c6c9d88d4c6d3c53117f396d39ab7a4596d`；main 未動（`c2d8084…`） | token 經暫存 credential store 使用；未輸出 |
 
 **結論**：W1 產品施工入口已建立並真跑第一個合法操作（`inspect`）；`W1_EXECUTION_READY=READY` 的 root／ACL／entry／input 條件已具。最終 13 案／獨立 consumer／Host served/consumed 仍未跑，故 `W1_NF_VALIDATED` 仍 `NOT_CLAIMED`。
 

@@ -16,6 +16,6 @@ test_render_marks_untrusted (W1.check.test_w1_nf_reader.NFReaderTests.test_rende
 test_resolve_body_span (W1.check.test_w1_nf_reader.NFReaderTests.test_resolve_body_span) ... ok
 
 ----------------------------------------------------------------------
-Ran 16 tests in 0.997s
+Ran 16 tests in 1.062s
 
 OK

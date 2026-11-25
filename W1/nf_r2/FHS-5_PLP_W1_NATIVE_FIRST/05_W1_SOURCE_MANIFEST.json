@@ -81,14 +81,14 @@
   "pack_files": [
     {
       "path": "00_W1_PI_PD.md",
-      "sha256": "f6dd84cbfad05e8e3d452f0e6f5c6f9539e149573bec51c396c60b91bf76f8d1",
-      "bytes": 34565,
+      "sha256": "345cfdb846ab69a1d45acda7011f280218ff6b2642b19d5dd675c75b61e984c1",
+      "bytes": 34639,
       "lines": 349
     },
     {
       "path": "01_W1_DEV_ECP.md",
-      "sha256": "772557b0749759ca2893b72ed99feb049cf38446e8100f8713bcb38ab4d499af",
-      "bytes": 20729,
+      "sha256": "257c6dac294699a81111ea654cf135b3e55ddf0cde27e36c8bf3e7c8399bcb4c",
+      "bytes": 20804,
       "lines": 200
     },
     {
@@ -105,8 +105,8 @@
     },
     {
       "path": "04_W1_START_THIN_PROMPT.md",
-      "sha256": "a4b0f9cb750d8374ef649c78215d489c434706eb05693e5f63b92b6d17905eb9",
-      "bytes": 10028,
+      "sha256": "2a5ad071f6438f57528032f0f7d6fd1dc687dfec91aca67415f228d80296eb47",
+      "bytes": 10066,
       "lines": 120
     }
   ],
@@ -846,6 +846,7 @@
     "result_location": "evidence/SEAL.json and appendix E7",
     "reader_tests": "16/16 PASS",
     "first_operation": "inspect PASS (5 files / 38 DEV / 29 OPS / 13 cases / 26 assets / 42 sources / 14 holds)",
+    "repo_push_verified": true,
     "product_actual": "NOT_RUN"
   },
   "dag": {
@@ -920,6 +921,7 @@
       "tests": "W1/check/test_w1_nf_reader.py (16/16 PASS)",
       "first_operation": "inspect",
       "first_operation_raw": "W1/evidence/nf_r2_inspect_probe.json",
+      "repo_commit": "8d250c6c9d88d4c6d3c53117f396d39ab7a4596d",
       "acl": "worktree write OK",
       "bootstrap": "BOOTSTRAP_CONSUME_ACTUAL"
     },
@@ -943,6 +945,13 @@
     "first_operation_raw": "W1/evidence/nf_r2_inspect_probe.json",
     "product_scope": "W1-NF-01",
     "final_product_consumed": "NOT_RUN"
+  },
+  "repository": {
+    "remote": "https://github.com/shw097-team/FHS-5.git",
+    "branch": "codex/w1-nf-r2-20261125",
+    "commit": "8d250c6c9d88d4c6d3c53117f396d39ab7a4596d",
+    "push_verified": true,
+    "main_untouched": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85"
   },
   "unresolved_refs": [
     {
@@ -974,12 +983,6 @@
       "reason": "no symlink privilege in this environment; WSL2 not a Windows substitute",
       "owner": "Security Checker",
       "next": "test on a Windows host with real privilege"
-    },
-    {
-      "id": "remote_push",
-      "reason": "token available but push not yet performed/verified",
-      "owner": "Owner/Repo",
-      "next": "verify ls-remote then push branch"
     }
   ],
   "manifest_self_hash": "EXTERNAL_RECORD_ONLY",

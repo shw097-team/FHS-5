@@ -101,7 +101,7 @@
 
 **本輪文件層 Done**：六檔＋26 assets＋外置 seal，PKG-01～05 必要檢查通過；產品 `NOT_RUN`。
 
-**本輪 execution readiness（已宣）**：`W1_EXECUTION_READY = READY`。實證：worktree `C:\Projects\Agent_Workspace\FHS-5_W1_NF_r2`（branch `codex/w1-nf-r2-20261125`，base `c2d8084…`）可寫；`W1/impl/w1_nf_reader.py` 已建；`W1/check/test_w1_nf_reader.py` **16/16 OK**；`inspect` 對本包回 5／38／29／13／26／42／14、DAG `P01→P02→P03→P04→P05→P06`；`W1_PRODUCT_CONSUMED` 仍 `NOT_RUN`，`W1_NF_VALIDATED` 仍 `NOT_CLAIMED`。
+**本輪 execution readiness（已宣）**：`W1_EXECUTION_READY = READY`。實證：worktree `C:\Projects\Agent_Workspace\FHS-5_W1_NF_r2`（branch `codex/w1-nf-r2-20261125`，base `c2d8084…`，commit `8d250c6…` 已 push/verify）可寫；`W1/impl/w1_nf_reader.py` 已建；`W1/check/test_w1_nf_reader.py` **16/16 OK**；`inspect` 對本包回 5／38／29／13／26／42／14、DAG `P01→P02→P03→P04→P05→P06`；`W1_PRODUCT_CONSUMED` 仍 `NOT_RUN`，`W1_NF_VALIDATED` 仍 `NOT_CLAIMED`。
 
 ## STOP
 
