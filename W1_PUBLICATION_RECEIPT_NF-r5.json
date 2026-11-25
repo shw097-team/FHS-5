@@ -1,0 +1,28 @@
+{
+  "schema": "FHS5.PLP.W1.PublicationReceipt@5",
+  "repo": "https://github.com/shw097-team/FHS-5",
+  "branch": "codex/w1-nf-r3-20261125",
+  "published_head": "28a86407eb1f197ced953c6b0f6c4e76a0689bee",
+  "delivery": "18_W1_NF_CODEX_20261126T000627",
+  "base": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+  "main_untouched": true,
+  "remote_verified": {
+    "clone": "fresh shallow clone of the branch",
+    "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "matched": ["CLOSEOUT", "HANDOFF", "EVIDENCE_MANIFEST", "DELIVERY_SEAL", "W1_CLOSURE_MATRIX", "W2_RECEIVE_RECEIPT", "evidence/w2/w2_inbound_receipt.json"],
+    "seal_matches_manifest": true
+  },
+  "claim": {
+    "w1": "W1_NF_VALIDATED",
+    "w2": "W2_TECHNICALLY_READY=READY",
+    "not_claimed": ["RELEASED", "M-DONE", "INDEPENDENT_PASS", "W2_EXECUTION_READY", "HERMES_PASS"]
+  },
+  "known_limits": [
+    "W1-HERMES-01 and 3 Hermes OPS rows are DEFERRED (host not mounted)",
+    "Windows junction/reparse NOT_VERIFIED (no privilege; not escalated)",
+    "62 of 67 DEV/OPS ids are covered by shared real operations and shared evidence, not 67 separate raws",
+    "host authenticity cannot be re-proven offline; the checker verified receipt content only",
+    "7 control subcases (N01-N04, N10, N11, W1-CODEX-05) have oracle_sha256 null (no frozen oracle for meta-controls)"
+  ],
+  "recorded_at": "2026-11-26T00:40+08:00"
+}
