@@ -36,4 +36,4 @@
 - [x] 5.2 Record FAR finding with three alternatives and fail-closed close.
 - [x] 5.3 Write CLOSEOUT, HANDOFF and UPSTREAM_CHANGESET.
 - [x] 5.4 W1 consumer re-reads pack/candidate/evidence and refuses a wrong pin.
-- [ ] 5.5 Publish the W0 evidence bundle to `shw097-team/FHS-5` (blocked by policy review; see `09_DELIVERY/PUBLICATION_STATUS.md`).
+- [x] 5.5 Publish the W0 evidence bundle to `shw097-team/FHS-5` (`43ac758..f3add20`, fast-forward main).

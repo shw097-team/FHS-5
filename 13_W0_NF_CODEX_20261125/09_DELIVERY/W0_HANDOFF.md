@@ -12,8 +12,8 @@
 - **candidate_preimage**：`5eab43de2d3f67d6afbb1c5f6bc390e2c391da36`
 - **oracle_sha256**：`112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6`
 - **evidence_ref**：`10_EVIDENCE/EVIDENCE_MANIFEST.json`
-- **evidence_manifest_sha256**：`34e4f85515e3bcda2979acfcc532b457ebb3a3772c7d9f0afa8c29fadafe21f1`
-- **consumer_manifest_sha256**：`4f0e2fccd4010165f038a64cbb4c7807288c59955221359888d9a0b19aef4415`
+- **evidence_manifest_sha256**：`cb71b632df003372658e5ecf9f833f70b5c4f3b82739ffbd5223f5f8b679305c`
+- **consumer_manifest_sha256**：`2f31583dacc8cfd5e5259a7744d44ccb5ad97a1275f051102d2572fa28d41248`
 - **case_set**：SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44
 - **target_consumer**：W1 / CODEX Native（`tools/consumer.py`，`W1-consumer/CODEX-Native-1`）
 - **consumer_version**：`@2`
@@ -55,8 +55,8 @@ W1–W4 全分母、FHS 485、HERMES／GPT Host、不同 principal 簽章、Publ
 
 ## publication_state
 
-`LOCAL_COMMIT_ONLY_PUSH_BLOCKED`：local `f8732527`；remote main `43ac758`。
-詳見 `PUBLICATION_STATUS.md`；不宣已上推。
+`PUSHED_FAST_FORWARD`：`43ac758..f3add20`；remote main `f3add20`。
+詳見 `PUBLICATION_STATUS.md`。
 
 ## stop／resume
 

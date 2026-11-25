@@ -12,7 +12,7 @@
       "handoff_present": true,
       "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
       "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
-      "evidence": "34e4f85515e3bcda2979acfcc532b457ebb3a3772c7d9f0afa8c29fadafe21f1",
+      "evidence": "cb71b632df003372658e5ecf9f833f70b5c4f3b82739ffbd5223f5f8b679305c",
       "pins_ok": true
     },
     "pos_neg_ok": true,

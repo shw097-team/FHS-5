@@ -1,18 +1,18 @@
 {
   "schema": "FHS5.W0NF.ConsumerManifest@1",
   "consumer_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\consumer_receipt.json",
-  "consumer_receipt_sha256": "6916cf421653f6640821d40917da3e18597428638886e4c9b6c66b7dd4809be0",
+  "consumer_receipt_sha256": "7ca6b761952c5cc5bc861305df5665d120b324de49000b91bfed9778cd7e7b1e",
   "evidence_manifest": "10_EVIDENCE\\EVIDENCE_MANIFEST.json",
-  "evidence_manifest_sha256": "34e4f85515e3bcda2979acfcc532b457ebb3a3772c7d9f0afa8c29fadafe21f1",
+  "evidence_manifest_sha256": "cb71b632df003372658e5ecf9f833f70b5c4f3b82739ffbd5223f5f8b679305c",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
   "consumed": true,
   "wrong_pin_refused": true,
   "raw": {
-    "consumer_neg.meta.json": "f44224592161f823f1626fa8ed374d16bb6f759896c60ec527d3db37a8016c5f",
+    "consumer_neg.meta.json": "e243481f9736328425387ac86bafcbb6ea2cfbc14b7b511e775e11397c9b70eb",
     "consumer_neg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "consumer_neg.stdout.txt": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
-    "consumer_pos.meta.json": "3d1559012d7e4bb4191a5cdc77fe07342fb9a1cf8dc78c73a70381bdf1b008b4",
+    "consumer_pos.meta.json": "a6527da8a46fcfb1ef3705ce9d687496b481ba124d1b252e588d522f74517a2a",
     "consumer_pos.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "consumer_pos.stdout.txt": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33"
   }

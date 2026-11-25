@@ -8,7 +8,7 @@
     "W1_technical": "W1_TECHNICALLY_READY",
     "W1_execution": "NOT_CLAIMED",
     "release": "NOT_CLAIMED",
-    "publication": "PUSH_BLOCKED_BY_POLICY_REVIEW"
+    "publication": "PUSHED_FAST_FORWARD"
   },
   "files": [
     {
@@ -19,42 +19,42 @@
     {
       "path": "CONSUMER_MANIFEST.json",
       "bytes": 1265,
-      "sha256": "4f0e2fccd4010165f038a64cbb4c7807288c59955221359888d9a0b19aef4415"
+      "sha256": "2f31583dacc8cfd5e5259a7744d44ccb5ad97a1275f051102d2572fa28d41248"
     },
     {
       "path": "CONSUMER_MANIFEST.sha256",
       "bytes": 86,
-      "sha256": "0f8e0a0718ab70a5df96a42f7ffd3006cee1bf6e388f6ffe61ea1beecd0a3425"
+      "sha256": "dee25de7f2cd6547cdb115ee0911918f94601a532dcd01ba602bded4e990008a"
     },
     {
       "path": "consumer_receipt.json",
       "bytes": 1106,
-      "sha256": "6916cf421653f6640821d40917da3e18597428638886e4c9b6c66b7dd4809be0"
+      "sha256": "7ca6b761952c5cc5bc861305df5665d120b324de49000b91bfed9778cd7e7b1e"
     },
     {
       "path": "EVIDENCE_MANIFEST.json",
-      "bytes": 106121,
-      "sha256": "34e4f85515e3bcda2979acfcc532b457ebb3a3772c7d9f0afa8c29fadafe21f1"
+      "bytes": 106398,
+      "sha256": "cb71b632df003372658e5ecf9f833f70b5c4f3b82739ffbd5223f5f8b679305c"
     },
     {
       "path": "EVIDENCE_MANIFEST.sha256",
       "bytes": 66,
-      "sha256": "ea1b17e825fa76aecd465f76fd803f4a861a97ca5c81ea1ade65d542366a4571"
+      "sha256": "eca3fcc7b5c02933d5bc084a85bea66f10c2e699cebe813b5f531189b1b7960c"
     },
     {
       "path": "FHS-5_PLP_W0_CLOSEOUT.md",
-      "bytes": 15583,
-      "sha256": "493a3d3304187fb1d360c3d4f26022c116808956bbde7724891c68fa01a606f3"
+      "bytes": 15537,
+      "sha256": "d5e01f9d9b90298aeb6d5b5833598c5edb6a0a20c2849af0c6cef1323c8185e1"
     },
     {
       "path": "FHS-5_PLP_W0_HANDOFF.md",
-      "bytes": 3083,
-      "sha256": "c4ff96c7115b0e17b5b513f95e9a9de217b730395c90862d22b38ad497c10f50"
+      "bytes": 3056,
+      "sha256": "a413993cfb60afd78323fd5671af36a60bc9640c74c68c32f0b4b4563cbbdaae"
     },
     {
       "path": "PUBLICATION_STATUS.md",
-      "bytes": 895,
-      "sha256": "08be8319748d6f9b1bb5b1002adf92d0a683d45be10c77edece2b1697d6e90b9"
+      "bytes": 934,
+      "sha256": "d3abba0947bed8c829bba0d3d362df0743b2e8a31ece3f6eb8b249bfc1721499"
     },
     {
       "path": "README.md",

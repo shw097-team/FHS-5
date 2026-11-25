@@ -1,6 +1,6 @@
 {
   "schema": "FHS5.W0NF.EvidenceManifest@1",
-  "generated_at": "2026-11-25T05:43:10+00:00",
+  "generated_at": "2026-11-25T05:51:58+00:00",
   "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
@@ -2845,29 +2845,29 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "openspec/changes/w0-nf-codex-20261125/.openspec.yaml",
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/.openspec.yaml",
       "bytes": 40,
       "sha256": "3c3c72cd1a100807c59ef8347538654b4d2d22269f59561c985b01cb44c39491"
     },
     {
-      "path": "openspec/changes/w0-nf-codex-20261125/design.md",
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/design.md",
       "bytes": 2374,
       "sha256": "1a1853d89154f1e884599414bc699689767b416c9923a6d957be6a10b272120d"
     },
     {
-      "path": "openspec/changes/w0-nf-codex-20261125/proposal.md",
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/proposal.md",
       "bytes": 1973,
       "sha256": "b512772016af63697a3d417673644c298e1214ad22354f8b6edd4a690e6acc52"
     },
     {
-      "path": "openspec/changes/w0-nf-codex-20261125/specs/w0-native-execution/spec.md",
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/specs/w0-native-execution/spec.md",
       "bytes": 3283,
       "sha256": "918dcde4a8f3909d9b190e79424294f183ba22831be353b62d6e202d9cd00683"
     },
     {
-      "path": "openspec/changes/w0-nf-codex-20261125/tasks.md",
-      "bytes": 1638,
-      "sha256": "c2e9adbef74651a08013c4dd99c21f1b8899f5f072e0ef7fb88f569fce26ca95"
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/tasks.md",
+      "bytes": 1678,
+      "sha256": "d9adad37cd72474c243adc6af4cc48c17add497f6704ed0d407c8bc862147308"
     },
     {
       "path": "openspec/config.yaml",
@@ -2878,6 +2878,11 @@
       "path": "openspec/specs/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "openspec/specs/w0-native-execution/spec.md",
+      "bytes": 3299,
+      "sha256": "f0062399c2361b150675924bac68028ca7e2e500c6e162cf3ad981c2711e3e55"
     },
     {
       "path": "tools/bridge_run.py",

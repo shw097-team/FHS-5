@@ -161,8 +161,8 @@ Combined：`NF-T08` 收據串接契約→Guide→DEV→OPS→Challenge→FAR→`
 2. W1M／下一包需與本 pack／candidate 一致，才可升 `W1_EXECUTION_READY`。
 3. 完整分母另案；不把本 44 案當 W1–W4 通過。
 4. HERMES Compatibility 另立工作包。
-5. GitHub 上推：local commit `f8732527` 已就緒；push 被安全審查拒絕，
-   記 `PUSH_BLOCKED_BY_POLICY_REVIEW`，remote main 仍 `43ac758`；需 Owner 明確批准。
+5. GitHub 上推：Owner 批准後已 fast-forward `43ac758..f3add20` 至
+   `shw097-team/FHS-5` main；remote raw 已驗 HTTP 200。
 
 ## 11｜來源內部不一致的 reconcile（保留封存）
 
