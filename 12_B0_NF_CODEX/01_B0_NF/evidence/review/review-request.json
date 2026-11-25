@@ -1,0 +1,38 @@
+{
+  "scope": {
+    "wp": "B0-NF",
+    "effect": "SOURCE_READ",
+    "wave": "W0"
+  },
+  "mode": "review_only",
+  "review_subject": "FHS-5/W0/B0-NF/briefcheck",
+  "crosswalk": [
+    {
+      "original_requirement_id": "SAMPLE-R2",
+      "polarity": "POS",
+      "consumer_ref": "OWNER-B0",
+      "child_units": [
+        "A",
+        "B"
+      ],
+      "phase": "W0",
+      "unit_id": "B0-R2",
+      "case_ref": "F5-W0-T03",
+      "must_contain": "A和B各有",
+      "pd_ref": "PD-B0-1",
+      "pi_ref": "PI-B0-1",
+      "source": "REQ",
+      "effect": "SOURCE_READ",
+      "line": 5
+    }
+  ],
+  "sources": [
+    {
+      "path": "requirements.md",
+      "label": "REQ",
+      "expected_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ],
+  "profile": "QUICK",
+  "schema_version": "PLP.REVIEW.REQUEST@2"
+}

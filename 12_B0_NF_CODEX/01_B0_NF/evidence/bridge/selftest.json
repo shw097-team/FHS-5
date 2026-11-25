@@ -1,0 +1,224 @@
+{
+  "schema": "FHS5.PLP.W1.ReferenceSelftest@author-1",
+  "claim_ceiling": "AUTHOR_REFERENCE_IMPL_ONLY",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "total": 22,
+  "passed": 22,
+  "failed": 0,
+  "verdict": "AUTHOR_REFERENCE_IMPL_PASS",
+  "checks": [
+    {
+      "id": "REF-01",
+      "pass": true,
+      "detail": {
+        "declared": 58,
+        "actual": 59,
+        "missing": 0,
+        "mismatched": 0,
+        "undeclared": 0,
+        "sources": 16,
+        "cases": 13,
+        "primary_manifest_entries": 0,
+        "primary_manifest_matches": 0,
+        "primary_manifest_mismatched": 0
+      }
+    },
+    {
+      "id": "REF-02",
+      "pass": true,
+      "detail": {
+        "claims": {
+          "local_observed": false,
+          "native_observed": false,
+          "independent_accepted": false,
+          "released": false
+        },
+        "claim_ceiling": "AUTHOR_DESIGN_ONLY"
+      }
+    },
+    {
+      "id": "REF-03",
+      "pass": true,
+      "detail": 16
+    },
+    {
+      "id": "REF-04",
+      "pass": true,
+      "detail": 58
+    },
+    {
+      "id": "REF-05",
+      "pass": true,
+      "detail": 13
+    },
+    {
+      "id": "REF-06",
+      "pass": true,
+      "detail": "13/13 clause exact"
+    },
+    {
+      "id": "REF-07",
+      "pass": true,
+      "detail": {
+        "cases": 13,
+        "missing": []
+      }
+    },
+    {
+      "id": "REF-08",
+      "pass": true,
+      "detail": {
+        "context_sha256": "33002e19d163f5ae41707d8b19d7539b6bff85685ade509ebfab07bd271f92e2",
+        "locators": 13
+      }
+    },
+    {
+      "id": "REF-09",
+      "pass": true,
+      "detail": "scope widened -> CONTEXT_SCOPE_MISMATCH"
+    },
+    {
+      "id": "REF-10",
+      "pass": true,
+      "detail": {
+        "schema": "FHS5.PLP.W1.CompareContext@author-reference-1",
+        "claim_ceiling": "AUTHOR_REFERENCE_IMPL_ONLY",
+        "comparable": true,
+        "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+        "scope": "W1 Guide/Bridge ABI + 3-Host consumption + Contract Context author pack; SOURCE_READ+ISOLATED_DRAFT_WRITE+LOCAL_CHECK+LOCAL_PACKAGE; no repo/host/native/release write",
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "exact_tuple": true,
+        "semantic_inference": false,
+        "state": "AUTHOR_LOCAL_COMPARE_ONLY"
+      }
+    },
+    {
+      "id": "REF-11",
+      "pass": true,
+      "detail": "00_WAVE_RUN_MANIFEST.json"
+    },
+    {
+      "id": "REF-12",
+      "pass": true,
+      "detail": "cross-subject -> COMPARE_CROSS_SUBJECT_DENY"
+    },
+    {
+      "id": "REF-13",
+      "pass": true,
+      "detail": "traversal rejected"
+    },
+    {
+      "id": "REF-14",
+      "pass": true,
+      "detail": "duplicate key rejected"
+    },
+    {
+      "id": "REF-15",
+      "pass": true,
+      "detail": "strict UTF-8 rejected"
+    },
+    {
+      "id": "REF-16",
+      "pass": true,
+      "detail": "source pin matches"
+    },
+    {
+      "id": "REF-17",
+      "pass": true,
+      "detail": {
+        "line_sha256": "40669f09442fca3afdf01fc33524db72f0c900d47e7d1204ac314f6503f8d8af",
+        "full_text": "| `W1-HOST-01` | POS | 某 Host 真 Consumed，同 Scope Raw | `NOT_RUN` | 無；W0 T01 只到 S"
+      }
+    },
+    {
+      "id": "REF-18",
+      "pass": true,
+      "detail": "span 0 rejected"
+    },
+    {
+      "id": "REF-19",
+      "pass": true,
+      "detail": {
+        "counts": {
+          "declared": 27,
+          "actual": 36,
+          "missing": 0,
+          "mismatched": 0,
+          "undeclared": 8,
+          "sources": 13,
+          "cases": 24,
+          "primary_manifest_entries": 34,
+          "primary_manifest_matches": 33,
+          "primary_manifest_mismatched": 1
+        },
+        "primary_manifest": {
+          "path": "PRIMARY_MANIFEST.json",
+          "sha256": "f2d6e3dc2f7e56384c02ab401babdd81a6690754c9074233431a9080c579f648",
+          "declared": 34,
+          "matches": 33,
+          "mismatched": 1,
+          "mismatch_rows": [
+            {
+              "path": "PRIMARY_RECEIPT.json",
+              "declared_bytes": 3986,
+              "actual_bytes": 4222,
+              "declared_sha256": "18ad4b8d0c303ea2ba655fb4ec6b6b4dcf64833d4e7e8c1b2ab6b23ce5c3e213",
+              "actual_sha256": "6dbdd7bd783bc8680702eba6af9973b2a775823399b3bfb9cda099a5132f2efd",
+              "match": false
+            }
+          ],
+          "declared_tree_sha256": "f27263d8e0894fcbf897e38b050dcc894d8873860f7e00271aa30a4c6f5f9446",
+          "recomputed_tree_sha256": "60ee06198fc2b57e67c6abcd138034428e24d16796192c711131779df7685201",
+          "undeclared_actual": [
+            "PRIMARY_DELIVERY_INDEX.json"
+          ]
+        },
+        "stale": {
+          "code": "PRIMARY_MANIFEST_PIN_MISMATCH",
+          "path": "PRIMARY_RECEIPT.json",
+          "detail": {
+            "path": "PRIMARY_RECEIPT.json",
+            "declared_bytes": 3986,
+            "actual_bytes": 4222,
+            "declared_sha256": "18ad4b8d0c303ea2ba655fb4ec6b6b4dcf64833d4e7e8c1b2ab6b23ce5c3e213",
+            "actual_sha256": "6dbdd7bd783bc8680702eba6af9973b2a775823399b3bfb9cda099a5132f2efd",
+            "match": false
+          }
+        }
+      }
+    },
+    {
+      "id": "REF-20",
+      "pass": true,
+      "detail": {
+        "project_id": "FHS-5_PLP",
+        "subject_id": "FHS-5_PLP/W0",
+        "scope": "W0-A/B/C AUTHOR CONTROL PACK; SOURCE_READ+ISOLATED_DRAFT_WRITE; W0-B NOT_ADMITTED",
+        "wave_id": "W0",
+        "batch_id": "W0-CODEX-REPAIR-20261123-01",
+        "source_manifest_sha256": "22eebb6c002179b6e7401c29b3c1a2877a208b73b68f1e62f50c0b63f786ef7f"
+      }
+    },
+    {
+      "id": "REF-21",
+      "pass": true,
+      "detail": "no host consumption claim"
+    },
+    {
+      "id": "REF-22",
+      "pass": true,
+      "detail": "claims all false"
+    }
+  ],
+  "not_claimed": [
+    "PI_READY",
+    "PD_BOUND",
+    "EXECUTION_ADMITTED",
+    "NATIVE_PASS",
+    "INDEPENDENT_PASS",
+    "RELEASED",
+    "MISSION_COMPLETE"
+  ]
+}

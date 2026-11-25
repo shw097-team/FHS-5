@@ -1,0 +1,13 @@
+{
+  "schema": "FHS5.B0NF.Finding@1",
+  "finding": {
+    "command": "python -m unittest discover -s tests -v",
+    "raw_sha256": "6d4ad0a177004e27dd533bc1cc5808b0f9571bca7c98167ae1334f92f1630d85",
+    "severity": "MAJOR",
+    "reproduction": "Run R3 case_dup.md and R7 case_ambiguous.md on candidate v1; both return exit 0/COMPLETE instead of 3/INVALID_DUP|INVALID_FORMAT",
+    "exit": 1,
+    "subject_sha": "ccdc1441bd09c957419a2d7a29f55dd668337113",
+    "class": "fail_open_duplicate",
+    "id": "F-B0-001"
+  }
+}

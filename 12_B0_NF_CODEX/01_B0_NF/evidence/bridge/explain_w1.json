@@ -1,0 +1,336 @@
+{
+  "schema": "FHS5.PLP.W1.ExplainSlice@author-reference-1",
+  "claim_ceiling": "AUTHOR_REFERENCE_IMPL_ONLY",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+    "scope": "W1 Guide/Bridge ABI + 3-Host consumption + Contract Context author pack; SOURCE_READ+ISOLATED_DRAFT_WRITE+LOCAL_CHECK+LOCAL_PACKAGE; no repo/host/native/release write",
+    "wave_id": "W1",
+    "batch_id": "W1-PACK-01",
+    "source_manifest_sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47"
+  },
+  "view": "all",
+  "kinds": null,
+  "clause_refs": [
+    {
+      "case_id": "W1-HOST-01",
+      "kind": "POS",
+      "requirement_ref": "W1M:09.1:W1-HOST-01",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-HOST-01.json",
+        "fixture": "fixtures/W1-HOST-01.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 663,
+        "line_end": 663
+      },
+      "clause_text": "| `W1-HOST-01` | POS | 某 Host 真 Consumed，同 Scope Raw | `NOT_RUN` | 無；W0 T01 只到 Source |",
+      "clause_sha256": "40669f09442fca3afdf01fc33524db72f0c900d47e7d1204ac314f6503f8d8af",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-HOST-02",
+      "kind": "NEG",
+      "requirement_ref": "W1M:09.1:W1-HOST-02",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-HOST-02.json",
+        "fixture": "fixtures/W1-HOST-02.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 664,
+        "line_end": 664
+      },
+      "clause_text": "| `W1-HOST-02` | NEG | ChatGPT Loaded 抵 Hermes Served | `HOST_ABI_DRIFT` | W0 T04 Host 版 |",
+      "clause_sha256": "430f97959350687e82e5fced221eb8b9f906d80d0a0e56d4751d97c2d0580e5c",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-HOST-03",
+      "kind": "NEG",
+      "requirement_ref": "W1M:09.1:W1-HOST-03",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-HOST-03.json",
+        "fixture": "fixtures/W1-HOST-03.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 665,
+        "line_end": 665
+      },
+      "clause_text": "| `W1-HOST-03` | NEG | 只讀 SKILL.md 宣 Invoked | `HOST_PENDING` | 本輪 Codex 實例 |",
+      "clause_sha256": "58647608a213bec4462e0d5fd552219eca8be37490e33d996c74754833577c6e",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-HERMES-01",
+      "kind": "POS",
+      "requirement_ref": "W1M:09.1:W1-HERMES-01",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-HERMES-01.json",
+        "fixture": "fixtures/W1-HERMES-01.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 666,
+        "line_end": 666
+      },
+      "clause_text": "| `W1-HERMES-01` | POS | Kanban／Delegation／Swarm 三格分開 | `NOT_OBSERVED` | 無 |",
+      "clause_sha256": "8e24dd3c733c9aba554d34a0e63124eb0620ed8c3f31f175ae06cea1fcb9438b",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-ABI-01",
+      "kind": "NEG",
+      "requirement_ref": "W1M:09.1:W1-ABI-01",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-ABI-01.json",
+        "fixture": "fixtures/W1-ABI-01.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 667,
+        "line_end": 667
+      },
+      "clause_text": "| `W1-ABI-01` | NEG | Guide proposal-2 直送 Bridge proposal-2 | `EXPLICIT_REVIEW_REQUIRED` | W0 T07 |",
+      "clause_sha256": "64c1d6f20fadc8d40900233ac8e22e14262e2155d802239083872fb7ce0db5a9",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-ABI-02",
+      "kind": "NEG",
+      "requirement_ref": "W1M:09.1:W1-ABI-02",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-ABI-02.json",
+        "fixture": "fixtures/W1-ABI-02.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 668,
+        "line_end": 668
+      },
+      "clause_text": "| `W1-ABI-02` | NEG | proposal-1 無 crosswalk 升 proposal-2 | `LOSSY_MIGRATION` | W0 T07 變體 |",
+      "clause_sha256": "77e839f899739797d5da774fc11a08481548bc770b57ae8ba2739755db6d8e15",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-SEC-01",
+      "kind": "SEC",
+      "requirement_ref": "W1M:09.1:W1-SEC-01",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-SEC-01.json",
+        "fixture": "fixtures/W1-SEC-01.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 669,
+        "line_end": 669
+      },
+      "clause_text": "| `W1-SEC-01` | SEC | Context 內嵌 `ignore permission` | `UNTRUSTED_SOURCE_DATA` | W0 T23 |",
+      "clause_sha256": "3b06be1d14a2275853e2a60091f82dbb14c0a14af762534437f3c2c1f63e98e0",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-API-01",
+      "kind": "POS",
+      "requirement_ref": "W1M:09.1:W1-API-01",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-API-01.json",
+        "fixture": "fixtures/W1-API-01.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 670,
+        "line_end": 670
+      },
+      "clause_text": "| `W1-API-01` | POS | 四 API 完整 Clause／NEG 可回取 | `NOT_RUN` | W0 T01／T06 |",
+      "clause_sha256": "aa81b87eeecfbe160c31e9b1400483259187d882a81a012a871291619dab94ae",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-R3-01",
+      "kind": "POS",
+      "requirement_ref": "W1M:09.1:W1-R3-01",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-R3-01.json",
+        "fixture": "fixtures/W1-R3-01.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 671,
+        "line_end": 671
+      },
+      "clause_text": "| `W1-R3-01` | POS | 以 W0 PRIMARY 34 清冊（33/34）、27/27 pack、13-source manifest 作 inspect 輸入；source_refs 與 body SHA 可回取 | `AUTHOR_REVIEW_PARTIAL`（receipt stale） | D01／D07 |",
+      "clause_sha256": "aa05a4948d41f8600a90845cb256c160678193c740a3cf2324daac24fee7defa",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-R3-02",
+      "kind": "NEG",
+      "requirement_ref": "W1M:09.1:W1-R3-02",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-R3-02.json",
+        "fixture": "fixtures/W1-R3-02.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 672,
+        "line_end": 672
+      },
+      "clause_text": "| `W1-R3-02` | NEG | plugin skill bytes read 當 Host Loaded／Installed | `HOST_PENDING` | 本輪 Codex |",
+      "clause_sha256": "d868f98b891b76a8b40ccf4819d2ec5333d582af0ac1942984afa8a7e04cd556",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-R3-03",
+      "kind": "NEG",
+      "requirement_ref": "W1M:09.1:W1-R3-03",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-R3-03.json",
+        "fixture": "fixtures/W1-R3-03.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 673,
+        "line_end": 673
+      },
+      "clause_text": "| `W1-R3-03` | NEG | crosswalk 缺 `effect`／`resume` 仍宣完整 | `ABI_LOSSY_CROSSWALK` | D05 |",
+      "clause_sha256": "fa6ff7a7d89803e6c0d6c00d8a933104f6aee44e45da1358fe0dcb6aa1bb9af8",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-R3-04",
+      "kind": "EDGE",
+      "requirement_ref": "W1M:09.1:W1-R3-04",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-R3-04.json",
+        "fixture": "fixtures/W1-R3-04.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 674,
+        "line_end": 674
+      },
+      "clause_text": "| `W1-R3-04` | EDGE | workspace 317→318、PRIMARY 不變 | `WORKSPACE_DRIFT_BOUNDED` | D06b |",
+      "clause_sha256": "502408723a47bede72f38be933d0ddc3c5fe53faed89716e11bdc18d371d0783",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    },
+    {
+      "case_id": "W1-R3-05",
+      "kind": "NEG",
+      "requirement_ref": "W1M:09.1:W1-R3-05",
+      "parent": "W1-PACK-01",
+      "children": {
+        "oracle": "oracles/W1-R3-05.json",
+        "fixture": "fixtures/W1-R3-05.json"
+      },
+      "source": {
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "line_start": 675,
+        "line_end": 675
+      },
+      "clause_text": "| `W1-R3-05` | NEG | CH-07 identity-only 當可恢復舊 bytes | `EVIDENCE_LAUNDERING`／`DELTA_MISROUTED` | D06 |",
+      "clause_sha256": "85c8c7c3de7b875b0258c0b820b50d6c9bbbc28aedba1e230af6ac2d143f0979",
+      "missing": [],
+      "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+      "native_state": "NOT_OBSERVED"
+    }
+  ],
+  "parent": "W1-PACK-01",
+  "children": [
+    "W1-ABI-01",
+    "W1-ABI-02",
+    "W1-API-01",
+    "W1-HERMES-01",
+    "W1-HOST-01",
+    "W1-HOST-02",
+    "W1-HOST-03",
+    "W1-R3-01",
+    "W1-R3-02",
+    "W1-R3-03",
+    "W1-R3-04",
+    "W1-R3-05",
+    "W1-SEC-01"
+  ],
+  "missing": [],
+  "sections": [
+    {
+      "path": "03_DEV_ECP.md",
+      "sha256": "5ab52cebd19e5822ee4035fb9b0f880cc1d256a82841f3c8b4f607fdfd15037f",
+      "sections": [
+        "1. Applicability 與 Effect",
+        "2. Preconditions",
+        "3. WriteSet 與禁止範圍",
+        "4. Operation 與 Adapter 計畫",
+        "5. Postconditions 與 Readback",
+        "6. Idempotency、Retry 與 Recovery"
+      ]
+    },
+    {
+      "path": "04_OPS_ECP.md",
+      "sha256": "87591f5b710376987dd5c45ca2dbd3530e3e3b979fa578cb8c6e53ea366b8ff6",
+      "sections": [
+        "1. Applicability 與 Effect",
+        "2. Preconditions",
+        "3. Host 契約與權限",
+        "4. Operation（未來受權）",
+        "5. Postconditions 與 Readback",
+        "6. Recovery 與 Stop／Resume"
+      ]
+    },
+    {
+      "path": "06_PERMISSION_STOP_RESUME.md",
+      "sha256": "7d5114bf6e6cd75ec3d50b2925974d0a4c48d842aa209f2d3d30f9c85ca6e9a5",
+      "sections": [
+        "1. 角色與權力分層",
+        "2. 每個 Effect 的 Issuer 與 Admission",
+        "3. Stop scope",
+        "4. Resume predicate",
+        "5. UNKNOWN reconcile 與具名 HOLD"
+      ]
+    }
+  ],
+  "handoff_rows": [
+    "| Producer（W1） | Consumer（W2） | Transform／validation | Loss／unknown | NEG |",
+    "| `HostCapabilityLedger.host_claims[]` | `02_ORIGINAL_CONTRACT_REFS.host_refs[]` | observation 類型原樣 | `NOT_OBSERVED` 不升 true | `W2_HOST_BIND` |"
+  ],
+  "semantic_state": "AUTHOR_FIXTURE_NOT_LIVE",
+  "body_resolver": "LOCAL_PINNED_BYTES_ONLY"
+}

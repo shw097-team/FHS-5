@@ -1,0 +1,53 @@
+{
+  "schema": "FHS5.B0NF.OPS@1",
+  "host": {
+    "codex": {
+      "exit": 0,
+      "stdout": "codex-cli 0.169.0-alpha.11.1\nWARNING: failed to clean up stale arg0 temp dirs: 存取被拒。 (os error 5)\nWARNING: proceeding, even though we could not create PATH aliases: 存取被拒。 (os error 5) at path \"C:\\\\Users\\\\user\\\\.codex\\\\tmp\\\\arg0-windows\\\\codex-arg0JiZypq\""
+    },
+    "python": {
+      "exit": 0,
+      "stdout": "Python 3.11.9"
+    },
+    "git": {
+      "exit": 0,
+      "stdout": "git version 2.53.0.windows.1"
+    }
+  },
+  "steps": [
+    {
+      "id": "O2-POS",
+      "exit": 0,
+      "stdout": "{\"missing\":[],\"provided\":[\"A\",\"B\"],\"source_sha256\":\"9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece\",\"status\":\"COMPLETE\"}",
+      "stderr": ""
+    },
+    {
+      "id": "O2-NEG",
+      "exit": 2,
+      "stdout": "{\"missing\":[\"B\"],\"provided\":[\"A\"],\"source_sha256\":\"eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019\",\"status\":\"MISSING\"}",
+      "stderr": ""
+    },
+    {
+      "id": "O3-OUTPUT",
+      "before_absent": true,
+      "after_sha": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33",
+      "source_unchanged": true,
+      "json_parse": "COMPLETE"
+    },
+    {
+      "id": "O4-RESTORE",
+      "absent": true,
+      "source_unchanged": true
+    },
+    {
+      "id": "O5-PROVIDER-OFF",
+      "exit": 0,
+      "imported_providers": "NONE"
+    },
+    {
+      "id": "O6-CONSUMER",
+      "pointer": "evidence/consumer/consumer_receipt.json",
+      "state": "READY_AFTER_EVIDENCE"
+    }
+  ]
+}

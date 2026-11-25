@@ -1,0 +1,179 @@
+{
+  "schema": "FHS5.B0NF.Challenge@1",
+  "claim_ceiling": "CHECKER_ROLE_SEPARATED_SAME_PRINCIPAL",
+  "candidate": "C:\\Users\\user\\Documents\\Codex\\2026-11-25\\new-chat-5\\work\\B0-NF\\checker-wt",
+  "pins": {
+    "source": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+    "candidate": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "evidence": "ef977e0855e7d3dc633aaa5d2b0a78976a3ee530667596f5b8f031dbf262c6d5",
+    "oracle": "3cc26ed8e74a150e4c354fa9596d706e1e30552a217d940ba14c17c2f5bd12e1",
+    "case_set": "93c7f91c6d78288d052ec701798c98dbf2717b3ceef6d486751e95105ca90f7c"
+  },
+  "checks": [
+    {
+      "id": "SRC",
+      "ok": true,
+      "observed": "requirements.md sha"
+    },
+    {
+      "id": "FIX-case_missing.md",
+      "ok": true,
+      "observed": "case_missing.md"
+    },
+    {
+      "id": "FIX-case_ambiguous.md",
+      "ok": true,
+      "observed": "case_ambiguous.md"
+    },
+    {
+      "id": "FIX-case_malformed.md",
+      "ok": true,
+      "observed": "case_malformed.md"
+    },
+    {
+      "id": "FIX-case_ok.md",
+      "ok": true,
+      "observed": "case_ok.md"
+    },
+    {
+      "id": "FIX-case_bad_path.md",
+      "ok": true,
+      "observed": "case_bad_path.md"
+    },
+    {
+      "id": "FIX-case_dup.md",
+      "ok": true,
+      "observed": "case_dup.md"
+    },
+    {
+      "id": "FIX-case_bad_utf8.md",
+      "ok": true,
+      "observed": "case_bad_utf8.md"
+    },
+    {
+      "id": "CASE-case_ok.md",
+      "ok": true,
+      "observed": {
+        "exit": 0,
+        "stdout": "{\"missing\":[],\"provided\":[\"A\",\"B\"],\"source_sha256\":\"9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece\",\"status\":\"COMPLETE\"}",
+        "expected": {
+          "exit": 0,
+          "status": "COMPLETE",
+          "provided": [
+            "A",
+            "B"
+          ],
+          "missing": []
+        }
+      }
+    },
+    {
+      "id": "CASE-case_missing.md",
+      "ok": true,
+      "observed": {
+        "exit": 2,
+        "stdout": "{\"missing\":[\"B\"],\"provided\":[\"A\"],\"source_sha256\":\"eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019\",\"status\":\"MISSING\"}",
+        "expected": {
+          "exit": 2,
+          "status": "MISSING",
+          "provided": [
+            "A"
+          ],
+          "missing": [
+            "B"
+          ]
+        }
+      }
+    },
+    {
+      "id": "CASE-case_dup.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "stdout": "{\"missing\":[],\"provided\":[\"A\",\"B\"],\"source_sha256\":\"bb62042e22a0d3ffd1310a2b19a2917d22114a6b726bd0fee88429de7ef2d4ee\",\"status\":\"INVALID_DUP\"}",
+        "expected": {
+          "exit": 3,
+          "status": "INVALID_DUP"
+        }
+      }
+    },
+    {
+      "id": "CASE-case_bad_utf8.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "stdout": "{\"missing\":[],\"provided\":[],\"source_sha256\":\"551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313\",\"status\":\"INVALID_ENCODING\"}",
+        "expected": {
+          "exit": 3,
+          "status": "INVALID_ENCODING"
+        }
+      }
+    },
+    {
+      "id": "CASE-case_ambiguous.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "stdout": "{\"missing\":[],\"provided\":[\"A\",\"B\"],\"source_sha256\":\"01eb4f730a6abedf73cab7a23c309b734e52e255f23acc8883061987029dd221\",\"status\":\"INVALID_FORMAT\"}",
+        "expected": {
+          "exit": 3,
+          "status": "INVALID_FORMAT"
+        }
+      }
+    },
+    {
+      "id": "CASE-case_malformed.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "stdout": "{\"missing\":[],\"provided\":[\"B\"],\"source_sha256\":\"9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508\",\"status\":\"INVALID_FORMAT\"}",
+        "expected": {
+          "exit": 3,
+          "status": "INVALID_FORMAT"
+        }
+      }
+    },
+    {
+      "id": "PATH-../outside/canary.md",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "stdout": "{\"missing\":[],\"provided\":[],\"source_sha256\":null,\"status\":\"INVALID_PATH\"}"
+      }
+    },
+    {
+      "id": "PATH-C:\\Users\\user\\AppDat",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "stdout": "{\"missing\":[],\"provided\":[],\"source_sha256\":null,\"status\":\"INVALID_PATH\"}"
+      }
+    },
+    {
+      "id": "PATH-\\\\localhost\\share\\ca",
+      "ok": true,
+      "observed": {
+        "exit": 3,
+        "stdout": "{\"missing\":[],\"provided\":[],\"source_sha256\":null,\"status\":\"INVALID_PATH\"}"
+      }
+    },
+    {
+      "id": "PATH-junction",
+      "ok": true,
+      "observed": "SKIPPED: junction not permitted"
+    },
+    {
+      "id": "NO-WRITE",
+      "ok": true,
+      "observed": "candidate files unchanged"
+    }
+  ],
+  "findings": [],
+  "verdict": "PASS",
+  "checker_identity": "checker/run_checker.py (separate worktree/process; same OS principal)",
+  "not_covered": [
+    "HERMES/GPT CHAT/GPT WORK host execution",
+    "full C16/EC-36/local47",
+    "product release"
+  ]
+}

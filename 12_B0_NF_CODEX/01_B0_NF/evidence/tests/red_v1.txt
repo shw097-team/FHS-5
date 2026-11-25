@@ -1,0 +1,33 @@
+test_r10_reversible_output (test_briefcheck.BriefcheckTests.test_r10_reversible_output) ... ok
+test_r1_ok (test_briefcheck.BriefcheckTests.test_r1_ok) ... ok
+test_r2_missing_b (test_briefcheck.BriefcheckTests.test_r2_missing_b) ... ok
+test_r3_duplicate_a (test_briefcheck.BriefcheckTests.test_r3_duplicate_a) ... FAIL
+test_r4_path_escape (test_briefcheck.BriefcheckTests.test_r4_path_escape) ... skipped 'junction creation not permitted: Access is denied.\n'
+test_r5_bad_utf8 (test_briefcheck.BriefcheckTests.test_r5_bad_utf8) ... ok
+test_r6_hash_mismatch (test_briefcheck.BriefcheckTests.test_r6_hash_mismatch) ... ok
+test_r7_ambiguous (test_briefcheck.BriefcheckTests.test_r7_ambiguous) ... FAIL
+test_r8_malformed (test_briefcheck.BriefcheckTests.test_r8_malformed) ... ok
+test_r9_stable (test_briefcheck.BriefcheckTests.test_r9_stable) ... ok
+
+======================================================================
+FAIL: test_r3_duplicate_a (test_briefcheck.BriefcheckTests.test_r3_duplicate_a)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Codex\2026-11-25\new-chat-5\work\B0-NF\repo\tests\test_briefcheck.py", line 55, in test_r3_duplicate_a
+    self.assertEqual(p.returncode, 3, p.stderr)
+AssertionError: 0 != 3 : 
+
+======================================================================
+FAIL: test_r7_ambiguous (test_briefcheck.BriefcheckTests.test_r7_ambiguous)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Codex\2026-11-25\new-chat-5\work\B0-NF\repo\tests\test_briefcheck.py", line 91, in test_r7_ambiguous
+    self.assertEqual(p.returncode, 3, p.stderr)
+AssertionError: 0 != 3 : 
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.617s
+
+FAILED (failures=2, skipped=1)
+
+EXIT=1

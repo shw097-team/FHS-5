@@ -1,0 +1,156 @@
+{
+  "schema": "FHS5.B0NF.IntegrationLedger@1",
+  "workspace": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+  "new_root": "12_B0_NF_CODEX",
+  "decision": "W0-CODEX-FIRST-20261125-01",
+  "items": [
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\MANIFEST.json",
+      "role": "old workspace manifest",
+      "action": "REFERENCE",
+      "exists": true,
+      "bytes": 60097,
+      "sha256": "c947b1e721d6315a7fd50bda32d211246855b4207f9e4ef0c197be011f8b5aaa"
+    },
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\10_FINAL_DELIVERY\\FHS-5_PLP_W0_PRIMARY\\PRIMARY_MANIFEST.json",
+      "role": "old W0 primary manifest",
+      "action": "REFERENCE",
+      "exists": true,
+      "bytes": 5914,
+      "sha256": "f2d6e3dc2f7e56384c02ab401babdd81a6690754c9074233431a9080c579f648"
+    },
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\10_FINAL_DELIVERY\\FHS-5_PLP_W0_CLOSEOUT.md",
+      "role": "old W0 closeout",
+      "action": "REFERENCE",
+      "exists": true,
+      "bytes": 9507,
+      "sha256": "8378f02f63be03f3a8bdd1f655a6d9fdb0ace2bd5da536548d06611b989ff7f3"
+    },
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\10_FINAL_DELIVERY\\FHS-5_PLP_W0_CLOSEOUT_FOR_W1_W4.md",
+      "role": "old W0→W1-W4 handoff",
+      "action": "REFERENCE",
+      "exists": true,
+      "bytes": 6294,
+      "sha256": "532e0f17c9eeb6d51b80516163d2cb349db54d9a1b2a5482780eaab741c811ce"
+    },
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\10_FINAL_DELIVERY\\FHS-5_PLP_W1_PRIMARY\\PRIMARY_MANIFEST.json",
+      "role": "old W1 primary manifest",
+      "action": "REFERENCE",
+      "exists": true,
+      "bytes": 15503,
+      "sha256": "334afcd4a0d2c49c5cd96113ebadaae519f4ab26113f7a1c0bea3343f1cf3c0e"
+    },
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\11_W1_EXECUTION_20261124\\impl\\w1_bridge_reference.py",
+      "role": "W1 Bridge reference",
+      "action": "REUSE_COPY",
+      "exists": true,
+      "bytes": 36580,
+      "sha256": "dc0d1041a473a96493c887f279f75dcc1eca077c39242de47faffd44e12050a8"
+    },
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\11_W1_EXECUTION_20261124\\raw\\adapter_selftest.json",
+      "role": "W1 adapter selftest raw",
+      "action": "REFERENCE",
+      "exists": true,
+      "bytes": 5942,
+      "sha256": "7a56ba1a148e77261595c8deda8d95e4b7f6a64e3f74db4c4f6000589b8b91e3"
+    },
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\05_W0C\\W0C_ID_APPLICABILITY_LEDGER.json",
+      "role": "W0-C 1011 ledger",
+      "action": "REFERENCE",
+      "exists": true,
+      "bytes": 665541,
+      "sha256": "334ba683fd7390f116bbe92487f78862a3d86a66993307027aeda974cc5b9297"
+    },
+    {
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\07_HANDOFF\\NAMED_HOLDS.json",
+      "role": "old named holds",
+      "action": "REFERENCE",
+      "exists": true,
+      "bytes": 8582,
+      "sha256": "29ab654ed064d66f3af48a089d0247e5040f6afb79f8a8731175143321398a17"
+    }
+  ],
+  "b0_evidence": [
+    "01_B0_NF/evidence\\bridge\\compare_w0.json",
+    "01_B0_NF/evidence\\bridge\\explain_w1.json",
+    "01_B0_NF/evidence\\bridge\\inspect_w0.json",
+    "01_B0_NF/evidence\\bridge\\render_w1.json",
+    "01_B0_NF/evidence\\bridge\\selftest.json",
+    "01_B0_NF/evidence\\challenge\\challenge.json",
+    "01_B0_NF/evidence\\consumer\\consumer_receipt.json",
+    "01_B0_NF/evidence\\far\\far.json",
+    "01_B0_NF/evidence\\far\\finding.json",
+    "01_B0_NF/evidence\\five_party_summary.json",
+    "01_B0_NF/evidence\\frozen_oracle.json",
+    "01_B0_NF/evidence\\guide\\thin_start.json",
+    "01_B0_NF/evidence\\ops\\ops.json",
+    "01_B0_NF/evidence\\ops\\root\\case_ambiguous.md",
+    "01_B0_NF/evidence\\ops\\root\\case_bad_path.md",
+    "01_B0_NF/evidence\\ops\\root\\case_bad_utf8.md",
+    "01_B0_NF/evidence\\ops\\root\\case_dup.md",
+    "01_B0_NF/evidence\\ops\\root\\case_malformed.md",
+    "01_B0_NF/evidence\\ops\\root\\case_missing.md",
+    "01_B0_NF/evidence\\ops\\root\\case_ok.md",
+    "01_B0_NF/evidence\\review\\review-request.json",
+    "01_B0_NF/evidence\\review\\reviewer.stderr.txt",
+    "01_B0_NF/evidence\\review\\reviewer.stdout.json",
+    "01_B0_NF/evidence\\review\\sidecar\\review-a406837d3a67c13b8359de99\\00_SCOPE_SOURCE_MANIFEST.md",
+    "01_B0_NF/evidence\\review\\sidecar\\review-a406837d3a67c13b8359de99\\01_PI_PD_TRACE.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-a406837d3a67c13b8359de99\\02_REVIEW_FINDINGS.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-a406837d3a67c13b8359de99\\03_EXECUTION_HANDOFF.md",
+    "01_B0_NF/evidence\\review\\sidecar\\review-a406837d3a67c13b8359de99\\04_EVIDENCE_ACCEPTANCE_LEDGER.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-a406837d3a67c13b8359de99\\REVIEW_PACKAGE_MANIFEST.json",
+    "01_B0_NF/evidence\\review\\sidecar\\review-aa5dfd7211e7955558db0f8f\\00_SCOPE_SOURCE_MANIFEST.md",
+    "01_B0_NF/evidence\\review\\sidecar\\review-aa5dfd7211e7955558db0f8f\\01_PI_PD_TRACE.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-aa5dfd7211e7955558db0f8f\\02_REVIEW_FINDINGS.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-aa5dfd7211e7955558db0f8f\\03_EXECUTION_HANDOFF.md",
+    "01_B0_NF/evidence\\review\\sidecar\\review-aa5dfd7211e7955558db0f8f\\04_EVIDENCE_ACCEPTANCE_LEDGER.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-aa5dfd7211e7955558db0f8f\\REVIEW_PACKAGE_MANIFEST.json",
+    "01_B0_NF/evidence\\review\\sidecar\\review-e94456641bf9d8df9bcc9ed1\\00_SCOPE_SOURCE_MANIFEST.md",
+    "01_B0_NF/evidence\\review\\sidecar\\review-e94456641bf9d8df9bcc9ed1\\01_PI_PD_TRACE.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-e94456641bf9d8df9bcc9ed1\\02_REVIEW_FINDINGS.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-e94456641bf9d8df9bcc9ed1\\03_EXECUTION_HANDOFF.md",
+    "01_B0_NF/evidence\\review\\sidecar\\review-e94456641bf9d8df9bcc9ed1\\04_EVIDENCE_ACCEPTANCE_LEDGER.jsonl",
+    "01_B0_NF/evidence\\review\\sidecar\\review-e94456641bf9d8df9bcc9ed1\\REVIEW_PACKAGE_MANIFEST.json",
+    "01_B0_NF/evidence\\tests\\green_v2.txt",
+    "01_B0_NF/evidence\\tests\\green_v2_after_review.txt",
+    "01_B0_NF/evidence\\tests\\patch_12prime.diff",
+    "01_B0_NF/evidence\\tests\\red_v1.txt"
+  ],
+  "actions": {
+    "reuse": [
+      "W1 Bridge reference"
+    ],
+    "build": [
+      "briefcheck repo",
+      "guide_min",
+      "challenge/checker",
+      "far_min",
+      "consumer/ops scripts"
+    ],
+    "reference": [
+      "old W0/W1 primary",
+      "W0-C ledger",
+      "named holds"
+    ],
+    "defer": [
+      "HERMES compatibility",
+      "W1-W4 full waves",
+      "full product denominators"
+    ]
+  },
+  "not_claimed": [
+    "B0_NF_VALIDATED full",
+    "W0_NF_VALIDATED",
+    "W1-W4 complete",
+    "HERMES/GPT host pass",
+    "RELEASED"
+  ]
+}

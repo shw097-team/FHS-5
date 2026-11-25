@@ -1,0 +1,13 @@
+{
+  "schema": "FHS5.PLP.W1.CompareContext@author-reference-1",
+  "claim_ceiling": "AUTHOR_REFERENCE_IMPL_ONLY",
+  "comparable": true,
+  "subject_id": "FHS-5_PLP/W0",
+  "scope": "W0-A/B/C AUTHOR CONTROL PACK; SOURCE_READ+ISOLATED_DRAFT_WRITE; W0-B NOT_ADMITTED",
+  "added": [],
+  "removed": [],
+  "changed": [],
+  "exact_tuple": true,
+  "semantic_inference": false,
+  "state": "AUTHOR_LOCAL_COMPARE_ONLY"
+}

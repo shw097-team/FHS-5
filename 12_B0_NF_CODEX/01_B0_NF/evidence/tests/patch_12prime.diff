@@ -1,0 +1,22 @@
+diff --git a/briefcheck.py b/briefcheck.py
+index d1d76d0..563ab34 100644
+--- a/briefcheck.py
++++ b/briefcheck.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""briefcheck B0 candidate (red v1): duplicate handling intentionally incomplete."""
++"""briefcheck B0 candidate v2: fail-closed duplicate/ambiguous handling."""
+ import argparse, hashlib, json, os, sys
+ from pathlib import Path
+ 
+@@ -54,6 +54,10 @@ def main(argv=None):
+             malformed = True
+     if malformed:
+         return emit(3, "INVALID_FORMAT", actual, sorted(checked))
++    if seen["A"] > 1:
++        return emit(3, "INVALID_DUP", actual, sorted(checked))
++    if seen["B"] > 1:
++        return emit(3, "INVALID_FORMAT", actual, sorted(checked))
+     missing = [x for x in ("A", "B") if x not in checked]
+     if missing:
+         return emit(2, "MISSING", actual, sorted(checked), missing)

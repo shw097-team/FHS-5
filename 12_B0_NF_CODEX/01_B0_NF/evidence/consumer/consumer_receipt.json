@@ -1,0 +1,24 @@
+{
+  "schema": "FHS5.B0NF.ConsumerReceipt@1",
+  "consumer_id": "consumer-readback/1",
+  "pack": "C:\\Users\\user\\Documents\\Codex\\2026-11-25\\new-chat-5\\outputs\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "pack_files_ok": true,
+  "candidate": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+  "checker": "C:\\Users\\user\\Documents\\Codex\\2026-11-25\\new-chat-5\\work\\B0-NF\\evidence\\challenge\\challenge.json",
+  "checker_verdict": "PASS",
+  "checker_pins": {
+    "source": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+    "candidate": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "evidence": "ef977e0855e7d3dc633aaa5d2b0a78976a3ee530667596f5b8f031dbf262c6d5",
+    "oracle": "3cc26ed8e74a150e4c354fa9596d706e1e30552a217d940ba14c17c2f5bd12e1",
+    "case_set": "93c7f91c6d78288d052ec701798c98dbf2717b3ceef6d486751e95105ca90f7c"
+  },
+  "consumed": true,
+  "readback": "manifest+checker+candidate pins read",
+  "next": "W0 CLOSEOUT/HANDOFF",
+  "not_claimed": [
+    "HERMES/GPT host execution",
+    "release"
+  ]
+}

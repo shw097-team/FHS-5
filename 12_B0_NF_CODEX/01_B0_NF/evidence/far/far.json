@@ -1,0 +1,71 @@
+{
+  "schema": "FHS5.B0NF.FAR@1",
+  "claim_ceiling": "BUILD_MINIMAL_FAR_REFERENCE",
+  "finding": {
+    "command": "python -m unittest discover -s tests -v",
+    "raw_sha256": "6d4ad0a177004e27dd533bc1cc5808b0f9571bca7c98167ae1334f92f1630d85",
+    "severity": "MAJOR",
+    "reproduction": "Run R3 case_dup.md and R7 case_ambiguous.md on candidate v1; both return exit 0/COMPLETE instead of 3/INVALID_DUP|INVALID_FORMAT",
+    "exit": 1,
+    "subject_sha": "ccdc1441bd09c957419a2d7a29f55dd668337113",
+    "class": "fail_open_duplicate",
+    "id": "F-B0-001"
+  },
+  "rq": {
+    "RQ0": "finding has command/exit/raw/reproduction",
+    "RQ1": "reproduced in candidate worktree",
+    "RQ2": "root cause localized to duplicate counting",
+    "RQ3": "affected cone: parser duplicate branch + R3/R7 cases",
+    "RQ4": "no external source required",
+    "RQ5": "two alternatives considered",
+    "RQ6": "security impact: fail-open completeness claim",
+    "RQ7": "compatibility: no schema change required",
+    "RQ8": "next: patch and affected retest"
+  },
+  "alternatives": [
+    {
+      "id": "ALT-1",
+      "name": "reject duplicates fail-closed",
+      "cost": "low",
+      "risk": "low",
+      "chosen": true
+    },
+    {
+      "id": "ALT-2",
+      "name": "deduplicate with warning",
+      "cost": "low",
+      "risk": "medium: silent normalization",
+      "chosen": false
+    }
+  ],
+  "chosen": "ALT-1",
+  "advice": {
+    "root_cause": "v1 collected checked letters in a set without counting duplicates",
+    "reproduce": "Run R3 case_dup.md and R7 case_ambiguous.md on candidate v1; both return exit 0/COMPLETE instead of 3/INVALID_DUP|INVALID_FORMAT",
+    "minimal_patch": "count seen[A]/seen[B] and reject",
+    "test": "R3 INVALID_DUP; R7 INVALID_FORMAT",
+    "security": "fail-closed; no path/secret effect",
+    "compat": "same JSON schema/exit codes",
+    "docs": "requirements duplicate negative",
+    "rollback": "restore v1 file from git",
+    "monitor": "re-run affected cases only",
+    "next": "12' candidate + checker"
+  },
+  "keys": [
+    "finding_id",
+    "root_cause",
+    "alternatives",
+    "chosen",
+    "risk",
+    "next",
+    "evidence"
+  ],
+  "risk": "medium if fail-open; low after fail-closed patch",
+  "next": "patch as 12' revision",
+  "evidence": "6d4ad0a177004e27dd533bc1cc5808b0f9571bca7c98167ae1334f92f1630d85",
+  "source_status": "HIT_LOCAL",
+  "not_covered": [
+    "Fabric three-source profile",
+    "FAR-T20/FARP30 full denominator"
+  ]
+}

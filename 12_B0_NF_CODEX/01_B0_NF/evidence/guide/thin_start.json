@@ -1,0 +1,84 @@
+{
+  "schema": "FHS5.B0NF.GuideThinStart@1",
+  "claim_ceiling": "BUILD_MINIMAL_GUIDE_REFERENCE",
+  "pack": "C:\\Users\\user\\Documents\\Codex\\2026-11-25\\new-chat-5\\outputs\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "mode": "PACKAGE_FIRST",
+  "pack_digest": "3456c63d78dc4c6b64d894739631dee03ce58ae372c970a00d186631b110c325",
+  "files": [
+    {
+      "path": "00_W0_PI_PD.md",
+      "sha256": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11",
+      "bytes": 31783,
+      "ok": true
+    },
+    {
+      "path": "01_W0_DEV_ECP.md",
+      "sha256": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6",
+      "bytes": 11556,
+      "ok": true
+    },
+    {
+      "path": "02_W0_OPS_ECP.md",
+      "sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747",
+      "bytes": 11075,
+      "ok": true
+    },
+    {
+      "path": "03_W0_TQAEP.md",
+      "sha256": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb",
+      "bytes": 13805,
+      "ok": true
+    },
+    {
+      "path": "04_W0_START_THIN_PROMPT.md",
+      "sha256": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554",
+      "bytes": 7780,
+      "ok": true
+    }
+  ],
+  "goal": "Complete B0-NF five-party representative loop with CODEX Native DEV/OPS",
+  "done": [
+    "five-party individual+combined",
+    "DEV/OPS readback",
+    "Challenge/FAR",
+    "OFF",
+    "consumer"
+  ],
+  "limits": [
+    "local CODEX scope",
+    "no external admin/release",
+    "no HERMES/GPT host claim"
+  ],
+  "next": "run briefcheck candidate challenge",
+  "delta": {
+    "source_sha": "a1f186cc337a4b3828e53f77533df5c97fdda63e132521d861a79b884f0c3aef",
+    "candidate_sha": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "evidence_sha": "C:\\Users\\user\\Documents\\Codex\\2026-11-25\\new-chat-5\\work\\B0-NF\\evidence\\challenge\\challenge.json",
+    "requirement_ids": [
+      "SAMPLE-R1",
+      "SAMPLE-R2",
+      "SAMPLE-R3",
+      "SAMPLE-R4"
+    ],
+    "case_ids": [
+      "F5-W0-T01",
+      "F5-W0-T03",
+      "F5-W0-T06",
+      "F5-W0-T13",
+      "NF-T01"
+    ],
+    "findings": [],
+    "next_action": "run B0 current READY task",
+    "stop_conditions": [
+      "pack digest mismatch",
+      "no write-set/preimage",
+      "path escape/secret",
+      "false permit"
+    ],
+    "not_covered": [
+      "HERMES/GPT CHAT/GPT WORK host execution",
+      "full U26/CG-SEM17",
+      "release"
+    ]
+  }
+}
