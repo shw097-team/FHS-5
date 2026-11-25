@@ -1,0 +1,21 @@
+{
+  "schema": "FHS5.PLP.W1.NFPushReceipt@1",
+  "date": "2026-11-25",
+  "timezone": "Asia/Taipei",
+  "remote": "https://github.com/shw097-team/FHS-5.git",
+  "remote_name": "origin",
+  "branch": "codex/w1-nf-r2-20261125",
+  "main_untouched": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+  "first_push_commit": "8d250c6c9d88d4c6d3c53117f396d39ab7a4596d",
+  "current_branch_head": "ae05a74514d2c310f82bbf9bb1a2009078f11c87",
+  "remote_branch_head_verified": "ae05a74514d2c310f82bbf9bb1a2009078f11c87",
+  "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "push_verified_by": "git ls-remote origin refs/heads/codex/w1-nf-r2-20261125",
+  "credential_source": "C:\\Projects\\Agent_Workspace\\API KEY\\GITHUB-REPO_SHW097-4.txt (temporary credential store; token not printed)",
+  "notes": [
+    "Only origin points to shw097-team/FHS-5.",
+    "main was not modified or force-pushed.",
+    "The pack's internal repository.commit records the first push (8d250c6); this receipt records the follow-up head ae05a74.",
+    "No other remote or route was used."
+  ]
+}

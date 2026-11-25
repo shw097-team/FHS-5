@@ -1,0 +1,13 @@
+PASS byte_flip_00: rc=2 token=DIGEST_MISMATCH expected=['DIGEST_MISMATCH']
+PASS crlf_01: rc=2 token=EOL_NON_CANONICAL expected=['DIGEST_MISMATCH', 'EOL_NON_CANONICAL']
+PASS delete_03: rc=2 token=PACK_INCOMPLETE_LOCAL expected=['PACK_INCOMPLETE_LOCAL']
+PASS duplicate_json_key: rc=2 token=STRICT_JSON_REJECT expected=['STRICT_JSON_REJECT']
+PASS nan_value: rc=2 token=STRICT_JSON_REJECT expected=['STRICT_JSON_REJECT']
+PASS path_traversal: rc=2 token=PACK_INCOMPLETE_LOCAL expected=['PACK_INCOMPLETE_LOCAL', 'PATH_OUTSIDE_ROOT']
+PASS identity_mismatch: rc=2 token=IDENTITY_MISMATCH expected=['IDENTITY_MISMATCH']
+PASS drop_dev_id: rc=2 token=ID_SET_INCOMPLETE expected=['ID_SET_INCOMPLETE']
+PASS dag_cycle: rc=2 token=DAG_CYCLE expected=['DAG_CYCLE']
+PASS manifest_self_embed: rc=2 token=MANIFEST_SELF_EMBED expected=['MANIFEST_SELF_EMBED']
+PASS asset_byte_flip: rc=2 token=ASSET_DIGEST_MISMATCH expected=['ASSET_DIGEST_MISMATCH']
+PASS upstream_pin_mismatch: rc=2 token=UPSTREAM_PIN_MISMATCH expected=['UPSTREAM_PIN_MISMATCH']
+{"suite": "W1_NF_MUTATIONS", "total": 12, "passed": 12, "result": "PASS"}

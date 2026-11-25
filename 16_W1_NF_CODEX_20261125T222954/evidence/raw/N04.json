@@ -1,0 +1,49 @@
+{
+  "schema": "FHS5.PLP.W1.Observation@1",
+  "case_id": "N04",
+  "kind": "SUBCASE",
+  "requirement_ref": "03 2",
+  "child": null,
+  "subject": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1-NF-01",
+  "profile": "generic-codx-native-first",
+  "host": "LOCAL",
+  "candidate_sha": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "source_sha": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "pack_sha": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "runner_id": "check/run_cases_nf.py",
+  "runner_version": "1.0.0",
+  "argv": [
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\W1\\impl\\run_cases_nf.py",
+    "N04"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\16_W1_NF_CODEX_20261125T222954\\control_pack\\FHS-5_PLP_W1_NATIVE_FIRST",
+  "timeout_ms": 120000,
+  "expected": {
+    "real": true
+  },
+  "first_fail": null,
+  "checker_id": null,
+  "consumer_id": null,
+  "recovery_ref": null,
+  "executor": "w1-exec",
+  "run_id": "20261125T222956",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "observed": {
+    "row": {
+      "Selected": "OBSERVED_LOCAL",
+      "Loaded": "OBSERVED_LOCAL",
+      "Installed": "REASONED_NA_NATIVE_ENTRY",
+      "Bound": "OBSERVED_LOCAL",
+      "Invoked": "OBSERVED_LOCAL",
+      "ActualServed": "OBSERVED_LOCAL",
+      "Consumed": "OBSERVED_LOCAL"
+    },
+    "consumer": "f429164b3df9927eb884e4bac2c8c85e006109f22e256961d742499e7e79cd96",
+    "exit0_rejected": true
+  },
+  "exit": 0,
+  "verdict": "PASS",
+  "duration_ms": 95
+}
