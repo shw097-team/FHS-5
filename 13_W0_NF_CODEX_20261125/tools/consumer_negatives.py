@@ -90,7 +90,8 @@ def main():
                                 ("wrong_evidence", "evidence_manifest_sha256", "PIN_MISMATCH_EVIDENCE")):
         hp = work / f"{name}.md"
         copy_handoff(handoff, hp, key, "0" * 64)
-        neg(name, expected, hp, evidence, lib.ROOT)
+        extra = ["--repo", str(lib.REPO)] if name == "wrong_candidate" else None
+        neg(name, expected, hp, evidence, lib.ROOT, extra=extra)
 
     # mutated indexed raw
     target = None
