@@ -1,0 +1,24 @@
+{
+  "schema": "FHS5.PLP.W1.PublicationReceipt@4",
+  "repo": "https://github.com/shw097-team/FHS-5",
+  "branch": "codex/w1-nf-r3-20261125",
+  "published_head": "67f38dd90f51a8405ece644dc8e08aae7ab860cf",
+  "content_commits": ["a85a1ef220d2dd26a497b2a793ce935c31b90bc1", "67f38dd90f51a8405ece644dc8e08aae7ab860cf"],
+  "base": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+  "main_untouched": true,
+  "previous_branch_kept": "codex/w1-nf-r2-20261125 @ ae05a74514d2c310f82bbf9bb1a2009078f11c87",
+  "delivery": "17_W1_NF_CODEX_20261125T232008",
+  "remote_verified": {
+    "clone": "fresh shallow clone of the branch",
+    "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "docs_match_local": ["FHS-5_PLP_W1_CLOSEOUT.md", "FHS-5_PLP_W1_HANDOFF.md", "W1_CLOSURE_MATRIX.json", "W2_RECEIVE_RECEIPT.json"],
+    "seal_matches_manifest": true
+  },
+  "credential_handling": "token injected only as temporary http.extraheader via GIT_CONFIG_* env vars; not in argv, URL, config files, logs or repo; env removed after use",
+  "claim": {
+    "w1": "W1_NF_VALIDATED",
+    "w2": "W2_TECHNICALLY_READY=READY",
+    "not_claimed": ["RELEASED", "M-DONE", "INDEPENDENT_PASS", "W2_EXECUTION_READY", "HERMES_PASS"]
+  },
+  "recorded_at": "2026-11-25T23:45+08:00"
+}
