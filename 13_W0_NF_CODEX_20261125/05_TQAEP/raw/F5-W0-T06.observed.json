@@ -26,5 +26,59 @@
     "ok": true,
     "leak": false,
     "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "wsl_symlink": {
+    "verdict": "PASS",
+    "cases": [
+      [
+        "case_ok.md",
+        0,
+        "COMPLETE"
+      ],
+      [
+        "inside_link",
+        0,
+        "COMPLETE"
+      ],
+      [
+        "../outside/canary.md",
+        3,
+        "INVALID_PATH"
+      ],
+      [
+        "/tmp/w0nf_symlink_mw6_45ma/outside/canary.md",
+        3,
+        "INVALID_PATH"
+      ],
+      [
+        "\\\\localhost\\share\\canary.md",
+        3,
+        "INVALID_PATH"
+      ],
+      [
+        "escape_file",
+        3,
+        "INVALID_PATH"
+      ],
+      [
+        "escape_dir/canary.md",
+        3,
+        "INVALID_PATH"
+      ],
+      [
+        "rel_link",
+        3,
+        "INVALID_PATH"
+      ]
+    ],
+    "host": {
+      "system": "Linux",
+      "release": "6.6.87.2-microsoft-standard-WSL2",
+      "python": "3.12.3",
+      "uid": 1000,
+      "cwd_fs": 2096,
+      "note": "WSL2 ext4 temp root; real POSIX symlinks; no privilege change"
+    },
+    "positive_control_inside_link": true
   }
 }

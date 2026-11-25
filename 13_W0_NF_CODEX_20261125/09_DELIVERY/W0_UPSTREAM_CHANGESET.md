@@ -37,3 +37,20 @@
 - `W1_HOST_NINE_GRID`、`W1_PLUGIN_ALIAS`、`W1_ABI_BOUND`、`W1_W0_INPUT`（本次已提供 W0 input，待 W1 真消費）。
 - `ORIGINAL_READER_UNBOUND`、`CHECKER_PUBLISHER_UNBOUND`、`W0-B_NOT_ADMITTED`（原域）、`W0C_DENOMINATOR_ID_LIST_UNBOUND`。
 - HERMES Compatibility、FHS 485 全量、W1–W4 完整分母。
+
+## 本輪最小補強（HARDEN-02）
+
+| 欄 | 內容 |
+|---|---|
+| Source | 前輪 W0 `15b063e`；NF-T08／NF-T10／T06／NF-T01/05/06 受影 |
+| Finding A | NF-T08 以 summary 數量判 `COMBINED_OK`，缺 challenge 仍 fallback；無真實材料鏈 |
+| Finding B | Consumer 未核 oracle、未驗 evidence 索引內容、錯 pin 仍可能跑 CLI |
+| Finding C | symlink 因 Windows 權限 `NOT_VERIFIED`，未完成安全義務 |
+| Finding D | OFF 以 env marker／importtime 代替真隔離，FAR OFF 無實際 patch |
+| Root cause | assurance/harness 以摘要代替真實消費；Host 權限差異 |
+| Decision | `REPLACE` 上述判定；`KEEP` candidate v3（無產品 byte 變更） |
+| New requirement | collab chain 8 段＋7 負例；consumer 776 checks＋10 負例；WSL symlink 8 案；三種 OFF 真隔離 |
+| Impact | tools（collab_chain／consumer／off_*／security_*／evidence_manifest）、TQAEP NF-T01/05/06/08/10、T06、challenge 排除 consumer-staged T10、delivery pins |
+| Regression | 44/44 receipts；challenge PASS（43 candidate receipts）；consumer consumed；10+7 negatives rejected |
+| last_good_ref | 前輪 evidence `cb71b632…`＋candidate `bb66a27` |
+| resume_predicate | 新 candidate 或 oracle 變更；W1M 採納；Host 權限改變 |

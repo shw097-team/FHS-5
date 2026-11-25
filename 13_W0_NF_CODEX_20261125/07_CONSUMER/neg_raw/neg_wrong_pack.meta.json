@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\consumer.py",
+    "--handoff",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\neg_work\\wrong_pack.md",
+    "--evidence-manifest",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
+    "--evidence-root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+    "--allow-pending-t10",
+    "--expect-reject"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+  "exit": 0,
+  "stdout_sha256": "4891db7482be20769c4acd8009f3e17a4f49bf3a932f969c89426c68d1257213",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T06:43:38+00:00"
+}

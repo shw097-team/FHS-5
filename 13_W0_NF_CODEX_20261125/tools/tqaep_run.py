@@ -200,10 +200,22 @@ def path_suite():
                           "leak": "OUTSIDE_CANARY_DO_NOT_READ" in (r["stdout"] + r["stderr"]),
                           "stdout_sha": r["stdout_sha256"]}
     canary_after = lib.sha_file(OUTSIDE / "canary.md")
+    wsl_path = lib.PARTIES / "security" / "security_wsl.json"
+    wsl = lib.load_json(wsl_path) if wsl_path.is_file() else {}
+    symlink_ok = wsl.get("verdict") == "PASS"
+    if wsl:
+        observed["wsl_symlink"] = {
+            "verdict": wsl.get("verdict"),
+            "cases": [(c.get("input"), c.get("exit"), c.get("status")) for c in wsl.get("cases", [])],
+            "host": wsl.get("host"),
+            "positive_control_inside_link": wsl.get("positive_control_inside_link"),
+        }
     return {"expected": {"exit": 3, "status": "INVALID_PATH", "no_canary_leak": True},
             "observed": observed, "canary_unchanged": canary_sha == canary_after,
-            "verdict": ok_all and canary_sha == canary_after,
-            "junction_tested": "junction" in cases, "symlink_tested": "symlink" in cases}
+            "verdict": ok_all and canary_sha == canary_after and symlink_ok,
+            "junction_tested": "junction" in cases,
+            "symlink_tested": symlink_ok,
+            "wsl_security_ref": "03_PARTIES/security/security_wsl.json"}
 
 
 def consumer_interim():
@@ -281,6 +293,22 @@ def main():
             argv=r["argv"], exit=r["exit"], stdout_sha=r["stdout_sha256"],
             stderr_sha=r["stderr_sha256"])
         return payload
+
+    def step_case(case_id, script, expected="PASS", out_rel=None, extra=None):
+        r = lib.run([sys.executable, str(lib.ROOT / "tools" / script)], ROOT,
+                    raw_dir=RAW, tag=case_id)
+        out_path = lib.ROOT / out_rel if out_rel else None
+        out = lib.load_json(out_path) if out_path and out_path.is_file() else {}
+        ok = r["exit"] == 0 and out.get("verdict") == expected
+        observed = {"verdict": out.get("verdict"), "exit": r["exit"]}
+        if extra:
+            observed.update(extra)
+        add(case_id, {"status": expected, "exit": 0}, observed,
+            is_pass(ok), "" if ok else expected,
+            argv=r["argv"], exit=r["exit"], stdout_sha=r["stdout_sha256"],
+            stderr_sha=r["stderr_sha256"], execution_kind="subprocess-step",
+            artifact=out_rel)
+        return out
 
     # T01 source read (real CLI gate)
     r = lib.run([sys.executable, str(lib.ROOT / "tools" / "integrity_gate.py"),
@@ -421,45 +449,46 @@ def main():
                 extra={"not_covered": ["FHS 485 full regression (DEFER)"]})
 
     # ---------------- NF-T ----------------
-    policy_case("NF-T01", "OFF_OK", 0)
+    step_case("NF-T01", "off_legacy.py", "PASS", "04_DEV_OPS/off_legacy.json")
     policy_case("NF-T02", "NATIVE_READ_OK", 0)
     policy_case("NF-T03", "EFFECT_OK", 0)
     policy_case("NF-T04", "RUNNER_OK", 0)
 
-    def imported_modules(r, needle):
-        mods = [line.rsplit("|", 1)[-1].strip() for line in r["stderr"].splitlines()
-                if "|" in line]
-        return [m for m in mods if needle in m]
+    step_case("NF-T05", "off_bridge.py", "PASS", "04_DEV_OPS/off_bridge.json",
+              extra={"not_covered": ["Bridge 38+28 full denominator"]})
 
-    direct = lib.run([sys.executable, "-X", "importtime", "-m", "briefcheck",
-                      "--root", str(ROOT), "--input", "case_ok.md",
-                      "--sha256", lib.sha_file(ROOT / "case_ok.md")], ROOT,
-                     env_extra={"PYTHONPATH": str(lib.REPO), "FHS5_BRIDGE": "OFF"},
-                     raw_dir=RAW, tag="nf_t05_direct")
-    control = lib.run([sys.executable, "-X", "importtime",
-                       str(lib.ROOT / "tools" / "scope_probe.py"),
-                       str(lib.PARTIES / "bridge" / "explain.json")],
-                      lib.ROOT, env_extra={"PYTHONPATH": str(lib.ROOT / "tools")},
-                      raw_dir=RAW, tag="nf_t05_control")
-    direct_bridge = imported_modules(direct, "w1_bridge_reference")
-    control_bridge = imported_modules(control, "w1_bridge_reference")
-    ok = direct["exit"] == 0 and not direct_bridge and bool(control_bridge)
-    add("NF-T05", {"direct_exit": 0, "bridge_modules_in_direct": [],
-                   "positive_control_detects_bridge": True},
-        {"direct_exit": direct["exit"], "direct_bridge_modules": direct_bridge,
-         "control_bridge_modules": control_bridge},
-        is_pass(ok), "OFF_PARITY_UNPROVEN" if not ok else "",
-        exit=direct["exit"], argv=direct["argv"],
-        stdout_sha=direct["stdout_sha256"], stderr_sha=direct["stderr_sha256"],
-        execution_kind="subprocess-import-trace",
-        not_covered=["Bridge-specific ON cases (separate)"])
-
-    policy_case("NF-T06", "DIRECT_FIX_OK", 0)
+    step_case("NF-T06", "off_far.py", "PASS", "04_DEV_OPS/off_far.json")
     policy_case("NF-T07", "PARTIES_INVOKED", 0)
-    policy_case("NF-T08", "COMBINED_OK", 0)
+    chain = lib.run([sys.executable, str(lib.ROOT / "tools" / "collab_chain.py"),
+                     "--mode", "full"], ROOT, raw_dir=RAW, tag="NF-T08-chain")
+    negs = lib.run([sys.executable, str(lib.ROOT / "tools" / "collab_chain.py"),
+                    "--mode", "negatives"], ROOT, raw_dir=RAW, tag="NF-T08-negatives")
+    chain_out = lib.load_json(lib.PARTIES / "collab" / "chain.json") if (lib.PARTIES / "collab" / "chain.json").is_file() else {}
+    neg_out = lib.load_json(lib.PARTIES / "collab" / "chain_negatives.json") if (lib.PARTIES / "collab" / "chain_negatives.json").is_file() else {}
+    ok = (chain["exit"] == 0 and negs["exit"] == 0
+          and chain_out.get("verdict") == "COMBINED_OK"
+          and neg_out.get("verdict") == "NEGATIVES_REJECTED")
+    add("NF-T08", {"chain": "COMBINED_OK", "negatives": "NEGATIVES_REJECTED"},
+        {"chain_verdict": chain_out.get("verdict"), "chain_exit": chain["exit"],
+         "negatives_verdict": neg_out.get("verdict"), "negatives_exit": negs["exit"],
+         "failure_code": chain_out.get("failure_code"),
+         "segments": chain_out.get("segments"),
+         "negative_cases": [(n.get("name"), n.get("rejected")) for n in neg_out.get("negatives", [])]},
+        is_pass(ok), "" if ok else "UNREPRODUCED",
+        exit=chain["exit"], argv=chain["argv"], stdout_sha=chain["stdout_sha256"],
+        stderr_sha=chain["stderr_sha256"], execution_kind="composite-collab-chain",
+        sub_runs={"chain": {"argv": chain["argv"], "exit": chain["exit"]},
+                  "negatives": {"argv": negs["argv"], "exit": negs["exit"]}},
+        artifact="03_PARTIES/collab/chain.json")
     policy_case("NF-T09", "REGRESSION_OK", 0)
-    policy_case("NF-T10", "CONSUMER_OK", 0)
+    add("NF-T10", {"status": "PASS", "consumer": "distinct receipt"},
+        {"status": "PENDING_CONSUMER",
+         "reason": "consumer/checker staged: consumer runs after the checker and finalizes this case"},
+        "PENDING_CONSUMER", "", exit=0, execution_kind="staged-consumer",
+        argv=["python", "tools/consumer.py", "--post-checker"],
+        not_covered=["final consumer readback is a separate receipt"])
 
+    pending = [r for r in results if r["verdict"] == "PENDING_CONSUMER"]
     summary = {
         "schema": "FHS5.W0NF.TQAEPResult@1",
         "generated_at": lib.now(),
@@ -471,12 +500,14 @@ def main():
             "cases": tqaep_spec.CASES,
         }),
         "receipts_index_sha": lib.canonical_sha(
-            {p.name: lib.sha_file(p) for p in sorted(REC.glob("*.json"))}),
+            {p.name: lib.sha_file(p) for p in sorted(REC.glob("*.json"))
+             if p.name != "NF-T10.json"}),
         "fixtures": fixes,
         "counts": {
             "total": len(results),
             "pass": sum(1 for r in results if r["verdict"] == "PASS"),
-            "fail": sum(1 for r in results if r["verdict"] != "PASS"),
+            "fail": sum(1 for r in results if r["verdict"] not in ("PASS", "PENDING_CONSUMER")),
+            "pending": len(pending),
         },
         "cases": results,
         "not_covered": [

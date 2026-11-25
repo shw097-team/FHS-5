@@ -1,0 +1,4027 @@
+{
+  "schema": "FHS5.W0NF.ConsumerReceipt@3",
+  "run_id": "stage1-20261125144319",
+  "created_at": "2026-11-25T06:43:20+00:00",
+  "consumer_id": "W1-consumer/CODEX-Native-1 (separate process)",
+  "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\09_DELIVERY\\W0_HANDOFF.md",
+  "handoff_sha256": "5ee39ec5be88f0f7b7b8404733654d3392fe59b2dbeabbd6f52c978d7daa5537",
+  "evidence_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
+  "evidence_manifest_sha256": "6054b6aa36ae3c9f1ab8e67ef15cf91b954f070b1e33234db42f504a18c7f3db",
+  "validation_ok": true,
+  "failure_code": null,
+  "checks": [
+    {
+      "id": "IDENTITY",
+      "ok": true,
+      "detail": {
+        "schema": "FHS5.PLP.W0.SourceManifest.NF@1",
+        "project_id": "FHS-5_PLP",
+        "wave_id": "FHS-5_PLP/W0",
+        "batch_id": "FHS-5/W0/B0-NF",
+        "pack_version": "W0-NF-r3-CODEX-PRIMARY",
+        "artifact_id": "FHS5-PLP/W0/PACK-NF-20261125-03"
+      }
+    },
+    {
+      "id": "PACK-FILE-COUNT",
+      "ok": true,
+      "detail": 5
+    },
+    {
+      "id": "PACK-00_W0_PI_PD.md",
+      "ok": true,
+      "detail": {
+        "sha": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11"
+      }
+    },
+    {
+      "id": "PACK-01_W0_DEV_ECP.md",
+      "ok": true,
+      "detail": {
+        "sha": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6"
+      }
+    },
+    {
+      "id": "PACK-02_W0_OPS_ECP.md",
+      "ok": true,
+      "detail": {
+        "sha": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747"
+      }
+    },
+    {
+      "id": "PACK-03_W0_TQAEP.md",
+      "ok": true,
+      "detail": {
+        "sha": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb"
+      }
+    },
+    {
+      "id": "PACK-04_W0_START_THIN_PROMPT.md",
+      "ok": true,
+      "detail": {
+        "sha": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554"
+      }
+    },
+    {
+      "id": "SEAL-PRESENT",
+      "ok": true,
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\01_PACK\\EXTERNAL_SEAL.json"
+    },
+    {
+      "id": "SEAL-PACK-PINS",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "SEAL-MANIFEST-SELF",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "SEAL-APPENDIX",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "HANDOFF-PACK-PIN",
+      "ok": true,
+      "detail": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "id": "W0M-PRESENT",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "W0M-PIN",
+      "ok": true,
+      "detail": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5"
+    },
+    {
+      "id": "CANDIDATE-PIN",
+      "ok": true,
+      "detail": {
+        "head": "bb66a276aae8c5d6aef549832c523587fc47d247"
+      }
+    },
+    {
+      "id": "CANDIDATE-CLEAN",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "ORACLE-PIN",
+      "ok": true,
+      "detail": {
+        "sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6"
+      }
+    },
+    {
+      "id": "ORACLE-CANDIDATE",
+      "ok": true,
+      "detail": "bb66a276aae8c5d6aef549832c523587fc47d247"
+    },
+    {
+      "id": "ORACLE-FROZEN",
+      "ok": true,
+      "detail": "2026-11-25T05:00:00+00:00"
+    },
+    {
+      "id": "ORACLE-SOURCE",
+      "ok": true,
+      "detail": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    },
+    {
+      "id": "ORACLE-FIX-case_ambiguous.md",
+      "ok": true,
+      "detail": "case_ambiguous.md"
+    },
+    {
+      "id": "ORACLE-FIX-case_bad_path.md",
+      "ok": true,
+      "detail": "case_bad_path.md"
+    },
+    {
+      "id": "ORACLE-FIX-case_bad_utf8.md",
+      "ok": true,
+      "detail": "case_bad_utf8.md"
+    },
+    {
+      "id": "ORACLE-FIX-case_dup.md",
+      "ok": true,
+      "detail": "case_dup.md"
+    },
+    {
+      "id": "ORACLE-FIX-case_malformed.md",
+      "ok": true,
+      "detail": "case_malformed.md"
+    },
+    {
+      "id": "ORACLE-FIX-case_missing.md",
+      "ok": true,
+      "detail": "case_missing.md"
+    },
+    {
+      "id": "ORACLE-FIX-case_ok.md",
+      "ok": true,
+      "detail": "case_ok.md"
+    },
+    {
+      "id": "EVIDENCE-PIN",
+      "ok": true,
+      "detail": {
+        "sha": "6054b6aa36ae3c9f1ab8e67ef15cf91b954f070b1e33234db42f504a18c7f3db"
+      }
+    },
+    {
+      "id": "EVIDENCE-SCHEMA",
+      "ok": true,
+      "detail": "FHS5.W0NF.EvidenceManifest@1"
+    },
+    {
+      "id": "EVIDENCE-PACK",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "EVIDENCE-CANDIDATE",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "EVIDENCE-ORACLE",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "EVIDENCE-FILE-COUNT",
+      "ok": true,
+      "detail": 667
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/EXTERNAL_SEAL.json",
+      "ok": true,
+      "detail": "01_PACK/EXTERNAL_SEAL.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/FHS-5_PLP_W0_Native-first_CODEX_修補證據型附錄.md",
+      "ok": true,
+      "detail": "01_PACK/FHS-5_PLP_W0_Native-first_CODEX_修補證據型附錄.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/00_W0_PI_PD.md",
+      "ok": true,
+      "detail": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/00_W0_PI_PD.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/01_W0_DEV_ECP.md",
+      "ok": true,
+      "detail": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/01_W0_DEV_ECP.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/02_W0_OPS_ECP.md",
+      "ok": true,
+      "detail": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/02_W0_OPS_ECP.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/03_W0_TQAEP.md",
+      "ok": true,
+      "detail": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/03_W0_TQAEP.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/04_W0_START_THIN_PROMPT.md",
+      "ok": true,
+      "detail": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/04_W0_START_THIN_PROMPT.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+      "ok": true,
+      "detail": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-01_PACK/W0M_CODEX_FIRST/FHS-5_PLP_W0M_完整實質正文_CODEX-FIRST-r4.",
+      "ok": true,
+      "detail": "01_PACK/W0M_CODEX_FIRST/FHS-5_PLP_W0M_完整實質正文_CODEX-FIRST-r4.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-02_CANDIDATE/repo.bundle",
+      "ok": true,
+      "detail": "02_CANDIDATE/repo.bundle"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/bridge_summary.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/bridge_summary.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/compare.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/compare.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/compare.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/compare.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/compare_cross.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/compare_cross.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/explain.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/explain.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/explain.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/explain.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/explain_drift.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/explain_drift.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/inspect.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/inspect.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/inspect.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/inspect.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/inspect_after.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/inspect_after.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/inspect_after.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/inspect_after.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/inspect_cross.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/inspect_cross.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/inspect_escape.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/inspect_escape.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/00_W0_PI_PD.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/00_W0_PI_PD.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/01_W0_DEV_ECP.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/01_W0_DEV_ECP.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/02_W0_OPS_ECP.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/02_W0_OPS_ECP.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/03_W0_TQAEP.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/03_W0_TQAEP.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/04_W0_START_THIN_PROMPT.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/04_W0_START_THIN_PROMPT.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/05_PLANNED_TQAEP.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/05_PLANNED_TQAEP.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/05_W0_SOURCE_MANIFEST.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/05_W0_SOURCE_MANIFEST.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/case_ambiguous.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/case_ambiguous.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/case_bad_path.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/case_bad_path.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/case_bad_utf8.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/case_bad_utf8.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/case_dup.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/case_dup.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/case_malformed.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/case_malformed.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/case_missing.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/case_missing.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/case_ok.md",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/case_ok.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R1.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R1.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R10.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R10.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R2.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R2.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R3.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R3.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R5.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R5.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R6.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R6.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R7.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R7.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R8.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R8.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/cases/oracle_R9.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/cases/oracle_R9.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/PACKAGE_FILE_MANIFEST.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/PACKAGE_FILE_MANIFEST.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/package/SOURCE_MANIFEST.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/package/SOURCE_MANIFEST.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/compare.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/compare.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/compare.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/compare.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/compare.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/compare.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/compare_cross.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/compare_cross.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/compare_cross.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/compare_cross.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/compare_cross.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/compare_cross.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/explain.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/explain.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/explain.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/explain.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/explain.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/explain.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect_after.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect_after.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect_after.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect_after.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect_after.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect_after.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect_escape.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect_escape.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect_escape.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect_escape.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/inspect_escape.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/inspect_escape.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render_scope_drift.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render_scope_drift.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render_scope_drift.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render_scope_drift.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render_scope_drift.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render_scope_drift.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render_scope_drift_pre.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render_scope_drift_pre.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render_scope_drift_pre.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render_scope_drift_pre.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/raw/render_scope_drift_pre.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/raw/render_scope_drift_pre.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/render.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/render.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/render.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/render.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/render_drift.json",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/render_drift.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/render_scope_drift.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/render_scope_drift.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/bridge/render_scope_drift_pre.exit",
+      "ok": true,
+      "detail": "03_PARTIES/bridge/render_scope_drift_pre.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/challenge.json",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/challenge.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/challenge_prepatch.json",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/challenge_prepatch.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/challenge_smoke.json",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/challenge_smoke.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/postpatch_probe.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/postpatch_probe.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/postpatch_probe.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/postpatch_probe.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/postpatch_probe.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/postpatch_probe.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_checkout.meta.jso",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_checkout.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_checkout.stderr.t",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_checkout.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_checkout.stdout.t",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_checkout.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_clone.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_clone.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_clone.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_clone.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_clone.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_clone.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_probe.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_probe.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_probe.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_probe.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/challenge/prepatch_raw/prepatch_probe.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/prepatch_raw/prepatch_probe.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/chain.json",
+      "ok": true,
+      "detail": "03_PARTIES/collab/chain.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/collab/chain_negatives.json",
+      "ok": true,
+      "detail": "03_PARTIES/collab/chain_negatives.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/far/far.json",
+      "ok": true,
+      "detail": "03_PARTIES/far/far.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/far/finding.json",
+      "ok": true,
+      "detail": "03_PARTIES/far/finding.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/far/raw/far_negative_probes.json",
+      "ok": true,
+      "detail": "03_PARTIES/far/raw/far_negative_probes.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/guide/thin_resume.json",
+      "ok": true,
+      "detail": "03_PARTIES/guide/thin_resume.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/guide/thin_start.json",
+      "ok": true,
+      "detail": "03_PARTIES/guide/thin_start.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/security/raw/security_wsl.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/security/raw/security_wsl.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/security/raw/security_wsl.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/security/raw/security_wsl.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/security/raw/security_wsl.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/security/raw/security_wsl.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/security/security_wsl.json",
+      "ok": true,
+      "detail": "03_PARTIES/security/security_wsl.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/contracts.md",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/contracts.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/dev_ecp.json",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/dev_ecp.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/input/contracts.md",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/input/contracts.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/input/requirements.md",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/input/requirements.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/ops_ecp.json",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/ops_ecp.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/pd.json",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/pd.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/pi.json",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/pi.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/raw/reviewer.meta.json",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/raw/reviewer.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/raw/reviewer.stderr.txt",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/raw/reviewer.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/raw/reviewer.stdout.txt",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/raw/reviewer.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/00_SCO",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/00_SCOPE_SOURCE_MANIFEST.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/01_PI_",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/01_PI_PD_TRACE.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/02_REV",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/02_REVIEW_FINDINGS.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/03_EXE",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/03_EXECUTION_HANDOFF.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/04_EVI",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/04_EVIDENCE_ACCEPTANCE_LEDGER.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/REVIEW",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-585a63b922bc7e7f7206747e/REVIEW_PACKAGE_MANIFEST.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/00_SCO",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/00_SCOPE_SOURCE_MANIFEST.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/01_PI_",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/01_PI_PD_TRACE.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/02_REV",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/02_REVIEW_FINDINGS.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/03_EXE",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/03_EXECUTION_HANDOFF.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/04_EVI",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/04_EVIDENCE_ACCEPTANCE_LEDGER.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/REVIEW",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review/review-72c6899e5542dc194cd82657/REVIEW_PACKAGE_MANIFEST.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/review-request.json",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/review-request.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/reviewer.exit",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/reviewer.exit"
+    },
+    {
+      "id": "EVIDENCE-FILE-03_PARTIES/tpm/tpm_gate.json",
+      "ok": true,
+      "detail": "03_PARTIES/tpm/tpm_gate.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/dev_patch.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/dev_patch.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/green_v3.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/green_v3.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/off.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/off.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/off_bridge.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_bridge.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/off_bridge_profile/sitecustomize.py",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_bridge_profile/sitecustomize.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/off_far.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_far.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/off_legacy.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_legacy.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/off_legacy_src/hgk_core.py",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_legacy_src/hgk_core.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/off_profile/sitecustomize.py",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_profile/sitecustomize.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/ops.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/ops.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/patch_12prime.diff",
+      "ok": true,
+      "detail": "04_DEV_OPS/patch_12prime.diff"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/probe/test_invalid_root.py",
+      "ok": true,
+      "detail": "04_DEV_OPS/probe/test_invalid_root.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/green_v3.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/green_v3.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/green_v3.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/green_v3.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/green_v3.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/green_v3.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/green_v3_probe.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/green_v3_probe.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/green_v3_probe.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/green_v3_probe.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/green_v3_probe.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/green_v3_probe.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/module_list.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/module_list.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/module_list.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/module_list.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/module_list.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/module_list.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o2_neg.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o2_neg.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o2_neg.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o2_neg.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o2_neg.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o2_neg.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o2_pos.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o2_pos.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o2_pos.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o2_pos.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o2_pos.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o2_pos.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_clean.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_clean.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_clean.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_clean.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_clean.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_clean.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_detector_control.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_detector_control.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_detector_control.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_detector_control.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_detector_control.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_detector_control.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_marked.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_marked.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_marked.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_marked.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/o5_marked.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/o5_marked.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_control.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_control.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_control.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_control.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_control.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_control.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_direct.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_direct.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_direct.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_direct.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_direct.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_direct.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_off.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_off.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_off.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_off.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_off.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_off.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_on.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_on.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_on.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_on.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_on.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_off.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_off.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_off.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_off.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_off.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_off.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_on.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_on.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_on.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_on.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_on.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_on.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_on.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_on.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_on.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_on.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_off.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_off.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_off.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_off.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_off.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_off.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_on.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_on.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_on.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_on.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_on.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_off.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_off.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_off.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_off.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_off.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_off.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_on.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_on.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_on.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_on.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_on.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_allowed.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_allowed.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_allowed.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_allowed.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_allowed.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_allowed.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_blocked.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_blocked.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_blocked.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_blocked.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_blocked.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_blocked.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_apply.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_apply.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_apply.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_apply.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_apply.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_apply.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_checkout.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_checkout.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_checkout.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_checkout.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_checkout.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_checkout.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_clone.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_clone.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_clone.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_clone.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_clone.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_clone.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_probe.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_probe.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_probe.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_probe.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_probe.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_probe.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_suite.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_suite.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_suite.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_suite.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_far_suite.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_far_suite.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_off.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_off.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_off.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_off.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_off.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_off.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_on.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_on.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_on.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_on.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_on.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_off.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_off.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_off.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_off.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_off.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_off.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_on.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_on.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_on.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_on.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_on.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/probe_codex.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/probe_codex.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/probe_codex.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/probe_codex.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/probe_codex.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/probe_codex.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/probe_git.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/probe_git.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/probe_git.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/probe_git.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/probe_git.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/probe_git.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/red_v2.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/red_v2.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/red_v2.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/red_v2.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/red_v2.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/red_v2.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/red_v2.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/red_v2.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/consumer_interim.json",
+      "ok": true,
+      "detail": "05_TQAEP/consumer_interim.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/fixtures/case_ambiguous.md",
+      "ok": true,
+      "detail": "05_TQAEP/fixtures/case_ambiguous.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/fixtures/case_bad_path.md",
+      "ok": true,
+      "detail": "05_TQAEP/fixtures/case_bad_path.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/fixtures/case_bad_utf8.md",
+      "ok": true,
+      "detail": "05_TQAEP/fixtures/case_bad_utf8.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/fixtures/case_dup.md",
+      "ok": true,
+      "detail": "05_TQAEP/fixtures/case_dup.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/fixtures/case_malformed.md",
+      "ok": true,
+      "detail": "05_TQAEP/fixtures/case_malformed.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/fixtures/case_missing.md",
+      "ok": true,
+      "detail": "05_TQAEP/fixtures/case_missing.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/fixtures/case_ok.md",
+      "ok": true,
+      "detail": "05_TQAEP/fixtures/case_ok.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/oracle.json",
+      "ok": true,
+      "detail": "05_TQAEP/oracle.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/consumer.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/consumer.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/consumer.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/consumer.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/consumer.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/consumer.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T01.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T01.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T02.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T02.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T04.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T04.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T04.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T04.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T04.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T04.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T04.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T04.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T05.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T05.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T05.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T05.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T05.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T05.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T05.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T05.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T06.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T06.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T07.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T07.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T07.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T07.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T07.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T07.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T07.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T07.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T08.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T08.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T08.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T08.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T08.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T08.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T08.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T08.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T09.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T09.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T09.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T09.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T09.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T09.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T09.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T09.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T10.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T10.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T10.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T10.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T10.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T10.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T10.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T10.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T11.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T11.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T11.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T11.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T11.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T11.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T11.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T11.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T12.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T12.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T12.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T12.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T12.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T12.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T12.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T12.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T13.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T13.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T14.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T14.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T14.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T14.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T14.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T14.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T14.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T14.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T15.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T15.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T15.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T15.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T15.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T15.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T15.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T15.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T16.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T16.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T16.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T16.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T16.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T16.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T16.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T16.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T17.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T17.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T17.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T17.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T17.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T17.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T17.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T17.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T18.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T18.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T18.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T18.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T18.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T18.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T18.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T18.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T19.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T19.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T19.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T19.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T19.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T19.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T19.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T19.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T20.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T20.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T20.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T20.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T20.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T20.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T20.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T20.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T21.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T21.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T21.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T21.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T21.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T21.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T21.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T21.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T22.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T22.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T22.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T22.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T22.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T22.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T22.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T22.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T23.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T23.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T23.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T23.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T23.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T23.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T23.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T23.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T24.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T24.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T24.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T24.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T24.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T24.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T24.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/F5-W0-T24.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T01.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T01.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T01.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T01.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T01.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T01.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T01.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T01.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T02.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T02.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T02.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T02.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T02.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T02.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T02.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T02.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T03.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T03.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T03.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T03.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T03.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T03.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T03.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T03.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T04.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T04.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T04.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T04.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T04.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T04.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T04.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T04.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T05.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T05.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T05.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T05.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T05.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T05.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T05.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T05.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T06.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T06.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T06.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T06.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T06.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T06.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T06.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T06.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T07.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T07.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T07.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T07.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T07.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T07.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T07.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T07.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08-chain.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08-chain.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08-chain.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08-chain.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08-chain.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08-chain.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08-negatives.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08-negatives.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08-negatives.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08-negatives.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08-negatives.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08-negatives.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T08.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T08.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T09.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T09.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T09.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T09.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T09.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T09.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T09.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T09.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T10.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T10.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T10.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T10.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T10.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T10.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/NF-T10.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/NF-T10.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_control.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_control.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_control.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_control.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_control.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_control.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_direct.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_direct.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_direct.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_direct.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_direct.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_direct.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_off.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_off.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_off.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_off.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_off.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_off.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_on.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_on.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_on.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_on.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/nf_t05_on.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/nf_t05_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_absolute.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_absolute.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_absolute.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_absolute.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_absolute.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_absolute.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_dotdot.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_dotdot.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_dotdot.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_dotdot.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_dotdot.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_dotdot.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_junction.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_junction.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_junction.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_junction.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_junction.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_junction.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_unc.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_unc.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_unc.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_unc.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/path_unc.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/path_unc.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/SAMPLE-R4.observed.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/SAMPLE-R4.observed.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R1.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R1.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R1.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R1.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R1.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R1.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R10.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R10.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R10.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R10.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R10.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R10.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R2.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R2.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R2.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R2.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R2.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R2.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R3.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R3.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R3.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R3.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R3.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R3.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R5.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R5.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R5.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R5.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R5.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R5.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R6.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R6.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R6.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R6.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R6.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R6.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R7.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R7.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R7.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R7.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R7.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R7.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R8.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R8.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R8.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R8.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R8.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R8.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R9.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R9.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R9.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R9.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R9.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R9.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R9_second.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R9_second.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R9_second.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R9_second.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/sample_R9_second.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/sample_R9_second.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T01.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T01.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T01.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T01.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T01.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T01.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T02.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T02.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T02.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T02.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T02.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T02.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t03.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t03.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t03.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t03.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t03.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t03.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T04.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T04.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T04.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T04.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T04.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T04.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t04_direct.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t04_direct.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t04_direct.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t04_direct.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t04_direct.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t04_direct.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T05.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T05.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T05.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T05.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T05.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T05.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T07.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T07.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T07.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T07.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T07.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T07.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T08.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T08.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T08.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T08.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T08.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T08.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T09.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T09.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T09.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T09.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T09.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T09.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T10.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T10.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T10.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T10.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T10.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T10.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T11.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T11.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T11.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T11.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T11.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T11.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T12.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T12.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T12.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T12.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T12.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T12.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t13_pos.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t13_pos.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t13_pos.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t13_pos.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/t13_pos.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/t13_pos.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T14.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T14.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T14.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T14.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T14.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T14.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T15.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T15.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T15.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T15.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T15.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T15.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T16.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T16.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T16.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T16.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T16.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T16.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T17.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T17.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T17.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T17.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T17.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T17.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T18.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T18.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T18.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T18.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T18.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T18.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T19.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T19.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T19.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T19.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T19.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T19.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T20.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T20.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T20.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T20.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T20.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T20.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T21.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T21.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T21.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T21.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T21.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T21.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T22.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T22.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T22.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T22.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T22.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T22.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T23.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T23.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T23.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T23.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T23.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T23.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T24.meta.json",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T24.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T24.stderr.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T24.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/raw/T24.stdout.txt",
+      "ok": true,
+      "detail": "05_TQAEP/raw/T24.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T01.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T01.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T02.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T02.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T03.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T03.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T04.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T04.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T05.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T05.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T06.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T06.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T07.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T07.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T08.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T08.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T09.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T09.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T10.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T10.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T11.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T11.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T12.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T12.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T13.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T13.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T14.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T14.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T15.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T15.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T16.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T16.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T17.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T17.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T18.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T18.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T19.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T19.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T20.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T20.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T21.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T21.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T22.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T22.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T23.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T23.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/F5-W0-T24.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/F5-W0-T24.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T01.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T01.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T02.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T02.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T03.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T03.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T04.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T04.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T05.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T05.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T06.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T06.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T07.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T07.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T08.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T08.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T09.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T09.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/NF-T10.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/NF-T10.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R1.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R1.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R10.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R10.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R2.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R2.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R3.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R3.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R4.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R4.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R5.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R5.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R6.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R6.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R7.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R7.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R8.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R8.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/receipts/SAMPLE-R9.json",
+      "ok": true,
+      "detail": "05_TQAEP/receipts/SAMPLE-R9.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-05_TQAEP/summary.json",
+      "ok": true,
+      "detail": "05_TQAEP/summary.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_ambiguous.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_ambiguous.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_ambiguous.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_ambiguous.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_ambiguous.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_ambiguous.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_bad_utf8.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_bad_utf8.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_bad_utf8.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_bad_utf8.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_bad_utf8.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_bad_utf8.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_dup.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_dup.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_dup.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_dup.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_dup.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_dup.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_malformed.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_malformed.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_malformed.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_malformed.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_malformed.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_malformed.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_missing.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_missing.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_missing.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_missing.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_missing.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_missing.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_ok.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_ok.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_ok.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_ok.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_case_ok.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_case_ok.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_abs.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_abs.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_abs.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_abs.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_abs.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_abs.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_dd.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_dd.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_dd.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_dd.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_dd.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_dd.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_jct.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_jct.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_jct.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_jct.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_jct.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_jct.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_unc.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_unc.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_unc.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_unc.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_path_unc.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_path_unc.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_sha.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_sha.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_sha.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_sha.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/ch_sha.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/ch_sha.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/challenge_mutant.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/challenge_mutant.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/challenge_mutant.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/challenge_mutant.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/challenge_mutant.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/challenge_mutant.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/challenge_suite.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/challenge_suite.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/challenge_suite.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/challenge_suite.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/full/raw/challenge_suite.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/full/raw/challenge_suite.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_ambiguous.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_ambiguous.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_ambiguous.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_ambiguous.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_ambiguous.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_ambiguous.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_bad_utf8.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_bad_utf8.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_bad_utf8.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_bad_utf8.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_bad_utf8.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_bad_utf8.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_dup.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_dup.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_dup.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_dup.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_dup.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_dup.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_malformed.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_malformed.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_malformed.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_malformed.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_malformed.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_malformed.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_missing.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_missing.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_missing.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_missing.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_missing.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_missing.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_ok.md.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_ok.md.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_ok.md.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_ok.md.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_case_ok.md.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_case_ok.md.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_abs.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_abs.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_abs.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_abs.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_abs.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_abs.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_dd.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_dd.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_dd.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_dd.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_dd.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_dd.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_jct.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_jct.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_jct.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_jct.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_jct.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_jct.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_unc.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_unc.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_unc.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_unc.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_path_unc.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_path_unc.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_sha.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_sha.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_sha.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_sha.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/ch_sha.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/ch_sha.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/challenge_mutant.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/challenge_mutant.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/challenge_mutant.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/challenge_mutant.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/challenge_mutant.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/challenge_mutant.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/challenge_suite.meta.json",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/challenge_suite.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/challenge_suite.stderr.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/challenge_suite.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-06_CHECKER/smoke/raw/challenge_suite.stdout.txt",
+      "ok": true,
+      "detail": "06_CHECKER/smoke/raw/challenge_suite.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/changes/archive/.gitkeep",
+      "ok": true,
+      "detail": "openspec/changes/archive/.gitkeep"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/.op",
+      "ok": true,
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/.openspec.yaml"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/des",
+      "ok": true,
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/design.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/pro",
+      "ok": true,
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/proposal.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/spe",
+      "ok": true,
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/specs/w0-native-execution/spec.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/tas",
+      "ok": true,
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/tasks.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/config.yaml",
+      "ok": true,
+      "detail": "openspec/config.yaml"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/specs/.gitkeep",
+      "ok": true,
+      "detail": "openspec/specs/.gitkeep"
+    },
+    {
+      "id": "EVIDENCE-FILE-openspec/specs/w0-native-execution/spec.md",
+      "ok": true,
+      "detail": "openspec/specs/w0-native-execution/spec.md"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/bridge_run.py",
+      "ok": true,
+      "detail": "tools/bridge_run.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/challenge.py",
+      "ok": true,
+      "detail": "tools/challenge.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/challenge_prepatch.py",
+      "ok": true,
+      "detail": "tools/challenge_prepatch.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/collab_chain.py",
+      "ok": true,
+      "detail": "tools/collab_chain.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/consumer.py",
+      "ok": true,
+      "detail": "tools/consumer.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/consumer_negatives.py",
+      "ok": true,
+      "detail": "tools/consumer_negatives.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/dev_patch.py",
+      "ok": true,
+      "detail": "tools/dev_patch.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/evidence_manifest.py",
+      "ok": true,
+      "detail": "tools/evidence_manifest.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/far_run.py",
+      "ok": true,
+      "detail": "tools/far_run.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/finalize_t10.py",
+      "ok": true,
+      "detail": "tools/finalize_t10.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/guide.py",
+      "ok": true,
+      "detail": "tools/guide.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/guide_resume.py",
+      "ok": true,
+      "detail": "tools/guide_resume.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/integrity_gate.py",
+      "ok": true,
+      "detail": "tools/integrity_gate.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/lib.py",
+      "ok": true,
+      "detail": "tools/lib.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/off_bridge.py",
+      "ok": true,
+      "detail": "tools/off_bridge.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/off_far.py",
+      "ok": true,
+      "detail": "tools/off_far.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/off_legacy.py",
+      "ok": true,
+      "detail": "tools/off_legacy.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/ops_run.py",
+      "ok": true,
+      "detail": "tools/ops_run.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/policy.py",
+      "ok": true,
+      "detail": "tools/policy.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/policy_cli.py",
+      "ok": true,
+      "detail": "tools/policy_cli.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/scope_probe.py",
+      "ok": true,
+      "detail": "tools/scope_probe.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/security_linux.py",
+      "ok": true,
+      "detail": "tools/security_linux.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/security_wsl.py",
+      "ok": true,
+      "detail": "tools/security_wsl.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/tpm_contracts.py",
+      "ok": true,
+      "detail": "tools/tpm_contracts.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/tqaep_run.py",
+      "ok": true,
+      "detail": "tools/tqaep_run.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/tqaep_spec.py",
+      "ok": true,
+      "detail": "tools/tqaep_spec.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/w1_bridge_reference.py",
+      "ok": true,
+      "detail": "tools/w1_bridge_reference.py"
+    },
+    {
+      "id": "REQ-ORACLE",
+      "ok": true,
+      "detail": "05_TQAEP/oracle.json"
+    },
+    {
+      "id": "REQ-SUMMARY",
+      "ok": true,
+      "detail": "05_TQAEP/summary.json"
+    },
+    {
+      "id": "REQ-CHALLENGE",
+      "ok": true,
+      "detail": "03_PARTIES/challenge/challenge.json"
+    },
+    {
+      "id": "REQ-FAR",
+      "ok": true,
+      "detail": "03_PARTIES/far/far.json"
+    },
+    {
+      "id": "REQ-OPS",
+      "ok": true,
+      "detail": "04_DEV_OPS/ops.json"
+    },
+    {
+      "id": "REQ-DEV",
+      "ok": true,
+      "detail": "04_DEV_OPS/dev_patch.json"
+    },
+    {
+      "id": "REQ-SECURITY",
+      "ok": true,
+      "detail": "03_PARTIES/security/security_wsl.json"
+    },
+    {
+      "id": "REQ-OFF-LEGACY",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_legacy.json"
+    },
+    {
+      "id": "REQ-OFF-BRIDGE",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_bridge.json"
+    },
+    {
+      "id": "REQ-OFF-FAR",
+      "ok": true,
+      "detail": "04_DEV_OPS/off_far.json"
+    },
+    {
+      "id": "REQ-COLLAB",
+      "ok": true,
+      "detail": "03_PARTIES/collab/chain.json"
+    },
+    {
+      "id": "SUMMARY-COUNTS",
+      "ok": true,
+      "detail": {
+        "total": 44,
+        "pass": 43,
+        "fail": 0,
+        "pending": 1
+      }
+    },
+    {
+      "id": "SUMMARY-ORACLE",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "SUMMARY-CANDIDATE",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "RECEIPT-COUNT",
+      "ok": true,
+      "detail": 44
+    },
+    {
+      "id": "RECEIPT-F5-W0-T01",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T02",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T03",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T04",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T05",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T06",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T07",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T08",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T09",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T10",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T11",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T12",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T13",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T14",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T15",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T16",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T17",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T18",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T19",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T20",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T21",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T22",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T23",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-F5-W0-T24",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T01",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T02",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T03",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T04",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T05",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T06",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T07",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T08",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T09",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-NF-T10",
+      "ok": true,
+      "detail": {
+        "verdict": "PENDING_CONSUMER"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R1",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R10",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R2",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R3",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R4",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R5",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R6",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R7",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R8",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "RECEIPT-SAMPLE-R9",
+      "ok": true,
+      "detail": {
+        "verdict": "PASS"
+      }
+    },
+    {
+      "id": "CHALLENGE-VERDICT",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "id": "CHALLENGE-CANDIDATE",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "CHALLENGE-ORACLE",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "FAR-ALTERNATIVES",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "FAR-RAW",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "id": "OPS-VERDICT",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "id": "DEV-VERDICT",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "id": "COLLAB-VERDICT",
+      "ok": true,
+      "detail": "COMBINED_OK"
+    },
+    {
+      "id": "SECURITY-VERDICT",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "id": "OFF-off_legacy",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "id": "OFF-off_bridge",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "id": "OFF-off_far",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "id": "HANDOFF-NEXT_LEGAL_ACTION",
+      "ok": true,
+      "detail": 84
+    },
+    {
+      "id": "HANDOFF-DEPENDENCIES",
+      "ok": true,
+      "detail": 109
+    },
+    {
+      "id": "HANDOFF-RESUME_PREDICATE",
+      "ok": true,
+      "detail": 75
+    },
+    {
+      "id": "HANDOFF-NOT_COVERED",
+      "ok": true,
+      "detail": 68
+    },
+    {
+      "id": "HANDOFF-TARGET",
+      "ok": true,
+      "detail": null
+    }
+  ],
+  "cli": {
+    "executed": true,
+    "pos_exit": 0,
+    "neg_exit": 2,
+    "pos_stdout_sha": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33",
+    "neg_stdout_sha": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
+    "semantics_ok": true
+  },
+  "consumed": true,
+  "rejected": false,
+  "not_claimed": [
+    "HERMES/GPT host execution",
+    "W1 product execution",
+    "release"
+  ]
+}

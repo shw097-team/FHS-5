@@ -19,11 +19,13 @@ RAW = OUT / "raw"
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     dp = lib.load_json(lib.ROOT / "04_DEV_OPS" / "dev_patch.json")
+    prepatch_path = lib.PARTIES / "challenge" / "challenge_prepatch.json"
+    prepatch = lib.load_json(prepatch_path) if prepatch_path.is_file() else None
     raw_dir = lib.ROOT / "04_DEV_OPS" / "raw"
     raw_stdout = lib.sha_file(raw_dir / "red_v2.stdout.txt")
     raw_stderr = lib.sha_file(raw_dir / "red_v2.stderr.txt")
     raw_sha = raw_stderr
-    finding = {
+    dev_finding = {
         "id": "F-W0NF-001",
         "severity": "MAJOR",
         "class": "fail_open_invalid_root",
@@ -37,6 +39,14 @@ def main():
                          "briefcheck --root <missing dir> raises FileNotFoundError and exits 1 instead of "
                          "INVALID_PATH/3"),
     }
+    if prepatch and prepatch.get("verdict") == "FINDING_CONFIRMED":
+        finding = dict(prepatch["finding"])
+        finding["source"] = "CHALLENGE_PREPATCH"
+        finding["dev_finding_id"] = dev_finding["id"]
+        finding["raw_sha256"] = prepatch["finding"]["raw_sha256"]
+    else:
+        finding = dict(dev_finding)
+        finding["source"] = "DEV_RED"
     alternatives = [
         {"id": "ALT-1", "name": "wrap root resolve in try/except OSError and require is_dir",
          "cost": "low", "risk": "low", "chosen": True,
@@ -73,10 +83,13 @@ def main():
         "monitor": "affected cone only: R11/R12 + full suite",
         "next": "12' candidate v3; challenge re-runs POS/NEG/security",
     }
+    evidence_sha = finding["raw_sha256"] if finding.get("source") == "CHALLENGE_PREPATCH" else raw_sha
     far = {
         "schema": "FHS5.W0NF.FAR@2",
         "claim_ceiling": "BUILD_MINIMAL_FAR_REFERENCE",
         "finding": finding,
+        "challenge_ref": "03_PARTIES/challenge/challenge_prepatch.json"
+        if prepatch and prepatch.get("verdict") == "FINDING_CONFIRMED" else None,
         "rq": rq,
         "alternatives": alternatives,
         "chosen": "ALT-1",
@@ -84,7 +97,7 @@ def main():
         "keys": ["finding_id", "root_cause", "alternatives", "chosen", "risk", "next", "evidence"],
         "risk": "medium before patch (wrong exit + path leak); low after fail-closed patch",
         "next": "12' patch (candidate v3) + affected retest",
-        "evidence": raw_sha,
+        "evidence": evidence_sha,
         "source_status": {"status": "HIT_LOCAL", "zero_results": False,
                           "unavailable_behavior": policy.far_source_status(False, None)},
         "close_policy": {

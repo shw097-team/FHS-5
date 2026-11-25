@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-c",
+    "import hgk_core; print('IMPORTED')"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+  "exit": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "7dfa1c4a54e435d131e7ebd7f2a7baa82202a8e768a1ad73426363705deaaebd",
+  "timestamp": "2026-11-25T06:41:52+00:00"
+}

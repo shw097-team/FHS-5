@@ -55,6 +55,47 @@ def main():
     ops = lib.load_json(lib.ROOT / "04_DEV_OPS" / "ops.json")
     dev = lib.load_json(lib.ROOT / "04_DEV_OPS" / "dev_patch.json")
     far = lib.load_json(lib.PARTIES / "far" / "far.json")
+    collab = lib.load_json(lib.PARTIES / "collab" / "chain.json")
+    security = lib.load_json(lib.PARTIES / "security" / "security_wsl.json")
+    off_legacy = lib.load_json(lib.ROOT / "04_DEV_OPS" / "off_legacy.json")
+    off_bridge = lib.load_json(lib.ROOT / "04_DEV_OPS" / "off_bridge.json")
+    off_far = lib.load_json(lib.ROOT / "04_DEV_OPS" / "off_far.json")
+
+    verdicts = {}
+    for p in recs:
+        r = lib.load_json(p)
+        verdicts[r.get("case_id")] = r.get("verdict")
+    receipts_no_t10 = all(v == "PASS" for k, v in verdicts.items() if k != "NF-T10")
+    receipts_all = receipts_no_t10 and verdicts.get("NF-T10") == "PASS"
+    derived = {
+        "receipts_no_t10": receipts_no_t10,
+        "receipts_all": receipts_all,
+        "challenge": challenge.get("verdict") == "PASS",
+        "ops": ops.get("verdict") == "PASS",
+        "dev": dev.get("verdict") == "PASS",
+        "far": len(far.get("alternatives") or []) >= 2
+               and bool(far.get("finding", {}).get("raw_sha256"))
+               and far.get("close_policy", {}).get("no_raw", {}).get("status") == "FALSE_CLOSE",
+        "collab": collab.get("verdict") == "COMBINED_OK",
+        "security": security.get("verdict") == "PASS",
+        "off_legacy": off_legacy.get("verdict") == "PASS",
+        "off_bridge": off_bridge.get("verdict") == "PASS",
+        "off_far": off_far.get("verdict") == "PASS",
+    }
+    off_all = derived["off_legacy"] and derived["off_bridge"] and derived["off_far"]
+    b0 = (derived["receipts_no_t10"] and derived["challenge"] and derived["ops"]
+          and derived["dev"] and derived["far"] and derived["collab"]
+          and derived["security"] and off_all)
+    w0 = b0 and receipts_all
+    claims = {
+        "B0": "B0_NF_VALIDATED" if b0 else "B0_PARTIAL",
+        "W0": "W0_NF_VALIDATED" if w0 else "W0_PARTIAL",
+        "W1_technical": "SEE_CONSUMER_MANIFEST",
+        "W1_execution": "NOT_CLAIMED",
+        "release": "NOT_CLAIMED",
+        "different_principal_independence": "NOT_CLAIMED",
+        "other_hosts": "NOT_CLAIMED",
+    }
     manifest = {
         "schema": "FHS5.W0NF.EvidenceManifest@1",
         "generated_at": lib.now(),
@@ -70,6 +111,7 @@ def main():
         "summary_sha256": lib.sha_file(lib.TQAEP / "summary.json"),
         "counts": summary["counts"],
         "receipts": {p.name: lib.sha_file(p) for p in recs},
+        "receipt_verdicts": verdicts,
         "parties": {
             "tpm": {"exit": tpm["reviewer"]["exit"],
                     "state": tpm["reviewer"]["stdout"].get("state"),
@@ -86,20 +128,21 @@ def main():
                           "symlink_tested": challenge.get("symlink_tested")},
             "far": {"finding": far["finding"]["id"], "alternatives": len(far["alternatives"]),
                     "keys": far["keys"], "close_no_raw": far["close_policy"]["no_raw"]["status"]},
+            "collab": {"verdict": collab.get("verdict"), "failure": collab.get("failure_code"),
+                       "segments": len(collab.get("segments") or []),
+                       "checks": len(collab.get("checks") or [])},
+            "security": {"verdict": security.get("verdict"), "host": security.get("host"),
+                         "symlink_supported": security.get("symlink_supported")},
+            "off": {"legacy": off_legacy.get("verdict"), "bridge": off_bridge.get("verdict"),
+                    "far": off_far.get("verdict")},
         },
         "native": {"dev_verdict": dev["verdict"], "red_exit": dev["red"]["exit"],
                    "retest_suite_exit": dev["retest"]["suite_exit"],
                    "ops_verdict": ops["verdict"], "legacy_imports": ops["legacy_imports"],
                    "parity": ops["parity"]},
-        "claims": {
-            "B0": "B0_NF_VALIDATED",
-            "W0": "W0_NF_VALIDATED",
-            "W1_technical": "W1_TECHNICALLY_READY",
-            "W1_execution": "NOT_CLAIMED",
-            "release": "NOT_CLAIMED",
-            "different_principal_independence": "NOT_CLAIMED",
-            "other_hosts": "NOT_CLAIMED",
-        },
+        "claims": claims,
+        "claim_derivation": derived,
+        "consumer_evidence": "07_CONSUMER/CONSUMER_MANIFEST.json (separate, pinned by handoff)",
         "superseded_annex": [{
             "path": "01_PACK/FHS-5_PLP_W0_Native-first_CODEX_修補證據型附錄.md",
             "sha256": lib.sha_file(next((lib.ROOT / "01_PACK").glob("*CODEX_*.md"))),
@@ -111,9 +154,9 @@ def main():
             "FHS 22/36/50/39/96/192/485 full regression (DEFER)",
             "HERMES / GPT CHAT / GPT WORK host execution",
             "different OS principal signature",
-            "symlink creation (OS privilege; junction tested)",
             "publisher / release",
         ],
+        "not_verified": [] if derived["security"] else ["symlink/reparse security"],
         "exclusions": ["09_DELIVERY", "07_CONSUMER", "10_EVIDENCE", "tmp", ".git", "__pycache__"],
         "workspace_only": [{
             "path": "02_CANDIDATE/repo/",

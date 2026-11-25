@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "wsl.exe",
+    "-e",
+    "python3",
+    "/mnt/c/Projects/Agent_Workspace/FHS-5_Workspace/13_W0_NF_CODEX_20261125/tools/security_linux.py",
+    "--repo",
+    "/mnt/c/Projects/Agent_Workspace/FHS-5_Workspace/13_W0_NF_CODEX_20261125/02_CANDIDATE/repo",
+    "--out",
+    "/mnt/c/Projects/Agent_Workspace/FHS-5_Workspace/13_W0_NF_CODEX_20261125/03_PARTIES/security/security_wsl.json"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+  "exit": 0,
+  "stdout_sha256": "7be84341bc0e9aa6388dec5e8006a9622e73bef9c5f4630f82265a5761f0ca5b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T06:39:54+00:00"
+}

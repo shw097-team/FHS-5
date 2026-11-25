@@ -1,0 +1,11 @@
+{
+  "verdict": "PASS",
+  "direct_exit": 0,
+  "parity": {
+    "pack_sha_equal": true,
+    "bridge_case_count": 9,
+    "native_case_count": 9,
+    "same_case_set": true
+  },
+  "blocked": []
+}

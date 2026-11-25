@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-c",
+    "import w1_bridge_reference; print('BRIDGE_IMPORTED')"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+  "exit": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "2b1e2666d09a7c19c161bf8064eff3e80de7026415b8a361281be1ccf50f501d",
+  "timestamp": "2026-11-25T06:41:53+00:00"
+}

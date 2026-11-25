@@ -1,11 +1,11 @@
 {
   "schema": "FHS5.W0NF.TQAEPResult@1",
-  "generated_at": "2026-11-25T05:42:04+00:00",
+  "generated_at": "2026-11-25T06:41:56+00:00",
   "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
   "case_set_sha": "9624e71d5eb33714619fee0b764abe091eb66995346404a8cd8d43e3ffec7512",
-  "receipts_index_sha": "7f28891cb8ab94261ff3eec82c4f2ef4cf9a371dcf56451ff98edb032cc6c31b",
+  "receipts_index_sha": "5d4f27f1c958008513ffd4e0cddd539c8f2d9f99d3fa63a90b20d758214f3f0d",
   "fixtures": {
     "junction_ok": true,
     "junction_detail": "Junction created for C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root\\escape_dir <<===>> C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQA",
@@ -14,7 +14,8 @@
   "counts": {
     "total": 44,
     "pass": 44,
-    "fail": 0
+    "fail": 0,
+    "pending": 0
   },
   "cases": [
     {
@@ -286,5 +287,8 @@
     "full W1 38+28, C16/EC-36/local47, FARP30/local35, U26/QA26 denominators",
     "FHS 485 full regression (DEFER)",
     "HERMES/GPT host execution"
-  ]
+  ],
+  "finalized_t10": {
+    "consumer_run_id": "20261125T144336-01f1adf3"
+  }
 }

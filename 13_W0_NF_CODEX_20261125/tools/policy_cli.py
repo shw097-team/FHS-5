@@ -231,15 +231,16 @@ def main():
 
     # ---------------- Native-first architecture cases ----------------
     if case == "NF-T01":
-        off = lib.load_json(lib.ROOT / "04_DEV_OPS" / "off.json")
-        ok = off.get("legacy_imports") == [] and off.get("detector_control") is True
-        mut = dict(off, legacy_imports=["hgk_core"])
-        ctrl = mut.get("legacy_imports") == []
+        off = lib.load_json(lib.ROOT / "04_DEV_OPS" / "off_legacy.json")
+        ok = off.get("verdict") == "PASS"
+        ctrl = off.get("control") or {}
         return emit(0 if ok else 3, "OFF_OK" if ok else "OFF_FAIL",
-                    {"legacy_imports": off.get("legacy_imports"),
-                     "detector_control": off.get("detector_control"),
-                     "parity_meaning": off.get("parity_meaning")},
-                    [{"name": "mutant_detected", "got": ctrl, "want": False, "ok": ctrl is False}])
+                    {"control": ctrl, "entries": [(e["name"], e["ok"]) for e in off.get("entries", [])],
+                     "blocked_prefixes": off.get("blocked_prefixes")},
+                    [{"name": "control_blocked", "got": ctrl.get("blocked"), "want": True,
+                      "ok": ctrl.get("blocked") is True},
+                     {"name": "control_allowed_without_profile", "got": ctrl.get("allowed"),
+                      "want": True, "ok": ctrl.get("allowed") is True}])
 
     if case == "NF-T02":
         text = (lib.REPO / "briefcheck.py").read_text(encoding="utf-8")
@@ -273,11 +274,15 @@ def main():
                       .get("retest", {}).get("suite_exit") == 0, "want": False, "ok": True}])
 
     if case == "NF-T06":
-        dev = lib.load_json(lib.ROOT / "04_DEV_OPS" / "dev_patch.json")
-        ok = dev.get("verdict") == "PASS"
+        far_off = lib.load_json(lib.ROOT / "04_DEV_OPS" / "off_far.json")
+        ok = far_off.get("verdict") == "PASS"
         return emit(0 if ok else 3, "DIRECT_FIX_OK" if ok else "FALSE_RESEARCH_GATE",
-                    {"dev_verdict": dev.get("verdict"), "far_used": False},
-                    [{"name": "far_not_required", "got": True, "want": True, "ok": True}])
+                    {"patch_exit": far_off.get("patch_exit"), "suite_exit": far_off.get("suite_exit"),
+                     "probe_exit": far_off.get("probe_exit"), "far_tool_invoked": far_off.get("far_tool_invoked")},
+                    [{"name": "far_not_invoked", "got": far_off.get("far_tool_invoked"),
+                      "want": False, "ok": far_off.get("far_tool_invoked") is False},
+                     {"name": "suite_green", "got": far_off.get("suite_exit"), "want": 0,
+                      "ok": far_off.get("suite_exit") == 0}])
 
     if case == "NF-T07":
         metas = []

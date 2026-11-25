@@ -1,0 +1,20 @@
+{
+  "schema": "FHS5.W0NF.OffFar@1",
+  "clone_exit": 0,
+  "checkout_exit": 0,
+  "pre_sha": "8f51ca0d8dae84d579081b750d7985f783511df521a451988d1a86d41c9cb191",
+  "post_sha": "40c212262987b994ccf65998cc7de56c2c1c11d14f49cb852c40cd9f38168e80",
+  "v3_sha": "40c212262987b994ccf65998cc7de56c2c1c11d14f49cb852c40cd9f38168e80",
+  "patch_exit": 0,
+  "suite_exit": 0,
+  "probe_exit": 0,
+  "patch_source_sha": "d785e3ee3cdcbb608c49dbf91baa044d112efcec961ff4010cf5c57733f725af",
+  "patch_applied_sha": "0fc467969889b8d63c1462fb9ae76f7c95886900fce65704fd95dd91ea7cea61",
+  "patch_normalization": "CRLF->LF only; content unchanged",
+  "far_tool_invoked": false,
+  "verdict": "PASS",
+  "not_covered": [
+    "Fabric three-source profile",
+    "FARP30/local35"
+  ]
+}

@@ -1,1 +1,30 @@
-{"controls": [{"got": false, "name": "mutant_detected", "ok": true, "want": false}], "controls_ok": true, "exit": 0, "observed": {"detector_control": true, "legacy_imports": [], "parity_meaning": "environment-marker invariance; NOT an ON/OFF code branch"}, "status": "OFF_OK"}
+{
+  "verdict": "PASS",
+  "control_ok": true,
+  "entries": [
+    [
+      "briefcheck_pos",
+      true
+    ],
+    [
+      "briefcheck_neg",
+      true
+    ],
+    [
+      "reviewer",
+      true
+    ],
+    [
+      "guide",
+      true
+    ],
+    [
+      "bridge_inspect",
+      true
+    ],
+    [
+      "bridge_explain",
+      true
+    ]
+  ]
+}

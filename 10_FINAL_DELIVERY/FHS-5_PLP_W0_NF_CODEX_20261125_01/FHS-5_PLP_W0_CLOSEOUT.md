@@ -9,6 +9,7 @@
 **candidate preimage**：`5eab43de2d3f67d6afbb1c5f6bc390e2c391da36`（v2）  
 **candidate final**：`bb66a276aae8c5d6aef549832c523587fc47d247`（v3，`12'`）  
 **verdict**：`B0_NF_VALIDATED`｜`W0_NF_VALIDATED`  
+**round**：`W0-NF-HARDEN-20261125-02`（最小補強：NF-T08／Consumer／symlink／OFF）
 **W1**：`W1_TECHNICALLY_READY`；`W1_EXECUTION_READY` = `NOT_CLAIMED`  
 **not_claimed**：`NATIVE_PASS_FOR_OTHER_HOSTS`、`INDEPENDENT_PASS_WITH_DIFFERENT_PRINCIPAL`、`W1–W4 COMPLETE`、`FHS 485 FULL`、`RELEASED`、`EXTERNAL_OS_REPO_HOST_GRANT`
 
@@ -65,7 +66,7 @@
 | `F5-W0-T03` | `PASS` | 缺 B → exit 2、parent FAIL |
 | `F5-W0-T04` | `PASS` | 假 ACK／`permit=true` → `FALSE_AUTHORITY` no-op；direct READ 仍可 |
 | `F5-W0-T05` | `PASS` | 擴 Scope → `SCOPE_DRIFT` exit 3 |
-| `F5-W0-T06` | `PASS` | `..`／absolute／UNC／junction 均 `INVALID_PATH` exit 3；canary 未讀、SHA 不變；symlink `NOT_VERIFIED`（OS 權限） |
+| `F5-W0-T06` | `PASS` | Windows：`..`／absolute／UNC／junction 均 `INVALID_PATH`；WSL2 ext4：真 file/dir symlink 亦 `INVALID_PATH`，root 內 link 正向 `COMPLETE`；canary 未讀、SHA 不變 |
 | `F5-W0-T07` | `PASS` | 未知 schema → `SCHEMA_UNSUPPORTED`；未知欄保真；Legacy 半 `DEFER` |
 | `F5-W0-T08` | `PASS` | code 存在、console 未 bound → `BIND_EXISTING`，非 `CODE_MISSING` |
 | `F5-W0-T09` | `PASS` | `W0_READ → W4_RELEASE` → `PHASE_OVERREACH_CANDIDATE`；READ 可走 |
@@ -102,7 +103,7 @@
 | TPM＋Reviewer | 四契約生成＋真 `plp-tpm-review 1.0.1` `review_core.py` | `REVIEW_SOURCE_LOCATED_ONLY`；0 defects；10 authority/reader unbound；缺 B／無源 gate 正常 | `03_PARTIES/tpm/` |
 | Guide | `BUILD_MINIMAL` `tools/guide.py` | `PACKAGE_FIRST`；5/5 pack；九鍵；Touch1/Touch2；scope 拒 | `03_PARTIES/guide/` |
 | Bridge | `REUSE` `w1_bridge_reference.py`（SHA `dc0d1041…`） | inspect 24 declared／0 mismatched；explain 9 cases；render；compare 1 changed；三項安全拒 | `03_PARTIES/bridge/` |
-| Challenge | `BUILD_MINIMAL` `tools/challenge.py`，獨立 process／隔離副本 | 32 checks、0 findings、五 pin；symlink `NOT_VERIFIED` | `03_PARTIES/challenge/challenge.json` |
+| Challenge | `BUILD_MINIMAL` `tools/challenge.py`，獨立 process／隔離副本 | 32 checks、0 findings、五 pin；NF-T10 由 consumer 另行釘住 | `03_PARTIES/challenge/challenge.json` |
 | FAR | `BUILD_MINIMAL` `tools/far_run.py` | F-W0NF-001；RQ0–8；3 方案；10 advice；七鍵；false close 拒 | `03_PARTIES/far/` |
 
 Combined：`NF-T08` 收據串接契約→Guide→DEV→OPS→Challenge→FAR→`12'`→resume→retest，各段有 raw。
@@ -129,8 +130,8 @@ Combined：`NF-T08` 收據串接契約→Guide→DEV→OPS→Challenge→FAR→`
 | Checker | `tools/challenge.py`；separate process＋isolated copy（不寫 subject `.git`）；same OS principal（如實記錄） |
 | Oracle | `05_TQAEP/oracle.json`，SHA `112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6` |
 | Case set | 44 receipts；`case_set` SHA 見 `challenge.json` pins |
-| Checker pins | source `fc460883…`；candidate `bb66a27`；evidence `7f28891c…`（receipts index，checker 重算）；oracle `112f2902…`；case_set `9624e71d…`（checker 重算） |
-| Verdict | `PASS`；32 checks；0 findings；`not_verified: symlink` |
+| Checker pins | source `fc460883…`；candidate `bb66a27`；evidence `5d4f27f1…`（43 candidate receipts，checker 重算，排除 consumer-staged T10）；oracle `112f2902…`；case_set `9624e71d…` |
+| Verdict | `PASS`；32 checks；0 findings |
 | Consumer | `07_CONSUMER/CONSUMER_MANIFEST.json` 釘住 receipt＋raw；handoff 另釘其 SHA |
 | FirstFail | red `INVALID_ROOT_TRACEBACK`；已修補並只回歸受影 cone |
 | LastGood | pack `e3772aee…`＋candidate v2 `5eab43d`＋v2 evidence（`12_B0_NF_CODEX`） |
@@ -152,7 +153,7 @@ Combined：`NF-T08` 收據串接契約→Guide→DEV→OPS→Challenge→FAR→`
 - FHS 22/36/50/39/96/192/485 完整回歸（本次 `DEFER`）。
 - HERMES／GPT CHAT／GPT WORK 主機執行與相容性。
 - 不同 OS principal 的獨立簽章；本次為同 principal 的 process/worktree 分離。
-- symlink 建立（OS 權限）→ `NOT_VERIFIED`；junction 已實測。
+- symlink 已在 WSL2 ext4 實測（Windows 本機無 `SeCreateSymbolicLink`，未提權）；Windows junction 另測。
 - 原域 Original OPS ECP、Original Reader、Issuer、Publisher。
 
 ## 10｜Next legal action
@@ -203,3 +204,46 @@ Combined：`NF-T08` 收據串接契約→Guide→DEV→OPS→Challenge→FAR→`
 **殘留限制**：`oracle.frozen_at` 為建立凍結檔時的標記，非外部時間戳服務；
 `guide.delta.evidence_sha` 在 Touch1 起點為 `null`（尚無 evidence），Touch2 才填；
 policy T 案是 `policy.py` 的單元測試，不是候選產品碼的行為。
+
+## 13｜本輪最小補強（A／B／C／D）
+
+### A｜NF-T08 真協作閉環
+
+| 段 | producer → consumer | 實際 pin／結果 |
+|---|---|---|
+| Source→TPM | pack → 四契約＋Reviewer | manifest `e3772aee…`；Reviewer exit 0／0 defects |
+| TPM→Guide | 契約 → ThinStart | `PACKAGE_FIRST`；delta candidate `bb66a27` |
+| Guide→Bridge | pack → 四 API | inspect mismatched 0；explain 9 cases；三項安全拒 |
+| Bridge→Native | Bridge pin → v2 red→`12'`→v3 | preimage `5eab43d`；red exit 1；patch `d785e3ee…`；retest 12 tests＋probe 0 |
+| Native→Challenge | v2 clone → frozen Finding | `CH-F-W0NF-001`；raw `4be2c111…` |
+| Challenge→FAR | Finding → RQ0–8／3 方案 | FAR finding 同一 id；chosen `ALT-1`；evidence `4be2c111…` |
+| FAR→Guide Resume | MaterialDelta → Touch2 | `RESUME`；findings 含 `CH-F-W0NF-001`；candidate `bb66a27` |
+| Resume→Retest | v3＋凍結 oracle | challenge PASS；44 receipts |
+
+- 驗證器：`tools/collab_chain.py`，8 segments／20 checks，verdict `COMBINED_OK`。
+- 斷鏈負例 7 個全部拒絕：missing raw、wrong candidate、wrong oracle、no challenge、wrong finding、no patch delta、cross subject。
+
+### B｜Consumer fail-closed＋NF-T10
+
+- `tools/consumer.py` v3：先核 identity／pack／seal／W0M／candidate／oracle／handoff／evidence **667 檔索引**（SHA/bytes／路徑 confinement），全部通過才跑 POS/NEG。
+- 每次 run 唯一 `run_id`＋獨立 `runs/<id>/` raw，不覆寫。
+- 正向：**781 checks**、`consumed=true`、POS 0/COMPLETE、NEG 2/MISSING。
+- 負例 10 個全部 `cli_executed=false`：wrong pack／candidate／oracle／evidence、mutated raw、missing file、bad schema、duplicate pin、cross subject、path escape。
+- NF-T10 由 consumer 收據最終化，Checker 不重複自簽；Consumer Manifest 外部 `.sha256` 釘住。
+
+### C｜Symlink／reparse 安全
+
+- Windows 本機無 `SeCreateSymbolicLink`（WinError 1314，未提權）→ 依既有 WSL Ubuntu-24.04／Python 3.12.3／uid 1000 隔離環境補驗。
+- 真 file symlink、dir symlink、相對 symlink、root 內正向 link 皆實建。
+- 8 案例：POS `COMPLETE`；`..`／absolute／UNC／file link／dir link／relative link 全部 exit 3／`INVALID_PATH`；root 內 link 正向 `COMPLETE`。
+- canary 未讀、outside/source SHA 不變；測試後清理，不跟隨 link 刪 target。
+
+### D｜Legacy／Bridge／FAR OFF 真隔離
+
+| OFF | 隔離方式 | 結果 |
+|---|---|---|
+| Legacy | `sitecustomize` import blocker（hgk/fabric/sbl/fhs/pipd/hermes）＋正負控制 | 6 個 B0 入口（briefcheck 正負、Reviewer、Guide、Bridge inspect/explain）全部同結果、0 blocked attempts |
+| Bridge | `w1_bridge_reference` import 阻斷＋Native direct reader | 9 cases 同集合；pack SHA 相同；direct 不依賴 Bridge |
+| FAR | 停用 FAR 路徑，v2 clone 套 `12'` diff | patch exit 0；post==v3；suite 0；probe 0；`far_tool_invoked=false` |
+
+**Claims**：`B0_NF_VALIDATED`、`W0_NF_VALIDATED`；`W1_TECHNICALLY_READY`（consumer 781 checks／10 negatives）；`W1_EXECUTION_READY=NOT_CLAIMED`。

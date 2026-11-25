@@ -1,5 +1,5 @@
 {
-  "run_id": "NF-T06-20261125T134203",
+  "run_id": "NF-T06-20261125T144156",
   "case_id": "NF-T06",
   "candidate_ref": "02_CANDIDATE/repo",
   "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
@@ -18,42 +18,28 @@
   "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
   "argv": [
     "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
-    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\policy_cli.py",
-    "--case",
-    "NF-T06"
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\off_far.py"
   ],
   "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
   "exit": 0,
-  "stdout_sha": "8af16e57af3042cce0f5b87ee64c6b2783dfb5620c650ed92b828f65943ebca7",
+  "stdout_sha": "147698b3e81f72735dec9734b75300d55d542886743176eeb4696607e511710f",
   "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "pre_state": null,
   "post_state": null,
   "recovery_ref": null,
   "expected": {
-    "exit": 0,
-    "status": "DIRECT_FIX_OK",
-    "controls_ok": true
+    "status": "PASS",
+    "exit": 0
   },
   "observed": {
-    "exit": 0,
-    "status": "DIRECT_FIX_OK",
-    "controls": [
-      {
-        "got": true,
-        "name": "far_not_required",
-        "ok": true,
-        "want": true
-      }
-    ],
-    "observed": {
-      "dev_verdict": "PASS",
-      "far_used": false
-    }
+    "verdict": "PASS",
+    "exit": 0
   },
   "verdict": "PASS",
   "first_fail": "",
   "checker_identity": "maker-run; independent check in 06_CHECKER",
   "consumer_ref": null,
   "not_covered": [],
-  "execution_kind": "subprocess"
+  "execution_kind": "subprocess-step",
+  "artifact": "04_DEV_OPS/off_far.json"
 }

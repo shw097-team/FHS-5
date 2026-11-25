@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-m",
+    "briefcheck",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\prepatch_v2\\no_root",
+    "--input",
+    "case_ok.md",
+    "--sha256",
+    "0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\prepatch_v2",
+  "exit": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428",
+  "timestamp": "2026-11-25T06:40:16+00:00"
+}

@@ -1,6 +1,6 @@
 # FHS-5_PLP/W0｜HANDOFF（W0 → W1）
 
-- **handoff_id**：`W0-NF-HANDOFF-20261125-02`
+- **handoff_id**：`W0-NF-HANDOFF-20261125-03`
 - **from_stage**：`W0 / B0-NF`
 - **to_stage**：`W1`
 - **project/work_id**：`FHS-5_PLP/W0`｜batch `FHS-5/W0/B0-NF`
@@ -12,21 +12,21 @@
 - **candidate_preimage**：`5eab43de2d3f67d6afbb1c5f6bc390e2c391da36`
 - **oracle_sha256**：`112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6`
 - **evidence_ref**：`10_EVIDENCE/EVIDENCE_MANIFEST.json`
-- **evidence_manifest_sha256**：`cb71b632df003372658e5ecf9f833f70b5c4f3b82739ffbd5223f5f8b679305c`
-- **consumer_manifest_sha256**：`2f31583dacc8cfd5e5259a7744d44ccb5ad97a1275f051102d2572fa28d41248`
+- **evidence_manifest_sha256**：`a9c0c724432a80a7d5c3841239c6dd655421aa06415d1e6127776e4ce978eb49`
+- **consumer_manifest_sha256**：SEE `07_CONSUMER/CONSUMER_MANIFEST.sha256`
 - **case_set**：SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44
 - **target_consumer**：W1 / CODEX Native（`tools/consumer.py`，`W1-consumer/CODEX-Native-1`）
-- **consumer_version**：`@2`
+- **consumer_version**：`@3`
 
 ## actual_readback
 
 | 欄 | 值 |
 |---|---|
-| argv | `python tools/consumer.py --pack 01_PACK/FHS-5_PLP_W0_NATIVE_FIRST --repo 02_CANDIDATE/repo --handoff 09_DELIVERY/W0_HANDOFF.md --evidence-manifest 10_EVIDENCE/EVIDENCE_MANIFEST.json` |
-| exit | 見 `07_CONSUMER/consumer_receipt.json`（成功為 0） |
-| raw | `07_CONSUMER/raw/consumer_pos.*`、`consumer_neg.*` |
-| action | 重讀 pack manifest＋5 檔、handoff pins、evidence manifest；重跑 POS/NEG |
-| result | `consumed=true`；錯 pack pin 之 handoff 被拒 |
+| argv | `python tools/consumer.py --handoff 09_DELIVERY/W0_HANDOFF.md --evidence-manifest 10_EVIDENCE/EVIDENCE_MANIFEST.json --publish-manifest` |
+| exit | `0`；最新 `run_id`／receipt 以 `07_CONSUMER/LATEST.json` 為準 |
+| raw | `07_CONSUMER/runs/<run_id>/raw/pos.*`、`neg.*` |
+| action | 先核 identity／pack／seal／W0M／candidate／oracle／handoff／evidence 667 檔索引與路徑，再重跑 POS/NEG |
+| result | `consumed=true`；781 checks；10 個錯 pin／raw／schema／路徑負例全部 fail-closed 且 `cli_executed=false` |
 
 ## next_legal_action
 
@@ -50,12 +50,12 @@ W1–W4 全分母、FHS 485、HERMES／GPT Host、不同 principal 簽章、Publ
 
 | 層 | 值 | 理由 |
 |---|---|---|
-| `w1_technical_readiness` | `W1_TECHNICALLY_READY` | W0 validated＋真 handoff＋consumer 真讀回 |
+| `w1_technical_readiness` | `W1_TECHNICALLY_READY` | W0 validated（44/44）＋真 handoff＋consumer 781 checks／10 negatives 真讀回 |
 | `w1_execution_readiness` | `NOT_CLAIMED` | 尚缺上位採納、W1M／下一包一致與 W1 真入口／授權 |
 
 ## publication_state
 
-`PUSHED_FAST_FORWARD`：`43ac758..f3add20`；remote main `f3add20`。
+本輪 `LOCAL_ONLY`：前輪已推 `43ac758..f3add20`；本輪 hardening commit 待推送。
 詳見 `PUBLICATION_STATUS.md`。
 
 ## stop／resume

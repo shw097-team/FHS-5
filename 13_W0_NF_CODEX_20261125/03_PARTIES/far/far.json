@@ -2,20 +2,18 @@
   "schema": "FHS5.W0NF.FAR@2",
   "claim_ceiling": "BUILD_MINIMAL_FAR_REFERENCE",
   "finding": {
-    "id": "F-W0NF-001",
+    "id": "CH-F-W0NF-001",
     "severity": "MAJOR",
     "class": "fail_open_invalid_root",
     "subject_sha": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
-    "command": "python -m unittest discover -s 04_DEV_OPS/probe -v",
+    "command": "python -m briefcheck --root <missing> --input case_ok.md --sha256 0000000000000000000000000000000000000000000000000000000000000000",
     "exit": 1,
-    "raw_sha256": "437052578c5cabb0b77e1c5218d77281dc488204260cc67141e3737113bf0518",
-    "raw_streams": {
-      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "stderr_sha256": "437052578c5cabb0b77e1c5218d77281dc488204260cc67141e3737113bf0518",
-      "stderr": "04_DEV_OPS/raw/red_v2.stderr.txt"
-    },
-    "reproduction": "BRIEFCHECK_REPO=<candidate> python -m unittest discover -s 04_DEV_OPS/probe -v; briefcheck --root <missing dir> raises FileNotFoundError and exits 1 instead of INVALID_PATH/3"
+    "raw_sha256": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428",
+    "reproduction": "Clone candidate at 5eab43d and run briefcheck with a missing --root; it raises FileNotFoundError and exits 1 instead of INVALID_PATH/3.",
+    "source": "CHALLENGE_PREPATCH",
+    "dev_finding_id": "F-W0NF-001"
   },
+  "challenge_ref": "03_PARTIES/challenge/challenge_prepatch.json",
   "rq": {
     "RQ0": {
       "question": "raw command/exit/reproduction?",
@@ -88,7 +86,7 @@
   "chosen": "ALT-1",
   "advice": {
     "root_cause": "Path(a.root).resolve(strict=True) is called before any guard; missing root raises OSError",
-    "reproduce": "BRIEFCHECK_REPO=<candidate> python -m unittest discover -s 04_DEV_OPS/probe -v; briefcheck --root <missing dir> raises FileNotFoundError and exits 1 instead of INVALID_PATH/3",
+    "reproduce": "Clone candidate at 5eab43d and run briefcheck with a missing --root; it raises FileNotFoundError and exits 1 instead of INVALID_PATH/3.",
     "minimal_patch": "try/except OSError around resolve; require root.is_dir()",
     "test": "R11 missing root; R12 root is a file; full suite",
     "security": "fail closed with INVALID_PATH; no path disclosure in stdout/stderr",
@@ -109,7 +107,7 @@
   ],
   "risk": "medium before patch (wrong exit + path leak); low after fail-closed patch",
   "next": "12' patch (candidate v3) + affected retest",
-  "evidence": "437052578c5cabb0b77e1c5218d77281dc488204260cc67141e3737113bf0518",
+  "evidence": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428",
   "source_status": {
     "status": "HIT_LOCAL",
     "zero_results": false,

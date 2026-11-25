@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-c",
+    "import subprocess,sys,json,os;p=subprocess.run([sys.executable,'-m','briefcheck','--root',os.path.join(os.environ['TMP_OFF'],'nope'),'--input','case_ok.md','--sha256','0'*64],capture_output=True,text=True,env=dict(os.environ,PYTHONPATH=os.getcwd()));print(json.dumps({'exit':p.returncode,'out':p.stdout.strip()}));sys.exit(0 if p.returncode==3 else 1)"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\off_far_v2",
+  "exit": 0,
+  "stdout_sha256": "6faabe7635c3598a495dc3d32b7dbe58d8824dc3130587d588b9de69de83d96e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T06:41:56+00:00"
+}

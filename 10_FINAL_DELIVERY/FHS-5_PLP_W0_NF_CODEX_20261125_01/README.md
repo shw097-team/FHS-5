@@ -11,7 +11,8 @@
 4. `EVIDENCE_MANIFEST.json`：證據檔 SHA/bytes 索引、pins、claims 與 workspace-only 說明。
 5. `REPLAY.md`：從 raw 重播的實際命令。
 6. `UPSTREAM_WRITEBACK/`：MASTER／PROG-00／PROJ-01..05／WM 的受影段替換稿（待採納）。
-7. `PUBLICATION_STATUS.md`：local commit 與 push 被安全審查拒絕的實際狀態。
+7. `PUBLICATION_STATUS.md`：local commit 與實際 push 狀態。
+8. `CONSUMER_MANIFEST.json`／`consumer_receipt.json`：W1 consumer 776 checks 與 10 負例。
 
 ## 原始證據位置
 
@@ -21,11 +22,11 @@
 |---|---|
 | `01_PACK` | 封存六檔、W0M r4、external seal、歷史附錄（標 superseded） |
 | `02_CANDIDATE/repo` | briefcheck Git repo；v2 `5eab43d` → v3 `bb66a27` |
-| `03_PARTIES` | TPM 四契約／Reviewer、Guide、Bridge、Challenge、FAR |
-| `04_DEV_OPS` | red／patch／retest、OPS O1–O5、OFF trace |
+| `03_PARTIES` | TPM 四契約／Reviewer、Guide、Bridge、Challenge（prepatch Finding）、FAR、collab chain、WSL security |
+| `04_DEV_OPS` | red／patch／retest、OPS O1–O5、Legacy／Bridge／FAR OFF |
 | `05_TQAEP` | oracle、44 receipts、raw、summary |
 | `06_CHECKER` | Challenge 的隔離副本與 raw |
-| `07_CONSUMER` | W1 consumer receipt 與 raw |
+| `07_CONSUMER` | W1 consumer runs／negatives／manifest |
 | `08_OPENSPEC` | OpenSpec 2.0 change（另有 `openspec/` 根） |
 | `09_DELIVERY` | CLOSEOUT/HANDOFF/CHANGESET 與上游替換稿 |
 | `10_EVIDENCE` | 證據 manifest |
@@ -34,4 +35,4 @@
 
 - 不是 W1–W4 完整分母、不是 FHS 485、不是 HERMES／GPT Host、不是 Release。
 - Checker 與 Maker 為同 OS principal 的 process／隔離副本分離；不同 principal 未宣。
-- symlink 建立受 OS 權限限制，記 `NOT_VERIFIED`；junction 已實測。
+- Windows 本機 symlink 受權限限制；已用 WSL2 ext4 真 symlink 補驗（8 案 PASS），Windows junction 另測。

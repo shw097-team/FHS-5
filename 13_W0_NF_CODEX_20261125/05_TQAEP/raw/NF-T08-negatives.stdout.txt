@@ -1,0 +1,49 @@
+{
+  "schema": "FHS5.W0NF.CollabNegatives@1",
+  "negatives": [
+    {
+      "name": "missing_raw",
+      "expected": "RAW_MISMATCH",
+      "got": "RAW_MISMATCH",
+      "rejected": true
+    },
+    {
+      "name": "wrong_candidate",
+      "expected": "GUIDE_RESUME_MISMATCH",
+      "got": "GUIDE_RESUME_MISMATCH",
+      "rejected": true
+    },
+    {
+      "name": "wrong_oracle",
+      "expected": "RETEST_ORACLE_DRIFT",
+      "got": "RETEST_ORACLE_DRIFT",
+      "rejected": true
+    },
+    {
+      "name": "no_challenge",
+      "expected": "CHALLENGE_UNBOUND",
+      "got": "CHALLENGE_UNBOUND",
+      "rejected": true
+    },
+    {
+      "name": "wrong_finding",
+      "expected": "FINDING_MISMATCH",
+      "got": "FINDING_MISMATCH",
+      "rejected": true
+    },
+    {
+      "name": "no_patch_delta",
+      "expected": "PREIMAGE_MISMATCH",
+      "got": "PREIMAGE_MISMATCH",
+      "rejected": true
+    },
+    {
+      "name": "cross_subject",
+      "expected": "SUBJECT_MISMATCH",
+      "got": "SUBJECT_MISMATCH",
+      "rejected": true
+    }
+  ],
+  "verdict": "NEGATIVES_REJECTED",
+  "count": 7
+}

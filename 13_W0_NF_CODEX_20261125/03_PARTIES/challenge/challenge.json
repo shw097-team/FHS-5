@@ -8,7 +8,7 @@
   "pins": {
     "source": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
     "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
-    "evidence": "7f28891cb8ab94261ff3eec82c4f2ef4cf9a371dcf56451ff98edb032cc6c31b",
+    "evidence": "5d4f27f1c958008513ffd4e0cddd539c8f2d9f99d3fa63a90b20d758214f3f0d",
     "oracle": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
     "case_set": "9624e71d5eb33714619fee0b764abe091eb66995346404a8cd8d43e3ffec7512"
   },
@@ -117,7 +117,7 @@
       "id": "PIN-RECOMPUTE",
       "ok": true,
       "observed": {
-        "receipts_index": "7f28891cb8ab94261ff3eec82c4f2ef4cf9a371dcf56451ff98edb032cc6c31b",
+        "receipts_index": "5d4f27f1c958008513ffd4e0cddd539c8f2d9f99d3fa63a90b20d758214f3f0d",
         "case_set": "9624e71d5eb33714619fee0b764abe091eb66995346404a8cd8d43e3ffec7512"
       }
     },

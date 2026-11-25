@@ -1,0 +1,137 @@
+{
+  "schema": "FHS5.W0NF.CollabChain@1",
+  "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "pack_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "finding": "CH-F-W0NF-001",
+  "segments": [
+    {
+      "from": "SOURCE",
+      "to": "TPM",
+      "pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "from": "TPM",
+      "to": "GUIDE",
+      "pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "from": "GUIDE",
+      "to": "BRIDGE",
+      "pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "from": "BRIDGE",
+      "to": "NATIVE",
+      "pin": "dc0d1041a473a96493c887f279f75dcc1eca077c39242de47faffd44e12050a8"
+    },
+    {
+      "from": "NATIVE",
+      "to": "CHALLENGE",
+      "pin": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428"
+    },
+    {
+      "from": "CHALLENGE",
+      "to": "FAR",
+      "pin": "CH-F-W0NF-001"
+    },
+    {
+      "from": "FAR",
+      "to": "GUIDE-RESUME",
+      "pin": "ALT-1"
+    },
+    {
+      "from": "GUIDE-RESUME",
+      "to": "RETEST",
+      "pin": "40c212262987b994ccf65998cc7de56c2c1c11d14f49cb852c40cd9f38168e80"
+    }
+  ],
+  "checks": [
+    {
+      "id": "SOURCE-PINS",
+      "ok": true
+    },
+    {
+      "id": "TPM-CONTRACTS",
+      "ok": true
+    },
+    {
+      "id": "TPM-REVIEWER",
+      "ok": true
+    },
+    {
+      "id": "TPM-SOURCE-LINK",
+      "ok": true
+    },
+    {
+      "id": "GUIDE-START",
+      "ok": true
+    },
+    {
+      "id": "BRIDGE-READ",
+      "ok": true
+    },
+    {
+      "id": "DEV-PREIMAGE",
+      "ok": true
+    },
+    {
+      "id": "DEV-RED",
+      "ok": true
+    },
+    {
+      "id": "PATCH-DELTA",
+      "ok": true
+    },
+    {
+      "id": "RETEST",
+      "ok": true
+    },
+    {
+      "id": "CHALLENGE-FROZEN",
+      "ok": true
+    },
+    {
+      "id": "CHALLENGE-RAW",
+      "ok": true
+    },
+    {
+      "id": "FAR-CONSUMES",
+      "ok": true
+    },
+    {
+      "id": "FAR-ALTERNATIVES",
+      "ok": true
+    },
+    {
+      "id": "GUIDE-RESUME",
+      "ok": true
+    },
+    {
+      "id": "GUIDE-EVIDENCE",
+      "ok": true
+    },
+    {
+      "id": "SUBJECT",
+      "ok": true
+    },
+    {
+      "id": "ORACLE",
+      "ok": true
+    },
+    {
+      "id": "ORACLE-SOURCE",
+      "ok": true
+    },
+    {
+      "id": "RETEST-CANDIDATE",
+      "ok": true
+    }
+  ],
+  "failure_code": null,
+  "verdict": "COMBINED_OK",
+  "not_covered": [
+    "W1-W4 denominators",
+    "other hosts",
+    "different principal"
+  ]
+}

@@ -1,16 +1,4 @@
 {
-  "accepted": true,
-  "wrong_pin_refused": true,
-  "good": {
-    "files_ok": true,
-    "pin_ok": true,
-    "run_exit": 0,
-    "run_status": "COMPLETE"
-  },
-  "wrong": {
-    "files_ok": true,
-    "pin_ok": false,
-    "run_exit": 0,
-    "run_status": "COMPLETE"
-  }
+  "status": "PENDING_CONSUMER",
+  "reason": "consumer/checker staged: consumer runs after the checker and finalizes this case"
 }

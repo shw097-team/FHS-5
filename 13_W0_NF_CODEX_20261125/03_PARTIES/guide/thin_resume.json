@@ -1,28 +1,26 @@
 {
-  "schema": "FHS5.W0NF.GuideThinResume@1",
-  "state": "HOLD_NO_DELTA",
-  "exit": 0,
-  "message": "same source/candidate/evidence/FirstFail; no homogeneous redispatch",
+  "schema": "FHS5.W0NF.GuideThinResume@2",
+  "state": "RESUME",
+  "mode": "PACKAGE_FIRST",
   "delta": {
     "source_sha": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
     "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
-    "evidence_sha": null,
+    "evidence_sha": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428",
     "requirement_ids": [
       "SAMPLE-R1",
       "SAMPLE-R2",
-      "SAMPLE-R3",
-      "SAMPLE-R4",
-      "NF-R01"
+      "NF-R04",
+      "NF-R07"
     ],
     "case_ids": [
-      "F5-W0-T01",
-      "F5-W0-T03",
-      "F5-W0-T06",
-      "F5-W0-T13",
-      "NF-T01"
+      "F5-W0-T14",
+      "NF-T09",
+      "NF-T08"
     ],
-    "findings": [],
-    "next_action": "execute B0 current READY slice",
+    "findings": [
+      "CH-F-W0NF-001"
+    ],
+    "next_action": "re-run affected cone on candidate v3 with the frozen oracle",
     "stop_conditions": [
       "pack digest mismatch",
       "no write-set/preimage",
@@ -30,9 +28,21 @@
       "false permit"
     ],
     "not_covered": [
-      "HERMES/GPT host execution",
-      "full U26/QA26/38+28/C16 denominators",
-      "release"
-    ]
-  }
+      "W1-W4 denominators",
+      "other hosts"
+    ],
+    "subject_id": "FHS-5_PLP/W0",
+    "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+    "retest_evidence_sha": "7f28891cb8ab94261ff3eec82c4f2ef4cf9a371dcf56451ff98edb032cc6c31b"
+  },
+  "material_delta": {
+    "finding_id": "CH-F-W0NF-001",
+    "far_chosen": "ALT-1",
+    "candidate_from": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "candidate_to": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "patch_sha256": "d785e3ee3cdcbb608c49dbf91baa044d112efcec961ff4010cf5c57733f725af",
+    "retest_ref": "04_DEV_OPS/raw/green_v3.stderr.txt"
+  },
+  "resume_prompt": "Continue W0/N-T08 from the frozen pack and the MaterialDelta: FAR finding -> 12' patch -> affected retest. Do not widen scope.",
+  "next_action": "affected retest + independent challenge"
 }

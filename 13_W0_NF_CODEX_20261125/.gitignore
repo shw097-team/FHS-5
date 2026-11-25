@@ -8,3 +8,4 @@
 **/__pycache__/
 *.pyc
 07_CONSUMER/tmp/
+07_CONSUMER/neg_work/

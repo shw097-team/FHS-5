@@ -1,0 +1,78 @@
+{
+  "schema": "FHS5.W0NF.OffLegacy@1",
+  "profile": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\04_DEV_OPS\\off_profile",
+  "blocked_prefixes": [
+    "hgk",
+    "fabric",
+    "sbl",
+    "fhs",
+    "pipd",
+    "hermes"
+  ],
+  "control": {
+    "blocked": true,
+    "allowed": true,
+    "blocked_stderr": "cent call last):\r\n  File \"<string>\", line 1, in <module>\r\n  File \"C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\04_DEV_OPS\\off_profile\\sitecustomize.py\", line 12, in find_spec\r\n    raise ImportError(\"FHS5_LEGACY_BLOCKED:\" + fullname)\r\nImportError: FHS5_LEGACY_BLOCKED:hgk_core\r\n"
+  },
+  "entries": [
+    {
+      "name": "briefcheck_pos",
+      "on_exit": 0,
+      "off_exit": 0,
+      "same_exit": true,
+      "same_sha": true,
+      "blocked_attempts": [],
+      "ok": true
+    },
+    {
+      "name": "briefcheck_neg",
+      "on_exit": 2,
+      "off_exit": 2,
+      "same_exit": true,
+      "same_sha": true,
+      "blocked_attempts": [],
+      "ok": true
+    },
+    {
+      "name": "reviewer",
+      "on_exit": 2,
+      "off_exit": 2,
+      "same_exit": true,
+      "same_sha": true,
+      "blocked_attempts": [],
+      "ok": true
+    },
+    {
+      "name": "guide",
+      "on_exit": 0,
+      "off_exit": 0,
+      "same_exit": true,
+      "same_sha": true,
+      "blocked_attempts": [],
+      "ok": true
+    },
+    {
+      "name": "bridge_inspect",
+      "on_exit": 0,
+      "off_exit": 0,
+      "same_exit": true,
+      "same_sha": true,
+      "blocked_attempts": [],
+      "ok": true
+    },
+    {
+      "name": "bridge_explain",
+      "on_exit": 0,
+      "off_exit": 0,
+      "same_exit": true,
+      "same_sha": true,
+      "blocked_attempts": [],
+      "ok": true
+    }
+  ],
+  "verdict": "PASS",
+  "not_covered": [
+    "Fabric/Legacy full provider set",
+    "other hosts"
+  ]
+}
