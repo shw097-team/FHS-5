@@ -1,0 +1,74 @@
+{
+  "record_type": "BOOTSTRAP_CONSUME_ACTUAL",
+  "date": "2026-11-25",
+  "timezone": "Asia/Taipei",
+  "pack_root": "C:\\Users\\user\\Documents\\Codex\\2026-11-25\\new-chat-11\\outputs\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST",
+  "manifest_sha256": "a7b1ef358c8e7a9740e5f1ef487ecd7777ded0a1f8246daee562cba909810a80",
+  "manifest_bytes": 35780,
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+    "scope": "W1-NF-01",
+    "wave_id": "W1",
+    "batch_id": "W1-NF-01"
+  },
+  "sixth_identity_source_manifest_sha256": "a7b1ef358c8e7a9740e5f1ef487ecd7777ded0a1f8246daee562cba909810a80",
+  "read_order": [
+    "05",
+    "00",
+    "01",
+    "02",
+    "03",
+    "04"
+  ],
+  "read_files": {
+    "00_W1_PI_PD.md": {
+      "bytes": 34565,
+      "sha256": "f6dd84cbfad05e8e3d452f0e6f5c6f9539e149573bec51c396c60b91bf76f8d1"
+    },
+    "01_W1_DEV_ECP.md": {
+      "bytes": 20729,
+      "sha256": "772557b0749759ca2893b72ed99feb049cf38446e8100f8713bcb38ab4d499af"
+    },
+    "02_W1_OPS_ECP.md": {
+      "bytes": 12290,
+      "sha256": "14b1571ab26474c325c2f001c8fddee7cc81c4abbec79152e669c6f5766d44e5"
+    },
+    "03_W1_TQAEP.md": {
+      "bytes": 19804,
+      "sha256": "66a53d2854debafc599b8a4f6611aa44236d099d380d93828c43aa20e227c691"
+    },
+    "04_W1_START_THIN_PROMPT.md": {
+      "bytes": 10028,
+      "sha256": "a4b0f9cb750d8374ef649c78215d489c434706eb05693e5f63b92b6d17905eb9"
+    }
+  },
+  "counts": {
+    "dev": 38,
+    "ops": 29,
+    "cases": 13,
+    "assets_verified": 26
+  },
+  "next": "P01",
+  "op": "verify H0/six-file pins, build CapabilityLedger, bind real repo root/ACL/entry",
+  "required_inputs": [
+    "writable W1 product root",
+    "real OS/Repo ACL and principal",
+    "W1 entry (to build)",
+    "second non-briefcheck pack"
+  ],
+  "expected": "P01 bootstrap raw + no product write without grant",
+  "stop": [
+    "wrong pin",
+    "no ACL",
+    "unknown effect",
+    "missing entry without build path"
+  ],
+  "state": {
+    "w1_pack": "PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
+    "bootstrap": "CONSUMED_READBACK",
+    "w1_product_consumed": "NOT_RUN",
+    "w1_execution_ready": "NOT_CLAIMED"
+  },
+  "distinction": "BOOTSTRAP_CONSUME_ACTUAL != W1_PRODUCT_CONSUMED"
+}

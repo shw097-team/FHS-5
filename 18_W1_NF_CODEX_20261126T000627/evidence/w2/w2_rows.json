@@ -1,0 +1,119 @@
+[
+  {
+    "n": 1,
+    "predecessor": "Original OperationType",
+    "fields": "`effect.operation_type`／`effect.token`",
+    "type": "enum／string",
+    "owner": "Effect Owner",
+    "w0_evidence": "`original_effect_registry_ref=null`",
+    "resume_min": "同 Scope typed token"
+  },
+  {
+    "n": 2,
+    "predecessor": "RepoContext",
+    "fields": "`repo.root/head/branch/dirty`",
+    "type": "object",
+    "owner": "Repo Owner",
+    "w0_evidence": "無 repo binding",
+    "resume_min": "live probe＋HEAD SHA"
+  },
+  {
+    "n": 3,
+    "predecessor": "HostID／OS Principal／PolicyEpoch",
+    "fields": "`host.host_id/principal/epoch`",
+    "type": "object",
+    "owner": "Host／OS Owner",
+    "w0_evidence": "無 receipt",
+    "resume_min": "同 Host／Epoch readback"
+  },
+  {
+    "n": 4,
+    "predecessor": "Original DEV ECP",
+    "fields": "`ecp.dev_ref`",
+    "type": "ref",
+    "owner": "Repo＋Issuer",
+    "w0_evidence": "`original_ecp_ref=null`",
+    "resume_min": "原 DEV ECP typed ref"
+  },
+  {
+    "n": 5,
+    "predecessor": "Original OPS ECP",
+    "fields": "`ecp.ops_ref`",
+    "type": "ref",
+    "owner": "Host＋OS",
+    "w0_evidence": "`original_ecp_ref=null`",
+    "resume_min": "原 OPS ECP typed ref"
+  },
+  {
+    "n": 6,
+    "predecessor": "Issuer",
+    "fields": "`admission.issuer_id`",
+    "type": "string",
+    "owner": "Original Issuer",
+    "w0_evidence": "`UNBOUND`",
+    "resume_min": "Issuer ID＋policy ref"
+  },
+  {
+    "n": 7,
+    "predecessor": "WorkOrder",
+    "fields": "`admission.workorder_ref`",
+    "type": "ref",
+    "owner": "Original Issuer",
+    "w0_evidence": "`null`",
+    "resume_min": "WorkOrder bytes＋SHA"
+  },
+  {
+    "n": 8,
+    "predecessor": "ExecutionAdmission",
+    "fields": "`admission.receipt_ref`",
+    "type": "ref",
+    "owner": "Original Issuer",
+    "w0_evidence": "`null`",
+    "resume_min": "同 Subject／Scope receipt"
+  },
+  {
+    "n": 9,
+    "predecessor": "Exact WriteSet／preimage",
+    "fields": "`write_set[]`／`preimage_sha256`",
+    "type": "array／64-hex",
+    "owner": "Repo／OPS Owner",
+    "w0_evidence": "無",
+    "resume_min": "exact path set＋preimage SHA"
+  },
+  {
+    "n": 10,
+    "predecessor": "WorldReader／RepoReader",
+    "fields": "`reader.world`／`reader.repo`",
+    "type": "ref",
+    "owner": "Reader Owner",
+    "w0_evidence": "`UNBOUND`",
+    "resume_min": "同 Host／Epoch readback"
+  },
+  {
+    "n": 11,
+    "predecessor": "Protected Checker",
+    "fields": "`checker.receipt_ref`",
+    "type": "ref",
+    "owner": "Checker",
+    "w0_evidence": "`null`",
+    "resume_min": "同 Candidate distinct receipt"
+  },
+  {
+    "n": 12,
+    "predecessor": "Publisher",
+    "fields": "`publisher.receipt_ref`",
+    "type": "ref",
+    "owner": "Publisher",
+    "w0_evidence": "`null`",
+    "resume_min": "原 release procedure"
+  },
+  {
+    "n": 13,
+    "predecessor": "Recovery ABI",
+    "fields": "`recovery.kind`／`recovery.ref`",
+    "type": "enum／ref",
+    "owner": "Repo／Host Owner",
+    "w0_evidence": "無",
+    "resume_min": "DEV reverse patch／Host recovery"
+  }
+]

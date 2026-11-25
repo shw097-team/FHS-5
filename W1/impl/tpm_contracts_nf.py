@@ -28,7 +28,7 @@ NFError = base.NFError
 ROW_RE = re.compile(r"^\|\s*`((?:DEV|OPS)-[A-Z]+-\d{2})`\s*\|(.+)\|\s*$")
 CASE_ROW_RE = re.compile(r"^\|\s*`(W1-[A-Z0-9]+-\d{2})`\s*\|(.+)\|\s*$")
 FIELD_RE = re.compile(r"\*\*([A-Za-z_ ]+)\*\*\s*[：:]\s*(.+)$")
-JOB_RE = re.compile(r"Job to be done\**\s*[：:]\s*(.+)$")
+JOB_RE = re.compile(r"Job to be done[^*\n]{0,12}[：:]\s*(.+)$")
 
 # Profile registry -----------------------------------------------------------
 PROFILES = {
@@ -279,6 +279,8 @@ def build_contracts(pack_root: str, work_identity: dict) -> dict:
              "count": len(cases), "cases": cases, "subcases": subcases,
              "runner": "check/run_cases_nf.py",
              "frozen": bool(cases) and all(c["oracle_sha256"] for c in cases)}
+    if man.get("requirements"):
+        tqaep["requirements"] = man["requirements"]
 
     contracts = {"schema": "FHS5.PLP.W1.TPMContracts@2",
                  "profile": profile_name,
@@ -288,8 +290,12 @@ def build_contracts(pack_root: str, work_identity: dict) -> dict:
                  "permission_state": "NONE_GRANTED",
                  "manifest_path": man_name,
                  "manifest_sha256": sha256_bytes(mraw)}
+    generic = profile_name != "W1"
     for view, fields in required_fields(profile_name).items():
-        missing_fields = [f for f in fields if not contracts["views"][view].get(f)]
+        if generic:
+            missing_fields = [f for f in fields if f not in contracts["views"][view]]
+        else:
+            missing_fields = [f for f in fields if not contracts["views"][view].get(f)]
         if missing_fields:
             raise NFError("CONTRACT_FIELD_MISSING", f"{view}:{','.join(missing_fields)}")
     return contracts

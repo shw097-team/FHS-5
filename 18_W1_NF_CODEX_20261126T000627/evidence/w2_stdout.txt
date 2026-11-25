@@ -1,0 +1,8 @@
+﻿{
+ "exit": 0,
+ "session": "01a21379-31e7-73d1-98bb-4d2870f612e9",
+ "artifact": true,
+ "consumer_all": true,
+ "wiring": "COMPLETE",
+ "draft_completed": true
+}

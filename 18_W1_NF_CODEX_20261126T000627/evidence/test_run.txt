@@ -1,0 +1,104 @@
+﻿python : test_neg_absolute (test_body_resolver.TestBodyResolver.test_neg_absolute) ... ok
+At C:\Users\user\Documents\Codex\2026-11-25\new-chat-12\work\w1build\stage5.ps1:34 char:1
++ python -B -m unittest discover -s "W1\check" -p "test_*.py" -v 2>&1 | ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_neg_absolu...bsolute) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_neg_backslash (test_body_resolver.TestBodyResolver.test_neg_backslash) ... ok
+test_neg_bad_utf8 (test_body_resolver.TestBodyResolver.test_neg_bad_utf8) ... ok
+test_neg_dotdot (test_body_resolver.TestBodyResolver.test_neg_dotdot) ... ok
+test_neg_dup_key (test_body_resolver.TestBodyResolver.test_neg_dup_key) ... ok
+test_neg_nan (test_body_resolver.TestBodyResolver.test_neg_nan) ... ok
+test_neg_oversize (test_body_resolver.TestBodyResolver.test_neg_oversize) ... ok
+test_neg_span (test_body_resolver.TestBodyResolver.test_neg_span) ... ok
+test_neg_unc (test_body_resolver.TestBodyResolver.test_neg_unc) ... ok
+test_pos_clause_full_body (test_body_resolver.TestBodyResolver.test_pos_clause_full_body) ... ok
+test_pos_span_digest (test_body_resolver.TestBodyResolver.test_pos_span_digest) ... ok
+test_scan_within_limits (test_body_resolver.TestBodyResolver.test_scan_within_limits) ... ok
+test_compare_neg_cross_subject (test_bridge_body.TestBridge.test_compare_neg_cross_subject) ... ok
+test_compare_same_is_park (test_bridge_body.TestBridge.test_compare_same_is_park) ... ok
+test_explain_carries_parent_chain (test_bridge_body.TestBridge.test_explain_carries_parent_chain) ... ok
+test_explain_full_body (test_bridge_body.TestBridge.test_explain_full_body) ... ok
+test_explain_neg_unknown_view (test_bridge_body.TestBridge.test_explain_neg_unknown_view) ... ok
+test_inspect_neg_wrong_pin (test_bridge_body.TestBridge.test_inspect_neg_wrong_pin) ... ok
+test_inspect_pos (test_bridge_body.TestBridge.test_inspect_pos) ... ok
+test_render_markers_and_no_grant (test_bridge_body.TestBridge.test_render_markers_and_no_grant) ... ok
+test_render_neg_scope_mismatch (test_bridge_body.TestBridge.test_render_neg_scope_mismatch) ... ok
+test_render_neg_unknown_host (test_bridge_body.TestBridge.test_render_neg_unknown_host) ... ok
+test_consume_neg_unknown_case (test_consumer.TestConsumer.test_consume_neg_unknown_case) ... ok
+test_consume_neg_wrong_pin (test_consumer.TestConsumer.test_consume_neg_wrong_pin) ... ok
+test_consume_real (test_consumer.TestConsumer.test_consume_real) ... ok
+test_neg_cross_host_substitution (test_consumer.TestHostFacade.test_neg_cross_host_substitution) ... ok
+test_neg_exit0_as_served (test_consumer.TestHostFacade.test_neg_exit0_as_served) ... ok
+test_neg_skill_as_loaded (test_consumer.TestHostFacade.test_neg_skill_as_loaded) ... ok
+test_neg_skip_stage (test_consumer.TestHostFacade.test_neg_skip_stage) ... ok
+test_stages_in_order (test_consumer.TestHostFacade.test_stages_in_order) ... ok
+test_advice_neg_effect (test_guide_nine_keys.TestGuide.test_advice_neg_effect) ... ok
+test_advice_two_modes (test_guide_nine_keys.TestGuide.test_advice_two_modes) ... ok
+test_delta_changed (test_guide_nine_keys.TestGuide.test_delta_changed) ... ok
+test_delta_neg_caller_bool (test_guide_nine_keys.TestGuide.test_delta_neg_caller_bool) ... ok
+test_delta_neg_cross_scope (test_guide_nine_keys.TestGuide.test_delta_neg_cross_scope) ... ok
+test_delta_neg_missing_key (test_guide_nine_keys.TestGuide.test_delta_neg_missing_key) ... ok
+test_delta_neg_missing_period (test_guide_nine_keys.TestGuide.test_delta_neg_missing_period) ... ok
+test_delta_neg_single_sha_only (test_guide_nine_keys.TestGuide.test_delta_neg_single_sha_only) ... ok
+test_delta_same_park (test_guide_nine_keys.TestGuide.test_delta_same_park) ... ok
+test_nine_keys_all_produced (test_guide_nine_keys.TestGuide.test_nine_keys_all_produced) ... ok
+test_receive_neg_scope (test_guide_nine_keys.TestGuide.test_receive_neg_scope) ... ok
+test_receive_package (test_guide_nine_keys.TestGuide.test_receive_package) ... ok
+test_thin_prompt (test_guide_nine_keys.TestGuide.test_thin_prompt) ... ok
+test_exit0_without_consumed_is_not_pass (test_negative_control.TestRunnerVerdict.test_exit0_without_consumed_is_not_pas
+s) ... ok
+test_neg_with_expected_token_is_pass (test_negative_control.TestRunnerVerdict.test_neg_with_expected_token_is_pass) ...
+ ok
+test_neg_with_wrong_token_is_fail (test_negative_control.TestRunnerVerdict.test_neg_with_wrong_token_is_fail) ... ok
+test_neg_without_rejection_is_fail (test_negative_control.TestRunnerVerdict.test_neg_without_rejection_is_fail) ... ok
+test_pos_empty_observation_is_fail (test_negative_control.TestRunnerVerdict.test_pos_empty_observation_is_fail) ... ok
+test_abi_state_complete (test_nf_reader.TestReader.test_abi_state_complete) ... ok
+test_clause_index_has_negatives (test_nf_reader.TestReader.test_clause_index_has_negatives) ... ok
+test_counts (test_nf_reader.TestReader.test_counts) ... ok
+test_digest_domains_distinct (test_nf_reader.TestReader.test_digest_domains_distinct) ... ok
+test_identity_echo (test_nf_reader.TestReader.test_identity_echo) ... ok
+test_manifest_sha_matches_upstream_pin (test_nf_reader.TestReader.test_manifest_sha_matches_upstream_pin) ... ok
+test_missing_source_recorded_not_faked (test_nf_reader.TestReader.test_missing_source_recorded_not_faked) ... ok
+test_neg_dag_cycle (test_nf_reader.TestReader.test_neg_dag_cycle) ... ok
+test_neg_tampered_byte (test_nf_reader.TestReader.test_neg_tampered_byte) ... ok
+test_neg_wrong_identity (test_nf_reader.TestReader.test_neg_wrong_identity) ... ok
+test_unknown_is_preserved (test_nf_reader.TestReader.test_unknown_is_preserved) ... ok
+test_01_cold_off_probe_blocks_really_absent_runtimes (test_off_isolation.TestOffIsolation.test_01_cold_off_probe_blocks
+_really_absent_runtimes) ... ok
+test_02_cold_off_probe_detects_a_real_import (test_off_isolation.TestOffIsolation.test_02_cold_off_probe_detects_a_real
+_import)
+Negative control: the same probe must see ``json`` import. ... ok
+test_03_cold_off_rejects_bad_module_names (test_off_isolation.TestOffIsolation.test_03_cold_off_rejects_bad_module_name
+s) ... ok
+test_04_positive_control_observes_import (test_off_isolation.TestOffIsolation.test_04_positive_control_observes_import)
+ ... ok
+test_05_positive_control_reports_a_missing_module (test_off_isolation.TestOffIsolation.test_05_positive_control_reports
+_a_missing_module) ... ok
+test_06_env_flag_only_reject_is_structured_and_touches_no_env (test_off_isolation.TestOffIsolation.test_06_env_flag_onl
+y_reject_is_structured_and_touches_no_env) ... ok
+test_07_path_attack_suite_rejects_all_seven (test_off_isolation.TestOffIsolation.test_07_path_attack_suite_rejects_all_
+seven) ... ok
+test_08_link_probe_is_rejected_or_honestly_not_verified (test_off_isolation.TestOffIsolation.test_08_link_probe_is_reje
+cted_or_honestly_not_verified) ... ok
+test_09_canary_reports_untouched_file_unchanged (test_off_isolation.TestOffIsolation.test_09_canary_reports_untouched_f
+ile_unchanged) ... ok
+test_10_canary_detects_a_real_byte_change (test_off_isolation.TestOffIsolation.test_10_canary_detects_a_real_byte_chang
+e)
+Negative control: the canary must not always say "unchanged". ... ok
+test_11_canary_flags_a_missing_file (test_off_isolation.TestOffIsolation.test_11_canary_flags_a_missing_file) ... ok
+test_assets_pin_join (test_tpm_contracts.TestTPM.test_assets_pin_join) ... ok
+test_counts (test_tpm_contracts.TestTPM.test_counts) ... ok
+test_five_views_one_identity (test_tpm_contracts.TestTPM.test_five_views_one_identity) ... ok
+test_neg_identity_mismatch (test_tpm_contracts.TestTPM.test_neg_identity_mismatch) ... ok
+test_neg_work_identity_incomplete (test_tpm_contracts.TestTPM.test_neg_work_identity_incomplete) ... ok
+test_pi_pd_not_merged (test_tpm_contracts.TestTPM.test_pi_pd_not_merged) ... ok
+test_reviewer_detects_missing_binding (test_tpm_contracts.TestTPM.test_reviewer_detects_missing_binding) ... ok
+test_reviewer_detects_subject_mutation (test_tpm_contracts.TestTPM.test_reviewer_detects_subject_mutation) ... ok
+test_reviewer_readonly (test_tpm_contracts.TestTPM.test_reviewer_readonly) ... ok
+
+----------------------------------------------------------------------
+Ran 79 tests in 2.414s
+
+OK

@@ -150,8 +150,11 @@ def produce_nine_keys(ctx: dict) -> dict:
 def inspect_guide_request(req: dict, root: str) -> dict:
     """CG-R2-REQ-01: receive real package bytes / sha / subject / scope."""
     declared = req.get("expected_manifest_sha256")
-    insp = bridge.inspect_package(str(Path(root) / "05_W1_SOURCE_MANIFEST.json"),
-                                  root, expected_sha256=declared)
+    r0 = Path(root)
+    cands = sorted(p.name for p in r0.glob("*SOURCE_MANIFEST*.json"))
+    if not cands:
+        raise NFError("PACK_INCOMPLETE_LOCAL", "no manifest")
+    insp = bridge.inspect_package(str(r0 / cands[0]), root, expected_sha256=declared)
     if req.get("subject_id") and req["subject_id"] != insp["subject_id"]:
         raise NFError("SOURCE_IDENTITY_HOLD", "request subject != package subject")
     if req.get("scope") and req["scope"] != insp["scope"]:

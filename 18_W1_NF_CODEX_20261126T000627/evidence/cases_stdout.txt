@@ -1,0 +1,21 @@
+﻿{"run_id": "20261126T003047", "total": 20, "passed": 19, "failed": 0, "deferred": 1, "not_run": 0}
+W1-HOST-01     POS      PASS         
+W1-HOST-02     NEG      PASS         HOST_ABI_DRIFT
+W1-HOST-03     NEG      PASS         HOST_PENDING
+W1-HERMES-01   POS      DEFERRED     
+W1-ABI-01      NEG      PASS         EXPLICIT_REVIEW_REQUIRED
+W1-ABI-02      NEG      PASS         LOSSY_MIGRATION
+W1-SEC-01      SEC      PASS         
+W1-API-01      POS      PASS         
+W1-R3-01       POS      PASS         
+W1-R3-02       NEG      PASS         HOST_PENDING
+W1-R3-03       NEG      PASS         ABI_LOSSY_CROSSWALK
+W1-R3-04       EDGE     PASS         
+W1-R3-05       NEG      PASS         EVIDENCE_LAUNDERING
+N01            SUBCASE  PASS         
+N02            SUBCASE  PASS         
+N03            SUBCASE  PASS         
+N04            SUBCASE  PASS         
+N10            SUBCASE  PASS         
+N11            SUBCASE  PASS         
+W1-CODEX-05    ACC      PASS         

@@ -1,0 +1,200 @@
+{
+  "schema": "FHS5.PLP.W2.ReceiveReceipt@1",
+  "receiver": "w2_receiver (independent)",
+  "generated_at": "2026-11-25T16:30:49Z",
+  "w2_identity": {
+    "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+    "scope": "W1-NF-01",
+    "permission_state": "NONE_GRANTED",
+    "producer_identity": "FHS-5_PLP/W1/CONTROL_PACK",
+    "consumer_identity": "FHS-5_PLP/W2/CONSUMER",
+    "expected_pack_sha256": null
+  },
+  "accepted": true,
+  "rejected_checks": [],
+  "reasons": [],
+  "checks": [
+    {
+      "check": "delivery_files_present",
+      "ok": true,
+      "detail": "manifest/seal/handoff/closeout"
+    },
+    {
+      "check": "evidence_manifest_recompute",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "seal_manifest_binding",
+      "ok": true,
+      "detail": "{'seal': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39', 'recomputed': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39'}"
+    },
+    {
+      "check": "pack_pin",
+      "ok": true,
+      "detail": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
+    },
+    {
+      "check": "pack_inspect",
+      "ok": true,
+      "detail": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
+    },
+    {
+      "check": "pack_counts",
+      "ok": true,
+      "detail": "{'pack_files': 5, 'dev': 38, 'ops': 29, 'cases': 13, 'assets': 26, 'sources': 42, 'holds': 14}"
+    },
+    {
+      "check": "handoff_field:subject_id",
+      "ok": true,
+      "detail": "subject_id"
+    },
+    {
+      "check": "handoff_field:scope",
+      "ok": true,
+      "detail": "scope"
+    },
+    {
+      "check": "handoff_field:pack_manifest_sha256",
+      "ok": true,
+      "detail": "pack_manifest_sha256"
+    },
+    {
+      "check": "handoff_field:entry",
+      "ok": true,
+      "detail": "entry"
+    },
+    {
+      "check": "handoff_field:bridge",
+      "ok": true,
+      "detail": "bridge"
+    },
+    {
+      "check": "handoff_field:guide",
+      "ok": true,
+      "detail": "guide"
+    },
+    {
+      "check": "handoff_field:tpm",
+      "ok": true,
+      "detail": "tpm"
+    },
+    {
+      "check": "handoff_field:consumer",
+      "ok": true,
+      "detail": "consumer"
+    },
+    {
+      "check": "handoff_field:runner",
+      "ok": true,
+      "detail": "runner"
+    },
+    {
+      "check": "handoff_field:next",
+      "ok": true,
+      "detail": "next"
+    },
+    {
+      "check": "handoff_field:stop",
+      "ok": true,
+      "detail": "stop"
+    },
+    {
+      "check": "handoff_field:resume",
+      "ok": true,
+      "detail": "resume"
+    },
+    {
+      "check": "handoff_scope",
+      "ok": true,
+      "detail": "W1-NF-01"
+    },
+    {
+      "check": "cases_present",
+      "ok": true,
+      "detail": "20"
+    },
+    {
+      "check": "host_consumed",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "no_fake_grant",
+      "ok": true,
+      "detail": "NONE_GRANTED"
+    },
+    {
+      "check": "caller_pack_pin",
+      "ok": true,
+      "detail": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
+    },
+    {
+      "check": "w2_material_present",
+      "ok": true,
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\18_W1_NF_CODEX_20261126T000627\\evidence\\w2\\material"
+    },
+    {
+      "check": "w2_contracts",
+      "ok": true,
+      "detail": "['PI', 'PD', 'DEV', 'OPS', 'TQAEP']"
+    },
+    {
+      "check": "w2_requirements_13",
+      "ok": true,
+      "detail": "13"
+    },
+    {
+      "check": "five_seam_wiring",
+      "ok": true,
+      "detail": "{'matched': 5, 'total': 5}"
+    },
+    {
+      "check": "thin_start_present",
+      "ok": true,
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\W1_NF_r3\\18_W1_NF_CODEX_20261126T000627\\evidence\\w2\\thin_start.md"
+    },
+    {
+      "check": "identity_split",
+      "ok": true,
+      "detail": "{'producer': 'FHS-5_PLP/W1/CONTROL_PACK', 'consumer': 'FHS-5_PLP/W2/CONSUMER'}"
+    }
+  ],
+  "check_count": 29,
+  "permission_boundary": "W2 receives evidence only; no grant issued, no protected effect",
+  "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "w1_claim_seen": "see CLOSEOUT",
+  "manifest_sha256_at_receive": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+  "seal_evidence_manifest_sha256_at_receive": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+  "receipt_excluded_from_manifest": true,
+  "next_operation": "W2-READ: build the 13-row Draft BindingRequest plan inside W2-READ-01; no grant, no protected effect",
+  "stop": "wrong candidate/pack/oracle/evidence/handoff/scope, or any fake grant",
+  "resume": "same subject+scope+pack pin typed receipt; re-verify ACL/principal",
+  "consumed": {
+    "source_refs": 42,
+    "effect_constraints": {
+      "permission_state": "NONE_GRANTED",
+      "unknown_effect": "FAIL_CLOSED"
+    },
+    "host_capability_ledger": "evidence/host/host_receipt.json",
+    "context_sha256_source": "bridge_nf.render_agent_context",
+    "change_cone": {
+      "EVIDENCED": 17,
+      "COVERED_BY_SHARED_OPERATION": 62,
+      "EXERCISED_INDIVIDUALLY": 2,
+      "NOT_APPLICABLE_THIS_ROUND": 1,
+      "DEFERRED": 3,
+      "PASS": 18,
+      "EVIDENCED_WITH_DEFERRED_HOSTS": 1,
+      "HOLD_PRESERVED_NOT_CLOSED": 14
+    },
+    "unresolved_refs": 5,
+    "nine_keys": "guide_nf.produce_nine_keys"
+  },
+  "w2_task": {
+    "kind": "READ",
+    "action": "verify W1 candidate and select next op",
+    "readback": "all checks above",
+    "accepted": true
+  }
+}

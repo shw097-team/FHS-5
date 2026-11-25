@@ -1,0 +1,16 @@
+{
+  "schema": "FHS5.W1.AuthorOracle@1",
+  "case_id": "W1-API-01",
+  "kind": "POS",
+  "state": "AUTHOR_ORACLE_PINNED",
+  "expected_state": "PLANNED_NOT_EXECUTED",
+  "first_fail": "BODY_RESOLVER_UNBOUND",
+  "required_observations": [
+    "source_span_matches_clause_text",
+    "no_cross_scope_or_cross_host_substitution",
+    "no_fake_receipt_or_release"
+  ],
+  "checker": "SELF_CHECK_ONLY now; original Protected Checker unbound",
+  "executable": false,
+  "oracle_procedure": "requires_original_runner"
+}

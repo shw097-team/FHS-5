@@ -1,0 +1,17 @@
+{
+  "schema": "FHS5.W1.AuthorOracle@1",
+  "case_id": "W1-R3-04",
+  "kind": "EDGE",
+  "state": "AUTHOR_ORACLE_PINNED",
+  "expected_state": "BOUNDED_EXPECTED",
+  "first_fail": "WORKSPACE_DRIFT_BOUNDED",
+  "required_observations": [
+    "source_span_matches_clause_text",
+    "no_cross_scope_or_cross_host_substitution",
+    "no_fake_receipt_or_release"
+  ],
+  "checker": "SELF_CHECK_ONLY now; original Protected Checker unbound",
+  "executable": true,
+  "oracle_procedure": "bound_workspace_drift",
+  "expect_error": "WORKSPACE_DRIFT_BOUNDED"
+}

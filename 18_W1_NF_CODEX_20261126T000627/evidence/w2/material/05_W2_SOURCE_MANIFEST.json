@@ -1,0 +1,159 @@
+{
+  "schema": "FHS5.PLP.W2.SourceManifest.NF@1",
+  "pack_version": "W2-INBOUND-DRAFT-r1",
+  "artifact_id": "FHS5-PLP/W2/INBOUND_DRAFT/2026-11-25-r1",
+  "project_id": "FHS-5_PLP",
+  "subject_id": "FHS-5_PLP/W2/INBOUND_DRAFT",
+  "scope": "W2-READ-01",
+  "wave_id": "W2",
+  "batch_id": "W2-IN-DRAFT-01",
+  "draft": true,
+  "claim_ceiling": "W2_INBOUND_DRAFT_NOT_ADMITTED",
+  "pack_files": [
+    {
+      "path": "00_W2_DRAFT_PI_PD.md",
+      "bytes": 888,
+      "sha256": "7bc31a0b367a27edc58249e42bceb0f751a6b6ca165fe658c4253fb13f5d4bc6"
+    },
+    {
+      "path": "03_W2_DRAFT_TQAEP.md",
+      "bytes": 1831,
+      "sha256": "bd097852eb2d2463e00af8841d224f9df7015dc79c6f0f976e8197827f47411c"
+    },
+    {
+      "path": "04_W2_DRAFT_THIN.md",
+      "bytes": 326,
+      "sha256": "b30008a1ce1a40eb2f0a369470b8ff86d8fa0a83f432f228794d5330b5415ad1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "W2M",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\FHS-5_PLP_W2M_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "2b98be965651721257164c555f7e9f86228e5e6dd15787c0540c1a6a0cd90093",
+      "bytes": 67015,
+      "role": "W2 primary spec"
+    }
+  ],
+  "requirements": [
+    {
+      "n": 1,
+      "predecessor": "Original OperationType",
+      "fields": "`effect.operation_type`／`effect.token`",
+      "type": "enum／string",
+      "owner": "Effect Owner",
+      "w0_evidence": "`original_effect_registry_ref=null`",
+      "resume_min": "同 Scope typed token"
+    },
+    {
+      "n": 2,
+      "predecessor": "RepoContext",
+      "fields": "`repo.root/head/branch/dirty`",
+      "type": "object",
+      "owner": "Repo Owner",
+      "w0_evidence": "無 repo binding",
+      "resume_min": "live probe＋HEAD SHA"
+    },
+    {
+      "n": 3,
+      "predecessor": "HostID／OS Principal／PolicyEpoch",
+      "fields": "`host.host_id/principal/epoch`",
+      "type": "object",
+      "owner": "Host／OS Owner",
+      "w0_evidence": "無 receipt",
+      "resume_min": "同 Host／Epoch readback"
+    },
+    {
+      "n": 4,
+      "predecessor": "Original DEV ECP",
+      "fields": "`ecp.dev_ref`",
+      "type": "ref",
+      "owner": "Repo＋Issuer",
+      "w0_evidence": "`original_ecp_ref=null`",
+      "resume_min": "原 DEV ECP typed ref"
+    },
+    {
+      "n": 5,
+      "predecessor": "Original OPS ECP",
+      "fields": "`ecp.ops_ref`",
+      "type": "ref",
+      "owner": "Host＋OS",
+      "w0_evidence": "`original_ecp_ref=null`",
+      "resume_min": "原 OPS ECP typed ref"
+    },
+    {
+      "n": 6,
+      "predecessor": "Issuer",
+      "fields": "`admission.issuer_id`",
+      "type": "string",
+      "owner": "Original Issuer",
+      "w0_evidence": "`UNBOUND`",
+      "resume_min": "Issuer ID＋policy ref"
+    },
+    {
+      "n": 7,
+      "predecessor": "WorkOrder",
+      "fields": "`admission.workorder_ref`",
+      "type": "ref",
+      "owner": "Original Issuer",
+      "w0_evidence": "`null`",
+      "resume_min": "WorkOrder bytes＋SHA"
+    },
+    {
+      "n": 8,
+      "predecessor": "ExecutionAdmission",
+      "fields": "`admission.receipt_ref`",
+      "type": "ref",
+      "owner": "Original Issuer",
+      "w0_evidence": "`null`",
+      "resume_min": "同 Subject／Scope receipt"
+    },
+    {
+      "n": 9,
+      "predecessor": "Exact WriteSet／preimage",
+      "fields": "`write_set[]`／`preimage_sha256`",
+      "type": "array／64-hex",
+      "owner": "Repo／OPS Owner",
+      "w0_evidence": "無",
+      "resume_min": "exact path set＋preimage SHA"
+    },
+    {
+      "n": 10,
+      "predecessor": "WorldReader／RepoReader",
+      "fields": "`reader.world`／`reader.repo`",
+      "type": "ref",
+      "owner": "Reader Owner",
+      "w0_evidence": "`UNBOUND`",
+      "resume_min": "同 Host／Epoch readback"
+    },
+    {
+      "n": 11,
+      "predecessor": "Protected Checker",
+      "fields": "`checker.receipt_ref`",
+      "type": "ref",
+      "owner": "Checker",
+      "w0_evidence": "`null`",
+      "resume_min": "同 Candidate distinct receipt"
+    },
+    {
+      "n": 12,
+      "predecessor": "Publisher",
+      "fields": "`publisher.receipt_ref`",
+      "type": "ref",
+      "owner": "Publisher",
+      "w0_evidence": "`null`",
+      "resume_min": "原 release procedure"
+    },
+    {
+      "n": 13,
+      "predecessor": "Recovery ABI",
+      "fields": "`recovery.kind`／`recovery.ref`",
+      "type": "enum／ref",
+      "owner": "Repo／Host Owner",
+      "w0_evidence": "無",
+      "resume_min": "DEV reverse patch／Host recovery"
+    }
+  ],
+  "permission_state": "NONE_GRANTED",
+  "note": "draft material only; not a W2 primary pack and not a grant"
+}

@@ -82,7 +82,7 @@ class Ctx:
             "case_set_sha256": self.case_set_sha,
             "oracle_sha256": self._oracle_for(case_id),
             "runner_id": "check/run_cases_nf.py", "runner_version": "1.0.0",
-            "argv": [str(IMPL / "run_cases_nf.py"), case_id], "cwd": str(self.pack),
+            "argv": [str(CHECK / "run_cases_nf.py"), case_id], "cwd": str(self.pack),
             "timeout_ms": 120000, "expected": expected, "first_fail": None,
             "checker_id": None, "consumer_id": None, "recovery_ref": None,
             "executor": "w1-exec", "run_id": RUN_ID,
@@ -95,6 +95,13 @@ class Ctx:
             if isinstance(observed, dict) and observed.get("host_consumed") is False:
                 rec["verdict"] = "NOT_OBSERVED"
                 rec["first_fail"] = "HOST_PENDING"
+            elif kind in ("NEG", "SEC") and expected.get("expect_token"):
+                rec["verdict"] = "FAIL"
+                rec["first_fail"] = "NEG_NOT_REJECTED"
+                rec["observed"] = {"returned": observed, "expected_token": expected["expect_token"]}
+            elif kind == "POS" and not observed:
+                rec["verdict"] = "FAIL"
+                rec["first_fail"] = "POS_EMPTY_OBSERVATION"
             else:
                 rec["verdict"] = "PASS"
         except NFError as exc:

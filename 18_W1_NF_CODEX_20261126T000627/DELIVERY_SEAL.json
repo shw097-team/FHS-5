@@ -1,0 +1,12 @@
+{
+  "schema": "FHS5.PLP.W1.DeliverySeal@2",
+  "run_id": "20261126T003047",
+  "evidence_manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+  "evidence_file_count": 118,
+  "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "claim_ceiling": "W1_NF_VALIDATED",
+  "w2_technically_ready": "READY",
+  "sealed_at_utc": "2026-11-25T16:30:50Z",
+  "w2_receive_receipt_sha256": "896e84632c3c6c8be19409b590f6cf5c4b59f2db7bd273a0018a129103e23462",
+  "w2_receive_receipt_excluded_from_manifest": true
+}

@@ -1,0 +1,116 @@
+{
+  "record_type": "CANDIDATE_DEFECTS_AND_REPAIRS",
+  "candidate_root": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_交付",
+  "candidate_version": "W1-NF-r1-CODEX-CANDIDATE",
+  "candidate_preimage_sha256": {
+    "00_W1_PI_PD.md": "d2975f5a2b9870504e40faddaf8a30f373aa0943526223b38d301e2e0e5c231d",
+    "01_W1_DEV_ECP.md": "a9b30e8397518f67b7971c5d21de564cd7f9637c0272b649c8b78aaf16dff546",
+    "02_W1_OPS_ECP.md": "a01d84b5a2a5e588dff3933da35f7dc2720697b95612f716720b4ccc3d2c6a4f",
+    "03_W1_TQAEP.md": "1f2ea48b6f8fc6afffd558999e3b06b69f9266417d45c74769f19c0c32868a0b",
+    "04_W1_START_THIN_PROMPT.md": "167cbf7b9705381cc1aa83cfb08cb9f6adb04bd45dc113e6518f2c653bbd19fb",
+    "05_W1_SOURCE_MANIFEST.json": "0ddcf3c07fd5f69f15ffcf6295154051c50963486616de6c3f4db8cff0b5f777"
+  },
+  "findings": [
+    {
+      "id": "F-01", "severity": "HIGH", "class": "contract",
+      "source": "05 pack_files",
+      "expected": "bytes/sha256/lines must equal raw UTF-8 splitlines",
+      "observed": "bytes/sha256 matched but lines were +1 for all five MD (167/92/82/70/26 vs 166/91/81/69/25); candidate E7 then reported a digest mismatch",
+      "first_fail": "DIGEST_MISMATCH(lines)",
+      "change_cone": "05, seal, appendix E8",
+      "repair": "recomputed lines with UTF-8 splitlines; hash/bytes rechecked; seal regenerated",
+      "recheck": "nf_pack_guard pack_files_digest PASS"
+    },
+    {
+      "id": "F-02", "severity": "HIGH", "class": "source",
+      "source": "05 source W1-HARNESS",
+      "expected": "local file digest",
+      "observed": "declared 11,420 B / 33848417... but local W1_PRIMARY_20261124_v1/check/run_harness.py is 11,369 B / 64f4c85b...",
+      "first_fail": "SOURCE_DIGEST_MISMATCH",
+      "change_cone": "05 sources; 00 §8",
+      "repair": "replaced with actual local bytes/hash and marked CODE_READ; no remote claim",
+      "recheck": "source freeze 36/36 local matches"
+    },
+    {
+      "id": "F-03", "severity": "HIGH", "class": "source",
+      "source": "05 sources W1-IMPL / W1-ECP-MATRIX / W1-EXEC-REPORT / W1-HOLDS",
+      "expected": "locator must resolve or be explicitly remote-only",
+      "observed": "paths under W1/impl and W1/evidence do not exist locally; candidate still listed FULL digests, implying readability",
+      "first_fail": "SOURCE_MISSING",
+      "change_cone": "05 sources; 00 §8; 03 §0",
+      "repair": "marked REMOTE_ONLY_UNBOUND with Git blob SHA-1 and reason; 67 rows sourced from W1M §02.4B which was actually read; no fake sha256",
+      "recheck": "guard sources PASS; 6 remote rows carry null sha/bytes + reason"
+    },
+    {
+      "id": "F-04", "severity": "MEDIUM", "class": "source",
+      "source": "05 source W0M",
+      "expected": "real file locator + bytes/lines/sha",
+      "observed": "path was the label 'W0M CODEX-FIRST-r4' (not a path); bytes/sha were correct but not resolvable",
+      "first_fail": "SOURCE_LOCATOR_MISSING",
+      "change_cone": "05 sources",
+      "repair": "real path under W0/FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付/W0M_CODEX_FIRST/; bytes 108,861 / c9b1... verified",
+      "recheck": "guard sources PASS"
+    },
+    {
+      "id": "F-05", "severity": "CRITICAL", "class": "implementation",
+      "source": "01/02 67 ECP tables",
+      "expected": "per-ID operation, pre, post/readback, WriteSet/effect, NEG/recovery",
+      "observed": "tables listed ID + generic 'REPLACE_NATIVE / Native ECP + readback' with no real operation; PKG-02/PKG-04 could not dry-consume 67 IDs",
+      "first_fail": "AUTHOR_BODY_INCOMPLETE",
+      "change_cone": "01 full 38 rows; 02 full 29 rows; 03 case runner; 04 EXECUTE",
+      "repair": "wrote per-ID native operation tables; each ID has pre/post/recovery and D#/O# step; 38/29 unique verified",
+      "recheck": "guard id_sets DEV=38 OPS=29"
+    },
+    {
+      "id": "F-06", "severity": "HIGH", "class": "contract",
+      "source": "03 TQAEP",
+      "expected": "13 cases with requirement/child/source span/POS/NEG/expected raw/fixture/oracle/runner/checker/consumer",
+      "observed": "13 IDs and SHA were present, but requirement/child detail and N01-04 concrete POS/NEG were abbreviated; assets were external paths not bundled",
+      "first_fail": "TQAEP_CONTRACT_INCOMPLETE",
+      "change_cone": "03; assets; 05",
+      "repair": "expanded 13 case table + N01-04/N10/N11; copied 26 fixtures/oracles into assets; expected raw schema added",
+      "recheck": "guard assets 26/26, CASES=13"
+    },
+    {
+      "id": "F-07", "severity": "HIGH", "class": "contract",
+      "source": "04 thin prompt",
+      "expected": "usable sole entry: GOAL/SOURCE/SPEC/EXECUTE/HARNESS LOOP/DONE/STOP/RESUME, read order, authority, P01-P06",
+      "observed": "25 lines; lacked SOURCE read order detail, EXECUTE, HARNESS detail, STOP/RESUME detail; could not start product work",
+      "first_fail": "THIN_PROMPT_INCOMPLETE",
+      "change_cone": "04",
+      "repair": "rewrote 04 as complete thin entry; no new scope/permission",
+      "recheck": "guard thin prompt sections PASS"
+    },
+    {
+      "id": "F-08", "severity": "CRITICAL", "class": "evidence",
+      "source": "candidate appendix E7 vs E9",
+      "expected": "verdict follows actual checks",
+      "observed": "E7 recorded 'W1PACK_VERIFY: FAIL: DEV 37/38, missing W1-HOST-01, 05 digest mismatch, universal OriginalReader gate' while E9 declared W1_PACK_AUTHOR_PASS; independent re-measure found DEV 38/38, W1-HOST-01 present, 05 SHA/bytes matching (only lines +1), no universal OriginalReader text. The FAIL line was not a reproducible verdict.",
+      "first_fail": "EVIDENCE_LAUNDERING / unverifiable mutation claim",
+      "change_cone": "appendix E7/E9; 05 checks result_location",
+      "repair": "replaced unverifiable claim with actual guard output and an 11-case mutation suite; verdict split into document vs product; no PASS where not run",
+      "recheck": "guard PASS; mutations 11/11 PASS"
+    },
+    {
+      "id": "F-09", "severity": "HIGH", "class": "authority",
+      "source": "candidate 00/05 claim ceiling",
+      "expected": "record the actual Owner pre-authorization for primary + scoped construction, with limits",
+      "observed": "pack was frozen at AUTHOR_DOCUMENT_ONLY / PROPOSED_NOT_ADOPTED, contradicting the Owner instruction to promote the qualified pack; conversely no explicit limits were enumerated",
+      "first_fail": "CLAIM_MISMATCH",
+      "change_cone": "00 §0/§11; 05 authority/readiness; appendix E6/E9",
+      "repair": "recorded OWNER-W1-NF-r2-20261125; claim W1_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION; W1_EXECUTION_READY still NOT_CLAIMED; limits listed",
+      "recheck": "guard claim/not_claimed PASS"
+    },
+    {
+      "id": "F-10", "severity": "MEDIUM", "class": "contract",
+      "source": "candidate 05 structure",
+      "expected": "digest domains, DAG, holds, readiness, product scope, external seal",
+      "observed": "05 lacked digest_contract, dag, holds, readiness, product_scope; external seal only referenced in prose; clean receive could not recompute topology or authority",
+      "first_fail": "MANIFEST_SCHEMA_INCOMPLETE",
+      "change_cone": "05; seal; appendix E8/E10",
+      "repair": "added digest_contract, dag, holds, readiness, product_scope, authority; generated external SEAL.json",
+      "recheck": "guard digest_domains/dag_topology/external_seal PASS"
+    }
+  ],
+  "summary": {"total": 10, "critical": 2, "high": 5, "medium": 3, "open": 0, "repair_verified": 10}
+}

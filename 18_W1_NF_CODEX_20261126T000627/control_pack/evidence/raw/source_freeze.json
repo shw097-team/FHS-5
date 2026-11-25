@@ -1,0 +1,810 @@
+{
+  "record_type": "SOURCE_FREEZE_ACTUAL",
+  "date": "2026-11-25",
+  "source_root": "C:\\Users\\user\\Downloads\\FHS-5",
+  "counts": {
+    "total": 42,
+    "local_matched": 42,
+    "remote_unbound": 0
+  },
+  "rows": [
+    {
+      "id": "PLAN",
+      "role": "pack plan / method",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\FHS-5_PLP_W1_執行控制小包_CODEX_Native-first_高保留全量精簡重構_工程方案.md",
+      "declared": {
+        "bytes": 86117,
+        "sha256": "999f3e3bf917cde57cc6ea8069a750e26356e103d5529990506809a7f0091a90",
+        "lines": 518
+      },
+      "actual": {
+        "bytes": 86117,
+        "sha256": "999f3e3bf917cde57cc6ea8069a750e26356e103d5529990506809a7f0091a90",
+        "lines": 518
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "WORKCTRL",
+      "role": "GPT WORK pack control",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\FHS-5_PLP_W1_CODEX_Native-first_GPT_WORK_最小執行控制包.md",
+      "declared": {
+        "bytes": 32464,
+        "sha256": "ef18e6a87aa4ee8ca12b76194b07c16bdc5631b7fd5531a8079f621510029659",
+        "lines": 113
+      },
+      "actual": {
+        "bytes": 32464,
+        "sha256": "ef18e6a87aa4ee8ca12b76194b07c16bdc5631b7fd5531a8079f621510029659",
+        "lines": 113
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "CODEXCTRL",
+      "role": "CODEX repair control",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\FHS-5_PLP_W1_CODEX_Native-first_CODEX_最小執行控制包.md",
+      "declared": {
+        "bytes": 40674,
+        "sha256": "f01a8110cfedaacf13b986531b536096db4d3e4e42a5d1049d3df67f9a36d4ff",
+        "lines": 167
+      },
+      "actual": {
+        "bytes": 40674,
+        "sha256": "f01a8110cfedaacf13b986531b536096db4d3e4e42a5d1049d3df67f9a36d4ff",
+        "lines": 167
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "STARTCTRL",
+      "role": "CODEX thin start prompt",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\FHS-5_PLP_W1_CODEX_Native-first_CODEX_啟動薄PROMPT.md",
+      "declared": {
+        "bytes": 3518,
+        "sha256": "ef99fbca090b7913799aecc3f3a5c2510f7bff0afdaae56f33d8105d5550b39e",
+        "lines": 11
+      },
+      "actual": {
+        "bytes": 3518,
+        "sha256": "ef99fbca090b7913799aecc3f3a5c2510f7bff0afdaae56f33d8105d5550b39e",
+        "lines": 11
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1M",
+      "role": "W1M NF-r2 normative",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\FHS-5_PLP_W1M_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "declared": {
+        "bytes": 99289,
+        "sha256": "a91c4ed36cc2977372a5333bce068abe6a5e222b95cda5fe5dc81ef6cfe6c9c1",
+        "lines": 1202
+      },
+      "actual": {
+        "bytes": 99289,
+        "sha256": "a91c4ed36cc2977372a5333bce068abe6a5e222b95cda5fe5dc81ef6cfe6c9c1",
+        "lines": 1202
+      },
+      "match": true,
+      "read_level": "KEY_SECTIONS",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1M-EVIDENCE",
+      "role": "W1M evidence attachment",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\15_WM1_4_NF_20261125\\02_EVIDENCE\\FHS-5_PLP_W1M_CODEX-NATIVE-FIRST_證據附件.md",
+      "declared": {
+        "bytes": 8185,
+        "sha256": "b32068f591f69e681da1534809fcd36f81986bf16afc60c0b73b3af703407e87",
+        "lines": 124
+      },
+      "actual": {
+        "bytes": 8185,
+        "sha256": "b32068f591f69e681da1534809fcd36f81986bf16afc60c0b73b3af703407e87",
+        "lines": 124
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1M-CLOSEOUT",
+      "role": "W1M closeout/handoff",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\15_WM1_4_NF_20261125\\03_DELIVERY\\FHS-5_PLP_W1M_W4M_重構_CLOSEOUT_HANDOFF.md",
+      "declared": {
+        "bytes": 14191,
+        "sha256": "e13c36a7b7f9aa7620cf4d474e79635ac137bd600523b1198ac9031b03590bda",
+        "lines": 182
+      },
+      "actual": {
+        "bytes": 14191,
+        "sha256": "e13c36a7b7f9aa7620cf4d474e79635ac137bd600523b1198ac9031b03590bda",
+        "lines": 182
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1M-OLD",
+      "role": "W1M wm-v5 lineage",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\OLD\\FHS-5_PLP_W1M_完整實質正文.md",
+      "declared": {
+        "bytes": 71612,
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "lines": 884
+      },
+      "actual": {
+        "bytes": 71612,
+        "sha256": "0bda92ef4a0e75e23530267ce97ab01b8044027c6cd06ab014a28053ce529b73",
+        "lines": 884
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "M",
+      "role": "M r3 product lineage",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_總藍圖\\FHS-5_PLP_總藍圖_2026-11-21_r3_高保留全量升級修補_完整實質正文.md",
+      "declared": {
+        "bytes": 325511,
+        "sha256": "2026da4b847c1368e44e4488443b6ba58416b269fc7c67b3c1faed8cfd19f2c7",
+        "lines": 3016
+      },
+      "actual": {
+        "bytes": 325511,
+        "sha256": "2026da4b847c1368e44e4488443b6ba58416b269fc7c67b3c1faed8cfd19f2c7",
+        "lines": 3016
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0M",
+      "role": "W0M CODEX-FIRST-r4",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\W0M_CODEX_FIRST\\FHS-5_PLP_W0M_完整實質正文_CODEX-FIRST-r4.md",
+      "declared": {
+        "bytes": 108861,
+        "sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+        "lines": 1191
+      },
+      "actual": {
+        "bytes": 108861,
+        "sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+        "lines": 1191
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "H0",
+      "role": "W0 handoff v3",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_HANDOFF.md",
+      "declared": {
+        "bytes": 3265,
+        "sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+        "lines": 67
+      },
+      "actual": {
+        "bytes": 3265,
+        "sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+        "lines": 67
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "C0",
+      "role": "W0 closeout",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_CLOSEOUT.md",
+      "declared": {
+        "bytes": 21927,
+        "sha256": "23cfa1f640227c0f3ede052faacbeb14364f5a9337ca436970449de500827b3f",
+        "lines": 290
+      },
+      "actual": {
+        "bytes": 21927,
+        "sha256": "23cfa1f640227c0f3ede052faacbeb14364f5a9337ca436970449de500827b3f",
+        "lines": 290
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0-05",
+      "role": "W0 source manifest",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST\\05_W0_SOURCE_MANIFEST.json",
+      "declared": {
+        "bytes": 18821,
+        "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+        "lines": 489
+      },
+      "actual": {
+        "bytes": 18821,
+        "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+        "lines": 489
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0M-ADMISSION",
+      "role": "WM/W0M/W1M admission writeback",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W0\\FHS-5_PLP_W0_NF_CODEX_20261125_01\\UPSTREAM_WRITEBACK\\WM__W0M_W1M_ADMISSION.md",
+      "declared": {
+        "bytes": 810,
+        "sha256": "aab38714754df4e6fc16daa339da24a60ae560cc95491756ae7967b4252f098c",
+        "lines": 14
+      },
+      "actual": {
+        "bytes": 810,
+        "sha256": "aab38714754df4e6fc16daa339da24a60ae560cc95491756ae7967b4252f098c",
+        "lines": 14
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B00NF",
+      "role": "PROG-00 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROG-00_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "declared": {
+        "bytes": 126626,
+        "sha256": "cdd1d76ec20fad19bff96153b11a65a1d0ba98074e4d68d2abfaae5a72c89797",
+        "lines": 908
+      },
+      "actual": {
+        "bytes": 126626,
+        "sha256": "cdd1d76ec20fad19bff96153b11a65a1d0ba98074e4d68d2abfaae5a72c89797",
+        "lines": 908
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B01NF",
+      "role": "PROJ-01 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-01_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "declared": {
+        "bytes": 68023,
+        "sha256": "aa823374dabce5218611a248fda3c8f68a7f0b0d6b51ffa2e4915f7aec4d0392",
+        "lines": 574
+      },
+      "actual": {
+        "bytes": 68023,
+        "sha256": "aa823374dabce5218611a248fda3c8f68a7f0b0d6b51ffa2e4915f7aec4d0392",
+        "lines": 574
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B02NF",
+      "role": "PROJ-02 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-02_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "declared": {
+        "bytes": 65006,
+        "sha256": "37022f33e5a67ad3165b0a47d36b359255f13719047fa71508e2b80624fc3884",
+        "lines": 596
+      },
+      "actual": {
+        "bytes": 65006,
+        "sha256": "37022f33e5a67ad3165b0a47d36b359255f13719047fa71508e2b80624fc3884",
+        "lines": 596
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B03NF",
+      "role": "PROJ-03 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-03_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "declared": {
+        "bytes": 56268,
+        "sha256": "a13a9df4252a557a3e246035f136295fe1cad5990e828f9ec3d5df083307db98",
+        "lines": 490
+      },
+      "actual": {
+        "bytes": 56268,
+        "sha256": "a13a9df4252a557a3e246035f136295fe1cad5990e828f9ec3d5df083307db98",
+        "lines": 490
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B04NF",
+      "role": "PROJ-04 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-04_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "declared": {
+        "bytes": 57182,
+        "sha256": "fb529a784b7d929f15a23ed63ea82b7d5f5117e927311b1f164eb005da469323",
+        "lines": 506
+      },
+      "actual": {
+        "bytes": 57182,
+        "sha256": "fb529a784b7d929f15a23ed63ea82b7d5f5117e927311b1f164eb005da469323",
+        "lines": 506
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "B05NF",
+      "role": "PROJ-05 NF-r2",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\01_NORMATIVE\\FHS-5_PLP_PROJ-05_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "declared": {
+        "bytes": 67845,
+        "sha256": "794d91cc8080715886d5dc30b92e74b1f123fbe0aee47256bf1e84d749648dfe",
+        "lines": 557
+      },
+      "actual": {
+        "bytes": 67845,
+        "sha256": "794d91cc8080715886d5dc30b92e74b1f123fbe0aee47256bf1e84d749648dfe",
+        "lines": 557
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-RUNHARNESS",
+      "role": "repo W1/check/run_harness.py (canonical repo copy; Downloads lineage copy differs)",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W1\\check\\run_harness.py",
+      "declared": {
+        "bytes": 11420,
+        "sha256": "3384841787d4d68c1c56fbb62dfe1776720b02205d58ffbf30c9e915a957dd9f",
+        "lines": 234
+      },
+      "actual": {
+        "bytes": 11420,
+        "sha256": "3384841787d4d68c1c56fbb62dfe1776720b02205d58ffbf30c9e915a957dd9f",
+        "lines": 234
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-00JSON",
+      "role": "old W1 primary 00_WAVE_RUN_MANIFEST.json",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\00_WAVE_RUN_MANIFEST.json",
+      "declared": {
+        "bytes": 31876,
+        "sha256": "212863778f4a390fb5867774b117bfe5d1031229614542d150b227ba152242eb",
+        "lines": 766
+      },
+      "actual": {
+        "bytes": 31876,
+        "sha256": "212863778f4a390fb5867774b117bfe5d1031229614542d150b227ba152242eb",
+        "lines": 766
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-00MD",
+      "role": "old W1 primary 00_WAVE_RUN_MANIFEST.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\00_WAVE_RUN_MANIFEST.md",
+      "declared": {
+        "bytes": 7018,
+        "sha256": "66f566863b8ff6b972f4b0edc6077c25b7219cf35948dad9378c61d1b5adb896",
+        "lines": 76
+      },
+      "actual": {
+        "bytes": 7018,
+        "sha256": "66f566863b8ff6b972f4b0edc6077c25b7219cf35948dad9378c61d1b5adb896",
+        "lines": 76
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-01",
+      "role": "old W1 primary 01_SOURCE_SCOPE_AND_CONSTRUCTION.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\01_SOURCE_SCOPE_AND_CONSTRUCTION.md",
+      "declared": {
+        "bytes": 22004,
+        "sha256": "6a61d9b5ab401c4c6c584ce51028ff8f5136215f491487e36b14717c3814d718",
+        "lines": 205
+      },
+      "actual": {
+        "bytes": 22004,
+        "sha256": "6a61d9b5ab401c4c6c584ce51028ff8f5136215f491487e36b14717c3814d718",
+        "lines": 205
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-02",
+      "role": "old W1 primary 02_ORIGINAL_CONTRACT_REFS.json",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\02_ORIGINAL_CONTRACT_REFS.json",
+      "declared": {
+        "bytes": 1644,
+        "sha256": "b0ab99f24e9bf4df6a1221059730458ba3114557d6e38afdd0fd3ac1317e2daf",
+        "lines": 40
+      },
+      "actual": {
+        "bytes": 1644,
+        "sha256": "b0ab99f24e9bf4df6a1221059730458ba3114557d6e38afdd0fd3ac1317e2daf",
+        "lines": 40
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-03",
+      "role": "old W1 primary 03_DEV_ECP.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\03_DEV_ECP.md",
+      "declared": {
+        "bytes": 6302,
+        "sha256": "5ab52cebd19e5822ee4035fb9b0f880cc1d256a82841f3c8b4f607fdfd15037f",
+        "lines": 76
+      },
+      "actual": {
+        "bytes": 6302,
+        "sha256": "5ab52cebd19e5822ee4035fb9b0f880cc1d256a82841f3c8b4f607fdfd15037f",
+        "lines": 76
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-04",
+      "role": "old W1 primary 04_OPS_ECP.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\04_OPS_ECP.md",
+      "declared": {
+        "bytes": 5513,
+        "sha256": "87591f5b710376987dd5c45ca2dbd3530e3e3b979fa578cb8c6e53ea366b8ff6",
+        "lines": 67
+      },
+      "actual": {
+        "bytes": 5513,
+        "sha256": "87591f5b710376987dd5c45ca2dbd3530e3e3b979fa578cb8c6e53ea366b8ff6",
+        "lines": 67
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-05JSON",
+      "role": "old W1 primary 05_PLANNED_TQAEP.json",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\05_PLANNED_TQAEP.json",
+      "declared": {
+        "bytes": 22034,
+        "sha256": "ba6405919707f799c30441bb7ee9f3fe58ccbcf35e588d708d0a40ff5064ca90",
+        "lines": 446
+      },
+      "actual": {
+        "bytes": 22034,
+        "sha256": "ba6405919707f799c30441bb7ee9f3fe58ccbcf35e588d708d0a40ff5064ca90",
+        "lines": 446
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-05MD",
+      "role": "old W1 primary 05_PLANNED_TQAEP.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\05_PLANNED_TQAEP.md",
+      "declared": {
+        "bytes": 8797,
+        "sha256": "48233e467dfeb1c8611f77d6b725e467fa1288020b9c29438faf9b7d1f530ef4",
+        "lines": 103
+      },
+      "actual": {
+        "bytes": 8797,
+        "sha256": "48233e467dfeb1c8611f77d6b725e467fa1288020b9c29438faf9b7d1f530ef4",
+        "lines": 103
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-06",
+      "role": "old W1 primary 06_PERMISSION_STOP_RESUME.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\06_PERMISSION_STOP_RESUME.md",
+      "declared": {
+        "bytes": 6659,
+        "sha256": "7d5114bf6e6cd75ec3d50b2925974d0a4c48d842aa209f2d3d30f9c85ca6e9a5",
+        "lines": 81
+      },
+      "actual": {
+        "bytes": 6659,
+        "sha256": "7d5114bf6e6cd75ec3d50b2925974d0a4c48d842aa209f2d3d30f9c85ca6e9a5",
+        "lines": 81
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-07",
+      "role": "old W1 primary 07_EVIDENCE_AND_CHECKER.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\07_EVIDENCE_AND_CHECKER.md",
+      "declared": {
+        "bytes": 4008,
+        "sha256": "f02eea4e6e390fdbb870b4d73dcc97ba2af55b377f9bbacc1557bd3ae70ee11b",
+        "lines": 50
+      },
+      "actual": {
+        "bytes": 4008,
+        "sha256": "f02eea4e6e390fdbb870b4d73dcc97ba2af55b377f9bbacc1557bd3ae70ee11b",
+        "lines": 50
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-08",
+      "role": "old W1 primary 08_AS_BUILT_AND_HANDOFF.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\08_AS_BUILT_AND_HANDOFF.md",
+      "declared": {
+        "bytes": 4808,
+        "sha256": "62e53cce751b24dbbeba48b3b7d32588e22d5c1ac07d4cb7224b7fdac4c26560",
+        "lines": 56
+      },
+      "actual": {
+        "bytes": 4808,
+        "sha256": "62e53cce751b24dbbeba48b3b7d32588e22d5c1ac07d4cb7224b7fdac4c26560",
+        "lines": 56
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-09",
+      "role": "old W1 primary 09_README_RUN_ORDER.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\09_README_RUN_ORDER.md",
+      "declared": {
+        "bytes": 4070,
+        "sha256": "8838433b0c36c9185f9b8af3d49ddfb00749774ba2f797b6cf1f2f5a580f59f4",
+        "lines": 60
+      },
+      "actual": {
+        "bytes": 4070,
+        "sha256": "8838433b0c36c9185f9b8af3d49ddfb00749774ba2f797b6cf1f2f5a580f59f4",
+        "lines": 60
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-PFM",
+      "role": "old W1 primary PACKAGE_FILE_MANIFEST.json",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\PACKAGE_FILE_MANIFEST.json",
+      "declared": {
+        "bytes": 9730,
+        "sha256": "7dc11eba6d2a063f12758ca31ed5a91b25f026a6409134e00e04d2bd49bbbabb",
+        "lines": 305
+      },
+      "actual": {
+        "bytes": 9730,
+        "sha256": "7dc11eba6d2a063f12758ca31ed5a91b25f026a6409134e00e04d2bd49bbbabb",
+        "lines": 305
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-SM",
+      "role": "old W1 primary SOURCE_MANIFEST.json",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\SOURCE_MANIFEST.json",
+      "declared": {
+        "bytes": 7904,
+        "sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47",
+        "lines": 189
+      },
+      "actual": {
+        "bytes": 7904,
+        "sha256": "8bfb8be467c53c66a048846a48cd5f7f2726c3ac61caed4d75b5285616d59f47",
+        "lines": 189
+      },
+      "match": true,
+      "read_level": "PIN_ONLY",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1OLD-START",
+      "role": "old W1 primary W1_START_THIN_PROMPT.md",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_PRIMARY_20261124_v1\\FHS-5_PLP_W1_PRIMARY\\W1_START_THIN_PROMPT.md",
+      "declared": {
+        "bytes": 2964,
+        "sha256": "f51ee80069f380bd5bb3015146e012a06fd6d0a0a708b9f92fecf7d43bac08bb",
+        "lines": 45
+      },
+      "actual": {
+        "bytes": 2964,
+        "sha256": "f51ee80069f380bd5bb3015146e012a06fd6d0a0a708b9f92fecf7d43bac08bb",
+        "lines": 45
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-ECP-MATRIX",
+      "role": "67 ECP closure matrix (parsed; 38 DEV + 29 OPS)",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W1\\evidence\\10_W1_ECP_TQAEP_CLOSURE_MATRIX.json",
+      "declared": {
+        "bytes": 25518,
+        "sha256": "729fdaae6c249a21b3c38a6688c973d7ad88baa6404775b3a36d5ef9f2db452b",
+        "lines": 739
+      },
+      "actual": {
+        "bytes": 25518,
+        "sha256": "729fdaae6c249a21b3c38a6688c973d7ad88baa6404775b3a36d5ef9f2db452b",
+        "lines": 739
+      },
+      "match": true,
+      "read_level": "FULL_67_ROWS",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-EXEC-REPORT",
+      "role": "old W1 execution report",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W1\\evidence\\W1_EXECUTION_REPORT.md",
+      "declared": {
+        "bytes": 3354,
+        "sha256": "3379fb8965137d1a76ee16e07cca57b7701632c337de51185a93148cb98cd9c0",
+        "lines": 61
+      },
+      "actual": {
+        "bytes": 3354,
+        "sha256": "3379fb8965137d1a76ee16e07cca57b7701632c337de51185a93148cb98cd9c0",
+        "lines": 61
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-HOLDS",
+      "role": "old W1 14 named holds",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W1\\evidence\\12_W1_NAMED_HOLDS.json",
+      "declared": {
+        "bytes": 2755,
+        "sha256": "a0fef9299f9daf64997610f5b900b8d40ba17d096c605ed5e9400d802b0f7ca4",
+        "lines": 92
+      },
+      "actual": {
+        "bytes": 2755,
+        "sha256": "a0fef9299f9daf64997610f5b900b8d40ba17d096c605ed5e9400d802b0f7ca4",
+        "lines": 92
+      },
+      "match": true,
+      "read_level": "FULL",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W1-IMPL",
+      "role": "old bridge reference implementation (legacy parser reference)",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W1\\impl\\w1_bridge_reference.py",
+      "declared": {
+        "bytes": 36580,
+        "sha256": "dc0d1041a473a96493c887f279f75dcc1eca077c39242de47faffd44e12050a8",
+        "lines": 939
+      },
+      "actual": {
+        "bytes": 36580,
+        "sha256": "dc0d1041a473a96493c887f279f75dcc1eca077c39242de47faffd44e12050a8",
+        "lines": 939
+      },
+      "match": true,
+      "read_level": "CODE_READ",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0-GUIDE",
+      "role": "W0 guide.py (Touch1/Touch2 reference; single evidence_sha legacy)",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\guide.py",
+      "declared": {
+        "bytes": 6216,
+        "sha256": "6be9b02bcc8207b36793351c3e4b5d447b485780e2a7ff0295d1d9dba21799e8",
+        "lines": 154
+      },
+      "actual": {
+        "bytes": 6216,
+        "sha256": "6be9b02bcc8207b36793351c3e4b5d447b485780e2a7ff0295d1d9dba21799e8",
+        "lines": 154
+      },
+      "match": true,
+      "read_level": "CODE_READ",
+      "rights": "READ_ONLY_LOCAL"
+    },
+    {
+      "id": "W0-TPMCONTRACTS",
+      "role": "W0 tpm_contracts.py (four-contract reference)",
+      "availability": "LOCAL_VERIFIED",
+      "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\tpm_contracts.py",
+      "declared": {
+        "bytes": 11913,
+        "sha256": "e49e94eda45ea8117a9a3da6fa21f1f77749606ad0d4ba6f5f8fd78f369a4193",
+        "lines": 267
+      },
+      "actual": {
+        "bytes": 11913,
+        "sha256": "e49e94eda45ea8117a9a3da6fa21f1f77749606ad0d4ba6f5f8fd78f369a4193",
+        "lines": 267
+      },
+      "match": true,
+      "read_level": "CODE_READ",
+      "rights": "READ_ONLY_LOCAL"
+    }
+  ]
+}

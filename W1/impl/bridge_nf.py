@@ -59,13 +59,39 @@ def inspect_package(manifest: str, root: str | None = None,
     mpath = Path(manifest)
     try:
         insp = reader.inspect_package(pack_root, manifest_path=mpath)
-    except br.PathDenied as exc:
-        raise NFError("PATH_OUTSIDE_ROOT", exc.detail) from exc
     except NFError as exc:
+        if exc.token in ("PACK_INCOMPLETE_LOCAL", "SCHEMA_UNSUPPORTED", "VERSION_MISMATCH"):
+            g = reader.inspect_generic(pack_root)
+            if expected_sha256 and expected_sha256 != g["pack_manifest_sha256"]:
+                raise NFError("SOURCE_INTEGRITY_FAILED", "expected manifest sha mismatch")
+            return {
+                "schema": "FHS5.PLP.W1.BridgeInspect@2",
+                "subject_id": g["identity"].get("subject_id"),
+                "scope": g["identity"].get("scope"),
+                "manifest_path": g.get("manifest_path"),
+                "manifest_sha256": g["pack_manifest_sha256"],
+                "manifest_bytes": g["pack_manifest_bytes"],
+                "source_refs": g["source_refs"],
+                "requirements": [{"id": r.get("n"), "kind": "BINDING", "source": "W2M 03.1"}
+                                 for r in (json.loads(
+                                     (pack_root / g.get("manifest_path", "")).read_text(encoding="utf-8")
+                                 ).get("requirements") or [])],
+                "effect_constraints": {"permission_state": "NONE_GRANTED",
+                                       "host_effect": "NOT_ADMITTED",
+                                       "unknown_effect": "FAIL_CLOSED",
+                                       "advice_is_grant": False, "ecp_is_grant": False},
+                "verification_refs": {"profile": g.get("profile"),
+                                      "capabilities": g.get("profile_capabilities")},
+                "unresolved_refs": [], "counts": g["counts"],
+                "read_only": True, "wrote_bytes": 0,
+                "field_fidelity": [], "missing": [],
+                "fidelity_state": "GENERIC_PROFILE",
+                "profile": g.get("profile"),
+            }
         if exc.token in ("DIGEST_MISMATCH", "SEAL_MISMATCH", "SOURCE_DIGEST_MISMATCH",
                          "ASSET_DIGEST_MISMATCH", "MANIFEST_SELF_EMBED"):
             raise NFError("SOURCE_INTEGRITY_FAILED", f"{exc.token}:{exc.detail}") from exc
-        if exc.token in ("PACK_INCOMPLETE_LOCAL", "SOURCE_MISSING", "SEAL_MISSING"):
+        if exc.token in ("SOURCE_MISSING", "SEAL_MISSING", "SOURCE_PATH_DENIED"):
             raise NFError("PACKAGE_INCOMPLETE_LOCAL", exc.detail) from exc
         raise
     if expected_sha256 and expected_sha256 != insp["pack_manifest_sha256"]:

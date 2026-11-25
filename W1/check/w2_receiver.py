@@ -20,6 +20,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "impl"))
 
 import nf_reader as reader
 import w1_nf_reader as base
+import w2_inbound as w2i
+import tpm_contracts_nf as tpm
 
 NFError = base.NFError
 PACK_PIN = "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
@@ -100,6 +102,34 @@ def receive(delivery: Path, w2_identity: dict) -> dict:
 
     next_op = ("W2-READ: consume W1 SourceRefs/EffectConstraints/HostCapabilityLedger, "
                "choose one READ/DRAFT task inside W2 scope")
+    # ---- F1.5 additions: real W2 inbound consumption, not token checks
+    w2mat = d / "evidence" / "w2" / "material"
+    if w2mat.is_dir():
+        chk("w2_material_present", True, str(w2mat))
+        try:
+            w2_ident = {"project_id": "FHS-5_PLP",
+                        "subject_id": "FHS-5_PLP/W2/INBOUND_DRAFT",
+                        "scope": "W2-READ-01", "wave_id": "W2",
+                        "batch_id": "W2-IN-DRAFT-01", "work_id": "W2-RECEIVER"}
+            w2c = tpm.build_contracts(str(w2mat), w2_ident)
+            chk("w2_contracts", len(w2c["views"]) == 5, list(w2c["views"]))
+            reqs = w2c["views"]["TQAEP"].get("requirements") or []
+            chk("w2_requirements_13", len(reqs) == 13, len(reqs))
+            wiring = w2i.seam_wiring(pack, w2mat, d)
+            chk("five_seam_wiring", wiring["state"] == "COMPLETE",
+                {"matched": wiring["matched"], "total": wiring["total"]})
+            thin = (d / "evidence" / "w2" / "thin_start.md")
+            chk("thin_start_present", thin.is_file(), str(thin))
+            next_op = ("W2-READ: build the 13-row Draft BindingRequest plan inside W2-READ-01; "
+                       "no grant, no protected effect")
+        except NFError as exc:
+            chk("w2_contracts", False, f"{exc.token}:{exc.detail}")
+    else:
+        chk("w2_material_present", False, "evidence/w2/material missing")
+    chk("identity_split",
+        w2_identity.get("producer_identity") != w2_identity.get("consumer_identity"),
+        {"producer": w2_identity.get("producer_identity"),
+         "consumer": w2_identity.get("consumer_identity")})
     receipt = _receipt(w2_identity, rejected, reasons, checks, insp, cases)
     receipt["manifest_sha256_at_receive"] = seal_at_receive
     receipt["seal_evidence_manifest_sha256_at_receive"] = seal.get("evidence_manifest_sha256")
@@ -154,6 +184,8 @@ def main(argv=None) -> int:
     args = ap.parse_args(argv)
     ident = {"subject_id": "FHS-5_PLP/W1/CONTROL_PACK", "scope": args.scope,
              "permission_state": "NONE_GRANTED",
+             "producer_identity": "FHS-5_PLP/W1/CONTROL_PACK",
+             "consumer_identity": "FHS-5_PLP/W2/CONSUMER",
              "expected_pack_sha256": args.expect_pack_sha}
     r = receive(Path(args.delivery), ident)
     out = Path(args.out)

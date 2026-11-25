@@ -1,0 +1,384 @@
+{
+  "checker_id": "FHS5-W1-NF-r5-independent-readonly",
+  "mode": "read-only independent verification",
+  "manifest_recompute": {
+    "checked": 116,
+    "mismatches": [],
+    "missing": [],
+    "declared_file_count": 116,
+    "checked_equals_declared": true
+  },
+  "seal_binding": {
+    "manifest_file_sha256": "6f9687dcaaf110588ace59a149a2f375b0a4d91e29e2dbba3a4a92eac78cee8c",
+    "seal_evidence_manifest_sha256": "6f9687dcaaf110588ace59a149a2f375b0a4d91e29e2dbba3a4a92eac78cee8c",
+    "equal": true,
+    "seal_pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "seal_evidence_file_count": 116,
+    "seal_w2_receive_receipt_sha256": "4027412c9f0107dd8a2e09bc0ab21bf413168db68070df9860c79c085e33a564",
+    "actual_w2_receive_receipt_sha256": "4027412c9f0107dd8a2e09bc0ab21bf413168db68070df9860c79c085e33a564",
+    "w2_receipt_sha_matches": true
+  },
+  "pack_check": {
+    "md": 5,
+    "dev": 38,
+    "ops": 29,
+    "cases": 13,
+    "assets": 26,
+    "sources": 42,
+    "holds": 14,
+    "expected": {
+      "md": 5,
+      "dev": 38,
+      "ops": 29,
+      "cases": 13,
+      "assets": 26,
+      "sources": 42,
+      "holds": 14
+    },
+    "manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "pin": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+    "digest_equal": true,
+    "source_set_sha256": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+    "declared_source_set_sha256": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+    "source_set_equal": true,
+    "pack_files_verified": 5,
+    "pack_files_bad": [],
+    "assets_verified": 26,
+    "assets_bad": [],
+    "unique_case_ids": 13
+  },
+  "tests": {
+    "count": 79,
+    "ok": true,
+    "command": "python -B -m unittest discover -s check -p test_*.py",
+    "ran_from": "work/checker_out/w1_copy",
+    "tested_copy_candidate_sha256": "806dea5d227dfd7de7e1cdf0e3f11303c211ff884ea2c39ef9925c5f35b70c57",
+    "tested_copy_matches_candidate_sha": true,
+    "note": "W1/impl and W1/check were copied to the output dir before running because test_off_isolation creates its temp dir under W1/check; PYTHONDONTWRITEBYTECODE=1 and python -B were used."
+  },
+  "cases": {
+    "total": 20,
+    "verdicts": {
+      "PASS": 19,
+      "DEFERRED": 1,
+      "FAIL": 0,
+      "NOT_OBSERVED": 0
+    },
+    "fail_cases": [],
+    "digest_split_ok": true,
+    "candidate_recompute": {
+      "raw": "806dea5d227dfd7de7e1cdf0e3f11303c211ff884ea2c39ef9925c5f35b70c57",
+      "recomputed": "806dea5d227dfd7de7e1cdf0e3f11303c211ff884ea2c39ef9925c5f35b70c57",
+      "match": true,
+      "files_hashed": 31,
+      "rows_with_value": 19,
+      "rows_matching": 19
+    },
+    "source_recompute": {
+      "raw": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+      "recomputed": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+      "match": true
+    },
+    "pack_sha": {
+      "raw": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+      "pin": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+      "match": true
+    },
+    "case_set_recompute": {
+      "raw": "63a59b874485e44cd7d37c1186e9d615402ab49f4f5e86285713c2b54645cbce",
+      "recomputed": "63a59b874485e44cd7d37c1186e9d615402ab49f4f5e86285713c2b54645cbce",
+      "match": true
+    },
+    "global_distinct": true,
+    "evidence": {
+      "pass_rows": 19,
+      "unique": 19,
+      "all_match_raw": true,
+      "mismatches": []
+    },
+    "oracle": {
+      "with_oracle": 12,
+      "unique": 12,
+      "all_match_pack_assets": true,
+      "mismatches": [],
+      "null_cases": [
+        "W1-HERMES-01",
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "N10",
+        "N11",
+        "W1-CODEX-05"
+      ]
+    }
+  },
+  "host": {
+    "consumed": true,
+    "sessions": 2,
+    "stages": 7,
+    "session_ids": [
+      "01a21375-665e-71c3-b1af-8b1e701b5707",
+      "01a21375-9b1f-7cd2-a4bc-a848ae6ff44a"
+    ],
+    "stage_ledger": {
+      "Selected": "OBSERVED_LOCAL",
+      "Loaded": "OBSERVED_LOCAL",
+      "Installed": "REASONED_NA_NATIVE_ENTRY",
+      "Bound": "OBSERVED_LOCAL",
+      "Invoked": "OBSERVED_LOCAL",
+      "ActualServed": "OBSERVED_LOCAL",
+      "Consumed": "OBSERVED_LOCAL"
+    },
+    "per_package": {
+      "pkgA_w1": {
+        "session_id": "01a21375-665e-71c3-b1af-8b1e701b5707",
+        "served_text_sha256": "09c49f5d88f1254677372c20d30683cfb49ca00d3a14af154d7899b992291dc9",
+        "served_text_bytes": 434,
+        "served_sha_recomputed": "09c49f5d88f1254677372c20d30683cfb49ca00d3a14af154d7899b992291dc9",
+        "served_sha_match": true,
+        "context_sha256": "0ad360c51e5cb92ef08d6c71976de92a8634db2161d9d3ff4b91dd53c76a81c5",
+        "context_sha_match": true,
+        "artifact_sha256_canonical": "0edd03aa674ff0c7810c366290ac0a87d5c15e8c3c895dc01f61a01bc1eb7d02",
+        "artifact_sha256_canonical_match": true
+      },
+      "pkgB_w0": {
+        "session_id": "01a21375-9b1f-7cd2-a4bc-a848ae6ff44a",
+        "served_text_sha256": "eefa21ff58b111fc3d3f13877c292559950d01493ac61ea7b3a18fa5367885b0",
+        "served_text_bytes": 306,
+        "served_sha_recomputed": "eefa21ff58b111fc3d3f13877c292559950d01493ac61ea7b3a18fa5367885b0",
+        "served_sha_match": true,
+        "context_sha256": "78dadb00ea5e84d7509ce373e6fe17f4f850b0d89a3168910e39de671abb5e49",
+        "context_sha_match": true,
+        "artifact_sha256_canonical": "0e829565da44cc008311f80bb594a6c2cc50b2f207544354e9b24a713eef1b0c",
+        "artifact_sha256_canonical_match": true
+      }
+    }
+  },
+  "w2_inbound": {
+    "draft_completed": true,
+    "wiring": {
+      "matched": 5,
+      "total": 5,
+      "state": "COMPLETE"
+    },
+    "session": "01a21379-31e7-73d1-98bb-4d2870f612e9",
+    "session_distinct_from_host": true,
+    "consumer_all": true,
+    "grant_issued": false,
+    "permission_state": "NONE_GRANTED",
+    "artifact_rows": 13,
+    "material_manifest_sha_match": true
+  },
+  "off": {
+    "state": "ON_OFF_BOTH_SEMANTIC_SUCCESS",
+    "on": 13,
+    "off": 13,
+    "projection_equal": true,
+    "cold_off": {
+      "value": true,
+      "blocked": [
+        "hgk_runtime",
+        "fabric_runtime",
+        "sbl_runtime",
+        "pipd_runtime",
+        "hermes_runtime"
+      ],
+      "leaked": []
+    },
+    "control": {
+      "module": "json",
+      "imported": true,
+      "state": "OBSERVED"
+    },
+    "forbidden_imports": [],
+    "on_modules": [
+      "tpm",
+      "guide",
+      "bridge"
+    ],
+    "input_locator": null,
+    "reproducible_from_candidate": false,
+    "shipped_context_bundle_rows": 0,
+    "shipped_tqaep_rows": 13,
+    "off_guard_scope": [
+      "tpm_contracts_nf",
+      "guide_nf",
+      "bridge_nf",
+      "w2_inbound"
+    ]
+  },
+  "closure": {
+    "rows": 118,
+    "declared_row_count": 118,
+    "counts": {
+      "EVIDENCED": 17,
+      "COVERED_BY_SHARED_OPERATION": 62,
+      "EXERCISED_INDIVIDUALLY": 2,
+      "NOT_APPLICABLE_THIS_ROUND": 1,
+      "DEFERRED": 3,
+      "PASS": 18,
+      "EVIDENCED_WITH_DEFERRED_HOSTS": 1,
+      "HOLD_PRESERVED_NOT_CLOSED": 14
+    },
+    "counts_sum": 118,
+    "dangling": [
+      {
+        "id": "P06",
+        "verdict": "EVIDENCED",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "W1-A06",
+        "verdict": "EVIDENCED",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      }
+    ],
+    "dangling_all_verdicts": [
+      {
+        "id": "P06",
+        "verdict": "EVIDENCED",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "DEV-PROH-01",
+        "verdict": "COVERED_BY_SHARED_OPERATION",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "DEV-PROH-02",
+        "verdict": "COVERED_BY_SHARED_OPERATION",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "DEV-PROH-03",
+        "verdict": "COVERED_BY_SHARED_OPERATION",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "DEV-PROH-04",
+        "verdict": "COVERED_BY_SHARED_OPERATION",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "DEV-RB-01",
+        "verdict": "COVERED_BY_SHARED_OPERATION",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "DEV-RB-02",
+        "verdict": "COVERED_BY_SHARED_OPERATION",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "DEV-RB-03",
+        "verdict": "COVERED_BY_SHARED_OPERATION",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "DEV-RB-04",
+        "verdict": "COVERED_BY_SHARED_OPERATION",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      },
+      {
+        "id": "W1-A06",
+        "verdict": "EVIDENCED",
+        "evidence_ref": "evidence/how_to/independent_check.json"
+      }
+    ]
+  },
+  "w2_receive": {
+    "accepted": true,
+    "checks": 29,
+    "checks_len": 29,
+    "checks_all_ok": true,
+    "grant_issued": false,
+    "permission_boundary": "W2 receives evidence only; no grant issued, no protected effect",
+    "manifest_sha256_at_receive": "88fcbcdc9bbefd7dc7095da2ad2667a262fefc8b73a3061005e98606492730f7",
+    "seal_evidence_manifest_sha256_at_receive": "88fcbcdc9bbefd7dc7095da2ad2667a262fefc8b73a3061005e98606492730f7",
+    "current_manifest_sha256": "6f9687dcaaf110588ace59a149a2f375b0a4d91e29e2dbba3a4a92eac78cee8c",
+    "current_seal_manifest_sha256": "6f9687dcaaf110588ace59a149a2f375b0a4d91e29e2dbba3a4a92eac78cee8c",
+    "manifest_at_receive_matches_current": false
+  },
+  "claim_audit": {
+    "scanned_docs": 9,
+    "affirmative_claims": [],
+    "occurrences": [
+      {
+        "file": "control_pack\\FHS-5_PLP_W1_NATIVE_FIRST\\00_W1_PI_PD.md",
+        "line": 10,
+        "text": "**Not claimed**：`W1_NF_VALIDATED`、`NATIVE_PASS`、`INDEPENDENT_PASS`、`RELEASED`、`M-DONE`、`GPT_CHAT_PASS`、`GPT_WORK_PASS`、`HERMES_PASS`。",
+        "disposition": "DISCLAIMED_OR_CONDITIONAL"
+      },
+      {
+        "file": "control_pack\\FHS-5_PLP_W1_NATIVE_FIRST\\00_W1_PI_PD.md",
+        "line": 72,
+        "text": "| 正式准入 | `W1_NF_VALIDATED`／Independent／Release | `NOT_CLAIMED` |",
+        "disposition": "DISCLAIMED_OR_CONDITIONAL"
+      },
+      {
+        "file": "control_pack\\FHS-5_PLP_W1_NATIVE_FIRST\\01_W1_DEV_ECP.md",
+        "line": 33,
+        "text": "**結論**：W1 產品施工入口已建立並真跑第一個合法操作（`inspect`）；`W1_EXECUTION_READY=READY` 的 root／ACL／entry／input 條件已具。最終 13 案／獨立 consumer／Host served/consumed 仍未跑，故 `W1_NF_VALIDATED` 仍 `NOT_CLAIMED`。",
+        "disposition": "DISCLAIMED_OR_CONDITIONAL"
+      },
+      {
+        "file": "control_pack\\FHS-5_PLP_W1_NATIVE_FIRST\\04_W1_START_THIN_PROMPT.md",
+        "line": 100,
+        "text": "5. 當期必要義務全通才可依採納命名宣 `W1_NF_VALIDATED`；未通交 `W1_PARTIAL_VALIDATED`＋具名缺口。",
+        "disposition": "DISCLAIMED_OR_CONDITIONAL"
+      },
+      {
+        "file": "control_pack\\FHS-5_PLP_W1_NATIVE_FIRST\\04_W1_START_THIN_PROMPT.md",
+        "line": 104,
+        "text": "**本輪 execution readiness（已宣）**：`W1_EXECUTION_READY = READY`。實證：worktree `C:\\Projects\\Agent_Workspace\\FHS-5_W1_NF_r2`（branch `codex/w1-nf-r2-20261125`，base `c2d8084…`，commit `8d250c6…` 已 push/verify）可寫；`W1/impl/w1_nf_reader.py` 已建；`W1/check/",
+        "disposition": "DISCLAIMED_OR_CONDITIONAL"
+      },
+      {
+        "file": "FHS-5_PLP_W1_CLOSEOUT.md",
+        "line": 9,
+        "text": "**不宣稱**：`RELEASED`、`M-DONE`、`GPT_CHAT_PASS`、`GPT_WORK_PASS`、`HERMES_PASS`、`W2_EXECUTION_READY`",
+        "disposition": "DISCLAIMED_OR_CONDITIONAL"
+      }
+    ],
+    "note": "No affirmative W1_NF_VALIDATED / RELEASED / INDEPENDENT_PASS claim was found; all hits are disclaimers or conditional rules."
+  },
+  "writes_to_candidate": false,
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "high",
+      "class": "closure_traceability",
+      "detail": "Two EVIDENCED closure rows (P06 closure matrix+seal+handoff; W1-A06 claim-ceiling audit) cite evidence/how_to/independent_check.json, which is absent from this candidate. Eight more COVERED_BY_SHARED_OPERATION rows cite the same missing file, so 10 rows rest on a non-existent artifact.",
+      "evidence": "W1_CLOSURE_MATRIX.json rows P06, W1-A06 + DEV-PROH-01..04, DEV-RB-01..04; W1_CLOSURE_MATRIX.md:22,49-56,114; file evidence/how_to/independent_check.json not found (it exists only in the earlier 17_W1_NF_CODEX_20261125T232008 deliverable)."
+    },
+    {
+      "id": "F-02",
+      "severity": "high",
+      "class": "seal_binding_stale",
+      "detail": "W2_RECEIVE_RECEIPT records manifest_sha256_at_receive=88fcbcdc... and its own seal_manifest_binding check reports seal=recomputed=88fcbcdc..., but the delivered EVIDENCE_MANIFEST.json and DELIVERY_SEAL.evidence_manifest_sha256 are 6f9687dc.... The final seal does hash the receipt file (4027412c... matches), so W2 acceptance is bound to a different manifest than the one actually delivered.",
+      "evidence": "W2_RECEIVE_RECEIPT.json:manifest_sha256_at_receive=88fcbcdc..., seal_evidence_manifest_sha256_at_receive=88fcbcdc..., checks[seal_manifest_binding]={seal:88fcbcdc..., recomputed:88fcbcdc...}; DELIVERY_SEAL.json:evidence_manifest_sha256=6f9687dc...; computed sha256(EVIDENCE_MANIFEST.json)=6f9687dc...."
+    },
+    {
+      "id": "F-03",
+      "severity": "low",
+      "class": "digest_binding_gap",
+      "detail": "Seven PASS rows (N01, N02, N03, N04, N10, N11, W1-CODEX-05) carry oracle_sha256=null; only the 12 pack cases have oracle digests. Those 12 are unique and match the pack assets, and the 19 PASS evidence hashes are unique and match the raw files, but the seven extra controls have no oracle binding.",
+      "evidence": "evidence/cases.json oracle_sha256 null for N01,N02,N03,N04,N10,N11,W1-CODEX-05; 12 non-null oracle hashes compare equal to 05_W1_SOURCE_MANIFEST.json assets[oracle]."
+    },
+    {
+      "id": "F-04",
+      "severity": "low",
+      "class": "argv_traceability",
+      "detail": "Each of the 19 full case observations records argv[0] as ...\\W1\\impl\\run_cases_nf.py, but that file does not exist; the runner is ...\\W1\\check\\run_cases_nf.py (runner_id is correct). The recorded reproduction command cannot run as-is.",
+      "evidence": "evidence/cases.json cases[*].argv[0]; Test-Path W1/impl/run_cases_nf.py = False; W1/check/run_cases_nf.py exists."
+    },
+    {
+      "id": "F-05",
+      "severity": "medium",
+      "class": "off_input_unbound",
+      "detail": "off_task_receipt records only rows/exit/imported_forbidden for the OFF path and no input locator or input sha. The shipped context_bundle.md yields 0 parsed rows under _off_native.py, and the shipped 03_W2_DRAFT_TQAEP.md's 13 rows use W2-Bxx ids that the script's digit-only row filter rejects. The 13-row OFF projection and parity claim therefore cannot be recomputed from the candidate alone; the forbidden-import result is still observed ([]) but is vacuous on that input.",
+      "evidence": "evidence/off_task_receipt.json:off keys only rows/exit/imported_forbidden; evidence/w2/material/_off_native.py requires digits in column 1; running it with context_bundle.md returned rows=[] modules=[]."
+    }
+  ]
+}

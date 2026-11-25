@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -382,8 +383,12 @@ def _verify_sources_w0(man: dict) -> list:
                         "reason": "recorded absolute path absent at probe time"})
             continue
         info = base.file_info(p)
-        if (info["bytes"], info["sha256"], info["lines"]) != (
-                s.get("bytes"), s.get("sha256"), s.get("lines")):
+        want = (s.get("bytes"), s.get("sha256"))
+        got = (info["bytes"], info["sha256"])
+        if "lines" in s and s.get("lines") is not None:
+            want = want + (s.get("lines"),)
+            got = got + (info["lines"],)
+        if want != got:
             raise NFError("SOURCE_DIGEST_MISMATCH", sid)
         out.append({"id": sid, "role": s.get("role"), "path": str(p),
                     "bytes": info["bytes"], "sha256": info["sha256"],
@@ -413,7 +418,8 @@ def inspect_generic(pack_root, expected_identity=None) -> dict:
         insp["profile_capabilities"] = {"explain": True, "assets": True,
                                         "dag": True, "cases": True}
         return insp
-    if schema != W0_SCHEMA:
+    m_prof = re.match(r"^FHS5\.PLP\.([A-Z0-9]+)\.SourceManifest\.NF@1$", str(schema))
+    if schema != W0_SCHEMA and not m_prof:
         raise NFError("SCHEMA_UNSUPPORTED", str(schema))
     if expected_identity:
         for k, v in expected_identity.items():
@@ -439,7 +445,7 @@ def inspect_generic(pack_root, expected_identity=None) -> dict:
             raise NFError("SEAL_MISMATCH", "w0")
     return {
         "schema": "FHS5.PLP.W1.NFInspectGeneric@1",
-        "profile": "W0",
+        "profile": (m_prof.group(1) if m_prof else "W0"),
         "manifest_path": man_name,
         "profile_capabilities": {"explain": False, "assets": False,
                                  "dag": False, "cases": False},

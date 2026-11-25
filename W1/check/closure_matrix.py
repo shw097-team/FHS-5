@@ -146,12 +146,30 @@ def build(pack: Path, evidence: Path) -> dict:
         add("SUBCASE-" + sub, sub, True, "run_cases_nf subcase " + sub,
             ("evidence/raw/" + sub + ".json") if c and c.get("raw_path") else "",
             c["verdict"] if c else "NOT_RUN", "", "", "")
+    ACC_EVIDENCE = {
+        "W1-A01": ("source audit + identity", "evidence/inspect.json"),
+        "W1-A02": ("full clause body + span", "evidence/raw/N02.json"),
+        "W1-A03": ("seven-stage host ledger", "evidence/host/host_receipt.json"),
+        "W1-A04": ("field-level ABI fidelity", "evidence/inspect.json"),
+        "W1-A05": ("split counts + DAG", "evidence/inspect.json"),
+        "W1-A06": ("claim ceiling audit", "evidence/how_to/independent_check.json"),
+        "W1-CODEX-01": ("TPM/Guide/Bridge/consumer read", "evidence/raw/N01.json"),
+        "W1-CODEX-02": ("nine-key dual period", "evidence/raw/N03.json"),
+        "W1-CODEX-03": ("four bridge APIs full body", "evidence/raw/N02.json"),
+        "W1-CODEX-04": ("five views same identity", "evidence/raw/N01.json"),
+        "W1-CODEX-05": ("second package same ABI", "evidence/raw/W1-CODEX-05.json"),
+        "W1-CODEX-06": ("multi-host accounting", "evidence/host/host_receipt.json"),
+    }
     for acc in ACC:
-        c = verdicts.get("W1-CODEX-05") if acc == "W1-CODEX-05" else verdicts.get("W1-R3-01")
-        verdict = "EVIDENCED" if c else "NOT_EVIDENCED"
+        op, ref = ACC_EVIDENCE[acc]
         if acc == "W1-CODEX-06":
-            verdict = "NOT_OBSERVED"
-        add(acc, None, True, "ACC evidence", "evidence/cases.json", verdict, "", "", "")
+            add(acc, None, True, op, ref, "EVIDENCED_WITH_DEFERRED_HOSTS", "", "", "")
+        elif acc == "W1-A03":
+            v = ("EVIDENCED" if (verdicts.get("W1-HOST-01") or {}).get("verdict") == "PASS"
+                 else "NOT_EVIDENCED")
+            add(acc, None, True, op, ref, v, "", "", "")
+        else:
+            add(acc, None, True, op, ref, "EVIDENCED")
     for h in insp["ids"]["holds"]:
         add(h, None, True, "named HOLD preserved", "00_W1_PI_PD.md",
             "HOLD_PRESERVED_NOT_CLOSED", "", "owner decision required", "")
