@@ -1,13 +1,13 @@
 {
   "schema": "FHS5.W0NF.ConsumerReceipt@3",
-  "run_id": "clean-20261125153758",
-  "created_at": "2026-11-25T07:38:00+00:00",
+  "run_id": "clean-234-20261125154058",
+  "created_at": "2026-11-25T07:40:59+00:00",
   "consumer_id": "W1-consumer/CODEX-Native-1 (separate process)",
-  "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final\\13_W0_NF_CODEX_20261125\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
-  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final_out\\runs\\clean-20261125153758\\candidate",
-  "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final\\13_W0_NF_CODEX_20261125\\09_DELIVERY\\W0_HANDOFF.md",
+  "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_234\\13_W0_NF_CODEX_20261125\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_234_out\\runs\\clean-234-20261125154058\\candidate",
+  "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_234\\13_W0_NF_CODEX_20261125\\09_DELIVERY\\W0_HANDOFF.md",
   "handoff_sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
-  "evidence_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final\\13_W0_NF_CODEX_20261125\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
+  "evidence_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_234\\13_W0_NF_CODEX_20261125\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
   "evidence_manifest_sha256": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93",
   "validation_ok": true,
   "failure_code": null,
@@ -67,7 +67,7 @@
     {
       "id": "SEAL-PRESENT",
       "ok": true,
-      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_final\\13_W0_NF_CODEX_20261125\\01_PACK\\EXTERNAL_SEAL.json"
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\receive_234\\13_W0_NF_CODEX_20261125\\01_PACK\\EXTERNAL_SEAL.json"
     },
     {
       "id": "SEAL-PACK-PINS",

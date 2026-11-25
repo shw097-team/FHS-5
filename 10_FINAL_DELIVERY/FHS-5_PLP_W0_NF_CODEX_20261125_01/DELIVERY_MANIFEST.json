@@ -9,7 +9,7 @@
     "W1_technical": "W1_TECHNICALLY_READY",
     "W1_execution": "NOT_CLAIMED",
     "release": "NOT_CLAIMED",
-    "publication": "PUSHED_9909d5c_RESULTS_PENDING"
+    "publication": "PUSHED_234e2b1_RESULTS_PENDING"
   },
   "files": [
     {
@@ -19,18 +19,18 @@
     },
     {
       "path": "CONSUMER_MANIFEST.json",
-      "bytes": 3313,
-      "sha256": "3c8bc500186d70b309a3853bfce83ed1933ba335cb575e9ab90d459aa4840bf6"
+      "bytes": 3317,
+      "sha256": "e490b88efeea4489893dabd1bf33f61c926e61a82d34aeb1414ad9f6fe55d360"
     },
     {
       "path": "CONSUMER_MANIFEST.sha256",
       "bytes": 86,
-      "sha256": "6ef5670d20d540f138af16a58314c1a8c920d95bb3441456bed781fb085d27fd"
+      "sha256": "278f14c58552f801b5e74235553dd23cdb54aa528ab2957c46c6635b0b6aa6ad"
     },
     {
       "path": "consumer_receipt.json",
-      "bytes": 125273,
-      "sha256": "992ab97f7cde786439f58da3e06de4ad61584470e29a30fd0f127560e2e91e4d"
+      "bytes": 125271,
+      "sha256": "37d567e8b5c6f7a80edcbf61aa68df3569d316a66263122f17405dabdee24fb3"
     },
     {
       "path": "EVIDENCE_MANIFEST.json",
@@ -44,8 +44,8 @@
     },
     {
       "path": "FHS-5_PLP_W0_CLOSEOUT.md",
-      "bytes": 21832,
-      "sha256": "3323346771b4298a34b71dae46a0dc559bc86f944485a8ff055f1324274e4679"
+      "bytes": 21927,
+      "sha256": "23cfa1f640227c0f3ede052faacbeb14364f5a9337ca436970449de500827b3f"
     },
     {
       "path": "FHS-5_PLP_W0_HANDOFF.md",
@@ -54,8 +54,8 @@
     },
     {
       "path": "PUBLICATION_STATUS.md",
-      "bytes": 957,
-      "sha256": "73a44516c888c1f1c2b3d9f3d7f88b9e18a3897c259a288c745617a17456dd3a"
+      "bytes": 1037,
+      "sha256": "187c191751615f194f7b96c644e4d7a31beb2430cb0ee3c2d374417b35a07ba4"
     },
     {
       "path": "README.md",

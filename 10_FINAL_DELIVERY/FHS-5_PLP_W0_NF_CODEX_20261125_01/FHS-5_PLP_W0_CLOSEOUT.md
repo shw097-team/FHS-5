@@ -275,14 +275,14 @@ policy T 案是 `policy.py` 的單元測試，不是候選產品碼的行為。
 
 | 項 | 值 |
 |---|---|
-| 接收位置 | fresh `git clone https://github.com/shw097-team/FHS-5` at `9909d5c` |
+| 接收位置 | fresh `git clone https://github.com/shw097-team/FHS-5` at `234e2b1`（content commit；results-only 後續 commit 只追加 07） |
 | Candidate | 由 `02_CANDIDATE/repo.bundle` 重建，checkout `bb66a27`；未讀原 workspace repo |
 | Evidence | `50c158e3…`（694 檔索引；clone 內 694/694 SHA 相符） |
 | HANDOFF | 凍結 bytes；receipt `handoff_sha256` 與 clone 內 HANDOFF 完全相符 |
 | Consumer | exit 0；`consumed=true`；**803 checks**；POS `COMPLETE`、NEG `MISSING ["B"]` |
 | 負例 | 10/10 fail-closed、`cli_executed=false`（wrong pack/candidate/oracle/evidence、mutated raw、missing、schema、duplicate、cross-subject、path escape） |
-| Consumer Manifest | `3c8bc500186d70b309a3853bfce83ed1933ba335cb575e9ab90d459aa4840bf6` |
-| Receipt | `07_CONSUMER/clean_receive/receipt.json`，SHA `992ab97f…` |
+| Consumer Manifest | `e490b88efeea4489893dabd1bf33f61c926e61a82d34aeb1414ad9f6fe55d360` |
+| Receipt | `07_CONSUMER/clean_receive/receipt.json`，SHA `37d567e8…`；run `clean-234-20261125154058` |
 
 **W1 technical** 由 Consumer Manifest 推導：`receipt_consumed=true`、`handoff_bytes_match=true`、
 `evidence_bytes_match=true`、`negatives_rejected=true`、`evidence_B0/W0=true`。
