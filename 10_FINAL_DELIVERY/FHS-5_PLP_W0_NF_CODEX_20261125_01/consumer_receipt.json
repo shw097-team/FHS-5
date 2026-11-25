@@ -1,14 +1,14 @@
 {
   "schema": "FHS5.W0NF.ConsumerReceipt@3",
-  "run_id": "final-20261125144845",
-  "created_at": "2026-11-25T06:48:46+00:00",
+  "run_id": "final-20261125145049",
+  "created_at": "2026-11-25T06:50:50+00:00",
   "consumer_id": "W1-consumer/CODEX-Native-1 (separate process)",
   "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
   "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
   "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\09_DELIVERY\\W0_HANDOFF.md",
-  "handoff_sha256": "5fac6354e6e5c27504cf99090094bfc05dd4d5ee48758c08904d81403347a86e",
+  "handoff_sha256": "0f2d57a259b3902cde8f587a74100443dbe33a0b02bac03f74cb74252b3a16ba",
   "evidence_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
-  "evidence_manifest_sha256": "a9c0c724432a80a7d5c3841239c6dd655421aa06415d1e6127776e4ce978eb49",
+  "evidence_manifest_sha256": "d854e31bc71e0404afba4b93d3f50b4c2f8aafa369132f510974ad7a63129d8d",
   "validation_ok": true,
   "failure_code": null,
   "checks": [
@@ -172,7 +172,7 @@
       "id": "EVIDENCE-PIN",
       "ok": true,
       "detail": {
-        "sha": "a9c0c724432a80a7d5c3841239c6dd655421aa06415d1e6127776e4ce978eb49"
+        "sha": "d854e31bc71e0404afba4b93d3f50b4c2f8aafa369132f510974ad7a63129d8d"
       }
     },
     {
@@ -3386,29 +3386,29 @@
       "detail": "openspec/changes/archive/2026-11-25-w0-nf-codex-20261125/tasks.md"
     },
     {
-      "id": "EVIDENCE-FILE-openspec/changes/w0-nf-hardening-20261125/.openspec.yaml",
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125",
       "ok": true,
-      "detail": "openspec/changes/w0-nf-hardening-20261125/.openspec.yaml"
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/.openspec.yaml"
     },
     {
-      "id": "EVIDENCE-FILE-openspec/changes/w0-nf-hardening-20261125/design.md",
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125",
       "ok": true,
-      "detail": "openspec/changes/w0-nf-hardening-20261125/design.md"
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/design.md"
     },
     {
-      "id": "EVIDENCE-FILE-openspec/changes/w0-nf-hardening-20261125/proposal.md",
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125",
       "ok": true,
-      "detail": "openspec/changes/w0-nf-hardening-20261125/proposal.md"
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/proposal.md"
     },
     {
-      "id": "EVIDENCE-FILE-openspec/changes/w0-nf-hardening-20261125/specs/w0-native-ex",
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125",
       "ok": true,
-      "detail": "openspec/changes/w0-nf-hardening-20261125/specs/w0-native-execution/spec.md"
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/specs/w0-native-execution/spec.md"
     },
     {
-      "id": "EVIDENCE-FILE-openspec/changes/w0-nf-hardening-20261125/tasks.md",
+      "id": "EVIDENCE-FILE-openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125",
       "ok": true,
-      "detail": "openspec/changes/w0-nf-hardening-20261125/tasks.md"
+      "detail": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/tasks.md"
     },
     {
       "id": "EVIDENCE-FILE-openspec/config.yaml",

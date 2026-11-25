@@ -9,7 +9,7 @@
     "W1_technical": "W1_TECHNICALLY_READY",
     "W1_execution": "NOT_CLAIMED",
     "release": "NOT_CLAIMED",
-    "publication": "LOCAL_ONLY_PENDING_PUSH"
+    "publication": "PUSHED_e49b7b5_DOCS_PENDING"
   },
   "files": [
     {
@@ -20,27 +20,27 @@
     {
       "path": "CONSUMER_MANIFEST.json",
       "bytes": 1532,
-      "sha256": "cd4d921ebd75f78e258b3632a66412419d2ae8ecd03013037315418a8af84a5a"
+      "sha256": "965cfd7d26209244473f0cefcd18bb32e5f9ebd3aa9f76acf3f58bc1a24dca19"
     },
     {
       "path": "CONSUMER_MANIFEST.sha256",
       "bytes": 86,
-      "sha256": "48397840e22aa69dfa83e6cfb513742c7e0edccc1f69783de9464da1054b8e1d"
+      "sha256": "b87b0e2cf5d70f41a7b45df55e3858ea888d8ba41576eba03c85a3add56321c6"
     },
     {
       "path": "consumer_receipt.json",
-      "bytes": 121153,
-      "sha256": "51872111985b90a7893bb91cb125b11bcfff3703a3edb2b916f499e5346f2f5d"
+      "bytes": 121278,
+      "sha256": "d2b0291237ac1329a6c0c8d0306fe550dc43d3410011fb63d52c654df16a5204"
     },
     {
       "path": "EVIDENCE_MANIFEST.json",
-      "bytes": 129270,
-      "sha256": "a9c0c724432a80a7d5c3841239c6dd655421aa06415d1e6127776e4ce978eb49"
+      "bytes": 129365,
+      "sha256": "d854e31bc71e0404afba4b93d3f50b4c2f8aafa369132f510974ad7a63129d8d"
     },
     {
       "path": "EVIDENCE_MANIFEST.sha256",
       "bytes": 66,
-      "sha256": "5f11af4b03ecca35b031498191a9341bed83db481b3b2a8989d5716ed7669282"
+      "sha256": "66bd1cc3c96de44621b99403d9dd7ff3f8dc290561c0545c2c826eae28dd60d3"
     },
     {
       "path": "FHS-5_PLP_W0_CLOSEOUT.md",
@@ -49,18 +49,18 @@
     },
     {
       "path": "FHS-5_PLP_W0_HANDOFF.md",
-      "bytes": 3161,
-      "sha256": "5fac6354e6e5c27504cf99090094bfc05dd4d5ee48758c08904d81403347a86e"
+      "bytes": 3172,
+      "sha256": "0f2d57a259b3902cde8f587a74100443dbe33a0b02bac03f74cb74252b3a16ba"
     },
     {
       "path": "PUBLICATION_STATUS.md",
-      "bytes": 1046,
-      "sha256": "1cb762636458c586dbd6716c1fdcce180f520ef6782bc2a6e065661d462679a3"
+      "bytes": 1043,
+      "sha256": "ed13a835b08f72fed064389a575a7e8d98161a7e0c488eecaf124e72d99aa0d7"
     },
     {
       "path": "README.md",
-      "bytes": 2083,
-      "sha256": "f0e3ac81beab6da5835810ce27647e9d2a454e07daef98f2fd9e61fe322bc15a"
+      "bytes": 2108,
+      "sha256": "e1738fc5db23a49e4e3bea95a79d14d2ff4d27c7d7bffee3fa5e72d66e89238f"
     },
     {
       "path": "REPLAY.md",

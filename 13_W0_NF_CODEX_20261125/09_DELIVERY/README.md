@@ -11,7 +11,7 @@
 4. `EVIDENCE_MANIFEST.json`：證據檔 SHA/bytes 索引、pins、claims 與 workspace-only 說明。
 5. `REPLAY.md`：從 raw 重播的實際命令。
 6. `UPSTREAM_WRITEBACK/`：MASTER／PROG-00／PROJ-01..05／WM 的受影段替換稿（待採納）。
-7. `PUBLICATION_STATUS.md`：local commit 與實際 push 狀態。
+7. `PUBLICATION_STATUS.md`：local commit 與實際 push 狀態（hardening `e49b7b5`）。
 8. `CONSUMER_MANIFEST.json`／`consumer_receipt.json`：W1 consumer 776 checks 與 10 負例。
 
 ## 原始證據位置

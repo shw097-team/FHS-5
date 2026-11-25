@@ -1,10 +1,10 @@
 {
   "schema": "FHS5.W0NF.ConsumerManifest@2",
-  "run_id": "final-20261125144845",
-  "consumer_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\runs\\final-20261125144845\\receipt.json",
-  "consumer_receipt_sha256": "51872111985b90a7893bb91cb125b11bcfff3703a3edb2b916f499e5346f2f5d",
-  "evidence_manifest_sha256": "a9c0c724432a80a7d5c3841239c6dd655421aa06415d1e6127776e4ce978eb49",
-  "handoff_sha256": "5fac6354e6e5c27504cf99090094bfc05dd4d5ee48758c08904d81403347a86e",
+  "run_id": "final-20261125145049",
+  "consumer_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\07_CONSUMER\\runs\\final-20261125145049\\receipt.json",
+  "consumer_receipt_sha256": "d2b0291237ac1329a6c0c8d0306fe550dc43d3410011fb63d52c654df16a5204",
+  "evidence_manifest_sha256": "d854e31bc71e0404afba4b93d3f50b4c2f8aafa369132f510974ad7a63129d8d",
+  "handoff_sha256": "0f2d57a259b3902cde8f587a74100443dbe33a0b02bac03f74cb74252b3a16ba",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
     "head": "bb66a276aae8c5d6aef549832c523587fc47d247",
@@ -13,10 +13,10 @@
   "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
   "consumed": true,
   "raw": {
-    "neg.meta.json": "27f95481699503320e0c93c059ecb9a426539b67e65882b0f9b072c0e23ec7ca",
+    "neg.meta.json": "4f325fbebfa00f1e195c9936549e57e1666a2d27aae022dee06830efe29857c6",
     "neg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "neg.stdout.txt": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
-    "pos.meta.json": "d7d93cb15432cc94291f0f54401c136659d12126c8ae5376343ce4009961b8f7",
+    "pos.meta.json": "90094302d7dc7ec4aa11b72d11f10847a8d3bf18194b343272bd6e9b05ef0e00",
     "pos.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "pos.stdout.txt": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33"
   },

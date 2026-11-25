@@ -12,7 +12,7 @@
 - **candidate_preimage**：`5eab43de2d3f67d6afbb1c5f6bc390e2c391da36`
 - **oracle_sha256**：`112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6`
 - **evidence_ref**：`10_EVIDENCE/EVIDENCE_MANIFEST.json`
-- **evidence_manifest_sha256**：`a9c0c724432a80a7d5c3841239c6dd655421aa06415d1e6127776e4ce978eb49`
+- **evidence_manifest_sha256**：`d854e31bc71e0404afba4b93d3f50b4c2f8aafa369132f510974ad7a63129d8d`
 - **consumer_manifest_sha256**：SEE `07_CONSUMER/CONSUMER_MANIFEST.sha256`
 - **case_set**：SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44
 - **target_consumer**：W1 / CODEX Native（`tools/consumer.py`，`W1-consumer/CODEX-Native-1`）
@@ -55,7 +55,7 @@ W1–W4 全分母、FHS 485、HERMES／GPT Host、不同 principal 簽章、Publ
 
 ## publication_state
 
-本輪 `LOCAL_ONLY`：前輪已推 `43ac758..f3add20`；本輪 hardening commit 待推送。
+本輪 `15b063e..e49b7b5` 已 fast-forward 推送；後續 docs/archive commit 以同一流程補推。
 詳見 `PUBLICATION_STATUS.md`。
 
 ## stop／resume

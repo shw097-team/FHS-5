@@ -1,6 +1,6 @@
 {
   "schema": "FHS5.W0NF.EvidenceManifest@1",
-  "generated_at": "2026-11-25T06:48:02+00:00",
+  "generated_at": "2026-11-25T06:50:49+00:00",
   "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
@@ -3454,29 +3454,29 @@
       "sha256": "d9adad37cd72474c243adc6af4cc48c17add497f6704ed0d407c8bc862147308"
     },
     {
-      "path": "openspec/changes/w0-nf-hardening-20261125/.openspec.yaml",
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/.openspec.yaml",
       "bytes": 40,
       "sha256": "3c3c72cd1a100807c59ef8347538654b4d2d22269f59561c985b01cb44c39491"
     },
     {
-      "path": "openspec/changes/w0-nf-hardening-20261125/design.md",
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/design.md",
       "bytes": 1348,
       "sha256": "47ba4a10b1c49b0240af126d1007995be5304f5e81f1d7fa5d7fe41881820859"
     },
     {
-      "path": "openspec/changes/w0-nf-hardening-20261125/proposal.md",
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/proposal.md",
       "bytes": 1199,
       "sha256": "1841118b19ff90c75c230061269e15d056b64cfb3981783e96f6b508a70bc733"
     },
     {
-      "path": "openspec/changes/w0-nf-hardening-20261125/specs/w0-native-execution/spec.md",
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/specs/w0-native-execution/spec.md",
       "bytes": 1495,
       "sha256": "c7320935ae282c095a16ef4bd96b5bebfc021cef49f4a99fb4914b006c7c3f67"
     },
     {
-      "path": "openspec/changes/w0-nf-hardening-20261125/tasks.md",
-      "bytes": 879,
-      "sha256": "b42087983ae6a1e0061db2702192407f20c8047a881bbf05bdd5baa44ca7ac5e"
+      "path": "openspec/changes/archive/2026-11-25-w0-nf-hardening-20261125/tasks.md",
+      "bytes": 927,
+      "sha256": "54bbaacc52f65a64130f75748b7d5e925a127c0a25a7ad7194cf6f2670c3663c"
     },
     {
       "path": "openspec/config.yaml",
@@ -3490,8 +3490,8 @@
     },
     {
       "path": "openspec/specs/w0-native-execution/spec.md",
-      "bytes": 3299,
-      "sha256": "f0062399c2361b150675924bac68028ca7e2e500c6e162cf3ad981c2711e3e55"
+      "bytes": 4758,
+      "sha256": "768905c44d8d1e7e62e424601d8df6ed3a8ea4c655a160aea6390cec954aa333"
     },
     {
       "path": "tools/bridge_run.py",
