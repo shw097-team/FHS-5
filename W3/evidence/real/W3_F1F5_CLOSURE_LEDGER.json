@@ -31,8 +31,12 @@
     "W4_EXECUTION_READY": false
   },
   "F5": {
-    "status": "LOCAL_COMMIT_PENDING",
-    "pushed": false
+    "status": "PUSHED",
+    "pushed": true,
+    "branch": "codex/w3-real-product-20261126T1902",
+    "content_commit": "46d0a163be7dd5048241cb7c5320f44a10852eeb",
+    "remote_tip": "d89084a17c15186b07f4bd9a4dd58cfb1865c76c",
+    "remote_tree": "a4a3ba8e4d7259bc499552202bc8fbe4244003a0"
   },
   "claims": {
     "W2_NF_VALIDATED": false,

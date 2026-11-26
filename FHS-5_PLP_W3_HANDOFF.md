@@ -46,5 +46,5 @@ W4 READ/DRAFT only until a named W4 execution authority is granted.
 
 ## remote readback
 
-- remote commit `46d0a163be7dd5048241cb7c5320f44a10852eeb`
+- remote tip `d89084a17c15186b07f4bd9a4dd58cfb1865c76c`
 - remote tree `a644ef6cf04ade5fa9d3e7a8144929e8e2c08deb`

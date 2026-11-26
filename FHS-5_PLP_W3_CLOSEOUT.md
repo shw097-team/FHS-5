@@ -13,7 +13,7 @@
 | F2 W3 Product Freeze | **ACHIEVED_GENERIC_NATIVE** | 獨立 Case Owner 16 fixtures/oracles，全部不同於 design；candidate `275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4` |
 | F3 產品驗收 | **16/16 PRODUCT_PASS** | 33/33 FR product evidence；獨立 product verifier + checker |
 | F4 Checker / W4 | **PRODUCT CHECKER PASS / W4 PREPARED_NOT_READY** | fresh W4 consumer PASS；formal W3_NF/W4 readiness remain false due to W2 verdict + independent-principal prerequisites |
-| F5 GitHub | **PUSHED** | branch `codex/w3-real-product-20261126T1902`；remote `46d0a163be7dd5048241cb7c5320f44a10852eeb` / tree `a644ef6cf04ade5fa9d3e7a8144929e8e2c08deb` |
+| F5 GitHub | **PUSHED** | branch `codex/w3-real-product-20261126T1902`；remote tip `d89084a17c15186b07f4bd9a4dd58cfb1865c76c` / tree `a4a3ba8e4d7259bc499552202bc8fbe4244003a0` |
 
 ## 產品驗收
 
