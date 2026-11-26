@@ -33,7 +33,8 @@ if str(IMPL) not in sys.path:
 
 import off_isolation as oi  # noqa: E402  (path bootstrap above)
 
-PACK = os.environ.get("W1_PACK") or oi.DEFAULT_PACK_ROOT
+from packloc import resolve_pack
+PACK = resolve_pack()
 HEX64 = set("0123456789abcdef")
 
 

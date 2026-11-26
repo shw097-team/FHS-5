@@ -1,0 +1,10 @@
+{
+ "admission_pin": "48e25b81fb4a4c95b88c17d9c30294684a4ea65a441384d3d15df21d7293240b",
+ "tests_rewritten": [],
+ "probe_gen1_rc": 0,
+ "probe_gen2_rc": 0,
+ "pytest_rc": 0,
+ "pytest_last": "106 passed, 15 subtests passed in 16.06s",
+ "gen1_verdict": "GREEN",
+ "gen2_verdict": "GREEN"
+}

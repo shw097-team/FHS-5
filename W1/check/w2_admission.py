@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Owner admission verifier (r4b) — closes the findings the verifier raised.
+"""W2 admission (generation 2) — the product entry, not a second runtime.
 
-F1  a valid receipt could write anywhere (decision allowed_roots is PENDING):
-    derive()/require() now take repo_root + targets and refuse unless the root is
-    an explicitly authorised one and every target stays inside it.
-F2  expiry/revocation was copied as a string and never evaluated:
-    _evaluate_expiry() parses the clause and refuses EXPIRED_<date> / REVOKED.
-F3  the file was read three times (hash vs parse TOCTOU) and require() compared
-    only the effect list against the fresh document:
-    single read, and subject/scope/effects/root are all compared.
+Replaces the generation-1 verifier that copied a prose expiry and a
+local-marker revocation.  The changes that matter:
 
-Out of scope, stated not hidden: anyone who can rewrite this module or the gate
-owns the process.  The gate pins this file's digest, which removes the
-shadow/poison path that only needed write access to the repo tree.
+  A1  Revocation is by decision_id, so a fresh clone with no local marker still
+      refuses the terminated decision.  The marker only corroborates.
+  A2  Expiry is an absolute instant parsed from the decision, not a regex over
+      its prose.
+  A3  A caller cannot supply a root, scope, issuer, expiry or trust path that
+      changes the decision: those keys are refused, not ignored.  A decision
+      path may be supplied only to *locate* the pinned bytes.
+  A4  The write set is the decision's exact op set.  A subset is not "fine".
+  A5  Lexical checks and resolved checks are separate; every component from the
+      root down is checked for a reparse point (junction or symlink).
+
+Out of scope, stated: whoever can rewrite this module owns the process.  The
+gate pins this file's digest, and this module refuses a decision whose bytes do
+not match the pin.
 """
 from __future__ import annotations
 
@@ -21,26 +26,37 @@ import datetime as _dt
 import hashlib
 import json
 import os
-import re
 from pathlib import Path
 
-TRUST = {
-    "decision_sha256": "1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7",
-    "decision_id": "W2-NF-PRIMARY-20261126-01",
-    "schema": "FHS5.PLP.W2.OwnerDecision@local-1",
-    "decision_path_candidates": (
-        "W2_NATIVE_RUNS/20261126T1225_W2_FINAL_CLOSURE/10_PACK/19_W2_NF_CODEX_20261126/W2_OWNER_DECISION.json",
-        "W2_NATIVE_RUNS/20261126T1121_W2_PRODUCT/10_PACK/19_W2_NF_CODEX_20261126/W2_OWNER_DECISION.json",
-    ),
-    "repo_root": "C:/Projects/Agent_Workspace/FHS-5_Workspace",
-    "revocation_marker": "W2_NATIVE_RUNS/OWNER_REVOKED.json",
-    "finding_marker": "W2_NATIVE_RUNS/W2_SECURITY_FINDING.json",
-    "subjects": {"DEV": "FHS-5_PLP/W2/CONTROL_PACK", "OPS": "FHS-5_PLP/W2/CONTROL_PACK"},
-    "effects": {"DEV": ["dev"], "OPS": ["ops"]},
-    "authorised_roots": (
-        "C:/Projects/Agent_Workspace/FHS-5_Workspace/W2_NATIVE_RUNS/",
-    ),
+SCHEMA = "FHS5.PLP.W2.OwnerDecision@local-2"
+DECISION_ID = "W2-S2S3-OWNER-20261126-02"
+DECISION_SHA256 = "abde6b84d92d15ed6806ad6c9c81c999019d75948ba0d9f03e8d4309a920f5e1"
+NOT_AFTER = "2026-11-27T23:59:59+08:00"
+DOMAIN = "DEV"
+SCOPE = "W2-NF-01"
+SUBJECT_ID = "FHS-5_PLP/W2/CONTROL_PACK"
+WRITE_ROOT = (
+    "C:/Projects/Agent_Workspace/FHS-5_Workspace/W2_NATIVE_RUNS/"
+    "S2S3_20261126T225929/20_WORLD"
+)
+ALLOWED_OPS = (
+    ("W1/check/w2_receiver.py", "MODIFY"),
+    ("W1/check/test_j1_receiver.py", "MODIFY"),
+)
+REVOKED = {
+    "W2-NF-PRIMARY-20261126-01": "ADMISSION_TERMINATED_BY_SECURITY_FINDING",
 }
+FINDING_MARKERS = ("W2_NATIVE_RUNS/W2_SECURITY_FINDING.json",)
+DECISION_CANDIDATES = (
+    "W2_NATIVE_RUNS/S2S3_20261126T225929/10_DECISION/W2_OWNER_DECISION_S2S3.json",
+)
+
+_FORBIDDEN_REQUEST_KEYS = {
+    "trust_path", "trust_root", "decision_sha256", "allowed_roots",
+    "write_root", "issuer", "principal", "scope_override", "expiry",
+    "not_after", "revoked", "revocation", "decision_id",
+}
+FILE_ATTRIBUTE_REPARSE_POINT = 0x400
 
 
 class AdmissionError(Exception):
@@ -50,202 +66,213 @@ class AdmissionError(Exception):
         self.detail = detail
 
 
-def _sha(b):
+def _sha(b: bytes) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _digest(fields):
+def _digest(fields) -> str:
     return _sha(json.dumps(fields, sort_keys=True, ensure_ascii=False).encode("utf-8"))
 
 
-def resolve_decision(explicit_path=None):
+def _is_reparse(p: Path) -> bool:
+    try:
+        st = p.lstat()
+    except OSError:
+        return False
+    if p.is_symlink():
+        return True
+    return bool(getattr(st, "st_file_attributes", 0) & FILE_ATTRIBUTE_REPARSE_POINT)
+
+
+def _chain_has_reparse(root: Path, target: Path) -> bool:
+    try:
+        rel = target.relative_to(root)
+    except ValueError:
+        return True
+    cur = root
+    if _is_reparse(cur):
+        return True
+    for part in rel.parts:
+        cur = cur / part
+        if _is_reparse(cur):
+            return True
+    return False
+
+
+def _lexical_problem(path) -> str | None:
+    if not isinstance(path, str) or not path:
+        return "empty"
+    if path.startswith("/") or path.startswith("\\"):
+        return "absolute"
+    if "\\" in path:
+        return "backslash"
+    if ":" in path.split("/")[0]:
+        return "drive"
+    if "*" in path or "?" in path:
+        return "glob"
+    for seg in path.split("/"):
+        if seg in ("", ".", ".."):
+            return "segment"
+        if seg.endswith(" ") or seg.endswith("."):
+            return "truncatable segment"
+    return None
+
+
+def _locate_decision(explicit_path):
     cands = []
     if explicit_path:
         cands.append(Path(explicit_path))
     env = os.environ.get("W2_DECISION_PATH")
     if env:
         cands.append(Path(env))
-    root = Path(TRUST["repo_root"])
-    cands += [root / c for c in TRUST["decision_path_candidates"]]
+    repo = Path(__file__).resolve().parents[2]
+    cands += [repo / c for c in DECISION_CANDIDATES]
     for c in cands:
-        if c.is_file() and _sha(c.read_bytes()) == TRUST["decision_sha256"]:
-            return c
+        try:
+            if c.is_file() and _sha(c.read_bytes()) == DECISION_SHA256:
+                return c
+        except OSError:
+            continue
     raise AdmissionError("FALSE_AUTHORITY",
-                         "no decision document matching the pinned sha "
-                         + TRUST["decision_sha256"][:16])
+                         "no decision matching " + DECISION_SHA256[:16])
 
 
-def _load_verified(explicit_path=None):
-    p = resolve_decision(explicit_path)
+def _load_decision(explicit_path):
+    p = _locate_decision(explicit_path)
     raw = p.read_bytes()
     got = _sha(raw)
-    if got != TRUST["decision_sha256"]:
-        raise AdmissionError("FALSE_AUTHORITY", "decision sha drifted mid-read")
+    if got != DECISION_SHA256:
+        raise AdmissionError("FALSE_AUTHORITY", "decision drifted mid-read")
     doc = json.loads(raw.decode("utf-8"))
-    if doc.get("schema") != TRUST["schema"]:
+    if doc.get("schema") != SCHEMA:
         raise AdmissionError("FALSE_AUTHORITY", "schema " + str(doc.get("schema")))
-    if doc.get("decision_id") != TRUST["decision_id"]:
+    if doc.get("decision_id") != DECISION_ID:
         raise AdmissionError("FALSE_AUTHORITY", "decision_id " + str(doc.get("decision_id")))
-    return {"doc": doc, "path": p, "sha256": got}
+    return doc, got, p
 
 
-def _revoked():
-    return (Path(TRUST["repo_root"]) / TRUST["revocation_marker"]).exists()
-
-
-def _terminated_by_finding():
-    """The decision's own clause: validity ends when a security Finding appears."""
-    return (Path(TRUST["repo_root"]) / TRUST["finding_marker"]).exists()
-
-
-def _evaluate_events():
-    if _revoked():
-        raise AdmissionError("ADMISSION_REVOKED", str(TRUST["revocation_marker"]))
-    if _terminated_by_finding():
-        raise AdmissionError("ADMISSION_TERMINATED_BY_SECURITY_FINDING",
-                             str(TRUST["finding_marker"]))
-
-
-def _evaluate_expiry(doc):
-    text = str(doc.get("expiry_revocation") or "")
-    up = text.upper()
-    if "REVOK" in up and "NOT_REVOKED" not in up:
-        raise AdmissionError("ADMISSION_REVOKED", text[:120])
-    for m in re.finditer(r"(EXPIRED?|VALID[_ ]UNTIL)[^0-9]{0,12}(\d{4}-\d{2}-\d{2})", up):
-        try:
-            day = _dt.date.fromisoformat(m.group(2))
-        except ValueError:
-            raise AdmissionError("ADMISSION_EXPIRY_UNPARSABLE", text[:120])
-        if day <= _dt.date.today():
-            raise AdmissionError("ADMISSION_EXPIRED", str(day))
-    for m in re.finditer(r"(\d{4}-\d{2}-\d{2})\s*(?:至|to|~|-)\s*(\d{4}-\d{2}-\d{2})", text):
-        try:
-            end = _dt.date.fromisoformat(m.group(2))
-        except ValueError:
-            continue
-        if end <= _dt.date.today():
-            raise AdmissionError("ADMISSION_EXPIRED", str(end))
-
-
-def _within(child, parent):
-    """Path-component containment, not a string prefix."""
+def _evaluate_state(doc, repo_root, now=None):
+    did = doc.get("decision_id")
+    if did in REVOKED:
+        raise AdmissionError(REVOKED[did], did)
     try:
-        Path(child).relative_to(Path(parent))
-        return True
-    except ValueError:
-        return False
+        end = _dt.datetime.fromisoformat(str(doc.get("expiry") or NOT_AFTER))
+    except ValueError as exc:
+        raise AdmissionError("ADMISSION_EXPIRY_UNPARSABLE", str(doc.get("expiry"))) from exc
+    if end.tzinfo is None:
+        raise AdmissionError("ADMISSION_EXPIRY_UNPARSABLE", "no offset")
+    clock = now or _dt.datetime.now(end.tzinfo)
+    if clock >= end:
+        raise AdmissionError("ADMISSION_EXPIRED", f"{clock.isoformat()} >= {end.isoformat()}")
+    for rel in FINDING_MARKERS:
+        if (Path(repo_root) / rel).exists() and did in REVOKED:
+            raise AdmissionError("ADMISSION_TERMINATED_BY_SECURITY_FINDING", rel)
 
 
-def _check_root(repo_root, targets):
-    repo = Path(repo_root).resolve()
-    roots = [Path(r).resolve() for r in TRUST["authorised_roots"]]
-    if not any(_within(repo, r) for r in roots):
-        raise AdmissionError("ROOT_NOT_AUTHORISED", str(repo))
-    out = []
+def derive(domain, scope, repo_root, targets, ops=None, decision_path=None,
+           request=None):
+    if request is not None:
+        if not isinstance(request, dict):
+            raise AdmissionError("REQUEST_INVALID", "not an object")
+        bad = sorted(set(request) & _FORBIDDEN_REQUEST_KEYS)
+        if bad:
+            raise AdmissionError("TRUST_OVERRIDE_REJECTED", bad)
+
+    doc, dec_sha, dec_path = _load_decision(decision_path)
+    _evaluate_state(doc, repo_root)
+
+    if str(domain).upper() != DOMAIN:
+        raise AdmissionError("PRINCIPAL_DOMAIN_MISMATCH", str(domain))
+    if scope != SCOPE:
+        raise AdmissionError("SCOPE_MISMATCH", {"want": SCOPE, "got": scope})
+    if (doc.get("scope") or {}).get("subject_id") != SUBJECT_ID:
+        raise AdmissionError("SCOPE_MISMATCH", "decision subject")
+
+    root = Path(repo_root).resolve()
+    if str(root).lower() != str(Path(WRITE_ROOT).resolve()).lower():
+        raise AdmissionError("ROOT_NOT_AUTHORISED", str(root))
+    if _is_reparse(root):
+        raise AdmissionError("REPARSE_POINT_REFUSED", str(root))
+
+    allowed = set(ALLOWED_OPS)
+    got = set()
+    resolved = []
     for t in targets or []:
-        tp = Path(t).resolve() if Path(t).is_absolute() else (repo / t).resolve()
-        if not _within(tp, repo):
-            raise AdmissionError("TARGET_OUTSIDE_ROOT", str(tp))
-        out.append(str(tp))
-    return out
+        path = t.get("path")
+        op = str(t.get("operation", "")).upper()
+        problem = _lexical_problem(path)
+        if problem is not None:
+            raise AdmissionError("WRITE_SET_UNBOUND", f"{path!r}: {problem}")
+        tp = (root / path).resolve(strict=False)
+        try:
+            tp.relative_to(root)
+        except ValueError:
+            raise AdmissionError("TARGET_OUTSIDE_ROOT", str(tp)) from None
+        if _chain_has_reparse(root, tp):
+            raise AdmissionError("REPARSE_POINT_REFUSED", str(tp))
+        got.add((path, op))
+        resolved.append({"path": path, "operation": op, "absolute": str(tp)})
+    if got != allowed:
+        raise AdmissionError("WRITE_SET_UNBOUND",
+                             {"want": sorted(allowed), "got": sorted(got)})
+
+    for extra in ops or []:
+        if (extra.get("path"), str(extra.get("operation", "")).upper()) not in allowed:
+            raise AdmissionError("WRITE_SET_UNBOUND", "op outside decision: " + str(extra))
+
+    fields = {
+        "decision_id": doc.get("decision_id"),
+        "subject_id": SUBJECT_ID,
+        "scope": SCOPE,
+        "domain": DOMAIN,
+        "write_root": str(root),
+        "targets": sorted(f"{p}:{o}" for p, o in allowed),
+        "decision_sha256": dec_sha,
+        "expiry": (doc.get("expiry") or NOT_AFTER),
+        "generation": 2,
+    }
+    return {
+        "ok": True,
+        "decision_id": fields["decision_id"],
+        "subject_id": SUBJECT_ID,
+        "scope": SCOPE,
+        "domain": DOMAIN,
+        "targets": resolved,
+        "verified_from": {"decision": str(dec_path), "sha256": dec_sha},
+        "fields": fields,
+        "subject_sha256": _digest(fields),
+    }
 
 
-def _check_ops(repo_root, ops):
-    """ADD requires a real parent directory; MODIFY/DELETE require a real file."""
-    repo = Path(repo_root).resolve()
-    for o in ops or []:
-        p = (repo / o["path"]).resolve()
-        op = str(o.get("operation", "")).upper()
-        if op == "ADD":
-            if p.exists():
-                raise AdmissionError("WRITE_SET_UNBOUND", "ADD target already exists: " + str(p))
-            if not p.parent.is_dir():
-                raise AdmissionError("PARENT_ABSENT", str(p.parent))
-        elif op in ("MODIFY", "DELETE"):
-            if not p.is_file():
-                raise AdmissionError("WRITE_SET_UNBOUND", "target missing: " + str(p))
-        else:
-            raise AdmissionError("WRITE_SET_UNBOUND", "unknown operation: " + op)
-
-
-def derive(domain, scope="W2-NF-01", repo_root=None, targets=None,
-           ops=None, explicit_path=None):
-    _evaluate_events()
-    v = _load_verified(explicit_path)
-    doc = v["doc"]
-    _evaluate_expiry(doc)
-    sc = doc.get("scope") or {}
-    want = TRUST["subjects"].get(domain)
-    if sc.get("subject_id") != want:
-        raise AdmissionError("SCOPE_MISMATCH",
-                             str({"want": want, "granted": sc.get("subject_id")}))
-    if sc.get("scope") != scope:
-        raise AdmissionError("SCOPE_MISMATCH",
-                             str({"want": scope, "granted": sc.get("scope")}))
-    authorised = [e.strip().lower() for e in (sc.get("effects_authorized") or [])]
-    tokens = TRUST["effects"].get(domain, [])
-    if not any(any(a.startswith(t) for t in tokens) for a in authorised):
-        raise AdmissionError("FALSE_AUTHORITY",
-                             str({"domain": domain, "authorised": authorised}))
-    if str(sc.get("allowed_roots") or "").upper().startswith("PENDING") and repo_root is None:
-        raise AdmissionError("ROOT_NOT_AUTHORISED",
-                             "decision allowed_roots is PENDING; supply and check a root")
-    resolved = _check_root(repo_root, targets) if repo_root is not None else []
-    if ops:
-        _check_ops(repo_root, ops)
-    fields = {"decision_id": doc.get("decision_id"), "subject_id": sc.get("subject_id"),
-              "scope": sc.get("scope"), "domain": domain,
-              "effects_authorized": sorted(sc.get("effects_authorized") or []),
-              "expiry_revocation": doc.get("expiry_revocation"),
-              "decision_sha256": v["sha256"],
-              "trust_root": TRUST["decision_sha256"],
-              "root": str(Path(repo_root).resolve()) if repo_root else None,
-              "targets": sorted(resolved)}
-    return {"ok": True, "decision_id": doc.get("decision_id"),
-            "subject_id": sc.get("subject_id"), "scope": sc.get("scope"),
-            "domain": domain, "expiry_revocation": doc.get("expiry_revocation"),
-            "verified_from": {"path": str(v["path"]), "sha256": v["sha256"]},
-            "fields": fields, "subject_sha256": _digest(fields)}
-
-
-def require(receipt, domain, scope="W2-NF-01", explicit_path=None,
-            repo_root=None, targets=None, ops=None):
+def require(receipt, domain, scope, repo_root, targets, ops=None,
+            decision_path=None, request=None):
     if not isinstance(receipt, dict) or receipt.get("ok") is not True:
         raise AdmissionError("FALSE_AUTHORITY", "no receipt")
-    _evaluate_events()
-    v = _load_verified(explicit_path)
-    _evaluate_expiry(v["doc"])
     fields = receipt.get("fields")
     if not isinstance(fields, dict) or not fields:
         raise AdmissionError("FALSE_AUTHORITY", "receipt carries no field set")
-    if fields.get("decision_sha256") != v["sha256"] or \
-            fields.get("trust_root") != TRUST["decision_sha256"]:
-        raise AdmissionError("FALSE_AUTHORITY", "receipt does not point at the pinned decision")
     if _digest(fields) != receipt.get("subject_sha256"):
         raise AdmissionError("FALSE_AUTHORITY", "receipt digest does not re-derive")
-    for k in ("decision_id", "subject_id", "scope", "domain"):
-        if receipt.get(k) != fields.get(k):
+    if fields.get("decision_sha256") != DECISION_SHA256:
+        raise AdmissionError("FALSE_AUTHORITY", "receipt pins another decision")
+    fresh = derive(domain, scope, repo_root, targets, ops=ops,
+                   decision_path=decision_path, request=request)
+    for k in ("decision_id", "subject_id", "scope", "domain", "write_root",
+              "targets", "decision_sha256"):
+        if fields.get(k) != fresh["fields"][k]:
             raise AdmissionError("FALSE_AUTHORITY", "receipt field drifted: " + k)
-    fresh = derive(domain, scope, repo_root=repo_root, targets=targets,
-                   ops=ops, explicit_path=explicit_path)
-    if targets and sorted(fresh["fields"]["targets"]) != sorted(fields.get("targets") or []):
-        raise AdmissionError("TARGET_SET_MISMATCH",
-                             "receipt was issued for a different target set")
-    for k in ("subject_id", "scope", "effects_authorized"):
-        if fresh["fields"][k] != fields.get(k):
-            raise AdmissionError("FALSE_AUTHORITY",
-                                 "decision changed since the receipt: " + k)
-    if repo_root is not None and fresh["fields"]["root"] != fields.get("root"):
-        raise AdmissionError("ROOT_NOT_AUTHORISED",
-                             "receipt was issued for a different root")
-    return {"ok": True, "decision_id": fresh["decision_id"], "domain": domain,
-            "verified_from": fresh["verified_from"], "reverified": True}
+    return {"ok": True, "decision_id": fresh["decision_id"], "domain": DOMAIN,
+            "scope": fresh["scope"], "subject_id": fresh["subject_id"],
+            "verified_from": fresh["verified_from"], "reverified": True,
+            "fields": fresh["fields"], "subject_sha256": fresh["subject_sha256"]}
 
 
-def verify_receipt(receipt, explicit_path=None):
+def verify_receipt(receipt, domain="DEV", scope=SCOPE, repo_root=WRITE_ROOT,
+                   targets=None, decision_path=None):
     try:
-        require(receipt, receipt.get("domain", "DEV"),
-                receipt.get("scope", "W2-NF-01"), explicit_path)
+        require(receipt, domain, scope, repo_root,
+                targets or [{"path": p, "operation": o} for p, o in ALLOWED_OPS],
+                decision_path=decision_path)
         return True
     except AdmissionError:
         return False

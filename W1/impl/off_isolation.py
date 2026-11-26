@@ -45,10 +45,14 @@ from typing import Any
 DEFAULT_IMPL_DIR = (
     r"C:\Projects\Agent_Workspace\FHS-5_Workspace\worktrees\W1_NF_r3\W1\impl"
 )
-DEFAULT_PACK_ROOT = (
-    r"C:\Projects\Agent_Workspace\FHS-5_Workspace\worktrees\W1_NF_r3"
-    r"\16_W1_NF_CODEX_20261125T222954\control_pack\FHS-5_PLP_W1_NATIVE_FIRST"
-)
+def _default_pack_root():
+    root = Path(__file__).resolve().parents[2]
+    for cand in sorted(root.glob("18_W1_NF_*/control_pack/FHS-5_PLP_W1_NATIVE_FIRST")):
+        return str(cand)
+    return ""
+
+
+DEFAULT_PACK_ROOT = _default_pack_root()
 
 # Modules that genuinely do not exist on this host. Used as the cold-off
 # target set; ``positive_control`` proves the probe is able to see a success.

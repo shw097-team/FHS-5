@@ -19,10 +19,9 @@ sys.path.insert(0, str(HERE))
 
 import run_cases_nf as runner
 
-PACK = Path(os.environ.get(
-    "W1_PACK",
-    r"C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/"
-    r"W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST"))
+from packloc import resolve_pack
+
+PACK = resolve_pack()
 
 
 class TestRunnerVerdict(unittest.TestCase):

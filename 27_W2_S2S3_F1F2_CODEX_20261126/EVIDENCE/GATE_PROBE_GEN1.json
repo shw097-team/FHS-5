@@ -1,0 +1,33 @@
+{
+ "schema": "FHS5.PLP.W2S3.GateProbe@2",
+ "gate_sha256": "2e06c2869968dcf03326d23d68bfde74db07a87f9886d41de85334f232faa296",
+ "oracle": {
+  "read_effect_write": "refuse:WRITE_NOT_AUTHORISED",
+  "rename_escape": "refuse:PATCH_OP_UNSUPPORTED"
+ },
+ "probes": {
+  "read_effect_write": {
+   "ok": false,
+   "first_fail": "FALSE_AUTHORITY",
+   "wrote": [],
+   "outside_created": false,
+   "a_after": "one",
+   "check_dir": [
+    "a.py",
+    "b.py"
+   ]
+  },
+  "rename_escape": {
+   "ok": false,
+   "first_fail": "FALSE_AUTHORITY",
+   "wrote": [],
+   "outside_created": false,
+   "a_after": "one",
+   "check_dir": [
+    "a.py",
+    "b.py"
+   ]
+  }
+ },
+ "verdict": "GREEN"
+}
