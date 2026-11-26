@@ -35,6 +35,32 @@ class GateError(Exception):
         self.detail = detail
 
 
+
+# The admission verifier lives in the same writable tree as the effect target, so
+# it is pinned by digest and refused if it is shadowed, poisoned or rewritten.
+ADMISSION_SOURCE_PIN = "a7693f1948a9a157e35eae1d447dca4dd5eba04c83bc7ffe020d8d892a6c4288"
+
+
+def _load_admission(repo):
+    import hashlib as _hl
+    import importlib as _il
+    import sys as _sys
+    mod = _sys.modules.get("w2_admission")
+    if mod is None:
+        _sys.path.insert(0, str(Path(__file__).resolve().parent))
+        mod = _il.import_module("w2_admission")
+    f = Path(getattr(mod, "__file__", "") or "")
+    if not f.is_file():
+        raise RuntimeError("ADMISSION_INTEGRITY: module has no readable file")
+    if str(f.resolve()).lower().startswith(str(Path(repo).resolve()).lower()):
+        # inside the tree we are about to write: not a trust root
+        raise RuntimeError("ADMISSION_INTEGRITY: verifier lives inside the write root")
+    got = _hl.sha256(f.read_bytes()).hexdigest()
+    if got != ADMISSION_SOURCE_PIN:
+        raise RuntimeError("ADMISSION_INTEGRITY: verifier digest " + got[:16] + " != pin")
+    return mod
+
+
 def _git(repo, *args) -> tuple[int, str]:
     p = subprocess.run(["git", "-C", str(repo), *args],
                        capture_output=True, text=True, errors="replace")
@@ -76,10 +102,11 @@ def check(asserted: dict, repo_root, write_set: list) -> dict:
     #    READ/DRAFT work uses check_readonly() instead of this function.
     adm = asserted.get("admission") or {}
     try:
-        import w2_admission as ADM
+        ADM = _load_admission(repo)
         _domain = "OPS" if str(asserted.get("domain", "")).upper() == "OPS" else "DEV"
         ADM.require(adm, _domain, asserted.get("scope") or "W2-NF-01",
-                    asserted.get("decision_path"))
+                    asserted.get("decision_path"), repo_root=repo,
+                    targets=[e.get("path") for e in (write_set or [])])
         ok("admission", "receipt re-verified against the pinned decision at use time")
     except Exception as exc:  # noqa: BLE001
         fail("admission", "FALSE_AUTHORITY", str(exc)[:200])

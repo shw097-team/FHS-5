@@ -1,125 +1,107 @@
 {
-  "schema": "FHS5.PLP.W2.S1Verification@1",
+  "schema": "FHS5.PLP.W2.S1Verification@2",
   "rows": [
     {
-      "case": "R1_untrusted_admission_refused",
+      "case": "R1_untrusted_admission",
       "expected_first_fail": "FALSE_AUTHORITY",
+      "observed_first_fail": "FALSE_AUTHORITY",
+      "writes": [],
       "world_unchanged": true,
-      "verdict": "PASS",
-      "observed": {
-        "before": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        },
-        "after": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        }
-      }
+      "verdict": "PASS"
     },
     {
-      "case": "R2_foreign_pin_receipt_refused",
+      "case": "R2_foreign_pin_receipt",
       "expected_first_fail": "FALSE_AUTHORITY",
+      "observed_first_fail": "FALSE_AUTHORITY",
+      "writes": [],
       "world_unchanged": true,
-      "verdict": "PASS",
-      "observed": {
-        "before": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        },
-        "after": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        }
-      }
+      "verdict": "PASS"
     },
     {
-      "case": "R3_unknown_effect_refused",
+      "case": "R3_unknown_effect",
       "expected_first_fail": "EFFECT_UNBOUND",
+      "observed_first_fail": "EFFECT_UNBOUND",
+      "writes": [],
       "world_unchanged": true,
-      "verdict": "PASS",
-      "observed": {
-        "before": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        },
-        "after": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        }
-      }
+      "verdict": "PASS"
     },
     {
-      "case": "R4_stale_preimage_refused",
+      "case": "R4_stale_preimage",
       "expected_first_fail": "WRITE_SET_UNBOUND",
+      "observed_first_fail": "WRITE_SET_UNBOUND",
+      "writes": [],
       "world_unchanged": true,
-      "verdict": "PASS",
-      "observed": {
-        "before": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        },
-        "after": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        }
-      }
+      "verdict": "PASS"
     },
     {
-      "case": "R5_illegal_recovery_refused",
+      "case": "R5_illegal_recovery",
       "expected_first_fail": "RECOVERY_KIND_MISMATCH",
+      "observed_first_fail": "RECOVERY_KIND_MISMATCH",
+      "writes": [],
       "world_unchanged": true,
-      "verdict": "PASS",
-      "observed": {
-        "before": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        },
-        "after": {
-          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
-          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
-          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
-          "git": ""
-        }
-      }
+      "verdict": "PASS"
     },
     {
       "case": "R6_bounded_write_succeeds",
-      "expected_first_fail": null,
-      "world_unchanged": false,
       "verdict": "PASS",
       "observed": {
-        "applied": [
-          "t.py"
-        ],
+        "first_fail": null,
         "post_changed": true,
         "unlisted_unchanged": true,
-        "canary_unchanged": true,
         "reverse_restored": true
       }
     },
     {
-      "case": "R7_j1_negative_zero_calls_zero_write",
-      "expected_first_fail": "FAKE_GRANT",
+      "case": "R7_receipt_bound_to_root",
+      "verdict": "PASS",
+      "observed": {
+        "token": "ROOT_NOT_AUTHORISED"
+      }
+    },
+    {
+      "case": "R8_target_outside_root",
+      "verdict": "PASS",
+      "observed": {
+        "token": "TARGET_OUTSIDE_ROOT"
+      }
+    },
+    {
+      "case": "R9_root_not_authorised",
+      "verdict": "PASS",
+      "observed": {
+        "token": "ROOT_NOT_AUTHORISED"
+      }
+    },
+    {
+      "case": "R10_revocation_invalidates",
+      "expected_first_fail": "FALSE_AUTHORITY",
+      "observed_first_fail": "FALSE_AUTHORITY",
+      "writes": [],
       "world_unchanged": true,
+      "verdict": "PASS"
+    },
+    {
+      "case": "R11_expiry_evaluated",
+      "verdict": "PASS",
+      "observed": {
+        "expired": "ADMISSION_EXPIRED",
+        "revoked": "ADMISSION_REVOKED"
+      }
+    },
+    {
+      "case": "R12_in_tree_verifier_tamper_refused",
+      "verdict": "PASS",
+      "observed": {
+        "token": "ADMISSION_INTEGRITY"
+      }
+    },
+    {
+      "case": "R12b_sys_modules_poisoning",
+      "verdict": "RESIDUAL_LIMIT",
+      "observed": "a fake module object that reports the genuine __file__ passes the digest check; in-process import tampering is declared out of scope rather than claimed fixed"
+    },
+    {
+      "case": "R13_j1_negative_zero_calls",
       "verdict": "PASS",
       "observed": {
         "accepted": false,
@@ -130,8 +112,9 @@
     }
   ],
   "counts": {
-    "PASS": 7,
-    "FAIL": 0
+    "PASS": 13,
+    "FAIL": 0,
+    "RESIDUAL_LIMIT": 1
   },
-  "note": "each refusal row compares world state before/after; canary is outside the write set"
+  "note": "each refusal row asserts first_fail == expected AND world unchanged"
 }

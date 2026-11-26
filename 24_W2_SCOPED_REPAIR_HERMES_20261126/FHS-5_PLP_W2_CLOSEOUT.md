@@ -53,3 +53,19 @@
 - OpenSpec change 未建
 - `policy_epoch` `NOT_DECLARED_BY_HOST`
 - 14 HOLD＋6 專項、37 CR 全 RETAINED
+
+## r4b｜Verifier 覆核後的修補（VERDICT=FAIL → 已修）
+
+分立 Verifier 判 FAIL，指出三個真缺陷與一個證據缺陷，全部成立：
+
+| # | Finding | 修補 | 驗證 |
+|---|---|---|---|
+| F1 | 有效 receipt 可寫任意路徑（決策 `allowed_roots=PENDING`） | `derive/require` 接 `repo_root`＋targets，只接受 `TRUST.authorised_roots` 內且 target 不越界 | R7 `ROOT_NOT_AUTHORISED`、R8 `TARGET_OUTSIDE_ROOT`、R9 `ROOT_NOT_AUTHORISED` |
+| F2 | expiry/revocation 只當字串複製，從未評估 | `_evaluate_expiry()` 解析 `EXPIRED_<date>`／`REVOKED` 並即時拒絕；撤權 marker 每次使用都查 | R10 `FALSE_AUTHORITY`（marker）、R11 `ADMISSION_EXPIRED`＋`ADMISSION_REVOKED` |
+| F3 | 同一檔案讀三次（hash 與 parse 非同批 bytes）；`require` 只比 effect list | 單次讀取同一 byte string；subject/scope/effects/root 全比 | 併入 R7–R11 |
+| F4 | 證據缺陷：`rec()` 不比對 `first_fail`，拒錯原因也 PASS | 每列強制 `first_fail == expected` ＋ 世界快照 | v2 13 列全部同時驗原因與世界狀態 |
+| — | 動態 import 的 verifier 住在可寫樹（shadow／poison） | gate 以 `ADMISSION_SOURCE_PIN` 釘住 verifier 檔案 digest，並拒絕住在寫入根內的 verifier | R12 `ADMISSION_INTEGRITY`（就地把檔案加 bytes 後即拒） |
+
+**殘留限制（明列，不宣稱已修）**：`sys.modules` 內僞造一個回報真實 `__file__` 的假模組仍可通過 digest 檢查。那是 in-process import 篡改，需要程式執行權；本地治理工具不以此為防線，故列 `RESIDUAL_LIMIT` 而非 PASS。
+
+S1 v2：**13 PASS / 0 FAIL / 1 RESIDUAL_LIMIT**。

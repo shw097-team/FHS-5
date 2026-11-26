@@ -1,15 +1,12 @@
 {
  "schema": "FHS5.PLP.W2.DeliveryManifest@1",
- "task_id": "HERMES-F5-W2-SCOPED-REPAIR-r4",
- "subject": "FHS-5_PLP/W2/CONTROL_PACK",
- "scope": "W2-NF-01",
- "candidate": "W2-NF-r3-CODEX-PRIMARY",
- "status": "S1 7/7 and S2 23/23 executed; W2_NF_VALIDATED NOT re-claimed this round",
+ "task_id": "HERMES-F5-W2-SCOPED-REPAIR-r4b",
+ "status": "S1 13/13 (+1 disclosed residual limit), S2 23/23; W2_NF_VALIDATED NOT re-claimed",
  "files": [
   {
    "path": "FHS-5_PLP_W2_CLOSEOUT.md",
-   "bytes": 2872,
-   "sha256": "d27c7f87be6ca48f7708f687f93a9cb8bab9736b3b94e248eddbc619f4055594"
+   "bytes": 4550,
+   "sha256": "5d34c411cc95add5d16e1d9ace98e200bbdfffbc5869879fa966a15cfe95e490"
   },
   {
    "path": "FHS-5_PLP_W2_HANDOFF.md",
@@ -17,9 +14,14 @@
    "sha256": "da5994177b726b299ac1da5bd644c192ef352e11ea432af1f7ea3d82235dbaae"
   },
   {
+   "path": "receipts/w2_admission_PRE_FIX.py",
+   "bytes": 7068,
+   "sha256": "fbafd5f1f099bea6f830d6222dc2982a819991f206bb930d2e9fc3281e48ebcf"
+  },
+  {
    "path": "S1_VERIFICATION.json",
-   "bytes": 4926,
-   "sha256": "dc1720b02567d098dae894203c20320b94bb81127ee3cb4329f0f84ef1a33578"
+   "bytes": 3090,
+   "sha256": "99b74a4c687fde85ccc888b820805604f40beadf4a28660740ab185ffa3ca40a"
   },
   {
    "path": "S2_E2E.json",
@@ -32,7 +34,7 @@
    "sha256": "868475eb8a92c3c95c0e8ff5493029eab7bdc1d114a9b326c46c1612005a36a7"
   }
  ],
- "file_count": 5,
+ "file_count": 6,
  "self_excluded": true,
  "manifest_self_hash": "EXTERNAL_RECORD_ONLY"
 }
