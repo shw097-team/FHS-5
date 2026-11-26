@@ -1,0 +1,493 @@
+{
+ "schema": "FHS5.PLP.W2.ReceiveReceipt@1",
+ "receiver": "w2_receiver (independent)",
+ "generated_at": "2026-11-26T16:09:50Z",
+ "w2_identity": {
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1-NF-01",
+  "permission_state": "NONE_GRANTED",
+  "producer_identity": "FHS-5_PLP/W1/CONTROL_PACK",
+  "consumer_identity": "FHS-5_PLP/W2/CONSUMER",
+  "expected_pack_sha256": null
+ },
+ "accepted": true,
+ "first_fail": null,
+ "rejected_checks": [],
+ "reasons": [],
+ "checks": [
+  {
+   "name": "pins_present",
+   "check": "pins_present",
+   "ok": true,
+   "detail": "delivery_seal_sha256, evidence_manifest_sha256, pack_manifest_sha256"
+  },
+  {
+   "name": "evidence_manifest_pin",
+   "check": "evidence_manifest_pin",
+   "ok": true,
+   "detail": "{'expected': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39', 'actual': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39'}"
+  },
+  {
+   "name": "delivery_seal_pin",
+   "check": "delivery_seal_pin",
+   "ok": true,
+   "detail": "{'expected': 'f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73', 'actual': 'f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73'}"
+  },
+  {
+   "name": "manifest_parse",
+   "check": "manifest_parse",
+   "ok": true,
+   "detail": "utf-8 json object"
+  },
+  {
+   "name": "manifest_schema",
+   "check": "manifest_schema",
+   "ok": true,
+   "detail": "FHS5.PLP.W1.EvidenceManifest@2"
+  },
+  {
+   "name": "manifest_entry_schema",
+   "check": "manifest_entry_schema",
+   "ok": true,
+   "detail": "118 entries"
+  },
+  {
+   "name": "manifest_pack_pin",
+   "check": "manifest_pack_pin",
+   "ok": true,
+   "detail": "{'expected': '61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a', 'claimed': '61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a'}"
+  },
+  {
+   "name": "seal_parse",
+   "check": "seal_parse",
+   "ok": true,
+   "detail": "utf-8 json object"
+  },
+  {
+   "name": "seal_manifest_binding",
+   "check": "seal_manifest_binding",
+   "ok": true,
+   "detail": "{'seal': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39', 'recomputed': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39'}"
+  },
+  {
+   "name": "seal_pack_pin",
+   "check": "seal_pack_pin",
+   "ok": true,
+   "detail": "{'seal': '61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a'}"
+  },
+  {
+   "name": "path_confinement",
+   "check": "path_confinement",
+   "ok": true,
+   "detail": "118 relative paths confined"
+  },
+  {
+   "name": "evidence_bytes",
+   "check": "evidence_bytes",
+   "ok": true,
+   "detail": "118 entries recomputed"
+  },
+  {
+   "name": "file_set_exact",
+   "check": "file_set_exact",
+   "ok": true,
+   "detail": "118 listed; envelope excluded"
+  },
+  {
+   "name": "evidence_bytes",
+   "check": "evidence_bytes",
+   "ok": true,
+   "detail": "118 entries recomputed"
+  },
+  {
+   "name": "delivery_tree",
+   "check": "delivery_tree",
+   "ok": true,
+   "detail": "7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab"
+  },
+  {
+   "name": "no_fake_grant",
+   "check": "no_fake_grant",
+   "ok": true,
+   "detail": "NONE_GRANTED"
+  },
+  {
+   "name": "caller_pack_pin",
+   "check": "caller_pack_pin",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "name": "identity_split",
+   "check": "identity_split",
+   "ok": true,
+   "detail": "{'producer': 'FHS-5_PLP/W1/CONTROL_PACK', 'consumer': 'FHS-5_PLP/W2/CONSUMER'}"
+  },
+  {
+   "name": "subject_identity",
+   "check": "subject_identity",
+   "ok": true,
+   "detail": "{'producer': 'FHS-5_PLP/W1/CONTROL_PACK', 'manifest': 'FHS-5_PLP/W1/CONTROL_PACK'}"
+  },
+  {
+   "name": "handoff_scope",
+   "check": "handoff_scope",
+   "ok": true,
+   "detail": "{'field': 'W1-NF-01', 'requested': 'W1-NF-01'}"
+  },
+  {
+   "name": "delivery_still_present",
+   "check": "delivery_still_present",
+   "ok": true,
+   "detail": "{'manifest': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39', 'seal': 'f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73'}"
+  },
+  {
+   "name": "delivery_tree_before",
+   "check": "delivery_tree_before",
+   "ok": true,
+   "detail": "7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab"
+  },
+  {
+   "name": "delivery_files_present",
+   "check": "delivery_files_present",
+   "ok": true,
+   "detail": "handoff/closeout/cases"
+  },
+  {
+   "name": "pack_inspect",
+   "check": "pack_inspect",
+   "ok": true,
+   "detail": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
+  },
+  {
+   "name": "pack_counts",
+   "check": "pack_counts",
+   "ok": true,
+   "detail": "{'pack_files': 5, 'dev': 38, 'ops': 29, 'cases': 13, 'assets': 26, 'sources': 42, 'holds': 14}"
+  },
+  {
+   "name": "handoff_field:subject_id",
+   "check": "handoff_field:subject_id",
+   "ok": true,
+   "detail": "subject_id"
+  },
+  {
+   "name": "handoff_field:scope",
+   "check": "handoff_field:scope",
+   "ok": true,
+   "detail": "scope"
+  },
+  {
+   "name": "handoff_field:pack_manifest_sha256",
+   "check": "handoff_field:pack_manifest_sha256",
+   "ok": true,
+   "detail": "pack_manifest_sha256"
+  },
+  {
+   "name": "handoff_field:entry",
+   "check": "handoff_field:entry",
+   "ok": true,
+   "detail": "entry"
+  },
+  {
+   "name": "handoff_field:bridge",
+   "check": "handoff_field:bridge",
+   "ok": true,
+   "detail": "bridge"
+  },
+  {
+   "name": "handoff_field:guide",
+   "check": "handoff_field:guide",
+   "ok": true,
+   "detail": "guide"
+  },
+  {
+   "name": "handoff_field:tpm",
+   "check": "handoff_field:tpm",
+   "ok": true,
+   "detail": "tpm"
+  },
+  {
+   "name": "handoff_field:consumer",
+   "check": "handoff_field:consumer",
+   "ok": true,
+   "detail": "consumer"
+  },
+  {
+   "name": "handoff_field:runner",
+   "check": "handoff_field:runner",
+   "ok": true,
+   "detail": "runner"
+  },
+  {
+   "name": "handoff_field:next",
+   "check": "handoff_field:next",
+   "ok": true,
+   "detail": "next"
+  },
+  {
+   "name": "handoff_field:stop",
+   "check": "handoff_field:stop",
+   "ok": true,
+   "detail": "stop"
+  },
+  {
+   "name": "handoff_field:resume",
+   "check": "handoff_field:resume",
+   "ok": true,
+   "detail": "resume"
+  },
+  {
+   "name": "cases_present",
+   "check": "cases_present",
+   "ok": true,
+   "detail": "20"
+  },
+  {
+   "name": "host_consumed",
+   "check": "host_consumed",
+   "ok": true,
+   "detail": "PASS"
+  },
+  {
+   "name": "w2_material_present",
+   "check": "w2_material_present",
+   "ok": true,
+   "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\18_W1_NF_CODEX_20261126T000627\\evidence\\w2\\material"
+  },
+  {
+   "name": "material_copy",
+   "check": "material_copy",
+   "ok": true,
+   "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out\\20261127T000949_O03\\material_copy"
+  },
+  {
+   "name": "w2_contracts",
+   "check": "w2_contracts",
+   "ok": true,
+   "detail": "['PI', 'PD', 'DEV', 'OPS', 'TQAEP']"
+  },
+  {
+   "name": "w2_requirements_13",
+   "check": "w2_requirements_13",
+   "ok": true,
+   "detail": "13"
+  },
+  {
+   "name": "five_seam_wiring",
+   "check": "five_seam_wiring",
+   "ok": true,
+   "detail": "{'matched': 5, 'total': 5}"
+  },
+  {
+   "name": "thin_start_present",
+   "check": "thin_start_present",
+   "ok": true,
+   "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\18_W1_NF_CODEX_20261126T000627\\evidence\\w2\\thin_start.md"
+  },
+  {
+   "name": "delivery_tree_unchanged",
+   "check": "delivery_tree_unchanged",
+   "ok": true,
+   "detail": "{'before': '7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab', 'after': '7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab'}"
+  }
+ ],
+ "check_count": 46,
+ "permission_boundary": "W2 receives evidence only; no grant issued, no protected effect",
+ "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+ "w1_claim_seen": "see CLOSEOUT",
+ "verified_entries": 118,
+ "product_calls": {
+  "build_contracts": 1,
+  "seam_wiring": 1
+ },
+ "pins_used": {
+  "evidence_manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+  "delivery_seal_sha256": "f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73",
+  "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
+ },
+ "manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+ "delivery_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\18_W1_NF_CODEX_20261126T000627",
+ "delivery_tree_sha256": "7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab",
+ "consume_performed": true,
+ "receipt_excluded_from_manifest": true,
+ "stop": "wrong candidate/pack/oracle/evidence/handoff/scope, missing pins, path escape, or any fake grant",
+ "resume": "same subject+scope+pack pin typed receipt; pins supplied externally; re-verify ACL/principal",
+ "manifest_sha256_at_receive": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+ "seal_evidence_manifest_sha256_at_receive": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+ "consumed": {
+  "source_refs": 42,
+  "effect_constraints": {
+   "permission_state": "NONE_GRANTED",
+   "unknown_effect": "FAIL_CLOSED"
+  },
+  "host_capability_ledger": "evidence/host/host_receipt.json",
+  "context_sha256_source": "bridge_nf.render_agent_context",
+  "change_cone": {
+   "EVIDENCED": 17,
+   "COVERED_BY_SHARED_OPERATION": 62,
+   "EXERCISED_INDIVIDUALLY": 2,
+   "NOT_APPLICABLE_THIS_ROUND": 1,
+   "DEFERRED": 3,
+   "PASS": 18,
+   "EVIDENCED_WITH_DEFERRED_HOSTS": 1,
+   "HOLD_PRESERVED_NOT_CLOSED": 14
+  },
+  "unresolved_refs": 5,
+  "nine_keys": "guide_nf.produce_nine_keys"
+ },
+ "next_operation": "W2-READ: build the 13-row Draft BindingRequest plan inside W2-READ-01; no grant, no protected effect",
+ "w2_task": {
+  "kind": "READ",
+  "action": "verify W1 candidate and select next op",
+  "readback": "all checks above",
+  "accepted": true
+ },
+ "verified_paths": [
+  ".gitattributes",
+  "control_pack/evidence/PUSH_RECEIPT.json",
+  "control_pack/evidence/raw/bootstrap_consume.json",
+  "control_pack/evidence/raw/candidate_findings.json",
+  "control_pack/evidence/raw/clean_receive.txt",
+  "control_pack/evidence/raw/final_readback.json",
+  "control_pack/evidence/raw/guard_result.json",
+  "control_pack/evidence/raw/host_probe.json",
+  "control_pack/evidence/raw/host_probe.txt",
+  "control_pack/evidence/raw/mutation_results.txt",
+  "control_pack/evidence/raw/source_freeze.json",
+  "control_pack/evidence/SEAL.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/00_W1_PI_PD.md",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/01_W1_DEV_ECP.md",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/02_W1_OPS_ECP.md",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/03_W1_TQAEP.md",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/04_W1_START_THIN_PROMPT.md",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/05_W1_SOURCE_MANIFEST.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-ABI-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-ABI-02.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-API-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-HERMES-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-HOST-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-HOST-02.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-HOST-03.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-02.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-03.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-04.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-05.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-SEC-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-ABI-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-ABI-02.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-API-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-HERMES-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-HOST-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-HOST-02.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-HOST-03.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-02.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-03.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-04.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-05.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-SEC-01.json",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/tools/nf_pack_guard.py",
+  "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/tools/run_mutations.py",
+  "evidence/cases.json",
+  "evidence/cases_stdout.txt",
+  "evidence/consumer/consumed_W1-API-01.md",
+  "evidence/consumer_second/consumed_W0-summary.md",
+  "evidence/host/artifact_for_cons_pkg2.json",
+  "evidence/host/artifact_for_cons_pkgs.json",
+  "evidence/host/consumer_cons_pkg2.py",
+  "evidence/host/consumer_cons_pkgs.py",
+  "evidence/host/host_receipt.json",
+  "evidence/host/pkgA_w1_artifact.json",
+  "evidence/host/pkgA_w1_stderr.txt",
+  "evidence/host/pkgA_w1_stdout.txt",
+  "evidence/host/pkgB_w0_artifact.json",
+  "evidence/host/pkgB_w0_stderr.txt",
+  "evidence/host/pkgB_w0_stdout.txt",
+  "evidence/host/readback_cons_pkg2.json",
+  "evidence/host/readback_cons_pkgs.json",
+  "evidence/host/work_a/context.md",
+  "evidence/host/work_b/context.md",
+  "evidence/host_stdout.txt",
+  "evidence/how_to/independent_check.json",
+  "evidence/how_to/independent_check.md",
+  "evidence/inspect.json",
+  "evidence/off_task_receipt.json",
+  "evidence/raw/_host.json",
+  "evidence/raw/_oracle.json",
+  "evidence/raw/_policy.json",
+  "evidence/raw/_repo_head.txt",
+  "evidence/raw/_world.json",
+  "evidence/raw/_world2.json",
+  "evidence/raw/N01.json",
+  "evidence/raw/N02.json",
+  "evidence/raw/N03.json",
+  "evidence/raw/N04.json",
+  "evidence/raw/N10.json",
+  "evidence/raw/N11.json",
+  "evidence/raw/W1-ABI-01.json",
+  "evidence/raw/W1-ABI-02.json",
+  "evidence/raw/W1-API-01.json",
+  "evidence/raw/W1-CODEX-05.json",
+  "evidence/raw/W1-HOST-01.json",
+  "evidence/raw/W1-HOST-02.json",
+  "evidence/raw/W1-HOST-03.json",
+  "evidence/raw/W1-R3-01.json",
+  "evidence/raw/W1-R3-02.json",
+  "evidence/raw/W1-R3-03.json",
+  "evidence/raw/W1-R3-04.json",
+  "evidence/raw/W1-R3-05.json",
+  "evidence/raw/W1-SEC-01.json",
+  "evidence/test_run.txt",
+  "evidence/w2/material/00_W2_DRAFT_PI_PD.md",
+  "evidence/w2/material/03_W2_DRAFT_TQAEP.md",
+  "evidence/w2/material/04_W2_DRAFT_THIN.md",
+  "evidence/w2/material/05_W2_SOURCE_MANIFEST.json",
+  "evidence/w2/material/_off_native.py",
+  "evidence/w2/material/context_bundle.md",
+  "evidence/w2/thin_start.md",
+  "evidence/w2/w2_artifact.json",
+  "evidence/w2/w2_artifact_cons_w2.json",
+  "evidence/w2/w2_consumer_cons_w2.py",
+  "evidence/w2/w2_inbound_receipt.json",
+  "evidence/w2/w2_readback_cons_w2.json",
+  "evidence/w2/w2_rows.json",
+  "evidence/w2/w2_stderr.txt",
+  "evidence/w2/w2_stdout.txt",
+  "evidence/w2_stdout.txt",
+  "FHS-5_PLP_W1_CLOSEOUT.md",
+  "FHS-5_PLP_W1_HANDOFF.md",
+  "make_delivery4.py",
+  "W1_CLOSURE_MATRIX.json",
+  "W1_CLOSURE_MATRIX.md",
+  "W1_UPSTREAM_CHANGESET.md"
+ ],
+ "material_copy": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out\\20261127T000949_O03\\material_copy",
+ "output_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out\\20261127T000949_O03",
+ "delivery_tree_sha256_after": "7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab",
+ "w2_wiring": {
+  "matched": 5,
+  "total": 5,
+  "state": "COMPLETE"
+ },
+ "_argv": [
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\tools\\ops_receive.py",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\18_W1_NF_CODEX_20261126T000627",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out\\20261127T000949_O03",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\evidence\\O03_RECEIPT.json",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\evidence\\O02_ADMISSION_RECEIPT.json"
+ ],
+ "_cwd": "C:\\Users\\user\\Documents\\Codex\\2026-11-26\\new-chat-12",
+ "_pins": {
+  "evidence_manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+  "delivery_seal_sha256": "f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73",
+  "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
+ },
+ "_admission": {
+  "decision_id": "W2-S2S3-OWNER-20261127-03",
+  "scope": "W2-NF-01",
+  "domain": "OPS"
+ }
+}

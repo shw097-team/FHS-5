@@ -1,0 +1,24 @@
+{
+ "schema": "FHS5.PLP.W2S3.OPSA@1",
+ "run_id": "20261127T000949_O03",
+ "host_id": "DESKTOP-57EO414",
+ "o01": "PROBED",
+ "o02": {
+  "pre_absent": true
+ },
+ "o03": {
+  "exit": 0,
+  "inventory_count": 6
+ },
+ "o04": "VERIFIED",
+ "o05": {
+  "target_absent": true,
+  "equals_pre": true
+ },
+ "o06": {
+  "partial_count": 6,
+  "compensated": true
+ },
+ "world_pre_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+ "world_post_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+}

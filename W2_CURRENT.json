@@ -12,14 +12,18 @@
     "status": "ADOPTED_PRIMARY_USE_DO_NOT_MODIFY"
   },
   "current_delivery": {
-    "dir": "30_W2_S2S3_ORACLE_CODEX_20261127",
-    "closeout": "30_W2_S2S3_ORACLE_CODEX_20261127/FHS-5_PLP_W2_CLOSEOUT.md",
-    "handoff": "30_W2_S2S3_ORACLE_CODEX_20261127/FHS-5_PLP_W2_HANDOFF.md",
-    "candidate_pins": "30_W2_S2S3_ORACLE_CODEX_20261127/CANDIDATE_PINS.json",
-    "closure_matrix": "30_W2_S2S3_ORACLE_CODEX_20261127/CLOSURE_MATRIX.json",
-    "aggregate_canonical": "f8b5e89dcd308dfaeb53550136d64c03019a9b5d61491353c549c5f3567cbcdd",
-    "members": 12,
-    "note": "S1 formal entry fixed; 7 W2 cases run; requirement bodies still absent"
+    "dir": "31_W2_S2S3_FINAL_CODEX_20261127",
+    "closeout": "31_W2_S2S3_FINAL_CODEX_20261127/FHS-5_PLP_W2_CLOSEOUT.md",
+    "handoff": "31_W2_S2S3_FINAL_CODEX_20261127/FHS-5_PLP_W2_HANDOFF.md",
+    "five_pins": "31_W2_S2S3_FINAL_CODEX_20261127/FIVE_PINS.json",
+    "closure_matrix": "31_W2_S2S3_FINAL_CODEX_20261127/CLOSURE_MATRIX.json",
+    "candidate_aggregate_digest": "ee90fc92a35b6432e2a34d26b03fee769153cfb3380d2367ecf9cbd446b826eb",
+    "pack": {
+      "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+      "manifest_sha256": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b",
+      "path": "S1_PACKS/FHS-5_PLP_W2_NATIVE_FIRST"
+    },
+    "note": "13+3 contract wired; 7 W2 cases run; five pins sealed"
   },
   "superseded": [
     {
@@ -48,11 +52,11 @@
   },
   "claim_state": {
     "W2_NF_VALIDATED": "NOT_CLAIMED",
-    "W3_TECHNICALLY_READY": "NOT_CLAIMED",
+    "W3_TECHNICALLY_READY": "PARTIAL",
     "W3_EXECUTION_READY": "NOT_CLAIMED",
     "INDEPENDENT_PASS": "NOT_CLAIMED",
     "RELEASED": "NOT_CLAIMED",
-    "reason": "W2 requirement bodies (16) not materialised; N01-N12 sweep not run"
+    "reason": "12 cases: 7 rerun + 4 reuse + 1 reuse-not-rerun; N01/N04/N06/N09 partial"
   },
   "writer_state": {
     "state": "GENERATION_2 (config-driven authority)",

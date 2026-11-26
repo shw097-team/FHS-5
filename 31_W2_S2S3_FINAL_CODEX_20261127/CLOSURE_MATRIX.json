@@ -1,0 +1,157 @@
+{
+ "schema": "FHS5.PLP.W2.ClosureMatrix@5",
+ "crosswalk": {
+  "rows": 16,
+  "verdict": "PASS"
+ },
+ "cases": [
+  {
+   "id": "W2-DEV-01",
+   "verdict": "REUSE_PASS_FIXTURE",
+   "evidence": "26_/STAGE2"
+  },
+  {
+   "id": "W2-DEV-02",
+   "verdict": "REUSE_PASS_FIXTURE",
+   "evidence": "gate S8/S9"
+  },
+  {
+   "id": "W2-OPS-01",
+   "verdict": "REUSE_PASS",
+   "evidence": "28_/OPS-A"
+  },
+  {
+   "id": "W2-OPS-02",
+   "verdict": "PASS",
+   "evidence": "31_/W2_CASES.json"
+  },
+  {
+   "id": "W2-EFFECT-01",
+   "verdict": "PASS",
+   "evidence": "31_/W2_CASES.json"
+  },
+  {
+   "id": "W2-AUTH-01",
+   "verdict": "PASS",
+   "evidence": "31_/W2_CASES.json"
+  },
+  {
+   "id": "W2-RUNNER-01",
+   "verdict": "PASS",
+   "evidence": "31_/W2_CASES.json"
+  },
+  {
+   "id": "W2-DELTA-01",
+   "verdict": "PASS",
+   "evidence": "31_/J2_NINEKEYS.json"
+  },
+  {
+   "id": "W2-R3-01",
+   "verdict": "PASS",
+   "evidence": "31_/A_CROSSWALK.json (16 rows)"
+  },
+  {
+   "id": "W2-R3-02",
+   "verdict": "PASS",
+   "evidence": "31_/W2_CASES.json"
+  },
+  {
+   "id": "W2-R3-03",
+   "verdict": "PASS",
+   "evidence": "31_/W2_CASES.json"
+  },
+  {
+   "id": "W2-R3-04",
+   "verdict": "REUSE_NOT_RERUN",
+   "evidence": "318/317 ledger"
+  }
+ ],
+ "j": [
+  {
+   "id": "J1",
+   "verdict": "PASS",
+   "evidence": "J1-T01..T08 + O03"
+  },
+  {
+   "id": "J2",
+   "verdict": "PASS",
+   "evidence": "J2-T01..T07"
+  },
+  {
+   "id": "J3",
+   "verdict": "ON_OFF_BOTH_SEMANTIC_SUCCESS",
+   "evidence": "J3_ONOFF"
+  }
+ ],
+ "n": [
+  {
+   "id": "N01",
+   "verdict": "PARTIAL",
+   "evidence": "28_ TPM views (draft material)"
+  },
+  {
+   "id": "N02",
+   "verdict": "PASS",
+   "evidence": "31_/A_CROSSWALK 16 rows, S1@1"
+  },
+  {
+   "id": "N03",
+   "verdict": "PASS",
+   "evidence": "31_/J2 7/7"
+  },
+  {
+   "id": "N04",
+   "verdict": "PARTIAL",
+   "evidence": "O01 probe only; no Host served/consumed"
+  },
+  {
+   "id": "N05",
+   "verdict": "PASS",
+   "evidence": "gate S1-S12 + O05 delete-created-only"
+  },
+  {
+   "id": "N06",
+   "verdict": "PARTIAL",
+   "evidence": "O06 TO_AFTER only"
+  },
+  {
+   "id": "N07",
+   "verdict": "PASS",
+   "evidence": "31_/FIVE_PINS + EVIDENCE_SEAL"
+  },
+  {
+   "id": "N08",
+   "verdict": "DEFER",
+   "evidence": "original applicability (FAR)"
+  },
+  {
+   "id": "N09",
+   "verdict": "PARTIAL",
+   "evidence": "J2/J3 + OPS-A chain"
+  },
+  {
+   "id": "N10",
+   "verdict": "PASS",
+   "evidence": "J3 ON/OFF + J1-T02..06 (scoped)"
+  },
+  {
+   "id": "N11",
+   "verdict": "PASS",
+   "evidence": "O03 118 entries + W3 consumer"
+  },
+  {
+   "id": "N12",
+   "verdict": "PASS",
+   "evidence": "GENERIC profile; publisher post-only"
+  }
+ ],
+ "counts": {
+  "REUSE_PASS_FIXTURE": 2,
+  "REUSE_PASS": 1,
+  "PASS": 17,
+  "REUSE_NOT_RERUN": 1,
+  "ON_OFF_BOTH_SEMANTIC_SUCCESS": 1,
+  "PARTIAL": 4,
+  "DEFER": 1
+ }
+}

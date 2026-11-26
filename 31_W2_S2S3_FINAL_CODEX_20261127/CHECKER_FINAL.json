@@ -1,0 +1,43 @@
+{
+ "schema": "FHS5.PLP.W3.CheckerVerdict@1",
+ "verdict": "PASS",
+ "failed": [],
+ "checks": [
+  {
+   "check": "candidate_matches_tree",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "evidence_seal_binds",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "case_set_all_pass",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "crosswalk_16",
+   "ok": true,
+   "detail": "PASS"
+  },
+  {
+   "check": "s1_w2_tree",
+   "ok": true,
+   "detail": "cc7d91a1f7f63e89"
+  },
+  {
+   "check": "s1_16_rows",
+   "ok": true,
+   "detail": "16"
+  },
+  {
+   "check": "cases_have_raw",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "candidate": "ee90fc92a35b6432e2a34d26b03fee769153cfb3380d2367ecf9cbd446b826eb"
+}

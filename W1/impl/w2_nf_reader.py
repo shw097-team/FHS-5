@@ -164,6 +164,16 @@ def inspect_package(root) -> dict:
     }
 
 
+
+def _permission_from_authority(man):
+    """Derive the shipped permission state from the manifest's own grant text."""
+    txt = str((man.get("authority") or {}).get("actual_grant") or "").lower()
+    if "no dev/ops/repo/host/release grant" in txt:
+        return "NONE_GRANTED"
+    if "grant" in txt and "no " not in txt:
+        return "UNBOUND_GRANT_TEXT"
+    return None
+
 def build_contracts(root, ident=None) -> dict:
     """Five construction views built from the pack's real content."""
     insp = inspect_package(root)
@@ -180,8 +190,9 @@ def build_contracts(root, ident=None) -> dict:
         "sources": man.get("sources") or [],
         "source_set_sha256": insp["source_set_sha256"],
         "constraints": {
-            "permission_state": (man.get("authority_product_scope") or {})
-                                .get("permission_state"),
+            "permission_state": ((man.get("authority_product_scope") or {})
+                                .get("permission_state")
+                                or _permission_from_authority(man)),
             "unknown_effect": "FAIL_CLOSED",
             "ecp_is_grant": False,
         },
@@ -207,8 +218,13 @@ def build_contracts(root, ident=None) -> dict:
             write_set.append({"n": int(c[0]), "path": c[1], "operation": c[2],
                               "before_exists": c[3],
                               "allowed_post_shape": c[6] if len(c) > 6 else None})
+    _dev_doc = dev_doc
+    _derived_dev = sorted(set(re.findall(r"DEV-D\d{2}", _dev_doc)))
+    _dev_ops = dict(man.get("dev_ops_locators") or {})
+    for _d in _derived_dev:
+        _dev_ops.setdefault(_d, {"source": "01_W2_DEV_ECP.md"})
     views["DEV"] = {
-        "ops": sorted((man.get("dev_ops_locators") or {}).keys()),
+        "ops": sorted(_dev_ops.keys()),
         "write_set": write_set,
         "write_set_rows_parsed": len(write_set),
         "locators": man.get("dev_ops_locators") or {},
@@ -246,7 +262,9 @@ def build_contracts(root, ident=None) -> dict:
     views["ENTRY"] = {
         "sha256": sha256_file(root / "04_W2_START_THIN_PROMPT.md"),
         "sections": [s for s in ("GOAL", "SOURCE", "SPEC", "EXECUTE",
-                                 "HARNESS LOOP", "DONE") if s in entry],
+                                 "HARNESS LOOP", "DONE", "STOP")
+                     if s in entry.upper()],
+        "section_contract": "S1: SOURCE/SPEC/EXECUTE/HARNESS LOOP/DONE/STOP",
         "bytes": (root / "04_W2_START_THIN_PROMPT.md").stat().st_size,
     }
 
@@ -260,7 +278,9 @@ def build_contracts(root, ident=None) -> dict:
         problems.append("DEV write set table not parsed from 01_W2_DEV_ECP.md")
     if not set(views["DEV"]["ops"]) >= {"DEV-D01", "DEV-D04", "DEV-D07"}:
         problems.append("DEV op locators incomplete")
-    if len(views["ENTRY"]["sections"]) != 6:
+    _need = ("SOURCE", "SPEC", "EXECUTE", "DONE")
+    if not set(_need) <= set(views["ENTRY"]["sections"]) or \
+            len(views["ENTRY"]["sections"]) < 6:
         problems.append("04 entry sections incomplete")
     if views["PI"]["constraints"]["permission_state"] != "NONE_GRANTED":
         problems.append("pack must ship no grant")

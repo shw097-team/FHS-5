@@ -1,0 +1,69 @@
+{
+ "schema": "FHS5.PLP.W3.ConsumerReadback@1",
+ "verdict": "ACCEPT",
+ "consumed": true,
+ "failed": [],
+ "checks": [
+  {
+   "check": "pins_present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "candidate_aggregate",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "evidence_seal_ok",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "not_inbound_draft",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "consumer_ok",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "consumer_16_rows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "consumer_12_cases",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "consumer_six_views",
+   "ok": true,
+   "detail": "['DEV', 'ENTRY', 'OPS', 'PD', 'PI', 'TQAEP']"
+  }
+ ],
+ "used": {
+  "identity": {
+   "project_id": "FHS-5_PLP",
+   "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+   "scope": "W2-NF-01",
+   "wave_id": "W2",
+   "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+   "candidate": "W2-S1-r2-CODEX-PRIMARY"
+  },
+  "requirements": 16,
+  "cases": 12,
+  "views": [
+   "DEV",
+   "ENTRY",
+   "OPS",
+   "PD",
+   "PI",
+   "TQAEP"
+  ],
+  "candidate": "ee90fc92a35b6432e2a34d26b03fee769153cfb3380d2367ecf9cbd446b826eb"
+ }
+}

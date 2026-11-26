@@ -18,6 +18,7 @@ import re
 from pathlib import Path
 
 import body_resolver as br
+import req_parse
 
 SCHEMA_RE = r"^FHS5\.PLP\.(W[0-9])\.SourceManifest\.S1@1$"
 REQUIRED = (
@@ -158,8 +159,18 @@ def inspect_s1(root, seal_path=None, expected_wave=None, expected_identity=None)
     body = "\n".join(texts.values())
     req_ids = sorted(set(REQ_ID.findall(body)))
     declared = den.get("requirements")
-    req_state = ("MATCH" if declared is not None and declared == len(req_ids)
-                 else ("IDENTIFIER_ONLY" if req_ids else "ABSENT_IN_PACK"))
+    if wave == "W2":
+        _t0 = next((v for k, v in texts.items() if k.startswith("00_")), "")
+        parsed = req_parse.parse_13_plus_3(_t0)
+        if parsed["missing"] or parsed["extra"]:
+            raise S1Error("REQUIREMENT_TABLE_INCOMPLETE",
+                          {"missing": parsed["missing"], "extra": parsed["extra"]})
+        req_rows = parsed["rows"]
+        req_state = "TABLE_13_PLUS_3"
+    else:
+        req_rows = [{"id": i} for i in req_ids]
+        req_state = ("MATCH" if declared is not None and declared == len(req_ids)
+                     else ("IDENTIFIER_ONLY" if req_ids else "ABSENT_IN_PACK"))
 
     seal = None
     cands = [Path(seal_path)] if seal_path else _seal_candidates(
@@ -183,7 +194,7 @@ def inspect_s1(root, seal_path=None, expected_wave=None, expected_identity=None)
         raise S1Error("ADOPTION_MISMATCH", got)
 
     man_out = dict(man)
-    man_out["requirements"] = [{"id": i} for i in req_ids]
+    man_out["requirements"] = req_rows
     man_out["requirements_declared"] = declared
     man_out["requirement_material"] = req_state
     identity = {k: man.get(k) for k in
@@ -202,7 +213,8 @@ def inspect_s1(root, seal_path=None, expected_wave=None, expected_identity=None)
         "source_refs": [{"id": s["id"], "path": s.get("path"),
                          "bytes": s.get("bytes"), "sha256": s.get("sha256")}
                         for s in man["sources"]],
-        "requirements": req_ids,
+        "requirement_rows": req_rows,
+        "requirements": [r["id"] for r in req_rows],
         "requirements_declared": declared,
         "requirement_material": req_state,
         "seal_verified": seal is not None,

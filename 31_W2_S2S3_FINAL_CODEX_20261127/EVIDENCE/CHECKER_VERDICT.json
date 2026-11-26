@@ -1,0 +1,85 @@
+{
+ "schema": "FHS5.PLP.W2S3.CheckerVerdict@1",
+ "checker": "distinct process",
+ "run_id": "20261127T000949_O03",
+ "verdict": "PASS",
+ "failed": [],
+ "checks": [
+  {
+   "check": "o02_pre_absent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "o03_exit_zero",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "o03_receipt_accepted",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "o03_verified_entries",
+   "ok": true,
+   "detail": "118"
+  },
+  {
+   "check": "o03_product_calls",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "o03_inventory_count",
+   "ok": true,
+   "detail": "6"
+  },
+  {
+   "check": "o03_inventory_digest",
+   "ok": true,
+   "detail": "cb58f92db16597009746b35bd36b5cd63f8e1852cd1cecc3b7bd0f5fb9f0d8a5"
+  },
+  {
+   "check": "o04_verdict_verified",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "o04_sealed_matches_live",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "o04_sealed_digest",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "o05_target_absent",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "o05_equals_pre",
+   "ok": true,
+   "detail": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  {
+   "check": "o06_classified",
+   "ok": true,
+   "detail": "TO_AFTER"
+  },
+  {
+   "check": "o06_compensated",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "raw_integrity",
+   "ok": true,
+   "detail": "914ea28afb9ca411"
+  }
+ ],
+ "oracle_sha256": "6f465b0ee1e03681370ce89c94559ad2ba692a1478ad5ffcb4b46f96bdf50f53"
+}

@@ -1,0 +1,113 @@
+{
+ "schema": "FHS5.PLP.W2.FivePins@1",
+ "source": {
+  "S1_commit": "5ea16d379cc4b58835ff8c783f4b5e3ca2a60c43",
+  "w0": "97017494984e1d1a3b1b62de61f28c6ab0aea7a7f1caf67f65925039033c5e98",
+  "w1": "d1c741533bea41b8d786ec870b6f66323739a65ebdafd241545dc4afa9dff28c",
+  "w2": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b",
+  "w2_pack_tree": "cc7d91a1f7f63e89b93c9a216286d746cccd0622c14d9448afc8a935cbb77943"
+ },
+ "candidate": {
+  "members": [
+   {
+    "path": "W1/check/packloc.py",
+    "bytes": 1755,
+    "sha256": "704b96af2b841166ad1c8e1607e6e9d49940edc790835d3efe499d8338d52872"
+   },
+   {
+    "path": "W1/check/run_off_task.py",
+    "bytes": 6057,
+    "sha256": "c3d92d68de8c548430d8030018dc8573f84c43f61fa6f04a11a819263751d9f9"
+   },
+   {
+    "path": "W1/check/test_j1_receiver.py",
+    "bytes": 20337,
+    "sha256": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+   },
+   {
+    "path": "W1/check/test_j1_strict.py",
+    "bytes": 6622,
+    "sha256": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4"
+   },
+   {
+    "path": "W1/check/test_s1_schema.py",
+    "bytes": 3854,
+    "sha256": "cf70191a0e709b7a8938903e0cdb566ba11c50a6a6a06345fe4daf26e3431901"
+   },
+   {
+    "path": "W1/check/test_w2_gate.py",
+    "bytes": 7540,
+    "sha256": "7fe373bcfc8a0694155d325bf226333293cb3b1f4154456156a3591c27494a57"
+   },
+   {
+    "path": "W1/check/w2_admission.py",
+    "bytes": 11548,
+    "sha256": "e961b8d1dd46d7725392ac05e92d3e473c855b1b0473fab97dd084afccb47695"
+   },
+   {
+    "path": "W1/check/w2_dev_gate.py",
+    "bytes": 16684,
+    "sha256": "9f0503a7dda2132f65c2bdc8a35a251d522f9d7b2a7efae53edd8a834cffa0ef"
+   },
+   {
+    "path": "W1/check/w2_receiver.py",
+    "bytes": 43052,
+    "sha256": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595"
+   },
+   {
+    "path": "W1/impl/nf_reader.py",
+    "bytes": 24751,
+    "sha256": "1f7649438b5ea776c5058bb69fb6c66816763fbd693706b3dc6a4556ee092020"
+   },
+   {
+    "path": "W1/impl/req_parse.py",
+    "bytes": 1963,
+    "sha256": "4e6cfa967d15cfe252f930018cae8272215356f74ea7ecb726ad75992051b363"
+   },
+   {
+    "path": "W1/impl/s1_reader.py",
+    "bytes": 9191,
+    "sha256": "d60f3dcbc39ad2192a4e2b209861d4deb5f77c320ebfe5eeb638fc050d812e82"
+   },
+   {
+    "path": "W1/impl/w2_nf_reader.py",
+    "bytes": 12546,
+    "sha256": "50583192588c197ccdc261116b0bab5a72d8c6135b672b8d6731ce32b1e82bc0"
+   }
+  ],
+  "count": 13,
+  "aggregate_canonical": "ee90fc92a35b6432e2a34d26b03fee769153cfb3380d2367ecf9cbd446b826eb",
+  "aggregate_historical": "76b655c669d39aa869139892c4932d7c1c2807707f3113f02cd37b08b68ba8c6"
+ },
+ "oracle": {
+  "ops": "OPS_ORACLE_FROZEN.json",
+  "ops_sha256": "6f465b0ee1e03681370ce89c94559ad2ba692a1478ad5ffcb4b46f96bdf50f53",
+  "w2_cases_sha256": "f36408261d1f65e4618073436b19b45afb4821da8a1be4c011ef08b2abeed039",
+  "crosswalk_sha256": "4a2d551cc1c0e7cf3c35dc7e1879f0ceabc36c0237bb2091fa0bcb5228b46869"
+ },
+ "case_set": {
+  "w2_cases": 12,
+  "w2_case_ids": [
+   "W2-DEV-01",
+   "W2-DEV-02",
+   "W2-OPS-01",
+   "W2-OPS-02",
+   "W2-EFFECT-01",
+   "W2-AUTH-01",
+   "W2-RUNNER-01",
+   "W2-DELTA-01",
+   "W2-R3-01",
+   "W2-R3-02",
+   "W2-R3-03",
+   "W2-R3-04"
+  ],
+  "j_subgroups": 18,
+  "n_cases": 12
+ },
+ "evidence": {
+  "manifest": "EVIDENCE_MANIFEST.json",
+  "manifest_sha256": "fc5e4a7b9876f5954d9bd811e688041ebeefb5de495051ef905e9fc06865ec65",
+  "seal": "EVIDENCE_SEAL.json",
+  "seal_sha256": "1d2765c3161446d9071a49beb327a6abc9c55e25f0b81e3be64ee23b6f713ace"
+ }
+}
