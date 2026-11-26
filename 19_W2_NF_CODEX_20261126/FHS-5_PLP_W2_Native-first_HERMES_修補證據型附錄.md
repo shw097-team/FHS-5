@@ -39,18 +39,23 @@
 4. 未對抗式覆核者之外的第三方取得獨立 Checker verdict。
 5. 未 merge 至 `main`、未 tag、未改 release；push 狀態見 §9。
 
-## 2｜Owner 預授權記錄與其界線
+## 2｜Owner 決策記錄與其界線
 
 | 欄位 | 值 |
 |---|---|
-| `decision_kind` | `HUMAN_OWNER_PREAUTHORIZED_CONDITIONAL_PRIMARY_AND_SCOPED_CONSTRUCTION` |
-| 決策來源 | 本輪使用者指令（要求執行 `FHS-5_PLP_W2_CODEX_Native-first_HERMES_啟動薄PROMPT`）；其原文載明「使用者已預授權合格新版直接升格／授權／宣達『主用＋可執行施工』，不再重請同一決策；依控制包 §04.2 綁定 final identity/05 SHA/適用 W2M/受影規格/作用域，actual ACL/逐 op preconditions 仍需下一手核實，不冒 Grant/W2_EXECUTION_READY/Native/Independent/Release」 |
-| 綁定對象 | 本附錄所記 `artifact_id` 與 `05` raw SHA（見首屏） |
-| 生效條件 | 本附錄存在且其封存 digest 與實際 `05` bytes 相符；不符則回到 `PACK_SELECTION_UNVERIFIED` |
-| 不覆蓋 | 原域 Issuer receipt、任何 op 的 ACL/principal/preimage、`W2_EXECUTION_READY`、產品效果、獨立驗收、Release |
-| 撤權 | Owner 隨時可撤；scope/Repo/Host/effect 變更或安全發現即失效 |
+| `decision_id` | `W2-NF-PRIMARY-20261126-01` |
+| `decision_kind` | `HUMAN_OWNER_LOCAL_PRIMARY_PROMOTION_AND_SCOPED_EXECUTION_AUTHORIZATION` |
+| 決策原文 | 「把修補後的新版W2，授權/升格/宣達 為「主用 + 可執行施工」。」（2026-11-26T10:22:10+08:00） |
+| 決策檔 | `W2_OWNER_DECISION.json`，raw SHA-256 `1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7` |
+| 宣達檔 | `FHS-5_PLP_W2_Primary_Declaration.md`，raw SHA-256 `0e8817133f5fe7b15eef32df12d58facea1714bb62fcd67473959cfb58ab0e25` |
+| 綁定對象 | `FHS5-PLP/W2/PACK-NF-20261126-r3` ／ `05` raw SHA `81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b`（65377 bytes）／ WM2 `2b98be96…` |
+| 生效狀態 | `PRIMARY_AUTHORIZED`（文件層）＋`AUTHORIZED_SCOPED`（逐 op 核前件）＋`BOOTSTRAP_ENABLED_AFTER_ROOTS_NAMED` |
+| 未成立 | `W2_EXECUTION_READY`（首個 op 准入未驗）、產品效果、獨立驗收、Release、原域 Issuer 收據 |
+| 撤權 | Owner 隨時撤權；subject/scope/artifact/Repo/Host/effect 變更或安全 Finding 即失效 |
 
-**精確語義**：`owner_ref=null` 記錄的是**原域 Issuer 收據未取得**，與本選用是兩個不同欄位（`00` §4.2 規則 7–8）。issuer 在 W2 範圍內是**唯一 Human Owner 的授權責任**（WM0 §00.2.1），不是未現身的第三方；原域 typed receipt 若存在則另欄保存，不存在則 `UNBOUND`。
+**與 `05` 欄位的關係**：`05.pack_selection.selection_state` 記的是**作者時值** `PRIMARY_AUTHORIZED_PENDING_APPENDIX_SEAL`；本決策取代其**解讀**（現為 `PRIMARY_AUTHORIZED`），但**不改 `05` 的 bytes**。理由：Owner 核准的是特定 bytes；為記錄核准而重切本體，等於讓被核准的對象消失。決策因此以外置方式引用 `05` 的 raw SHA。
+
+**精確語義**：`owner_ref=null` 記錄的是**原域 Issuer 收據未取得**，與本決策是兩個不同欄位（`00` §4.2 規則 7–8）。issuer 在 W2 範圍內是**唯一 Human Owner 的授權責任**（WM0 §00.2.1）；原域 typed receipt 若存在則另欄保存，不存在則 `UNBOUND`。
 
 ## 3｜來源驗證（本機實算，非原域接收）
 
@@ -290,8 +295,7 @@ R = C:\Projects\Agent_Workspace\FHS-5_Workspace\20_W2_PACK_HERMES_FINAL_20261126
   publish/repo/                         ← 交付分支的工作 clone
 ```
 
-**發布狀態**：已上推至 `hermes/w2-pack-nf-primary-20261126`：content commit `d2589dea`（34 檔），publication receipt commit `5529cb06`；`main` 仍為 `c2d8084b`（未動）。
-**未** merge 至 `main`、**未** tag、**未**改 default branch 或 branch protection、**未** Release。遠端已用 fresh clone 逐檔 sha256 回讀（33/33 byte-identical，見 receipt）。
+**發布狀態**：見同目錄 `W2_PUBLICATION_RECEIPT.json`（逐檔 sha256、branch、commits）
 Git push 不等於 Product Release；本輪不 tag、不 merge `main`、不改 default branch。
 
 ## 10｜下一個合法動作

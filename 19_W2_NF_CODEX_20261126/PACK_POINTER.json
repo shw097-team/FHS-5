@@ -8,7 +8,8 @@
   "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
   "manifest_bytes": 65377,
   "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
-  "files": 31
+  "files": 31,
+  "state": "PRIMARY_AUTHORIZED"
  },
  "supplementary": {
   "appendix": "W2_Native-first_HERMES_主用修補_交付/FHS-5_PLP_W2_Native-first_HERMES_修補證據型附錄.md",
@@ -38,5 +39,20 @@
   "M-DONE",
   "W2_TECHNICALLY_READY"
  ],
- "owner_selection": "bound to manifest_sha256 above, recorded in the appendix; absent appendix -> PACK_SELECTION_UNVERIFIED"
+ "owner_selection": "bound to manifest_sha256 above, recorded in the appendix; absent appendix -> PACK_SELECTION_UNVERIFIED",
+ "owner_decision": {
+  "decision_id": "W2-NF-PRIMARY-20261126-01",
+  "file": "W2_Native-first_HERMES_主用修補_交付/W2_OWNER_DECISION.json",
+  "sha256": "1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7",
+  "declaration": "W2_Native-first_HERMES_主用修補_交付/FHS-5_PLP_W2_Primary_Declaration.md",
+  "declaration_sha256": "0e8817133f5fe7b15eef32df12d58facea1714bb62fcd67473959cfb58ab0e25",
+  "bound_manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+  "effective_state": {
+   "pack_selection": "PRIMARY_AUTHORIZED",
+   "construction": "AUTHORIZED_SCOPED",
+   "bootstrap": "ENABLED_AFTER_ROOTS_NAMED",
+   "W2_EXECUTION_READY": "NOT_CLAIMED_BOOTSTRAP_PENDING"
+  },
+  "note": "the manifest's authoring-time selection_state is superseded in interpretation; manifest bytes unchanged"
+ }
 }

@@ -1,0 +1,113 @@
+{
+ "schema": "FHS5.PLP.W2.OwnerDecision@local-1",
+ "decision_id": "W2-NF-PRIMARY-20261126-01",
+ "decision_kind": "HUMAN_OWNER_LOCAL_PRIMARY_PROMOTION_AND_SCOPED_EXECUTION_AUTHORIZATION",
+ "decision_maker": "Human Owner (single owner & issuer of record for W2 scope)",
+ "decided_at": "2026-11-26T10:22:10+08:00",
+ "decision_text_verbatim": "把修補後的新版W2，授權/升格/宣達 為「主用 + 可執行施工」。",
+ "decision_effect": {
+  "primary": "W2 當期主用依據（文件層）",
+  "construction": "W2 範圍內的必要可逆 DEV/OPS 得施工，前提是逐 op 的技術前件成立",
+  "not_a_blanket_permit": true
+ },
+ "accepted_artifact": {
+  "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+  "candidate": "W2-NF-r3-CODEX-PRIMARY",
+  "manifest": "05_W2_SOURCE_MANIFEST.json",
+  "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+  "manifest_bytes": 65377,
+  "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+  "files": 31,
+  "note": "the pack bytes are NOT modified by this decision; the decision cites them"
+ },
+ "bound_upstream": {
+  "WM2": "FHS5-PLP/W2M/2026-11-25-cnf-r2",
+  "WM2_sha256": "2b98be965651721257164c555f7e9f86228e5e6dd15787c0540c1a6a0cd90093",
+  "WM2_bytes": 67015,
+  "affected_clauses": [
+   "WM2 §00.6",
+   "§01.4",
+   "§02.4",
+   "§02.4A",
+   "§03.B",
+   "§04.B",
+   "§05.B",
+   "§06.B",
+   "§07.8",
+   "§08.6",
+   "§09.B",
+   "§10.4",
+   "§11.5",
+   "§12.6"
+  ],
+  "equivalent_adoption": "受影條款以 NF-r2 等價承接；未受影的上位 MASTER/PROG/PROJ/WM 義務不變，原域 typed receipt 仍另行適用",
+  "issuer_basis": "WM0 §00.2.1：issuer 是 Owner 的授權責任，不是必建的 Runtime 服務"
+ },
+ "scope": {
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "wave_id": "W2",
+  "effects_authorized": [
+   "SOURCE_READ",
+   "ISOLATED_DRAFT",
+   "DEV (reversible, per op)",
+   "OPS (reversible, per op)"
+  ],
+  "effects_not_authorized": [
+   "USER (consent/data scope)",
+   "RELEASE",
+   "external deploy",
+   "public push as Release",
+   "irreversible effect"
+  ],
+  "allowed_roots": "PENDING_OWNER_SPECIFICATION",
+  "allowed_roots_note": "未指名 repo/host/output root 前，只能做 READ/DRAFT 與 P01/P02 探查；不得寫入任何 root"
+ },
+ "construction_preconditions": {
+  "per_op": [
+   "Owner scope/decision 覆蓋該 op",
+   "repo root/HEAD/branch/dirty/ACL 真值",
+   "exact preimage 或 absent 實測",
+   "01 §5.1 的 exact write set",
+   "reverse patch / host-specific recovery 可用",
+   "OPS 另需 host/principal、epoch_state（真值或合法 NOT_DECLARED_BY_HOST）、R2 receiver、output root"
+  ],
+  "seams": [
+   "J1 先驗證後消費（拒收短路、零 product call、零 input write）",
+   "J2-pre 於 P03、J2-post 於 P06，ChangeSet 不當 ECP 前件",
+   "J3 真 OFF＋正控；Checker 與 Consumer 為兩個 distinct receipt"
+  ],
+  "rule": "缺任一前件只停該 op，不得降級、不得以 ECP/permit=true/scope 欄代替"
+ },
+ "round_evidence": {
+  "PKG": "33/33 斷言（r1 28/28、r2 28/28）",
+  "mutations": "14/14 偵測 ×3 代，來源樹未動",
+  "review": "一個 distinct session 對抗式覆核，verdict REWORK_REQUIRED；23 項於 r3 修、2 項於 r2 修",
+  "review_limit": "同 principal、不同 session；不是 INDEPENDENT_PASS"
+ },
+ "effective_state": {
+  "pack_selection": "PRIMARY_AUTHORIZED",
+  "construction": "AUTHORIZED_SCOPED",
+  "bootstrap": "ENABLED_AFTER_ROOTS_NAMED",
+  "W2_EXECUTION_READY": "NOT_CLAIMED_BOOTSTRAP_PENDING",
+  "note": "05.pack_selection.selection_state 是作者時值（PENDING_APPENDIX_SEAL），由本決策取代其解讀；05 bytes 不因而變動"
+ },
+ "supersedes": [
+  "PACK_SELECTION_PENDING_APPENDIX_SEAL"
+ ],
+ "last_good": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+ "expiry_revocation": "至 Owner 撤權，或 subject/scope/artifact/Repo/Host/effect 變更，或出現安全 Finding 為止",
+ "not_claimed": [
+  "W2_EXECUTION_READY",
+  "W2_NF_VALIDATED",
+  "NATIVE_PASS",
+  "INDEPENDENT_PASS",
+  "W3_TECHNICALLY_READY",
+  "RELEASED",
+  "M-DONE",
+  "W2_TECHNICALLY_READY",
+  "W2_EXECUTION_READY"
+ ],
+ "next_legal_action": "Owner 指名 repo/host/output root 後，以 04_W2_START_THIN_PROMPT.md 啟動 CODEX：P01/P02 可信 read/bind → P03/P04 契約與凍結 → 首個受權 op 准入 → P05/P06",
+ "stop_resume": "stop：錯 pack/candidate/oracle/scope、假 grant、未知 effect、無 preimage/recovery、principal mismatch、roots 未指名。resume：同 subject/scope/pack pin 的 typed receipt"
+}
