@@ -12,15 +12,15 @@
 | `oracle_sha256` | `13063c81cfde4bb46dc8fab5001400f02347f046db0679e948fcb053b26564b3` |
 | `case_set_sha256` | `ac9f061bee576cdea93fdbdf5f49f61cb710873a4ad3308248297b4c1a6ed07f` |
 | `evidence_ref` | `evidence/PR` |
-| `evidence_manifest_sha256` | `8084a9bfac7c6e18b2ba8fb4c16a448670d4da5fccea5e1317de0d5926e0cb95` |
+| `evidence_manifest_sha256` | `9e2d27dc57411fdb8aaea56c61b0bc44a211a4674679e69ea6d01700d6007269` |
 | `checker_ref` | `evidence/PR/PRODUCT_CHECKER.json` |
 | `consumer_ref` | `evidence/REAL/W4_CONSUMER.json` |
 | `next_legal_action` | `READ_ONLY_W4_PREP` |
 | `resume_predicate` | `same candidate + W4 named authority + Host/ACL` |
 | `publication_state` | `PUSH_PENDING` |
 | `execution_authority` | `None` |
-| `candidate_commit` | `e10e99df2c4011cf7d7d8c13c7d3d31b185fb7c6` |
-| `candidate_preimage` | `e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7` |
+| `candidate_commit` | `c8026d302008422472e6c58414def2c80fac6eb7` |
+| `candidate_preimage` | `bc67bde574f2b6c4217bc54eb63bf963f0937c0cf188271a8bb58a99c502e098` |
 | `actual_readback` | `{"argv": ["python", "W4/check/consumer_w4.py"], "exit": 0, "raw": "evidence/REAL/W4_CONSUMER.json", "action": "W4_EXECUTION_AUTHORITY_REQUIRED", "result": "PENDING"}` |
 | `readiness` | `{"W4_TECHNICALLY_READY": false, "W4_EXECUTION_READY": false}` |
 | `not_covered` | `["W4 full 485/35/56/1011 assurance", "W4 execution authority", "original-domain principal"]` |

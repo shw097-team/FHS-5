@@ -2,8 +2,8 @@
     "schema":  "FHS5.PLP.W3.RealPublicationReceipt@1",
     "state":  "PUSHED",
     "branch":  "codex/w3-real-product-20261126T1902",
-    "content_commit":  "e10e99df2c4011cf7d7d8c13c7d3d31b185fb7c6",
-    "content_tree":  "023e228acfbe88474950b85bc7fcd3af8e316ca7",
+    "content_commit":  "c8026d302008422472e6c58414def2c80fac6eb7",
+    "content_tree":  "a4eec2013c91c2ea91585c6a971dea0ec3755783",
     "candidate":  "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
     "claims":  {
                    "W2_NF_VALIDATED":  false,

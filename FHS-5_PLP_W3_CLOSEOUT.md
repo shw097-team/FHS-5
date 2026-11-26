@@ -1,7 +1,7 @@
 # FHS-5_PLP W3｜Native Product Realization & Admission｜CLOSEOUT
 
 - closure_id：`REAL`
-- 候選：`e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7`
+- 候選：`bc67bde574f2b6c4217bc54eb63bf963f0937c0cf188271a8bb58a99c502e098`
 - Case Owner：separate Case Owner session（Generic Native product case set）
 
 ## F1–F5 實際狀態
@@ -10,7 +10,7 @@
 |---|---|---|
 | F1 W2 真候選再資格化 | **ACHIEVED_REAL_CANDIDATE_READONLY** | 12/12 real candidate bytes；DEV-01 真 W1 bytes、OPS-01 real w2_receiver ABI；W2 checker PASS |
 | F1 W2 verdict | **NOT_CLAIMED** | writer/gate/marker BLOCKED；無原域 signer |
-| F2 W3 Product Freeze | **ACHIEVED_GENERIC_NATIVE** | 獨立 Case Owner 16 fixtures/oracles，全部不同於 design；candidate `e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7` |
+| F2 W3 Product Freeze | **ACHIEVED_GENERIC_NATIVE** | 獨立 Case Owner 16 fixtures/oracles，全部不同於 design；candidate `bc67bde574f2b6c4217bc54eb63bf963f0937c0cf188271a8bb58a99c502e098` |
 | F3 產品驗收 | **16/16 PRODUCT_PASS** | 33/33 FR product evidence；獨立 product verifier + checker |
 | F4 Checker / W4 | **PRODUCT CHECKER PASS / W4 PREPARED_NOT_READY** | fresh W4 consumer PASS；formal W3_NF/W4 readiness remain false due to W2 verdict + independent-principal prerequisites |
 | F5 GitHub | **LOCAL_COMMIT_THEN_PUSH** | branch `codex/w3-real-product-20261126T1902` |
