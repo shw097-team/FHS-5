@@ -13,11 +13,11 @@
   "consumed": {
     "closeout": {
       "path": "<RUN_ROOT>\\FHS-5_PLP_W3_CLOSEOUT.md",
-      "sha256": "ef347cb2791818c2f76d12b8148f99d39619465680dad097d0a3ad25235e72f0"
+      "sha256": "78cf2034edbbfc57d5c0d25976bf31d0ec8daf7e8976627fc61a2df46b27e275"
     },
     "handoff": {
       "path": "<RUN_ROOT>\\FHS-5_PLP_W3_HANDOFF.md",
-      "sha256": "5951b1fe1cacdd540952544db2bc9caee0767f09039daad16bcf5d22b83e65c2"
+      "sha256": "e100914128815b00b70709a75419519ec50362d8ba7af1fb363acb3978b23ec4"
     },
     "product_current": {
       "path": "<RUN_ROOT>\\W3_PRODUCT_CURRENT.json",

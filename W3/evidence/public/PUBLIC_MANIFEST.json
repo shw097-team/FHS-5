@@ -54,7 +54,7 @@
     },
     {
       "path": "W3/evidence/public/CONSUMER_RECEIPT.json",
-      "sha256": "52bfc53459ae4d25096e413a7ffc73e9c7254e96466948cacae92ee026ad5255",
+      "sha256": "5c60b630a417ce85599f80fa74005e6b433f0e1aba2c06cc8445e49dd8e01797",
       "bytes": 1547
     },
     {
@@ -89,8 +89,8 @@
     },
     {
       "path": "W3/evidence/public/PUBLIC_MANIFEST.json",
-      "sha256": "56abb91a12423c2aa84d8c89a3e1b75d480e25593d9072644bfba45aed1bf0d8",
-      "bytes": 8652
+      "sha256": "8c43451eab5310e2b7e773e40340aa190beba2308d90b5960af72002134f7494",
+      "bytes": 8826
     },
     {
       "path": "W3/evidence/public/REPAIR_RECEIPT.json",

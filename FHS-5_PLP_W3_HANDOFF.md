@@ -6,12 +6,13 @@
 - `pack_ref`：`FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY`
 - `pack_manifest_sha256`：`9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4`
 - `package_tree_sha256`：`96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08`
-- `candidate_commit`：`UNBOUND`（W2 product baseline `dada2354…` 仍 PARTIAL；W3 產品 commit 於 push 後另記）
+- `candidate_commit`：local `4bfc0145acf1bf30e2072935086db269115c6b3a`（tree `021ccc54b585c7211715ef1db9e6df2d5db88775`）；base W2 product `dada2354…`；push `PUSH_BLOCKED`
 - `oracle_sha256`：`686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8`（design oracle set；非 product freeze）
 - `case_set_sha256`：`a33e2047eeae517073666786b381a2ec1ed047ccc478384b939e39243d2f74a4`（design case set）
 - `evidence_ref`：`evidence/20261126T1605/`
-- `checker_ref` / `consumer_ref`：見同目錄 `CHECKER_RECEIPT.json`／`CONSUMER_RECEIPT.json`（本地 distinct process）
-- `publication_state`：見 `PUBLICATION_RECEIPT.json`
+- `checker_ref`：`CHECKER_RECEIPT.json` sha `48f804d681e27e74…`；verifier sha `00bbdb755c005ca5…`（distinct local process）
+- `consumer_ref`：`CONSUMER_RECEIPT.json` sha `49cecd81e473909e…`；verifier sha `1515a0c6d37f4f72…`（fresh local process）
+- `publication_state`：`PUSH_BLOCKED`（local commit/tree only; no remote readback）
 
 ## 五 pin
 
@@ -34,6 +35,20 @@
 | `W3_DELTA` | P1/P2 `PARK_NO_DELTA`；P1/P3 `NEW_MATERIAL_EVIDENCE` |
 | `ChangeSet` | `W3_CHANGESET.json`；pack/W2 零寫入 |
 | `CheckerReceipt` vs `ConsumerReceipt` | distinct local process；strength=`LOCAL_DISTINCT_PROCESS` |
+
+## local delivery
+
+| item | value |
+|---|---|
+| branch | `codex/w3-product-20261126T1605` |
+| base commit | `dada2354b7c25c8f4a316d9fae93827cef0d194e` |
+| content commit | `4bfc0145acf1bf30e2072935086db269115c6b3a` |
+| content tree | `021ccc54b585c7211715ef1db9e6df2d5db88775` |
+| receipt commit | `46d2db9e8f2c1cf961e0391716661dac8337186f` |
+| redaction commit | `9df876789c97c11faa887e69243acdd913649905` |
+| remote | `https://github.com/shw097-team/FHS-5` |
+| pushed | `false` |
+| blocker | `PUSH_BLOCKED`（credential egress needs explicit Owner approval） |
 
 ## readiness
 

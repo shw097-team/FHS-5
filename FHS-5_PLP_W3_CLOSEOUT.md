@@ -93,7 +93,14 @@
 - `evidence/20261126T1605/mutants/`
 - `evidence/20261126T1605/subagent_w2_audit.md`
 
-## 8. 下一合法動作
+## 8. 本地 Git 交付
+
+- branch `codex/w3-product-20261126T1605`；base `dada2354b7c25c8f4a316d9fae93827cef0d194e`
+- content commit `4bfc0145acf1bf30e2072935086db269115c6b3a`；tree `021ccc54b585c7211715ef1db9e6df2d5db88775`
+- receipt commit `46d2db9e8f2c1cf961e0391716661dac8337186f`；redaction commit `9df876789c97c11faa887e69243acdd913649905`
+- publication_state：`PUSH_BLOCKED`（local only；無 remote readback；credential egress 未經 Owner 明示核准）
+
+## 9. 下一合法動作
 
 1. Case Owner 以真 bytes 凍結 16 案 fixture/oracle/case-set（expected-before-observed），把 `NOT_RUN` 留在原檔直到真跑。
 2. Owner 若要 W2 真產品，於 **W2 scope** 給新具名 writer 授權；不得用本 W3 decision 解封。
