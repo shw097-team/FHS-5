@@ -1,0 +1,61 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-RUN-01",
+  "kind": "POS",
+  "wp": "WM3-P02/WM3-P03",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-RUN-01 | POS | WM3-P02/WM3-P03",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-RUN-01/record.json",
+    "reference_record_sha256": "fb1612ce185769f13fce57c85712960893355baf523d780fbba467fc56111a66",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "case_pair": {
+      "POS": "W3-RUN-01",
+      "NEG": "W3-RUN-01/neg_pair"
+    },
+    "child_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-RUN-01/pos_neg_child.py",
+    "child_sha256": "5b2888034c482d01308ea4947ab05321d837688ebac41312808cd529cc38e572",
+    "pos_raw_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-RUN-01/raw_POS",
+    "neg_raw_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-RUN-01/raw_NEG",
+    "argv_pos": [
+      "python",
+      "<child_ref>",
+      "POS"
+    ],
+    "argv_neg": [
+      "python",
+      "<child_ref>",
+      "NEG"
+    ],
+    "timeout_s": 120,
+    "isolation": "fresh process per pair; separate cwd and separate stdout/stderr; no write to subject or oracle",
+    "reference_run_facts": {
+      "pair_exits": {
+        "POS": 0,
+        "NEG": 2
+      },
+      "pos_stdout_sha256": "62b27f7c54febe3b16a3506c425470a6f36170926d2e26e7fef73e25e3a6329c",
+      "neg_stdout_sha256": "b58c565029a1bae37a05ea454116e51082298eda0739172e9c375089078a0c3e",
+      "records_independent": true,
+      "case_pass": true,
+      "operation_established": true,
+      "refusal_established": true
+    }
+  }
+}

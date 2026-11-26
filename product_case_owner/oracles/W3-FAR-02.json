@@ -1,0 +1,57 @@
+{
+  "schema": "FHS5.PLP.W3.ProductOracle@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-FAR-02",
+  "kind": "POS",
+  "wp": "WM3-P05",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-FAR-02 | POS | WM3-P05",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "frozen_before_product_run": true,
+  "expected": {
+    "token": "ALTERNATIVES_SUBSTANTIVE",
+    "token_source": "03_W3_TQAEP.md §03 contract",
+    "exit": 0,
+    "exit_basis": "contract-declared placeholder corroborated by the reference child process exit; the product runner ABI is UNBOUND",
+    "exit_semantics": "A positive case succeeds only if the case child process exits 0 AND the typed token is emitted AND every predicate holds. The engine wrapper exit is not case evidence; exit 0 alone is NOT a product PASS. The product runner ABI is UNBOUND in this set."
+  },
+  "predicates": [
+    {
+      "id": "two_distinct_alternatives",
+      "assertion": "Exactly two alternatives are present and their types differ (BIND_EXISTING vs FIX_NOW).",
+      "verify": "len(alternatives) == 2 and len({a.type}) == 2"
+    },
+    {
+      "id": "each_has_fit_and_nofit",
+      "assertion": "Each alternative states both a fit and a no-fit condition.",
+      "verify": "all(a.fit and a.nofit for a in alternatives)"
+    },
+    {
+      "id": "each_has_evidence_and_counterevidence",
+      "assertion": "Each alternative carries evidence refs and the set carries counterevidence.",
+      "verify": "all(len(a.evidence_refs) > 0 for a in alternatives) and len(counterevidence) > 0"
+    },
+    {
+      "id": "each_has_owner_scope_rollback",
+      "assertion": "Each alternative has an owner, a scope and a rollback path.",
+      "verify": "all(a.owner and a.scope and a.rollback for a in alternatives)"
+    },
+    {
+      "id": "cost_risk_may_be_unknown",
+      "assertion": "Cost and risk are explicitly UNKNOWN rather than omitted or invented.",
+      "verify": "all(a.cost in {'UNKNOWN','KNOWN'} and a.risk in {'UNKNOWN','KNOWN'})"
+    },
+    {
+      "id": "pos_exit_zero",
+      "assertion": "The case child process exits 0.",
+      "verify": "record.process_exit == 0 and record.exit == 0"
+    }
+  ],
+  "predicate_contract": "Each predicate is independently checkable from the produced case record or from the real filesystem. A token match alone never satisfies the oracle; all predicates must hold.",
+  "not_original_domain": true,
+  "not_covered": "There is no real Finding/raw beyond the two design-layer mutant findings F3-W3D-01/F3-W3D-02; alternatives are substantive but the owner is delegated, not the original domain owner.",
+  "freeze_rule": "expected-before-observed; this oracle was frozen before the product run; an oracle change requires a CR and a new case revision; an old FAIL is preserved"
+}

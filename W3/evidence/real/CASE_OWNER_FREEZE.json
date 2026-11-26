@@ -1,0 +1,365 @@
+{
+  "schema": "FHS5.PLP.W3.CaseOwnerFreeze@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "set_id": "FHS5-PLP/W3/PRODUCT-CASE-SET/GENERIC-NATIVE/20261126",
+  "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "product_run_state": "NOT_RUN",
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "contract_ref": "03_W3_TQAEP.md §03 (16 case contracts)",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "reference_run": {
+    "run_id": "W3D",
+    "root": "<R>\\W3_FINAL_20261126T1827",
+    "freeze_ledger_sha256": "f43950603f395c79544332af88a8663faf660c08f1a4cf48423827f4527d0639",
+    "w2_requalification_sha256": "54e0cea03fb387b25c41116c902c202518e5cc819ebe3aa07d8b8832f2eee0c8"
+  },
+  "counts": {
+    "cases": 16,
+    "fixtures": 16,
+    "oracles": 16
+  },
+  "cases": [
+    {
+      "case_id": "W3-CHK-01",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-CHK-01 | NEG | WM3-P03/WM3-P06",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-CHK-01.json",
+        "sha256": "5658461ddb7d36fd724f6b7f2ea92c033507103d268cfcf7157d501d6742a598",
+        "bytes": 1933
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-CHK-01.json",
+        "sha256": "6eb278bbd38b8998481ae7b953550b504f86cf465d3a6d3911c7297df1c94f48",
+        "bytes": 2734
+      },
+      "design_fixture_sha256": "0598ea40dccf1a5e8726ab9e8b95432917b69761dd37f54c18f88f0560dfaef0",
+      "design_oracle_sha256": "ffac9777f253e3c4ba5ab97e893a821537a17b5ad39dfaf1c739adeca90de655",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-FAR-01",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-FAR-01 | NEG | WM3-P04",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-FAR-01.json",
+        "sha256": "78fa3a7762080ab8958ee69d333ea88209822228c399ace0b633023e5e8256a2",
+        "bytes": 2780
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-FAR-01.json",
+        "sha256": "58a9d1ad5b98dd9d2d78bcc6d163f6399463f4afc81c13b62e67a154943dbfc4",
+        "bytes": 2914
+      },
+      "design_fixture_sha256": "f2107fadf360f449026f47e757d7a28cbb0a2aa72fc9bec43df73a5aae2799e2",
+      "design_oracle_sha256": "b7eb3f62208784e3bf8e17aa2561828dd82c48abb8f73a0f8d2cb2948128aca6",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-FAR-02",
+      "kind": "POS",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-FAR-02 | POS | WM3-P05",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-FAR-02.json",
+        "sha256": "62af1546517aaa8b9c466b9d99e5943ed289aa503f38366062f0821ac0f36ae2",
+        "bytes": 3033
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-FAR-02.json",
+        "sha256": "987cd0f1f9df3a6498255991e5454a871b48241d02efa8afcfc280d548255579",
+        "bytes": 2992
+      },
+      "design_fixture_sha256": "b894d39b74d14c48bc241fa12273229c32df18087d2b44ced54a460455881d61",
+      "design_oracle_sha256": "2831c3420f0bdaeb5f84b704b5eb7b6353e7bf949359625be1217f0f48a02bbd",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-FR16-01",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-FR16-01 | NEG | WM3-P03",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-FR16-01.json",
+        "sha256": "f28562c94c09c02b1b110f56b4a2fbb8bf412b19bbc7d62880046263d9f41add",
+        "bytes": 2375
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-FR16-01.json",
+        "sha256": "134decc4ccb6db8475e2cace68d43871dece70440098f2737fddf32d1d33eb98",
+        "bytes": 2799
+      },
+      "design_fixture_sha256": "bc8f6e1de1211cc127c3971072fb7c7b03ebe55c00e44bd8467e546918e9b068",
+      "design_oracle_sha256": "77b8ef4f564dd77deefd46270bba4018f70462f7ad29a4eb51e6331819824537",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-FR17-01",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-FR17-01 | NEG | WM3-P03/WM3-P06",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-FR17-01.json",
+        "sha256": "7e4abf75c9a13657945c606ed0df86336ae47a28ce769e18da4d835cf97d0a56",
+        "bytes": 1935
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-FR17-01.json",
+        "sha256": "7a3e435688c82b7ca5f9caf831b5794e7476b633b6a891b2a89abe893ff19dfe",
+        "bytes": 2599
+      },
+      "design_fixture_sha256": "ca65a5701883f74ff5ddbd3777b828dc466425c766c39f45b44d65265fe6c967",
+      "design_oracle_sha256": "4df87ec8b6d58fd82477d90b5f923c8f66cdc30b750901fbde32708a9a320d05",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-FRZ-01",
+      "kind": "POS",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-FRZ-01 | POS | WM3-P01",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-FRZ-01.json",
+        "sha256": "f643a2a3a9dfcd9d6b11dae06103c4bb211b409ef460648e1b140316ad9480ab",
+        "bytes": 3999
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-FRZ-01.json",
+        "sha256": "461d24c9fe74925f2ee5232ec02f919fde857ac4c744763751441f6818708c09",
+        "bytes": 3352
+      },
+      "design_fixture_sha256": "2ea7be05d07cdb3e25e2f46f420f95ed86582fbf73d5ebda11c28115fef4de92",
+      "design_oracle_sha256": "e17d90664f86d14764748822ed834e8301faa431a6eb5e3ec92c341edf464316",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-FRZ-02",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-FRZ-02 | NEG | WM3-P01",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-FRZ-02.json",
+        "sha256": "0b86bccc046b0a2a7c4bfad5e94d5b830dde6bd17a7c282ccfc8e7d45108c664",
+        "bytes": 2810
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-FRZ-02.json",
+        "sha256": "c1a3b983706645abd7e687a2f2fb45b497f78d2ca9f8ec69d7c56d612079d106",
+        "bytes": 3161
+      },
+      "design_fixture_sha256": "e8b585981912599db1279ee893ec4e1fdf3203e35a9713a05e91118c8de8d204",
+      "design_oracle_sha256": "5d00ebde2b1dfde9dbac39109976c3557300f96fc0c6ccd4ee69c726922c76d8",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-G2-01",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-G2-01 | NEG | WM3-P06",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-G2-01.json",
+        "sha256": "3f7feba0842d180e558103b2265dd7c5eb67c241440f52d4b901cabec9f439c5",
+        "bytes": 2164
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-G2-01.json",
+        "sha256": "f4310e235bfb966537ed00289a52896f104452c1898470354a8590e55e455cf5",
+        "bytes": 2690
+      },
+      "design_fixture_sha256": "34c0c4dd9a19f6f92bd4e8e7a83bb4561977a17922cc9dcaf09bb13185a717ee",
+      "design_oracle_sha256": "639e31a68902f9e1566345d4ef9be7fe8e3f03195d5ef505251e79ba95bad9bd",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-R3-01",
+      "kind": "POS",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-R3-01 | POS | WM3-P01/WM3-P03",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-R3-01.json",
+        "sha256": "af0610d75d356507b73cd1d2bca0950509cf58ce9d0abc8e466e08e39283a26e",
+        "bytes": 1951
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-R3-01.json",
+        "sha256": "6733a6cfc25c8681b939a9c9e3b24a696e893a3bc18f732e5c73d96be08c8c82",
+        "bytes": 2813
+      },
+      "design_fixture_sha256": "380bf0618ca4225ee192df57ee2873bed5d2b37aebc1f28bceb59d63f03fba3d",
+      "design_oracle_sha256": "919d3a61d9c585985731b40020891e3fcad6d752e07d618e3a786700ec9fb6cd",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-R3-02",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-R3-02 | NEG | WM3-P06",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-R3-02.json",
+        "sha256": "3af86748678d642d7338dc8edec0b7c4b87e3a9c368d7e1770adeb4eb79cd568",
+        "bytes": 2224
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-R3-02.json",
+        "sha256": "d33920d9aad80083b8fde1454fd815b2b8b593d3d2b181d92fc27a7ee4c50260",
+        "bytes": 2687
+      },
+      "design_fixture_sha256": "54e37ff3c50b667d0b0a613ac8df10140d334e35d95cfcb30581764920a26de5",
+      "design_oracle_sha256": "b5fc365df3d3a84de3072a2e1929d3199929f99fe3038180ebaad5943488a186",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-R3-03",
+      "kind": "POS",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-R3-03 | POS | WM3-P04",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-R3-03.json",
+        "sha256": "4741cbe9f6ced33fad4b4d82147007a0c0dffac427135dc9ee8749fb6c414cf6",
+        "bytes": 2129
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-R3-03.json",
+        "sha256": "855a1544a73c006b59e6e362d142f36821d77110aa48badde490763c69c27b26",
+        "bytes": 2713
+      },
+      "design_fixture_sha256": "d0faad1c968b24f38fbec29577f083b5ad3eb8eb168e0c78f60ea2f868296cf6",
+      "design_oracle_sha256": "9fbc7a90f788b53aca480873f04159c96b7839bd864c6dfa763e502e3e83e30f",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-R3-04",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-R3-04 | NEG | WM3-P03/WM3-P06",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-R3-04.json",
+        "sha256": "cdda1fb580f0aac75d60b2037c22d14ec557e18b5fa4e5d11e341f16924b66de",
+        "bytes": 1884
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-R3-04.json",
+        "sha256": "18380768a3769a0b1a8b3eed8f7e9143c022df8e0b250405e95f180b5f1896c9",
+        "bytes": 2715
+      },
+      "design_fixture_sha256": "a983c5be6cfaf5f16f266121a455cdb20593b120bc857af420d8b4422d1db0a1",
+      "design_oracle_sha256": "5eeb73dc78972d540aaae6d506ff2cb3869177bbd7c9a6d662a56820f4bc44e1",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-R3-05",
+      "kind": "POS",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-R3-05 | POS | WM3-P05",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-R3-05.json",
+        "sha256": "4453a4e2f54399eaff20d85c588aa7af4975e2e71833c60cc7b17dc74b1e7ef1",
+        "bytes": 2870
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-R3-05.json",
+        "sha256": "41f94f99c6cc5a66107f80074c03eff24c3b694da1494a0573b729a72a1184d4",
+        "bytes": 2617
+      },
+      "design_fixture_sha256": "ff731933792526da13c5188757027f63dfdbf452830559b8956e307edbb07bf2",
+      "design_oracle_sha256": "6b14d77c459b6c4c64b4d68976db0338d6a5fecc544eb936aa83ee24ef224878",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-R3-06",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-R3-06 | NEG | WM3-P01/WM3-P04",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-R3-06.json",
+        "sha256": "21788b57def772415f854c09de31595d6b9cafba6aac8dfaaa2f0124fad64796",
+        "bytes": 1914
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-R3-06.json",
+        "sha256": "a956260b8d0fa980aa54b80b61534cb45c33cfcae1227b10366779d30d7c9b8f",
+        "bytes": 2824
+      },
+      "design_fixture_sha256": "e33ba60504566a85cbf30b178436d7d973dba60e12db49286edc82f4d78dd13e",
+      "design_oracle_sha256": "422f1e6f9ea5339b421838405e077da50334ac44f9898179713a6e9b736bf4c6",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-RUN-01",
+      "kind": "POS",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-RUN-01 | POS | WM3-P02/WM3-P03",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-RUN-01.json",
+        "sha256": "9a6149d4fbe0c3974c71ba4dfec68d7df60d7d66905132fc73ccc281fbf7d5ff",
+        "bytes": 2637
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-RUN-01.json",
+        "sha256": "4b18e9be121d43ef1bce1053af20df78e6d0f673e971e266703a46abb6794d8e",
+        "bytes": 2875
+      },
+      "design_fixture_sha256": "a13f479256e9d6f7ffb5beb77e7947ebb4a113fb9eb0b217a73cad61cec8779e",
+      "design_oracle_sha256": "34b9a16a3e1fca2fb45e2bfbed90f453b297386ec1dcffc6d763e31c0b2e1e80",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    },
+    {
+      "case_id": "W3-RUN-02",
+      "kind": "NEG",
+      "contract_ref": "03_W3_TQAEP.md §03 | W3-RUN-02 | NEG | WM3-P02/WM3-P03",
+      "fixture": {
+        "ref": "work/product_case_owner/fixtures/W3-RUN-02.json",
+        "sha256": "16738692d4727ea6b3c0698fe21a0d53c7c5b84a2e8ac86a495ff30f8fbc39a5",
+        "bytes": 2392
+      },
+      "oracle": {
+        "ref": "work/product_case_owner/oracles/W3-RUN-02.json",
+        "sha256": "75b1a8154aeda67993843e7e9a3809e0299880bddd8677a5f6404681748611f3",
+        "bytes": 3015
+      },
+      "design_fixture_sha256": "41be9072ed9ed4e3ef58244e451bfdd1d67193be46d076b5af891f1b79a851d8",
+      "design_oracle_sha256": "d07cc6baadc48d00ab5578489b784bb9f9168a335cef930ceda42e971bbbd121",
+      "fixture_differs_from_design": true,
+      "oracle_differs_from_design": true,
+      "input_substantively_changed_from_design": true
+    }
+  ],
+  "all_fixtures_differ_from_design": true,
+  "all_oracles_differ_from_design": true,
+  "all_inputs_substantively_changed": true,
+  "attestation": {
+    "statement": "I am the separate W3 Product Case Owner for the Generic Native profile, independent of the Maker. I froze the 16 expected token/exit/predicate sets listed here at 2026-11-26T18:54:10+08:00, BEFORE this product run. The expected values were taken from 03_W3_TQAEP.md §03 and were not derived from any product observed verdict. Input parameter values are real values from the W3D reference run and are provenance, not expected. This set is a Generic Native product case set, not an original-domain oracle, and it grants no product PASS.",
+    "signer": "separate Case Owner session",
+    "signature_state": "TEXT_ATTESTATION_NO_CRYPTO_KEY",
+    "signed_at": "2026-11-26T18:54:10+08:00"
+  },
+  "claim_ceiling": "GENERIC_NATIVE_PRODUCT_CASE_SET_ONLY",
+  "not_claimed": [
+    "PRODUCT_PASS",
+    "W3_NF_VALIDATED",
+    "W3_TECHNICALLY_READY",
+    "INDEPENDENT_PASS",
+    "ORIGINAL_DOMAIN_ORACLE"
+  ],
+  "not_original_domain": true
+}

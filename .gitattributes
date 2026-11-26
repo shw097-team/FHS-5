@@ -17,3 +17,9 @@ W3_PUBLICATION_RECEIPT.json -text
 W2/** -text
 W4/** -text
 W3/evidence/final/** -text
+
+# real product exact LF
+W2/** -text
+W4/** -text
+product_case_owner/** -text
+W3/evidence/real/** -text

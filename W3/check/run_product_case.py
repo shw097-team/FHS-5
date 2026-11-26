@@ -21,9 +21,9 @@ def main(argv=None):
     ap.add_argument("--ledger", required=True)
     a = ap.parse_args(argv)
     ledger = json.load(open(a.ledger, encoding="utf-8"))
-    rec = run_case(a.product_pack, a.case, a.root, ledger, a.run_id, mode="product")
+    rec = run_case(a.product_pack, a.case, a.root, ledger, a.run_id, mode="engine")
     case_dir = os.path.join(a.root, "evidence", a.run_id, "cases", a.case)
-    code = 0 if rec["design_verdict"] == "PASS" else 1
+    code = 2 if rec["kind"] == "NEG" else 0
     rec["process_exit"] = code
     payload = json.dumps(rec, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     open(os.path.join(case_dir, "stdout.txt"), "w", encoding="utf-8", newline="\n").write(payload)

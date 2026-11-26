@@ -58,7 +58,14 @@ def _w(p, text):
 def w2_dev_01(fixture, oracle, ctx):
     repo = Path(ctx["case_dir"]) / "repo"
     shutil.rmtree(repo, ignore_errors=True)
-    _w(repo / "W1/check/w2_receiver.py", "VERSION = 'v1'\n\ndef receive(x):\n    return x\n")
+    cand_file = Path(ctx["root"]) / "W2" / "case_root" / "W2_CANDIDATE_ROOT.txt"
+    cand_root = Path(cand_file.read_text(encoding="utf-8").strip()) if cand_file.is_file() else None
+    if cand_root and (cand_root / "W1").is_dir():
+        shutil.copytree(cand_root / "W1", repo / "W1")
+        real_candidate = True
+    else:
+        _w(repo / "W1/check/w2_receiver.py", "VERSION = 'v1'\n\ndef receive(x):\n    return x\n")
+        real_candidate = False
     _w(repo / "legacy/old_tag_adapter.py", "LEGACY = True\n")
     _w(repo / "README.txt", "unlisted\n")
     _init_repo(repo)
@@ -70,18 +77,19 @@ def w2_dev_01(fixture, oracle, ctx):
     unlisted_before = sha256_file(repo / "README.txt")
     head = _git(repo, "rev-parse", "HEAD")["stdout"].decode().strip()
 
-    _w(receiver, "VERSION = 'v1-patched'\n\ndef receive(x):\n    return x\n")
-    test = repo / "W1/check/test_j1_receiver.py"
+    _w(receiver, pre_receiver.decode("utf-8") + "\nW3_PRODUCT_PATCH_MARKER = True\n")
+    test = repo / "W1/check/test_w3_product_patch.py"
     _w(test, "import os, sys, unittest\n"
              "sys.path.insert(0, os.path.dirname(__file__))\n"
+             "sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'impl'))\n"
              "import w2_receiver\n"
              "class T(unittest.TestCase):\n"
-             "    def test_version(self):\n"
-             "        self.assertEqual(w2_receiver.VERSION, 'v1-patched')\n")
+             "    def test_marker(self):\n"
+             "        self.assertTrue(w2_receiver.W3_PRODUCT_PATCH_MARKER)\n")
     legacy.unlink()
     post_sha = sha256_file(receiver)
     test_proc = run_process([sys.executable, "-m", "unittest", "discover",
-                             "-s", str(repo / "W1/check"), "-p", "test_j1_receiver.py", "-v"],
+                             "-s", str(repo / "W1/check"), "-p", "test_w3_product_patch.py", "-v"],
                             cwd=repo, timeout_s=60)
     test_ok = test_proc["exit"] == 0 and b"OK" in test_proc["stderr"]
 
@@ -96,6 +104,7 @@ def w2_dev_01(fixture, oracle, ctx):
     return _result("DEV_VERIFIED", ["DEV_VERIFIED", "REVERSE_RESTORED"] if ok else ["DEV_VERIFIED"],
                    0 if ok else EXIT_FAIL,
                    {"head": head, "pre_sha256": pre_sha, "post_sha256": post_sha,
+                    "real_candidate_bytes": real_candidate,
                     "test_exit": test_proc["exit"], "test_stdout_sha256": test_proc["stdout_sha256"],
                     "restored_preimage": restored, "unlisted_unchanged": unlisted_before == unlisted_after,
                     "write_set": ["W1/check/w2_receiver.py", "W1/check/test_j1_receiver.py",
@@ -137,13 +146,26 @@ def w2_ops_01(fixture, oracle, ctx):
     os.replace(tmp, target)
     parsed = json.loads(target.read_text(encoding="utf-8"))
     consumed = parsed.get("parsed") is True and parsed.get("readback") is True
+    receiver_sha = None
+    receiver_abi = None
+    cand_file = Path(ctx["root"]) / "W2" / "case_root" / "W2_CANDIDATE_ROOT.txt"
+    cand_root = Path(cand_file.read_text(encoding="utf-8").strip()) if cand_file.is_file() else None
+    if cand_root and (cand_root / "W1" / "check" / "w2_receiver.py").is_file():
+        sys.path.insert(0, str(cand_root / "W1" / "check"))
+        sys.path.insert(0, str(cand_root / "W1" / "impl"))
+        import w2_receiver  # real candidate ABI
+        receiver_sha = w2_receiver.sha256_file(target)
+        receiver_abi = "w2_receiver.sha256_file"
+        consumed = consumed and receiver_sha == sha256_file(target)
     target.unlink()
     restored_absent = not target.exists()
     ok = consumed and restored_absent and parsed["host_id"] == host["host_id"]
     return _result("OPS_VERIFIED", ["OPS_VERIFIED", "RECOVERED_PRE_STATE"], 0 if ok else EXIT_FAIL,
                    {"host": host, "target": str(target), "receiver_consumed": consumed,
                     "compensation": "DELETE_CREATED_ONLY", "pre_state_absent": restored_absent,
-                    "git_revert": False})
+                    "git_revert": False, "substitute": False,
+                    "receiver_abi": receiver_abi, "receiver_sha256": receiver_sha,
+                    "host_effect": "real local filesystem write/read/delete"})
 
 
 def w2_ops_02(fixture, oracle, ctx):

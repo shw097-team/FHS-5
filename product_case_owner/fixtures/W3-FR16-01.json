@@ -1,0 +1,56 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-FR16-01",
+  "kind": "NEG",
+  "wp": "WM3-P03",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-FR16-01 | NEG | WM3-P03",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FR16-01/record.json",
+    "reference_record_sha256": "92c3a9fc95dd20dd3a2c4a2cc95d172e3ffa13c62590fb2702bd1a0b466f00ed",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "report_write_set": [
+      "W1/check/test_j1_strict.py",
+      "oracle.json",
+      "threshold.json",
+      "subject/00.md"
+    ],
+    "write_set_count": 4,
+    "canary_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FR16-01/canary.txt",
+    "canary_value": "canary-v1",
+    "canary_sha256": "d6e1d370f7f9cdf8028eebca911681300411553d4b314bcd8f31d5f4aaf5996e",
+    "pre_hashes_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FR16-01/record.json#pre",
+    "related_findings": [
+      "F3-W3D-01"
+    ],
+    "reference_run_facts": {
+      "refused_targets": [
+        "W1/check/test_j1_strict.py",
+        "oracle.json",
+        "threshold.json",
+        "subject/00.md"
+      ],
+      "refused_count": 4,
+      "canary_unchanged": true,
+      "subject_oracle_test_threshold_mutation": 0,
+      "native_ecp_required_for_patch": true,
+      "process_exit": 2
+    }
+  }
+}

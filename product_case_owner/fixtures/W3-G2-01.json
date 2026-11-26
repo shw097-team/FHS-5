@@ -1,0 +1,48 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-G2-01",
+  "kind": "NEG",
+  "wp": "WM3-P06",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-G2-01 | NEG | WM3-P06",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-G2-01/record.json",
+    "reference_record_sha256": "efe26788765a32656082bf78c413e8275d24f5fc7ce072c3ef840aad41fe13b7",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "periods": [
+      {
+        "period": 1,
+        "world_reader_receipt": null
+      }
+    ],
+    "period_count": 1,
+    "caller_verified": true,
+    "single_evidence_sha": "639e31a68902f9e1566345d4ef9be7fe8e3f03195d5ef505251e79ba95bad9bd",
+    "single_evidence_sha_kind": "the case oracle digest from the reference record; one sha is not a period delta",
+    "requested_claim": "PARK_UNTIL_DELTA",
+    "reference_run_facts": {
+      "state": "DELTA_UNVERIFIED",
+      "reason": "single_evidence_sha is not a delta",
+      "caller_boolean_ignored": true,
+      "park_emitted": false,
+      "no_redispatch": true,
+      "process_exit": 2
+    }
+  }
+}

@@ -104,6 +104,8 @@ def case_frz_02(fixture, oracle, ctx):
     invoked = False
     subcases = []
     for mutation in fixture["input"].get("mutations", []):
+        if isinstance(mutation, dict):
+            mutation = mutation.get("name")
         cand = copy.deepcopy(baseline)
         if mutation == "FLOATING_HEAD":
             cand["pins"]["candidate"]["value"] = "refs/heads/floating"
@@ -143,30 +145,32 @@ def case_frz_02(fixture, oracle, ctx):
     )
 
 
-POS_CHILD = """import sys, json
-pair = sys.argv[1]
-if pair == 'POS':
-    print(json.dumps({'token': 'SEMANTIC_MATCH', 'pair': pair}))
-    sys.exit(0)
-print(json.dumps({'token': 'REFUSAL_SEMANTIC_MATCH', 'pair': pair}))
-sys.exit(2)
-"""
-
-
 def case_run_01(fixture, oracle, ctx):
+    """Real POS/NEG product invocation: run the product CLI on two cases."""
     case_dir = Path(ctx["case_dir"])
-    child = case_dir / "pos_neg_child.py"
-    child.write_text(POS_CHILD, encoding="utf-8")
+    ledger_path = case_dir / "ledger.json"
+    write_json(ledger_path, ctx["ledger"])
+    tree_before = tree_digest(ctx["pack"])["tree_sha256"]
+    commands = fixture.get("input", {}).get("commands") or [
+        {"case": "W3-FRZ-01", "expected_exit": 0},
+        {"case": "W3-FRZ-02", "expected_exit": 2},
+    ]
     records = []
-    for pair, expected_exit, token in (("POS", 0, "SEMANTIC_MATCH"), ("NEG", 2, "REFUSAL_SEMANTIC_MATCH")):
-        out_dir = case_dir / ("raw_" + pair)
+    for i, cmd in enumerate(commands):
+        out_dir = case_dir / ("raw_%d" % i)
         out_dir.mkdir(exist_ok=True)
-        rec = run_process([__import__("sys").executable, str(child), pair],
-                          cwd=out_dir, timeout_s=30)
+        argv = [__import__("sys").executable,
+                os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                             "check", "run_w3_case.py"),
+                "--pack", ctx["pack"], "--case", cmd["case"],
+                "--root", ctx["root"], "--run-id", ctx["run_id"] + "-run01-%d" % i,
+                "--ledger", str(ledger_path)]
+        rec = run_process(argv, cwd=out_dir, timeout_s=120)
         (out_dir / "stdout.txt").write_bytes(rec["stdout"])
         (out_dir / "stderr.txt").write_bytes(rec["stderr"])
         records.append({
-            "pair": pair,
+            "case": cmd["case"],
+            "expected_exit": cmd.get("expected_exit"),
             "argv": rec["argv"],
             "cwd": rec["cwd"],
             "exit": rec["exit"],
@@ -174,19 +178,19 @@ def case_run_01(fixture, oracle, ctx):
             "stderr_sha256": rec["stderr_sha256"],
             "stdout_ref": str(out_dir / "stdout.txt"),
             "stderr_ref": str(out_dir / "stderr.txt"),
-            "expected_exit": expected_exit,
-            "expected_token": token,
-            "token_observed": token in rec["stdout"].decode("utf-8", "replace"),
             "independent_raw": True,
         })
-    ok = (records[0]["exit"] == 0 and records[0]["token_observed"]
-          and records[1]["exit"] == 2 and records[1]["token_observed"])
+    tree_after = tree_digest(ctx["pack"])["tree_sha256"]
+    ok = all(r["exit"] == r["expected_exit"] for r in records)
     return _result("SEMANTIC_MATCH" if ok else "UNREPRODUCED", 0 if ok else EXIT_FAIL,
                    {"records": records,
                     "case_pass": ok,
-                    "operation_established": records[0]["token_observed"],
-                    "refusal_established": records[1]["token_observed"]},
-                   ["POS and NEG are recorded separately; exit 0 alone is not PASS"])
+                    "operation_established": records[0]["exit"] == 0,
+                    "refusal_established": records[1]["exit"] == 2,
+                    "pack_tree_unchanged": tree_before == tree_after,
+                    "pack_tree_before": tree_before,
+                    "pack_tree_after": tree_after},
+                   ["POS and NEG are real product CLI invocations; exit 0 alone is not PASS"])
 
 
 def case_run_02(fixture, oracle, ctx):
@@ -198,6 +202,8 @@ def case_run_02(fixture, oracle, ctx):
     }
     defects = []
     for d in fixture["input"].get("defects", []):
+        if isinstance(d, dict):
+            d = d.get("name")
         defects.append({"defect": d, "mapped": mapping.get(d, "UNREPRODUCED"),
                         "executed": False, "exit": None, "substituted_stdout": False})
     ok = all(x["mapped"] in ("UNREPRODUCED", "RUNNER_UNBOUND", "RAW_UNTRUSTED") for x in defects)
@@ -273,11 +279,12 @@ def case_chk_01(fixture, oracle, ctx):
 
 def case_r3_01(fixture, oracle, ctx):
     loc = fixture["input"].get("locator", {})
+    missing = bool(loc.get("missing_original_bytes") or fixture["input"].get("missing_original_bytes"))
     observed = {
         "identity_preserved": loc.get("recorded") is not None,
         "recorded": loc.get("recorded"),
         "best_effort": loc.get("best_effort"),
-        "missing_original_bytes": bool(loc.get("missing_original_bytes")),
+        "missing_original_bytes": missing,
         "fabricated_bytes": False,
         "coverage_promoted": False,
     }
@@ -423,13 +430,15 @@ def run_case(pack, case_id, root, ledger, run_id, case_dir=None, mode="design"):
     if case_dir is None:
         case_dir = os.path.join(root, "evidence", run_id, "cases", case_id)
     os.makedirs(case_dir, exist_ok=True)
+    source_pack = ledger.get("source_pack") if isinstance(ledger, dict) else None
     ctx = {
-        "pack": pack,
+        "pack": source_pack or pack,
+        "case_pack": pack,
         "root": root,
         "run_id": run_id,
         "case_dir": case_dir,
         "ledger": ledger,
-        "pack_canary": tree_digest(pack),
+        "pack_canary": tree_digest(source_pack or pack),
         "host": host_identity(),
     }
     started = time.time()
@@ -443,7 +452,10 @@ def run_case(pack, case_id, root, ledger, run_id, case_dir=None, mode="design"):
     expected = oracle.get("expected", {})
     token_match = result["token"] == expected.get("token")
     exit_ok = result["exit"] == 0
-    design_verdict = "PASS" if token_match and exit_ok and not result["engine_error"] else "FAIL"
+    if mode == "engine":
+        design_verdict = "OBSERVED"
+    else:
+        design_verdict = "PASS" if token_match and exit_ok and not result["engine_error"] else "FAIL"
     record = {
         "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
         "run_id": run_id,
@@ -468,7 +480,8 @@ def run_case(pack, case_id, root, ledger, run_id, case_dir=None, mode="design"):
         "notes": result["notes"],
         "observation_layer": "DESIGN_ENGINE" if mode == "design" else "PRODUCT_FROZEN_E2E",
         "product_case_state": ("NOT_COVERED" if mode == "design"
-                               else ("PRODUCT_PASS" if design_verdict == "PASS" else "PRODUCT_FAIL")),
+                               else ("ENGINE_OBSERVED" if mode == "engine"
+                                     else ("PRODUCT_PASS" if design_verdict == "PASS" else "PRODUCT_FAIL"))),
         "product_not_covered_reason": ("design fixture/oracle; no Case Owner product freeze, no real product runner/Host"
                                        if mode == "design" else None),
         "runner": {

@@ -1,0 +1,48 @@
+{
+  "schema": "FHS5.PLP.W3.F1F5ClosureLedger@2",
+  "closure_id": "REAL",
+  "F1": {
+    "status": "ACHIEVED_REAL_CANDIDATE_READONLY",
+    "w2_cases": 12,
+    "w2_pass": 12,
+    "verdict": "W2_UPSTREAM_REQUALIFIED_READONLY",
+    "W2_NF_VALIDATED": false,
+    "blocker": "W2 protected writer/gate/marker and original-domain signer",
+    "checker": "PASS"
+  },
+  "F2": {
+    "status": "ACHIEVED_GENERIC_NATIVE_PRODUCT_FREEZE",
+    "case_owner": "separate Case Owner session",
+    "cases": 16,
+    "candidate": "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
+    "case_owner_freeze_sha256": "ac9f061bee576cdea93fdbdf5f49f61cb710873a4ad3308248297b4c1a6ed07f"
+  },
+  "F3": {
+    "status": "PRODUCT_VALIDATED_GENERIC_NATIVE",
+    "cases": 16,
+    "product_pass": 16,
+    "fr": 33,
+    "fr_product_pass": 33
+  },
+  "F4": {
+    "status": "PRODUCT_CHECKER_AND_W4_INBOUND",
+    "checker": "PASS",
+    "W4_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false
+  },
+  "F5": {
+    "status": "LOCAL_COMMIT_PENDING",
+    "pushed": false
+  },
+  "claims": {
+    "W2_NF_VALIDATED": false,
+    "W3_PRODUCT_16_16_GENERIC_NATIVE": true,
+    "W3_TECHNICALLY_READY": false,
+    "W3_EXECUTION_READY": false,
+    "W3_NF_VALIDATED": false,
+    "INDEPENDENT_PASS": false,
+    "W4_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false,
+    "RELEASED": false
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-R3-05",
+  "kind": "POS",
+  "wp": "WM3-P05",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-R3-05 | POS | WM3-P05",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-R3-05/record.json",
+    "reference_record_sha256": "addbdc8888bbfbece5ddb2fc0d1ad709101f3aa5f2ae26f0f2d0fa4c076ccfcc",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "root_cause": "no Owner designation",
+    "old_problem_reopened": false,
+    "alternatives": [
+      {
+        "id": "ALT-A",
+        "type": "designate an existing candidate",
+        "fit": "G4 3 tests / SQS 5 cases + 14-req frozen oracle",
+        "nofit": "Owner says neither is in scope",
+        "owner": "Owner-delegated",
+        "scope": "W3-NF-01",
+        "evidence_refs": [
+          "CASE:W3-R3-05"
+        ],
+        "change_cone": [
+          "W3/spec/W3_CASE_SET.json"
+        ],
+        "rollback": "reverse patch / restore frozen case set",
+        "cost": "UNKNOWN",
+        "risk": "UNKNOWN"
+      },
+      {
+        "id": "ALT-B",
+        "type": "typed ReasonedNA",
+        "fit": "both candidates genuinely inapplicable",
+        "nofit": "N/A without a locatable reason",
+        "owner": "Owner-delegated",
+        "scope": "W3-NF-01",
+        "evidence_refs": [
+          "CASE:W3-R3-05"
+        ],
+        "change_cone": [
+          "W3/spec/W3_CASE_SET.json"
+        ],
+        "rollback": "reverse patch / restore frozen case set",
+        "cost": "UNKNOWN",
+        "risk": "UNKNOWN"
+      }
+    ],
+    "alternative_count": 2,
+    "reference_run_facts": {
+      "validation_ok": true,
+      "fit_nofit_present": true,
+      "new_root_cause_claimed": false,
+      "license_claimed": false,
+      "process_exit": 0
+    }
+  }
+}

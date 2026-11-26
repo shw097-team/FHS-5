@@ -1,0 +1,72 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-FRZ-02",
+  "kind": "NEG",
+  "wp": "WM3-P01",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-FRZ-02 | NEG | WM3-P01",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FRZ-02/record.json",
+    "reference_record_sha256": "0efb35f7ad0dfcc0d25fb04378c049819ccc442f8e161f7ccc9af60b55c0b6cc",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "mutations": [
+      {
+        "name": "FLOATING_HEAD",
+        "operates_on": "candidate pin",
+        "mutation": "candidate left as a floating HEAD/branch rather than a frozen sha"
+      },
+      {
+        "name": "OLD_CANDIDATE_RAW",
+        "operates_on": "candidate pin",
+        "mutation": "current candidate raw replaced with an older candidate raw"
+      },
+      {
+        "name": "WRONG_SOURCE_PIN",
+        "operates_on": "source pin",
+        "mutation": "source digest altered"
+      },
+      {
+        "name": "SCOPE_DRIFT",
+        "operates_on": "scope",
+        "mutation": "scope changed away from W3-NF-01"
+      },
+      {
+        "name": "ORACLE_SWAP",
+        "operates_on": "oracle pin",
+        "mutation": "oracle body replaced by a different oracle"
+      }
+    ],
+    "mutation_count": 5,
+    "source_sentinel_sha256": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+    "downstream_tokens": [
+      "CANDIDATE_CHANGED",
+      "FROZEN_IDENTITY_MISMATCH",
+      "ORACLE_DRIFT",
+      "SOURCE_INTEGRITY_FAILED"
+    ],
+    "pre_invocation_required": true,
+    "reference_run_facts": {
+      "runner_invoked": false,
+      "zero_writes": true,
+      "source_sentinel_unchanged": true,
+      "subcase_count": 5,
+      "process_exit": 2
+    }
+  }
+}

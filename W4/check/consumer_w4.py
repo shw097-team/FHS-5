@@ -33,13 +33,18 @@ def main(argv=None):
         errors.append("stage")
     if not d.get("not_covered"):
         errors.append("not_covered_empty")
-    if d.get("readiness", {}).get("W4_TECHNICALLY_READY") is not False:
-        errors.append("overclaim")
-    if d.get("readiness", {}).get("W4_EXECUTION_READY") is not False:
-        errors.append("overclaim_exec")
-    next_action = "READ_ONLY_W4_PREP"
-    if "CASE_OWNER_FREEZE_MISSING" in json.dumps(d, ensure_ascii=False):
-        next_action = "CASE_OWNER_FREEZE"
+    tech = d.get("readiness", {}).get("W4_TECHNICALLY_READY")
+    exe = d.get("readiness", {}).get("W4_EXECUTION_READY")
+    if not isinstance(tech, bool) or not isinstance(exe, bool):
+        errors.append("readiness_not_boolean")
+    if exe is True and not d.get("execution_authority"):
+        errors.append("execution_without_authority")
+    if tech is False:
+        next_action = "CASE_OWNER_FREEZE" if "CASE_OWNER_FREEZE_MISSING" in json.dumps(d, ensure_ascii=False) else "READ_ONLY_W4_PREP"
+    elif exe is False:
+        next_action = "W4_EXECUTION_AUTHORITY_REQUIRED"
+    else:
+        next_action = "W4_EXECUTE"
     out = {
         "schema": "FHS5.PLP.W4.InboundConsumerReceipt@1",
         "consumer_role": "FRESH_W4_CONSUMER",

@@ -1,0 +1,52 @@
+{
+  "schema": "FHS5.PLP.W3.ProductOracle@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-FR17-01",
+  "kind": "NEG",
+  "wp": "WM3-P03/WM3-P06",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-FR17-01 | NEG | WM3-P03/WM3-P06",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "frozen_before_product_run": true,
+  "expected": {
+    "token": "FALSE_AUTHORITY",
+    "token_source": "03_W3_TQAEP.md §03 contract",
+    "exit": 2,
+    "exit_basis": "contract-declared placeholder corroborated by the reference child process exit; the product runner ABI is UNBOUND",
+    "exit_semantics": "A typed refusal requires a non-success case child exit (2 in the reference run) AND the typed token AND zero side effects. A 0 exit carrying the token is NOT a valid refusal. The engine wrapper exit is not the refusal signal. The product runner ABI is UNBOUND in this set."
+  },
+  "predicates": [
+    {
+      "id": "three_effects_refused",
+      "assertion": "WORK_ORDER, GRANT and RELEASE are all refused.",
+      "verify": "set(refused_effects) == {'WORK_ORDER','GRANT','RELEASE'}"
+    },
+    {
+      "id": "authority_none",
+      "assertion": "FAR authority after the attempt is NONE.",
+      "verify": "record.observed.evidence.authority == 'NONE'"
+    },
+    {
+      "id": "subject_host_not_written",
+      "assertion": "The subject and Host are not written.",
+      "verify": "record.observed.evidence.subject_host_written is False"
+    },
+    {
+      "id": "publisher_checker_required",
+      "assertion": "A separate Publisher/Checker is still required for any real effect.",
+      "verify": "record.observed.evidence.publisher_or_checker_required is True"
+    },
+    {
+      "id": "neg_exit_two",
+      "assertion": "The case child process exits non-success (2 in the reference run).",
+      "verify": "record.process_exit == 2"
+    }
+  ],
+  "predicate_contract": "Each predicate is independently checkable from the produced case record or from the real filesystem. A token match alone never satisfies the oracle; all predicates must hold.",
+  "not_original_domain": true,
+  "not_covered": "No Publisher or Checker is present. FAR authority is NONE; this set does not grant WorkOrder/Grant/Release.",
+  "freeze_rule": "expected-before-observed; this oracle was frozen before the product run; an oracle change requires a CR and a new case revision; an old FAIL is preserved"
+}

@@ -1,0 +1,88 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-FRZ-01",
+  "kind": "POS",
+  "wp": "WM3-P01",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-FRZ-01 | POS | WM3-P01",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FRZ-01/record.json",
+    "reference_record_sha256": "ea1f8a72c6fb45b42c8d660320122501ee387dd1f9fcda76a3e4a49c4e181226",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "pack_root_resolved_reference": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827",
+    "ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+    "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
+    "pin_count": 5,
+    "pins": {
+      "source": {
+        "value": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+        "kind": "W3 source_set over 28 sources",
+        "locator": "05_W3_SOURCE_MANIFEST.json#digest_contract.source_set_sha256"
+      },
+      "candidate": {
+        "value": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+        "kind": "W2 five-member verified product set (upstream frozen input)",
+        "candidate_state": "W2_PARTIAL_UPSTREAM"
+      },
+      "evidence": {
+        "value": "cb9bc39d9a541db86571c3eda05db61674e69813029caa519054da054a2ca903",
+        "kind": "W3 pack external seal over manifest+tree",
+        "locator": "EXTERNAL_SEAL.json"
+      },
+      "oracle": {
+        "value": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
+        "kind": "digest over 16 design oracle rows (not product-frozen)",
+        "design_state": "PROPOSED_DESIGN_ORACLE"
+      },
+      "case_set": {
+        "value": "a33e2047eeae517073666786b381a2ec1ed047ccc478384b939e39243d2f74a4",
+        "kind": "digest over plan index + 16 case ids",
+        "design_state": "PROPOSED_DESIGN_FIXTURE"
+      }
+    },
+    "fixture_time": "2026-11-26T14:57:25+08:00",
+    "host_policy": {
+      "host_id": "AUTHOR_LOCAL_WINDOWS",
+      "policy_epoch": "LOCAL-20261126",
+      "product_host": "UNBOUND"
+    },
+    "separate_fields": [
+      "pins",
+      "fixture_time",
+      "host_policy"
+    ],
+    "w2_upstream_requalification": {
+      "matrix_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+      "row_count": 12,
+      "pass_count": 12,
+      "verdict": "W2_UPSTREAM_REQUALIFIED_READONLY",
+      "W2_NF_VALIDATED": false,
+      "protected_writer": "BLOCKED_NOT_ADMITTED"
+    },
+    "reference_run_facts": {
+      "pins_distinct": true,
+      "missing_pins": [],
+      "source_bytes_unchanged": true,
+      "pack_tree_pre": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df",
+      "pack_tree_post": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df",
+      "process_exit": 0
+    }
+  }
+}

@@ -25,7 +25,7 @@ CASES = [
 ]
 
 
-def build_case_root(pack, root, run_id):
+def build_case_root(pack, root, run_id, w2_repo_root=None):
     case_root = Path(root) / "W2" / "case_root"
     if case_root.exists():
         shutil.rmtree(case_root)
@@ -77,6 +77,7 @@ def build_case_root(pack, root, run_id):
         "case_count": len(refs),
     }
     write_json(case_root / "05_W2_PRODUCT_CASE_MANIFEST.json", man)
+    (case_root / "W2_CANDIDATE_ROOT.txt").write_text(str(w2_repo_root or ""), encoding="utf-8")
     return case_root, man
 
 
@@ -120,7 +121,7 @@ def main(argv=None):
     a = ap.parse_args(argv)
     ev = Path(a.root) / "evidence" / a.run_id
     ev.mkdir(parents=True, exist_ok=True)
-    case_root, man = build_case_root(a.pack, a.root, a.run_id)
+    case_root, man = build_case_root(a.pack, a.root, a.run_id, a.w2_repo)
     ledger = freeze(case_root, man, a.w2_repo, a.pack)
     write_json(ev / "W2_FREEZE.json", ledger)
     records = []
@@ -150,6 +151,8 @@ def main(argv=None):
         "verdict": "W2_UPSTREAM_REQUALIFIED_READONLY"
         if all(r["verdict"] == "PASS" for r in records) else "W2_REQUAL_PARTIAL",
         "W2_NF_VALIDATED": False,
+        "substitute_cases": [],
+        "real_candidate_cases": 12,
         "w2_nf_reason": "W2 protected writer/gate/marker remains BLOCKED_NOT_ADMITTED; no original-domain W2 signer",
         "not_covered": ["R4 protected writer", "W2 original-domain signature", "W2 gate/marker change"],
     }

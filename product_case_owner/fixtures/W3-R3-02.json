@@ -1,0 +1,65 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-R3-02",
+  "kind": "NEG",
+  "wp": "WM3-P06",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-R3-02 | NEG | WM3-P06",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-R3-02/record.json",
+    "reference_record_sha256": "1e0c24a8a94f6a794c280926147ae3d3657575eaeb0862dd1017885115d2c401",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "claimed": "two-period world delta",
+    "counts": [
+      {
+        "period": "p1",
+        "value": 276
+      },
+      {
+        "period": "p2",
+        "value": 275
+      },
+      {
+        "period": "p3",
+        "value": 317
+      },
+      {
+        "period": "p4",
+        "value": 316
+      },
+      {
+        "period": "p5",
+        "value": 318
+      },
+      {
+        "period": "p6",
+        "value": 319
+      }
+    ],
+    "period_count": 6,
+    "world_raw_present": false,
+    "reference_run_facts": {
+      "world_raw_present": false,
+      "delta_state": "DELTA_UNVERIFIED",
+      "reason": "single_evidence_sha is not a delta",
+      "park_emitted": false,
+      "process_exit": 2
+    }
+  }
+}

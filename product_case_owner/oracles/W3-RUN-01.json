@@ -1,0 +1,52 @@
+{
+  "schema": "FHS5.PLP.W3.ProductOracle@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-RUN-01",
+  "kind": "POS",
+  "wp": "WM3-P02/WM3-P03",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-RUN-01 | POS | WM3-P02/WM3-P03",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "frozen_before_product_run": true,
+  "expected": {
+    "token": "SEMANTIC_MATCH",
+    "token_source": "03_W3_TQAEP.md §03 contract",
+    "exit": 0,
+    "exit_basis": "contract-declared placeholder corroborated by the reference child process exit; the product runner ABI is UNBOUND",
+    "exit_semantics": "A positive case succeeds only if the case child process exits 0 AND the typed token is emitted AND every predicate holds. The engine wrapper exit is not case evidence; exit 0 alone is NOT a product PASS. The product runner ABI is UNBOUND in this set."
+  },
+  "predicates": [
+    {
+      "id": "pos_exit_zero",
+      "assertion": "The POS child process exits 0 and the wrapper exits 0.",
+      "verify": "record.observed.evidence.records[POS].exit == 0 and record.process_exit == 0"
+    },
+    {
+      "id": "neg_exit_two",
+      "assertion": "The NEG child is a separate process that exits 2 with a typed refusal token.",
+      "verify": "record.observed.evidence.records[NEG].exit == 2"
+    },
+    {
+      "id": "pos_neg_raws_independent",
+      "assertion": "POS and NEG each have their own cwd, stdout and stderr, and both are marked independent_raw true.",
+      "verify": "len({r.cwd for r in records}) == 2 and all(r.independent_raw for r in records)"
+    },
+    {
+      "id": "operation_and_refusal_both_established",
+      "assertion": "Case PASS, operation established and refusal established are recorded as separate booleans, all true.",
+      "verify": "case_pass and operation_established and refusal_established are all True"
+    },
+    {
+      "id": "pack_tree_unchanged",
+      "assertion": "The pack tree digest is unchanged across the POS/NEG run.",
+      "verify": "record.pre.pack_tree_sha256 == record.post.pack_tree_sha256"
+    }
+  ],
+  "predicate_contract": "Each predicate is independently checkable from the produced case record or from the real filesystem. A token match alone never satisfies the oracle; all predicates must hold.",
+  "not_original_domain": true,
+  "not_covered": "The original product runner/oracle/fixture remain UNBOUND; exit 0 alone is not PASS. The POS/NEG child used in the reference run is an evidence-root helper, not a product runner.",
+  "freeze_rule": "expected-before-observed; this oracle was frozen before the product run; an oracle change requires a CR and a new case revision; an old FAIL is preserved"
+}

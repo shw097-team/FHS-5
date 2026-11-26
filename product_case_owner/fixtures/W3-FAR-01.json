@@ -1,0 +1,75 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-FAR-01",
+  "kind": "NEG",
+  "wp": "WM3-P04",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-FAR-01 | NEG | WM3-P04",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FAR-01/record.json",
+    "reference_record_sha256": "a33a32118676ddd8e4e1d67058fcf8f11a44177173409850cafb715093c7db50",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "providers": [
+      {
+        "id": "ABSENT_DB",
+        "query": "design-control",
+        "root_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FAR-01/far_01/ABSENT_DB",
+        "reachable_in_reference_run": false,
+        "reason": "root_absent"
+      },
+      {
+        "id": "REACHABLE_EMPTY",
+        "query": "design-control",
+        "root_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FAR-01/far_01/REACHABLE_EMPTY",
+        "reachable_in_reference_run": true,
+        "file_count": 3,
+        "files": [
+          "note_0.txt",
+          "note_1.txt",
+          "note_2.txt"
+        ]
+      }
+    ],
+    "injected_claim": {
+      "state": "HIT",
+      "zero_results": 0,
+      "claimed": "a zero-result search is relabelled HIT"
+    },
+    "provider_missing": true,
+    "reference_run_facts": {
+      "ABSENT_DB": {
+        "reachable": false,
+        "rows": null,
+        "zero_results": null,
+        "denominator": null,
+        "state": "UNAVAILABLE"
+      },
+      "REACHABLE_EMPTY": {
+        "reachable": true,
+        "rows": 0,
+        "zero_results": 0,
+        "denominator": 3,
+        "state": "ZERO_RELEVANT_HIT"
+      },
+      "injected_claim_token": "RESEARCH_REQUIRED",
+      "unavailable_is_not_zero": true,
+      "process_exit": 2
+    }
+  }
+}

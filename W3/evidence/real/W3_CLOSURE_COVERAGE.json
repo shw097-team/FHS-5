@@ -1,0 +1,761 @@
+{
+  "schema": "FHS5.PLP.W3.FinalClosureCoverage@2",
+  "fr": [
+    {
+      "fr": "EC-FR01",
+      "primary_case": "W3-FRZ-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FRZ-01/record.json"
+    },
+    {
+      "fr": "EC-FR02",
+      "primary_case": "W3-FRZ-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FRZ-02/record.json"
+    },
+    {
+      "fr": "EC-FR03",
+      "primary_case": "W3-CHK-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-CHK-01/record.json"
+    },
+    {
+      "fr": "EC-FR04",
+      "primary_case": "W3-CHK-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-CHK-01/record.json"
+    },
+    {
+      "fr": "EC-FR05",
+      "primary_case": "W3-RUN-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-RUN-01/record.json"
+    },
+    {
+      "fr": "EC-FR06",
+      "primary_case": "W3-RUN-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-RUN-01/record.json"
+    },
+    {
+      "fr": "EC-FR07",
+      "primary_case": "W3-RUN-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-RUN-02/record.json"
+    },
+    {
+      "fr": "EC-FR08",
+      "primary_case": "W3-RUN-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-RUN-01/record.json"
+    },
+    {
+      "fr": "EC-FR09",
+      "primary_case": "W3-RUN-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-RUN-01/record.json"
+    },
+    {
+      "fr": "EC-FR10",
+      "primary_case": "W3-FAR-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-02/record.json"
+    },
+    {
+      "fr": "EC-FR11",
+      "primary_case": "W3-R3-04",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-R3-04/record.json"
+    },
+    {
+      "fr": "EC-FR12",
+      "primary_case": "W3-CHK-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-CHK-01/record.json"
+    },
+    {
+      "fr": "EC-FR13",
+      "primary_case": "W3-FRZ-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FRZ-02/record.json"
+    },
+    {
+      "fr": "EC-FR14",
+      "primary_case": "W3-FAR-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-01/record.json"
+    },
+    {
+      "fr": "EC-FR15",
+      "primary_case": "W3-FR16-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FR16-01/record.json"
+    },
+    {
+      "fr": "EC-FR16",
+      "primary_case": "W3-FR16-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FR16-01/record.json"
+    },
+    {
+      "fr": "FAR-FR01",
+      "primary_case": "W3-FRZ-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FRZ-01/record.json"
+    },
+    {
+      "fr": "FAR-FR02",
+      "primary_case": "W3-RUN-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-RUN-01/record.json"
+    },
+    {
+      "fr": "FAR-FR03",
+      "primary_case": "W3-RUN-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-RUN-01/record.json"
+    },
+    {
+      "fr": "FAR-FR04",
+      "primary_case": "W3-FAR-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-02/record.json"
+    },
+    {
+      "fr": "FAR-FR05",
+      "primary_case": "W3-FAR-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-02/record.json"
+    },
+    {
+      "fr": "FAR-FR06",
+      "primary_case": "W3-FR16-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FR16-01/record.json"
+    },
+    {
+      "fr": "FAR-FR07",
+      "primary_case": "W3-FAR-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-01/record.json"
+    },
+    {
+      "fr": "FAR-FR08",
+      "primary_case": "W3-FAR-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-02/record.json"
+    },
+    {
+      "fr": "FAR-FR09",
+      "primary_case": "W3-FAR-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-02/record.json"
+    },
+    {
+      "fr": "FAR-FR10",
+      "primary_case": "W3-FAR-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-02/record.json"
+    },
+    {
+      "fr": "FAR-FR11",
+      "primary_case": "W3-FAR-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-02/record.json"
+    },
+    {
+      "fr": "FAR-FR12",
+      "primary_case": "W3-FAR-02",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FAR-02/record.json"
+    },
+    {
+      "fr": "FAR-FR13",
+      "primary_case": "W3-G2-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-G2-01/record.json"
+    },
+    {
+      "fr": "FAR-FR14",
+      "primary_case": "W3-G2-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-G2-01/record.json"
+    },
+    {
+      "fr": "FAR-FR15",
+      "primary_case": "W3-FR16-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FR16-01/record.json"
+    },
+    {
+      "fr": "FAR-FR16",
+      "primary_case": "W3-FR16-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FR16-01/record.json"
+    },
+    {
+      "fr": "FAR-FR17",
+      "primary_case": "W3-FR17-01",
+      "product_pass": true,
+      "evidence": "evidence/PR/cases/W3-FR17-01/record.json"
+    }
+  ],
+  "fr_count": 33,
+  "fr_product_pass": 33,
+  "cases": [
+    {
+      "case_id": "W3-CHK-01",
+      "kind": "NEG",
+      "expected_token": "FALSE_AUTHORITY",
+      "observed_token": "FALSE_AUTHORITY",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "advisory_pass_cannot_write_checker_verdict",
+          "ok": true
+        },
+        {
+          "predicate": "publisher_release_refused",
+          "ok": true
+        },
+        {
+          "predicate": "checker_verdict_stays_null",
+          "ok": true
+        },
+        {
+          "predicate": "report_does_not_authorize",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-CHK-01\\record.json",
+      "record_sha256": "3dcea3656313a2abd0b5eb1acce541d30e871cc75a3915f351ca5dd0143a9036"
+    },
+    {
+      "case_id": "W3-FAR-01",
+      "kind": "NEG",
+      "expected_token": "UNAVAILABLE",
+      "observed_token": "UNAVAILABLE",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "absent_rows_null",
+          "ok": true
+        },
+        {
+          "predicate": "unavailable_is_not_zero",
+          "ok": true
+        },
+        {
+          "predicate": "injected_zero_becomes_research_required",
+          "ok": true
+        },
+        {
+          "predicate": "reachable_empty_has_denominator",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-FAR-01\\record.json",
+      "record_sha256": "49076e0f8a505b3b6f85aa78dec16f03f8c87da084863314616af2da8688404f"
+    },
+    {
+      "case_id": "W3-FAR-02",
+      "kind": "POS",
+      "expected_token": "ALTERNATIVES_SUBSTANTIVE",
+      "observed_token": "ALTERNATIVES_SUBSTANTIVE",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "two_distinct_alternatives",
+          "ok": true
+        },
+        {
+          "predicate": "each_has_fit_and_nofit",
+          "ok": true
+        },
+        {
+          "predicate": "each_has_evidence_and_counterevidence",
+          "ok": true
+        },
+        {
+          "predicate": "each_has_owner_scope_rollback",
+          "ok": true
+        },
+        {
+          "predicate": "cost_risk_may_be_unknown",
+          "ok": true
+        },
+        {
+          "predicate": "pos_exit_zero",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 0,
+      "record_ref": "evidence\\PR\\cases\\W3-FAR-02\\record.json",
+      "record_sha256": "5a793651b7055cd1711af5ee739b0062b263d9d257998e489d4f841275242114"
+    },
+    {
+      "case_id": "W3-FR16-01",
+      "kind": "NEG",
+      "expected_token": "WRITE_SCOPE_VIOLATION",
+      "observed_token": "WRITE_SCOPE_VIOLATION",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "four_targets_refused",
+          "ok": true
+        },
+        {
+          "predicate": "zero_mutation",
+          "ok": true
+        },
+        {
+          "predicate": "canary_unchanged",
+          "ok": true
+        },
+        {
+          "predicate": "native_ecp_required",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-FR16-01\\record.json",
+      "record_sha256": "f4d205a351fc9de45c46842f0a2b72ef1eaacba097a2771dfd3c468c58659d1f"
+    },
+    {
+      "case_id": "W3-FR17-01",
+      "kind": "NEG",
+      "expected_token": "FALSE_AUTHORITY",
+      "observed_token": "FALSE_AUTHORITY",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "three_effects_refused",
+          "ok": true
+        },
+        {
+          "predicate": "authority_none",
+          "ok": true
+        },
+        {
+          "predicate": "subject_host_not_written",
+          "ok": true
+        },
+        {
+          "predicate": "publisher_checker_required",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-FR17-01\\record.json",
+      "record_sha256": "ce10e1d1acb296e01a54bd6b0a74141ebdf1ea391708a40095431ebf42cfbab4"
+    },
+    {
+      "case_id": "W3-FRZ-01",
+      "kind": "POS",
+      "expected_token": "FREEZE_LEDGER_VERIFIED",
+      "observed_token": "FREEZE_LEDGER_VERIFIED",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "five_pins_present_and_distinct",
+          "ok": true
+        },
+        {
+          "predicate": "pins_reopen_freeze_ledger",
+          "ok": true
+        },
+        {
+          "predicate": "pack_tree_unchanged",
+          "ok": true
+        },
+        {
+          "predicate": "separate_fields_present",
+          "ok": true
+        },
+        {
+          "predicate": "source_bytes_unchanged",
+          "ok": true
+        },
+        {
+          "predicate": "pos_exit_zero",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 0,
+      "record_ref": "evidence\\PR\\cases\\W3-FRZ-01\\record.json",
+      "record_sha256": "1f8bfdda96a1a27d7c07026b1ceceb582dde01d57cfcd4935af3ea5cbd34a547"
+    },
+    {
+      "case_id": "W3-FRZ-02",
+      "kind": "NEG",
+      "expected_token": "FROZEN_IDENTITY_MISMATCH",
+      "observed_token": "FROZEN_IDENTITY_MISMATCH",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "five_mutations_covered",
+          "ok": true
+        },
+        {
+          "predicate": "each_mutation_refused_with_typed_token",
+          "ok": true
+        },
+        {
+          "predicate": "runner_not_invoked",
+          "ok": true
+        },
+        {
+          "predicate": "zero_writes",
+          "ok": true
+        },
+        {
+          "predicate": "source_sentinel_unchanged",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-FRZ-02\\record.json",
+      "record_sha256": "f77c4a649967aefc0e5e4cece108a9713ed70f103a7f01c312ab2385383567ef"
+    },
+    {
+      "case_id": "W3-G2-01",
+      "kind": "NEG",
+      "expected_token": "DELTA_UNVERIFIED",
+      "observed_token": "DELTA_UNVERIFIED",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "no_park",
+          "ok": true
+        },
+        {
+          "predicate": "single_sha_not_delta",
+          "ok": true
+        },
+        {
+          "predicate": "caller_boolean_ignored",
+          "ok": true
+        },
+        {
+          "predicate": "no_redispatch",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-G2-01\\record.json",
+      "record_sha256": "df45e5290a7acfa17df744e57c39df6edffbb22b3f42b6bfdc275c0d8b6e41c9"
+    },
+    {
+      "case_id": "W3-R3-01",
+      "kind": "POS",
+      "expected_token": "NOT_COVERED",
+      "observed_token": "NOT_COVERED",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "identity_preserved",
+          "ok": true
+        },
+        {
+          "predicate": "missing_bytes_stay_missing",
+          "ok": true
+        },
+        {
+          "predicate": "no_fabricated_bytes",
+          "ok": true
+        },
+        {
+          "predicate": "no_coverage_promotion",
+          "ok": true
+        },
+        {
+          "predicate": "pos_exit_zero",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 0,
+      "record_ref": "evidence\\PR\\cases\\W3-R3-01\\record.json",
+      "record_sha256": "fb5f8f6535e09f387114b08eed90663defb4f05ba3f2ab62fd29e2efb4458dbf"
+    },
+    {
+      "case_id": "W3-R3-02",
+      "kind": "NEG",
+      "expected_token": "DELTA_UNVERIFIED",
+      "observed_token": "DELTA_UNVERIFIED",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "count_series_is_not_world_raw",
+          "ok": true
+        },
+        {
+          "predicate": "six_period_counts_present",
+          "ok": true
+        },
+        {
+          "predicate": "no_park",
+          "ok": true
+        },
+        {
+          "predicate": "delta_stays_unverified",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-R3-02\\record.json",
+      "record_sha256": "e90e58831766cc677f1cd7723bb5d97edea6ac6192b9dc7a2ddac13abc9ebb04"
+    },
+    {
+      "case_id": "W3-R3-03",
+      "kind": "POS",
+      "expected_token": "ZERO_RELEVANT_HIT",
+      "observed_token": "ZERO_RELEVANT_HIT",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "denominator_is_192",
+          "ok": true
+        },
+        {
+          "predicate": "rows_zero",
+          "ok": true
+        },
+        {
+          "predicate": "zero_is_scoped",
+          "ok": true
+        },
+        {
+          "predicate": "missing_original_raw_not_covered",
+          "ok": true
+        },
+        {
+          "predicate": "pos_exit_zero",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 0,
+      "record_ref": "evidence\\PR\\cases\\W3-R3-03\\record.json",
+      "record_sha256": "aba3e9d62bd178eec33c8db707737750027bd75db2b131b6d3237bbb0d1050cc"
+    },
+    {
+      "case_id": "W3-R3-04",
+      "kind": "NEG",
+      "expected_token": "FALSE_INDEPENDENT",
+      "observed_token": "FALSE_INDEPENDENT",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "same_process",
+          "ok": true
+        },
+        {
+          "predicate": "same_worktree",
+          "ok": true
+        },
+        {
+          "predicate": "observation_layer_not_raised",
+          "ok": true
+        },
+        {
+          "predicate": "distinct_checker_required",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-R3-04\\record.json",
+      "record_sha256": "bc5c445d2ee852481efbd2c89fc24a57f5c98d6d80317116d31fdd2ef688ff46"
+    },
+    {
+      "case_id": "W3-R3-05",
+      "kind": "POS",
+      "expected_token": "ALTERNATIVES_SUBSTANTIVE",
+      "observed_token": "ALTERNATIVES_SUBSTANTIVE",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "two_substantive_alternatives",
+          "ok": true
+        },
+        {
+          "predicate": "fit_nofit_present",
+          "ok": true
+        },
+        {
+          "predicate": "no_new_root_cause",
+          "ok": true
+        },
+        {
+          "predicate": "no_license_claim",
+          "ok": true
+        },
+        {
+          "predicate": "pos_exit_zero",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 0,
+      "record_ref": "evidence\\PR\\cases\\W3-R3-05\\record.json",
+      "record_sha256": "2fca622cb511d6a5faddfc89a2313611e69a729345549841018a7747c86afde4"
+    },
+    {
+      "case_id": "W3-R3-06",
+      "kind": "NEG",
+      "expected_token": "ORIGINAL_READER_UNBOUND",
+      "observed_token": "ORIGINAL_READER_UNBOUND",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "generic_read_continues",
+          "ok": true
+        },
+        {
+          "predicate": "original_reader_null",
+          "ok": true
+        },
+        {
+          "predicate": "ack_not_claimed",
+          "ok": true
+        },
+        {
+          "predicate": "no_invented_reader",
+          "ok": true
+        },
+        {
+          "predicate": "acl_observed_13_of_13",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-R3-06\\record.json",
+      "record_sha256": "73db6b643959a433da7d10e5dfd5a8292c06ce37f31282518d67cbddfd22c6e3"
+    },
+    {
+      "case_id": "W3-RUN-01",
+      "kind": "POS",
+      "expected_token": "SEMANTIC_MATCH",
+      "observed_token": "SEMANTIC_MATCH",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "pos_exit_zero",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        },
+        {
+          "predicate": "pos_neg_raws_independent",
+          "ok": true
+        },
+        {
+          "predicate": "operation_and_refusal_both_established",
+          "ok": true
+        },
+        {
+          "predicate": "pack_tree_unchanged",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 0,
+      "record_ref": "evidence\\PR\\cases\\W3-RUN-01\\record.json",
+      "record_sha256": "4ae19ac7932ad38b7314bf1f6ef8ca88156c0d728dcbd8e5c4c0f4002f296d0f"
+    },
+    {
+      "case_id": "W3-RUN-02",
+      "kind": "NEG",
+      "expected_token": "UNREPRODUCED",
+      "observed_token": "UNREPRODUCED",
+      "token_ok": true,
+      "predicates": [
+        {
+          "predicate": "all_four_defects_present",
+          "ok": true
+        },
+        {
+          "predicate": "no_defect_reproduced",
+          "ok": true
+        },
+        {
+          "predicate": "nothing_executed",
+          "ok": true
+        },
+        {
+          "predicate": "no_fake_exit",
+          "ok": true
+        },
+        {
+          "predicate": "no_stdout_substitution",
+          "ok": true
+        },
+        {
+          "predicate": "neg_exit_two",
+          "ok": true
+        }
+      ],
+      "verdict": "PRODUCT_PASS",
+      "engine_exit": 2,
+      "record_ref": "evidence\\PR\\cases\\W3-RUN-02\\record.json",
+      "record_sha256": "98e24033ba52a3bf36a2d851b2bb2148feb383ac2cc45317caa22632fac632c5"
+    }
+  ],
+  "case_count": 16,
+  "product_pass": 16,
+  "w2": {
+    "rows": 12,
+    "pass": 12
+  }
+}

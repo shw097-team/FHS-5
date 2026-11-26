@@ -1,0 +1,83 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFixture@2",
+  "profile": "Generic Native",
+  "domain_scope": "GENERIC_NATIVE_PROJECTION_NOT_ORIGINAL_DOMAIN",
+  "case_id": "W3-FAR-02",
+  "kind": "POS",
+  "wp": "WM3-P05",
+  "contract_ref": "03_W3_TQAEP.md §03 | W3-FAR-02 | POS | WM3-P05",
+  "contract_sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+  "case_owner": "separate Case Owner session",
+  "independent_of_maker": true,
+  "frozen_at": "2026-11-26T18:54:10+08:00",
+  "reference_run_id": "W3D",
+  "provenance": {
+    "reference_record_ref": "<PACK_ROOT>/evidence/W3D/cases/W3-FAR-02/record.json",
+    "reference_record_sha256": "7ab5e3c34749cf98fe196ee3ddafbc61ab60a389ea5f8d5e67cfcf09c24a0e96",
+    "freeze_ledger_ref": "<PACK_ROOT>/evidence/W3D/FREEZE_LEDGER.json",
+    "w2_requalification_ref": "<PACK_ROOT>/evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+    "derivation": "input parameter values are real values taken from the W3D reference run (pins, resolved paths, counts, mutation names, tokens, canary, findings). They are inputs/provenance, NOT expected values. Expected token, exit and predicates were frozen from contract §03 independently of any product verdict."
+  },
+  "path_convention": {
+    "<PACK_ROOT>": "resolved at run time to the immutable pack root; the reference run used C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_FINAL_20261126T1827"
+  },
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pack_root_ref": "<PACK_ROOT>",
+    "finding_ref": "<PACK_ROOT>/evidence/W3D/FINDINGS/FINDING_SET.json",
+    "finding_ids": [
+      "F3-W3D-01",
+      "F3-W3D-02"
+    ],
+    "finding_count": 2,
+    "alternatives": [
+      {
+        "id": "ALT-A",
+        "type": "BIND_EXISTING",
+        "fit": "a real caller/ABI exists but the slot is unbound",
+        "nofit": "no caller found after search",
+        "evidence_refs": [
+          "F3-W3D-02",
+          "case:W3-FAR-02"
+        ],
+        "owner": "Owner-delegated",
+        "scope": "W3-NF-01",
+        "change_cone": [
+          "W3/impl/BIND_EXISTING"
+        ],
+        "rollback": "per-file reverse patch / restore preimage",
+        "cost": "UNKNOWN",
+        "risk": "UNKNOWN"
+      },
+      {
+        "id": "ALT-B",
+        "type": "FIX_NOW",
+        "fit": "the RED is reproduced and the missing path is genuine",
+        "nofit": "existing code already covers the case",
+        "evidence_refs": [
+          "F3-W3D-01",
+          "case:W3-FAR-02"
+        ],
+        "owner": "Owner-delegated",
+        "scope": "W3-NF-01",
+        "change_cone": [
+          "W3/impl/FIX_NOW"
+        ],
+        "rollback": "per-file reverse patch / restore preimage",
+        "cost": "UNKNOWN",
+        "risk": "UNKNOWN"
+      }
+    ],
+    "alternative_count": 2,
+    "counterevidence": [
+      "no caller found after search"
+    ],
+    "reference_run_facts": {
+      "validation_ok": true,
+      "fit_nofit_present": true,
+      "token": "ALTERNATIVES_SUBSTANTIVE",
+      "process_exit": 0
+    }
+  }
+}
