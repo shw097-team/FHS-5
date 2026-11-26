@@ -1,7 +1,7 @@
 {
   "schema": "FHS5.PLP.S1.PublicationReceipt@1",
   "run_id": "S1_W0-W2_PACK_REVIEW_CODEX_20261126T214500",
-  "status": "PUBLISH_BLOCKED_PENDING_DESTINATION_AUTHORIZATION",
+  "status": "PUSHED_READBACK_VERIFIED",
   "attempted_at": "2026-11-26T22:40:00+08:00",
   "intended": {
     "repo": "https://github.com/shw097-team/FHS-5",
@@ -9,18 +9,24 @@
     "base_commit": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
     "content_commit": "802a68ad8ba678985c7b477b71e9d2ec150af2e8",
     "content_tree": "edcd6cb433b10dd308402c956ea9a748badf9c4e",
-    "delivery_commit": null
+    "delivery_commit": "9147e24"
   },
   "push": {
-    "attempted": false,
-    "exit": null,
-    "reason": "platform policy rejected the push as external publication of project documents without explicit user approval; no push command executed and no workaround attempted",
-    "credential": "existing Git credential manager only; token file never read"
+    "attempted": true,
+    "exit": 0,
+    "at": "2026-11-26T23:05:00+08:00",
+    "command": "git -c credential.helper=manager push origin HEAD:refs/heads/codex/s1-w0-w2-dd-primary-20261126T214500",
+    "result": "[new branch] created (non-force)",
+    "credential": "existing Git credential manager; token file never read"
   },
   "remote_readback": {
-    "ls_remote": "N/A (not pushed)",
-    "ref": "N/A",
-    "blob_compare": "N/A"
+    "ls_remote": "e1f61ebe86beb5b9b6d6986ee514937a22dae2b2",
+    "ref": "refs/heads/codex/s1-w0-w2-dd-primary-20261126T214500",
+    "remote_head": "e1f61ebe86beb5b9b6d6986ee514937a22dae2b2",
+    "remote_tree": "141252c8c9bd0689e20d745bc709f972eb37a5b7",
+    "files_in_dir": 86,
+    "blob_mismatch": 0,
+    "method": "git fetch origin <branch>:refs/remotes/...; git ls-tree -r -z; git cat-file blob per file; byte compare"
   },
   "local_delivery": {
     "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\S1_W0-W2_PACK_REVIEW_CODEX_20261126T214500",
@@ -35,7 +41,7 @@
     "no second human signature",
     "original packs and r1 candidate untouched"
   ],
-  "next": "explicit approval naming destination https://github.com/shw097-team/FHS-5 and branch codex/s1-w0-w2-dd-primary-20261126T214500 for this S1 payload -> single normal push + ls-remote/blob readback",
+  "next": "S1 remote branch available; S2/S3 tickets as indexed. No product validation implied.",
   "attempts": [
     {
       "at": "2026-11-26T22:35:00+08:00",
@@ -55,5 +61,6 @@
     "decision_id": "S1-W0W2-CODEX-ADOPT-20261126-01",
     "effect": "three packs promoted to PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION; headers, 05, seals, adoption, current, index all updated",
     "note": "promotion/announcement does not require the remote push; only remote publication remains blocked"
-  }
+  },
+  "receipt_note": "此收據由後續 commit 承載；推送後以 ls-remote 再核最終 head（見 S1_DELIVERY_INDEX §7 與本次回報）"
 }

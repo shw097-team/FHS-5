@@ -50,7 +50,7 @@
 | `02_EVIDENCE/seals/S1_ADOPTION_RECORD.json` | 3906 | `831ebcaecf47ecd0fa8c484bd816179b4ee394d512dca4ab1b92162b76d23c81` | Owner 預授權落地／三包主用 |
 | `02_EVIDENCE/seals/S1_CURRENT_POINTER.json` | 1796 | `e804a68e7c4d71b6c9638935e4d850103541dbea96bff4191eeab8a383d494e2` | 當期主用／LastGood 指標 |
 | `02_EVIDENCE/S1_CODEX_REVIEW_RESULTS.json` | 10719 | `2e8e8cf4aeb7f8184b382fdde77bca54f71e6531f5b3dc7a5968ad74e4bc3861` | 機器可讀檢測／反證結果 |
-| `02_EVIDENCE/seals/S1_PUBLICATION_RECEIPT.json` | 2639 | `8db6a8519da2dd0273abb962b5c97e7ec8701ca137814146c33908cf1f6335d3` | 發布狀態／讀回（見 §7） |
+| `02_EVIDENCE/seals/S1_PUBLICATION_RECEIPT.json` | 3014 | `87632f851606136a0adf5b55e9551ea8c4114ef5cae2d6780d720a43f65cdb07` | 發布狀態／讀回（見 §7） |
 
 作者原證據保留：`02_EVIDENCE/W0_S1_證據附件.md`、`W1_S1_證據附件.md`、`W2_S1_證據附件.md`、`doc_results.json`（作者自檢，不作為本輪判定權威；本輪已獨立重跑）。
 
@@ -81,12 +81,13 @@
 
 ## 7｜GitHub 發布與遠端讀回
 
-- 狀態：`PUBLISH_BLOCKED_PENDING_DESTINATION_AUTHORIZATION`｜Repo：`https://github.com/shw097-team/FHS-5`｜branch：`codex/s1-w0-w2-dd-primary-20261126T214500`
-- push：未執行（platform policy rejected the push as external publication of project documents without explicit user approval; no push command executed and no workaround attempted）
+- 狀態：`PUSHED_READBACK_VERIFIED`｜Repo：`https://github.com/shw097-team/FHS-5`｜branch：`codex/s1-w0-w2-dd-primary-20261126T214500`
 - content commit（本地）：`802a68ad8ba678985c7b477b71e9d2ec150af2e8`｜tree：`edcd6cb433b10dd308402c956ea9a748badf9c4e`
-- delivery commit：`PENDING（本地收據 commit）`
-- `git ls-remote` readback：`N/A (not pushed)`
-- 遠端內容核對：`N/A`
+- delivery commit：`9147e24`
+- push：exit `0`；remote ref readback：`refs/heads/codex/s1-w0-w2-dd-primary-20261126T214500`
+- `git ls-remote` readback：`e1f61ebe86beb5b9b6d6986ee514937a22dae2b2`（tree `141252c8c9bd0689e20d745bc709f972eb37a5b7`）
+- 遠端內容核對：86 檔逐 blob byte 比對，mismatch=0
+- 註：此收據由後續 commit 承載；推送後以 ls-remote 再核最終 head（見 S1_DELIVERY_INDEX §7 與本次回報）
 
 ## 8｜下一合法工單
 
