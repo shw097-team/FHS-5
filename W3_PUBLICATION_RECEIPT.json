@@ -26,5 +26,9 @@
                    },
     "next_action":  "Owner approval for one normal authenticated push of this branch, or export the local commit/tree as a bundle",
     "receipt_tree":  "0a9d37320afe029d7f2fc7eca18a715fc581f3b3",
-    "tip_before_redaction":  "8bd7bc63683e3a4533c12c21e51b0d55cf91c875"
+    "tip_before_redaction":  "8bd7bc63683e3a4533c12c21e51b0d55cf91c875",
+    "handoff_commit":  "70052ed81d8d6b29fbac1248960861e0ae639577",
+    "tip_commit":  "70052ed81d8d6b29fbac1248960861e0ae639577",
+    "tip_tree":  "8987ba165f9c45a881f93500f32ac6480767a906",
+    "consumer_receipt_sha256":  "e7d1cf0946cd478a743985a456d9b3e1be06a610a145b63162c691dd31622b00"
 }
