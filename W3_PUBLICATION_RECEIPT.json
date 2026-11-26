@@ -7,7 +7,7 @@
     "base_commit":  "dada2354b7c25c8f4a316d9fae93827cef0d194e",
     "content_commit":  "4bfc0145acf1bf30e2072935086db269115c6b3a",
     "content_tree":  "021ccc54b585c7211715ef1db9e6df2d5db88775",
-    "receipt_commit":  null,
+    "receipt_commit":  "46d2db9e8f2c1cf961e0391716661dac8337186f",
     "pushed":  false,
     "readback":  "NOT_PERFORMED",
     "blocked":  {
