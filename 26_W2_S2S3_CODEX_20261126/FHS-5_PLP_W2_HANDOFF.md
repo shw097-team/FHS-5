@@ -44,3 +44,8 @@ Python 3.11.9、pytest 9.1.1、Git 2.53。temp 全部在 run 內；未使用網�
 ## publication
 
 本輪 commit 與遠端讀回見 `PUBLICATION_S2S3.json`；未 force push、未 merge main、未發 Release。
+
+## W1 補記
+
+- 13 案 runner：17 PASS／1 DEFERRED／1 NOT_RUN（ACC-05）／1 NOT_OBSERVED；raw 在 EVIDENCE/raw/W1_CASES/cases.json。
+- 全套 pytest 基線＝修補後除新增 2 案外完全相同（19F/25E），根因為測試預設歷史絕對 pack 路徑；next_legal_action 增加：把 W1 測試預設 pack root 改為 repo 相對或 env，另立 W1 修補 scope。

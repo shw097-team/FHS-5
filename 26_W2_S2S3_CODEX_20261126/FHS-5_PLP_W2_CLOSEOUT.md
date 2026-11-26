@@ -39,3 +39,9 @@
 - `W3_TECHNICALLY_READY` / `W3_EXECUTION_READY` 未宣。
 - 舊 `W2-NF-PRIMARY-20261126-01` 仍為 terminated，未被本輪復活；新決策 `W2-S2S3-OWNER-20261126-02` 僅覆蓋 world 內二檔。
 - 獨立 Checker：本輪以獨立程序／獨立 oracle 重開（非同 session 自驗），仍未達「不同 principal」。
+
+## 6. W1 本輪實跑（補記，避免與第 4 節「未重跑」誤讀）
+
+- un_cases_nf.py --pack 18_W1_NF_.../control_pack --out .../W1_CASES：17 PASS、1 DEFERRED、1 NOT_RUN（ACC W1-CODEX-05）、1 NOT_OBSERVED；13 案本體皆 PASS。
+- W1/check 全套 pytest：修補前 19 failed／48 passed／25 errors；修補後 19 failed／50 passed／25 errors。
+- 既有失敗原因已定位：測試預設 pack root 指向 C:\Users\user\Downloads\FHS-5\...\W1_Native-first_CODEX_主用修補_交付\... 的歷史絕對路徑，本機已不存在（PACK_INCOMPLETE_LOCAL）。指定 --pack 的真跑（上方 runner）全數 PASS。此為 W1 可攜性缺口，非本輪修補造成，未以 PASS 冒結案。
