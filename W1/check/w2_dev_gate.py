@@ -38,7 +38,7 @@ class GateError(Exception):
 
 # The admission verifier lives in the same writable tree as the effect target, so
 # it is pinned by digest and refused if it is shadowed, poisoned or rewritten.
-ADMISSION_SOURCE_PIN = "a7693f1948a9a157e35eae1d447dca4dd5eba04c83bc7ffe020d8d892a6c4288"
+ADMISSION_SOURCE_PIN = "8caabfffd5c5c07040f0444e1d4ad23cbad939501b61597b726184f4816c4ae3"
 
 
 def _load_admission(repo):
@@ -106,7 +106,8 @@ def check(asserted: dict, repo_root, write_set: list) -> dict:
         _domain = "OPS" if str(asserted.get("domain", "")).upper() == "OPS" else "DEV"
         ADM.require(adm, _domain, asserted.get("scope") or "W2-NF-01",
                     asserted.get("decision_path"), repo_root=repo,
-                    targets=[e.get("path") for e in (write_set or [])])
+                    targets=[e.get("path") for e in (write_set or [])],
+                    ops=[dict(e) for e in (write_set or [])])
         ok("admission", "receipt re-verified against the pinned decision at use time")
     except Exception as exc:  # noqa: BLE001
         fail("admission", "FALSE_AUTHORITY", str(exc)[:200])

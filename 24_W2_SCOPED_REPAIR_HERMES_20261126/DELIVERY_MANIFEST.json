@@ -1,7 +1,7 @@
 {
  "schema": "FHS5.PLP.W2.DeliveryManifest@1",
- "task_id": "HERMES-F5-W2-SCOPED-REPAIR-r4b",
- "status": "S1 13/13 (+1 disclosed residual limit), S2 23/23; W2_NF_VALIDATED NOT re-claimed",
+ "task_id": "W2-FINAL-DELTA",
+ "status": "writer BLOCKED_NOT_ADMITTED; S1 13+6 PASS; S2 23/23; candidate re-frozen",
  "files": [
   {
    "path": "FHS-5_PLP_W2_CLOSEOUT.md",
@@ -10,13 +10,18 @@
   },
   {
    "path": "FHS-5_PLP_W2_HANDOFF.md",
-   "bytes": 915,
-   "sha256": "da5994177b726b299ac1da5bd644c192ef352e11ea432af1f7ea3d82235dbaae"
+   "bytes": 1658,
+   "sha256": "7b38c72d5c18d313c23332a1a5d0661dbe25300ef2257edbb6bc4da3e7487419"
   },
   {
    "path": "receipts/w2_admission_PRE_FIX.py",
    "bytes": 7068,
    "sha256": "fbafd5f1f099bea6f830d6222dc2982a819991f206bb930d2e9fc3281e48ebcf"
+  },
+  {
+   "path": "S1_DELTA.json",
+   "bytes": 1576,
+   "sha256": "22cc08b3921087da26568c56fab2b73aef8945d6a9c066dfae47d012b42281fc"
   },
   {
    "path": "S1_VERIFICATION.json",
@@ -30,11 +35,11 @@
   },
   {
    "path": "W2_FIVE_PINS.json",
-   "bytes": 1641,
-   "sha256": "868475eb8a92c3c95c0e8ff5493029eab7bdc1d114a9b326c46c1612005a36a7"
+   "bytes": 2940,
+   "sha256": "74321487db0f6a1cf02b0eea8b91be0773308cdffc5ab6f7abfa8e16553ddd8f"
   }
  ],
- "file_count": 6,
+ "file_count": 7,
  "self_excluded": true,
  "manifest_self_hash": "EXTERNAL_RECORD_ONLY"
 }

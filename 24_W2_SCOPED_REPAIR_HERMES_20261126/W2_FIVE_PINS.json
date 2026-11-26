@@ -4,22 +4,35 @@
   "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b"
  },
  "candidate": {
-  "kind": "verified product set (carried from r3, candidate updated this round)",
-  "w2_receiver_sha256": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
-  "w2_dev_gate_sha256": "e9cc70773267cf145277be4298148cad3b1d1b59e8f4bbdecec0055d9c7df445",
-  "w2_admission_sha256": "fbafd5f1f099bea6f830d6222dc2982a819991f206bb930d2e9fc3281e48ebcf",
-  "w2_nf_reader_sha256": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980",
-  "test_j1_strict_sha256": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4",
-  "reconstruct_from": "commit + tree"
+  "kind": "verified product set (re-frozen from the final tree)",
+  "members": {
+   "W1/check/w2_receiver.py": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+   "W1/check/w2_dev_gate.py": "ecef3f39cf3ae4db1a387cca4eec2d5212d9cce8e1f81d7a91e0cb0ffd170db4",
+   "W1/check/w2_admission.py": "8caabfffd5c5c07040f0444e1d4ad23cbad939501b61597b726184f4816c4ae3",
+   "W1/impl/w2_nf_reader.py": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980",
+   "W1/check/test_j1_strict.py": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4"
+  },
+  "member_count": 5,
+  "aggregate_digest": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+  "reconstruct_from": "git commit + tree; the commit id is recorded in the post-commit publication receipt, never inside this file (avoids a self-reference)"
  },
  "oracle": {
-  "kind": "frozen expected/oracle set, not the J1 pins file",
-  "j1_expected_pins": "fdb99b2a8853a2578847f99b8b0483402d9165280fd515fa664f39f2a0ca515c",
-  "j1_checker_oracle": "38fef4d8287dcbb14aacb96f2115d01953a0ecedfb8603df749e6e2c16b2feeb",
-  "w2_case_oracles": 12
+  "kind": "frozen W2 expected/oracle set",
+  "status": "PARTIALLY_FROZEN",
+  "frozen": {
+   "j1_expected_pins": "W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/30_VERIFY/expected_pins.json",
+   "j1_checker_oracle": "30_VERIFY/raw/CHECKER_J1_ORACLE.json",
+   "s1": "50_EVIDENCE/S1_VERIFICATION.json",
+   "s1_delta": "50_EVIDENCE/S1_DELTA.json",
+   "s2": "50_EVIDENCE/S2_E2E.json"
+  },
+  "not_frozen": [
+   "the 12 original case oracles are carried from r3 by reference and were not re-frozen this round; W3 P01 must not treat them as frozen digests"
+  ]
  },
  "case_set": {
-  "kind": "frozen 12 original cases + applicable children",
+  "kind": "12 original cases carried from r3",
+  "status": "CARRIED_NOT_REFROZEN",
   "cases": [
    "W2-DEV-01",
    "W2-DEV-02",
@@ -34,11 +47,20 @@
    "W2-R3-03",
    "W2-R3-04"
   ],
-  "count": 12
+  "note": "verdicts exist in r3/r4 ledgers; this round did not re-run them"
  },
  "evidence": {
-  "note": "sealed after observed, outside the candidate digest",
-  "manifest": "DELIVERY_MANIFEST.json (self-excluded)"
+  "status": "SEALED_AFTER_OBSERVED",
+  "manifest": "DELIVERY_MANIFEST.json",
+  "note": "self-excluded; the evidence pin is the manifest digest recorded in the publication receipt"
  },
- "note": "source / oracle / case_set / evidence pins carried unchanged from r3; only candidate re-frozen"
+ "note": "source / oracle / case_set / evidence pins carried unchanged from r3; only candidate re-frozen",
+ "frozen_at_round": "W2-FINAL-DELTA",
+ "writer_state": {
+  "state": "BLOCKED_NOT_ADMITTED",
+  "reason": "the Owner decision terminates on a security Finding; three real findings were raised by the independent verifier and one evidence defect by this run",
+  "marker": "W2_NATIVE_RUNS/W2_SECURITY_FINDING.json",
+  "resume": "Owner re-authorisation with explicit roots/targets/ops/expiry after reviewing the findings; the writer refuses every protected write until then",
+  "verified": "S1_DELTA D4/D4b: derive and apply_patch both refuse with ADMISSION_TERMINATED_BY_SECURITY_FINDING / FALSE_AUTHORITY"
+ }
 }

@@ -1,0 +1,62 @@
+{
+  "schema": "FHS5.PLP.W2.S1Delta@1",
+  "rows": [
+    {
+      "case": "D1_target_set_mismatch",
+      "expected": "TARGET_SET_MISMATCH",
+      "observed": "TARGET_SET_MISMATCH",
+      "verdict": "PASS",
+      "detail": null
+    },
+    {
+      "case": "D2_add_without_parent",
+      "expected": "PARENT_ABSENT",
+      "observed": "PARENT_ABSENT",
+      "verdict": "PASS",
+      "detail": null
+    },
+    {
+      "case": "D3_component_confinement",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS",
+      "detail": {
+        "prefix_would_accept": true,
+        "component_rejects": true,
+        "component_accepts_child": true
+      }
+    },
+    {
+      "case": "D4_security_finding_terminates",
+      "expected": "ADMISSION_TERMINATED_BY_SECURITY_FINDING",
+      "observed": "ADMISSION_TERMINATED_BY_SECURITY_FINDING",
+      "verdict": "PASS",
+      "detail": null
+    },
+    {
+      "case": "D4b_writer_refused_under_finding",
+      "expected": "FALSE_AUTHORITY",
+      "observed": "FALSE_AUTHORITY",
+      "verdict": "PASS",
+      "detail": {
+        "wrote": [],
+        "world_unchanged": true
+      }
+    },
+    {
+      "case": "D5_control_write_still_works",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS",
+      "detail": {
+        "first_fail": null
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 6,
+    "FAIL": 0
+  },
+  "writer_state": "BLOCKED_NOT_ADMITTED (owner decision terminated by its own finding clause)",
+  "marker": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\W2_SECURITY_FINDING.json"
+}

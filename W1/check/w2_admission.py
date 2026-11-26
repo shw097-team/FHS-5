@@ -34,6 +34,7 @@ TRUST = {
     ),
     "repo_root": "C:/Projects/Agent_Workspace/FHS-5_Workspace",
     "revocation_marker": "W2_NATIVE_RUNS/OWNER_REVOKED.json",
+    "finding_marker": "W2_NATIVE_RUNS/W2_SECURITY_FINDING.json",
     "subjects": {"DEV": "FHS-5_PLP/W2/CONTROL_PACK", "OPS": "FHS-5_PLP/W2/CONTROL_PACK"},
     "effects": {"DEV": ["dev"], "OPS": ["ops"]},
     "authorised_roots": (
@@ -92,6 +93,19 @@ def _revoked():
     return (Path(TRUST["repo_root"]) / TRUST["revocation_marker"]).exists()
 
 
+def _terminated_by_finding():
+    """The decision's own clause: validity ends when a security Finding appears."""
+    return (Path(TRUST["repo_root"]) / TRUST["finding_marker"]).exists()
+
+
+def _evaluate_events():
+    if _revoked():
+        raise AdmissionError("ADMISSION_REVOKED", str(TRUST["revocation_marker"]))
+    if _terminated_by_finding():
+        raise AdmissionError("ADMISSION_TERMINATED_BY_SECURITY_FINDING",
+                             str(TRUST["finding_marker"]))
+
+
 def _evaluate_expiry(doc):
     text = str(doc.get("expiry_revocation") or "")
     up = text.upper()
@@ -113,23 +127,50 @@ def _evaluate_expiry(doc):
             raise AdmissionError("ADMISSION_EXPIRED", str(end))
 
 
+def _within(child, parent):
+    """Path-component containment, not a string prefix."""
+    try:
+        Path(child).relative_to(Path(parent))
+        return True
+    except ValueError:
+        return False
+
+
 def _check_root(repo_root, targets):
     repo = Path(repo_root).resolve()
     roots = [Path(r).resolve() for r in TRUST["authorised_roots"]]
-    if not any(str(repo).lower().startswith(str(r).lower()) for r in roots):
+    if not any(_within(repo, r) for r in roots):
         raise AdmissionError("ROOT_NOT_AUTHORISED", str(repo))
     out = []
     for t in targets or []:
         tp = Path(t).resolve() if Path(t).is_absolute() else (repo / t).resolve()
-        if not str(tp).lower().startswith(str(repo).lower()):
+        if not _within(tp, repo):
             raise AdmissionError("TARGET_OUTSIDE_ROOT", str(tp))
         out.append(str(tp))
     return out
 
 
-def derive(domain, scope="W2-NF-01", repo_root=None, targets=None, explicit_path=None):
-    if _revoked():
-        raise AdmissionError("ADMISSION_REVOKED", str(TRUST["revocation_marker"]))
+def _check_ops(repo_root, ops):
+    """ADD requires a real parent directory; MODIFY/DELETE require a real file."""
+    repo = Path(repo_root).resolve()
+    for o in ops or []:
+        p = (repo / o["path"]).resolve()
+        op = str(o.get("operation", "")).upper()
+        if op == "ADD":
+            if p.exists():
+                raise AdmissionError("WRITE_SET_UNBOUND", "ADD target already exists: " + str(p))
+            if not p.parent.is_dir():
+                raise AdmissionError("PARENT_ABSENT", str(p.parent))
+        elif op in ("MODIFY", "DELETE"):
+            if not p.is_file():
+                raise AdmissionError("WRITE_SET_UNBOUND", "target missing: " + str(p))
+        else:
+            raise AdmissionError("WRITE_SET_UNBOUND", "unknown operation: " + op)
+
+
+def derive(domain, scope="W2-NF-01", repo_root=None, targets=None,
+           ops=None, explicit_path=None):
+    _evaluate_events()
     v = _load_verified(explicit_path)
     doc = v["doc"]
     _evaluate_expiry(doc)
@@ -150,6 +191,8 @@ def derive(domain, scope="W2-NF-01", repo_root=None, targets=None, explicit_path
         raise AdmissionError("ROOT_NOT_AUTHORISED",
                              "decision allowed_roots is PENDING; supply and check a root")
     resolved = _check_root(repo_root, targets) if repo_root is not None else []
+    if ops:
+        _check_ops(repo_root, ops)
     fields = {"decision_id": doc.get("decision_id"), "subject_id": sc.get("subject_id"),
               "scope": sc.get("scope"), "domain": domain,
               "effects_authorized": sorted(sc.get("effects_authorized") or []),
@@ -166,11 +209,10 @@ def derive(domain, scope="W2-NF-01", repo_root=None, targets=None, explicit_path
 
 
 def require(receipt, domain, scope="W2-NF-01", explicit_path=None,
-            repo_root=None, targets=None):
+            repo_root=None, targets=None, ops=None):
     if not isinstance(receipt, dict) or receipt.get("ok") is not True:
         raise AdmissionError("FALSE_AUTHORITY", "no receipt")
-    if _revoked():
-        raise AdmissionError("ADMISSION_REVOKED", "revocation marker present")
+    _evaluate_events()
     v = _load_verified(explicit_path)
     _evaluate_expiry(v["doc"])
     fields = receipt.get("fields")
@@ -185,7 +227,10 @@ def require(receipt, domain, scope="W2-NF-01", explicit_path=None,
         if receipt.get(k) != fields.get(k):
             raise AdmissionError("FALSE_AUTHORITY", "receipt field drifted: " + k)
     fresh = derive(domain, scope, repo_root=repo_root, targets=targets,
-                   explicit_path=explicit_path)
+                   ops=ops, explicit_path=explicit_path)
+    if targets and sorted(fresh["fields"]["targets"]) != sorted(fields.get("targets") or []):
+        raise AdmissionError("TARGET_SET_MISMATCH",
+                             "receipt was issued for a different target set")
     for k in ("subject_id", "scope", "effects_authorized"):
         if fresh["fields"][k] != fields.get(k):
             raise AdmissionError("FALSE_AUTHORITY",
