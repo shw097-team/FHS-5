@@ -1,0 +1,18 @@
+{
+  "schema": "FHS5.PLP.W2.PublicationReceipt@2",
+  "round": "W2-S2S3-20261126T225929",
+  "repo": "https://github.com/shw097-team/FHS-5",
+  "branch": "codex/w0-w2-s2-s3-20261126T225929",
+  "content_commit": "2710cd5e8b84520e64a4bc8f18b88005162217dc",
+  "content_tree": "9b7b1d0e5713d1a0658b85f14e4a57f4c8638255",
+  "remote_ref_readback": "2710cd5e8b84520e64a4bc8f18b88005162217dc",
+  "remote_blob_w2_receiver": "cee63f4cf02246eb82abf613607df79e8cfbeef2",
+  "delivery_dir_files": 50,
+  "force_push": false,
+  "merge_to_main": false,
+  "release": false,
+  "acl_change": false,
+  "k_handling": "read only by Git askpass; never in argv/log/URL/evidence/repo",
+  "note": "this receipt describes the content commit above and is itself committed afterwards; its own commit is not self-referenced",
+  "published_at": "2026-11-26T23:30:00+08:00"
+}
