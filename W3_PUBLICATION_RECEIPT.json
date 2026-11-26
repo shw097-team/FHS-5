@@ -29,8 +29,8 @@
     "tip_before_redaction":  "8bd7bc63683e3a4533c12c21e51b0d55cf91c875",
     "handoff_commit":  "70052ed81d8d6b29fbac1248960861e0ae639577",
     "consumer_receipt_sha256":  "e7d1cf0946cd478a743985a456d9b3e1be06a610a145b63162c691dd31622b00",
-    "lf_stable_commit":  "d125092c9f62cb1e769e08bc8b5965e5699b2e12",
-    "tip_commit":  "d125092c9f62cb1e769e08bc8b5965e5699b2e12",
-    "tip_tree":  "11f0909c50ee0461adc8bbaaec275f0b36ac3ef3",
+    "lf_stable_commit":  "a7100d0fdf424be7bf74d7806327ea509eeddfa4",
+    "tip_commit":  "a7100d0fdf424be7bf74d7806327ea509eeddfa4",
+    "tip_tree":  "f5c1cd45b24d85f914d4c0086329ca9bbeb643cf",
     "lf_stable":  true
 }
