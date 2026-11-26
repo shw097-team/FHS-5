@@ -87,8 +87,10 @@ def freeze(case_root, man, w2_repo, pack):
     source_set = man05.get("source_set_sha256") or "NA"
     head = run_process(["git", "-C", str(w2_repo), "rev-parse", "HEAD"], cwd=w2_repo, timeout_s=30)
     tree = run_process(["git", "-C", str(w2_repo), "rev-parse", "HEAD^{tree}"], cwd=w2_repo, timeout_s=30)
-    delivery = head["stdout"].decode().strip() if head["exit"] == 0 else "3346076c69b00d65e48fdb9ddf894ac4cc09524b"
-    delivery_tree = tree["stdout"].decode().strip() if tree["exit"] == 0 else "2c4fdf05c755"
+    if head["exit"] != 0 or tree["exit"] != 0:
+        raise SystemExit("GIT_PROBE_FAILED: no hard-coded candidate fallback")
+    delivery = head["stdout"].decode().strip()
+    delivery_tree = tree["stdout"].decode().strip()
     pins = {
         "source": source_set,
         "candidate": delivery_tree,
@@ -152,7 +154,7 @@ def main(argv=None):
         if all(r["verdict"] == "PASS" for r in records) else "W2_REQUAL_PARTIAL",
         "W2_NF_VALIDATED": False,
         "substitute_cases": [],
-        "real_candidate_cases": 12,
+        "real_candidate_cases": sum(1 for r in records if r["verdict"] == "PASS"),
         "w2_nf_reason": "W2 protected writer/gate/marker remains BLOCKED_NOT_ADMITTED; no original-domain W2 signer",
         "not_covered": ["R4 protected writer", "W2 original-domain signature", "W2 gate/marker change"],
     }

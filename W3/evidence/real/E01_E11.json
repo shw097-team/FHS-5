@@ -1,0 +1,78 @@
+{
+  "schema": "FHS5.PLP.W3.E01E11Results@1",
+  "rows": [
+    {
+      "id": "E01",
+      "ok": true,
+      "detail": "CANDIDATE_UNBOUND"
+    },
+    {
+      "id": "E02",
+      "ok": true,
+      "detail": "no hard-coded candidate fallback"
+    },
+    {
+      "id": "E03",
+      "ok": true,
+      "detail": "kind is not used to force exit 2"
+    },
+    {
+      "id": "E05",
+      "ok": true,
+      "detail": "MODE_ONLY_PRODUCT_FORBIDDEN"
+    },
+    {
+      "id": "E07",
+      "ok": true,
+      "detail": "FileNotFoundError"
+    },
+    {
+      "id": "E09",
+      "ok": true,
+      "detail": "HIT/ZERO_RELEVANT_HIT"
+    },
+    {
+      "id": "E10",
+      "ok": true,
+      "detail": "fake authority rejected"
+    },
+    {
+      "id": "E06",
+      "ok": true,
+      "detail": "tampered record rejected"
+    },
+    {
+      "id": "E08",
+      "ok": true,
+      "detail": "tampered record rejected"
+    },
+    {
+      "id": "E11",
+      "ok": true,
+      "detail": "tampered record rejected"
+    },
+    {
+      "id": "E04",
+      "ok": true,
+      "detail": "engine/exit guard present"
+    },
+    {
+      "id": "E06b",
+      "ok": true,
+      "detail": "fresh raw guard present"
+    },
+    {
+      "id": "E08b",
+      "ok": true,
+      "detail": "record sha guard present"
+    },
+    {
+      "id": "E11b",
+      "ok": true,
+      "detail": "seal drift guard present"
+    }
+  ],
+  "pass": 14,
+  "total": 14,
+  "ok": true
+}

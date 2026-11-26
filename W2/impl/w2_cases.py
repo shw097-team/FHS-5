@@ -64,8 +64,7 @@ def w2_dev_01(fixture, oracle, ctx):
         shutil.copytree(cand_root / "W1", repo / "W1")
         real_candidate = True
     else:
-        _w(repo / "W1/check/w2_receiver.py", "VERSION = 'v1'\n\ndef receive(x):\n    return x\n")
-        real_candidate = False
+        raise W3Error("CANDIDATE_UNBOUND", "W2 candidate root missing or unreadable")
     _w(repo / "legacy/old_tag_adapter.py", "LEGACY = True\n")
     _w(repo / "README.txt", "unlisted\n")
     _init_repo(repo)

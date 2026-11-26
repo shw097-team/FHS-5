@@ -24,6 +24,10 @@ def main(argv=None):
     man = load_json_strict(os.path.join(a.product_pack, "05_W3_SOURCE_MANIFEST.json"))
     ledger = load_json_strict(a.ledger)
     pins = {k: v["value"] for k, v in ledger["pins"].items()}
+    verdict_path = os.path.join(a.root, "evidence", a.run_id, "PRODUCT_VERDICT.json")
+    vmap = {}
+    if os.path.isfile(verdict_path):
+        vmap = {r["case_id"]: r.get("record_sha256") for r in load_json_strict(verdict_path)["rows"]}
     errors = []
     rows = []
     for ref in man["case_refs"]:
@@ -35,6 +39,9 @@ def main(argv=None):
         rec = load_json_strict(rec_path)
         oracle = load_json_strict(os.path.join(a.product_pack, ref["oracle"]["path"].replace("/", os.sep)))
         token_ok = rec.get("observed", {}).get("token") == oracle["expected"]["token"]
+        engine_ok = rec.get("engine_error") is False
+        candidate_ok = rec.get("candidate") == pins.get("candidate")
+        sha_ok = (vmap.get(cid) == sha256_file(rec_path)) if vmap else True
         checks = []
         for p in oracle.get("predicates", []):
             try:
@@ -42,10 +49,11 @@ def main(argv=None):
             except Exception:
                 ok = False
             checks.append({"predicate": p["id"], "ok": bool(ok)})
-        ok = token_ok and checks and all(x["ok"] for x in checks)
+        ok = token_ok and engine_ok and candidate_ok and sha_ok and checks and all(x["ok"] for x in checks)
         if not ok:
             errors.append("fail:" + cid)
-        rows.append({"case_id": cid, "token_ok": token_ok, "checks": checks,
+        rows.append({"case_id": cid, "token_ok": token_ok, "engine_ok": engine_ok,
+                     "candidate_ok": candidate_ok, "record_sha_ok": sha_ok, "checks": checks,
                      "verdict": "PASS" if ok else "FAIL"})
     out = {
         "schema": "FHS5.PLP.W3.ProductCheckerReceipt@1",

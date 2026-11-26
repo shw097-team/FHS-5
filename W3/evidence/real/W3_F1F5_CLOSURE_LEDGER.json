@@ -14,7 +14,7 @@
     "status": "ACHIEVED_GENERIC_NATIVE_PRODUCT_FREEZE",
     "case_owner": "separate Case Owner session",
     "cases": 16,
-    "candidate": "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
+    "candidate": "e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7",
     "case_owner_freeze_sha256": "ac9f061bee576cdea93fdbdf5f49f61cb710873a4ad3308248297b4c1a6ed07f"
   },
   "F3": {
@@ -31,12 +31,8 @@
     "W4_EXECUTION_READY": false
   },
   "F5": {
-    "status": "PUSHED",
-    "pushed": true,
-    "branch": "codex/w3-real-product-20261126T1902",
-    "content_commit": "46d0a163be7dd5048241cb7c5320f44a10852eeb",
-    "remote_tip": "d89084a17c15186b07f4bd9a4dd58cfb1865c76c",
-    "remote_tree": "a4a3ba8e4d7259bc499552202bc8fbe4244003a0"
+    "status": "LOCAL_COMMIT_PENDING",
+    "pushed": false
   },
   "claims": {
     "W2_NF_VALIDATED": false,

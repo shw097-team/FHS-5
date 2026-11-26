@@ -281,7 +281,12 @@ def main(argv=None):
         proc = run_process(argv, cwd=a.root, timeout_s=120)
         rec = load_json_strict(os.path.join(a.root, "evidence", a.run_id, "cases", cid, "record.json"))
         expected_token = oracle.get("expected", {}).get("token")
+        expected_exit = oracle.get("expected", {}).get("exit")
         token_ok = rec.get("observed", {}).get("token") == expected_token
+        proc_ok = proc["exit"] == expected_exit
+        engine_ok = rec.get("engine_error") is False
+        fresh_ok = os.path.getmtime(os.path.join(a.root, "evidence", a.run_id, "cases", cid, "record.json")) >= proc["start"] - 1
+        candidate_ok = rec.get("candidate") == ledger_pins.get("candidate")
         ctx = {"expected_denominator": oracle.get("expected", {}).get("denominator"),
                "ledger_pins": ledger_pins}
         checks = []
@@ -292,12 +297,18 @@ def main(argv=None):
             except Exception:
                 ok = False
             checks.append({"predicate": pid, "ok": bool(ok)})
-        verdict = "PRODUCT_PASS" if token_ok and checks and all(c["ok"] for c in checks) else "PRODUCT_FAIL"
+        verdict = ("PRODUCT_PASS" if token_ok and proc_ok and engine_ok and fresh_ok
+                   and candidate_ok and checks and all(c["ok"] for c in checks)
+                   else "PRODUCT_FAIL")
         rows.append({
             "case_id": cid, "kind": ref["kind"],
             "expected_token": expected_token,
             "observed_token": rec.get("observed", {}).get("token"),
             "token_ok": token_ok,
+            "process_exit_ok": proc_ok,
+            "engine_error_ok": engine_ok,
+            "fresh_raw": fresh_ok,
+            "candidate_ok": candidate_ok,
             "predicates": checks,
             "verdict": verdict,
             "engine_exit": proc["exit"],

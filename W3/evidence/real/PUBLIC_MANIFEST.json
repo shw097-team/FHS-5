@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "W3/check/build_product_pack.py",
-      "sha256": "1831ec7f66fd6897e30bf18cdcfc0cc3bfa822d67b56073b83c10369b32c5b07",
-      "bytes": 2597
+      "sha256": "9c075d0e89df43f63e0729014af5be3e9da414d0dc144e6acea80d55d14cc039",
+      "bytes": 3303
     },
     {
       "path": "W3/check/checker_verify.py",
@@ -18,14 +18,19 @@
       "bytes": 3640
     },
     {
+      "path": "W3/check/e_tests.py",
+      "sha256": "935dab2e781a0758fda58f6205b531dc6fa1fcc8766f06a09d0ae4a35161e30d",
+      "bytes": 7038
+    },
+    {
       "path": "W3/check/product_checker.py",
-      "sha256": "9fdae971ee15d2d8e797db69b83f67ac0974571183c6a52537392783b2053502",
-      "bytes": 2890
+      "sha256": "7b9bab5fed9eccf7d63feab7141936a309c2caaeadeb6e9b9130f18b2f415c09",
+      "bytes": 3469
     },
     {
       "path": "W3/check/product_verify.py",
-      "sha256": "c3106afdcae77f1b3479b9c20558352a7c7bef98fd5daae1d300727b7babcf19",
-      "bytes": 14993
+      "sha256": "925c71ee8c2565d0c1bb1e9077579aa22b22af15017c107297f19fc12e61fc95",
+      "bytes": 15618
     },
     {
       "path": "W3/check/run_pipeline.py",
@@ -34,8 +39,8 @@
     },
     {
       "path": "W3/check/run_product_case.py",
-      "sha256": "6acaefcc619dfa9d142fe4d0d69b1ee90ff97aa4d55f3e7f24e9c88e1605950e",
-      "bytes": 1400
+      "sha256": "c2775c474388ba98dca797d8e689a48f5e57a4ada68b82028d8ae3f0e9ab7003",
+      "bytes": 1393
     },
     {
       "path": "W3/check/run_product_real.py",
@@ -378,19 +383,24 @@
       "bytes": 16096
     },
     {
+      "path": "W3/evidence/real/E01_E11.json",
+      "sha256": "d9f987467ad9b124686573b50faac2dd24cb8cccc827478bb26f4675bc776dd8",
+      "bytes": 1411
+    },
+    {
       "path": "W3/evidence/real/PRODUCT_CHECKER.json",
-      "sha256": "9b6aeb9257f1fbbca8c83de149fb32c65745398b445cc7b4bd803f60a9b89d69",
-      "bytes": 10069
+      "sha256": "cdd366164b71a7e63e83df6ede503c7cf9352a2f6f0f168458d9b868b07fbc3d",
+      "bytes": 11381
     },
     {
       "path": "W3/evidence/real/PRODUCT_SEAL.json",
-      "sha256": "fd2aa80a207ba656105252ab16e9c6a8233ab6ed868d5e50fd52989a32881142",
+      "sha256": "3309ea84c9bed682d5ee0ab4e87a25d67218d712d046e0aaf92a469a03ea9373",
       "bytes": 670
     },
     {
       "path": "W3/evidence/real/PRODUCT_VERDICT.json",
-      "sha256": "c07da2b349c9154c6e74f34578c1a29b76aec8e1c136d9a08a447d0e1f07edc2",
-      "bytes": 14672
+      "sha256": "cc41bdca4bdc9b09f9eb006f2305701388108ae2a8cf56b02d07b8b448ed3d43",
+      "bytes": 16512
     },
     {
       "path": "W3/evidence/real/W2_SUMMARY.json",
@@ -399,22 +409,22 @@
     },
     {
       "path": "W3/evidence/real/W3_CLOSURE_COVERAGE.json",
-      "sha256": "2823ec4263ac9988594515c051e69f57b4cee7867c96e1e1b2c6fe6810ee85ab",
-      "bytes": 19801
+      "sha256": "e0133ad97fe30455a2ea068a1d7f1835a09f9fe06006cb8ce63cd66448763209",
+      "bytes": 21641
     },
     {
       "path": "W3/evidence/real/W3_F1F5_CLOSURE_LEDGER.json",
-      "sha256": "2d2f036e3b862e094e9bcd3bcf8bfe14947e3189a5b3349fda03fbc658e1789a",
+      "sha256": "b6ac153aebb0cb827186f97f3138cec77aa2a2ad512523b63158ba81c346168d",
       "bytes": 1364
     },
     {
       "path": "W3/evidence/real/W4_CONSUMER.json",
-      "sha256": "47f9890ff2ff19e7bd9515cb4776200417377ec040e4ba0fd7c0b4f185b5fc4f",
+      "sha256": "de80ec3be9dbdc804014f0bd0a58e5ac65810794723b80aea912454995fe01d4",
       "bytes": 827
     },
     {
       "path": "W3/evidence/real/W4_INBOUND.json",
-      "sha256": "b240499f7a2de297288a384d43e2002780dcc797ec221d89f3d7de75717b2977",
+      "sha256": "ecd2af49bbe017ef4ef432563df3fd0ce54d768ee3f3b7b47e796e95eb09904c",
       "bytes": 1631
     },
     {
@@ -424,13 +434,13 @@
     },
     {
       "path": "W3/impl/w3_cases.py",
-      "sha256": "b38e6c3f0587df73131a42231724ec5a651a68077a95d9b90a6235378382c931",
-      "bytes": 22672
+      "sha256": "cee171d139eb84c3df204c433956cb40d886f5c1d2cfe63c7afd1d0486a14855",
+      "bytes": 22919
     },
     {
       "path": "W3/impl/w3_common.py",
-      "sha256": "ef727389b468cf0a33a3757473288860527d056edb9bb417cccd917a2781a0dd",
-      "bytes": 8683
+      "sha256": "83264e834aaefd8a6a50dc0407b59381aa15a93462a56f203f7b0e0381f29069",
+      "bytes": 9004
     },
     {
       "path": "W3/impl/w3_far.py",

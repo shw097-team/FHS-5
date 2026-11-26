@@ -29,19 +29,33 @@ def main():
             shutil.rmtree(dst)
         shutil.copytree(os.path.join(a.owner, sub), dst)
     refs = []
+    freeze = load(os.path.join(a.owner, "CASE_OWNER_FREEZE.json"))
+    frozen = {c["case_id"]: c for c in freeze["cases"]}
+    expected_ids = {
+        "W3-FRZ-01", "W3-FRZ-02", "W3-RUN-01", "W3-RUN-02",
+        "W3-FAR-01", "W3-FAR-02", "W3-G2-01", "W3-CHK-01",
+        "W3-R3-01", "W3-R3-02", "W3-R3-03", "W3-R3-04",
+        "W3-R3-05", "W3-R3-06", "W3-FR16-01", "W3-FR17-01",
+    }
+    if set(frozen) != expected_ids or len(frozen) != 16:
+        raise SystemExit("CASE_SET_MISMATCH")
     for name in sorted(os.listdir(os.path.join(out, "fixtures"))):
         if not name.endswith(".json"):
             continue
         cid = name[:-5]
         fx = load(os.path.join(out, "fixtures", name))
         orc = load(os.path.join(out, "oracles", name))
+        fsha = __import__("hashlib").sha256(open(os.path.join(out, "fixtures", name), "rb").read()).hexdigest()
+        osha = __import__("hashlib").sha256(open(os.path.join(out, "oracles", name), "rb").read()).hexdigest()
+        if cid not in frozen or frozen[cid]["fixture"]["sha256"] != fsha or frozen[cid]["oracle"]["sha256"] != osha:
+            raise SystemExit("FREEZE_BYTES_MISMATCH:" + cid)
         refs.append({
             "case_id": cid, "kind": fx.get("kind"), "wp": fx.get("wp"),
             "fixture": {"path": "fixtures/" + name,
-                        "sha256": __import__("hashlib").sha256(open(os.path.join(out, "fixtures", name), "rb").read()).hexdigest(),
+                        "sha256": fsha,
                         "bytes": os.path.getsize(os.path.join(out, "fixtures", name))},
             "oracle": {"path": "oracles/" + name,
-                       "sha256": __import__("hashlib").sha256(open(os.path.join(out, "oracles", name), "rb").read()).hexdigest(),
+                       "sha256": osha,
                        "bytes": os.path.getsize(os.path.join(out, "oracles", name))},
             "contract_ref": fx.get("contract_ref"),
         })

@@ -1,7 +1,7 @@
 {
   "schema": "FHS5.PLP.W3.ProductCheckerReceipt@1",
   "checker_role": "DISTINCT_READ_ONLY_PRODUCT_CHECKER",
-  "checker_script_sha256": "9fdae971ee15d2d8e797db69b83f67ac0974571183c6a52537392783b2053502",
+  "checker_script_sha256": "7b9bab5fed9eccf7d63feab7141936a309c2caaeadeb6e9b9130f18b2f415c09",
   "argv": [
     "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
     "<RUN_ROOT>\\W3\\check\\product_checker.py"
@@ -12,6 +12,9 @@
     {
       "case_id": "W3-CHK-01",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "advisory_pass_cannot_write_checker_verdict",
@@ -39,6 +42,9 @@
     {
       "case_id": "W3-FAR-01",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "absent_rows_null",
@@ -66,6 +72,9 @@
     {
       "case_id": "W3-FAR-02",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "two_distinct_alternatives",
@@ -97,6 +106,9 @@
     {
       "case_id": "W3-FR16-01",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "four_targets_refused",
@@ -124,6 +136,9 @@
     {
       "case_id": "W3-FR17-01",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "three_effects_refused",
@@ -151,6 +166,9 @@
     {
       "case_id": "W3-FRZ-01",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "five_pins_present_and_distinct",
@@ -182,6 +200,9 @@
     {
       "case_id": "W3-FRZ-02",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "five_mutations_covered",
@@ -213,6 +234,9 @@
     {
       "case_id": "W3-G2-01",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "no_park",
@@ -240,6 +264,9 @@
     {
       "case_id": "W3-R3-01",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "identity_preserved",
@@ -267,6 +294,9 @@
     {
       "case_id": "W3-R3-02",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "count_series_is_not_world_raw",
@@ -294,6 +324,9 @@
     {
       "case_id": "W3-R3-03",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "denominator_is_192",
@@ -321,6 +354,9 @@
     {
       "case_id": "W3-R3-04",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "same_process",
@@ -348,6 +384,9 @@
     {
       "case_id": "W3-R3-05",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "two_substantive_alternatives",
@@ -375,6 +414,9 @@
     {
       "case_id": "W3-R3-06",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "generic_read_continues",
@@ -406,6 +448,9 @@
     {
       "case_id": "W3-RUN-01",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "pos_exit_zero",
@@ -433,6 +478,9 @@
     {
       "case_id": "W3-RUN-02",
       "token_ok": true,
+      "engine_ok": true,
+      "candidate_ok": true,
+      "record_sha_ok": true,
       "checks": [
         {
           "predicate": "all_four_defects_present",

@@ -10,6 +10,10 @@
       "expected_token": "FALSE_AUTHORITY",
       "observed_token": "FALSE_AUTHORITY",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "advisory_pass_cannot_write_checker_verdict",
@@ -35,7 +39,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-CHK-01\\record.json",
-      "record_sha256": "3dcea3656313a2abd0b5eb1acce541d30e871cc75a3915f351ca5dd0143a9036"
+      "record_sha256": "6eb16ddcd4e8a20ffcbb15afaf213d84de8d74f69e229f118196aeda58ee2b9b"
     },
     {
       "case_id": "W3-FAR-01",
@@ -43,6 +47,10 @@
       "expected_token": "UNAVAILABLE",
       "observed_token": "UNAVAILABLE",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "absent_rows_null",
@@ -68,7 +76,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-FAR-01\\record.json",
-      "record_sha256": "49076e0f8a505b3b6f85aa78dec16f03f8c87da084863314616af2da8688404f"
+      "record_sha256": "dde5a7f2723c7307f116f3cc18a7db946cb90345da95311e8603c7700a7b63ab"
     },
     {
       "case_id": "W3-FAR-02",
@@ -76,6 +84,10 @@
       "expected_token": "ALTERNATIVES_SUBSTANTIVE",
       "observed_token": "ALTERNATIVES_SUBSTANTIVE",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "two_distinct_alternatives",
@@ -105,7 +117,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 0,
       "record_ref": "evidence\\PR\\cases\\W3-FAR-02\\record.json",
-      "record_sha256": "5a793651b7055cd1711af5ee739b0062b263d9d257998e489d4f841275242114"
+      "record_sha256": "d90074fea2f6eb99ce3a40e7fd2a9d6470b782451d25c3c07929f4b4589b623e"
     },
     {
       "case_id": "W3-FR16-01",
@@ -113,6 +125,10 @@
       "expected_token": "WRITE_SCOPE_VIOLATION",
       "observed_token": "WRITE_SCOPE_VIOLATION",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "four_targets_refused",
@@ -138,7 +154,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-FR16-01\\record.json",
-      "record_sha256": "f4d205a351fc9de45c46842f0a2b72ef1eaacba097a2771dfd3c468c58659d1f"
+      "record_sha256": "dea69435d0a02f89b7f1e65d80961a218e7064d2730d47ac7590c6065329c7a4"
     },
     {
       "case_id": "W3-FR17-01",
@@ -146,6 +162,10 @@
       "expected_token": "FALSE_AUTHORITY",
       "observed_token": "FALSE_AUTHORITY",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "three_effects_refused",
@@ -171,7 +191,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-FR17-01\\record.json",
-      "record_sha256": "ce10e1d1acb296e01a54bd6b0a74141ebdf1ea391708a40095431ebf42cfbab4"
+      "record_sha256": "256581f9a8919d8eafa3815af257590ef09b86f6544ecd3b9aa16ef1f039a489"
     },
     {
       "case_id": "W3-FRZ-01",
@@ -179,6 +199,10 @@
       "expected_token": "FREEZE_LEDGER_VERIFIED",
       "observed_token": "FREEZE_LEDGER_VERIFIED",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "five_pins_present_and_distinct",
@@ -208,7 +232,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 0,
       "record_ref": "evidence\\PR\\cases\\W3-FRZ-01\\record.json",
-      "record_sha256": "1f8bfdda96a1a27d7c07026b1ceceb582dde01d57cfcd4935af3ea5cbd34a547"
+      "record_sha256": "557ce1ff8de571f80c7ee95608d7b307e699175474e49149bbfc6baee26fc619"
     },
     {
       "case_id": "W3-FRZ-02",
@@ -216,6 +240,10 @@
       "expected_token": "FROZEN_IDENTITY_MISMATCH",
       "observed_token": "FROZEN_IDENTITY_MISMATCH",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "five_mutations_covered",
@@ -245,7 +273,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-FRZ-02\\record.json",
-      "record_sha256": "f77c4a649967aefc0e5e4cece108a9713ed70f103a7f01c312ab2385383567ef"
+      "record_sha256": "a8ac53f860d181e1a966da6bd114d19e07a17ac251d17bd66dd8daff2ea85918"
     },
     {
       "case_id": "W3-G2-01",
@@ -253,6 +281,10 @@
       "expected_token": "DELTA_UNVERIFIED",
       "observed_token": "DELTA_UNVERIFIED",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "no_park",
@@ -278,7 +310,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-G2-01\\record.json",
-      "record_sha256": "df45e5290a7acfa17df744e57c39df6edffbb22b3f42b6bfdc275c0d8b6e41c9"
+      "record_sha256": "79e392b9d02ad480e0b1529608f65b9261ff84dc44ae264b3b32d9b010ae055f"
     },
     {
       "case_id": "W3-R3-01",
@@ -286,6 +318,10 @@
       "expected_token": "NOT_COVERED",
       "observed_token": "NOT_COVERED",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "identity_preserved",
@@ -311,7 +347,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 0,
       "record_ref": "evidence\\PR\\cases\\W3-R3-01\\record.json",
-      "record_sha256": "fb5f8f6535e09f387114b08eed90663defb4f05ba3f2ab62fd29e2efb4458dbf"
+      "record_sha256": "50e4a18329cbf98442ae83248d967f65b1b2ebe86c253d91e03a8896ecdd2570"
     },
     {
       "case_id": "W3-R3-02",
@@ -319,6 +355,10 @@
       "expected_token": "DELTA_UNVERIFIED",
       "observed_token": "DELTA_UNVERIFIED",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "count_series_is_not_world_raw",
@@ -344,7 +384,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-R3-02\\record.json",
-      "record_sha256": "e90e58831766cc677f1cd7723bb5d97edea6ac6192b9dc7a2ddac13abc9ebb04"
+      "record_sha256": "acb4f27d2b5684d007be88016be004ffa97b02f705a7dc8058f5d829b0ff702d"
     },
     {
       "case_id": "W3-R3-03",
@@ -352,6 +392,10 @@
       "expected_token": "ZERO_RELEVANT_HIT",
       "observed_token": "ZERO_RELEVANT_HIT",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "denominator_is_192",
@@ -377,7 +421,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 0,
       "record_ref": "evidence\\PR\\cases\\W3-R3-03\\record.json",
-      "record_sha256": "aba3e9d62bd178eec33c8db707737750027bd75db2b131b6d3237bbb0d1050cc"
+      "record_sha256": "0a347c51d64dc9dbd3859595264ea87acd404a7aec22d7a10f568577ddc36fe8"
     },
     {
       "case_id": "W3-R3-04",
@@ -385,6 +429,10 @@
       "expected_token": "FALSE_INDEPENDENT",
       "observed_token": "FALSE_INDEPENDENT",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "same_process",
@@ -410,7 +458,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-R3-04\\record.json",
-      "record_sha256": "bc5c445d2ee852481efbd2c89fc24a57f5c98d6d80317116d31fdd2ef688ff46"
+      "record_sha256": "b578c514a832634e64e6a7515dec93a7e8a829b582bc96dbb195c6f8199b9f1c"
     },
     {
       "case_id": "W3-R3-05",
@@ -418,6 +466,10 @@
       "expected_token": "ALTERNATIVES_SUBSTANTIVE",
       "observed_token": "ALTERNATIVES_SUBSTANTIVE",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "two_substantive_alternatives",
@@ -443,7 +495,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 0,
       "record_ref": "evidence\\PR\\cases\\W3-R3-05\\record.json",
-      "record_sha256": "2fca622cb511d6a5faddfc89a2313611e69a729345549841018a7747c86afde4"
+      "record_sha256": "141b8959aab9542ac49832df7ddeb2e5aae3a7e4554d10cd64a0fd5a35460180"
     },
     {
       "case_id": "W3-R3-06",
@@ -451,6 +503,10 @@
       "expected_token": "ORIGINAL_READER_UNBOUND",
       "observed_token": "ORIGINAL_READER_UNBOUND",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "generic_read_continues",
@@ -480,7 +536,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-R3-06\\record.json",
-      "record_sha256": "73db6b643959a433da7d10e5dfd5a8292c06ce37f31282518d67cbddfd22c6e3"
+      "record_sha256": "336666e7ec7d530ebba2bcbab1d5faea6955e60398b6430a9658b945b9d9f8fb"
     },
     {
       "case_id": "W3-RUN-01",
@@ -488,6 +544,10 @@
       "expected_token": "SEMANTIC_MATCH",
       "observed_token": "SEMANTIC_MATCH",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "pos_exit_zero",
@@ -513,7 +573,7 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 0,
       "record_ref": "evidence\\PR\\cases\\W3-RUN-01\\record.json",
-      "record_sha256": "4ae19ac7932ad38b7314bf1f6ef8ca88156c0d728dcbd8e5c4c0f4002f296d0f"
+      "record_sha256": "e61ca9a468d4acf721c2660f5301917ae436f382a139b30d915622f4a961b0b6"
     },
     {
       "case_id": "W3-RUN-02",
@@ -521,6 +581,10 @@
       "expected_token": "UNREPRODUCED",
       "observed_token": "UNREPRODUCED",
       "token_ok": true,
+      "process_exit_ok": true,
+      "engine_error_ok": true,
+      "fresh_raw": true,
+      "candidate_ok": true,
       "predicates": [
         {
           "predicate": "all_four_defects_present",
@@ -550,12 +614,12 @@
       "verdict": "PRODUCT_PASS",
       "engine_exit": 2,
       "record_ref": "evidence\\PR\\cases\\W3-RUN-02\\record.json",
-      "record_sha256": "98e24033ba52a3bf36a2d851b2bb2148feb383ac2cc45317caa22632fac632c5"
+      "record_sha256": "90fa3f30ef487717cbd6ba65aa215a90f934b42511e1079afbaaf07bb90ea646"
     }
   ],
   "verifier": {
     "path": "<RUN_ROOT>\\W3\\check\\product_verify.py",
-    "sha256": "c3106afdcae77f1b3479b9c20558352a7c7bef98fd5daae1d300727b7babcf19"
+    "sha256": "925c71ee8c2565d0c1bb1e9077579aa22b22af15017c107297f19fc12e61fc95"
   },
   "observation_layer": "PRODUCT_ENGINE_RAW",
   "not_design_verdict": true

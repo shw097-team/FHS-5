@@ -23,7 +23,7 @@ def main(argv=None):
     ledger = json.load(open(a.ledger, encoding="utf-8"))
     rec = run_case(a.product_pack, a.case, a.root, ledger, a.run_id, mode="engine")
     case_dir = os.path.join(a.root, "evidence", a.run_id, "cases", a.case)
-    code = 2 if rec["kind"] == "NEG" else 0
+    code = rec.get("engine_exit", 0)
     rec["process_exit"] = code
     payload = json.dumps(rec, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     open(os.path.join(case_dir, "stdout.txt"), "w", encoding="utf-8", newline="\n").write(payload)

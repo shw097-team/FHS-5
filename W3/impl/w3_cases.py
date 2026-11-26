@@ -22,6 +22,7 @@ from w3_advice import validate_alternatives
 from w3_common import (
     EXIT_FAIL,
     EXIT_REFUSED,
+    REFUSAL_TOKENS,
     SCOPE,
     SUBJECT_ID,
     W3Error,
@@ -452,6 +453,9 @@ def run_case(pack, case_id, root, ledger, run_id, case_dir=None, mode="design"):
     expected = oracle.get("expected", {})
     token_match = result["token"] == expected.get("token")
     exit_ok = result["exit"] == 0
+    refused = result["token"] in REFUSAL_TOKENS
+    if mode == "product":
+        raise W3Error("MODE_ONLY_PRODUCT_FORBIDDEN", "product verdict must come from the product verifier")
     if mode == "engine":
         design_verdict = "OBSERVED"
     else:
@@ -459,6 +463,8 @@ def run_case(pack, case_id, root, ledger, run_id, case_dir=None, mode="design"):
     record = {
         "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
         "run_id": run_id,
+        "candidate": (ledger.get("pins", {}).get("candidate", {}) or {}).get("value")
+        if isinstance(ledger, dict) else None,
         "case_id": case_id,
         "kind": ref["kind"],
         "wp": ref.get("wp"),
@@ -479,9 +485,9 @@ def run_case(pack, case_id, root, ledger, run_id, case_dir=None, mode="design"):
         "engine_error": result["engine_error"],
         "notes": result["notes"],
         "observation_layer": "DESIGN_ENGINE" if mode == "design" else "PRODUCT_FROZEN_E2E",
-        "product_case_state": ("NOT_COVERED" if mode == "design"
-                               else ("ENGINE_OBSERVED" if mode == "engine"
-                                     else ("PRODUCT_PASS" if design_verdict == "PASS" else "PRODUCT_FAIL"))),
+        "product_case_state": ("NOT_COVERED" if mode == "design" else "ENGINE_OBSERVED"),
+        "refused": refused,
+        "engine_exit": 2 if refused else 0,
         "product_not_covered_reason": ("design fixture/oracle; no Case Owner product freeze, no real product runner/Host"
                                        if mode == "design" else None),
         "runner": {
