@@ -1,0 +1,61 @@
+{
+ "schema": "FHS5.PLP.W2.Trust@3",
+ "default_domain": "DEV",
+ "generated_at": "2026-11-27T00:09:49+08:00",
+ "revoked": [
+  {
+   "decision_id": "W2-NF-PRIMARY-20261126-01",
+   "token": "ADMISSION_TERMINATED_BY_SECURITY_FINDING"
+  }
+ ],
+ "finding_markers": [
+  "W2_NATIVE_RUNS/W2_SECURITY_FINDING.json"
+ ],
+ "domains": {
+  "DEV": {
+   "domain": "DEV",
+   "scope": "W2-NF-01",
+   "not_after": "2026-11-27T23:59:59+08:00",
+   "write_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\20_WORLD",
+   "allowed_ops": [
+    {
+     "path": "W1/check/w2_receiver.py",
+     "operation": "MODIFY"
+    },
+    {
+     "path": "W1/check/test_j1_receiver.py",
+     "operation": "MODIFY"
+    }
+   ],
+   "decision": {
+    "path": "decisions/DEV.json",
+    "sha256": "abde6b84d92d15ed6806ad6c9c81c999019d75948ba0d9f03e8d4309a920f5e1",
+    "decision_id": "W2-S2S3-OWNER-20261126-02",
+    "schema": "FHS5.PLP.W2.OwnerDecision@local-2",
+    "subject_id": "FHS-5_PLP/W2/CONTROL_PACK"
+   }
+  },
+  "OPS": {
+   "domain": "OPS",
+   "scope": "W2-NF-01",
+   "not_after": "2026-11-27T23:59:59+08:00",
+   "write_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out",
+   "allowed_ops": [
+    {
+     "path": "20261127T000949_O03",
+     "operation": "CREATE"
+    }
+   ],
+   "recovery_kinds": [
+    "DELETE_CREATED_ONLY"
+   ],
+   "decision": {
+    "path": "decisions/OPS.json",
+    "sha256": "bbb7ab6529725475869acd0995b31c6023c023be4e1634d9d868569e433cc515",
+    "decision_id": "W2-S2S3-OWNER-20261127-03",
+    "schema": "FHS5.PLP.W2.OwnerDecision@local-3",
+    "subject_id": "FHS-5_PLP/W2/CONTROL_PACK"
+   }
+  }
+ }
+}

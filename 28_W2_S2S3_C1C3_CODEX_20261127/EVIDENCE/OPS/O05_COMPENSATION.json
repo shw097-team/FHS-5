@@ -1,0 +1,6 @@
+{
+ "op": "OPS-O05",
+ "exit": 0,
+ "stdout": "{\n \"op\": \"OPS-O05\",\n \"deleted\": [\n  \"material_copy/00_W2_DRAFT_PI_PD.md\",\n  \"material_copy/03_W2_DRAFT_TQAEP.md\",\n  \"material_copy/04_W2_DRAFT_THIN.md\",\n  \"material_copy/05_W2_SOURCE_MANIFEST.json\",\n  \"material_copy/_off_native.py\",\n  \"material_copy/context_bundle.md\"\n ],\n \"skipped\": [],\n \"first_fail\": null,\n \"root_removed\": true,\n \"readback_absent\": true,\n \"unrelated_touched\": false\n}\n",
+ "stderr": ""
+}

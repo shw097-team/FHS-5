@@ -32,7 +32,6 @@ def two_file_patch():
     )
 
 
-@unittest.skipUnless(os.environ.get("W2_DECISION_PATH"), "no pinned decision")
 class GateTests(unittest.TestCase):
     def setUp(self):
         self.tmp = Path(tempfile.mkdtemp(prefix="gate_"))
@@ -136,9 +135,14 @@ class GateTests(unittest.TestCase):
         with self.assertRaises(A.AdmissionError) as ctx:
             A.derive("DEV", "W2-NF-02", self.repo, self.ws)
         self.assertEqual(ctx.exception.token, "SCOPE_MISMATCH")
+        # an unconfigured domain is refused outright
+        with self.assertRaises(A.AdmissionError) as ctx:
+            A.derive("HOST", "W2-NF-01", self.repo, self.ws)
+        self.assertEqual(ctx.exception.token, "PRINCIPAL_DOMAIN_MISMATCH")
+        # a configured OPS domain cannot ride a DEV root
         with self.assertRaises(A.AdmissionError) as ctx:
             A.derive("OPS", "W2-NF-01", self.repo, self.ws)
-        self.assertEqual(ctx.exception.token, "PRINCIPAL_DOMAIN_MISMATCH")
+        self.assertEqual(ctx.exception.token, "ROOT_NOT_AUTHORISED")
 
     def test_forged_receipt_rejected(self):
         a = self.asserted()

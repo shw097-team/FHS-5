@@ -1,0 +1,45 @@
+{
+ "schema": "FHS5.PLP.W2S3.ConsumerReadback@1",
+ "consumer": "fresh process",
+ "consumed": true,
+ "verdict": "ACCEPT",
+ "failed": [],
+ "checks": [
+  {
+   "check": "sealed_present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "inventory_recomputed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "context_parsed",
+   "ok": true,
+   "detail": "# FHS-5_PLP W1 NF-r2 contract context\n\n- subject_id: FHS-5_P"
+  },
+  {
+   "check": "manifest_parsed",
+   "ok": true,
+   "detail": "['schema', 'pack_version', 'artifact_id', 'project_id', 'subject_id']"
+  },
+  {
+   "check": "subject_is_w2_inbound",
+   "ok": true,
+   "detail": "FHS-5_PLP/W2/INBOUND_DRAFT"
+  },
+  {
+   "check": "requirements_present",
+   "ok": true,
+   "detail": "13"
+  }
+ ],
+ "used": {
+  "subject_id": "FHS-5_PLP/W2/INBOUND_DRAFT",
+  "scope": "W2-READ-01",
+  "requirements": 13,
+  "material_sha256": "2d7df9c3f49f0f1fc5516c170552baeef2617fbbf5d0261e2f678d0a9c13c232"
+ }
+}

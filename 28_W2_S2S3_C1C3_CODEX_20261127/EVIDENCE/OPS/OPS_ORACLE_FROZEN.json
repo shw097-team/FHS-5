@@ -1,0 +1,19 @@
+{
+ "schema": "FHS5.PLP.W2S3.OpsOracle@1",
+ "run_id": "20261127T000949_O03",
+ "inventory_count": 6,
+ "post_world_sha256": "cb58f92db16597009746b35bd36b5cd63f8e1852cd1cecc3b7bd0f5fb9f0d8a5",
+ "pre_world_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+ "receipt_sha256": "914ea28afb9ca411b3860c3fdfa1bb40831dea16639f4385c419d5cd7ff49647",
+ "predicates": [
+  "o03.accepted=true",
+  "o03.verified_entries=118",
+  "o03.inventory_count as frozen",
+  "o04.verdict=VERIFIED",
+  "o04.sealed==live",
+  "o05.target_absent",
+  "o05.world==pre",
+  "o06 classified TO_AFTER|PARTIAL and compensated"
+ ],
+ "frozen_at": "2026-11-27T00:10:37+08:00"
+}

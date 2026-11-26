@@ -1,0 +1,6 @@
+{
+ "op": "OPS-O04",
+ "exit": 0,
+ "stdout": "{\n \"op\": \"OPS-O04\",\n \"verdict\": \"VERIFIED\",\n \"checks\": [\n  {\n   \"check\": \"receipt_accepted\",\n   \"ok\": true,\n   \"detail\": \"None\"\n  },\n  {\n   \"check\": \"product_calls\",\n   \"ok\": true,\n   \"detail\": \"{'build_contracts': 1, 'seam_wiring': 1}\"\n  },\n  {\n   \"check\": \"material_present\",\n   \"ok\": true,\n   \"detail\": \"C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\W2_NATIVE_RUNS\\\\S2S3_20261127_OPS\\\\out\\\\20261127T000949_O03\\\\material_copy\\\\context_bundle.md\"\n  },\n  {\n   \"check\": \"material_parsed\",\n   \"ok\": true,\n   \"detail\": \"# FHS-5_PLP W1 NF-r2 contract context  - subject_id: FHS-5_PLP/W1/CONTROL_PACK -\"\n  },\n  {\n   \"check\": \"material_inventory\",\n   \"ok\": true,\n   \"detail\": \"6\"\n  },\n  {\n   \"check\": \"tree_before_eq_after\",\n   \"ok\": true,\n   \"detail\": \"7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab\"\n  },\n  {\n   \"check\": \"no_grant_shipped\",\n   \"ok\": true,\n   \"detail\": \"{'permission_state': 'NONE_GRANTED', 'unknown_effect': 'FAIL_CLOSED'}\"\n  }\n ],\n \"failed\": [],\n \"inventory_count\": 6,\n \"world_post_sha256\": \"cb58f92db16597009746b35bd36b5cd63f8e1852cd1cecc3b7bd0f5fb9f0d8a5\"\n}\n",
+ "stderr": ""
+}

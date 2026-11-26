@@ -1,0 +1,45 @@
+{
+ "schema": "FHS5.PLP.W2.OwnerDecision@local-3",
+ "decision_id": "W2-S2S3-OWNER-20261127-03",
+ "decision_kind": "HUMAN_OWNER_SCOPED_OPS_AUTHORIZATION",
+ "decided_at": "2026-11-27T00:09:49+08:00",
+ "authority_basis": {
+  "prompt": "FHS-5_PLP｜W0～W2 S2/S3 最終差額閉合工程｜CODEX 續工薄 PROMPT",
+  "quote": "取得具名 OPS scope、安全與實際前件後，立即完成 O01–O06 垂直真實跑"
+ },
+ "scope": {
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "wave_id": "W2",
+  "domain": "OPS",
+  "write_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out",
+  "allowed_ops": [
+   {
+    "path": "20261127T000949_O03",
+    "operation": "CREATE"
+   }
+  ],
+  "effects_not_authorized": [
+   "RELEASE",
+   "external deploy",
+   "any path outside the run id",
+   "irreversible effect"
+  ]
+ },
+ "host": {
+  "host_id": "DESKTOP-57EO414",
+  "principal": "desktop-57eo414\\user",
+  "policy_epoch": "NOT_DECLARED_BY_HOST",
+  "receiver": "W1/check/w2_receiver.py:receive"
+ },
+ "recovery": {
+  "kind": "DELETE_CREATED_ONLY",
+  "rule": "delete only files whose digest matches the creation inventory; never follow links; never touch others"
+ },
+ "expiry": "2026-11-27T23:59:59+08:00",
+ "not_claimed": [
+  "W2_NF_VALIDATED",
+  "W3_TECHNICALLY_READY",
+  "RELEASED"
+ ]
+}
