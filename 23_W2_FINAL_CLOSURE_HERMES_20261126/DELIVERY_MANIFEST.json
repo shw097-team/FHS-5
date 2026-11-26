@@ -91,9 +91,19 @@
    "path": "W2_UNKNOWN_FIXTURES.json",
    "bytes": 3273,
    "sha256": "24a8aa8d148076e485b50f30d003eb2bae088009d736a8cc8b25ce0aef5851e8"
+  },
+  {
+   "path": "W3_RECEIVE_RECEIPT.json",
+   "bytes": 2482,
+   "sha256": "b8edb37756865fde5f67c13e59e80a8c3b8525a63fe8178e8a39b457a4e730c1"
   }
  ],
- "file_count": 17,
+ "file_count": 18,
  "self_excluded": true,
- "manifest_self_hash": "EXTERNAL_RECORD_ONLY"
+ "manifest_self_hash": "EXTERNAL_RECORD_ONLY",
+ "w3_receive": {
+  "verdict": "ACCEPTED",
+  "of_commit": "ef325c10bcc20c1a55de27de019a29d71da7d8b9",
+  "checks": "16/16"
+ }
 }

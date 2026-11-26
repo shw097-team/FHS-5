@@ -1,0 +1,101 @@
+{
+  "schema": "FHS5.PLP.W3.ReceiveReceipt@2",
+  "consumer_id": "w3_clean_receive_r3 (isolated clone from GitHub)",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "target_wave": "W3",
+  "commit": "ef325c10bcc20c1a55de27de019a29d71da7d8b9",
+  "clone_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1225_W2_FINAL_CLOSURE\\60_CLOSEOUT\\w3_clone",
+  "five_pins_sha256": "cb065923b3f1a07fef9d7388c31df2282b6140912844a63d31533fa3c6c01a6b",
+  "checks": [
+    {
+      "check": "manifest_rehash",
+      "ok": true,
+      "detail": "{'bad': [], 'n': 17}"
+    },
+    {
+      "check": "manifest_self_excluded",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "pin.source.present",
+      "ok": true,
+      "detail": "['source_set_sha256', 'manifest_sha256']"
+    },
+    {
+      "check": "pin.candidate.present",
+      "ok": true,
+      "detail": "['kind', 'w2_receiver_sha256', 'w2_dev_gate_sha256']"
+    },
+    {
+      "check": "pin.oracle.present",
+      "ok": true,
+      "detail": "['kind', 'j1_expected_pins', 'j1_checker_oracle']"
+    },
+    {
+      "check": "pin.case_set.present",
+      "ok": true,
+      "detail": "['kind', 'cases', 'count']"
+    },
+    {
+      "check": "pin.evidence.present",
+      "ok": true,
+      "detail": "['note', 'manifest']"
+    },
+    {
+      "check": "pin.candidate_set_not_single_file",
+      "ok": true,
+      "detail": "5"
+    },
+    {
+      "check": "pin.case_set_is_12",
+      "ok": true,
+      "detail": "12"
+    },
+    {
+      "check": "cases_all_pass",
+      "ok": true,
+      "detail": "{'PASS': 12, 'FAIL': 0, 'REQUALIFY': 0, 'DELTA_UNVERIFIED': 0}"
+    },
+    {
+      "check": "j3_pass",
+      "ok": true,
+      "detail": "PASS"
+    },
+    {
+      "check": "m1a_pass",
+      "ok": true,
+      "detail": "{'PASS': 5, 'FAIL': 0}"
+    },
+    {
+      "check": "changeset_present",
+      "ok": true,
+      "detail": "53"
+    },
+    {
+      "check": "receiver_bytes_in_clone",
+      "ok": true,
+      "detail": "768d631886121588"
+    },
+    {
+      "check": "no_grant_shipped",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "neg_wrong_pin_refused",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "passed": 16,
+  "total": 16,
+  "verdict": "ACCEPTED",
+  "grant": "NOT_GRANTED — technical reception only",
+  "limits": [
+    "no W3 protected effect executed",
+    "policy_epoch NOT_DECLARED_BY_HOST",
+    "J3 parity is W2-side evidence, not a W3 Challenge"
+  ]
+}
