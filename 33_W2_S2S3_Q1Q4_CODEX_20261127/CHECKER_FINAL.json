@@ -1,0 +1,74 @@
+{
+ "schema": "FHS5.PLP.W3.CheckerVerdict@3",
+ "verdict": "PASS",
+ "failed": [],
+ "checks": [
+  {
+   "check": "pins_match_tree",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "evidence_seal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "abi_ok",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "dag_9_no_cycle",
+   "ok": true,
+   "detail": "9"
+  },
+  {
+   "check": "wp_6_holds_14_crs_37",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "ops_6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "dev_7_locators",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "cases_12_runners",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "rows_16",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "subcases_18",
+   "ok": true,
+   "detail": "18"
+  },
+  {
+   "check": "w2_cases_pass",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "n06_four",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "suite_115",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "candidate": "cb66d77bc8e1282cd18c1d8ebaa55f49ee1059dba55bc1cd33f0d097671a6794",
+ "claim_ceiling": "ABI/N06/cases; N04/N09 partial; W2 not validated"
+}

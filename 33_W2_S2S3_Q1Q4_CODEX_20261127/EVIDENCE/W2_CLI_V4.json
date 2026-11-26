@@ -1,0 +1,1264 @@
+{
+  "schema": "FHS5.PLP.W2.Contracts@1",
+  "pack_manifest_sha256": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+    "scope": "W2-NF-01",
+    "wave_id": "W2",
+    "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+    "candidate": "W2-S1-r2-CODEX-PRIMARY"
+  },
+  "views": {
+    "PI": {
+      "identity": {
+        "project_id": "FHS-5_PLP",
+        "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+        "scope": "W2-NF-01",
+        "wave_id": "W2",
+        "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+        "candidate": "W2-S1-r2-CODEX-PRIMARY"
+      },
+      "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+      "scope": "W2-NF-01",
+      "requirements": [
+        {
+          "id": "W2-B01",
+          "original": "Original OperationType",
+          "fields": "effect.operation_type／effect.token",
+          "type": "enum/string",
+          "owner": "Effect Owner",
+          "original_state": "original_effect_registry_ref=null",
+          "native_equivalent": "00 明示 op/effect/target/risk＋ECP ref；executor 核一致",
+          "applicable_op": "每 op pre",
+          "producer": "Effect Owner／Native task",
+          "consumer": "Executor、01/02",
+          "required_when": "任何 effect 前",
+          "expected_receipt": "typed effect token＋scope＋target＋ECP ref",
+          "actual_ref": null,
+          "first_fail": "EFFECT_UNBOUND／EFFECT_MAPPING_UNVERIFIED",
+          "resume": "同 scope typed token"
+        },
+        {
+          "id": "W2-B02",
+          "original": "RepoContext",
+          "fields": "repo.root/head/branch/dirty",
+          "type": "object",
+          "owner": "Repo Owner",
+          "original_state": "無 repo binding",
+          "native_equivalent": "同次 live git root/HEAD/branch/dirty/untracked＋ACL＋preimage",
+          "applicable_op": "DEV pre；01 D01",
+          "producer": "Repo Reader／git",
+          "consumer": "01、P05",
+          "required_when": "DEV 前",
+          "expected_receipt": "repo binding receipt（root/head/dirty/untracked）",
+          "actual_ref": null,
+          "first_fail": "W2_REPO_BIND／REPO_HEAD_MISMATCH",
+          "resume": "live probe＋HEAD SHA"
+        },
+        {
+          "id": "W2-B03",
+          "original": "HostID／OS Principal／PolicyEpoch",
+          "fields": "host.host_id/principal/epoch",
+          "type": "object",
+          "owner": "Host/OS Owner",
+          "original_state": "無 receipt",
+          "native_equivalent": "真 host/session、principal/ACL/policy snapshot",
+          "applicable_op": "OPS pre；02 O01/O02",
+          "producer": "Host/OS Reader",
+          "consumer": "02、Executor",
+          "required_when": "OPS 前",
+          "expected_receipt": "host binding receipt（host/principal/epoch）",
+          "actual_ref": null,
+          "first_fail": "W2_HOST_BIND／PRINCIPAL_DOMAIN_MISMATCH",
+          "resume": "同 Host/Epoch readback"
+        },
+        {
+          "id": "W2-B04",
+          "original": "Original DEV ECP",
+          "fields": "ecp.dev_ref",
+          "type": "ref",
+          "owner": "Repo＋Issuer",
+          "original_state": "original_ecp_ref=null",
+          "native_equivalent": "當期 01＋op-specific bound values；原域另存",
+          "applicable_op": "DEV pre",
+          "producer": "Repo＋Issuer",
+          "consumer": "Executor",
+          "required_when": "DEV effect 前",
+          "expected_receipt": "ECP ref＋bound fields",
+          "actual_ref": null,
+          "first_fail": "ECP_NOT_GRANT",
+          "resume": "原 DEV ECP typed ref"
+        },
+        {
+          "id": "W2-B05",
+          "original": "Original OPS ECP",
+          "fields": "ecp.ops_ref",
+          "type": "ref",
+          "owner": "Host＋OS",
+          "original_state": "original_ecp_ref=null",
+          "native_equivalent": "當期 02；原 W0 只作承載方法",
+          "applicable_op": "OPS pre",
+          "producer": "Host＋OS",
+          "consumer": "Executor",
+          "required_when": "OPS effect 前",
+          "expected_receipt": "ECP ref＋host/recovery fields",
+          "actual_ref": null,
+          "first_fail": "ECP_NOT_GRANT／W2_RECOVERY",
+          "resume": "原 OPS ECP typed ref"
+        },
+        {
+          "id": "W2-B06",
+          "original": "Issuer",
+          "fields": "admission.issuer_id",
+          "type": "string",
+          "owner": "Original Issuer",
+          "original_state": "UNBOUND",
+          "native_equivalent": "唯一 Human Owner 真有效受界決策 ID/scope/expiry/revocation",
+          "applicable_op": "受保護 op pre",
+          "producer": "Human Owner/issuer",
+          "consumer": "Admission gate",
+          "required_when": "任何受保護 effect 前",
+          "expected_receipt": "issuer decision ref＋scope＋expiry",
+          "actual_ref": null,
+          "first_fail": "FALSE_AUTHORITY",
+          "resume": "Issuer ID＋policy ref"
+        },
+        {
+          "id": "W2-B07",
+          "original": "WorkOrder",
+          "fields": "admission.workorder_ref",
+          "type": "ref",
+          "owner": "Original Issuer",
+          "original_state": "null",
+          "native_equivalent": "真 Native task/op/goal/scope/allowed target＋source/authority ref",
+          "applicable_op": "op pre",
+          "producer": "Original Issuer",
+          "consumer": "Executor",
+          "required_when": "任何受保護 effect 前",
+          "expected_receipt": "work order bytes＋SHA",
+          "actual_ref": null,
+          "first_fail": "FALSE_AUTHORITY／W2_ADMISSION",
+          "resume": "WorkOrder bytes＋SHA"
+        },
+        {
+          "id": "W2-B08",
+          "original": "ExecutionAdmission",
+          "fields": "admission.receipt_ref",
+          "type": "ref",
+          "owner": "Original Issuer",
+          "original_state": "null",
+          "native_equivalent": "實際授權＋ACL/principal＋同 scope/target/precondition 通過的原生證明",
+          "applicable_op": "P05 pre",
+          "producer": "Original Issuer",
+          "consumer": "Executor",
+          "required_when": "effect 前",
+          "expected_receipt": "admission receipt（scope/target/precondition）",
+          "actual_ref": null,
+          "first_fail": "W2_ADMISSION／NOT_ADMITTED",
+          "resume": "同 subject/scope receipt"
+        },
+        {
+          "id": "W2-B09",
+          "original": "Exact WriteSet／preimage",
+          "fields": "write_set[]／preimage_sha256",
+          "type": "array/64-hex",
+          "owner": "Repo/OPS Owner",
+          "original_state": "無",
+          "native_equivalent": "逐 target path/identity/kind/existence/digest/size；absent 實測",
+          "applicable_op": "DEV/OPS pre",
+          "producer": "Repo/OPS Owner",
+          "consumer": "Executor",
+          "required_when": "每 effect 前",
+          "expected_receipt": "write set＋preimage/absence receipt",
+          "actual_ref": null,
+          "first_fail": "WRITESET_UNBOUND／WRITE_SET_UNBOUND",
+          "resume": "exact path set＋preimage SHA"
+        },
+        {
+          "id": "W2-B10",
+          "original": "WorldReader／RepoReader",
+          "fields": "reader.world／reader.repo",
+          "type": "ref",
+          "owner": "Reader Owner",
+          "original_state": "UNBOUND",
+          "native_equivalent": "真 file/Git/process/state/consumer；same Host/Epoch",
+          "applicable_op": "pre 能力／post readback",
+          "producer": "Reader Owner",
+          "consumer": "P06、Checker",
+          "required_when": "每 op readback",
+          "expected_receipt": "reader ref＋raw locator",
+          "actual_ref": null,
+          "first_fail": "W2_RECOVERY／EFFECT_NOT_VERIFIED",
+          "resume": "同 Host/Epoch readback"
+        },
+        {
+          "id": "W2-B11",
+          "original": "Protected Checker",
+          "fields": "checker.receipt_ref",
+          "type": "ref",
+          "owner": "Checker",
+          "original_state": "null",
+          "native_equivalent": "分立 session/worktree 對 frozen candidate/oracle/fixtures/raw 實跑",
+          "applicable_op": "POST",
+          "producer": "Checker",
+          "consumer": "W3/W4",
+          "required_when": "驗收後",
+          "expected_receipt": "checker receipt（candidate/oracle/raw）",
+          "actual_ref": null,
+          "first_fail": "CHECKER_PUBLISHER_UNBOUND",
+          "resume": "同 candidate distinct receipt"
+        },
+        {
+          "id": "W2-B12",
+          "original": "Publisher",
+          "fields": "publisher.receipt_ref",
+          "type": "ref",
+          "owner": "Publisher",
+          "original_state": "null",
+          "native_equivalent": "真 release 渠道/ACL/consent/驗證",
+          "applicable_op": "RELEASE only",
+          "producer": "Publisher",
+          "consumer": "W4",
+          "required_when": "發布時",
+          "expected_receipt": "publication receipt",
+          "actual_ref": null,
+          "first_fail": "RELEASE_NOT_CLAIMED",
+          "resume": "原 release procedure"
+        },
+        {
+          "id": "W2-B13",
+          "original": "Recovery ABI",
+          "fields": "recovery.kind／recovery.ref",
+          "type": "enum/ref",
+          "owner": "Repo/Host Owner",
+          "original_state": "無",
+          "native_equivalent": "DEV reverse patch／有限 rollback；OPS host-specific compensation",
+          "applicable_op": "可恢復能力 pre；restore post",
+          "producer": "Repo/Host Owner",
+          "consumer": "Executor、P06",
+          "required_when": "每 effect",
+          "expected_receipt": "recovery ref＋dry check＋actual raw",
+          "actual_ref": null,
+          "first_fail": "W2_RECOVERY／RECOVERY_KIND_MISMATCH",
+          "resume": "DEV reverse／Host recovery"
+        },
+        {
+          "id": "W2-NF-A",
+          "original": "TQAEP/Case",
+          "fields": "",
+          "type": "",
+          "owner": "Case Owner",
+          "original_state": "新增 NF 前件",
+          "native_equivalent": "03 原 Case ID、Req/Child、frozen fixture/oracle/predicate、runner",
+          "applicable_op": "test pre",
+          "producer": "Case Owner",
+          "consumer": "Checker",
+          "required_when": "受影 test 前",
+          "expected_receipt": "case set＋fixture/oracle/runner pins",
+          "actual_ref": null,
+          "first_fail": "RUNNER_UNBOUND",
+          "resume": "同 candidate 的 runner/raw"
+        },
+        {
+          "id": "W2-NF-B",
+          "original": "Receiver ABI",
+          "fields": "",
+          "type": "",
+          "owner": "Host/Receiver Owner",
+          "original_state": "新增 NF 前件",
+          "native_equivalent": "同 subject/scope 的真 Native IO／Host receiver，parse/use/readback",
+          "applicable_op": "介面 pre；consume post",
+          "producer": "Host/Receiver Owner",
+          "consumer": "Consumer",
+          "required_when": "所用介面 pre",
+          "expected_receipt": "receiver receipt＋parsed readback",
+          "actual_ref": null,
+          "first_fail": "CONSUMER_UNVERIFIED",
+          "resume": "真 receiver readback"
+        },
+        {
+          "id": "W2-NF-C",
+          "original": "Host preimage",
+          "fields": "",
+          "type": "",
+          "owner": "Host/OS Reader",
+          "original_state": "新增 NF 前件",
+          "native_equivalent": "實際 host pre-state、output root、existence/hash、必要 process/config",
+          "applicable_op": "OPS pre",
+          "producer": "Host/OS Reader",
+          "consumer": "02、WorldReader",
+          "required_when": "OPS 前",
+          "expected_receipt": "host preimage receipt＋absence",
+          "actual_ref": null,
+          "first_fail": "W2_HOST_BIND",
+          "resume": "同 Host/Epoch preimage"
+        }
+      ],
+      "requirement_count": 16,
+      "sources": [
+        {
+          "id": "PLAN",
+          "role": "engineering plan (design basis, adoption pending)",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_Dual-Decoupling_Native-first_全波次實證閉合工程方案.md",
+          "bytes": 110268,
+          "sha256": "7d628073b3f755cf2e81c127d612342918b5e229d0c1e522e75f98cb39463933",
+          "read_level": "READ_FULL"
+        },
+        {
+          "id": "ADR",
+          "role": "S0 minimum ADR DD01-DD10 (design basis, adoption pending)",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_Dual-Decoupling_Native-first_S0_最小ADR上位架構裁決.md",
+          "bytes": 54553,
+          "sha256": "a36b22fe9d49b12d03f95722514ed0416942337729bd090089337a04f1d5350c",
+          "read_level": "READ_FULL"
+        },
+        {
+          "id": "CTRL",
+          "role": "S1 execution control pack",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_S1_W0-W2_GPT-WORK_最小執行控制包.md",
+          "bytes": 27318,
+          "sha256": "b724f09dedec2de2c71cccb0be6844e6b7c833d0060c2ff70299208a79e89332",
+          "read_level": "READ_FULL"
+        },
+        {
+          "id": "PROMPT",
+          "role": "S1 thin start prompt",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_S1_W0-W2_GPT-WORK_啟動薄PROMPT.md",
+          "bytes": 4955,
+          "sha256": "92b350a0d8d9e3173c601e704c4291b80047c7e73ec9c0e028c912b778a3f73c",
+          "read_level": "READ_FULL"
+        },
+        {
+          "id": "ORIG-05",
+          "role": "original source manifest (superseded)",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\05_W2_SOURCE_MANIFEST.json",
+          "bytes": 65377,
+          "sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+          "read_level": "GIT_EQ_VERIFIED"
+        },
+        {
+          "id": "ORIG-00",
+          "role": "superseded original body (read-only lineage)",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\00_W2_PI_PD.md",
+          "bytes": 60853,
+          "sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92",
+          "read_level": "GIT_EQ_VERIFIED"
+        },
+        {
+          "id": "ORIG-01",
+          "role": "superseded original body (read-only lineage)",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\01_W2_DEV_ECP.md",
+          "bytes": 21795,
+          "sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d",
+          "read_level": "GIT_EQ_VERIFIED"
+        },
+        {
+          "id": "ORIG-02",
+          "role": "superseded original body (read-only lineage)",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\02_W2_OPS_ECP.md",
+          "bytes": 19372,
+          "sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934",
+          "read_level": "GIT_EQ_VERIFIED"
+        },
+        {
+          "id": "ORIG-03",
+          "role": "superseded original body (read-only lineage)",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\03_W2_TQAEP.md",
+          "bytes": 22289,
+          "sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a",
+          "read_level": "GIT_EQ_VERIFIED"
+        },
+        {
+          "id": "ORIG-04",
+          "role": "superseded original body (read-only lineage)",
+          "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\04_W2_START_THIN_PROMPT.md",
+          "bytes": 7104,
+          "sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8",
+          "read_level": "GIT_EQ_VERIFIED"
+        }
+      ],
+      "source_set_sha256": "71695482479fb11bc462823607603930cba3375ac860ed9fc37a73f3b0756c2e",
+      "constraints": {
+        "permission_state": "NONE_GRANTED",
+        "unknown_effect": "FAIL_CLOSED",
+        "ecp_is_grant": false
+      }
+    },
+    "PD": {
+      "wp": [
+        "WM2-P01 EffectBinding",
+        "WM2-P02 Repo/Host Bind",
+        "WM2-P03 Construction/ECP",
+        "WM2-P04 Planned TQAEP",
+        "WM2-P05 Admission/Native",
+        "WM2-P06 Reconcile/AsBuilt"
+      ],
+      "wp_rows": [
+        {
+          "id": "WM2-P01 EffectBinding",
+          "owner": "Effect Owner／Pack Consumer",
+          "input": "真 source pins、J1 route、13 DRAFT 列、owner policy",
+          "operation": "建立 typed effect descriptor；13+3 全欄；分 READ/DRAFT/DEV/OPS/USER/RELEASE；核前後件與原域 applicable ref；未知 token 不默認 READ",
+          "output": "EffectBindingRequest＋W2 working material",
+          "consumer": "P02/P03",
+          "acc": "W2-EFFECT-01、W2-R3-01、N01/N02/N11；每列有 owner/resume",
+          "neg_first_fail": "路徑猜 effect、假 token、13/13 true → EFFECT_UNBOUND／EFFECT_MAPPING_UNVERIFIED",
+          "next_resume": "缺 effect 只停 affected；真 token/policy 到才 resume"
+        },
+        {
+          "id": "WM2-P02 Repo/Host Bind",
+          "owner": "Repo/Host/OS Owner",
+          "input": "P01 output、allowed roots、真 reader",
+          "operation": "同次 live git root/HEAD/branch/dirty/untracked；target preimage/ACL；HostID/principal/epoch/receiver/prestate；建 binding candidate，不宣 PD_BOUND",
+          "output": "RepoBindingCandidate＋HostBindingCandidate",
+          "consumer": "P03/P05",
+          "acc": "W2-DEV-02、W2-R3-03/04、N04/N10",
+          "neg_first_fail": "caller HEAD、workspace 冒 repo、DEV principal 冒 OPS → REPO_HEAD_MISMATCH／PD_UNBOUND／PRINCIPAL_DOMAIN_MISMATCH",
+          "next_resume": "探查失敗只記真缺；真 ACL/preimage 重讀"
+        },
+        {
+          "id": "WM2-P03 Construction/ECP",
+          "owner": "Maker／Repo/Host Owner",
+          "input": "P02 binding、PD/op/authority、既有 code/help",
+          "operation": "寫 01/02 真 op：exact write set、expected、argv/cwd/timeout、recovery；J2 context/constraints/ChangeCone → pre；J1 patch 自身走本 WP 與 P04/P05",
+          "output": "ConstructionContract＋DEV/OPS ECP",
+          "consumer": "P05",
+          "acc": "W2-DEV-01、W2-OPS-01/02、W2-AUTH-01；pre/post/recovery 可驗",
+          "neg_first_fail": "無 preimage、ECP 當 Grant、git revert 當 OPS → WRITE_SET_UNBOUND／ECP_NOT_GRANT／RECOVERY_KIND_MISMATCH",
+          "next_resume": "無真 grant 不試跑；真 help/argv 到才 bind"
+        },
+        {
+          "id": "WM2-P04 Planned TQAEP",
+          "owner": "Case Owner／Reviewer",
+          "input": "P01/P03、原 12 Case、Req/Child/ACC",
+          "operation": "12 案逐案 freeze fixture/oracle/predicate/runner/expected raw；建 J/N 適用子例；negative preflight 可先在安全 scratch 跑；P05 前凍結",
+          "output": "WaveAssurancePlan＋frozen assets＋NotCovered",
+          "consumer": "P05/P06/W3",
+          "acc": "W2-RUNNER-01、N05/N06/N10/N11；每案有 expected predicate",
+          "neg_first_fail": "無 runner 宣 executed、非空即 PASS、事後改 oracle → RUNNER_UNBOUND／EVIDENCE_LAUNDERING",
+          "next_resume": "缺 runner 只停 affected case；真 runner/version/argv 到才 resume"
+        },
+        {
+          "id": "WM2-P05 Admission/Native",
+          "owner": "Human Owner／Executor",
+          "input": "P02/P03/P04、真授權、preimage",
+          "operation": "每 op 核 admission/ACL/target/write set；DEV-A red→patch→tests→reverse；OPS-A 真 effect→receiver readback；多 op；J3 OFF/覆核；立即 per-op readback",
+          "output": "WorldEffectRecord 候選＋raw/pre/post/test/permission",
+          "consumer": "P06",
+          "acc": "W2-CODEX-01/02/03；每 op 有 pre/post/raw",
+          "neg_first_fail": "wrong preimage、fake grant、unknown effect → no write；FAIL/UNKNOWN 進 P06",
+          "next_resume": "缺授權只做 READ/DRAFT；同 scope 真 receipt 才 resume"
+        },
+        {
+          "id": "WM2-P06 Reconcile/AsBuilt",
+          "owner": "Reader／Checker／Consumer",
+          "input": "P05 records、WorldReader/RepoReader、recovery",
+          "operation": "每 op 同 scope/host/epoch 讀回；UNKNOWN 四類 reconcile/補償；真雙期 delta；12 案 verdict；J3 final affected rerun；W2→W3 freeze/real receive",
+          "output": "WorldEffectLedger＋actual verified/recovered/unknown/NotCovered",
+          "consumer": "W3/W4、CLOSEOUT/HANDOFF",
+          "acc": "W2-DELTA-01、W2-R3-04、N06/N11；每案 actual 或 NotCovered",
+          "neg_first_fail": "exit0 當 verified、CH-07 補舊 bytes → EFFECT_NOT_VERIFIED／EVIDENCE_LAUNDERING",
+          "next_resume": "缺受影必要義務只 partial；W3 全跑不當 W2 前置"
+        }
+      ],
+      "dag_edges": [
+        {
+          "from": "P01",
+          "to": "P02",
+          "kind": "HARD",
+          "origin": "effect/13+3 與 source pin 是 live bind 的輸入",
+          "reason": "停 P02，保留 READ/DRAFT",
+          "if_absent": ""
+        },
+        {
+          "from": "P02",
+          "to": "P03",
+          "kind": "HARD",
+          "origin": "AUTHOR_DOC_ORDER",
+          "reason": "**執行**需要真 repo/host binding；P03 文件可先寫草稿（PLAN §03.3 明列 P03/P04 可先準備），但未 bind 不得進 P05",
+          "if_absent": "停 P05 前的 exec bind，不阻 P03 草稿"
+        },
+        {
+          "from": "P01",
+          "to": "P04",
+          "kind": "AUTHOR_DOC_ORDER",
+          "origin": "Case 可用 source/Req 先規劃，但 effect mapping 未定時 preflight 受限",
+          "reason": "記 UNVERIFIED，不當 hard",
+          "if_absent": ""
+        },
+        {
+          "from": "P03",
+          "to": "P04",
+          "kind": "SOFT",
+          "origin": "ECP 與 TQAEP 可並行；但 P05 前必須共享 interface 並 freeze oracle",
+          "reason": "可並行，不可在 P05 前未 freeze",
+          "if_absent": ""
+        },
+        {
+          "from": "P03",
+          "to": "P05",
+          "kind": "HARD",
+          "origin": "UNVERIFIED",
+          "reason": "無 ECP/write set/recovery 不得 effect；升硬理由＝安全（無 preimage/recovery 的寫入不可回復）",
+          "if_absent": "停 P05"
+        },
+        {
+          "from": "P04",
+          "to": "P05",
+          "kind": "HARD",
+          "origin": "UNVERIFIED",
+          "reason": "無 frozen oracle/fixture（或明示 BUILD_MINIMAL）不得執行受影 effect；升硬理由＝可證性（無 oracle 的執行不可判定）",
+          "if_absent": "停 affected case"
+        },
+        {
+          "from": "DEV-D04",
+          "to": "OPS-O03",
+          "kind": "HARD",
+          "origin": "NOT_DECLARED_UPSTREAM（本波新增）",
+          "reason": "OPS-A 的 receiver R2 是 DEV-D04 的產物（或 D02 選定的 W2 thin wrapper）；跨域但同 subject/scope/session 序列化，單一 writer",
+          "if_absent": "停 OPS-O03；OPS 設計可續，不阻 DEV"
+        },
+        {
+          "from": "P05",
+          "to": "P06",
+          "kind": "POST",
+          "origin": "readback/Checker/Consumer 是 effect 後驗",
+          "reason": "不得倒作 P05 pre",
+          "if_absent": ""
+        },
+        {
+          "from": "P02",
+          "to": "P06",
+          "kind": "SOFT",
+          "origin": "bind evidence 可作 readback 前置",
+          "reason": "不阻 P06 其他 op",
+          "if_absent": ""
+        }
+      ],
+      "dag_problems": [],
+      "edge_count": 9,
+      "cycle": null,
+      "holds": [
+        "W1_HOST_NINE_GRID",
+        "W1_PLUGIN_ALIAS",
+        "W1_ABI_BOUND",
+        "W1_W0_INPUT",
+        "W0_PRIMARY_RECEIPT_STALE",
+        "W0-A_CASE_SELECTION",
+        "W0-B_NOT_ADMITTED",
+        "ORIGINAL_READER_UNBOUND",
+        "ORACLE_FIXTURE_UNBOUND",
+        "HOST_CAPABILITY_UNBOUND",
+        "CHECKER_PUBLISHER_UNBOUND",
+        "SOURCE_REFERENCE_HASH_CONFLICT",
+        "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+        "HOLD_CR-DOC04-STATE-MAP"
+      ],
+      "hold_rows": [
+        {
+          "id": "W1_HOST_NINE_GRID",
+          "disposition": "OPEN_SCOPED",
+          "scope": "W2 當期 live Host；GPT CHAT/WORK/HERMES 各自真 consumer"
+        },
+        {
+          "id": "W1_PLUGIN_ALIAS",
+          "disposition": "OPEN_SCOPED",
+          "scope": "真 manifest/id/version/entrypoint"
+        },
+        {
+          "id": "W1_ABI_BOUND",
+          "disposition": "J2 REQUALIFY",
+          "scope": "exact 五 Seam＋actual W2 consumer；Legacy lossless 另驗"
+        },
+        {
+          "id": "W1_W0_INPUT",
+          "disposition": "REUSE_SCOPED",
+          "scope": "W0 clean-receive 已證；J1 W2 fresh consume"
+        },
+        {
+          "id": "W0_PRIMARY_RECEIPT_STALE",
+          "disposition": "HISTORICAL_SCOPED",
+          "scope": "舊 4,222 vs 3,986 不跨版修；新 NF seals"
+        },
+        {
+          "id": "W0-A_CASE_SELECTION",
+          "disposition": "RESOLVED_FOR_W0_GENERIC",
+          "scope": "W2 真需求另選；不借 G4/SQS"
+        },
+        {
+          "id": "W0-B_NOT_ADMITTED",
+          "disposition": "PROFILE_ONLY＋REQUALIFY",
+          "scope": "原 13 不 CLOSE；每 op 真 scope/ACL/pre/post/recovery"
+        },
+        {
+          "id": "ORIGINAL_READER_UNBOUND",
+          "disposition": "REPLACE_NATIVE/PROFILE_ONLY",
+          "scope": "Native 真 safe bytes/Git/process/readback"
+        },
+        {
+          "id": "ORACLE_FIXTURE_UNBOUND",
+          "disposition": "REQUALIFY_BY_CASE",
+          "scope": "12 W2 frozen assets；W0/W1 案不抵"
+        },
+        {
+          "id": "HOST_CAPABILITY_UNBOUND",
+          "disposition": "OPEN_SCOPED",
+          "scope": "W2 actual host/receiver/stages；其他 Host 另行"
+        },
+        {
+          "id": "CHECKER_PUBLISHER_UNBOUND",
+          "disposition": "SPLIT_RESPONSIBILITY",
+          "scope": "J3 same candidate distinct checker/consumer；Publisher release-only"
+        },
+        {
+          "id": "SOURCE_REFERENCE_HASH_CONFLICT",
+          "disposition": "REQUALIFY_BY_SOURCE",
+          "scope": "同名異 SHA 以版本/真 bytes/role 解"
+        },
+        {
+          "id": "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+          "disposition": "PROFILE_ONLY/OPEN",
+          "scope": "W4 435 count-only slots；不補造"
+        },
+        {
+          "id": "HOLD_CR-DOC04-STATE-MAP",
+          "disposition": "PROFILE_ONLY",
+          "scope": "原 T4/T5 DOC04 mapping；Native 分立"
+        }
+      ],
+      "w2_special_holds": [],
+      "crs": 37,
+      "denominators": {
+        "wp": 6,
+        "fuo": 6,
+        "acc": 6,
+        "codex_acc": 6,
+        "requirements": 16,
+        "j_subcases": 18,
+        "n_cases": 12,
+        "crs": 37,
+        "b_index_ops": 13,
+        "b_index_nf": 3
+      }
+    },
+    "DEV": {
+      "ops": [
+        "DEV-D01",
+        "DEV-D02",
+        "DEV-D03",
+        "DEV-D04",
+        "DEV-D05",
+        "DEV-D06",
+        "DEV-D07"
+      ],
+      "write_set": [
+        {
+          "n": 1,
+          "path": "W1/check/w2_receiver.py",
+          "operation": "MODIFY",
+          "before_exists": "true（G1 有檔）",
+          "allowed_post_shape": "J1 最小修補"
+        },
+        {
+          "n": 2,
+          "path": "W1/check/test_j1_receiver.py`（或 W2 受權 test 路徑）",
+          "operation": "ADD",
+          "before_exists": "false（absent 需 parent probe）",
+          "allowed_post_shape": "若 Owner 不允許改 W1，改用 W2 wrapper test 路徑"
+        }
+      ],
+      "write_set_rows_parsed": 2,
+      "locators": {
+        "DEV-D01": {
+          "line": 124,
+          "title": "## 2｜DEV-D01 Probe / Freeze Binding",
+          "source": "01_W2_DEV_ECP.md"
+        },
+        "DEV-D02": {
+          "line": 162,
+          "title": "## 3｜DEV-D02 Select / Reuse / ChangeCone Freeze",
+          "source": "01_W2_DEV_ECP.md"
+        },
+        "DEV-D03": {
+          "line": 196,
+          "title": "## 4｜DEV-D03 Freeze Preimage / Expected Test",
+          "source": "01_W2_DEV_ECP.md"
+        },
+        "DEV-D04": {
+          "line": 225,
+          "title": "## 5｜DEV-D04 Apply Smallest Patch（J1 修補）",
+          "source": "01_W2_DEV_ECP.md"
+        },
+        "DEV-D05": {
+          "line": 275,
+          "title": "## 6｜DEV-D05 Retest / Post Readback",
+          "source": "01_W2_DEV_ECP.md"
+        },
+        "DEV-D06": {
+          "line": 303,
+          "title": "## 7｜DEV-D06 Recovery / Reconcile",
+          "source": "01_W2_DEV_ECP.md"
+        },
+        "DEV-D07": {
+          "line": 323,
+          "title": "## 8｜DEV-D07 Freeze / Consumer / Handoff",
+          "source": "01_W2_DEV_ECP.md"
+        }
+      },
+      "doc_sha256": "698ffe006ec2b8a4dcf45ef24cd1a40f8d7f0360a1e647f509a83eb98310147b"
+    },
+    "OPS": {
+      "ops": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O06"
+      ],
+      "op_rows": [
+        {
+          "id": "O01",
+          "section": "2",
+          "identity": "`op_id=OPS-O01`；work=`W2-NF-O01-<run>`；effect=`HOST_READ`（非 effect）",
+          "authority": "Host READ scope；Owner ref＝`null`；Host ACL＝`null`",
+          "procedure": "真 Host/session/OS/version/principal/policy/receiver/entrypoint/help probe；見 §2.1",
+          "expected": "host_id/principal/epoch/receiver 各可取得或明示 `UNBOUND`；entrypoint 可用；版本/argv 可核",
+          "readback": "同 probe 重讀；值一致",
+          "compensation": "N/A；刪本 op 暫存",
+          "unknown": "`HOST_UNKNOWN` → 停 OPS"
+        },
+        {
+          "id": "O02",
+          "section": "3",
+          "identity": "`op_id=OPS-O02`；work=`W2-NF-O02-<run>`；pre-state",
+          "authority": "OPS scope＋Host/OS ACL＋allowed output root＋target；Owner ref＝`null`",
+          "procedure": "target raw hash／existence／ownership；WorldReader pre snapshot；lastgood；receiver schema/version；admission 對位",
+          "expected": "exact target set、preimage/absence receipt、WorldRaw pre、receiver contract、admission/scope/target 一致",
+          "readback": "第二 reader 重讀 preimage/WorldRaw",
+          "compensation": "N/A",
+          "unknown": "`HOST_UNKNOWN`／`WORLD_UNKNOWN` → 停 O03"
+        },
+        {
+          "id": "O03",
+          "section": "4",
+          "identity": "`op_id=OPS-O03`；work=`W2-NF-O03-<run>`；kind=OPS；effect=`HOST_EFFECT`（受權原子 output/receiver effect）",
+          "authority": "O02 通過的 Owner 授權、Host/OS ACL、allowed output root、exact target、receiver；`null` 則不得執行",
+          "procedure": "① 建 unique run dir（含 op/epoch/time/random）；② 以修正後 receiver 或 Native direct consumer 產生當期 W2 binding/effect receipt/material；③ atomic `temp→replace`；④ capture argv/cwd/exit/stdout/stderr/tool version；⑤ 立即 post readback",
+          "expected": "真 target bytes/absence post；receiver receipt 可 parse；semantic fields 與 expected 一致；consumer 真 use；same Host/Epoch",
+          "readback": "不同程序讀 receiver receipt／WorldRaw；重算 SHA；consumer parse/use",
+          "compensation": "見 O05；host-specific restore 或 delete-created-only；不 `git revert`",
+          "unknown": "timeout/partial/exit0-wrong-post → O06；不得直接重跑"
+        },
+        {
+          "id": "O04",
+          "section": "5",
+          "identity": "`op_id=OPS-O04`；work=`W2-NF-O04-<run>`；post compare",
+          "authority": "READ evidence；不改 target",
+          "procedure": "重算 pre/post WorldRaw；比 expected predicate；consumer parse/use；確認 `consumed=true` 由實際 parse 推導",
+          "expected": "post 世界符合 expected；consumer 真讀；不是 exit0／非空 dict",
+          "readback": "第二 reader 重算；raw locator 可移植",
+          "compensation": "不在此 op 執行；失敗交 O05/O06",
+          "unknown": "exit0 但 post 不符 → `EFFECT_NOT_VERIFIED`；世界不可知 → `WORLD_UNKNOWN`"
+        },
+        {
+          "id": "O05",
+          "section": "6",
+          "identity": "`op_id=OPS-O05`；work=`W2-NF-O05-<run>`；compensation",
+          "authority": "受權 recovery root；只碰本 op target",
+          "procedure": "① 讀 pre-state；② 若 pre 存在，restore 原 bytes/ownership（合法且可逆）；③ 若 pre absent，只刪本 op 創建且 hash/ownership match 的 target；④ capture argv/exit/raw；⑤ 讀回 pre-state",
+          "expected": "target 回到 preimage/absence；unrelated 檔不變；WorldRaw 回到 pre；consumer 讀回",
+          "readback": "同 Host/Epoch WorldReader；逐檔 hash；ownership",
+          "compensation": "若補償失敗 → `W2_RECOVERY`；保 LastGood/raw；回 Owner，不強刪",
+          "unknown": "無法判定 ownership/hash → 停；不刪"
+        },
+        {
+          "id": "O06",
+          "section": "7",
+          "identity": "`op_id=OPS-O06`；work=`W2-NF-O06-<run>`；reconcile",
+          "authority": "READ/reconcile；effect 只在授權且 idempotent 時",
+          "procedure": "① 以原/native reader 重讀世界；② 分類 timeout-before／timeout-after／partial／exit0-wrong-post；③ 確證 post 已達→驗證；仍 pre→必要一次 retry；partial→補償/stop；④ OFF/clean receive 用隔離 root＋正控",
+          "expected": "四類 observed 分帳；不盲重試；OFF 雙方真成功＋正控；clean receive 早拒錯 pin",
+          "readback": "第二 reader；raw/exit/argv",
+          "compensation": "依分類；失敗回 Owner",
+          "unknown": "不得以 retry 代替 reconcile；`UNKNOWN_RETRY_DENIED`"
+        }
+      ],
+      "ops_sequence": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O06"
+      ],
+      "compensation_forbidden": [
+        "git revert",
+        "git reset",
+        "whole-repo rollback"
+      ],
+      "unknown_fixtures": [
+        "F-TO-BEFORE",
+        "F-TO-AFTER",
+        "F-PARTIAL",
+        "F-EXIT0-WRONG"
+      ],
+      "doc_sha256": "58a34bfc1d4a57b5c878dca05edfbf6c32bc64c755a1592659affaa2777e5ddf",
+      "o06_rows_parsed": 11
+    },
+    "TQAEP": {
+      "cases": [
+        {
+          "case_id": "W2-DEV-01",
+          "kind": "POS",
+          "fixture": "`assets/fixtures/W2-DEV-01.json`（**2 target**：MODIFY `W1/check/w2_receiver.py`＋ADD `W1/check/test_j1_receiver.py`，與 `01` §5.1 完全相同；preimage/absence；expected post）",
+          "oracle": "`assets/oracles/W2-DEV-01.json`（exact write set、pre/post SHA、tests、reverse restore）",
+          "runner": "`RUN-DEV-01`（`BUILD_MINIMAL`；真候選上以 actual help 綁 argv）",
+          "requirement_refs": "U-013.a RepoContext／U-013.b Pre-Post／U-013.c WriteSet；W2-CODEX-01；W2-A03"
+        },
+        {
+          "case_id": "W2-DEV-02",
+          "kind": "NEG",
+          "fixture": "`assets/fixtures/W2-DEV-02.json`（caller_head=h-old、live_head=h-live）",
+          "oracle": "`assets/oracles/W2-DEV-02.json`（`REPO_HEAD_MISMATCH`、write_count=0、target unchanged）",
+          "runner": "RUN-DEV-02",
+          "requirement_refs": "U-013.a；W2-R3-03；J1-T02"
+        },
+        {
+          "case_id": "W2-OPS-01",
+          "kind": "POS",
+          "fixture": "`assets/fixtures/W2-OPS-01.json`（host/pre/post/receiver/compensation 形狀）",
+          "oracle": "`assets/oracles/W2-OPS-01.json`（pre/post WorldRaw、receiver consumed、host-specific restore、pre-state readback）",
+          "runner": "`RUN-OPS-01`（`BUILD_MINIMAL`；真 Host receiver 上綁 argv）",
+          "requirement_refs": "U-014.a HostID／U-014.b OS Principal／U-014.c PolicyEpoch／U-014.d Recovery；W2-CODEX-02；W2-A03/A05"
+        },
+        {
+          "case_id": "W2-OPS-02",
+          "kind": "NEG",
+          "fixture": "`assets/fixtures/W2-OPS-02.json`（recovery_kind=GIT_REVERT）",
+          "oracle": "`assets/oracles/W2-OPS-02.json`（`RECOVERY_KIND_MISMATCH`、effect_count=0、repo 不執行 git）",
+          "runner": "RUN-OPS-02",
+          "requirement_refs": "U-014.d；W2-A05；J3-T02"
+        },
+        {
+          "case_id": "W2-EFFECT-01",
+          "kind": "NEG",
+          "fixture": "`assets/fixtures/W2-EFFECT-01.json`（token=UNKNOWN、path heuristic）",
+          "oracle": "`assets/oracles/W2-EFFECT-01.json`（`EFFECT_UNBOUND` 或 `EFFECT_MAPPING_UNVERIFIED`；no default READ）",
+          "runner": "RUN-EFFECT-01",
+          "requirement_refs": "W2-B01；ADR-W2-02；W2-CODEX-05"
+        },
+        {
+          "case_id": "W2-AUTH-01",
+          "kind": "NEG",
+          "fixture": "`assets/fixtures/W2-AUTH-01.json`（permission=true、issuer=null、scope_expired）",
+          "oracle": "`assets/oracles/W2-AUTH-01.json`（`FALSE_AUTHORITY`／`NOT_ADMITTED`；pre/post unchanged）",
+          "runner": "RUN-AUTH-01",
+          "requirement_refs": "W2-B06/B07/B08；ADR-W2-02；U-046"
+        },
+        {
+          "case_id": "W2-RUNNER-01",
+          "kind": "NEG",
+          "fixture": "`assets/fixtures/W2-RUNNER-01.json`（runner=null、oracle=null、unit_summary only）",
+          "oracle": "`assets/oracles/W2-RUNNER-01.json`（`RUNNER_UNBOUND`；executed=false；raw=null）",
+          "runner": "RUN-RUNNER-01",
+          "requirement_refs": "W2-NF-A；W2-CODEX-06"
+        },
+        {
+          "case_id": "W2-DELTA-01",
+          "kind": "POS",
+          "fixture": "`assets/fixtures/W2-DELTA-01.json`（period A/B 九鍵、verifier 形狀）",
+          "oracle": "`assets/oracles/W2-DELTA-01.json`（全同→`REUSE_LASTGOOD`；缺 verifier/一期→`DELTA_UNVERIFIED`）",
+          "runner": "RUN-DELTA-01",
+          "requirement_refs": "J2-T05/T06；W2-B10；Guide 九鍵"
+        },
+        {
+          "case_id": "W2-R3-01",
+          "kind": "POS",
+          "fixture": "`assets/fixtures/W2-R3-01.json`（13 列＋3 NF 的 owner/field/resume 形狀）",
+          "oracle": "`assets/oracles/W2-R3-01.json`（每列有 owner/typed request/receipt route；不得填 true）",
+          "runner": "RUN-R3-01",
+          "requirement_refs": "13+3 全部；W2-B01..B13、NF-A/B/C；W2-CODEX-05"
+        },
+        {
+          "case_id": "W2-R3-02",
+          "kind": "NEG",
+          "fixture": "`assets/fixtures/W2-R3-02.json`（G4 444/125/547 bytes＋3 tests reported）",
+          "oracle": "`assets/oracles/W2-R3-02.json`（`NOT_ADMITTED`；不採 G4 作 effect/License Fit）",
+          "runner": "RUN-R3-02",
+          "requirement_refs": "ADR-W2-04；D02/D03；W2-CODEX-06"
+        },
+        {
+          "case_id": "W2-R3-03",
+          "kind": "NEG",
+          "fixture": "`assets/fixtures/W2-R3-03.json`（historical_preimage=G4 pre；live_preimage=null）",
+          "oracle": "`assets/oracles/W2-R3-03.json`（`WRITESET_UNBOUND`；no write；原字面保留）",
+          "runner": "RUN-R3-03",
+          "requirement_refs": "U-013.b/c；W0-F-08/D06；W2-B09"
+        },
+        {
+          "case_id": "W2-R3-04",
+          "kind": "EDGE",
+          "fixture": "`assets/fixtures/W2-R3-04.json`（318/317 分帳、期別）",
+          "oracle": "`assets/oracles/W2-R3-04.json`（`WORKSPACE_DRIFT_BOUNDED`；分版本/受影；不全域重寫）",
+          "runner": "RUN-R3-04",
+          "requirement_refs": "W0-F-09；W2-B02/B10；N11"
+        }
+      ],
+      "case_count": 12,
+      "case_rows": [
+        {
+          "n": 1,
+          "id": "W2-DEV-01",
+          "kind": "POS",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "U-013.a RepoContext／U-013.b Pre-Post／U-013.c WriteSet；W2-CODEX-01；W2-A03",
+            "child": "三 child 各別 observation；不得用「DEV 已完成」合併",
+            "profile／host／effect": "Generic DEV／真 repo／`REPOSITORY_WRITE`",
+            "fixture": "`assets/fixtures/W2-DEV-01.json`（**2 target**：MODIFY `W1/check/w2_receiver.py`＋ADD `W1/check/test_j1_receiver.py`，與 `01` §5.1 完全相同；preimage/absence；expected post）",
+            "oracle": "`assets/oracles/W2-DEV-01.json`（exact write set、pre/post SHA、tests、reverse restore）",
+            "runner": "`RUN-DEV-01`（`BUILD_MINIMAL`；真候選上以 actual help 綁 argv）",
+            "expected predicates": "① caller HEAD=live HEAD；② write set 精確等於 fixture；③ 每 target preimage/absence 真；④ patch 後 post SHA 等於 expected；⑤ affected tests exit/stdio 符合；⑥ reverse 後 preimage 讀回；⑦ unlisted 檔不變",
+            "expected_raw_schema": "repo pre、patch diff、post hashes、test stdout/stderr、diff raw、reverse raw",
+            "preconditions": "Owner DEV 授權、repo ACL、preimage、recovery、frozen oracle",
+            "stop/resume": "任一 HARD 前件缺→停；真 receipt 到才 resume",
+            "checker_route": "分立 Checker 對 frozen candidate/oracle/raw 重跑",
+            "not_covered": "原域 DEV ECP、不同 principal、W3/W4 全量"
+          },
+          "fixture_ref": "`assets/fixtures/W2-DEV-01.json`（**2 target**：MODIFY `W1/check/w2_receiver.py`＋ADD `W1/check/test_j1_receiver.py`，與 `01` §5.1 完全相同；preimage/absence；expected post）",
+          "oracle_ref": "`assets/oracles/W2-DEV-01.json`（exact write set、pre/post SHA、tests、reverse restore）",
+          "runner": "`RUN-DEV-01`（`BUILD_MINIMAL`；真候選上以 actual help 綁 argv）",
+          "predicates": "① caller HEAD=live HEAD；② write set 精確等於 fixture；③ 每 target preimage/absence 真；④ patch 後 post SHA 等於 expected；⑤ affected tests exit/stdio 符合；⑥ reverse 後 preimage 讀回；⑦ unlisted 檔不變",
+          "requirement_refs": "U-013.a RepoContext／U-013.b Pre-Post／U-013.c WriteSet；W2-CODEX-01；W2-A03",
+          "child": "三 child 各別 observation；不得用「DEV 已完成」合併"
+        },
+        {
+          "n": 2,
+          "id": "W2-DEV-02",
+          "kind": "NEG",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "U-013.a；W2-R3-03；J1-T02",
+            "child": "caller HEAD ≠ live HEAD；另加 stale ACL／stale preimage 子例",
+            "fixture": "`assets/fixtures/W2-DEV-02.json`（caller_head=h-old、live_head=h-live）",
+            "oracle": "`assets/oracles/W2-DEV-02.json`（`REPO_HEAD_MISMATCH`、write_count=0、target unchanged）",
+            "expected": "早拒；無 patch／無 write；pre/post target hash 相同；`REPO_HEAD_MISMATCH` 或適用 token",
+            "stop/resume": "若只做字串比對、未讀 live HEAD，FAIL；真 HEAD 到才 resume",
+            "not_covered": "真實 race／TOCTOU 由 J1-T04 另行覆蓋"
+          },
+          "fixture_ref": "`assets/fixtures/W2-DEV-02.json`（caller_head=h-old、live_head=h-live）",
+          "oracle_ref": "`assets/oracles/W2-DEV-02.json`（`REPO_HEAD_MISMATCH`、write_count=0、target unchanged）",
+          "runner": "RUN-DEV-02",
+          "predicates": "",
+          "requirement_refs": "U-013.a；W2-R3-03；J1-T02",
+          "child": "caller HEAD ≠ live HEAD；另加 stale ACL／stale preimage 子例"
+        },
+        {
+          "n": 3,
+          "id": "W2-OPS-01",
+          "kind": "POS",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "U-014.a HostID／U-014.b OS Principal／U-014.c PolicyEpoch／U-014.d Recovery；W2-CODEX-02；W2-A03/A05",
+            "child": "四 child 各別 observation；不得用「OPS 已完成」合併",
+            "profile／host／effect": "真 Host／真 principal/epoch／`HOST_EFFECT`",
+            "fixture": "`assets/fixtures/W2-OPS-01.json`（host/pre/post/receiver/compensation 形狀）",
+            "oracle": "`assets/oracles/W2-OPS-01.json`（pre/post WorldRaw、receiver consumed、host-specific restore、pre-state readback）",
+            "runner": "`RUN-OPS-01`（`BUILD_MINIMAL`；真 Host receiver 上綁 argv）",
+            "expected predicates": "① host/principal/epoch/receiver 真；② pre WorldRaw；③ atomic effect；④ post WorldRaw 符合；⑤ receiver parse/use；⑥ compensation 不是 git revert；⑦ pre-state readback",
+            "expected_raw_schema": "host pre、receiver argv/exit、WorldRaw pre/post、receiver receipt、compensation raw",
+            "preconditions": "Owner OPS 授權、Host/OS ACL、output root、preimage、recovery",
+            "stop/resume": "缺 Host/receiver/recovery→停；真 receipt 到才 resume",
+            "not_covered": "其他 Host、container/cloud、Publisher"
+          },
+          "fixture_ref": "`assets/fixtures/W2-OPS-01.json`（host/pre/post/receiver/compensation 形狀）",
+          "oracle_ref": "`assets/oracles/W2-OPS-01.json`（pre/post WorldRaw、receiver consumed、host-specific restore、pre-state readback）",
+          "runner": "`RUN-OPS-01`（`BUILD_MINIMAL`；真 Host receiver 上綁 argv）",
+          "predicates": "① host/principal/epoch/receiver 真；② pre WorldRaw；③ atomic effect；④ post WorldRaw 符合；⑤ receiver parse/use；⑥ compensation 不是 git revert；⑦ pre-state readback",
+          "requirement_refs": "U-014.a HostID／U-014.b OS Principal／U-014.c PolicyEpoch／U-014.d Recovery；W2-CODEX-02；W2-A03/A05",
+          "child": "四 child 各別 observation；不得用「OPS 已完成」合併"
+        },
+        {
+          "n": 4,
+          "id": "W2-OPS-02",
+          "kind": "NEG",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "U-014.d；W2-A05；J3-T02",
+            "child": "把 `git revert` 送成 OPS recovery；另加 `git reset`／全 repo rollback 子例",
+            "fixture": "`assets/fixtures/W2-OPS-02.json`（recovery_kind=GIT_REVERT）",
+            "oracle": "`assets/oracles/W2-OPS-02.json`（`RECOVERY_KIND_MISMATCH`、effect_count=0、repo 不執行 git）",
+            "expected": "早拒；zero host effect；不得以 DEV/Repo recovery 代替",
+            "stop/resume": "若把 git revert 當 OPS 並實際改世界，FAIL；真 host recovery 到才 resume",
+            "not_covered": "不同 Host 的 recovery 具體 argv"
+          },
+          "fixture_ref": "`assets/fixtures/W2-OPS-02.json`（recovery_kind=GIT_REVERT）",
+          "oracle_ref": "`assets/oracles/W2-OPS-02.json`（`RECOVERY_KIND_MISMATCH`、effect_count=0、repo 不執行 git）",
+          "runner": "RUN-OPS-02",
+          "predicates": "",
+          "requirement_refs": "U-014.d；W2-A05；J3-T02",
+          "child": "把 `git revert` 送成 OPS recovery；另加 `git reset`／全 repo rollback 子例"
+        },
+        {
+          "n": 5,
+          "id": "W2-EFFECT-01",
+          "kind": "NEG",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "W2-B01；ADR-W2-02；W2-CODEX-05",
+            "child": "未知 token／path 推斷 operation；fake READ 子例",
+            "fixture": "`assets/fixtures/W2-EFFECT-01.json`（token=UNKNOWN、path heuristic）",
+            "oracle": "`assets/oracles/W2-EFFECT-01.json`（`EFFECT_UNBOUND` 或 `EFFECT_MAPPING_UNVERIFIED`；no default READ）",
+            "expected": "停 effect mapping；不得 call effect；不得把未知當 READ",
+            "stop/resume": "真 typed token 到才 resume",
+            "not_covered": "原 EffectRegistry 全量"
+          },
+          "fixture_ref": "`assets/fixtures/W2-EFFECT-01.json`（token=UNKNOWN、path heuristic）",
+          "oracle_ref": "`assets/oracles/W2-EFFECT-01.json`（`EFFECT_UNBOUND` 或 `EFFECT_MAPPING_UNVERIFIED`；no default READ）",
+          "runner": "RUN-EFFECT-01",
+          "predicates": "",
+          "requirement_refs": "W2-B01；ADR-W2-02；W2-CODEX-05",
+          "child": "未知 token／path 推斷 operation；fake READ 子例"
+        },
+        {
+          "n": 6,
+          "id": "W2-AUTH-01",
+          "kind": "NEG",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "W2-B06/B07/B08；ADR-W2-02；U-046",
+            "child": "`permission=true` 無 Issuer；過期 scope；wrong principal",
+            "fixture": "`assets/fixtures/W2-AUTH-01.json`（permission=true、issuer=null、scope_expired）",
+            "oracle": "`assets/oracles/W2-AUTH-01.json`（`FALSE_AUTHORITY`／`NOT_ADMITTED`；pre/post unchanged）",
+            "expected": "早拒；no effect；不得用 ECP/author 文件代替",
+            "stop/resume": "真 Owner/issuer/ACL 到才 resume",
+            "not_covered": "原域 Issuer 簽章"
+          },
+          "fixture_ref": "`assets/fixtures/W2-AUTH-01.json`（permission=true、issuer=null、scope_expired）",
+          "oracle_ref": "`assets/oracles/W2-AUTH-01.json`（`FALSE_AUTHORITY`／`NOT_ADMITTED`；pre/post unchanged）",
+          "runner": "RUN-AUTH-01",
+          "predicates": "",
+          "requirement_refs": "W2-B06/B07/B08；ADR-W2-02；U-046",
+          "child": "`permission=true` 無 Issuer；過期 scope；wrong principal"
+        },
+        {
+          "n": 7,
+          "id": "W2-RUNNER-01",
+          "kind": "NEG",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "W2-NF-A；W2-CODEX-06",
+            "child": "無 runner/oracle/fixture；只有 local unit summary；fake executed",
+            "fixture": "`assets/fixtures/W2-RUNNER-01.json`（runner=null、oracle=null、unit_summary only）",
+            "oracle": "`assets/oracles/W2-RUNNER-01.json`（`RUNNER_UNBOUND`；executed=false；raw=null）",
+            "expected": "不得宣 executed；不得用非空 summary 抵",
+            "stop/resume": "真 runner/version/argv 到才 resume",
+            "not_covered": "真 runner 的全量案例"
+          },
+          "fixture_ref": "`assets/fixtures/W2-RUNNER-01.json`（runner=null、oracle=null、unit_summary only）",
+          "oracle_ref": "`assets/oracles/W2-RUNNER-01.json`（`RUNNER_UNBOUND`；executed=false；raw=null）",
+          "runner": "RUN-RUNNER-01",
+          "predicates": "",
+          "requirement_refs": "W2-NF-A；W2-CODEX-06",
+          "child": "無 runner/oracle/fixture；只有 local unit summary；fake executed"
+        },
+        {
+          "n": 8,
+          "id": "W2-DELTA-01",
+          "kind": "POS",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "J2-T05/T06；W2-B10；Guide 九鍵",
+            "child": "同 subject/scope/candidate 的兩期九鍵＋真 verifier；同 firstfail",
+            "fixture": "`assets/fixtures/W2-DELTA-01.json`（period A/B 九鍵、verifier 形狀）",
+            "oracle": "`assets/oracles/W2-DELTA-01.json`（全同→`REUSE_LASTGOOD`；缺 verifier/一期→`DELTA_UNVERIFIED`）",
+            "expected": "兩期**各自獨立取得**的真 raw；verifier 驗 before/after 與 receipts；candidate/evidence 無受影 delta",
+            "variants": "`same`（九鍵全同→`REUSE_LASTGOOD`）與 `delta`（僅 `world_raw_sha` 一鍵不同→`NEW_MATERIAL_EVIDENCE`／requalify）；兩個都要判對，只判一邊不算 PASS",
+            "fixture 地位": "`fixture_never_sufficient=true`：fixture 只給形狀，不得以其數值當兩期事實；`fixture-only PARK` 為 forbidden token",
+            "stop/resume": "無第二期→`DELTA_UNVERIFIED`，不 PARK；真雙期到才 resume",
+            "not_covered": "W3 FAR 七鍵全量"
+          },
+          "fixture_ref": "`assets/fixtures/W2-DELTA-01.json`（period A/B 九鍵、verifier 形狀）",
+          "oracle_ref": "`assets/oracles/W2-DELTA-01.json`（全同→`REUSE_LASTGOOD`；缺 verifier/一期→`DELTA_UNVERIFIED`）",
+          "runner": "RUN-DELTA-01",
+          "predicates": "",
+          "requirement_refs": "J2-T05/T06；W2-B10；Guide 九鍵",
+          "child": "同 subject/scope/candidate 的兩期九鍵＋真 verifier；同 firstfail"
+        },
+        {
+          "n": 9,
+          "id": "W2-R3-01",
+          "kind": "POS",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "13+3 全部；W2-B01..B13、NF-A/B/C；W2-CODEX-05",
+            "child": "13 原列各自 owner/receipt；3 NF 分帳；原 null 保持",
+            "fixture": "`assets/fixtures/W2-R3-01.json`（13 列＋3 NF 的 owner/field/resume 形狀）",
+            "oracle": "`assets/oracles/W2-R3-01.json`（每列有 owner/typed request/receipt route；不得填 true）",
+            "expected": "13+3 可逐項回取；null 不冒 true；post/Publisher 不當 pre",
+            "stop/resume": "缺列→FAIL；真 source/receipt 到才 resume",
+            "not_covered": "原域 13/13 CLOSE"
+          },
+          "fixture_ref": "`assets/fixtures/W2-R3-01.json`（13 列＋3 NF 的 owner/field/resume 形狀）",
+          "oracle_ref": "`assets/oracles/W2-R3-01.json`（每列有 owner/typed request/receipt route；不得填 true）",
+          "runner": "RUN-R3-01",
+          "predicates": "",
+          "requirement_refs": "13+3 全部；W2-B01..B13、NF-A/B/C；W2-CODEX-05",
+          "child": "13 原列各自 owner/receipt；3 NF 分帳；原 null 保持"
+        },
+        {
+          "n": 10,
+          "id": "W2-R3-02",
+          "kind": "NEG",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "ADR-W2-04；D02/D03；W2-CODEX-06",
+            "child": "G4 3 historical tests 當 W2 admitted effect／License Fit",
+            "fixture": "`assets/fixtures/W2-R3-02.json`（G4 444/125/547 bytes＋3 tests reported）",
+            "oracle": "`assets/oracles/W2-R3-02.json`（`NOT_ADMITTED`；不採 G4 作 effect/License Fit）",
+            "expected": "早拒；不得用 G4 升 W2",
+            "stop/resume": "真 W2 candidate/effect 到才另驗",
+            "not_covered": "G4 原域"
+          },
+          "fixture_ref": "`assets/fixtures/W2-R3-02.json`（G4 444/125/547 bytes＋3 tests reported）",
+          "oracle_ref": "`assets/oracles/W2-R3-02.json`（`NOT_ADMITTED`；不採 G4 作 effect/License Fit）",
+          "runner": "RUN-R3-02",
+          "predicates": "",
+          "requirement_refs": "ADR-W2-04；D02/D03；W2-CODEX-06",
+          "child": "G4 3 historical tests 當 W2 admitted effect／License Fit"
+        },
+        {
+          "n": 11,
+          "id": "W2-R3-03",
+          "kind": "NEG",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "U-013.b/c；W0-F-08/D06；W2-B09",
+            "child": "G4/CH-07 歷史 preimage 當真 repo preimage",
+            "fixture": "`assets/fixtures/W2-R3-03.json`（historical_preimage=G4 pre；live_preimage=null）",
+            "oracle": "`assets/oracles/W2-R3-03.json`（`WRITESET_UNBOUND`；no write；原字面保留）",
+            "expected": "早拒；不得用舊 bytes 補；target unchanged",
+            "stop/resume": "真 repo preimage 到才 resume",
+            "not_covered": "CH-07 舊 bytes（不存在）"
+          },
+          "fixture_ref": "`assets/fixtures/W2-R3-03.json`（historical_preimage=G4 pre；live_preimage=null）",
+          "oracle_ref": "`assets/oracles/W2-R3-03.json`（`WRITESET_UNBOUND`；no write；原字面保留）",
+          "runner": "RUN-R3-03",
+          "predicates": "",
+          "requirement_refs": "U-013.b/c；W0-F-08/D06；W2-B09",
+          "child": "G4/CH-07 歷史 preimage 當真 repo preimage"
+        },
+        {
+          "n": 12,
+          "id": "W2-R3-04",
+          "kind": "EDGE",
+          "fields": {
+            "---": "---",
+            "requirement_refs": "W0-F-09；W2-B02/B10；N11",
+            "child": "318 manifest vs 317 closeout、不同期 source/receipt",
+            "fixture": "`assets/fixtures/W2-R3-04.json`（318/317 分帳、期別）",
+            "oracle": "`assets/oracles/W2-R3-04.json`（`WORKSPACE_DRIFT_BOUNDED`；分版本/受影；不全域重寫）",
+            "expected": "分期正確；受影 only；舊 bytes 不偽造",
+            "stop/resume": "真期別/pins 到才 resume",
+            "not_covered": "全 workspace 歷史重驗"
+          },
+          "fixture_ref": "`assets/fixtures/W2-R3-04.json`（318/317 分帳、期別）",
+          "oracle_ref": "`assets/oracles/W2-R3-04.json`（`WORKSPACE_DRIFT_BOUNDED`；分版本/受影；不全域重寫）",
+          "runner": "RUN-R3-04",
+          "predicates": "",
+          "requirement_refs": "W0-F-09；W2-B02/B10；N11",
+          "child": "318 manifest vs 317 closeout、不同期 source/receipt"
+        }
+      ],
+      "subcases": {
+        "J1": [
+          "J1-T01",
+          "J1-T02",
+          "J1-T03",
+          "J1-T04",
+          "J1-T05",
+          "J1-T06"
+        ],
+        "J2": [
+          "J2-T01",
+          "J2-T02",
+          "J2-T03",
+          "J2-T04",
+          "J2-T05",
+          "J2-T06"
+        ],
+        "J3": [
+          "J3-T01",
+          "J3-T02",
+          "J3-T03",
+          "J3-T04",
+          "J3-T05",
+          "J3-T06"
+        ]
+      },
+      "subcase_count": 18,
+      "n_map": [
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "N09",
+        "N10",
+        "N11",
+        "N12"
+      ],
+      "fixtures_dir": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\S1_PACKS\\FHS-5_PLP_W2_NATIVE_FIRST\\assets\\fixtures",
+      "oracles_dir": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\S1_PACKS\\FHS-5_PLP_W2_NATIVE_FIRST\\assets\\oracles",
+      "doc_sha256": "a539ab2ee57c20f413d657b09c7f8016e4c7074fae64c32abda15b71d540dfcc",
+      "case_rows_parsed": 12
+    },
+    "ENTRY": {
+      "sha256": "45686eb470f8d790b8d37c748a3db7442492fdf270713ee3208d0badd042b8b4",
+      "sections": [
+        "1｜SOURCE",
+        "2｜不可刪的 SPEC",
+        "3｜授權（每 op 核，不 blanket）",
+        "4｜EXECUTE（R0→R5）",
+        "5｜Harness Loop",
+        "6｜DONE",
+        "7｜STOP"
+      ],
+      "heading_sections": [
+        "1｜SOURCE",
+        "2｜不可刪的 SPEC",
+        "3｜授權（每 op 核，不 blanket）",
+        "4｜EXECUTE（R0→R5）",
+        "5｜Harness Loop",
+        "6｜DONE",
+        "7｜STOP"
+      ],
+      "section_contract": "S1: SOURCE/SPEC/EXECUTE/HARNESS LOOP/DONE/STOP",
+      "bytes": 5121
+    }
+  },
+  "view_names": [
+    "DEV",
+    "ENTRY",
+    "OPS",
+    "PD",
+    "PI",
+    "TQAEP"
+  ],
+  "counts": {
+    "pack_files": 5,
+    "dev": null,
+    "ops": null,
+    "cases": 12,
+    "assets": 25,
+    "sources": 10,
+    "holds": 14
+  },
+  "problems": [],
+  "ok": true
+}

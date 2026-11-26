@@ -204,17 +204,25 @@ def build_contracts(root, ident=None) -> dict:
     _ops_doc = (root / "02_W2_OPS_ECP.md").read_text(encoding="utf-8")
     _tq_doc = (root / "03_W2_TQAEP.md").read_text(encoding="utf-8")
     _wp = contracts_s1.parse_wp(_pi_doc)
-    _dag = contracts_s1.parse_dag(_pi_doc)
+    _dag, _dag_problems = contracts_s1.parse_dag(_pi_doc)
+    _dag_cycle = contracts_s1.dag_cycle(_dag)
     _holds = contracts_s1.parse_holds(_pi_doc)
     _cases = contracts_s1.parse_cases(_tq_doc)
+    _runners = contracts_s1.parse_runner_table(_tq_doc)
+    for _c in _cases:
+        _r = _runners.get(_c["id"], {})
+        _c["fixture_ref"] = _c["fixture_ref"] or _r.get("fixture", "")
+        _c["oracle_ref"] = _c["oracle_ref"] or _r.get("oracle", "")
+        _c["runner"] = _c["runner"] or _r.get("runner", "")
     _jgroups, _nmap = contracts_s1.parse_jn(_tq_doc)
     _ops = contracts_s1.parse_ops(_ops_doc)
     views["PD"] = {
         "wp": [w["id"] for w in _wp],
         "wp_rows": _wp,
         "dag_edges": _dag,
+        "dag_problems": _dag_problems,
         "edge_count": len(_dag),
-        "cycle": (man.get("dag") or {}).get("cycle"),
+        "cycle": _dag_cycle,
         "holds": [h["id"] for h in _holds],
         "hold_rows": _holds,
         "w2_special_holds": [h.get("id") for h in man.get("w2_special_holds") or []],
@@ -232,9 +240,10 @@ def build_contracts(root, ident=None) -> dict:
                               "allowed_post_shape": c[6] if len(c) > 6 else None})
     _dev_doc = dev_doc
     _derived_dev = sorted(set(re.findall(r"DEV-D\d{2}", _dev_doc)))
+    _dev_locs = contracts_s1.parse_dev_locators(_dev_doc)
     _dev_ops = dict(man.get("dev_ops_locators") or {})
     for _d in _derived_dev:
-        _dev_ops.setdefault(_d, {"source": "01_W2_DEV_ECP.md"})
+        _dev_ops.setdefault(_d, _dev_locs.get(_d, {"source": "01_W2_DEV_ECP.md"}))
     views["DEV"] = {
         "ops": sorted(_dev_ops.keys()),
         "write_set": write_set,
@@ -276,9 +285,8 @@ def build_contracts(root, ident=None) -> dict:
     entry = (root / "04_W2_START_THIN_PROMPT.md").read_text(encoding="utf-8")
     views["ENTRY"] = {
         "sha256": sha256_file(root / "04_W2_START_THIN_PROMPT.md"),
-        "sections": [s for s in ("GOAL", "SOURCE", "SPEC", "EXECUTE",
-                                 "HARNESS LOOP", "DONE", "STOP")
-                     if s in entry.upper()],
+        "sections": contracts_s1.parse_entry_sections(entry),
+        "heading_sections": contracts_s1.parse_entry_sections(entry),
         "section_contract": "S1: SOURCE/SPEC/EXECUTE/HARNESS LOOP/DONE/STOP",
         "bytes": (root / "04_W2_START_THIN_PROMPT.md").stat().st_size,
     }
@@ -289,8 +297,12 @@ def build_contracts(root, ident=None) -> dict:
         problems.append(f"requirements {views['PI']['requirement_count']} != 16")
     if len(views["PD"]["wp"]) != 6:
         problems.append(f"WP {len(views['PD']['wp'])} != 6")
-    if views["PD"]["edge_count"] < 6:
-        problems.append(f"DAG edges {views['PD']['edge_count']} < 6")
+    if views["PD"]["dag_problems"]:
+        problems.append("DAG invalid: " + str(views["PD"]["dag_problems"][:3]))
+    if views["PD"]["edge_count"] != 9:
+        problems.append(f"DAG edges {views['PD']['edge_count']} != 9")
+    if views["PD"]["cycle"]:
+        problems.append("DAG cycle: " + str(views["PD"]["cycle"]))
     if len(views["PD"]["holds"]) != 14:
         problems.append(f"HOLD {len(views['PD']['holds'])} != 14")
     if len(views["OPS"]["ops"]) != 6:
@@ -303,8 +315,9 @@ def build_contracts(root, ident=None) -> dict:
         problems.append("DEV write set table not parsed from 01_W2_DEV_ECP.md")
     if not set(views["DEV"]["ops"]) >= {"DEV-D01", "DEV-D04", "DEV-D07"}:
         problems.append("DEV op locators incomplete")
+    _heads = " | ".join(views["ENTRY"]["sections"]).upper()
     _need = ("SOURCE", "SPEC", "EXECUTE", "DONE")
-    if not set(_need) <= set(views["ENTRY"]["sections"]) or \
+    if not all(n in _heads for n in _need) or \
             len(views["ENTRY"]["sections"]) < 6:
         problems.append("04 entry sections incomplete")
     if views["PI"]["constraints"]["permission_state"] != "NONE_GRANTED":

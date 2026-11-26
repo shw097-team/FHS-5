@@ -1,0 +1,150 @@
+{
+ "schema": "FHS5.PLP.W0W2.ClosureMatrix@6",
+ "rows": [
+  {
+   "wave": "W0",
+   "id": "44_receipts",
+   "status": "REUSE_VERIFIED",
+   "note": "historical 13_; not rerun"
+  },
+  {
+   "wave": "W0",
+   "id": "S1_entry",
+   "status": "RERUN_PASS",
+   "note": "nf_reader on S1 W0 pack: 24 cases, seal ok"
+  },
+  {
+   "wave": "W0",
+   "id": "OFF",
+   "status": "NOT_RUN",
+   "note": "off_legacy not re-executed this round"
+  },
+  {
+   "wave": "W1",
+   "id": "S1_ABI",
+   "status": "RERUN_PASS",
+   "note": "5 files/38 DEV/29 OPS/13 cases/26 assets"
+  },
+  {
+   "wave": "W1",
+   "id": "67_ECP",
+   "status": "NOT_RUN",
+   "note": "no per-ECP rerun; 118-row reuse"
+  },
+  {
+   "wave": "W1",
+   "id": "118_rows",
+   "status": "REUSE_VERIFIED",
+   "note": "historical matrix preserved"
+  },
+  {
+   "wave": "W1",
+   "id": "suite",
+   "status": "RERUN_PASS",
+   "note": "115 passed / 15 subtests"
+  },
+  {
+   "wave": "W1",
+   "id": "host_second_pack",
+   "status": "REUSE_VERIFIED",
+   "note": "W1-HOST-01 / CODEX-05 historical"
+  },
+  {
+   "wave": "W2",
+   "id": "13+3",
+   "status": "RERUN_PASS",
+   "note": "16 rows, typed, actual_ref null"
+  },
+  {
+   "wave": "W2",
+   "id": "DAG",
+   "status": "RERUN_PASS",
+   "note": "9 edges, no cycle, no problems (was 42/32 empty)"
+  },
+  {
+   "wave": "W2",
+   "id": "DEV_locators",
+   "status": "RERUN_PASS",
+   "note": "7 ops with real section lines"
+  },
+  {
+   "wave": "W2",
+   "id": "OPS_contract",
+   "status": "RERUN_PASS",
+   "note": "O01-O06 parsed"
+  },
+  {
+   "wave": "W2",
+   "id": "cases_7_rerun",
+   "status": "RERUN_PASS",
+   "note": "RUNNER/OPS-02/R3-01/R3-02/R3-03/EFFECT/AUTH"
+  },
+  {
+   "wave": "W2",
+   "id": "cases_4_reuse",
+   "status": "REUSE_VERIFIED",
+   "note": "DEV-01/02, OPS-01, DELTA-01"
+  },
+  {
+   "wave": "W2",
+   "id": "case_R3-04",
+   "status": "REUSE_NOT_RERUN",
+   "note": "318/317 ledger"
+  },
+  {
+   "wave": "W2",
+   "id": "J1",
+   "status": "RERUN_PASS",
+   "note": "118 entries + T01..T08"
+  },
+  {
+   "wave": "W2",
+   "id": "J2",
+   "status": "RERUN_PASS",
+   "note": "7/7 nine-key predicates"
+  },
+  {
+   "wave": "W2",
+   "id": "J3",
+   "status": "REUSE_VERIFIED",
+   "note": "ON_OFF both 13 rows"
+  },
+  {
+   "wave": "W2",
+   "id": "N01",
+   "status": "RERUN_PASS",
+   "note": "TPM S1-W2 profile, 5 views"
+  },
+  {
+   "wave": "W2",
+   "id": "N06",
+   "status": "RERUN_PASS",
+   "note": "4/4 real subprocess fixtures"
+  },
+  {
+   "wave": "W2",
+   "id": "N09",
+   "status": "PARTIAL",
+   "note": "3 segments same subject; operation segment from 18_/W1"
+  },
+  {
+   "wave": "W2",
+   "id": "N04",
+   "status": "PARTIAL",
+   "note": "historical W1 host only"
+  }
+ ],
+ "counts": {
+  "REUSE_VERIFIED": 5,
+  "RERUN_PASS": 12,
+  "NOT_RUN": 2,
+  "REUSE_NOT_RERUN": 1,
+  "PARTIAL": 2
+ },
+ "verdicts": {
+  "W0": "PARTIAL",
+  "W1": "PARTIAL",
+  "W2": "PARTIAL",
+  "W2_NF_VALIDATED": false
+ }
+}

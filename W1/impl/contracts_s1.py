@@ -33,19 +33,77 @@ def parse_wp(text):
     return rows
 
 
+NODE = re.compile(r"^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)*$")
+KINDS = {"HARD", "SOFT", "POST", "AUTHOR_DOC_ORDER", "UNVERIFIED"}
+
+
 def parse_dag(text):
-    edges = []
-    for line in text.splitlines():
+    """Parse only the 5.2 DAG section; empty/invalid rows are rejected."""
+    lines = text.splitlines()
+    start = next((i for i, l in enumerate(lines) if l.startswith("### 5.2")), None)
+    if start is None:
+        return [], ["DAG_SECTION_MISSING"]
+    edges, problems, seen = [], [], set()
+    for line in lines[start + 1:]:
+        if line.startswith("### ") or line.startswith("## ") or line.startswith("**圖性質"):
+            break
         if not line.startswith("|") or "→" not in line:
             continue
         c = _cells(line)
-        if len(c) < 4 or "---" in c[0]:
+        if len(c) < 2:
             continue
-        src, _, dst = c[0].partition("→")
-        edges.append({"from": src.strip(), "to": dst.strip(), "kind": c[1],
-                      "origin": c[2] if len(c) > 2 else "", "reason": c[3] if len(c) > 3 else "",
+        if c[0].strip().lower().startswith("from"):
+            continue
+        a, _, b = c[0].partition("→")
+        a, b = a.strip(), b.strip()
+        if not a or not b:
+            problems.append("EMPTY_ENDPOINT:" + c[0][:40])
+            continue
+        if not NODE.match(a) or not NODE.match(b):
+            problems.append("NON_NODE:" + c[0][:40])
+            continue
+        kind = c[1].strip().upper()
+        if kind not in KINDS:
+            problems.append("UNKNOWN_KIND:" + kind)
+            continue
+        key = (a, b, kind)
+        if key in seen:
+            problems.append("DUPLICATE:" + f"{a}->{b}")
+            continue
+        seen.add(key)
+        edges.append({"from": a, "to": b, "kind": kind,
+                      "origin": c[2] if len(c) > 2 else "",
+                      "reason": c[3] if len(c) > 3 else "",
                       "if_absent": c[4] if len(c) > 4 else ""})
-    return edges
+    return edges, problems
+
+
+def dag_cycle(edges):
+    adj = {}
+    for e in edges:
+        adj.setdefault(e["from"], []).append(e["to"])
+    state, path = {}, []
+
+    def dfs(n):
+        state[n] = 1
+        path.append(n)
+        for m in adj.get(n, []):
+            if state.get(m) == 1:
+                return path[path.index(m):] + [m]
+            if state.get(m) is None:
+                cyc = dfs(m)
+                if cyc:
+                    return cyc
+        path.pop()
+        state[n] = 2
+        return None
+
+    for n in list(adj):
+        if state.get(n) is None:
+            cyc = dfs(n)
+            if cyc:
+                return cyc
+    return None
 
 
 def parse_holds(text):
@@ -125,3 +183,34 @@ def parse_ops(ops_text):
                     "compensation": rows.get("compensation", ""),
                     "unknown": rows.get("unknown", "")})
     return out
+
+def parse_runner_table(tqaep):
+    """03 §4 table: case | fixture | oracle | runner | ..."""
+    rows, in_sec = {}, False
+    for line in tqaep.splitlines():
+        if line.startswith("## 4"):
+            in_sec = True
+            continue
+        if in_sec and (line.startswith("## 5") or line.startswith("## 6")):
+            break
+        if in_sec and line.startswith("|"):
+            c = _cells(line)
+            if len(c) >= 4 and c[0].startswith("W2-"):
+                rows[c[0]] = {"fixture": c[1], "oracle": c[2], "runner": c[3],
+                              "source": "03_W2_TQAEP.md#4"}
+    return rows
+
+
+def parse_dev_locators(dev_text):
+    """Real section locator per DEV-D0x (line numbers from the adopted body)."""
+    out = {}
+    for i, line in enumerate(dev_text.splitlines(), 1):
+        m = re.match(r"^##+ (\d+\S*)?.*?(DEV-D\d{2})\b", line)
+        if m:
+            out[m.group(2)] = {"line": i, "title": line.strip()[:120],
+                               "source": "01_W2_DEV_ECP.md"}
+    return out
+
+
+def parse_entry_sections(entry_text):
+    return [l.strip("# ").strip() for l in entry_text.splitlines() if l.startswith("## ")]

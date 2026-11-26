@@ -1,0 +1,59 @@
+{
+ "schema": "FHS5.PLP.W3.ConsumerReadback@3",
+ "verdict": "ACCEPT_PARTIAL",
+ "product_state": "PARTIAL",
+ "w2_validated": false,
+ "failed": [],
+ "checks": [
+  {
+   "check": "five_pins",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "checker_pass",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "evidence_seal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "product_parse",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "uses_material_fields",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "refuses_validated",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "negative_wrong_pin",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "used": {
+  "identity": {
+   "project_id": "FHS-5_PLP",
+   "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+   "scope": "W2-NF-01",
+   "wave_id": "W2",
+   "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+   "candidate": "W2-S1-r2-CODEX-PRIMARY"
+  },
+  "requirements": 16,
+  "cases": 12,
+  "subcases": 18,
+  "dag_edges": 9,
+  "candidate": "cb66d77bc8e1282cd18c1d8ebaa55f49ee1059dba55bc1cd33f0d097671a6794"
+ }
+}

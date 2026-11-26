@@ -1,0 +1,77 @@
+{
+  "schema": "FHS5.PLP.W1.OffTaskReceipt@1",
+  "run_id": "20261127T003003",
+  "task": "W2 inbound draft 13-row projection",
+  "inputs": {
+    "w2m_path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\FHS-5_PLP_W2M_CODEX-NATIVE-FIRST_完整實質正文.md",
+    "w2m_sha256": "2b98be965651721257164c555f7e9f86228e5e6dd15787c0540c1a6a0cd90093",
+    "material_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\_t\\j3_material\\05_W2_SOURCE_MANIFEST.json",
+    "material_manifest_sha256": "c251ebc0f9ad292fa08511991488b988a92ac1b82a150da3a492aed4d401bfa8"
+  },
+  "on": {
+    "rows": 13,
+    "thin_next": "W2-READ: produce the 13-row DRAFT binding-request plan inside W2-READ-01; no Grant, no protected effect.",
+    "contract_profile": "GENERIC",
+    "modules": [
+      "tpm",
+      "guide",
+      "bridge"
+    ]
+  },
+  "off": {
+    "rows": 13,
+    "exit": 0,
+    "imported_forbidden": []
+  },
+  "projection_equal": true,
+  "on_rows": 13,
+  "off_rows": 13,
+  "semantics": {
+    "on_success": true,
+    "off_success": true,
+    "on_only_success": false,
+    "parity_double_failure": false
+  },
+  "cold_off": {
+    "cold_off": true,
+    "blocked": [
+      "hgk_runtime",
+      "fabric_runtime",
+      "sbl_runtime",
+      "pipd_runtime",
+      "hermes_runtime"
+    ],
+    "leaked": [],
+    "exit": 0
+  },
+  "positive_control": {
+    "schema": "FHS5.W1.R03.OffIsolation.PositiveControl@1",
+    "module": "json",
+    "argv": [
+      "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "-c",
+      "import json, importlib, sys\nname = \"json\"\nimported, err = False, None\ntry:\n    importlib.import_module(name)\n    imported = True\nexcept Exception as exc:\n    err = type(exc).__name__\nprint(json.dumps({'module': name, 'imported': imported, 'error': err, 'child_python': sys.version.split()[0]}))\n"
+    ],
+    "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\_t",
+    "env_removed_keys": [],
+    "exit": 0,
+    "stdout": "{\"module\": \"json\", \"imported\": true, \"error\": null, \"child_python\": \"3.11.9\"}\r\n",
+    "stdout_sha256": "a7129fc65e0a5d869334c9aad76327c6829a0783431f14439984c0e7ff0552a9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imported": true,
+    "state": "OBSERVED",
+    "import_error": null,
+    "child_python": "3.11.9"
+  },
+  "env_flag_only": {
+    "schema": "FHS5.W1.R03.OffIsolation.EnvFlagReject@1",
+    "rejected": true,
+    "token": "ENV_FLAG_NOT_EVIDENCE",
+    "marker": "W1_NATIVE_OFF",
+    "evidence": "none",
+    "env_read": false,
+    "env_written": false,
+    "reason": "A bare environment flag asserts a state; it carries no observation of a real process, path resolution, or byte digest, so it cannot discharge an isolation claim."
+  },
+  "state": "ON_OFF_BOTH_SEMANTIC_SUCCESS"
+}

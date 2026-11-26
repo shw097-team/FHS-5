@@ -1,0 +1,49 @@
+{
+ "schema": "FHS5.PLP.W2S3.N09@1",
+ "segments": [
+  {
+   "segment": "source->reader",
+   "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+   "rows": 16,
+   "tree": "cc7d91a1f7f63e89b93c9a216286d746cccd0622c14d9448afc8a935cbb77943"
+  },
+  {
+   "segment": "reader->tpm",
+   "profile": "S1-W2",
+   "views": [
+    "DEV",
+    "OPS",
+    "PD",
+    "PI",
+    "TQAEP"
+   ],
+   "cases": 12
+  },
+  {
+   "segment": "tpm->contracts",
+   "ok": true,
+   "problems": [],
+   "views": [
+    "DEV",
+    "ENTRY",
+    "OPS",
+    "PD",
+    "PI",
+    "TQAEP"
+   ]
+  }
+ ],
+ "same_subject": true,
+ "source_identity": {
+  "project_id": "FHS-5_PLP",
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "wave_id": "W2",
+  "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+  "candidate": "W2-S1-r2-CODEX-PRIMARY"
+ },
+ "candidate_note": "S1 W2 pack only for segments 1-3; OPS segment from 28_ uses 18_ delivery",
+ "verdict": "PARTIAL",
+ "missing": "single-source operation+receiver segment on the S1 pack",
+ "reason": "TPM/contracts chain real; operation segment uses the W1 NF delivery, so the chain is not one source"
+}
