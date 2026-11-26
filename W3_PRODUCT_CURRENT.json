@@ -34,8 +34,10 @@
     "20261126T1605"
   ],
   "publication": {
-    "state": "PUSH_PENDING",
-    "branch": "codex/w3-real-product-20261126T1902"
+    "state": "PUSHED",
+    "branch": "codex/w3-real-product-20261126T1902",
+    "remote_commit": "46d0a163be7dd5048241cb7c5320f44a10852eeb",
+    "remote_tree": "a644ef6cf04ade5fa9d3e7a8144929e8e2c08deb"
   },
   "candidate_commit": "b9b48a103fe4b00b7ca1760b7363fffb44028dfb"
 }

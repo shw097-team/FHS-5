@@ -17,7 +17,7 @@
 | `consumer_ref` | `evidence/REAL/W4_CONSUMER.json` |
 | `next_legal_action` | `W4_EXECUTION_AUTHORITY_REQUIRED` |
 | `resume_predicate` | `same candidate + W4 named authority + Host/ACL` |
-| `publication_state` | `PUSH_PENDING` |
+| `publication_state` | `PUSHED` |
 | `execution_authority` | `None` |
 | `candidate_commit` | `b9b48a103fe4b00b7ca1760b7363fffb44028dfb` |
 | `candidate_preimage` | `275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4` |
@@ -43,3 +43,8 @@
 
 W4 READ/DRAFT only until a named W4 execution authority is granted.
 
+
+## remote readback
+
+- remote commit `46d0a163be7dd5048241cb7c5320f44a10852eeb`
+- remote tree `a644ef6cf04ade5fa9d3e7a8144929e8e2c08deb`
