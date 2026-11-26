@@ -28,6 +28,8 @@ def main(argv=None):
     vmap = {}
     if os.path.isfile(verdict_path):
         vmap = {r["case_id"]: r.get("record_sha256") for r in load_json_strict(verdict_path)["rows"]}
+    if not vmap:
+        errors.append("verdict_missing")
     errors = []
     rows = []
     for ref in man["case_refs"]:
@@ -41,7 +43,7 @@ def main(argv=None):
         token_ok = rec.get("observed", {}).get("token") == oracle["expected"]["token"]
         engine_ok = rec.get("engine_error") is False
         candidate_ok = rec.get("candidate") == pins.get("candidate")
-        sha_ok = (vmap.get(cid) == sha256_file(rec_path)) if vmap else True
+        sha_ok = (vmap.get(cid) == sha256_file(rec_path)) if vmap else False
         checks = []
         for p in oracle.get("predicates", []):
             try:

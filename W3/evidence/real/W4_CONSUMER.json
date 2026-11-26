@@ -1,7 +1,7 @@
 {
   "schema": "FHS5.PLP.W4.InboundConsumerReceipt@1",
   "consumer_role": "FRESH_W4_CONSUMER",
-  "consumer_script_sha256": "e7942688928ff975e84bb1c5f252caed4f4ca02ad951401cbba6154293733f80",
+  "consumer_script_sha256": "07c087ab2d55eaec9a8996a513bcda51a08b35c953de0da33034053a7f6b6c5e",
   "argv": [
     "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
     "<RUN_ROOT>\\W4\\check\\consumer_w4.py"
@@ -9,7 +9,7 @@
   "cwd": "<RUN_ROOT>",
   "inbound": {
     "path": "<RUN_ROOT>\\evidence\\REAL\\W4_INBOUND.json",
-    "sha256": "ecd2af49bbe017ef4ef432563df3fd0ce54d768ee3f3b7b47e796e95eb09904c"
+    "sha256": "b5604376353284359126aaa55a855aedb45c04b632da1e887866bb4c9a6917f0"
   },
   "cli_executed": true,
   "input_writes": 0,

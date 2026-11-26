@@ -39,6 +39,12 @@ def main(argv=None):
         errors.append("readiness_not_boolean")
     if exe is True and not d.get("execution_authority"):
         errors.append("execution_without_authority")
+    if exe is True:
+        auth = d.get("execution_authority") or {}
+        if not isinstance(auth, dict) or not all(k in auth for k in ("issuer", "principal", "scope", "expiry")):
+            errors.append("authority_incomplete")
+        if not (d.get("upstream") or {}).get("checker_pass"):
+            errors.append("authority_without_checker")
     if tech is False:
         next_action = "CASE_OWNER_FREEZE" if "CASE_OWNER_FREEZE_MISSING" in json.dumps(d, ensure_ascii=False) else "READ_ONLY_W4_PREP"
     elif exe is False:

@@ -24,8 +24,8 @@
     },
     {
       "path": "W3/check/product_checker.py",
-      "sha256": "7b9bab5fed9eccf7d63feab7141936a309c2caaeadeb6e9b9130f18b2f415c09",
-      "bytes": 3469
+      "sha256": "dd1941d6d9d13a2bde627ad3006113ca0883a25e51f5aefa8bee8aab976773b1",
+      "bytes": 3528
     },
     {
       "path": "W3/check/product_verify.py",
@@ -44,8 +44,8 @@
     },
     {
       "path": "W3/check/run_product_real.py",
-      "sha256": "b0080de4c48157a7e671421dface16edbaee1dadbda3e1905c78edc8234062fc",
-      "bytes": 6348
+      "sha256": "ba81a8b9ebf6b8624ce3b16c0272d2be252224d1fc7288d384ea36a4b0ff7d1a",
+      "bytes": 6475
     },
     {
       "path": "W3/check/run_w3_case.py",
@@ -389,7 +389,7 @@
     },
     {
       "path": "W3/evidence/real/PRODUCT_CHECKER.json",
-      "sha256": "cdd366164b71a7e63e83df6ede503c7cf9352a2f6f0f168458d9b868b07fbc3d",
+      "sha256": "fe8bb3f2b9e477da34ea3ceaec563f5c8aef63ad3e2b0a19629b3ebab1e06e80",
       "bytes": 11381
     },
     {
@@ -419,13 +419,13 @@
     },
     {
       "path": "W3/evidence/real/W4_CONSUMER.json",
-      "sha256": "de80ec3be9dbdc804014f0bd0a58e5ac65810794723b80aea912454995fe01d4",
+      "sha256": "9d87abe6fbd0168a44d5f21e32a06e2a840425a81beb1ebc769bfbc9ca77fb2c",
       "bytes": 827
     },
     {
       "path": "W3/evidence/real/W4_INBOUND.json",
-      "sha256": "ecd2af49bbe017ef4ef432563df3fd0ce54d768ee3f3b7b47e796e95eb09904c",
-      "bytes": 1631
+      "sha256": "b5604376353284359126aaa55a855aedb45c04b632da1e887866bb4c9a6917f0",
+      "bytes": 1689
     },
     {
       "path": "W3/impl/w3_advice.py",

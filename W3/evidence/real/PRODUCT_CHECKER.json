@@ -1,7 +1,7 @@
 {
   "schema": "FHS5.PLP.W3.ProductCheckerReceipt@1",
   "checker_role": "DISTINCT_READ_ONLY_PRODUCT_CHECKER",
-  "checker_script_sha256": "7b9bab5fed9eccf7d63feab7141936a309c2caaeadeb6e9b9130f18b2f415c09",
+  "checker_script_sha256": "dd1941d6d9d13a2bde627ad3006113ca0883a25e51f5aefa8bee8aab976773b1",
   "argv": [
     "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
     "<RUN_ROOT>\\W3\\check\\product_checker.py"

@@ -112,6 +112,7 @@ def main(argv=None):
         "checker_sha256": sha256_file(checker_path),
         "product_pass": verdict["product_pass"],
         "checker_verdict": checker["verdict"],
+        "product_ok": verdict["product_pass"] == 16 and v["exit"] == 0,
         "sealed_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
     }
     write_json(os.path.join(ev, "PRODUCT_SEAL.json"), seal)
@@ -131,7 +132,7 @@ def main(argv=None):
     write_json(os.path.join(ev, "PRODUCT_RECEIPT.json"), receipt)
     print(json.dumps({"cases": verdict["case_count"], "product_pass": verdict["product_pass"],
                       "checker": checker["verdict"], "verdict_exit": v["exit"]}, ensure_ascii=False))
-    return 0 if checker["verdict"] == "PASS" else 1
+    return 0 if (checker["verdict"] == "PASS" and verdict["product_pass"] == 16 and v["exit"] == 0) else 1
 
 
 if __name__ == "__main__":
