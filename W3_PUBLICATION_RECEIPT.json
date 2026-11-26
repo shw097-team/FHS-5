@@ -34,6 +34,7 @@
     "final_evidence_commit":  "e971456b623605645e0ea66979479b2f9c7ae665",
     "candidate_rebind_commit":  "a521e03af1e6dc56c7ab1c7ff8e0c25ed6f63106",
     "public_redaction_commit":  "0b34b140664b359211c63c8216eb09509d7688f9",
-    "tip_commit":  "0b34b140664b359211c63c8216eb09509d7688f9",
-    "tip_tree":  "1455d02195fc84e5530dce97e7645f23da13306b"
+    "final_verification_commit":  "21a0290ab1d7ee694becc255832256c886ac3c22",
+    "tip_commit":  "21a0290ab1d7ee694becc255832256c886ac3c22",
+    "tip_tree":  "ac99af36a50a7cfc2bca218171f955038190c546"
 }
