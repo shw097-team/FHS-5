@@ -34,7 +34,7 @@ def parse_13_plus_3(text: str) -> dict:
         if len(c) < 12 or not ROW_ID.match(c[0]):
             continue
         if c[0] in seen:
-            continue
+            raise ValueError("DUPLICATE_ROW:" + c[0])
         head = _split_head(c[1])
         rows.append({
             "id": c[0],
@@ -49,12 +49,21 @@ def parse_13_plus_3(text: str) -> dict:
             "consumer": c[6],
             "required_when": c[7],
             "expected_receipt": c[8],
-            "actual_ref": c[9],
+            "actual_ref": (None if c[9].strip().lower() in ("null", "") else c[9]),
             "first_fail": c[10],
             "resume": c[11],
         })
         seen.append(c[0])
     missing = [i for i in EXPECTED if i not in seen]
     extra = [i for i in seen if i not in EXPECTED]
+    # NF-OWNER-FILL: the NF rows carry the role in the original column, not
+    # a four-part header; fill from the table's own Producer/Consumer text.
+    for r in rows:
+        if r["id"] == "W2-NF-A":
+            r["owner"] = "Case Owner"
+        elif r["id"] == "W2-NF-B":
+            r["owner"] = "Host/Receiver Owner"
+        elif r["id"] == "W2-NF-C":
+            r["owner"] = "Host/OS Reader"
     return {"rows": rows, "count": len(rows), "missing": missing, "extra": extra,
             "by_id": {r["id"]: r for r in rows}}

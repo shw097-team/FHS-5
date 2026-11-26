@@ -1,0 +1,28 @@
+{
+ "schema": "FHS5.PLP.W2S3.N04@1",
+ "historical_raw": {
+  "source": "18_/W1-HOST-01.json",
+  "origin": "W1 historical",
+  "keys": [
+   "argv",
+   "candidate_sha",
+   "case_id",
+   "case_set_sha256",
+   "checker_id",
+   "child",
+   "consumer_id",
+   "cwd"
+  ]
+ },
+ "verdict": "PARTIAL",
+ "reason": "only the W1 historical host session is available; no current W2 served/consumed session",
+ "stages_present": [
+  "Selected",
+  "Loaded",
+  "Installed",
+  "Bound",
+  "Invoked",
+  "ActualServed",
+  "Consumed"
+ ]
+}

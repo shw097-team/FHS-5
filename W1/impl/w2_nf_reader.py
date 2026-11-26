@@ -24,6 +24,8 @@ import json
 import re
 from pathlib import Path
 
+import contracts_s1
+
 SCHEMA = "FHS5.PLP.W2.SourceManifest.NF@2"
 MANIFEST_NAME = "05_W2_SOURCE_MANIFEST.json"
 
@@ -198,17 +200,27 @@ def build_contracts(root, ident=None) -> dict:
         },
     }
 
+    _pi_doc = (root / "00_W2_PI_PD.md").read_text(encoding="utf-8")
+    _ops_doc = (root / "02_W2_OPS_ECP.md").read_text(encoding="utf-8")
+    _tq_doc = (root / "03_W2_TQAEP.md").read_text(encoding="utf-8")
+    _wp = contracts_s1.parse_wp(_pi_doc)
+    _dag = contracts_s1.parse_dag(_pi_doc)
+    _holds = contracts_s1.parse_holds(_pi_doc)
+    _cases = contracts_s1.parse_cases(_tq_doc)
+    _jgroups, _nmap = contracts_s1.parse_jn(_tq_doc)
+    _ops = contracts_s1.parse_ops(_ops_doc)
     views["PD"] = {
-        "wp": [n.get("id") if isinstance(n, dict) else n
-               for n in (man.get("dag") or {}).get("nodes") or []],
-        "dag_edges": (man.get("dag") or {}).get("edges") or [],
+        "wp": [w["id"] for w in _wp],
+        "wp_rows": _wp,
+        "dag_edges": _dag,
+        "edge_count": len(_dag),
         "cycle": (man.get("dag") or {}).get("cycle"),
-        "holds": [h.get("id") for h in man.get("holds") or []],
+        "holds": [h["id"] for h in _holds],
+        "hold_rows": _holds,
         "w2_special_holds": [h.get("id") for h in man.get("w2_special_holds") or []],
-        "crs": len(man.get("crs") or []),
+        "crs": int((man.get("denominators") or {}).get("crs") or 0),
         "denominators": man.get("denominators") or {},
     }
-
     dev_doc = (root / "01_W2_DEV_ECP.md").read_text(encoding="utf-8")
     dev_rows = _rows_after_heading(dev_doc, lambda l: "Exact WriteSet" in l)
     write_set = []
@@ -227,7 +239,7 @@ def build_contracts(root, ident=None) -> dict:
         "ops": sorted(_dev_ops.keys()),
         "write_set": write_set,
         "write_set_rows_parsed": len(write_set),
-        "locators": man.get("dev_ops_locators") or {},
+        "locators": dict(_dev_ops),
         "doc_sha256": sha256_file(root / "01_W2_DEV_ECP.md"),
     }
 
@@ -235,29 +247,32 @@ def build_contracts(root, ident=None) -> dict:
     ops_rows = _rows_after_heading(ops_doc, lambda l: l.startswith("## 7")
                                    or "O06" in l)
     views["OPS"] = {
-        "ops": sorted((man.get("dev_ops_locators") or {}).keys()),
-        "ops_sequence": ["O01", "O02", "O03", "O04", "O05", "O06"],
+        "ops": [o["id"] for o in _ops],
+        "op_rows": _ops,
+        "ops_sequence": [o["id"] for o in _ops] or ["O01","O02","O03","O04","O05","O06"],
         "compensation_forbidden": ["git revert", "git reset", "whole-repo rollback"],
         "unknown_fixtures": ["F-TO-BEFORE", "F-TO-AFTER", "F-PARTIAL", "F-EXIT0-WRONG"],
         "doc_sha256": sha256_file(root / "02_W2_OPS_ECP.md"),
         "o06_rows_parsed": len(ops_rows),
     }
-
     tq_doc = (root / "03_W2_TQAEP.md").read_text(encoding="utf-8")
     case_rows = _rows_after_heading(tq_doc, lambda l: "Case" in l and "#" not in l)
     sub = man.get("subcases") or {}
     views["TQAEP"] = {
-        "cases": [{"case_id": c["case_id"], "kind": c.get("kind"),
-                   "fixture": c.get("fixture"), "oracle": c.get("oracle")}
-                  for c in man.get("cases") or []],
-        "case_count": len(man.get("cases") or []),
-        "subcases": {k: len(v) for k, v in sub.items()},
+        "cases": [{"case_id": c["id"], "kind": c["kind"],
+                   "fixture": c["fixture_ref"], "oracle": c["oracle_ref"],
+                   "runner": c["runner"], "requirement_refs": c["requirement_refs"]}
+                  for c in _cases],
+        "case_count": len(_cases),
+        "case_rows": _cases,
+        "subcases": _jgroups,
+        "subcase_count": sum(len(v) for v in _jgroups.values()),
+        "n_map": _nmap,
         "fixtures_dir": str((root / "assets" / "fixtures")),
         "oracles_dir": str((root / "assets" / "oracles")),
         "doc_sha256": sha256_file(root / "03_W2_TQAEP.md"),
-        "case_rows_parsed": len(case_rows),
+        "case_rows_parsed": len(_cases),
     }
-
     entry = (root / "04_W2_START_THIN_PROMPT.md").read_text(encoding="utf-8")
     views["ENTRY"] = {
         "sha256": sha256_file(root / "04_W2_START_THIN_PROMPT.md"),
@@ -272,6 +287,16 @@ def build_contracts(root, ident=None) -> dict:
     problems = []
     if views["PI"]["requirement_count"] != 16:
         problems.append(f"requirements {views['PI']['requirement_count']} != 16")
+    if len(views["PD"]["wp"]) != 6:
+        problems.append(f"WP {len(views['PD']['wp'])} != 6")
+    if views["PD"]["edge_count"] < 6:
+        problems.append(f"DAG edges {views['PD']['edge_count']} < 6")
+    if len(views["PD"]["holds"]) != 14:
+        problems.append(f"HOLD {len(views['PD']['holds'])} != 14")
+    if len(views["OPS"]["ops"]) != 6:
+        problems.append(f"OPS ops {len(views['OPS']['ops'])} != 6")
+    if any(not c["kind"] for c in views["TQAEP"]["cases"]):
+        problems.append("case kind missing")
     if views["TQAEP"]["case_count"] != 12:
         problems.append(f"cases {views['TQAEP']['case_count']} != 12")
     if views["DEV"]["write_set_rows_parsed"] < 2:

@@ -1,0 +1,53 @@
+{
+ "schema": "FHS5.PLP.W3.CheckerVerdict@2",
+ "verdict": "PASS",
+ "failed": [],
+ "checks": [
+  {
+   "check": "pins_match_tree",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "evidence_seal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_cases_pass",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "n06_four_classes",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "s1_16_rows",
+   "ok": true,
+   "detail": "16"
+  },
+  {
+   "check": "contracts_ok",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "pd_wp_6",
+   "ok": true,
+   "detail": "6"
+  },
+  {
+   "check": "ops_6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "tpm_s1_profile",
+   "ok": true,
+   "detail": "S1-W2"
+  }
+ ],
+ "candidate": "a5097ce64dcfa76d1768798d61a2835eb5a7ee53dbc32e010988387dfe8fee31"
+}

@@ -151,6 +151,28 @@ def _paragraph(text: str, marker: str) -> str:
     return ""
 
 
+S1_PROFILES = {
+    "S1-W2": {"schema": "FHS5.PLP.W2.SourceManifest.S1@1",
+              "expect": {"pack_files": 5, "cases": 12, "assets": 25},
+              "dev_file": "01_W2_DEV_ECP.md", "ops_file": "02_W2_OPS_ECP.md",
+              "case_file": "03_W2_TQAEP.md", "pi_file": "00_W2_PI_PD.md",
+              "start_file": "04_W2_START_THIN_PROMPT.md",
+              "sections": ("SOURCE", "SPEC", "EXECUTE", "HARNESS LOOP", "DONE", "STOP")},
+    "S1-W1": {"schema": "FHS5.PLP.W1.SourceManifest.S1@1",
+              "expect": {"pack_files": 5, "cases": 13, "assets": 26},
+              "dev_file": "01_W1_DEV_ECP.md", "ops_file": "02_W1_OPS_ECP.md",
+              "case_file": "03_W1_TQAEP.md", "pi_file": "00_W1_PI_PD.md",
+              "start_file": "04_W1_START_THIN_PROMPT.md",
+              "sections": ("SOURCE", "SPEC", "EXECUTE", "HARNESS LOOP", "DONE", "STOP")},
+    "S1-W0": {"schema": "FHS5.PLP.W0.SourceManifest.S1@1",
+              "expect": {"pack_files": 5, "cases": 24, "assets": 0},
+              "dev_file": "01_W0_DEV_ECP.md", "ops_file": "02_W0_OPS_ECP.md",
+              "case_file": "03_W0_TQAEP.md", "pi_file": "00_W0_PI_PD.md",
+              "start_file": "04_W0_START_THIN_PROMPT.md",
+              "sections": ("SOURCE", "SPEC", "EXECUTE", "HARNESS LOOP", "DONE", "STOP")},
+}
+
+
 def resolve_profile(man: dict) -> tuple[str, dict]:
     schema = man.get("schema")
     for name, prof in PROFILES.items():
@@ -158,6 +180,9 @@ def resolve_profile(man: dict) -> tuple[str, dict]:
             return name, prof
     if isinstance(schema, str) and ".SourceManifest.NF@" in schema:
         return "GENERIC", PROFILES["GENERIC"]
+    for name, prof in S1_PROFILES.items():
+        if prof["schema"] == schema:
+            return name, prof
     raise NFError("SCHEMA_UNSUPPORTED", str(schema))
 
 
@@ -271,6 +296,18 @@ def build_contracts(pack_root: str, work_identity: dict) -> dict:
                       "pos": cells[2], "neg": cells[3],
                       "fixture_sha256": (ent.get("fixture") or {}).get("sha256"),
                       "oracle_sha256": (ent.get("oracle") or {}).get("sha256")})
+    # S1-CASE-FALLBACK: S1 packs express cases as "### 1.N W2-XXX（KIND）"
+    if profile_name.startswith("S1-") and not cases:
+        import contracts_s1 as _c1
+        _amap = {a["path"]: a for a in (man.get("assets") or [])}
+        for _c in _c1.parse_cases(case_text):
+            _fx = re.search(r"`([^`]+)`", _c.get("fixture_ref") or "")
+            _or = re.search(r"`([^`]+)`", _c.get("oracle_ref") or "")
+            cases.append({"case_id": _c["id"], "kind": _c["kind"],
+                          "requirement": _c.get("requirement_refs"),
+                          "fixture_sha256": (_amap.get(_fx.group(1)) or {}).get("sha256") if _fx else None,
+                          "oracle_sha256": (_amap.get(_or.group(1)) or {}).get("sha256") if _or else None,
+                          "source": "03_W2_TQAEP.md#1.N"})
     want_cases = expect.get("cases")
     if want_cases and len(cases) != want_cases:
         raise NFError("CASE_SET_INCOMPLETE", f"{len(cases)} != {want_cases}")
