@@ -1,0 +1,68 @@
+{
+  "schema": "FHS5.PLP.W2.CurrentPointer@1",
+  "purpose": "Single canonical entry point for the W2 product line. Written because the four delivery directories (21/22/23/24/25) sat side by side with nothing saying which one is current; a fresh session would have had to guess.",
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "pack": {
+    "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+    "adopted_name": "W2-NF-r3-CODEX-PRIMARY",
+    "adopted_commit": "35d5387f9c98eaebc2d4cee742afcb4509a7d8c3",
+    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/",
+    "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+    "status": "ADOPTED_PRIMARY_USE_DO_NOT_MODIFY"
+  },
+  "current_delivery": {
+    "dir": "25_W2_FINAL_HANDOFF_HERMES_20261126",
+    "closeout": "25_W2_FINAL_HANDOFF_HERMES_20261126/FHS-5_PLP_W2_CLOSEOUT.md",
+    "handoff": "25_W2_FINAL_HANDOFF_HERMES_20261126/FHS-5_PLP_W2_HANDOFF.md",
+    "five_pins": "24_W2_SCOPED_REPAIR_HERMES_20261126/W2_FIVE_PINS.json",
+    "candidate_aggregate_digest": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+    "note": "aggregate digest is authoritative only in W2_FIVE_PINS.json; this field is a pointer, not a second source",
+    "candidate_members": [
+      "W1/check/w2_receiver.py",
+      "W1/check/w2_dev_gate.py",
+      "W1/check/w2_admission.py",
+      "W1/impl/w2_nf_reader.py",
+      "W1/check/test_j1_strict.py"
+    ]
+  },
+  "superseded": [
+    {
+      "dir": "21_W2_PRODUCT_HERMES_20261126",
+      "why": "r1: contains a wrong pre-world digest (49c62def) and NOT_RUN cases; keep only as history",
+      "marker": "21_W2_PRODUCT_HERMES_20261126/SUPERSEDED.md"
+    },
+    {
+      "dir": "22_W2_CLOSURE_HERMES_20261126",
+      "why": "r2: superseded by 23 then 24; its W3 receive is 15/15 against ce4f10f",
+      "marker": null
+    },
+    {
+      "dir": "23_W2_FINAL_CLOSURE_HERMES_20261126",
+      "why": "r3: superseded by 24; carries the 12/12 case run and a 16/16 W3 receive against ef325c1",
+      "marker": null
+    }
+  ],
+  "git": {
+    "repo": "https://github.com/shw097-team/FHS-5",
+    "working_branch": "hermes/w2-product-20261126",
+    "main": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+    "merged_to_main": false,
+    "commits_ahead_of_main": 22,
+    "files_changed_vs_main": 456
+  },
+  "claim_state": {
+    "W2_NF_VALIDATED": "NOT_CLAIMED",
+    "W3_TECHNICALLY_READY": "NOT_CLAIMED",
+    "W3_EXECUTION_READY": "NOT_CLAIMED",
+    "INDEPENDENT_PASS": "NOT_CLAIMED",
+    "RELEASED": "NOT_CLAIMED",
+    "primary_use_promotion": "NOT_PERFORMED — nothing was promoted, because no round satisfied the full W2 contract"
+  },
+  "writer_state": {
+    "state": "BLOCKED_NOT_ADMITTED",
+    "marker": "W2_NATIVE_RUNS/W2_SECURITY_FINDING.json",
+    "resume": "Owner re-authorisation naming roots, targets, ops, expiry and recovery"
+  },
+  "next_owner": "W3 P01 (see the handoff)"
+}
