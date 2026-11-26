@@ -14,7 +14,7 @@
     "status": "ACHIEVED_GENERIC_NATIVE_PRODUCT_FREEZE",
     "case_owner": "separate Case Owner session",
     "cases": 16,
-    "candidate": "e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7",
+    "candidate": "bc67bde574f2b6c4217bc54eb63bf963f0937c0cf188271a8bb58a99c502e098",
     "case_owner_freeze_sha256": "ac9f061bee576cdea93fdbdf5f49f61cb710873a4ad3308248297b4c1a6ed07f"
   },
   "F3": {

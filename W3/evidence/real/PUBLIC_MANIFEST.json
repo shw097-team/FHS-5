@@ -394,12 +394,12 @@
     },
     {
       "path": "W3/evidence/real/PRODUCT_SEAL.json",
-      "sha256": "3309ea84c9bed682d5ee0ab4e87a25d67218d712d046e0aaf92a469a03ea9373",
-      "bytes": 670
+      "sha256": "36bd9188f15ba00ef5ce70b960ec0abe35a21bad4fb958351694e59e818686c3",
+      "bytes": 692
     },
     {
       "path": "W3/evidence/real/PRODUCT_VERDICT.json",
-      "sha256": "cc41bdca4bdc9b09f9eb006f2305701388108ae2a8cf56b02d07b8b448ed3d43",
+      "sha256": "8d802c604eb1e7c70937800d56a94982853fd8ce3c8811c686f404e5966538b7",
       "bytes": 16512
     },
     {
@@ -409,22 +409,22 @@
     },
     {
       "path": "W3/evidence/real/W3_CLOSURE_COVERAGE.json",
-      "sha256": "e0133ad97fe30455a2ea068a1d7f1835a09f9fe06006cb8ce63cd66448763209",
+      "sha256": "1fc48d586cbdc8e4c7aa2365973eb58e1b155bffa72449f693a9dcf0b4580e50",
       "bytes": 21641
     },
     {
       "path": "W3/evidence/real/W3_F1F5_CLOSURE_LEDGER.json",
-      "sha256": "b6ac153aebb0cb827186f97f3138cec77aa2a2ad512523b63158ba81c346168d",
+      "sha256": "d3c0b1f624cce516f578cf484021a33360018096348816078eb89714656388ea",
       "bytes": 1364
     },
     {
       "path": "W3/evidence/real/W4_CONSUMER.json",
-      "sha256": "9d87abe6fbd0168a44d5f21e32a06e2a840425a81beb1ebc769bfbc9ca77fb2c",
+      "sha256": "32119abffedda51886708bf94e564f61908ee6496d6088c27f2a5b53e53fb68a",
       "bytes": 827
     },
     {
       "path": "W3/evidence/real/W4_INBOUND.json",
-      "sha256": "b5604376353284359126aaa55a855aedb45c04b632da1e887866bb4c9a6917f0",
+      "sha256": "e243e6de60ca4a27a2eb8c225ad4f3956646b3542e8c4dfdd7ee9bde4f51c92f",
       "bytes": 1689
     },
     {
