@@ -107,7 +107,7 @@ def inspect_package(root) -> dict:
     manifest = _strict_json(man_p.read_bytes())
     if str(manifest.get("schema", "")).endswith("SourceManifest.S1@1"):
         import s1_reader
-        return s1_reader.inspect_s1(source_root)
+        return s1_reader.inspect_s1(root)
     if manifest.get("schema") != SCHEMA:
         raise W2ReaderError("SCHEMA_UNSUPPORTED",
                             f"{manifest.get('schema')} != {SCHEMA}")

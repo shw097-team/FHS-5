@@ -181,13 +181,19 @@ def _clauses(root: Path) -> dict:
 def inspect_package(pack_root, manifest_path=None, seal_path=None,
                     expected_identity=None) -> dict:
     root = br.canonical_root(pack_root)
-    man, mraw = br.load_json_strict(br.resolve_inside(root, base.MANIFEST), base.MANIFEST)
+    _mpath = base.MANIFEST
+    if not (root / _mpath).is_file():
+        _c = sorted(root.glob("05_*_SOURCE_MANIFEST.json"))
+        if len(_c) == 1:
+            _mpath = _c[0].name
+    man, mraw = br.load_json_strict(br.resolve_inside(root, _mpath), _mpath)
     _schema = str(man.get("schema", ""))
     if (_schema.startswith("FHS5.PLP.W")
             and _schema.endswith("SourceManifest.S1@1")):
         import s1_reader
         return s1_reader.inspect_s1(
-            root, (Path(seal_path) if seal_path else None))
+            root, (Path(seal_path) if seal_path else None),
+            expected_identity=expected_identity)
     if man.get("schema") != base.SCHEMA:
         raise NFError("SCHEMA_UNSUPPORTED", str(man.get("schema")))
     if man.get("pack_version") != base.PACK_VERSION:

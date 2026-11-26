@@ -81,6 +81,39 @@ def _decision(checks, first_fail, repo, **extra):
     return d
 
 
+
+def _structural_precheck(repo, write_set, recovery):
+    """Pure structural predicates; no admission needed and no writes."""
+    if not write_set:
+        return ("write_set", "WRITE_SET_UNBOUND", "empty")
+    for e in write_set:
+        path = e.get("path") or ""
+        if (not path or path.startswith("/") or "\\" in path
+                or ".." in Path(path).parts or "*" in path):
+            return ("write_set_shape", "WRITE_SET_UNBOUND", path)
+        p = repo / path
+        op = e.get("operation")
+        if op == "ADD":
+            if p.exists():
+                return ("preimage:" + path, "WRITE_SET_UNBOUND", "expected absent")
+        elif op in ("MODIFY", "DELETE"):
+            if not p.is_file():
+                return ("preimage:" + path, "WRITE_SET_UNBOUND", "missing")
+            if not e.get("preimage_sha256"):
+                return ("preimage:" + path, "WRITE_SET_UNBOUND", "preimage required")
+            if e["preimage_sha256"] != sha256_file(p):
+                return ("preimage:" + path, "WRITE_SET_UNBOUND", "drift")
+        else:
+            return ("preimage:" + path, "WRITE_SET_UNBOUND", f"bad operation {op}")
+    kind = str(((recovery or {}).get("kind")) or "").upper()
+    if not kind:
+        return ("recovery_kind", "RECOVERY_KIND_MISMATCH", "missing")
+    if kind in FORBIDDEN_RECOVERY:
+        return ("recovery_kind", "RECOVERY_KIND_MISMATCH", kind)
+    if kind not in KNOWN_RECOVERY:
+        return ("recovery_kind", "RECOVERY_KIND_MISMATCH", "unknown " + kind)
+    return None
+
 def check(asserted, repo_root, write_set, request=None):
     repo = Path(repo_root).resolve()
     checks, first = [], {"v": None}
@@ -105,6 +138,11 @@ def check(asserted, repo_root, write_set, request=None):
                 "product_calls": 0, "mode": "READ_ONLY",
                 "writes_allowed": False, "head": head}
     ok("effect_token", effect)
+
+    pre = _structural_precheck(repo, write_set, asserted.get("recovery"))
+    if pre is not None:
+        fail(*pre)
+        return _decision(checks, first["v"], repo)
 
     try:
         adm = _admission()

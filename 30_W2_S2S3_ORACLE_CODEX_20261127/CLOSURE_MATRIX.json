@@ -1,0 +1,121 @@
+{
+ "schema": "FHS5.PLP.W2.ClosureMatrix@4",
+ "rows": [
+  {
+   "case": "S1-W0-entry",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "PASS",
+   "evidence": "manifest 97017494/tree b5b67fd1/seal"
+  },
+  {
+   "case": "S1-W1-entry",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "PASS",
+   "evidence": "dev38/ops29/cases13/assets26/holds14/tree 593314d5"
+  },
+  {
+   "case": "S1-W2-entry",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "PASS_WITH_GAP",
+   "evidence": "contracts 6 views; requirements 16 declared vs 4 ids (IDENTIFIER_ONLY)"
+  },
+  {
+   "case": "W2-RUNNER-01",
+   "kind": "NEG",
+   "verdict": "PASS",
+   "evidence": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "case": "W2-OPS-02",
+   "kind": "NEG",
+   "verdict": "PASS",
+   "evidence": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "case": "W2-R3-01",
+   "kind": "POS",
+   "verdict": "PASS",
+   "evidence": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "case": "W2-R3-02",
+   "kind": "NEG",
+   "verdict": "PASS",
+   "evidence": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "case": "W2-R3-03",
+   "kind": "NEG",
+   "verdict": "PASS",
+   "evidence": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "case": "W2-EFFECT-01",
+   "kind": "NEG",
+   "verdict": "PASS",
+   "evidence": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "case": "W2-AUTH-01",
+   "kind": "NEG",
+   "verdict": "PASS",
+   "evidence": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "case": "J1",
+   "kind": "REUSE",
+   "verdict": "PASS",
+   "evidence": "29_/O03 118 entries"
+  },
+  {
+   "case": "J2",
+   "kind": "REUSE",
+   "verdict": "PASS",
+   "evidence": "29_/J2_NINEKEYS"
+  },
+  {
+   "case": "J3",
+   "kind": "REUSE",
+   "verdict": "ON_OFF_BOTH_SEMANTIC_SUCCESS",
+   "evidence": "29_/J3_ONOFF"
+  },
+  {
+   "case": "W2-DEV-01/02",
+   "kind": "REUSE",
+   "verdict": "PASS_AT_FIXTURE_SCOPE",
+   "evidence": "26_/STAGE2"
+  },
+  {
+   "case": "W2-OPS-01",
+   "kind": "REUSE",
+   "verdict": "PASS",
+   "evidence": "28_/OPS-A"
+  },
+  {
+   "case": "W2-DELTA-01",
+   "kind": "REUSE",
+   "verdict": "PASS",
+   "evidence": "29_/J2"
+  },
+  {
+   "case": "W2-R3-04",
+   "kind": "REUSE",
+   "verdict": "REUSE_NOT_RERUN",
+   "evidence": "318/317 ledger"
+  },
+  {
+   "case": "N01-N12",
+   "kind": "NOT_VERIFIED",
+   "verdict": "NOT_VERIFIED",
+   "evidence": "sweep not run"
+  }
+ ],
+ "counts": {
+  "PASS": 13,
+  "PASS_WITH_GAP": 1,
+  "ON_OFF_BOTH_SEMANTIC_SUCCESS": 1,
+  "PASS_AT_FIXTURE_SCOPE": 1,
+  "REUSE_NOT_RERUN": 1,
+  "NOT_VERIFIED": 1
+ }
+}

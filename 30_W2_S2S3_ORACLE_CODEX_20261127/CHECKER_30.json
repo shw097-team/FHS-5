@@ -1,0 +1,33 @@
+{
+ "schema": "FHS5.PLP.W2S3.Checker30@1",
+ "verdict": "PASS",
+ "failed": [],
+ "checks": [
+  {
+   "check": "pins_match_tree",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "no_failed_rows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_cases_pass",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "suite_raw_present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "six_docs",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "candidate": "f8b5e89dcd308dfaeb53550136d64c03019a9b5d61491353c549c5f3567cbcdd"
+}
