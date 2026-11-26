@@ -3,10 +3,10 @@
   "checker_role": "DISTINCT_READ_ONLY_CHECKER",
   "checker_script_sha256": "00bbdb755c005ca5f0275ea4073a59436178e7035c672bf6881b0d51d4eec438",
   "argv": [
-    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
-    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\W3\\check\\checker_verify.py"
+    "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "<RUN_ROOT>\\W3\\check\\checker_verify.py"
   ],
-  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605",
+  "cwd": "<RUN_ROOT>",
   "run_id": "20261126T1605",
   "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
   "pack_package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",

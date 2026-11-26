@@ -40,13 +40,13 @@
     },
     {
       "path": "W3/evidence/public/CHECKER_INVOCATION.json",
-      "sha256": "2c977530a28e95f329c9bfaf9df7ff10ccb7999df2df35e4f18b0daf9206f0e4",
-      "bytes": 1304
+      "sha256": "cd023880a73ce5f7bfba19e5044b9aaf3eb5fcbb0e93f9b69865b0e45f6f332a",
+      "bytes": 749
     },
     {
       "path": "W3/evidence/public/CHECKER_RECEIPT.json",
-      "sha256": "33288180708187868a912421a95d13d97810a9469ecee0994adb730e7e4d9ea5",
-      "bytes": 1329
+      "sha256": "5dec9b8cb699c6536c8abb0c492f0322a7458dce90dc830b940af7fb37997294",
+      "bytes": 1202
     },
     {
       "path": "W3/evidence/public/CONSUMER_INVOCATION.json",
@@ -70,8 +70,8 @@
     },
     {
       "path": "W3/evidence/public/FINAL_VERIFICATION.json",
-      "sha256": "c8c5f078afddb787871e3c79eb646cd5d3105a4ae5c52f00209854730276cd28",
-      "bytes": 3916
+      "sha256": "13ba49b7cad7360614b9bfd2a81c297970b7521534989905b6653792e0c21a18",
+      "bytes": 4201
     },
     {
       "path": "W3/evidence/public/FINDING_SET.json",
