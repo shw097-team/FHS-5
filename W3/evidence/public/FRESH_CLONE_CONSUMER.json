@@ -1,0 +1,51 @@
+{
+  "schema": "FHS5.PLP.W3.ConsumerReceipt@1",
+  "consumer_role": "FRESH_CONSUMER",
+  "consumer_script_sha256": "1515a0c6d37f4f7232530188c9b6001f33793f0f6d41bd9523009d6cdb3f3371",
+  "argv": [
+    "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "<RUN_ROOT>\\consumer_clone\\W3\\check\\consumer_verify.py"
+  ],
+  "cwd": "<USER>\\Documents\\Codex\\2026-11-26\\new-chat-7",
+  "run_id": "FRESH_CLONE",
+  "cli_executed": true,
+  "input_writes": 0,
+  "consumed": {
+    "closeout": {
+      "path": "<RUN_ROOT>\\consumer_clone\\FHS-5_PLP_W3_CLOSEOUT.md",
+      "sha256": "78cf2034edbbfc57d5c0d25976bf31d0ec8daf7e8976627fc61a2df46b27e275"
+    },
+    "handoff": {
+      "path": "<RUN_ROOT>\\consumer_clone\\FHS-5_PLP_W3_HANDOFF.md",
+      "sha256": "e100914128815b00b70709a75419519ec50362d8ba7af1fb363acb3978b23ec4"
+    },
+    "product_current": {
+      "path": "<RUN_ROOT>\\consumer_clone\\W3_PRODUCT_CURRENT.json",
+      "sha256": "8f34e2758fd68d02aac358fea26d5f123a1615fde133709e23041eb029dafa74"
+    }
+  },
+  "parsed_sections": {
+    "closeout_tokens": [
+      "W3_NF_VALIDATED",
+      "NOT_COVERED",
+      "下一合法動作",
+      "TEST_MUTANT_FINDING"
+    ],
+    "handoff_tokens": [
+      "from_stage",
+      "to_stage",
+      "pack_manifest_sha256",
+      "W4_TECHNICALLY_READY",
+      "NotCovered",
+      "next legal action"
+    ]
+  },
+  "next_action": "CASE_OWNER_FREEZE",
+  "verdict": "PASS",
+  "errors": [],
+  "strength": "FRESH_LOCAL_PROCESS_PARSE_AND_USE; NOT_ORIGINAL_DOMAIN_CONSUMER",
+  "limitations": [
+    "same OS principal as the maker",
+    "consumes design-layer closeout, not product-validated evidence"
+  ]
+}

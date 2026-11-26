@@ -69,6 +69,11 @@
       "bytes": 6027
     },
     {
+      "path": "W3/evidence/public/FINAL_VERIFICATION.json",
+      "sha256": "48330506ad4eb7b632178c3622dcbb90573eaa9469d4f7b1f1e9185d4acd987d",
+      "bytes": 3843
+    },
+    {
       "path": "W3/evidence/public/FINDING_SET.json",
       "sha256": "1c4fba4fa48f286186d37acd4ea53694806754893218dc2a040f4f0d813f90e8",
       "bytes": 4156
@@ -77,6 +82,11 @@
       "path": "W3/evidence/public/FREEZE_LEDGER.json",
       "sha256": "80a8f2bb852a22a93b3909a5308dc3dc025f42400bd3b3391cac590939a4e1c2",
       "bytes": 2453
+    },
+    {
+      "path": "W3/evidence/public/FRESH_CLONE_CONSUMER.json",
+      "sha256": "31384a0351a1ec166a383ada5652df8abf9e4ebc47608903f9c4f65dae735c43",
+      "bytes": 1647
     },
     {
       "path": "W3/evidence/public/INTAKE_RECEIPT.json",
