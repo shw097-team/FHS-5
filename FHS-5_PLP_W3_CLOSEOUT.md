@@ -14,7 +14,7 @@
 | F2 W3 Product Freeze | **BLOCKED** | 16 設計 fixture/oracle 不得改標產品；無獨立 Case Owner/Host/runner |
 | F3 TQAEP | **PARTIAL_DESIGN_ONLY** | 16/16 design PASS；0/16 product PASS；33 FR design join |
 | F4 Checker/Consumer/W4 | **PREPARED_NOT_READY** | W2/W3 distinct checker PASS；fresh W4 consumer PASS；readiness false |
-| F5 GitHub | **PUSH_BLOCKED** | local commit only；remote credential egress 未經核准 |
+| F5 GitHub | **PUSHED** | remote `3d73705ff6f996d39fe9c6b9b15af0e492c9928f` / tree `2443cf029dce19d176d6a6709d44658cd4f94e98`；clean ls-remote readback |
 
 ## W2 上游再資格化（F1）
 

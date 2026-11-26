@@ -39,9 +39,12 @@
     "blocker": "W3 product validation not established; no W4 named execution authority"
   },
   "F5": {
-    "status": "LOCAL_COMMIT_PENDING",
-    "pushed": false,
-    "blocker": "remote credential egress needs explicit approval; prior attempts rejected by the sandbox reviewer"
+    "status": "PUSHED",
+    "pushed": true,
+    "remote_commit": "3d73705ff6f996d39fe9c6b9b15af0e492c9928f",
+    "remote_tree": "2443cf029dce19d176d6a6709d44658cd4f94e98",
+    "branch": "codex/w3-final-closure-20261126T1827",
+    "readback": "git ls-remote exact ref"
   },
   "claims": {
     "W2_NF_VALIDATED": false,

@@ -73,8 +73,11 @@
   "state": "W3_DESIGN_ENGINE_ONLY_PRODUCT_NOT_VALIDATED",
   "supersedes": "20261126T1605",
   "publication": {
-    "state": "PUSH_BLOCKED",
-    "local_only": true
+    "state": "PUSHED",
+    "local_only": false,
+    "remote_commit": "3d73705ff6f996d39fe9c6b9b15af0e492c9928f",
+    "remote_tree": "2443cf029dce19d176d6a6709d44658cd4f94e98",
+    "branch": "codex/w3-final-closure-20261126T1827"
   },
   "claims": {
     "W2_NF_VALIDATED": false,

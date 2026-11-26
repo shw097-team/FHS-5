@@ -1,26 +1,28 @@
-﻿{
-    "schema":  "FHS5.PLP.W3.FinalPublicationReceipt@1",
-    "state":  "PUSH_PENDING",
-    "run_id":  "20261126T1827",
-    "remote":  "https://github.com/shw097-team/FHS-5",
-    "branch":  "codex/w3-final-closure-20261126T1827",
-    "base_commit":  "319b3e1a285bf58a9501949e0cff53a4bcea12b0",
-    "content_commit":  "7177b7ab27d58c5ebf0fd1fdfd38351b4fc4ece6",
-    "content_tree":  "e14193f00e9d88817cb744059cda59519b567529",
-    "pushed":  false,
-    "readback":  "PENDING",
-    "F1":  "ACHIEVED_READONLY",
-    "F2":  "BLOCKED_PRODUCT_CASE_OWNER",
-    "F3":  "PARTIAL_DESIGN_ONLY",
-    "F4":  "PREPARED_NOT_READY",
-    "claims":  {
-                   "W3_EXECUTION_READY":  false,
-                   "W4_TECHNICALLY_READY":  false,
-                   "W3_TECHNICALLY_READY":  false,
-                   "W4_EXECUTION_READY":  false,
-                   "W2_NF_VALIDATED":  false,
-                   "INDEPENDENT_PASS":  false,
-                   "W3_NF_VALIDATED":  false,
-                   "RELEASED":  false
-               }
+{
+  "schema": "FHS5.PLP.W3.FinalPublicationReceipt@1",
+  "state": "PUSHED",
+  "run_id": "20261126T1827",
+  "remote": "https://github.com/shw097-team/FHS-5",
+  "branch": "codex/w3-final-closure-20261126T1827",
+  "base_commit": "319b3e1a285bf58a9501949e0cff53a4bcea12b0",
+  "content_commit": "7177b7ab27d58c5ebf0fd1fdfd38351b4fc4ece6",
+  "content_tree": "e14193f00e9d88817cb744059cda59519b567529",
+  "pushed": true,
+  "readback": "git ls-remote exact ref; branch ref matches",
+  "F1": "ACHIEVED_READONLY",
+  "F2": "BLOCKED_PRODUCT_CASE_OWNER",
+  "F3": "PARTIAL_DESIGN_ONLY",
+  "F4": "PREPARED_NOT_READY",
+  "claims": {
+    "W3_EXECUTION_READY": false,
+    "W4_TECHNICALLY_READY": false,
+    "W3_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false,
+    "W2_NF_VALIDATED": false,
+    "INDEPENDENT_PASS": false,
+    "W3_NF_VALIDATED": false,
+    "RELEASED": false
+  },
+  "remote_commit": "3d73705ff6f996d39fe9c6b9b15af0e492c9928f",
+  "remote_tree": "2443cf029dce19d176d6a6709d44658cd4f94e98"
 }

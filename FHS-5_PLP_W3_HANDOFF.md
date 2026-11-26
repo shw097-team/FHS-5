@@ -19,7 +19,7 @@
 | `consumer_ref` | `evidence/CLOSE/W4_CONSUMER.json` |
 | `next_legal_action` | `W4 READ/DRAFT only; product Case Owner freeze and W4 named authority are missing` |
 | `resume_predicate` | `same W3 candidate + product freeze + distinct checker + fresh consumer + W4 named authority` |
-| `publication_state` | `PUSH_BLOCKED` |
+| `publication_state` | `PUSHED` |
 | `actual_readback` | `{"argv": ["python", "W4/check/consumer_w4.py"], "exit": 0, "raw": "evidence/CLOSE/W4_CONSUMER.json", "action": "READ_ONLY_W4_PREP", "result": "PASS"}` |
 | `dependencies` | `["W3 product validation (blocked)", "W4 entry adoption", "W4 named execution authority"]` |
 | `not_covered` | `["CASE_OWNER_FREEZE_MISSING", "16 product cases", "33 FR product pass", "W2 protected writer", "W4 execution"]` |
@@ -53,9 +53,15 @@
 - `PRODUCT_RUNNER_UNBOUND`：product runner binary/SHA/argv/cwd/timeout。
 - `W2_WRITER_BLOCKED`：W2 scope 具名授權與原域 signer。
 - `W4_AUTHORITY_MISSING`：W4 named execution authority。
-- `PUSH_BLOCKED`：GitHub 正常認證 push 需 Owner 明示核准。
+- `PUSHED`：GitHub 正常認證 push 需 Owner 明示核准。
 
 ## next legal action
 
 W4 READ/DRAFT only; do not treat this handoff as a W4 grant.
 
+
+## remote readback
+
+- branch `codex/w3-final-closure-20261126T1827`
+- remote commit `3d73705ff6f996d39fe9c6b9b15af0e492c9928f`
+- remote tree `2443cf029dce19d176d6a6709d44658cd4f94e98`
