@@ -1,0 +1,187 @@
+{
+  "schema": "FHS5.PLP.W2.S2E2E@1",
+  "task": "formal W2 E2E driven by the NF-r3 pack",
+  "compared_keys": [
+    "subject",
+    "scope",
+    "pack_manifest_sha256",
+    "requirements",
+    "requirements_with_actual",
+    "cases",
+    "crs",
+    "holds",
+    "w2_special_holds",
+    "source_set_sha256",
+    "permission_state",
+    "ecp_is_grant",
+    "effect_created",
+    "readback_ok",
+    "recovered_to_pre"
+  ],
+  "normalised": "run ids and root paths excluded; typed semantics compared",
+  "on": {
+    "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+    "scope": "W2-NF-01",
+    "pack_manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+    "requirements": 16,
+    "requirements_with_actual": 0,
+    "cases": 12,
+    "crs": 37,
+    "holds": 14,
+    "w2_special_holds": 6,
+    "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+    "permission_state": "NONE_GRANTED",
+    "ecp_is_grant": false,
+    "mode": "on",
+    "imported": [
+      "guide_nf",
+      "nf_reader",
+      "tpm_contracts_nf",
+      "w2_nf_reader"
+    ],
+    "blocker": null,
+    "readback_ok": true,
+    "effect_created": true,
+    "recovered_to_pre": true
+  },
+  "off": {
+    "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+    "scope": "W2-NF-01",
+    "pack_manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+    "requirements": 16,
+    "requirements_with_actual": 0,
+    "cases": 12,
+    "crs": 37,
+    "holds": 14,
+    "w2_special_holds": 6,
+    "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+    "permission_state": "NONE_GRANTED",
+    "ecp_is_grant": false,
+    "mode": "off",
+    "imported": [],
+    "blocker": "BLOCKED",
+    "readback_ok": true,
+    "effect_created": true,
+    "recovered_to_pre": true
+  },
+  "checks": [
+    {
+      "check": "both_produced",
+      "ok": true,
+      "detail": "{'on': {'exit': 0, 'stderr': ''}, 'off': {'exit': 0, 'stderr': ''}}"
+    },
+    {
+      "check": "parity.subject",
+      "ok": true,
+      "detail": "{'on': 'FHS-5_PLP/W2/CONTROL_PACK', 'off': 'FHS-5_PLP/W2/CONTROL_PACK'}"
+    },
+    {
+      "check": "parity.scope",
+      "ok": true,
+      "detail": "{'on': 'W2-NF-01', 'off': 'W2-NF-01'}"
+    },
+    {
+      "check": "parity.pack_manifest_sha256",
+      "ok": true,
+      "detail": "{'on': '81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b', 'off': '81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b'}"
+    },
+    {
+      "check": "parity.requirements",
+      "ok": true,
+      "detail": "{'on': 16, 'off': 16}"
+    },
+    {
+      "check": "parity.requirements_with_actual",
+      "ok": true,
+      "detail": "{'on': 0, 'off': 0}"
+    },
+    {
+      "check": "parity.cases",
+      "ok": true,
+      "detail": "{'on': 12, 'off': 12}"
+    },
+    {
+      "check": "parity.crs",
+      "ok": true,
+      "detail": "{'on': 37, 'off': 37}"
+    },
+    {
+      "check": "parity.holds",
+      "ok": true,
+      "detail": "{'on': 14, 'off': 14}"
+    },
+    {
+      "check": "parity.w2_special_holds",
+      "ok": true,
+      "detail": "{'on': 6, 'off': 6}"
+    },
+    {
+      "check": "parity.source_set_sha256",
+      "ok": true,
+      "detail": "{'on': '921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044', 'off': '921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044'}"
+    },
+    {
+      "check": "parity.permission_state",
+      "ok": true,
+      "detail": "{'on': 'NONE_GRANTED', 'off': 'NONE_GRANTED'}"
+    },
+    {
+      "check": "parity.ecp_is_grant",
+      "ok": true,
+      "detail": "{'on': False, 'off': False}"
+    },
+    {
+      "check": "parity.effect_created",
+      "ok": true,
+      "detail": "{'on': True, 'off': True}"
+    },
+    {
+      "check": "parity.readback_ok",
+      "ok": true,
+      "detail": "{'on': True, 'off': True}"
+    },
+    {
+      "check": "parity.recovered_to_pre",
+      "ok": true,
+      "detail": "{'on': True, 'off': True}"
+    },
+    {
+      "check": "on_used_product_stack",
+      "ok": true,
+      "detail": "['guide_nf', 'nf_reader', 'tpm_contracts_nf', 'w2_nf_reader']"
+    },
+    {
+      "check": "off_imported_none",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "off_blocker_positive_control",
+      "ok": true,
+      "detail": "BLOCKED"
+    },
+    {
+      "check": "both_really_succeeded",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "both_recovered",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "ecp_is_not_a_grant",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no_grant_shipped",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "passed": 23,
+  "total": 23,
+  "verdict": "PASS"
+}

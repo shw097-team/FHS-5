@@ -1,0 +1,44 @@
+{
+ "source": {
+  "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+  "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b"
+ },
+ "candidate": {
+  "kind": "verified product set (carried from r3, candidate updated this round)",
+  "w2_receiver_sha256": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+  "w2_dev_gate_sha256": "e9cc70773267cf145277be4298148cad3b1d1b59e8f4bbdecec0055d9c7df445",
+  "w2_admission_sha256": "fbafd5f1f099bea6f830d6222dc2982a819991f206bb930d2e9fc3281e48ebcf",
+  "w2_nf_reader_sha256": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980",
+  "test_j1_strict_sha256": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4",
+  "reconstruct_from": "commit + tree"
+ },
+ "oracle": {
+  "kind": "frozen expected/oracle set, not the J1 pins file",
+  "j1_expected_pins": "fdb99b2a8853a2578847f99b8b0483402d9165280fd515fa664f39f2a0ca515c",
+  "j1_checker_oracle": "38fef4d8287dcbb14aacb96f2115d01953a0ecedfb8603df749e6e2c16b2feeb",
+  "w2_case_oracles": 12
+ },
+ "case_set": {
+  "kind": "frozen 12 original cases + applicable children",
+  "cases": [
+   "W2-DEV-01",
+   "W2-DEV-02",
+   "W2-OPS-01",
+   "W2-OPS-02",
+   "W2-EFFECT-01",
+   "W2-AUTH-01",
+   "W2-RUNNER-01",
+   "W2-DELTA-01",
+   "W2-R3-01",
+   "W2-R3-02",
+   "W2-R3-03",
+   "W2-R3-04"
+  ],
+  "count": 12
+ },
+ "evidence": {
+  "note": "sealed after observed, outside the candidate digest",
+  "manifest": "DELIVERY_MANIFEST.json (self-excluded)"
+ },
+ "note": "source / oracle / case_set / evidence pins carried unchanged from r3; only candidate re-frozen"
+}

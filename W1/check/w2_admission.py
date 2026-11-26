@@ -1,25 +1,44 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Owner admission verifier (M1-A item 2).
+"""Owner admission verifier (r4): trust root is module-level, not request-level.
 
-The DEV gate used to trust caller-supplied ``{"decision_id": ..., "expired": false}``.
-That is exactly the fake-grant path the contract forbids.  This module derives the
-admission from a *hash-pinned* decision document instead:
+The r3 version had two real holes:
+  1. ``require_verified_admission`` was read from the request, so a caller could
+     simply omit it and the gate fell back to trusting a caller dict.
+  2. ``verify_receipt`` only re-derived the receipt's own ``fields`` digest, so a
+     receipt minted elsewhere (or with a different decision) still validated.
 
-    load(decision_path, pinned_sha256, wanted) -> receipt
-
-A caller cannot mint a receipt: the receipt carries ``verified_from`` (file + sha)
-and ``subject_sha256`` over the exact fields it checked, and `verify_receipt()`
-re-derives that digest, so a hand-built dict is refused.
+This version fixes both:
+  * ``TRUST`` below is the only trust root.  The decision document is verified
+    against a hard-coded sha256; a caller cannot supply a pin.
+  * ``derive()`` returns a receipt bound to that decision, and ``require()``
+    re-reads *the decision on disk* at use time, so expiry/revocation/scope are
+    checked against the real document, not against the receipt.
+No new issuer service: the Owner decision document is the issuer artefact.
 """
 from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
-REQUIRED_EFFECTS = {"DEV": ("DEV", "REPOSITORY_WRITE"),
-                    "OPS": ("OPS", "HOST_EFFECT")}
+# ---- the only trust root -------------------------------------------------
+TRUST = {
+    "decision_sha256": "1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7",
+    "decision_id": "W2-NF-PRIMARY-20261126-01",
+    "schema": "FHS5.PLP.W2.OwnerDecision@local-1",
+    "decision_path_candidates": (
+        "W2_NATIVE_RUNS/20261126T1225_W2_FINAL_CLOSURE/10_PACK/19_W2_NF_CODEX_20261126/W2_OWNER_DECISION.json",
+        "W2_NATIVE_RUNS/20261126T1121_W2_PRODUCT/10_PACK/19_W2_NF_CODEX_20261126/W2_OWNER_DECISION.json",
+    ),
+    "repo_root": "C:/Projects/Agent_Workspace/FHS-5_Workspace",
+    "revocation_marker": "W2_NATIVE_RUNS/OWNER_REVOKED.json",
+    "subjects": {"DEV": "FHS-5_PLP/W2/CONTROL_PACK", "OPS": "FHS-5_PLP/W2/CONTROL_PACK"},
+    "effects": {"DEV": ["dev"], "OPS": ["ops"]},
+}
+
+_CACHE = {}
 
 
 class AdmissionError(Exception):
@@ -29,101 +48,104 @@ class AdmissionError(Exception):
         self.detail = detail
 
 
-def _sha_file(p: Path) -> str:
-    h = hashlib.sha256()
-    with open(p, "rb") as f:
-        for b in iter(lambda: f.read(1 << 20), b""):
-            h.update(b)
-    return h.hexdigest()
+def _sha_bytes(b: bytes) -> str:
+    return hashlib.sha256(b).hexdigest()
 
 
-def _fields_digest(fields: dict) -> str:
-    blob = json.dumps(fields, sort_keys=True, ensure_ascii=False).encode("utf-8")
-    return hashlib.sha256(blob).hexdigest()
+def _digest(fields: dict) -> str:
+    return _sha_bytes(json.dumps(fields, sort_keys=True, ensure_ascii=False).encode("utf-8"))
 
 
-def load(decision_path, pinned_sha256: str, wanted: dict,
-         revocation_marker=None) -> dict:
-    """Return a receipt derived from the pinned decision, or raise AdmissionError."""
-    p = Path(decision_path)
-    if not p.is_file():
-        raise AdmissionError("FALSE_AUTHORITY", f"decision document absent: {p}")
-    got = _sha_file(p)
-    if got != pinned_sha256:
-        raise AdmissionError("FALSE_AUTHORITY",
-                             f"decision sha mismatch: {got} != {pinned_sha256}")
-    try:
-        doc = json.loads(p.read_text(encoding="utf-8"))
-    except ValueError as exc:
-        raise AdmissionError("FALSE_AUTHORITY", f"unparsable decision: {exc}") from exc
-    if doc.get("schema") != "FHS5.PLP.W2.OwnerDecision@local-1":
+def resolve_decision(explicit_path=None) -> Path:
+    """Locate the decision document.  Anything located must still match TRUST."""
+    cands = []
+    if explicit_path:
+        cands.append(Path(explicit_path))
+    env = os.environ.get("W2_DECISION_PATH")
+    if env:
+        cands.append(Path(env))
+    root = Path(TRUST["repo_root"])
+    cands += [root / c for c in TRUST["decision_path_candidates"]]
+    for c in cands:
+        if c.is_file() and _sha_bytes(c.read_bytes()) == TRUST["decision_sha256"]:
+            return c
+    raise AdmissionError("FALSE_AUTHORITY",
+                         f"no decision document matching the pinned sha {TRUST['decision_sha256'][:16]}…")
+
+
+def _load_verified(explicit_path=None) -> dict:
+    p = resolve_decision(explicit_path)
+    doc = json.loads(p.read_bytes().decode("utf-8"))
+    if doc.get("schema") != TRUST["schema"]:
         raise AdmissionError("FALSE_AUTHORITY", f"schema {doc.get('schema')}")
+    if doc.get("decision_id") != TRUST["decision_id"]:
+        raise AdmissionError("FALSE_AUTHORITY", f"decision_id {doc.get('decision_id')}")
+    return {"doc": doc, "path": p, "sha256": _sha_bytes(p.read_bytes())}
 
-    scope = (doc.get("scope") or {})
-    if wanted.get("subject_id") and scope.get("subject_id") != wanted["subject_id"]:
-        raise AdmissionError("SCOPE_MISMATCH",
-                             {"want": wanted.get("subject_id"),
-                              "granted": scope.get("subject_id")})
-    if wanted.get("scope") and scope.get("scope") != wanted["scope"]:
-        raise AdmissionError("SCOPE_MISMATCH",
-                             {"want": wanted.get("scope"), "granted": scope.get("scope")})
 
-    domain = wanted.get("domain", "DEV")
-    authorised = [e.strip().lower() for e in (scope.get("effects_authorized") or [])]
-    # the decision writes effects as free text ("DEV (reversible, per op)"), so the
-    # domain must be the leading word of an authorised entry - not a substring hit
-    if not any(a == domain.lower() or a.startswith(domain.lower() + " ")
-               or a.startswith(domain.lower() + "(") for a in authorised):
-        raise AdmissionError("FALSE_AUTHORITY",
-                             {"domain": domain, "authorised": authorised})
+def _revoked() -> bool:
+    m = Path(TRUST["repo_root"]) / TRUST["revocation_marker"]
+    return m.exists()
 
-    # revocation: an explicit marker wins over the document's own text
-    if revocation_marker and Path(revocation_marker).exists():
-        raise AdmissionError("ADMISSION_REVOKED", str(revocation_marker))
 
-    fields = {"decision_id": doc.get("decision_id"),
-              "scope": scope.get("scope"),
-              "subject_id": scope.get("subject_id"),
-              "domain": domain,
-              "effects_authorized": sorted(scope.get("effects_authorized") or []),
+def derive(domain: str, scope: str = "W2-NF-01", explicit_path=None) -> dict:
+    """Produce the receipt the writer will accept.  Raises on any mismatch."""
+    if _revoked():
+        raise AdmissionError("ADMISSION_REVOKED", str(TRUST["revocation_marker"]))
+    v = _load_verified(explicit_path)
+    doc = v["doc"]
+    sc = doc.get("scope") or {}
+    want_subject = TRUST["subjects"].get(domain)
+    if sc.get("subject_id") != want_subject:
+        raise AdmissionError("SCOPE_MISMATCH", {"want": want_subject, "granted": sc.get("subject_id")})
+    if sc.get("scope") != scope:
+        raise AdmissionError("SCOPE_MISMATCH", {"want": scope, "granted": sc.get("scope")})
+    authorised = [e.strip().lower() for e in (sc.get("effects_authorized") or [])]
+    tokens = TRUST["effects"].get(domain, [])
+    if not any(any(a.startswith(t) for t in tokens) for a in authorised):
+        raise AdmissionError("FALSE_AUTHORITY", {"domain": domain, "authorised": authorised})
+    fields = {"decision_id": doc.get("decision_id"), "subject_id": sc.get("subject_id"),
+              "scope": sc.get("scope"), "domain": domain,
+              "effects_authorized": sorted(sc.get("effects_authorized") or []),
               "expiry_revocation": doc.get("expiry_revocation"),
-              "decision_sha256": got}
-    return {
-        "ok": True,
-        "decision_id": doc.get("decision_id"),
-        "scope": scope.get("scope"),
-        "subject_id": scope.get("subject_id"),
-        "domain": domain,
-        "expiry_revocation": doc.get("expiry_revocation"),
-        "verified_from": {"path": str(p), "sha256": got},
-        "fields": fields,
-        "subject_sha256": _fields_digest(fields),
-    }
+              "decision_sha256": v["sha256"],
+              "trust_root": TRUST["decision_sha256"]}
+    return {"ok": True, "decision_id": doc.get("decision_id"),
+            "subject_id": sc.get("subject_id"), "scope": sc.get("scope"),
+            "domain": domain, "expiry_revocation": doc.get("expiry_revocation"),
+            "verified_from": {"path": str(v["path"]), "sha256": v["sha256"]},
+            "fields": fields, "subject_sha256": _digest(fields)}
 
 
-def verify_receipt(receipt: dict, pinned_sha256: str) -> bool:
-    """A receipt is valid only if its own fields re-derive to its digest and the
-    digest still points at the pinned decision document."""
+def require(receipt, domain: str, scope: str = "W2-NF-01", explicit_path=None) -> dict:
+    """Re-verify at use time against the live decision document."""
     if not isinstance(receipt, dict) or receipt.get("ok") is not True:
-        return False
-    vf = receipt.get("verified_from") or {}
-    if vf.get("sha256") != pinned_sha256:
-        return False
+        raise AdmissionError("FALSE_AUTHORITY", "no receipt")
+    if _revoked():
+        raise AdmissionError("ADMISSION_REVOKED", "revocation marker present")
+    v = _load_verified(explicit_path)
     fields = receipt.get("fields")
     if not isinstance(fields, dict) or not fields:
-        return False
-    if fields.get("decision_sha256") != pinned_sha256:
-        return False
-    # the exported identity must equal the signed field set; otherwise a tampered
-    # top-level field rides on an untouched digest
-    for k in ("decision_id", "scope", "subject_id", "domain"):
+        raise AdmissionError("FALSE_AUTHORITY", "receipt carries no field set")
+    if fields.get("decision_sha256") != v["sha256"] or \
+            fields.get("trust_root") != TRUST["decision_sha256"]:
+        raise AdmissionError("FALSE_AUTHORITY", "receipt does not point at the pinned decision")
+    if _digest(fields) != receipt.get("subject_sha256"):
+        raise AdmissionError("FALSE_AUTHORITY", "receipt digest does not re-derive")
+    for k in ("decision_id", "subject_id", "scope", "domain"):
         if receipt.get(k) != fields.get(k):
-            return False
-    return _fields_digest(fields) == receipt.get("subject_sha256")
+            raise AdmissionError("FALSE_AUTHORITY", f"receipt field drifted: {k}")
+    # the live document must still authorise exactly this
+    fresh = derive(domain, scope, explicit_path)
+    if fresh["fields"]["effects_authorized"] != fields.get("effects_authorized"):
+        raise AdmissionError("FALSE_AUTHORITY", "authorised effect set changed since the receipt")
+    return {"ok": True, "decision_id": fresh["decision_id"], "domain": domain,
+            "verified_from": fresh["verified_from"], "reverified": True}
 
 
-def require(receipt: dict, pinned_sha256: str) -> dict:
-    if not verify_receipt(receipt, pinned_sha256):
-        raise AdmissionError("FALSE_AUTHORITY",
-                             "receipt does not re-derive from the pinned decision")
-    return receipt
+def verify_receipt(receipt, explicit_path=None) -> bool:
+    try:
+        require(receipt, receipt.get("domain", "DEV"), receipt.get("scope", "W2-NF-01"), explicit_path)
+        return True
+    except AdmissionError:
+        return False

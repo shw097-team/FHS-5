@@ -70,22 +70,19 @@ def check(asserted: dict, repo_root, write_set: list) -> dict:
         return _decision(checks, token["v"], repo, None)
     ok("effect_token", effect)
 
-    # 2 admission: a caller dict is not a grant. Under strict mode the gate
-    #    requires a receipt that re-derives from the hash-pinned Owner decision.
+    # 2 admission: a PROTECTED WRITE always requires a receipt that re-derives
+    #    from the module-level trust root. There is no caller-selectable bypass:
+    #    the request cannot pass a flag, pin or decision path that disables this.
+    #    READ/DRAFT work uses check_readonly() instead of this function.
     adm = asserted.get("admission") or {}
-    strict = bool(asserted.get("require_verified_admission"))
-    if strict:
-        try:
-            import w2_admission as ADM
-            pin = asserted.get("admission_pin")
-            ADM.require(adm, pin)
-            ok("admission", f"receipt verified against pinned decision {pin[:12]}")
-        except Exception as exc:  # noqa: BLE001
-            fail("admission", "FALSE_AUTHORITY", str(exc)[:200])
-    elif not adm.get("decision_id") or adm.get("expired") is True:
-        fail("admission", "FALSE_AUTHORITY", adm)
-    else:
-        ok("admission", adm.get("decision_id"))
+    try:
+        import w2_admission as ADM
+        _domain = "OPS" if str(asserted.get("domain", "")).upper() == "OPS" else "DEV"
+        ADM.require(adm, _domain, asserted.get("scope") or "W2-NF-01",
+                    asserted.get("decision_path"))
+        ok("admission", "receipt re-verified against the pinned decision at use time")
+    except Exception as exc:  # noqa: BLE001
+        fail("admission", "FALSE_AUTHORITY", str(exc)[:200])
 
     # 3 scope must match exactly
     want_scope = asserted.get("scope")
@@ -164,6 +161,16 @@ def check(asserted: dict, repo_root, write_set: list) -> dict:
         ok("recovery_kind", rec.get("kind"))
 
     return _decision(checks, token["v"], repo, preimages)
+
+
+def check_readonly(asserted: dict, repo_root) -> dict:
+    """READ/DRAFT path: no admission, and structurally unable to write."""
+    repo = Path(repo_root).resolve()
+    rc, live = _git(repo, "rev-parse", "HEAD")
+    checks = [{"check": "repo_head", "ok": rc == 0, "detail": live[:80]}]
+    return {"ok": rc == 0, "first_fail": None if rc == 0 else "REPO_UNBOUND",
+            "mode": "READ_ONLY", "writes_allowed": False,
+            "repo": str(repo), "checks": checks, "wrote": [], "product_calls": 0}
 
 
 def _decision(checks, first_fail, repo, preimages):

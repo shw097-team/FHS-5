@@ -1,0 +1,137 @@
+{
+  "schema": "FHS5.PLP.W2.S1Verification@1",
+  "rows": [
+    {
+      "case": "R1_untrusted_admission_refused",
+      "expected_first_fail": "FALSE_AUTHORITY",
+      "world_unchanged": true,
+      "verdict": "PASS",
+      "observed": {
+        "before": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        },
+        "after": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        }
+      }
+    },
+    {
+      "case": "R2_foreign_pin_receipt_refused",
+      "expected_first_fail": "FALSE_AUTHORITY",
+      "world_unchanged": true,
+      "verdict": "PASS",
+      "observed": {
+        "before": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        },
+        "after": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        }
+      }
+    },
+    {
+      "case": "R3_unknown_effect_refused",
+      "expected_first_fail": "EFFECT_UNBOUND",
+      "world_unchanged": true,
+      "verdict": "PASS",
+      "observed": {
+        "before": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        },
+        "after": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        }
+      }
+    },
+    {
+      "case": "R4_stale_preimage_refused",
+      "expected_first_fail": "WRITE_SET_UNBOUND",
+      "world_unchanged": true,
+      "verdict": "PASS",
+      "observed": {
+        "before": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        },
+        "after": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        }
+      }
+    },
+    {
+      "case": "R5_illegal_recovery_refused",
+      "expected_first_fail": "RECOVERY_KIND_MISMATCH",
+      "world_unchanged": true,
+      "verdict": "PASS",
+      "observed": {
+        "before": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        },
+        "after": {
+          "t": "e6fe8f9b85cff0880197477febc5c9e186f937a31871f51bfe50e838f6398109",
+          "other": "d3082ba10d581d1a2aed4ab6760a27c38118722cd3ed9ff79d88e8de3a65cd54",
+          "canary": "f764c2e27c223fa07e8a6e53f1754c0eaad7ac5eac6742a19c266e2561cd8bc1",
+          "git": ""
+        }
+      }
+    },
+    {
+      "case": "R6_bounded_write_succeeds",
+      "expected_first_fail": null,
+      "world_unchanged": false,
+      "verdict": "PASS",
+      "observed": {
+        "applied": [
+          "t.py"
+        ],
+        "post_changed": true,
+        "unlisted_unchanged": true,
+        "canary_unchanged": true,
+        "reverse_restored": true
+      }
+    },
+    {
+      "case": "R7_j1_negative_zero_calls_zero_write",
+      "expected_first_fail": "FAKE_GRANT",
+      "world_unchanged": true,
+      "verdict": "PASS",
+      "observed": {
+        "accepted": false,
+        "first_fail": "FAKE_GRANT",
+        "product_calls": 0,
+        "delivery_unchanged": true
+      }
+    }
+  ],
+  "counts": {
+    "PASS": 7,
+    "FAIL": 0
+  },
+  "note": "each refusal row compares world state before/after; canary is outside the write set"
+}
