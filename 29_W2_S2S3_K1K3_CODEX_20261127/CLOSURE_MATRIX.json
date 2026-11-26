@@ -1,0 +1,109 @@
+{
+ "schema": "FHS5.PLP.W2.ClosureMatrix@3",
+ "rows": [
+  {
+   "case": "W2-DEV-01",
+   "kind": "REUSE",
+   "verdict": "PASS_AT_FIXTURE_SCOPE",
+   "evidence": "26_/STAGE2 APPLY/REVERSE"
+  },
+  {
+   "case": "W2-DEV-02",
+   "kind": "REUSE",
+   "verdict": "PASS_AT_FIXTURE_SCOPE",
+   "evidence": "S8 preimage drift / S9 head mismatch"
+  },
+  {
+   "case": "W2-OPS-01",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "PASS",
+   "evidence": "O01-O06 raws"
+  },
+  {
+   "case": "W2-OPS-02",
+   "kind": "REUSE",
+   "verdict": "PARTIAL",
+   "evidence": "O05 delete-only + S10; pre-existing restore not exercised"
+  },
+  {
+   "case": "W2-EFFECT-01",
+   "kind": "REUSE",
+   "verdict": "PASS",
+   "evidence": "S7 unknown effect + WRITE_NOT_AUTHORISED"
+  },
+  {
+   "case": "W2-AUTH-01",
+   "kind": "REUSE",
+   "verdict": "PARTIAL",
+   "evidence": "S1-S5/S11-S12 + revoked gen-1; same OS principal"
+  },
+  {
+   "case": "W2-RUNNER-01",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "PASS",
+   "evidence": "O03/O04 child argv/exit/raw"
+  },
+  {
+   "case": "W2-DELTA-01",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "PASS",
+   "evidence": "J2_NINEKEYS 7/7"
+  },
+  {
+   "case": "W2-R3-01",
+   "kind": "NOT_VERIFIED",
+   "verdict": "NOT_VERIFIED",
+   "evidence": "13+3 wiring historical"
+  },
+  {
+   "case": "W2-R3-02",
+   "kind": "NOT_VERIFIED",
+   "verdict": "NOT_VERIFIED",
+   "evidence": "G4 isolation historical"
+  },
+  {
+   "case": "W2-R3-03",
+   "kind": "REUSE",
+   "verdict": "PARTIAL",
+   "evidence": "S8 stale preimage; missing-preimage negative absent"
+  },
+  {
+   "case": "W2-R3-04",
+   "kind": "REUSE",
+   "verdict": "REUSE_NOT_RERUN",
+   "evidence": "318/317 ledger"
+  },
+  {
+   "case": "J1",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "PASS",
+   "evidence": "J1-T01..T08 + O03 118"
+  },
+  {
+   "case": "J2",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "PASS",
+   "evidence": "J2-T01..T07"
+  },
+  {
+   "case": "J3",
+   "kind": "RERUN_THIS_ROUND",
+   "verdict": "ON_OFF_BOTH_SEMANTIC_SUCCESS",
+   "evidence": "J3_ONOFF"
+  },
+  {
+   "case": "N01-N12",
+   "kind": "NOT_VERIFIED",
+   "verdict": "NOT_VERIFIED",
+   "evidence": "not run as a set"
+  }
+ ],
+ "counts": {
+  "PASS_AT_FIXTURE_SCOPE": 2,
+  "PASS": 6,
+  "PARTIAL": 3,
+  "NOT_VERIFIED": 3,
+  "REUSE_NOT_RERUN": 1,
+  "ON_OFF_BOTH_SEMANTIC_SUCCESS": 1
+ }
+}

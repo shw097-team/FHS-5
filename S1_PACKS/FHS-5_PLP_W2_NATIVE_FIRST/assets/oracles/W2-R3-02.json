@@ -1,0 +1,34 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-R3-02",
+  "kind": "NEG",
+  "pass_predicate": "reported_NOT_ADMITTED and G4 not counted as W2 effect or License Fit",
+  "required_observations": [
+    "g4_bytes",
+    "tests_reported",
+    "admission_decision"
+  ],
+  "expected_tokens": [
+    "NOT_ADMITTED"
+  ],
+  "forbidden_tokens": [
+    "G4_AS_W2_EFFECT",
+    "G4_AS_LICENSE_FIT"
+  ],
+  "fail_if": [
+    "G4 admitted",
+    "G4 counted as W2 pass"
+  ],
+  "raw_schema": [
+    "g4_pins",
+    "decision_receipt"
+  ],
+  "not_covered": [
+    "G4 domain"
+  ]
+}

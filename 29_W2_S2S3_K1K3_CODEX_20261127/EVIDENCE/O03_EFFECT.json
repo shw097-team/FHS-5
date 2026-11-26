@@ -1,0 +1,46 @@
+{
+ "op": "OPS-O03",
+ "argv": [
+  "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "ops_receive.py",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\18_W1_NF_CODEX_20261126T000627",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out\\20261127T000949_O03",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\evidence\\O03_RECEIPT.json"
+ ],
+ "cwd": "C:\\Users\\user\\Documents\\Codex\\2026-11-26\\new-chat-12",
+ "exit": 0,
+ "seconds": 0.98,
+ "stdout": "{\"accepted\": true, \"first_fail\": null, \"product_calls\": {\"build_contracts\": 1, \"seam_wiring\": 1}, \"verified_entries\": 118}\n",
+ "stderr": "",
+ "stdout_sha256": "28a0dfbaa5ae250592add50c9494b60e11250e866ca2ab6a46bb47c7a78fb756",
+ "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "inventory": {
+  "material_copy/00_W2_DRAFT_PI_PD.md": {
+   "sha256": "7bc31a0b367a27edc58249e42bceb0f751a6b6ca165fe658c4253fb13f5d4bc6",
+   "bytes": 888
+  },
+  "material_copy/03_W2_DRAFT_TQAEP.md": {
+   "sha256": "bd097852eb2d2463e00af8841d224f9df7015dc79c6f0f976e8197827f47411c",
+   "bytes": 1831
+  },
+  "material_copy/04_W2_DRAFT_THIN.md": {
+   "sha256": "b30008a1ce1a40eb2f0a369470b8ff86d8fa0a83f432f228794d5330b5415ad1",
+   "bytes": 326
+  },
+  "material_copy/05_W2_SOURCE_MANIFEST.json": {
+   "sha256": "c251ebc0f9ad292fa08511991488b988a92ac1b82a150da3a492aed4d401bfa8",
+   "bytes": 4611
+  },
+  "material_copy/_off_native.py": {
+   "sha256": "d5d95c878a56809f1de0f7cde474432ca76c845a15223e11f5d4bf68d88106e8",
+   "bytes": 1000
+  },
+  "material_copy/context_bundle.md": {
+   "sha256": "2d7df9c3f49f0f1fc5516c170552baeef2617fbbf5d0261e2f678d0a9c13c232",
+   "bytes": 10788
+  }
+ },
+ "inventory_count": 6,
+ "post_world_sha256": "cb58f92db16597009746b35bd36b5cd63f8e1852cd1cecc3b7bd0f5fb9f0d8a5"
+}

@@ -35,3 +35,12 @@ def resolve_pack(root: Path | None = None) -> Path:
         if (cand / "05_W1_SOURCE_MANIFEST.json").is_file():
             return cand
     raise RuntimeError(f"{TOKEN}: no repo-relative W1 pack; set W1_PACK")
+
+
+def resolve_s1_pack(wave: str, root: Path | None = None) -> Path:
+    """Adopted S1 pack for a wave; never falls back to an NF pack."""
+    here = (root or Path(__file__).resolve().parents[2])
+    p = here / "S1_PACKS" / f"FHS-5_PLP_{wave}_NATIVE_FIRST"
+    if not (p / f"05_{wave}_SOURCE_MANIFEST.json").is_file():
+        raise RuntimeError(f"S1_PACK_NOT_LOCATABLE: {wave}")
+    return p

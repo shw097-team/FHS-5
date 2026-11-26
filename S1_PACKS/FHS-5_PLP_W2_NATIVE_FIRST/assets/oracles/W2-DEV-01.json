@@ -1,0 +1,52 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-DEV-01",
+  "kind": "POS",
+  "pass_predicate": "all(applicable predicates) and identity_valid and raw_replayable",
+  "required_observations": [
+    "repo_root_head_dirty_untracked",
+    "per_target_preimage_or_absence",
+    "actual_write_set_equals_fixture",
+    "actual_write_set_equals_ecp_5_1",
+    "per_target_post_sha_or_absence",
+    "affected_test_argv_exit_stdout_stderr",
+    "reverse_patch_dry_check_apply",
+    "preimage_readback_after_reverse",
+    "unlisted_targets_unchanged"
+  ],
+  "expected_tokens": [
+    "DEV_VERIFIED",
+    "REVERSE_RESTORED"
+  ],
+  "forbidden_tokens": [
+    "PASS_WITHOUT_READBACK",
+    "GIT_DIFF_ONLY",
+    "NONEMPTY_DICT_PASS"
+  ],
+  "fail_if": [
+    "caller_head != live_head",
+    "write set differs",
+    "any unlisted target changed",
+    "test exit 0 but semantic missing",
+    "reverse cannot restore preimage",
+    "write set contains an unlisted or G4-analogue path",
+    "a delete target appears that 01 §5.1 does not authorise"
+  ],
+  "raw_schema": [
+    "repo_pre",
+    "patch_diff",
+    "post_hashes",
+    "test_raw",
+    "reverse_raw",
+    "readback_raw"
+  ],
+  "not_covered": [
+    "original-domain DEV ECP",
+    "W3/W4"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "schema": "FHS5.PLP.S1.PackSeal@1",
+  "wave": "W1",
+  "candidate": "W1-S1-r2-CODEX-PRIMARY",
+  "artifact_id": "FHS5-PLP/W1/CONTROL_PACK/2026-11-26-s1-r2",
+  "sealed_at": "2026-11-26T22:20:00+08:00",
+  "manifest": {
+    "path": "01_BODY/FHS-5_PLP_W1_NATIVE_FIRST/05_W1_SOURCE_MANIFEST.json",
+    "bytes": 16876,
+    "sha256": "d1c741533bea41b8d786ec870b6f66323739a65ebdafd241545dc4afa9dff28c"
+  },
+  "pack_files": [
+    {
+      "path": "00_W1_PI_PD.md",
+      "bytes": 41886,
+      "sha256": "b0c4a260d272168b277d18b4ba3c17c07eb8821e0314e6d7298b202f37a7d42a",
+      "lines": 429
+    },
+    {
+      "path": "01_W1_DEV_ECP.md",
+      "bytes": 24767,
+      "sha256": "c20cf0f1cc8af8138e04ae3f9c01b16dc6aa6cadc9bb1f2a544166564147e2e9",
+      "lines": 263
+    },
+    {
+      "path": "02_W1_OPS_ECP.md",
+      "bytes": 15457,
+      "sha256": "49c625632a8eb5cfd82fab0ec7b68411011a5222b3fcdb9a12fda3254aa0600f",
+      "lines": 161
+    },
+    {
+      "path": "03_W1_TQAEP.md",
+      "bytes": 23508,
+      "sha256": "36dc623a45c313f5751e7173054fb2d22b818251f4e396c26de4abf1dc965cfc",
+      "lines": 267
+    },
+    {
+      "path": "04_W1_START_THIN_PROMPT.md",
+      "bytes": 4547,
+      "sha256": "c92e2cc0510c8b7d225513a588ce4c2eeb115d2ba009281356a012fa3413e03c",
+      "lines": 67
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/fixtures/W1-ABI-01.json",
+      "bytes": 822,
+      "sha256": "a0e18b8bfabc41c97d7b2ab368cbda5e6e310d35fd2713cbde4e62868b4de196"
+    },
+    {
+      "path": "assets/fixtures/W1-ABI-02.json",
+      "bytes": 800,
+      "sha256": "9a62f6d1912f1ebf707202882c47916f4e9bcae1420a820fa031358a022f9ae6"
+    },
+    {
+      "path": "assets/fixtures/W1-API-01.json",
+      "bytes": 768,
+      "sha256": "5d94e2ddb9cce903900b66ba55e03cf434d899eab321914c0d87ce0817bf0745"
+    },
+    {
+      "path": "assets/fixtures/W1-HERMES-01.json",
+      "bytes": 776,
+      "sha256": "8f9f784917c312770e052406e59e06aa7cc35296e176fe06cdd8ba7cd730d79a"
+    },
+    {
+      "path": "assets/fixtures/W1-HOST-01.json",
+      "bytes": 769,
+      "sha256": "168aa72567745ebce907c951076323fd2db527e35502ec1ed912f309632a3fda"
+    },
+    {
+      "path": "assets/fixtures/W1-HOST-02.json",
+      "bytes": 786,
+      "sha256": "9159143898ac741d8726390d60e776d3065ab40e7cfd3d48027d861c6f5ccea9"
+    },
+    {
+      "path": "assets/fixtures/W1-HOST-03.json",
+      "bytes": 739,
+      "sha256": "1d7de26b5528bf6819d9647d52cc54e6c40c1b9adafb752f216422e6d41cc1a6"
+    },
+    {
+      "path": "assets/fixtures/W1-R3-01.json",
+      "bytes": 796,
+      "sha256": "c786785e330bf09060b60fe9e8767f637345331f51ab512f1e00a59d210d54bf"
+    },
+    {
+      "path": "assets/fixtures/W1-R3-02.json",
+      "bytes": 744,
+      "sha256": "52a2009c258c18faa016c8a4a813ca6ac10c2f3b8dc9dcdb60064ed5be0c5f3d"
+    },
+    {
+      "path": "assets/fixtures/W1-R3-03.json",
+      "bytes": 879,
+      "sha256": "066909b9f3228bca6064a0e4437e3e06183b2e63806ab6653a2323038e0a42ba"
+    },
+    {
+      "path": "assets/fixtures/W1-R3-04.json",
+      "bytes": 802,
+      "sha256": "c6cc18e9c9459f3d7ee260973cb8a4d95d246685ece659675b443120c2534a36"
+    },
+    {
+      "path": "assets/fixtures/W1-R3-05.json",
+      "bytes": 769,
+      "sha256": "59552d7790f88b818f79883d42a5894dfc8a295b80957c5d2eff06ce3f592da2"
+    },
+    {
+      "path": "assets/fixtures/W1-SEC-01.json",
+      "bytes": 774,
+      "sha256": "3a0c56efde4454937375624e485e92f975f68e4862d10b9de4bc8e7c5ab0fc67"
+    },
+    {
+      "path": "assets/oracles/W1-ABI-01.json",
+      "bytes": 565,
+      "sha256": "09e608cd0fae844eac6caac5e5ed5d8f100b1ef484c9f1d21066305865867f19"
+    },
+    {
+      "path": "assets/oracles/W1-ABI-02.json",
+      "bytes": 549,
+      "sha256": "ea236a6629f8f12222f5d90140a9d2362488b8449da998b4f1d6f1ed6ec90c2f"
+    },
+    {
+      "path": "assets/oracles/W1-API-01.json",
+      "bytes": 520,
+      "sha256": "0d3c5e3256dd4c6cfba30788c5c875222efa0fea50b5d1f842f09fd01ef97443"
+    },
+    {
+      "path": "assets/oracles/W1-HERMES-01.json",
+      "bytes": 524,
+      "sha256": "101103bdcc2475558c02de4162efb5e10a93aa729db8a4b5e4315d928be9edbf"
+    },
+    {
+      "path": "assets/oracles/W1-HOST-01.json",
+      "bytes": 512,
+      "sha256": "c92846be150cfcfbd9400e5bf23d50ad73b1ca897d10e921ad3120e387573e68"
+    },
+    {
+      "path": "assets/oracles/W1-HOST-02.json",
+      "bytes": 551,
+      "sha256": "0af129228279a3b0fa80bd00a696175c6aa649ac7ad2e5f239b434ae0ffaa9fe"
+    },
+    {
+      "path": "assets/oracles/W1-HOST-03.json",
+      "bytes": 545,
+      "sha256": "f91f4fbb09a9c66c2f6f6aee9848f9774bc98d3a1c9195c48c6d95aabb55cf6f"
+    },
+    {
+      "path": "assets/oracles/W1-R3-01.json",
+      "bytes": 519,
+      "sha256": "6f256ac33dafe2a7c21d7cb5a39c099578ba60427d03d280c6923277877d4be3"
+    },
+    {
+      "path": "assets/oracles/W1-R3-02.json",
+      "bytes": 543,
+      "sha256": "6c3b0182b44a2fc850eac9773c85047fb7ba38aae9b533bf04228c5677853aac"
+    },
+    {
+      "path": "assets/oracles/W1-R3-03.json",
+      "bytes": 557,
+      "sha256": "ce7e1e2092f85091bf9e95337092de7af4b1df8e1e81e1718815007df5ed6caa"
+    },
+    {
+      "path": "assets/oracles/W1-R3-04.json",
+      "bytes": 560,
+      "sha256": "b8321db4c322bff2e04baf85d914aa4b4a5360c669987ccb5aeebf8e0aa13eda"
+    },
+    {
+      "path": "assets/oracles/W1-R3-05.json",
+      "bytes": 557,
+      "sha256": "1c6ccd0a53d14f40058fef76ee51d89762c00290280333e3b452c37d43f10b45"
+    },
+    {
+      "path": "assets/oracles/W1-SEC-01.json",
+      "bytes": 568,
+      "sha256": "284675cc464e870b419ffe5e5cec54a9a252cffcf5238b32c020d5b5b45fc82d"
+    }
+  ],
+  "pack_tree_sha256": "593314d503a162caea4c05dc263cd6e68511cfe5b70446043560bc757347d18f",
+  "algorithm": "sha256 over sorted UTF-8 lines 'path|bytes|sha256' (LF, no trailing LF) for the 5 pack files; 05 and seals are external",
+  "adoption": {
+    "decision_id": "S1-W0W2-CODEX-ADOPT-20261126-01",
+    "record": "02_EVIDENCE/seals/S1_ADOPTION_RECORD.json",
+    "record_sha256": "831ebcaecf47ecd0fa8c484bd816179b4ee394d512dca4ab1b92162b76d23c81"
+  },
+  "review_results": "02_EVIDENCE/S1_CODEX_REVIEW_RESULTS.json",
+  "self_hash": "EXTERNAL_RECORD_ONLY"
+}

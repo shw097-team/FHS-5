@@ -1,0 +1,42 @@
+{
+ "op": "OPS-O01",
+ "host": {
+  "principal": {
+   "argv": [
+    "whoami"
+   ],
+   "exit": 0,
+   "stdout": "desktop-57eo414\\user"
+  },
+  "python": {
+   "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "--version"
+   ],
+   "exit": 0,
+   "stdout": "Python 3.11.9"
+  },
+  "git": {
+   "argv": [
+    "git",
+    "--version"
+   ],
+   "exit": 0,
+   "stdout": "git version 2.53.0.windows.1"
+  },
+  "computer": {
+   "argv": [
+    "cmd",
+    "/c",
+    "echo %COMPUTERNAME%"
+   ],
+   "exit": 0,
+   "stdout": "DESKTOP-57EO414"
+  },
+  "policy_epoch": "NOT_DECLARED_BY_HOST",
+  "receiver": "W1/check/w2_receiver.py:receive",
+  "os": "nt",
+  "observed_at": "2026-11-27T00:09:49+08:00"
+ },
+ "host_id_ref": "DESKTOP-57EO414"
+}

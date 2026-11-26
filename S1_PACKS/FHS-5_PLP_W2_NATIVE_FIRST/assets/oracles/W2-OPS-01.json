@@ -1,0 +1,47 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-OPS-01",
+  "kind": "POS",
+  "pass_predicate": "host_identity_valid and pre_world and post_world_expected and receiver_consumed and host_specific_recovery_readback",
+  "required_observations": [
+    "host_id_principal_epoch_receiver",
+    "pre_world_raw_sha",
+    "atomic_effect_argv_exit",
+    "post_world_raw_sha",
+    "receiver_parse_use_readback",
+    "compensation_argv_kind",
+    "pre_state_readback"
+  ],
+  "expected_tokens": [
+    "OPS_VERIFIED",
+    "RECOVERED_PRE_STATE"
+  ],
+  "forbidden_tokens": [
+    "GIT_REVERT_USED",
+    "EXIT0_ONLY",
+    "NONEMPTY_PASS"
+  ],
+  "fail_if": [
+    "wrong principal/epoch",
+    "post world mismatch",
+    "receiver not consumed",
+    "recovery not host-specific"
+  ],
+  "raw_schema": [
+    "host_pre",
+    "receiver_raw",
+    "world_pre",
+    "world_post",
+    "compensation_raw",
+    "readback_raw"
+  ],
+  "not_covered": [
+    "other Hosts",
+    "W3/W4"
+  ]
+}

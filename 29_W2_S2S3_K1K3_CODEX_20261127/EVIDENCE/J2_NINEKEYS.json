@@ -1,0 +1,85 @@
+{
+ "schema": "FHS5.PLP.W2S3.J2NineKeys@1",
+ "nine_keys_before": {
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "source_sha": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b",
+  "repo_head": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+  "host_id": "DESKTOP-57EO414",
+  "policy_epoch": "NOT_DECLARED_BY_HOST",
+  "oracle_sha": "6f465b0ee1e03681370ce89c94559ad2ba692a1478ad5ffcb4b46f96bdf50f53",
+  "world_raw_sha": "05b25d92aaca5455a756d4d368fd2134ef8a76e861644505a0a370cdc2c489b6",
+  "first_fail": "NONE"
+ },
+ "nine_keys_after": {
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "source_sha": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b",
+  "repo_head": "9afbcb2e4839bceb3edc8aab0da99e3b0aa0d3c2",
+  "host_id": "DESKTOP-57EO414",
+  "policy_epoch": "NOT_DECLARED_BY_HOST",
+  "oracle_sha": "6f465b0ee1e03681370ce89c94559ad2ba692a1478ad5ffcb4b46f96bdf50f53",
+  "world_raw_sha": "bfa8f06e307244616c470deda9dc70c1e0fbcb9fdeb26dffc23ee01073204e07",
+  "first_fail": "NONE"
+ },
+ "changed_keys": [
+  "repo_head",
+  "world_raw_sha"
+ ],
+ "rows": [
+  {
+   "case": "J2-T01_real_delta",
+   "expected": "NEW_MATERIAL_EVIDENCE",
+   "observed": "NEW_MATERIAL_EVIDENCE",
+   "verdict": "PASS",
+   "detail": [
+    "repo_head",
+    "world_raw_sha"
+   ]
+  },
+  {
+   "case": "J2-T02_same_is_park",
+   "expected": "PARK_NO_DELTA",
+   "observed": "PARK_NO_DELTA",
+   "verdict": "PASS",
+   "detail": []
+  },
+  {
+   "case": "J2-T03_missing_period",
+   "expected": "DELTA_UNVERIFIED",
+   "observed": "DELTA_UNVERIFIED",
+   "verdict": "PASS",
+   "detail": []
+  },
+  {
+   "case": "J2-T04_caller_boolean",
+   "expected": "DELTA_UNVERIFIED",
+   "observed": "DELTA_UNVERIFIED",
+   "verdict": "PASS",
+   "detail": []
+  },
+  {
+   "case": "J2-T05_verifier_not_verified",
+   "expected": "DELTA_UNVERIFIED",
+   "observed": "DELTA_UNVERIFIED",
+   "verdict": "PASS",
+   "detail": []
+  },
+  {
+   "case": "J2-T06_subject_change",
+   "expected": "NEW_SUBJECT_REVIEW_REQUIRED",
+   "observed": "NEW_SUBJECT_REVIEW_REQUIRED",
+   "verdict": "PASS",
+   "detail": []
+  },
+  {
+   "case": "J2-T07_non_callable_verifier",
+   "expected": "DELTA_UNVERIFIED",
+   "observed": "DELTA_UNVERIFIED",
+   "verdict": "PASS",
+   "detail": []
+  }
+ ],
+ "failed": [],
+ "verdict": "PASS"
+}

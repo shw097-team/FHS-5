@@ -1,0 +1,35 @@
+{
+ "ok": true,
+ "decision_id": "W2-S2S3-OWNER-20261127-03",
+ "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+ "scope": "W2-NF-01",
+ "domain": "OPS",
+ "targets": [
+  {
+   "path": "20261127T000949_O03",
+   "operation": "CREATE",
+   "absolute": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out\\20261127T000949_O03"
+  }
+ ],
+ "verified_from": {
+  "decision": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\W1\\authority\\decisions\\OPS.json",
+  "sha256": "bbb7ab6529725475869acd0995b31c6023c023be4e1634d9d868569e433cc515",
+  "trust": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\W1\\authority\\trust.json",
+  "trust_sha256": "3aa3f9262c31af5c490657c3901e089ef37e6c5121f9846144bacadc70441b44"
+ },
+ "fields": {
+  "decision_id": "W2-S2S3-OWNER-20261127-03",
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "domain": "OPS",
+  "write_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_OPS\\out",
+  "targets": [
+   "20261127T000949_O03:CREATE"
+  ],
+  "decision_sha256": "bbb7ab6529725475869acd0995b31c6023c023be4e1634d9d868569e433cc515",
+  "trust_sha256": "3aa3f9262c31af5c490657c3901e089ef37e6c5121f9846144bacadc70441b44",
+  "expiry": "2026-11-27T23:59:59+08:00",
+  "generation": 2
+ },
+ "subject_sha256": "3ad9cba8d9254ba73068e75a98aac8dcd0c4c8e0364d99fe2a6b2c81e863eb51"
+}

@@ -61,7 +61,7 @@ for line in block.splitlines():
     rows.append([int(cells[0]), cells[1], cells[4], cells[6]])
 print(json.dumps({"ok": True, "rows": rows, "modules": sorted(
     m for m in sys.modules if m in ("tpm_contracts_nf", "guide_nf", "bridge_nf", "w2_inbound"))},
-    ensure_ascii=False))
+    ensure_ascii=True))
 '''
 
 

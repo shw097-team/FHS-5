@@ -1,0 +1,180 @@
+{
+  "schema": "FHS5.PLP.S1.PackSeal@1",
+  "wave": "W2",
+  "candidate": "W2-S1-r2-CODEX-PRIMARY",
+  "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+  "sealed_at": "2026-11-26T22:20:00+08:00",
+  "manifest": {
+    "path": "01_BODY/FHS-5_PLP_W2_NATIVE_FIRST/05_W2_SOURCE_MANIFEST.json",
+    "bytes": 17216,
+    "sha256": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b"
+  },
+  "pack_files": [
+    {
+      "path": "00_W2_PI_PD.md",
+      "bytes": 69222,
+      "sha256": "c83815061a7604ed6f276c6dba50b216e9dd96d0742f0c52ac86468d56d53e7c",
+      "lines": 726
+    },
+    {
+      "path": "01_W2_DEV_ECP.md",
+      "bytes": 25747,
+      "sha256": "698ffe006ec2b8a4dcf45ef24cd1a40f8d7f0360a1e647f509a83eb98310147b",
+      "lines": 383
+    },
+    {
+      "path": "02_W2_OPS_ECP.md",
+      "bytes": 23141,
+      "sha256": "58a34bfc1d4a57b5c878dca05edfbf6c32bc64c755a1592659affaa2777e5ddf",
+      "lines": 344
+    },
+    {
+      "path": "03_W2_TQAEP.md",
+      "bytes": 25938,
+      "sha256": "a539ab2ee57c20f413d657b09c7f8016e4c7074fae64c32abda15b71d540dfcc",
+      "lines": 420
+    },
+    {
+      "path": "04_W2_START_THIN_PROMPT.md",
+      "bytes": 5121,
+      "sha256": "45686eb470f8d790b8d37c748a3db7442492fdf270713ee3208d0badd042b8b4",
+      "lines": 82
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/cases/case_index.json",
+      "bytes": 6325,
+      "sha256": "b85ff62161fb8f2ed00a1884bd3b15a201327f0037eee701f8869212ebd46301"
+    },
+    {
+      "path": "assets/fixtures/W2-AUTH-01.json",
+      "bytes": 893,
+      "sha256": "80502748eece6d9619adb03228740f04f60dfe3fc918b22f75d19520d99045fa"
+    },
+    {
+      "path": "assets/fixtures/W2-DELTA-01.json",
+      "bytes": 3521,
+      "sha256": "cb61b06f00559edcfa4d8fbc43c6fa812d4aa3cb1e19c65b1d5dac1bfe5e07ca"
+    },
+    {
+      "path": "assets/fixtures/W2-DEV-01.json",
+      "bytes": 3380,
+      "sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001"
+    },
+    {
+      "path": "assets/fixtures/W2-DEV-02.json",
+      "bytes": 940,
+      "sha256": "99f910663b7f85afc598b5e84a91f2707d9181c386367195120ac5bf04a2e6b6"
+    },
+    {
+      "path": "assets/fixtures/W2-EFFECT-01.json",
+      "bytes": 821,
+      "sha256": "3492f8cc0b774dbc5c6db301a08fc1efc4d3ed55045d7e856415f286a5b8ec57"
+    },
+    {
+      "path": "assets/fixtures/W2-OPS-01.json",
+      "bytes": 1492,
+      "sha256": "03494b3cca8e229064cfc98a791b18cea478a3cbc602a9f6dd6707608d463f17"
+    },
+    {
+      "path": "assets/fixtures/W2-OPS-02.json",
+      "bytes": 834,
+      "sha256": "168e857025f505fb2fc9b56a5391f2e89d605fe0e9f72742c9093e1ed952b055"
+    },
+    {
+      "path": "assets/fixtures/W2-R3-01.json",
+      "bytes": 3032,
+      "sha256": "5c721f1524cbdb1f63496773444b1e0f2535ea9cb082c067ec854aa696f98ca2"
+    },
+    {
+      "path": "assets/fixtures/W2-R3-02.json",
+      "bytes": 1124,
+      "sha256": "9867a71507bc5d1e4a6ee1d4bcb02b6d10c6cad37af78623a7aa67660b72d632"
+    },
+    {
+      "path": "assets/fixtures/W2-R3-03.json",
+      "bytes": 978,
+      "sha256": "8566b623ab3d16134e7e5461bf31e7b26a1087395103841e815c6fa3cfc51b2e"
+    },
+    {
+      "path": "assets/fixtures/W2-R3-04.json",
+      "bytes": 837,
+      "sha256": "7c8ba861cbce7c5d92d4683005d4d8202c0907f89e65b3e7a88e759eb976c81e"
+    },
+    {
+      "path": "assets/fixtures/W2-RUNNER-01.json",
+      "bytes": 768,
+      "sha256": "7ea614b4f40f32c0bbff0964faca0229270e623cd8cec38ec9057b0fe6915ea9"
+    },
+    {
+      "path": "assets/oracles/W2-AUTH-01.json",
+      "bytes": 880,
+      "sha256": "6365e89546a7cd9755d78e03d27589c16e6a1bb4d17ee6b47a7008207e644b5f"
+    },
+    {
+      "path": "assets/oracles/W2-DELTA-01.json",
+      "bytes": 1221,
+      "sha256": "155dc1054bcc6a79d7c981a48abd4778618fa314ecfbbb443815ee15dcd293b5"
+    },
+    {
+      "path": "assets/oracles/W2-DEV-01.json",
+      "bytes": 1433,
+      "sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb"
+    },
+    {
+      "path": "assets/oracles/W2-DEV-02.json",
+      "bytes": 841,
+      "sha256": "4d29d6270963f8f89e05e15c51b74ee2efeb28fa708c41c37c4787a0b1f00798"
+    },
+    {
+      "path": "assets/oracles/W2-EFFECT-01.json",
+      "bytes": 838,
+      "sha256": "a1e4c91f86e982ef857f89ef44025cfbea90392f3298750cdac809dec63e1695"
+    },
+    {
+      "path": "assets/oracles/W2-OPS-01.json",
+      "bytes": 1160,
+      "sha256": "9d5e723084add8c1cc14e33a1eba15e4f5a07a62cfbe49eda2d0df15c9b3aeab"
+    },
+    {
+      "path": "assets/oracles/W2-OPS-02.json",
+      "bytes": 831,
+      "sha256": "a5d8732e42719f6f73f56bed350604f13d0d0fad456a01148be3ccc4c3346b56"
+    },
+    {
+      "path": "assets/oracles/W2-R3-01.json",
+      "bytes": 880,
+      "sha256": "970ec9d73646a673b8e15320aa35efc3ad57e225a08867acbc70cd897ab365e2"
+    },
+    {
+      "path": "assets/oracles/W2-R3-02.json",
+      "bytes": 760,
+      "sha256": "3b2ed871b64c226b9aa834228100c167560360653d0c4593119f84d5300f1e2c"
+    },
+    {
+      "path": "assets/oracles/W2-R3-03.json",
+      "bytes": 794,
+      "sha256": "1f9d9e155317bf125eed1976731e094f75ee749d78d3d7a20af6927c00443743"
+    },
+    {
+      "path": "assets/oracles/W2-R3-04.json",
+      "bytes": 859,
+      "sha256": "d26358c730d2b2e789652a8813de427cb76bc6211422f00061abb7d8258d3b3b"
+    },
+    {
+      "path": "assets/oracles/W2-RUNNER-01.json",
+      "bytes": 805,
+      "sha256": "22931f33af7a05eb637e211b966347815acf87ba4e0f25f78d2d2c3be36eecef"
+    }
+  ],
+  "pack_tree_sha256": "cc7d91a1f7f63e89b93c9a216286d746cccd0622c14d9448afc8a935cbb77943",
+  "algorithm": "sha256 over sorted UTF-8 lines 'path|bytes|sha256' (LF, no trailing LF) for the 5 pack files; 05 and seals are external",
+  "adoption": {
+    "decision_id": "S1-W0W2-CODEX-ADOPT-20261126-01",
+    "record": "02_EVIDENCE/seals/S1_ADOPTION_RECORD.json",
+    "record_sha256": "831ebcaecf47ecd0fa8c484bd816179b4ee394d512dca4ab1b92162b76d23c81"
+  },
+  "review_results": "02_EVIDENCE/S1_CODEX_REVIEW_RESULTS.json",
+  "self_hash": "EXTERNAL_RECORD_ONLY"
+}

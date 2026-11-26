@@ -1,0 +1,17 @@
+{
+  "schema": "FHS5.W1.AuthorFixture@1",
+  "case_id": "W1-API-01",
+  "kind": "POS",
+  "state": "AUTHOR_FIXTURE_NOT_LIVE",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1 Guide/Bridge ABI + 3-Host consumption + Contract Context author pack; SOURCE_READ+ISOLATED_DRAFT_WRITE+LOCAL_CHECK+LOCAL_PACKAGE; no repo/host/native/release write",
+  "input": {
+    "statement": "四 API 完整回取 Clause/NEG",
+    "source_case_row": "W1M:L670",
+    "constraint": "synthetic author input; no original Host, Runner, Oracle or receipt"
+  },
+  "executable": false,
+  "predicate": "requires_original_runner",
+  "request": null,
+  "not_run_reason": "requires original Bridge/Host executor or W0 PRIMARY tree outside pack; POS not proven by local rule"
+}

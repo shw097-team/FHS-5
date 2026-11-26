@@ -1,0 +1,277 @@
+{
+  "schema": "FHS5.PLP.W2.CaseIndex@1",
+  "status": "AUTHOR_DESIGN_INPUT",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "cases": [
+    {
+      "case_id": "W2-DEV-01",
+      "kind": "POS",
+      "fixture": "assets/fixtures/W2-DEV-01.json",
+      "oracle": "assets/oracles/W2-DEV-01.json",
+      "runner_id": "RUN-DEV-01",
+      "status": "NOT_RUN",
+      "wp": "P02/P03/P05/P06"
+    },
+    {
+      "case_id": "W2-DEV-02",
+      "kind": "NEG",
+      "fixture": "assets/fixtures/W2-DEV-02.json",
+      "oracle": "assets/oracles/W2-DEV-02.json",
+      "runner_id": "RUN-DEV-02",
+      "status": "NOT_RUN",
+      "wp": "P02/P05"
+    },
+    {
+      "case_id": "W2-OPS-01",
+      "kind": "POS",
+      "fixture": "assets/fixtures/W2-OPS-01.json",
+      "oracle": "assets/oracles/W2-OPS-01.json",
+      "runner_id": "RUN-OPS-01",
+      "status": "NOT_RUN",
+      "wp": "P02/P03/P05/P06"
+    },
+    {
+      "case_id": "W2-OPS-02",
+      "kind": "NEG",
+      "fixture": "assets/fixtures/W2-OPS-02.json",
+      "oracle": "assets/oracles/W2-OPS-02.json",
+      "runner_id": "RUN-OPS-02",
+      "status": "NOT_RUN",
+      "wp": "P03/P04"
+    },
+    {
+      "case_id": "W2-EFFECT-01",
+      "kind": "NEG",
+      "fixture": "assets/fixtures/W2-EFFECT-01.json",
+      "oracle": "assets/oracles/W2-EFFECT-01.json",
+      "runner_id": "RUN-EFFECT-01",
+      "status": "NOT_RUN",
+      "wp": "P01"
+    },
+    {
+      "case_id": "W2-AUTH-01",
+      "kind": "NEG",
+      "fixture": "assets/fixtures/W2-AUTH-01.json",
+      "oracle": "assets/oracles/W2-AUTH-01.json",
+      "runner_id": "RUN-AUTH-01",
+      "status": "NOT_RUN",
+      "wp": "P01/P03/P05"
+    },
+    {
+      "case_id": "W2-RUNNER-01",
+      "kind": "NEG",
+      "fixture": "assets/fixtures/W2-RUNNER-01.json",
+      "oracle": "assets/oracles/W2-RUNNER-01.json",
+      "runner_id": "RUN-RUNNER-01",
+      "status": "NOT_RUN",
+      "wp": "P04"
+    },
+    {
+      "case_id": "W2-DELTA-01",
+      "kind": "POS",
+      "fixture": "assets/fixtures/W2-DELTA-01.json",
+      "oracle": "assets/oracles/W2-DELTA-01.json",
+      "runner_id": "RUN-DELTA-01",
+      "status": "NOT_RUN",
+      "wp": "P06"
+    },
+    {
+      "case_id": "W2-R3-01",
+      "kind": "POS",
+      "fixture": "assets/fixtures/W2-R3-01.json",
+      "oracle": "assets/oracles/W2-R3-01.json",
+      "runner_id": "RUN-R3-01",
+      "status": "NOT_RUN",
+      "wp": "P01/P02/P03"
+    },
+    {
+      "case_id": "W2-R3-02",
+      "kind": "NEG",
+      "fixture": "assets/fixtures/W2-R3-02.json",
+      "oracle": "assets/oracles/W2-R3-02.json",
+      "runner_id": "RUN-R3-02",
+      "status": "NOT_RUN",
+      "wp": "P01/P04"
+    },
+    {
+      "case_id": "W2-R3-03",
+      "kind": "NEG",
+      "fixture": "assets/fixtures/W2-R3-03.json",
+      "oracle": "assets/oracles/W2-R3-03.json",
+      "runner_id": "RUN-R3-03",
+      "status": "NOT_RUN",
+      "wp": "P02/P03/P05"
+    },
+    {
+      "case_id": "W2-R3-04",
+      "kind": "EDGE",
+      "fixture": "assets/fixtures/W2-R3-04.json",
+      "oracle": "assets/oracles/W2-R3-04.json",
+      "runner_id": "RUN-R3-04",
+      "status": "NOT_RUN",
+      "wp": "P01/P06"
+    }
+  ],
+  "subcases": {
+    "J1": [
+      {
+        "id": "J1-T01",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03"
+      },
+      {
+        "id": "J1-T02",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03"
+      },
+      {
+        "id": "J1-T03",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03"
+      },
+      {
+        "id": "J1-T04",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03"
+      },
+      {
+        "id": "J1-T05",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03"
+      },
+      {
+        "id": "J1-T06",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03"
+      }
+    ],
+    "J2": [
+      {
+        "id": "J2-T01",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03/P06"
+      },
+      {
+        "id": "J2-T02",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03/P06"
+      },
+      {
+        "id": "J2-T03",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03/P06"
+      },
+      {
+        "id": "J2-T04",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03/P06"
+      },
+      {
+        "id": "J2-T05",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03/P06"
+      },
+      {
+        "id": "J2-T06",
+        "status": "NOT_RUN",
+        "wp": "P01/P02/P03/P06"
+      }
+    ],
+    "J3": [
+      {
+        "id": "J3-T01",
+        "status": "NOT_RUN",
+        "wp": "P04/P05/P06"
+      },
+      {
+        "id": "J3-T02",
+        "status": "NOT_RUN",
+        "wp": "P04/P05/P06"
+      },
+      {
+        "id": "J3-T03",
+        "status": "NOT_RUN",
+        "wp": "P04/P05/P06"
+      },
+      {
+        "id": "J3-T04",
+        "status": "NOT_RUN",
+        "wp": "P04/P05/P06"
+      },
+      {
+        "id": "J3-T05",
+        "status": "NOT_RUN",
+        "wp": "P04/P05/P06"
+      },
+      {
+        "id": "J3-T06",
+        "status": "NOT_RUN",
+        "wp": "P04/P05/P06"
+      }
+    ],
+    "N": [
+      {
+        "id": "N01",
+        "status": "NOT_RUN",
+        "group": "Source->TPM"
+      },
+      {
+        "id": "N02",
+        "status": "NOT_RUN",
+        "group": "six-file ABI"
+      },
+      {
+        "id": "N03",
+        "status": "NOT_RUN",
+        "group": "Guide Delta"
+      },
+      {
+        "id": "N04",
+        "status": "NOT_RUN",
+        "group": "Host actual"
+      },
+      {
+        "id": "N05",
+        "status": "NOT_RUN",
+        "group": "Native authority/recovery"
+      },
+      {
+        "id": "N06",
+        "status": "NOT_RUN",
+        "group": "UNKNOWN"
+      },
+      {
+        "id": "N07",
+        "status": "NOT_RUN",
+        "group": "frozen Challenge"
+      },
+      {
+        "id": "N08",
+        "status": "NOT_RUN",
+        "group": "FAR dynamic"
+      },
+      {
+        "id": "N09",
+        "status": "NOT_RUN",
+        "group": "combined E2E"
+      },
+      {
+        "id": "N10",
+        "status": "NOT_RUN",
+        "group": "OFF/security"
+      },
+      {
+        "id": "N11",
+        "status": "NOT_RUN",
+        "group": "fresh receive"
+      },
+      {
+        "id": "N12",
+        "status": "NOT_RUN",
+        "group": "applicability/release"
+      }
+    ]
+  },
+  "denominator": "12 original W2 cases; J/N subcases do not add original-case denominator"
+}

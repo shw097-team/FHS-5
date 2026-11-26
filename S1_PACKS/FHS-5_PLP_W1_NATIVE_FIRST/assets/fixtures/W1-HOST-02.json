@@ -1,0 +1,22 @@
+{
+  "schema": "FHS5.W1.AuthorFixture@1",
+  "case_id": "W1-HOST-02",
+  "kind": "NEG",
+  "state": "AUTHOR_FIXTURE_NOT_LIVE",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1 Guide/Bridge ABI + 3-Host consumption + Contract Context author pack; SOURCE_READ+ISOLATED_DRAFT_WRITE+LOCAL_CHECK+LOCAL_PACKAGE; no repo/host/native/release write",
+  "input": {
+    "statement": "拒絕跨 Host 代償",
+    "source_case_row": "W1M:L664",
+    "constraint": "synthetic author input; no original Host, Runner, Oracle or receipt"
+  },
+  "executable": true,
+  "predicate": "reject_cross_host_substitution",
+  "request": {
+    "host": "ChatGPT",
+    "stage": "Loaded",
+    "target_host": "Hermes",
+    "target_stage": "Served"
+  },
+  "expect_error": "HOST_ABI_DRIFT"
+}

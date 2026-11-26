@@ -1,0 +1,13 @@
+{
+ "op": "OPS-O06",
+ "fixture": "F-TO-AFTER/F-PARTIAL",
+ "timeout": {
+  "timeout": true,
+  "stdout": ""
+ },
+ "partial_inventory_count": 6,
+ "partial_world_sha256": "cb58f92db16597009746b35bd36b5cd63f8e1852cd1cecc3b7bd0f5fb9f0d8a5",
+ "receipt_written": false,
+ "classification": "TO_AFTER",
+ "note": "subset => PARTIAL; equal set with no receipt => TO_AFTER; empty => TO_BEFORE"
+}
