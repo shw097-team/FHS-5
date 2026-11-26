@@ -149,8 +149,8 @@
     },
     {
       "check": "no_absolute_paths_in_public_W3",
-      "ok": false,
-      "detail": "['W3\\\\evidence\\\\public\\\\CHECKER_INVOCATION.json', 'W3\\\\evidence\\\\public\\\\CHECKER_RECEIPT.json']"
+      "ok": true,
+      "detail": "[]"
     },
     {
       "check": "local_git_content",
@@ -173,9 +173,9 @@
       "detail": ""
     }
   ],
-  "passed": 33,
+  "passed": 34,
   "total": 34,
-  "ok": false,
+  "ok": true,
   "git": {
     "content_commit": "4bfc0145acf1bf30e2072935086db269115c6b3a",
     "receipt_commit": "46d2db9e8f2c1cf961e0391716661dac8337186f",
@@ -189,7 +189,8 @@
     "lf_stable_commit": "a7100d0fdf424be7bf74d7806327ea509eeddfa4",
     "final_evidence_commit": "e971456b623605645e0ea66979479b2f9c7ae665",
     "candidate_rebind_commit": "a521e03af1e6dc56c7ab1c7ff8e0c25ed6f63106",
-    "final_commit": "7c0b0c341ea660e9fb323ffc801dae76130d60b3",
-    "final_tree": "7ae7b958d13d97836baf595799c5b1acde763675"
+    "public_redaction_commit": "0b34b140664b359211c63c8216eb09509d7688f9",
+    "final_commit": "d5cc005c0d608b97e31e0729a8cd7cc4882e67d9",
+    "final_tree": "e83b75d3f2905848aa9b14c026abec97dccf0743"
   }
 }

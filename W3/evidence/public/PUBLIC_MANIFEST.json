@@ -70,8 +70,8 @@
     },
     {
       "path": "W3/evidence/public/FINAL_VERIFICATION.json",
-      "sha256": "13ba49b7cad7360614b9bfd2a81c297970b7521534989905b6653792e0c21a18",
-      "bytes": 4201
+      "sha256": "4844fc6181ff4c8aa35c1ecf2554bcd2034a7d4b292bd1ef288016964bead741",
+      "bytes": 4169
     },
     {
       "path": "W3/evidence/public/FINDING_SET.json",
