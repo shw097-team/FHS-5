@@ -290,7 +290,8 @@ R = C:\Projects\Agent_Workspace\FHS-5_Workspace\20_W2_PACK_HERMES_FINAL_20261126
   publish/repo/                         ← 交付分支的工作 clone
 ```
 
-**發布狀態**：見下節
+**發布狀態**：已上推至 `hermes/w2-pack-nf-primary-20261126`：content commit `d2589dea`（34 檔），publication receipt commit `5529cb06`；`main` 仍為 `c2d8084b`（未動）。
+**未** merge 至 `main`、**未** tag、**未**改 default branch 或 branch protection、**未** Release。遠端已用 fresh clone 逐檔 sha256 回讀（33/33 byte-identical，見 receipt）。
 Git push 不等於 Product Release；本輪不 tag、不 merge `main`、不改 default branch。
 
 ## 10｜下一個合法動作
