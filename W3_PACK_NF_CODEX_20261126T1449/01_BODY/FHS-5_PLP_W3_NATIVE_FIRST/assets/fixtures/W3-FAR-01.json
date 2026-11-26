@@ -1,0 +1,52 @@
+{
+  "schema": "FHS5.PLP.W3.CaseFixture.NF@1",
+  "design_state": "PROPOSED_DESIGN_FIXTURE",
+  "case_id": "W3-FAR-01",
+  "kind": "NEG",
+  "wp": "WM3-P04",
+  "requirement_refs": [
+    "W3-A04",
+    "FAR-FR07"
+  ],
+  "subject": "FHS-5_PLP/W3/SYNTHETIC_QUALIFICATION",
+  "scope": "W3-NF-01/DESIGN",
+  "input": {
+    "providers": [
+      {
+        "id": "ABSENT_DB",
+        "reachable": false,
+        "root": "DESIGN_ABSENT"
+      },
+      {
+        "id": "REACHABLE_EMPTY",
+        "reachable": true,
+        "rows": 0,
+        "query": "design-control-query"
+      }
+    ],
+    "injected_claim": {
+      "state": "HIT",
+      "zero_results": 0
+    },
+    "provider_missing": true
+  },
+  "runner_contract": {
+    "runner_ref": "UNBOUND::W3/W3-FAR-01-runner",
+    "argv_template": [
+      "python",
+      "<real-runner>",
+      "--case",
+      "W3-FAR-01",
+      "--fixture",
+      "assets/fixtures/W3-FAR-01.json",
+      "--oracle",
+      "assets/oracles/W3-FAR-01.json",
+      "--out",
+      "<isolated-run-root>"
+    ],
+    "cwd": "<isolated-case-root>",
+    "timeout_s": 120,
+    "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+  },
+  "notes": "Design fixture only. It is not a product fixture, not a frozen candidate, and not an oracle."
+}

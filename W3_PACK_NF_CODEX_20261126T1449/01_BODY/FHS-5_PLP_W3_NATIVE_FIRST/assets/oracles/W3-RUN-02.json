@@ -1,0 +1,24 @@
+{
+  "schema": "FHS5.PLP.W3.CaseOracle.NF@1",
+  "design_state": "PROPOSED_DESIGN_ORACLE",
+  "case_id": "W3-RUN-02",
+  "kind": "NEG",
+  "frozen_at_design": "2026-11-26T14:14:10+08:00",
+  "case_owner": "UNASSIGNED_DESIGN",
+  "expected": {
+    "exit": 2,
+    "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+    "token": "UNREPRODUCED",
+    "predicate": "each defect maps to UNREPRODUCED / RUNNER_UNBOUND / RAW_UNTRUSTED; executed=false; no fake exit; no stdout substitution",
+    "raw_assertions": [
+      "argv/cwd/timeout recorded",
+      "stdout/stderr bytes and SHA recorded separately",
+      "pre/post world or file state recorded",
+      "observed is null until a real run"
+    ]
+  },
+  "observed": null,
+  "verdict": "NOT_RUN",
+  "not_covered": "a real CaseRunner/Curator must supply the missing raw before any REPRODUCED claim",
+  "freeze_rule": "expected-before-observed; Case Owner re-freezes real bytes; old FAIL is preserved; oracle changes require a CR and a new case revision"
+}

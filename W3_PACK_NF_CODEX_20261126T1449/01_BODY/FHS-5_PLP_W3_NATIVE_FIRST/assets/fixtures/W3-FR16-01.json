@@ -1,0 +1,42 @@
+{
+  "schema": "FHS5.PLP.W3.CaseFixture.NF@1",
+  "design_state": "PROPOSED_DESIGN_FIXTURE",
+  "case_id": "W3-FR16-01",
+  "kind": "NEG",
+  "wp": "WM3-P03",
+  "requirement_refs": [
+    "W3-A07",
+    "EC-FR16"
+  ],
+  "subject": "FHS-5_PLP/W3/SYNTHETIC_QUALIFICATION",
+  "scope": "W3-NF-01/DESIGN",
+  "input": {
+    "report_write_set": [
+      "W1/check/test_j1_strict.py",
+      "oracle.json",
+      "threshold.json",
+      "subject/00.md"
+    ],
+    "canary": true,
+    "pre_hashes": "DESIGN_CANARY"
+  },
+  "runner_contract": {
+    "runner_ref": "UNBOUND::W3/W3-FR16-01-runner",
+    "argv_template": [
+      "python",
+      "<real-runner>",
+      "--case",
+      "W3-FR16-01",
+      "--fixture",
+      "assets/fixtures/W3-FR16-01.json",
+      "--oracle",
+      "assets/oracles/W3-FR16-01.json",
+      "--out",
+      "<isolated-run-root>"
+    ],
+    "cwd": "<isolated-case-root>",
+    "timeout_s": 120,
+    "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+  },
+  "notes": "Design fixture only. It is not a product fixture, not a frozen candidate, and not an oracle."
+}

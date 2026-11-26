@@ -1,0 +1,33 @@
+{
+  "schema": "FHS5.PLP.W3.Current.NF@2",
+  "updated_at": "2026-11-26T15:24:11+08:00",
+  "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "active_artifact_id": "FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY",
+  "version": "r2",
+  "pack_root": "01_BODY/FHS-5_PLP_W3_NATIVE_FIRST",
+  "manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+  "external_seal": "EXTERNAL_SEAL.json",
+  "external_seal_sha256": "cb9bc39d9a541db86571c3eda05db61674e69813029caa519054da054a2ca903",
+  "adoption": "W3_OWNER_ADOPTION.json",
+  "adoption_sha256": "330476e77ec4bb2f1c20b25ca4d79ba751f67f48ac44d6a5cb5e235bde540bee",
+  "previous": "FHS5-PLP/W3/PACK-NF-20261126-r1",
+  "product_baseline": {
+    "w2_candidate_commit": "dada2354b7c25c8f4a316d9fae93827cef0d194e",
+    "w2_status": "PARTIAL",
+    "w2_writer": "BLOCKED_NOT_ADMITTED"
+  },
+  "claims": {
+    "PACK_PRIMARY_SELECTED": true,
+    "PACK_EXECUTABLE": true,
+    "W2_NF_VALIDATED": false,
+    "W3_TECHNICALLY_READY": false,
+    "W3_NF_VALIDATED": false,
+    "INDEPENDENT_PASS": false,
+    "RELEASED": false
+  },
+  "publication": {
+    "state": "PENDING",
+    "note": "publication receipt added outside the sealed pack after Git push/readback"
+  }
+}

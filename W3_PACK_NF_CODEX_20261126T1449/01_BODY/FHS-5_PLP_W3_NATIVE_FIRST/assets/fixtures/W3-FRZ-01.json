@@ -1,0 +1,62 @@
+{
+  "schema": "FHS5.PLP.W3.CaseFixture.NF@1",
+  "design_state": "PROPOSED_DESIGN_FIXTURE",
+  "case_id": "W3-FRZ-01",
+  "kind": "POS",
+  "wp": "WM3-P01",
+  "requirement_refs": [
+    "W3-A01",
+    "W3-CODEX-01",
+    "EC-FR01",
+    "EC-FR02"
+  ],
+  "subject": "FHS-5_PLP/W3/SYNTHETIC_QUALIFICATION",
+  "scope": "W3-NF-01/DESIGN",
+  "input": {
+    "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "pins": {
+      "source": {
+        "design_digest": "f664daa5f03654c924b866be41c9f6aba7ef5e6b3270a4e248c309a786fada47",
+        "locator": "assets/source_refs/W3_SOURCE_INDEX.json"
+      },
+      "candidate": {
+        "design_digest": "96e811172a9983140443ab8957f481d5f4808618c53739ae5b4ee1a00c8f976b",
+        "locator": "FHS-5_PLP_W3_NATIVE_FIRST/00_W3_PI_PD.md"
+      },
+      "evidence": {
+        "design_digest": "e3c0471d35b7c8d5016d5b0f32f8e912e1304e6b0abb37146ca369a69613a3de",
+        "locator": "02_EVIDENCE/FHS-5_PLP_W3_檢測與驗收_證據附件.md"
+      },
+      "oracle": {
+        "design_digest": "ef972cd39884f1b116d5c97a1c2452794bd1bb10d375d59e8614caa8b5185ab4",
+        "locator": "assets/oracles/"
+      },
+      "case_set": {
+        "design_digest": "e6c427dda52bbcc61c5c419a1186a4250f0e9c1548b41f2a83ebc763dbf2ab5f",
+        "locator": "assets/schema/W3_PLAN_INDEX.json"
+      }
+    },
+    "fixture_time": "2026-11-26T14:14:10+08:00",
+    "host_policy": "DESIGN_ONLY / NOT_DECLARED_BY_HOST"
+  },
+  "runner_contract": {
+    "runner_ref": "UNBOUND::W3/W3-FRZ-01-runner",
+    "argv_template": [
+      "python",
+      "<real-runner>",
+      "--case",
+      "W3-FRZ-01",
+      "--fixture",
+      "assets/fixtures/W3-FRZ-01.json",
+      "--oracle",
+      "assets/oracles/W3-FRZ-01.json",
+      "--out",
+      "<isolated-run-root>"
+    ],
+    "cwd": "<isolated-case-root>",
+    "timeout_s": 120,
+    "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+  },
+  "notes": "Design fixture only. It is not a product fixture, not a frozen candidate, and not an oracle."
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "FHS5.PLP.W3.CaseFixture.NF@1",
+  "design_state": "PROPOSED_DESIGN_FIXTURE",
+  "case_id": "W3-FAR-02",
+  "kind": "POS",
+  "wp": "WM3-P05",
+  "requirement_refs": [
+    "W3-A04",
+    "W3-A05",
+    "FAR-FR08",
+    "FAR-FR09",
+    "FAR-FR10",
+    "FAR-FR11",
+    "FAR-FR12"
+  ],
+  "subject": "FHS-5_PLP/W3/SYNTHETIC_QUALIFICATION",
+  "scope": "W3-NF-01/DESIGN",
+  "input": {
+    "finding_ref": "DESIGN-FINDING-B",
+    "alternatives": [
+      {
+        "id": "ALT-A",
+        "type": "BIND_EXISTING",
+        "fit": "real caller/ABI exists but slot unbound",
+        "nofit": "no caller found after search"
+      },
+      {
+        "id": "ALT-B",
+        "type": "FIX_NOW",
+        "fit": "reproduced RED and genuine missing path",
+        "nofit": "existing code already covers the case"
+      }
+    ],
+    "evidence_refs": [
+      "DESIGN-RAW-B1",
+      "DESIGN-QUERY-B2"
+    ],
+    "cost": "UNKNOWN",
+    "risk": "UNKNOWN",
+    "owner": "UNASSIGNED_DESIGN",
+    "rollback": "per-file reverse patch / restore preimage"
+  },
+  "runner_contract": {
+    "runner_ref": "UNBOUND::W3/W3-FAR-02-runner",
+    "argv_template": [
+      "python",
+      "<real-runner>",
+      "--case",
+      "W3-FAR-02",
+      "--fixture",
+      "assets/fixtures/W3-FAR-02.json",
+      "--oracle",
+      "assets/oracles/W3-FAR-02.json",
+      "--out",
+      "<isolated-run-root>"
+    ],
+    "cwd": "<isolated-case-root>",
+    "timeout_s": 120,
+    "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+  },
+  "notes": "Design fixture only. It is not a product fixture, not a frozen candidate, and not an oracle."
+}

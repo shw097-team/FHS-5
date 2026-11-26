@@ -1,0 +1,76 @@
+{
+  "schema": "FHS5.PLP.W3.OwnerAdoption.NF@2",
+  "decision_id": "W3-PACK-PRIMARY-20261126-01",
+  "decision_maker": "unique Human Owner (this task user)",
+  "issuer": "unique Human Owner; CODEX delegated executor/recorder",
+  "authority_source": {
+    "kind": "explicit_user_instruction",
+    "ref": "this task user request to execute FHS-5_PLP_W3_CODEX_啟動薄PROMPT",
+    "local_ref": "FHS-5_PLP_W3_CODEX_最小執行控制包.md §03.1",
+    "delegated_record": true
+  },
+  "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "selected_artifact_id": "FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY",
+  "version": "r2",
+  "manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+  "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
+  "external_seal_sha256": "cb9bc39d9a541db86571c3eda05db61674e69813029caa519054da054a2ca903",
+  "validation_receipt_refs": [
+    "02_EVIDENCE/raw/checks/V1.stdout.txt",
+    "02_EVIDENCE/raw/checks/V2.stdout.txt",
+    "02_EVIDENCE/raw/smoke_clean/SMOKE_RECEIPT.json"
+  ],
+  "review_strength": "DISTINCT_READ_ONLY_SESSION_PASS + clean-copy consumer",
+  "authorized_roots": [
+    "R/W3_EXEC_<run_id>",
+    "O/01_BODY",
+    "O/02_EVIDENCE",
+    "G W3 document branch"
+  ],
+  "authorized_targets": [
+    "W3 isolated files",
+    "W3 docs/assets/evidence",
+    "W3 current pointer"
+  ],
+  "authorized_ops": [
+    "READ",
+    "DRAFT",
+    "P01_INTAKE",
+    "ISOLATED_TEST",
+    "BOUNDED_REVERSIBLE_W3_DEV_OPS",
+    "AFFECTED_RETEST",
+    "W3_DOC_PUBLICATION"
+  ],
+  "not_authorized": [
+    "W2_PROTECTED_WRITE",
+    "RELEASE",
+    "DEPLOY",
+    "FORCE_PUSH"
+  ],
+  "effective_from": "2026-11-26T15:24:11+08:00",
+  "expiry_or_condition": "this delivery complete, Owner revocation, scope/Host/policy material change, or affected security finding",
+  "revocation": [
+    "Owner revocation",
+    "scope drift",
+    "seal mismatch",
+    "secret/path escape",
+    "W2 writer unseal attempt"
+  ],
+  "recovery": [
+    "delete unpublished new files",
+    "exact reverse patch",
+    "new commit/pointer restore; no force push"
+  ],
+  "lastgood": "FHS5-PLP/W3/PACK-NF-20261126-r1 (88508d0bf7e7e557fe2447db07966197108c136a7634f34ed6c89ea5759a13ad)",
+  "local_primary_state": "PACK_PRIMARY_SELECTED",
+  "pack_executable": "PACK_EXECUTABLE",
+  "product_claims_not_claimed": [
+    "W2_NF_VALIDATED",
+    "W3_TECHNICALLY_READY",
+    "W3_NF_VALIDATED",
+    "INDEPENDENT_PASS",
+    "RELEASED"
+  ],
+  "note": "The Owner did not hand-sign this receipt; it is a delegated record of the explicit user instruction and the actual validation facts."
+}

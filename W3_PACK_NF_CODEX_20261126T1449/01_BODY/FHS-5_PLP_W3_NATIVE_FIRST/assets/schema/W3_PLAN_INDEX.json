@@ -1,0 +1,1375 @@
+{
+  "schema": "FHS5.PLP.W3.PlanIndex.NF@1",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "wave_id": "W3",
+    "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "artifact_id": "FHS5-PLP/W3/PACK-NF-20261126-r1",
+    "version": "r1",
+    "profile": "GENERIC_NATIVE_FIRST",
+    "selection_state": "AUTHOR_CANDIDATE_PENDING_OWNER"
+  },
+  "generated_at": "2026-11-26T14:14:10+08:00",
+  "claim_ceiling": "AUTHOR_DESIGN_ONLY / LOCAL_DOCUMENT_ONLY",
+  "fus": [
+    {
+      "id": "W3-CODEX-01",
+      "name": "Freeze",
+      "observable": "source/candidate/evidence/oracle/case_set pins are separately recomputable in the same subject/scope; fixture, frozen_at, host and policy are separate fields.",
+      "pos": "five real preimages reopen and recompute",
+      "neg": "floating HEAD, old candidate raw, or oracle mutation"
+    },
+    {
+      "id": "W3-CODEX-02",
+      "name": "Run",
+      "observable": "a real stdlib/repo runner executes the same case POS/NEG with argv, cwd, timeout, exit, stdout/stderr and world raw captured separately.",
+      "pos": "independent POS and NEG raw records",
+      "neg": "exit 0 alone is treated as PASS; no runner is treated as REPRODUCED"
+    },
+    {
+      "id": "W3-CODEX-03",
+      "name": "Finding",
+      "observable": "eight-field Finding plus expected/observed/FirstFail/NotCovered; at least two different dynamic failure classes.",
+      "pos": "two real, independently replayed failure classes",
+      "neg": "summary or fixed template replaces raw"
+    },
+    {
+      "id": "W3-CODEX-04",
+      "name": "FAR",
+      "observable": "RQ0-8, five retrieval states, directed EvidenceGraph, at least two substantive alternatives per decision Finding, ten original Advice names.",
+      "pos": "HIT/ZERO/UNAVAILABLE/BLOCKED/ERROR are separately evidenced",
+      "neg": "UNAVAILABLE is downgraded to ZERO; one alternative or fixed strings"
+    },
+    {
+      "id": "W3-CODEX-05",
+      "name": "Guide2",
+      "observable": "seven FAR keys to nine Guide keys lossless crosswalk, two independently verified periods, ThinResume Next/Stop/Resume.",
+      "pos": "same-scope NEW_DELTA or NO_DELTA from two real periods",
+      "neg": "single period, caller boolean, or single evidence_sha claims PARK"
+    },
+    {
+      "id": "W3-CODEX-06",
+      "name": "Native repair",
+      "observable": "separately authorised reversible patch/retest, new candidate, pre/post/restore, and distinct Checker/Consumer receipts.",
+      "pos": "minimal ChangeCone patch under a new exact grant",
+      "neg": "Challenge/FAR writes the subject; revoked writer still writes; maker self-signs independence"
+    }
+  ],
+  "acceptances": [
+    {
+      "id": "W3-A01",
+      "name": "Freeze",
+      "pos": "five pins have source, SHA and scope; candidate/evidence/oracle/case_set are separate",
+      "neg": "floating HEAD, old candidate SHA, same SHA reused across domains",
+      "state": "AUTHOR_PINNED_DESIGN"
+    },
+    {
+      "id": "W3-A02",
+      "name": "Runner",
+      "pos": "the original case/oracle/fixture/runner/ACL invocation contract is readable",
+      "neg": "no runner yet REPRODUCED is claimed",
+      "state": "RUNNER_UNBOUND"
+    },
+    {
+      "id": "W3-A03",
+      "name": "Finding",
+      "pos": "eight fields complete; expected/observed/FirstFail/reproduction present",
+      "neg": "summary only, no raw",
+      "state": "DESIGN_TEMPLATE_ONLY"
+    },
+    {
+      "id": "W3-A04",
+      "name": "FAR",
+      "pos": "five states each have request/response/branch; UNAVAILABLE != ZERO",
+      "neg": "missing DB recorded as ZERO",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "W3-A05",
+      "name": "Advice",
+      "pos": "10/10 original names retrievable; advice does not become a Grant",
+      "neg": "an invented 11th authoritative enum",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "W3-A06",
+      "name": "Guide2",
+      "pos": "Next/Stop/Resume payload; two-period condition explicit",
+      "neg": "PARK without delta",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "W3-A07",
+      "name": "Claim",
+      "pos": "six dimensions separated; Checker unsigned",
+      "neg": "author self-signs Independent",
+      "state": "DESIGN_ONLY"
+    }
+  ],
+  "wps": [
+    {
+      "id": "WM3-P01",
+      "name": "Freeze Identity / upstream requalification",
+      "inputs": "00/05, W2_CURRENT/25_/24_ five pins, W0/W1 true upstream, W3 case refs",
+      "operation": "verify schema/identity/root/bytes/hash/span; freeze five pins separately; build W2 R0-R7 matrix",
+      "outputs": "FreezeLedger, IntakeIdentityLedger, W2RequalificationMatrix",
+      "consumer": "P02/P03, FAR, Checker",
+      "pos": "five pins reopen and recompute; original case_set has real IDs/fixtures",
+      "neg": "floating HEAD, old SHA, candidate/doc SHA mix, wrong scope, oracle swap, missing asset, duplicate path, unauthorised path",
+      "stop": "FROZEN_IDENTITY_MISMATCH / W3_EVIDENCE / W2_ORACLE_UNFROZEN",
+      "state": "DESIGN_READY / PRODUCT_UNBOUND"
+    },
+    {
+      "id": "WM3-P02",
+      "name": "Original Runner / Native Reader",
+      "inputs": "P01 validated slice, Case Owner oracle/fixture, allowed read/test roots, runner/Host/ECP",
+      "operation": "build invocation contract; freeze expected; validate roots; run in isolated worktree/process; capture argv/exit/stdout/stderr/world pre-post-restore",
+      "outputs": "RunnerBindingCandidate, CaseRunRecord[]",
+      "consumer": "P03, W4",
+      "pos": "same case POS/NEG really executed with separate raw",
+      "neg": "missing runner/oracle/fixture, fake raw, wrong candidate, timeout, escape -> UNREPRODUCED/NOT_RUN or explicit FAIL",
+      "stop": "RUNNER_UNBOUND / RAW_UNTRUSTED",
+      "state": "DESIGN_READY / PRODUCT_UNBOUND"
+    },
+    {
+      "id": "WM3-P03",
+      "name": "Challenge / POS / NEG / NotCovered",
+      "inputs": "frozen candidate + cases + runner + raw",
+      "operation": "replay in a separate Challenger session/worktree; build expected/observed/FirstFail; eight-field Finding; NotCovered",
+      "outputs": "FindingSet, ChallengeReport, NotCovered[]",
+      "consumer": "FAR, Checker",
+      "pos": "two different failure classes each with replayable raw and Finding->case/requirement/oracle trace",
+      "neg": "summary without raw, fake PASS, scope/threshold mutation, self-signed independent",
+      "stop": "EVIDENCE_LAUNDERING / FALSE_INDEPENDENT / RAW_UNTRUSTED / ORACLE_DRIFT",
+      "state": "DESIGN_READY / PRODUCT_UNBOUND"
+    },
+    {
+      "id": "WM3-P04",
+      "name": "FAR Typed Retrieval / EvidenceGraph",
+      "inputs": "P03 FindingSet, source refs, repo/Host observation, decision question, ResearchWO only where the original profile applies",
+      "operation": "RQ0-4 per Finding; query/scope/provider/attempted/reachable/denominator/rows/raw/error/time/freshness/independence; directed graph",
+      "outputs": "FARRetrievalGraph, SourceDispositionLedger, InputIdentityView",
+      "consumer": "P05, Guide",
+      "pos": "real HIT, real ZERO, UNAVAILABLE, BLOCKED and ERROR separately demonstrated",
+      "neg": "zero_results=0 while unreachable, caller boolean, different candidate raw",
+      "stop": "W3_FAR_SOURCE (only dependent root cause/CLOSE/PARK)",
+      "state": "DESIGN_READY / PRODUCT_UNBOUND"
+    },
+    {
+      "id": "WM3-P05",
+      "name": "RootCause / Alternatives / Ten Advice",
+      "inputs": "graph + contradictory evidence + firstfail",
+      "operation": "RQ5-6; hypothesis/evidence/counterevidence/NoFit; at least two comparable alternatives with cost/risk/ChangeCone/ExpectedRaw/rollback/owner; ten Advice with evidence predicates",
+      "outputs": "RootCauseAnalysis, HypothesisLedger, Alternatives, DecisionAdvice",
+      "consumer": "Guide2, Owner",
+      "pos": "each Finding has a falsifiable root cause and two different alternatives",
+      "neg": "fixed strings, fake close, one alternative, UNAVAILABLE=ZERO",
+      "stop": "RESEARCH_REQUIRED / ABSTAIN",
+      "state": "DESIGN_READY / PRODUCT_UNBOUND"
+    },
+    {
+      "id": "WM3-P06",
+      "name": "Guide2 / MaterialDelta / Native repair / closeout",
+      "inputs": "same-scope GuideHandoff, prior prompt, two verified periods, seven/nine keys, candidate/evidence identity",
+      "operation": "RQ7-8; per-key comparison; truth table; ThinResume; separate Maker patch under new ECP; new freeze; affected retest; distinct Checker/Consumer",
+      "outputs": "Guide2Handoff, GuideThinResume, MaterialDeltaReceipt, ChangeSet, W3_CLOSEOUT, W3_HANDOFF",
+      "consumer": "Guide/Consumer, W4",
+      "pos": "true Delta/NoDelta/Unknown branches; Next used; authorised patch/retest or authorised no-repair applicability",
+      "neg": "missing period -> PARK, cross scope, single evidence_sha, revoked writer writes, old candidate raw, FAR issues WO/Grant",
+      "stop": "DELTA_UNVERIFIED / NO_DELTA_REWRITE_DENIED / FALSE_AUTHORITY / WRITE_SCOPE_VIOLATION",
+      "state": "DESIGN_READY / PRODUCT_UNBOUND"
+    }
+  ],
+  "edges": [
+    {
+      "from": "WM3-P01",
+      "to": "WM3-P02",
+      "type": "HARD_SOURCE_VERIFIED",
+      "producer": "FreezeLedger",
+      "consumer": "RunnerBindingCandidate",
+      "why": "P02 needs five frozen pins",
+      "resume": "same candidate/scope real pins"
+    },
+    {
+      "from": "WM3-P02",
+      "to": "WM3-P03",
+      "type": "HARD_SOURCE_VERIFIED",
+      "producer": "CaseRunRecord[]",
+      "consumer": "FindingSet",
+      "why": "P03 compares expected/observed",
+      "resume": "real argv/exit/raw"
+    },
+    {
+      "from": "WM3-P03",
+      "to": "WM3-P04",
+      "type": "HARD_SOURCE_VERIFIED",
+      "producer": "FindingSet",
+      "consumer": "FARRetrievalGraph",
+      "why": "FAR starts from actual Findings",
+      "resume": "at least one completed Finding"
+    },
+    {
+      "from": "WM3-P03",
+      "to": "WM3-P04",
+      "type": "SOFT_CONTEXT",
+      "producer": "partial Finding",
+      "consumer": "typed retrieval",
+      "why": "RQ0-4 may start per completed Finding while other Findings run",
+      "resume": "never treat an unfinished Finding as HIT"
+    },
+    {
+      "from": "WM3-P04",
+      "to": "WM3-P05",
+      "type": "HARD_SOURCE_VERIFIED",
+      "producer": "FARRetrievalGraph",
+      "consumer": "HypothesisLedger",
+      "why": "RCA needs graph and counterevidence",
+      "resume": "typed graph edges with reader_state"
+    },
+    {
+      "from": "WM3-P05",
+      "to": "WM3-P06",
+      "type": "HARD_SOURCE_VERIFIED",
+      "producer": "DecisionAdvice",
+      "consumer": "Guide2Handoff",
+      "why": "Guide2 consumes advice, owner, next/stop/resume",
+      "resume": "same subject/scope advice"
+    },
+    {
+      "from": "WM3-P06",
+      "to": "WM3-P01.next",
+      "type": "REVISION_LOOP",
+      "producer": "new candidate",
+      "consumer": "new FreezeLedger",
+      "why": "a repaired candidate is re-frozen as a new revision, not a backward gate on the same op",
+      "resume": "new candidate/evidence identity"
+    },
+    {
+      "from": "WM3-P01.next",
+      "to": "WM3-P02.next",
+      "type": "HARD_SOURCE_VERIFIED",
+      "producer": "new FreezeLedger",
+      "consumer": "affected retest",
+      "why": "only the affected ChangeCone is replayed",
+      "resume": "new five pins"
+    },
+    {
+      "from": "WM3-P06",
+      "to": "W4",
+      "type": "DEFERRED_PROFILE",
+      "producer": "W3_HANDOFF",
+      "consumer": "W4 late-bind",
+      "why": "W4 is bound only after a real W3 delivery; it does not gate W3",
+      "resume": "actual W3 claim and W4M adoption"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "W3-FRZ-01",
+      "kind": "POS",
+      "wp": "WM3-P01",
+      "requirement_refs": [
+        "W3-A01",
+        "W3-CODEX-01",
+        "EC-FR01",
+        "EC-FR02"
+      ],
+      "child": "CH-FRZ-01-POS",
+      "fixture": "assets/fixtures/W3-FRZ-01.json",
+      "oracle": "assets/oracles/W3-FRZ-01.json",
+      "expected_exit_design": 0,
+      "expected_token": "FREEZE_LEDGER_VERIFIED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "real W2/W3 five-pin preimages are not frozen; the product freeze runner is UNBOUND; design digests are not product identity",
+      "consumer": "Challenger; FAR; Checker"
+    },
+    {
+      "case_id": "W3-FRZ-02",
+      "kind": "NEG",
+      "wp": "WM3-P01",
+      "requirement_refs": [
+        "W3-A01",
+        "EC-FR02",
+        "EC-FR13"
+      ],
+      "child": "CH-FRZ-02-NEG",
+      "fixture": "assets/fixtures/W3-FRZ-02.json",
+      "oracle": "assets/oracles/W3-FRZ-02.json",
+      "expected_exit_design": 2,
+      "expected_token": "FROZEN_IDENTITY_MISMATCH",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "the real refusal exit code must be frozen from the real intake ABI; exit 2 is a design placeholder",
+      "consumer": "P02; Checker"
+    },
+    {
+      "case_id": "W3-RUN-01",
+      "kind": "POS",
+      "wp": "WM3-P02/WM3-P03",
+      "requirement_refs": [
+        "W3-A02",
+        "EC-FR05",
+        "EC-FR06",
+        "EC-FR08"
+      ],
+      "child": "CH-RUN-01-POS",
+      "fixture": "assets/fixtures/W3-RUN-01.json",
+      "oracle": "assets/oracles/W3-RUN-01.json",
+      "expected_exit_design": 0,
+      "expected_token": "SEMANTIC_MATCH",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "the original runner/oracle/fixture are UNBOUND; exit 0 alone is not PASS",
+      "consumer": "P03; FAR"
+    },
+    {
+      "case_id": "W3-RUN-02",
+      "kind": "NEG",
+      "wp": "WM3-P02/WM3-P03",
+      "requirement_refs": [
+        "W3-A02",
+        "EC-FR06",
+        "EC-FR07"
+      ],
+      "child": "CH-RUN-02-NEG",
+      "fixture": "assets/fixtures/W3-RUN-02.json",
+      "oracle": "assets/oracles/W3-RUN-02.json",
+      "expected_exit_design": 2,
+      "expected_token": "UNREPRODUCED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "a real CaseRunner/Curator must supply the missing raw before any REPRODUCED claim",
+      "consumer": "FAR; CaseRunner"
+    },
+    {
+      "case_id": "W3-FAR-01",
+      "kind": "NEG",
+      "wp": "WM3-P04",
+      "requirement_refs": [
+        "W3-A04",
+        "FAR-FR07"
+      ],
+      "child": "CH-FAR-01-NEG",
+      "fixture": "assets/fixtures/W3-FAR-01.json",
+      "oracle": "assets/oracles/W3-FAR-01.json",
+      "expected_exit_design": 2,
+      "expected_token": "UNAVAILABLE",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "Fabric/ResearchWO is not available; Generic legal local query is a design control only",
+      "consumer": "Guide; Research Owner"
+    },
+    {
+      "case_id": "W3-FAR-02",
+      "kind": "POS",
+      "wp": "WM3-P05",
+      "requirement_refs": [
+        "W3-A04",
+        "W3-A05",
+        "FAR-FR08",
+        "FAR-FR09",
+        "FAR-FR10",
+        "FAR-FR11",
+        "FAR-FR12"
+      ],
+      "child": "CH-FAR-02-POS",
+      "fixture": "assets/fixtures/W3-FAR-02.json",
+      "oracle": "assets/oracles/W3-FAR-02.json",
+      "expected_exit_design": 0,
+      "expected_token": "ALTERNATIVES_SUBSTANTIVE",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no real Finding/raw exists; this is a design contract only",
+      "consumer": "Guide; Owner"
+    },
+    {
+      "case_id": "W3-G2-01",
+      "kind": "NEG",
+      "wp": "WM3-P06",
+      "requirement_refs": [
+        "W3-A06",
+        "U-034",
+        "FAR-FR14"
+      ],
+      "child": "CH-G2-01-NEG",
+      "fixture": "assets/fixtures/W3-G2-01.json",
+      "oracle": "assets/oracles/W3-G2-01.json",
+      "expected_exit_design": 2,
+      "expected_token": "DELTA_UNVERIFIED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "WorldReader two-period receipts are UNBOUND",
+      "consumer": "Guide; Program"
+    },
+    {
+      "case_id": "W3-CHK-01",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "EC-FR12"
+      ],
+      "child": "CH-CHK-01-NEG",
+      "fixture": "assets/fixtures/W3-CHK-01.json",
+      "oracle": "assets/oracles/W3-CHK-01.json",
+      "expected_exit_design": 2,
+      "expected_token": "FALSE_AUTHORITY",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no protected Checker signer exists; this is a design refusal contract",
+      "consumer": "Checker"
+    },
+    {
+      "case_id": "W3-R3-01",
+      "kind": "POS",
+      "wp": "WM3-P01/WM3-P03",
+      "requirement_refs": [
+        "W3-A01",
+        "W3M-D06"
+      ],
+      "child": "CH-R3-01-POS",
+      "fixture": "assets/fixtures/W3-R3-01.json",
+      "oracle": "assets/oracles/W3-R3-01.json",
+      "expected_exit_design": 0,
+      "expected_token": "NOT_COVERED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "original CH-07 bytes are not present",
+      "consumer": "Curator; W4"
+    },
+    {
+      "case_id": "W3-R3-02",
+      "kind": "NEG",
+      "wp": "WM3-P06",
+      "requirement_refs": [
+        "W3-A06",
+        "W3M-D06"
+      ],
+      "child": "CH-R3-02-NEG",
+      "fixture": "assets/fixtures/W3-R3-02.json",
+      "oracle": "assets/oracles/W3-R3-02.json",
+      "expected_exit_design": 2,
+      "expected_token": "DELTA_UNVERIFIED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no two-period WorldReader raw",
+      "consumer": "Guide; WorldReader"
+    },
+    {
+      "case_id": "W3-R3-03",
+      "kind": "POS",
+      "wp": "WM3-P04",
+      "requirement_refs": [
+        "W3-A04",
+        "W3M-D05"
+      ],
+      "child": "CH-R3-03-POS",
+      "fixture": "assets/fixtures/W3-R3-03.json",
+      "oracle": "assets/oracles/W3-R3-03.json",
+      "expected_exit_design": 0,
+      "expected_token": "ZERO_RELEVANT_HIT",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "the 192-file historical raw is not re-enumerated in this author round; fresh results are a separate period",
+      "consumer": "FAR; Research Owner"
+    },
+    {
+      "case_id": "W3-R3-04",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "W3M-D05"
+      ],
+      "child": "CH-R3-04-NEG",
+      "fixture": "assets/fixtures/W3-R3-04.json",
+      "oracle": "assets/oracles/W3-R3-04.json",
+      "expected_exit_design": 2,
+      "expected_token": "FALSE_INDEPENDENT",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no distinct Checker exists",
+      "consumer": "Checker"
+    },
+    {
+      "case_id": "W3-R3-05",
+      "kind": "POS",
+      "wp": "WM3-P05",
+      "requirement_refs": [
+        "W3-A04",
+        "W3M-D02"
+      ],
+      "child": "CH-R3-05-POS",
+      "fixture": "assets/fixtures/W3-R3-05.json",
+      "oracle": "assets/oracles/W3-R3-05.json",
+      "expected_exit_design": 0,
+      "expected_token": "ALTERNATIVES_SUBSTANTIVE",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "original sample rights/designation are not available",
+      "consumer": "FAR; Owner"
+    },
+    {
+      "case_id": "W3-R3-06",
+      "kind": "NEG",
+      "wp": "WM3-P01/WM3-P04",
+      "requirement_refs": [
+        "W3-A01",
+        "W3M-D07"
+      ],
+      "child": "CH-R3-06-NEG",
+      "fixture": "assets/fixtures/W3-R3-06.json",
+      "oracle": "assets/oracles/W3-R3-06.json",
+      "expected_exit_design": 2,
+      "expected_token": "ORIGINAL_READER_UNBOUND",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "original Source Owner/Reader is absent",
+      "consumer": "Source Owner; Checker"
+    },
+    {
+      "case_id": "W3-FR16-01",
+      "kind": "NEG",
+      "wp": "WM3-P03",
+      "requirement_refs": [
+        "W3-A07",
+        "EC-FR16"
+      ],
+      "child": "CH-FR16-01-NEG",
+      "fixture": "assets/fixtures/W3-FR16-01.json",
+      "oracle": "assets/oracles/W3-FR16-01.json",
+      "expected_exit_design": 2,
+      "expected_token": "WRITE_SCOPE_VIOLATION",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no protected product target is touched in this design case",
+      "consumer": "Security; Repo Owner"
+    },
+    {
+      "case_id": "W3-FR17-01",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "FAR-FR17"
+      ],
+      "child": "CH-FR17-01-NEG",
+      "fixture": "assets/fixtures/W3-FR17-01.json",
+      "oracle": "assets/oracles/W3-FR17-01.json",
+      "expected_exit_design": 2,
+      "expected_token": "FALSE_AUTHORITY",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no Publisher/Checker is present",
+      "consumer": "Checker; Publisher"
+    }
+  ],
+  "ec_fr": [
+    {
+      "id": "EC-FR01",
+      "title": "Source/Scope: raw SHA, scope and retrievable clause; SourceIdentityView/UNBOUND edges",
+      "wp": "P01",
+      "trace": "P01",
+      "neg": "same-name different SHA"
+    },
+    {
+      "id": "EC-FR02",
+      "title": "Candidate Freeze: candidate/evidence/oracle/case-set, HEAD/Host/Epoch; changed stops old observation",
+      "wp": "P01",
+      "trace": "P01",
+      "neg": "CANDIDATE_CHANGED"
+    },
+    {
+      "id": "EC-FR03",
+      "title": "Claims: maker claim plus original requirement/child/NEG; unknown is not invented",
+      "wp": "P01/P03",
+      "trace": "P01/P03",
+      "neg": "claim invented"
+    },
+    {
+      "id": "EC-FR04",
+      "title": "Claim<->Contract: bidirectional join clause/case/oracle/expected raw/consumer",
+      "wp": "P01/P03",
+      "trace": "P01/P03",
+      "neg": "unresolved ref treated as bound"
+    },
+    {
+      "id": "EC-FR05",
+      "title": "Runner probe: identity, policy, effect, admission; no self shell run",
+      "wp": "P02",
+      "trace": "P02",
+      "neg": "RUNNER_UNBOUND"
+    },
+    {
+      "id": "EC-FR06",
+      "title": "POS: same frozen candidate POS/fixture/oracle by original runner",
+      "wp": "P02/P03",
+      "trace": "P02/P03",
+      "neg": "no raw yet REPRODUCED"
+    },
+    {
+      "id": "EC-FR07",
+      "title": "NEG/EDGE/SEC: separate negative observation; cannot change threshold",
+      "wp": "P02/P03",
+      "trace": "P02/P03",
+      "neg": "refusal counted as POS"
+    },
+    {
+      "id": "EC-FR08",
+      "title": "Evidence integrity: command/exit/stdout/stderr/raw SHA and receipt",
+      "wp": "P03",
+      "trace": "P03",
+      "neg": "RAW_UNTRUSTED"
+    },
+    {
+      "id": "EC-FR09",
+      "title": "World/Host: repo/host/WorldRaw/PolicyEpoch/effect in the same scope",
+      "wp": "P03",
+      "trace": "P03",
+      "neg": "UNKNOWN treated as READ"
+    },
+    {
+      "id": "EC-FR10",
+      "title": "Findings: eight fields plus FirstFail and counterexample locator",
+      "wp": "P03/P04",
+      "trace": "P03/P04",
+      "neg": "summary only"
+    },
+    {
+      "id": "EC-FR11",
+      "title": "NotCovered: per-case reason, next owner, resume; not zero success",
+      "wp": "P03/P04",
+      "trace": "P03/P04",
+      "neg": "blank N/A"
+    },
+    {
+      "id": "EC-FR12",
+      "title": "Advisory verdict: five values only; original_checker_verdict=null",
+      "wp": "P03/P06",
+      "trace": "P03/P06",
+      "neg": "PASS_CHALLENGE"
+    },
+    {
+      "id": "EC-FR13",
+      "title": "Rechallenge: new candidate/raw/source/oracle delta; affected ChangeCone only",
+      "wp": "P01/P03",
+      "trace": "P01/P03",
+      "neg": "same delta rerun"
+    },
+    {
+      "id": "EC-FR14",
+      "title": "FAR handoff: frozen report, FirstFail, raw, NotCovered to same subject/scope",
+      "wp": "P03/P06",
+      "trace": "P03/P06",
+      "neg": "hash-only handoff"
+    },
+    {
+      "id": "EC-FR15",
+      "title": "Generic profile: non-FHS PLP/phase/effect/case applicability; no forced 485",
+      "wp": "P01/P03",
+      "trace": "P01/P03",
+      "neg": "force HGK/485"
+    },
+    {
+      "id": "EC-FR16",
+      "title": "Security/SoD: authorised read/output roots; subject/oracle/test/threshold write set=[]",
+      "wp": "P03/P06",
+      "trace": "P03/P06",
+      "neg": "write oracle/threshold"
+    }
+  ],
+  "far_fr": [
+    {
+      "id": "FAR-FR01",
+      "title": "Project/subject/scope/source manifest in one package; re-check pins, no filename identity",
+      "wp": "P01/P04",
+      "trace": "P01/P04",
+      "neg": "SOURCE_INTEGRITY_FAILED"
+    },
+    {
+      "id": "FAR-FR02",
+      "title": "Challenge candidate SHA/Finding/raw/NotCovered; parse each Finding; no success advice for unreproduced",
+      "wp": "P03/P04",
+      "trace": "P03/P04",
+      "neg": "RESEARCH_REQUIRED"
+    },
+    {
+      "id": "FAR-FR03",
+      "title": "Repo/Host/WorldRaw/FirstFail/LastGood; original reader checks execution observation",
+      "wp": "P04",
+      "trace": "P04",
+      "neg": "caller-only observation"
+    },
+    {
+      "id": "FAR-FR04",
+      "title": "Finding -> original PI/PD/ECP/TQAEP clause/case/effect/consumer; directed graph with reader_state",
+      "wp": "P04",
+      "trace": "P04",
+      "neg": "edge without reader"
+    },
+    {
+      "id": "FAR-FR05",
+      "title": "One concrete decision question and one current FirstFail identity",
+      "wp": "P04/P05",
+      "trace": "P04/P05",
+      "neg": "many unrelated failures mixed"
+    },
+    {
+      "id": "FAR-FR06",
+      "title": "Original Router provider eligibility and decision ref only where the profile applies",
+      "wp": "P04",
+      "trace": "P04",
+      "neg": "invent Router"
+    },
+    {
+      "id": "FAR-FR07",
+      "title": "Per-source denominator, reachability, independence, freshness, raw",
+      "wp": "P04",
+      "trace": "P04",
+      "neg": "unreachable as zero"
+    },
+    {
+      "id": "FAR-FR08",
+      "title": "Hypothesis, contradiction and counterevidence; seek the observation that can refute",
+      "wp": "P05",
+      "trace": "P05",
+      "neg": "conflict resolved to preferred answer"
+    },
+    {
+      "id": "FAR-FR09",
+      "title": "Search-Before-Build: code/bind/activate/test distinction with real caller/branch/PR/Host evidence",
+      "wp": "P04/P05",
+      "trace": "P04/P05",
+      "neg": "empty worktree proves absence"
+    },
+    {
+      "id": "FAR-FR10",
+      "title": "Root cause with trusted raw and affected ChangeCone; caller root_cause_claim is only a hypothesis",
+      "wp": "P05",
+      "trace": "P05",
+      "neg": "UNKNOWN -> ABSTAIN"
+    },
+    {
+      "id": "FAR-FR11",
+      "title": "Repair/defer/close/park alternatives with Fit/NoFit, cost, risk, next, resume",
+      "wp": "P05",
+      "trace": "P05",
+      "neg": "one empty alternative"
+    },
+    {
+      "id": "FAR-FR12",
+      "title": "Ten Advice constrained by evidence; missing raw cannot yield FIX/CLOSE/PARK",
+      "wp": "P05",
+      "trace": "P05",
+      "neg": "invented 11th advice"
+    },
+    {
+      "id": "FAR-FR13",
+      "title": "Guide second touchpoint in the same scope; advice/owner/next/expected raw/resume; not a Grant",
+      "wp": "P06",
+      "trace": "P06",
+      "neg": "advice=Grant"
+    },
+    {
+      "id": "FAR-FR14",
+      "title": "Two-period material keys, Source/HEAD/Host/Epoch/Oracle/World/FirstFail per-field compare",
+      "wp": "P06",
+      "trace": "P06",
+      "neg": "single period PARK"
+    },
+    {
+      "id": "FAR-FR15",
+      "title": "Original Native WorkOrder three-source receipt only under the original profile",
+      "wp": "P04/Profile",
+      "trace": "P04/Profile",
+      "neg": "UNAPPLIED claimed"
+    },
+    {
+      "id": "FAR-FR16",
+      "title": "Non-FHS project profile legal READ without HGK/485/W0 hard prerequisites",
+      "wp": "P04",
+      "trace": "P04",
+      "neg": "force HGK"
+    },
+    {
+      "id": "FAR-FR17",
+      "title": "Authority/safety/independent acceptance separation; FAR does not mutate repo/Host or issue WO/Grant/Release",
+      "wp": "P05/P06",
+      "trace": "P05/P06",
+      "neg": "FAR issues Release"
+    }
+  ],
+  "advice": [
+    {
+      "name": "FIX_NOW",
+      "evidence": "real RED/Reproduced, current requirement, genuine missing/bug, existing searched",
+      "guide_alias": "CODE_FIX",
+      "owner": "Developer, separate ECP"
+    },
+    {
+      "name": "BIND_EXISTING",
+      "evidence": "code exists, caller/ABI/slot unbound",
+      "guide_alias": "BIND_REPAIR",
+      "owner": "Binder, no second writer"
+    },
+    {
+      "name": "ACTIVATE_HOST",
+      "evidence": "installed/bound but ActualServed missing",
+      "guide_alias": "ACTIVATE_HOST",
+      "owner": "Host Owner, no self-grant"
+    },
+    {
+      "name": "RUN_AFFECTED_TEST",
+      "evidence": "case/oracle exists, raw missing",
+      "guide_alias": "CASE_TEST",
+      "owner": "Runner, not independent"
+    },
+    {
+      "name": "FIX_PD",
+      "evidence": "PI/PD reverse inconsistency and RepoContext checked",
+      "guide_alias": "PD_CHANGE",
+      "owner": "PD Writer"
+    },
+    {
+      "name": "PI_CHANGE_REQUEST",
+      "evidence": "original child/NEG/requirement unsatisfied",
+      "guide_alias": "PI_CHANGE",
+      "owner": "PI Owner, CR is not completion"
+    },
+    {
+      "name": "WAIT_ORIGINAL_AUTHORITY",
+      "evidence": "consent/issuer/principal missing or revoked",
+      "guide_alias": "AUTHORITY_REQUEST",
+      "owner": "Owner, legal READ/DRAFT continues"
+    },
+    {
+      "name": "DEFER_TO_PHASE",
+      "evidence": "original phase/consumer explicitly permits a later wave and it is not current hard",
+      "guide_alias": "DEFER_TO_WAVE",
+      "owner": "Program Owner"
+    },
+    {
+      "name": "RECOMMEND_CLOSE",
+      "evidence": "original scope done, real consumer accepts, all affected raw pinned",
+      "guide_alias": "CLOSE_AFTER_ORIGINAL_ACK",
+      "owner": "Consumer, not Release"
+    },
+    {
+      "name": "PARK_UNTIL_DELTA",
+      "evidence": "two periods identical on source/HEAD/Host/Epoch/Oracle/World/FirstFail",
+      "guide_alias": "PARK_NO_DELTA",
+      "owner": "Work Owner, new material resumes"
+    }
+  ],
+  "far_states": [
+    {
+      "state": "HIT",
+      "criterion": "provider reachable and relevant rows found",
+      "raw": "attempted=true/reachable=true, rows+locator/digest, denominator, relevance reason"
+    },
+    {
+      "state": "ZERO_RELEVANT_HIT",
+      "criterion": "reachable, correct query, real enumeration/coverage, zero relevant",
+      "raw": "rows=0, query/denominator/response raw; not a global absence claim"
+    },
+    {
+      "state": "UNAVAILABLE",
+      "criterion": "provider/DB/root absent or unreachable",
+      "raw": "reachable=false, rows/zero_results=null, reason; RESEARCH_REQUIRED"
+    },
+    {
+      "state": "BLOCKED_BY_AUTHORITY",
+      "criterion": "original ACL/policy denies",
+      "raw": "blocked_reason, permission state/attempted; no bypass, not zero"
+    },
+    {
+      "state": "ERROR",
+      "criterion": "parse/SQL/timeout/execution error",
+      "raw": "error class/message redacted, raw/exit, rows=null or partial"
+    }
+  ],
+  "finding_fields": [
+    "id",
+    "severity",
+    "class",
+    "subject_sha",
+    "command",
+    "exit",
+    "raw_sha256",
+    "reproduction"
+  ],
+  "far_keys": [
+    "source_manifest_sha256",
+    "repo_head",
+    "host_id",
+    "policy_epoch",
+    "oracle_sha256",
+    "world_raw_sha256",
+    "first_fail_id"
+  ],
+  "guide_keys": [
+    "subject",
+    "scope",
+    "source_sha",
+    "repo_head",
+    "host_id",
+    "policy_epoch",
+    "oracle_sha",
+    "world_raw_sha",
+    "first_fail"
+  ],
+  "seams": [
+    {
+      "id": "SM01",
+      "route": "Source -> TPM/Reviewer",
+      "material": "raw SHA/version/span, Req/Child/NEG/Exception, source rights",
+      "neg": "fake ID, missing Child B, same-name different SHA"
+    },
+    {
+      "id": "SM02",
+      "route": "PI -> PD/Program",
+      "material": "PI rev/FUO/ACC/capability/typed DAG/applicability/unknown",
+      "neg": "mandatory without source, cycle/phase overreach"
+    },
+    {
+      "id": "SM03",
+      "route": "PD -> ECP/TQAEP",
+      "material": "op/root/exact write set/preimage, fixture/oracle/runner, expected/post/recovery",
+      "neg": "post used as pre; ECP treated as grant"
+    },
+    {
+      "id": "SM04",
+      "route": "Pack -> Guide",
+      "material": "identity/05 digest, goal/FUO/done/scope/effect/next, actual source bodies",
+      "neg": "fake pack; PACKAGE_FIRST must read six files"
+    },
+    {
+      "id": "SM05",
+      "route": "Guide/Bridge or direct -> Native",
+      "material": "BodyResolver clause/case/locator, context digest/missing/unknown, scope constraints",
+      "neg": "hash-only context; no consumed evidence"
+    },
+    {
+      "id": "SM06",
+      "route": "Native -> Challenge -> FAR",
+      "material": "five pins + actual argv/exit/raw/pre-post + eight-field Finding/NotCovered/claim",
+      "neg": "same candidate/scope only; no raw is not REPRODUCED"
+    },
+    {
+      "id": "SM07",
+      "route": "FAR/delta -> Guide/Consumer",
+      "material": "typed advice + alternatives + seven/nine keys + next/stop/resume + actual readback",
+      "neg": "no delta no dispatch; FAR is not authority; distinct Checker/Consumer"
+    }
+  ],
+  "holds": [
+    {
+      "id": "W1_HOST_NINE_GRID",
+      "gap": "three-Host seven-stage not fully observed",
+      "owner": "Host Owner",
+      "resume": "per-Host actual manifest/loaded/invoked/served/consumed",
+      "state": "OPEN_SCOPED"
+    },
+    {
+      "id": "W1_PLUGIN_ALIAS",
+      "gap": "alias vs installed ID not proven equal",
+      "owner": "Plugin/Host Owner",
+      "resume": "manifest/loaded ID/version/entrypoint",
+      "state": "OPEN_SCOPED"
+    },
+    {
+      "id": "W1_ABI_BOUND",
+      "gap": "four API/Guide IO not truly consumed",
+      "owner": "Guide/Bridge Owner",
+      "resume": "same-scope consumer raw and lossless map",
+      "state": "OPEN_SCOPED"
+    },
+    {
+      "id": "W1_W0_INPUT",
+      "gap": "W1 lacks the new W0 actual",
+      "owner": "W1 Owner",
+      "resume": "same-version W0 handoff/consumer readback",
+      "state": "REQUALIFY_W1"
+    },
+    {
+      "id": "W0_PRIMARY_RECEIPT_STALE",
+      "gap": "W0 receipt 4,222 vs 3,986",
+      "owner": "W0 Curator",
+      "resume": "recompute or written confirmation",
+      "state": "HISTORICAL_SCOPED"
+    },
+    {
+      "id": "W0-A_CASE_SELECTION",
+      "gap": "real non-FHS sample not designated",
+      "owner": "Project/Source Owner",
+      "resume": "G4/SQS designation or typed ReasonedNA",
+      "state": "RESOLVED_FOR_W0_GENERIC"
+    },
+    {
+      "id": "W0-B_NOT_ADMITTED",
+      "gap": "no real DEV/OPS grant",
+      "owner": "Repo/Host Owner",
+      "resume": "real ECP/ACL/preimage/recovery",
+      "state": "PROFILE_ONLY_REQUALIFY"
+    },
+    {
+      "id": "ORIGINAL_READER_UNBOUND",
+      "gap": "no original PIPD typed reader",
+      "owner": "PIPD Owner",
+      "resume": "original-domain typed readback",
+      "state": "REPLACE_NATIVE_PROFILE_ONLY"
+    },
+    {
+      "id": "ORACLE_FIXTURE_UNBOUND",
+      "gap": "original cases have no oracle/fixture bytes",
+      "owner": "Case Owner",
+      "resume": "real bytes and freeze",
+      "state": "REQUALIFY_BY_CASE"
+    },
+    {
+      "id": "HOST_CAPABILITY_UNBOUND",
+      "gap": "no actual served evidence",
+      "owner": "Host Owner",
+      "resume": "loaded/invoked/served/consumed",
+      "state": "OPEN_SCOPED"
+    },
+    {
+      "id": "CHECKER_PUBLISHER_UNBOUND",
+      "gap": "no independent checker/publisher",
+      "owner": "Checker/Publisher",
+      "resume": "distinct receipt; Publisher separately",
+      "state": "SPLIT_RESPONSIBILITY"
+    },
+    {
+      "id": "SOURCE_REFERENCE_HASH_CONFLICT",
+      "gap": "same name different SHA risk",
+      "owner": "Source Curator",
+      "resume": "same ID/version/bytes",
+      "state": "REQUALIFY_BY_SOURCE"
+    },
+    {
+      "id": "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+      "gap": "1011/485 IDs unresolved",
+      "owner": "Profile Owner",
+      "resume": "applicable subset with real IDs",
+      "state": "PROFILE_ONLY_OPEN"
+    },
+    {
+      "id": "HOLD_CR-DOC04-STATE-MAP",
+      "gap": "old T4/T5 formal transition",
+      "owner": "Original DOC04 owner",
+      "resume": "adjudication/readback",
+      "state": "PROFILE_ONLY"
+    }
+  ],
+  "r3_cr": [
+    {
+      "id": "R3-CR01",
+      "name": "tpm-sp-plp vs plp-tpm-review true Host alias",
+      "owner": "Plugin Owner",
+      "resume": "three-Host manifest/version/actual-served"
+    },
+    {
+      "id": "R3-CR02",
+      "name": "Original PIPD/PI-PD/ECP/TQAEP and Case Reader",
+      "owner": "Original Writer/Reader",
+      "resume": "same source SHA/subject/scope typed receipt"
+    },
+    {
+      "id": "R3-CR03",
+      "name": "RepoRoot/HEAD/dirty/ACL/preimage/write set",
+      "owner": "Repo Owner",
+      "resume": "live probe and original PD late-bind"
+    },
+    {
+      "id": "R3-CR04",
+      "name": "Host/OS/EffectRegistry/Issuer/Admission/Recovery",
+      "owner": "Host/Issuer",
+      "resume": "original policy/ECP/actual WorldRaw"
+    },
+    {
+      "id": "R3-CR05",
+      "name": "Guide/Bridge/Challenge/FAR true Host loaded/invoked",
+      "owner": "each Host Owner",
+      "resume": "call/exit/response SHA/consumer readback"
+    },
+    {
+      "id": "R3-CR06",
+      "name": "Original Runner/Oracle/Checker/Publisher",
+      "owner": "original Checker/Publisher",
+      "resume": "distinct verifier/consumer receipt"
+    },
+    {
+      "id": "R3-CR07",
+      "name": "485/35 Tool Slot Fit/License/Pin/NoFit",
+      "owner": "FHS Tool Owner",
+      "resume": "per-need original reader/HostFit"
+    },
+    {
+      "id": "R3-CR08",
+      "name": "r2 references five large FHS_vNEXT files with missing bytes",
+      "owner": "Original Source Reader",
+      "resume": "real bytes/SHA/line"
+    },
+    {
+      "id": "R3-CR09",
+      "name": "Actions v7 pin/runner, repo ruleset/required checks",
+      "owner": "GitHub CI Owner",
+      "resume": "current release/signature/policy/ruleset readback"
+    },
+    {
+      "id": "R3-CR10",
+      "name": "Original Fabric FAR patch, ResearchWorkOrder/three sources",
+      "owner": "Fabric Owner",
+      "resume": "Router/provider raw and same-scope reader"
+    },
+    {
+      "id": "R3-CR11",
+      "name": "Actual W0-A local Host/OriginalConsumer E2E",
+      "owner": "W0-A owners",
+      "resume": "same-scope command/exit/raw"
+    },
+    {
+      "id": "R3-CR12",
+      "name": "Actual W0-B world effect/recovery/independent acceptance",
+      "owner": "Issuer/Runner/Checker",
+      "resume": "admission+pre/post/raw+recovery"
+    }
+  ],
+  "f5_cr": [
+    {
+      "id": "F5-CR01",
+      "name": "identity/ABI",
+      "owner": "W1/W3 owner",
+      "resume": "same-scope identity/ABI readback"
+    },
+    {
+      "id": "F5-CR02",
+      "name": "ABI",
+      "owner": "W1 owner",
+      "resume": "lossless crosswalk"
+    },
+    {
+      "id": "F5-CR03",
+      "name": "source identity",
+      "owner": "Source Curator",
+      "resume": "same ID/bytes"
+    },
+    {
+      "id": "F5-CR04",
+      "name": "RepoContext",
+      "owner": "Repo Owner",
+      "resume": "live probe"
+    },
+    {
+      "id": "F5-CR05",
+      "name": "authority",
+      "owner": "Owner/Issuer",
+      "resume": "named decision/ACL"
+    },
+    {
+      "id": "F5-CR06",
+      "name": "Bridge",
+      "owner": "Bridge Owner",
+      "resume": "four API actual consume"
+    },
+    {
+      "id": "F5-CR07",
+      "name": "Guide Touch2",
+      "owner": "Guide Owner",
+      "resume": "two-period nine keys"
+    },
+    {
+      "id": "F5-CR08",
+      "name": "Runner/Case",
+      "owner": "Case Runner",
+      "resume": "real argv/exit/raw"
+    },
+    {
+      "id": "F5-CR09",
+      "name": "FAR source",
+      "owner": "Research Owner",
+      "resume": "typed query receipt"
+    },
+    {
+      "id": "F5-CR10",
+      "name": "FAR retrieval",
+      "owner": "Research Owner",
+      "resume": "five-state ledger"
+    },
+    {
+      "id": "F5-CR11",
+      "name": "Profile ToolFit",
+      "owner": "W4 Tool Owner",
+      "resume": "per-slot Fit/NoFit"
+    },
+    {
+      "id": "F5-CR12",
+      "name": "Checker",
+      "owner": "Checker Owner",
+      "resume": "distinct verdict"
+    },
+    {
+      "id": "F5-CR13",
+      "name": "two-period delta",
+      "owner": "WorldReader/Guide",
+      "resume": "two real receipts"
+    },
+    {
+      "id": "F5-CR14",
+      "name": "ECP/TQAEP per wave",
+      "owner": "Pack Author",
+      "resume": "real ECP/TQAEP"
+    },
+    {
+      "id": "F5-CR15",
+      "name": "Consumer/Publisher",
+      "owner": "Consumer/Publisher",
+      "resume": "distinct receipt/Release"
+    },
+    {
+      "id": "F5-CR16",
+      "name": "paired evidence appendix and original audit not fully mounted",
+      "owner": "Source Curator",
+      "resume": "original audit bytes"
+    },
+    {
+      "id": "F5-CR17",
+      "name": "workflow action SHA vs repo policy",
+      "owner": "Repo CI Owner",
+      "resume": "action ref/runner ABI/policy"
+    },
+    {
+      "id": "F5-CR18",
+      "name": "public/private repo and rulesets",
+      "owner": "Repo Owner",
+      "resume": "ruleset/required-check readback"
+    },
+    {
+      "id": "F5-CR19",
+      "name": "SBOM/SLSA provenance",
+      "owner": "CI/Publisher",
+      "resume": "verify-attestation receipt"
+    },
+    {
+      "id": "F5-CR20",
+      "name": "tool version/license/OS/HostFit",
+      "owner": "Tool/Legal/Host Owner",
+      "resume": "license/pins/NoFit"
+    },
+    {
+      "id": "F5-CR21",
+      "name": "pipeline required-check name conflict",
+      "owner": "Repo Owner",
+      "resume": "exact context readback"
+    },
+    {
+      "id": "F5-CR22",
+      "name": "2026 web/support freshness",
+      "owner": "Research Owner",
+      "resume": "version pin/dated record"
+    },
+    {
+      "id": "F5-CR23",
+      "name": "Windows reparse/ACL/NTFS identity",
+      "owner": "Windows OS Reader",
+      "resume": "OS probe"
+    },
+    {
+      "id": "F5-CR24",
+      "name": "five historical docs not locally re-verified",
+      "owner": "Source Curator",
+      "resume": "real bytes/SHA"
+    },
+    {
+      "id": "F5-CR25",
+      "name": "secret leak/private-public CI mix",
+      "owner": "Security/Repo Owner",
+      "resume": "secret scan/data class"
+    }
+  ],
+  "rq": [
+    {
+      "id": "RQ01",
+      "name": "true collaboration/fallback"
+    },
+    {
+      "id": "RQ02",
+      "name": "five-party material consumption"
+    },
+    {
+      "id": "RQ03",
+      "name": "true OFF"
+    },
+    {
+      "id": "RQ04",
+      "name": "path security"
+    },
+    {
+      "id": "RQ05",
+      "name": "fresh receiver"
+    },
+    {
+      "id": "RQ06",
+      "name": "nine keys"
+    },
+    {
+      "id": "RQ07",
+      "name": "publication/version reconcile"
+    }
+  ],
+  "denominators": [
+    {
+      "namespace": "W3 original cases",
+      "original": "16",
+      "disposition": "current primary acceptance; required not run => partial"
+    },
+    {
+      "namespace": "W2",
+      "original": "12 + J1/J2/J3/S1/S1Delta/S2",
+      "disposition": "upstream requalification; not merged into W3 16"
+    },
+    {
+      "namespace": "W0",
+      "original": "SAMPLE10 + F5-W0-T01..24 + NF-T01..10",
+      "disposition": "44 actual; scoped reuse, not rerun and not a W3 substitute"
+    },
+    {
+      "namespace": "Challenge",
+      "original": "EC-FR01..16, EC-WP01..09, EC-T01..26, EC-X27..36 (26+10), local47, C16/F5-T12",
+      "disposition": "function/WP/case/exception/local separated; C16_NOT_RUN"
+    },
+    {
+      "namespace": "FAR",
+      "original": "FAR-FR01..17, FAR-WP01..12, FAR-T01..20, FARP30 (10 POS/12 NEG/3 EDGE/5 SEC), local35 (25+10), FAR-Q0..Q10, RQ0..8, ten Advice",
+      "disposition": "current applicable capability only; 35 does not replace 20/30"
+    },
+    {
+      "namespace": "Guide",
+      "original": "CG-R2-REQ01..16, U01..26, CG-SEM01..17, local50",
+      "disposition": "Touch2/nine keys current slice; original 17/three Hosts separate"
+    },
+    {
+      "namespace": "Bridge",
+      "original": "PCB-FR01..17, A-PCB-001..022, AV3-001..030, 38+28",
+      "disposition": "four API and W3 new material consumption; original 66 separate"
+    },
+    {
+      "namespace": "TPM/Reviewer",
+      "original": "F01..14, U01..16, QA26, 35 tools",
+      "disposition": "four contracts/real reviewer; QA26 not run is not a substitute"
+    },
+    {
+      "namespace": "Program/FHS",
+      "original": "U-001..056, R01..24, P00-01..06, FHS 22/36/50/39/96/192/485, 1011=576 identified + 435 unresolved slots",
+      "disposition": "Generic does not force 485; W4 applies by profile; count-only is not ID/ToolFit/PASS"
+    },
+    {
+      "namespace": "Cross-wave",
+      "original": "N01..12, RQ01..07, 14 HOLD, R3-CR01..12, F5-CR01..25",
+      "disposition": "namespaces preserved; CR/RQ/HOLD are not test cases and do not count as PASS"
+    }
+  ]
+}

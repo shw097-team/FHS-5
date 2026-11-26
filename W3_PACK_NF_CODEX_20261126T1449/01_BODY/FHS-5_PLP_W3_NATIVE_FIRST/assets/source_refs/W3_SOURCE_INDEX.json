@@ -1,0 +1,260 @@
+{
+  "schema": "FHS5.PLP.W3.SourceIndex.NF@1",
+  "generated_at": "2026-11-26T14:14:10+08:00",
+  "note": "Machine-readable projection of 05 sources; 05 is canonical.",
+  "source_set_sha256": "e57ace75960a07c674ed26d49d94a5e5ffa5fe53b6f162662c6e543501dd0990",
+  "sources": [
+    {
+      "id": "S01-PLAN",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W3\\FHS-5_PLP_W3_CODEX-NATIVE-FIRST_工程方案.md",
+      "sha256": "f15d3da9f0e5fa5ad07e24be5eddb99e80693d67a0e9a049f00991b8057545e3",
+      "bytes": 134580,
+      "lines": 997,
+      "role": "primary_engineering_plan",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S02-WM3",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\FHS-5_PLP_W3M_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "a8addf259097d6507f64c233c704402389c1cb65aba1bb1325d6337341d0c292",
+      "bytes": 63090,
+      "lines": 961,
+      "role": "direct_wave_master_design",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S03-WM0-R3",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\FHS-5_PLP_W0M_完整實質正文.md",
+      "sha256": "a1f186cc337a4b3828e53f77533df5c97fdda63e132521d861a79b884f0c3aef",
+      "bytes": 106859,
+      "lines": 1176,
+      "role": "w0m_nf_r3_primary_preimage",
+      "read_state": "TARGETED_READ"
+    },
+    {
+      "id": "S04-WM0-R4",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\W0M_CODEX_FIRST\\FHS-5_PLP_W0M_完整實質正文_CODEX-FIRST-r4.md",
+      "sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+      "bytes": 108861,
+      "lines": 1191,
+      "role": "w0m_codex_first_r4_adopted_amendment",
+      "read_state": "TARGETED_READ"
+    },
+    {
+      "id": "S05-C0",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\ALL WAVE_CLOSEOUT & HANDOFF\\FHS-5_PLP_W0_CLOSEOUT.md",
+      "sha256": "23cfa1f640227c0f3ede052faacbeb14364f5a9337ca436970449de500827b3f",
+      "bytes": 21927,
+      "lines": 290,
+      "role": "w0_actual_closeout",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S06-H0",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\ALL WAVE_CLOSEOUT & HANDOFF\\FHS-5_PLP_W0_HANDOFF.md",
+      "sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+      "bytes": 3265,
+      "lines": 67,
+      "role": "w0_handoff_pins",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S07-C1",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\ALL WAVE_CLOSEOUT & HANDOFF\\FHS-5_PLP_W1_CLOSEOUT.md",
+      "sha256": "2954523723b8275298299727b3f615d9d717536af464532b9eb2c0100055ac4a",
+      "bytes": 9231,
+      "lines": 172,
+      "role": "w1_closeout",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S08-H1",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\ALL WAVE_CLOSEOUT & HANDOFF\\FHS-5_PLP_W1_HANDOFF.md",
+      "sha256": "ffea91770c055bf800889e268d265d046b81d7ae79433069fcff0b7f489b38d9",
+      "bytes": 1891,
+      "lines": 45,
+      "role": "w1_handoff_pins",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S09-C2",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\ALL WAVE_CLOSEOUT & HANDOFF\\FHS-5_PLP_W2_CLOSEOUT.md",
+      "sha256": "6dfba0997862e22efe6dbd22f1fe5db9dd00a8173029111c9a930a84ae127618",
+      "bytes": 8824,
+      "lines": 132,
+      "role": "w2_partial_closeout",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S10-H2",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\ALL WAVE_CLOSEOUT & HANDOFF\\FHS-5_PLP_W2_HANDOFF.md",
+      "sha256": "e2c759a9b608deda654ccd9ff90b6c49cc60d3e905c4160a8d3b9419fd05f910",
+      "bytes": 5952,
+      "lines": 112,
+      "role": "w2_handoff",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S11-B00",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\FHS-5_PLP_PROG-00_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "cdd1d76ec20fad19bff96153b11a65a1d0ba98074e4d68d2abfaae5a72c89797",
+      "bytes": 126626,
+      "lines": 908,
+      "role": "program_nf_r2",
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A"
+    },
+    {
+      "id": "S12-B01",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\FHS-5_PLP_PROJ-01_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "aa823374dabce5218611a248fda3c8f68a7f0b0d6b51ffa2e4915f7aec4d0392",
+      "bytes": 68023,
+      "lines": 574,
+      "role": "proj01_tpm_reviewer_nf_r2",
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A"
+    },
+    {
+      "id": "S13-B02",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\FHS-5_PLP_PROJ-02_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "37022f33e5a67ad3165b0a47d36b359255f13719047fa71508e2b80624fc3884",
+      "bytes": 65006,
+      "lines": 596,
+      "role": "proj02_guide_nf_r2",
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A"
+    },
+    {
+      "id": "S14-B03",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\FHS-5_PLP_PROJ-03_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "a13a9df4252a557a3e246035f136295fe1cad5990e828f9ec3d5df083307db98",
+      "bytes": 56268,
+      "lines": 490,
+      "role": "proj03_bridge_nf_r2",
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A"
+    },
+    {
+      "id": "S15-B04",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\FHS-5_PLP_PROJ-04_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "fb529a784b7d929f15a23ed63ea82b7d5f5117e927311b1f164eb005da469323",
+      "bytes": 57182,
+      "lines": 506,
+      "role": "proj04_challenge_nf_r2",
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A"
+    },
+    {
+      "id": "S16-B05",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_PROG_全PROJ\\FHS-5_PLP_PROJ-05_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "794d91cc8080715886d5dc30b92e74b1f123fbe0aee47256bf1e84d749648dfe",
+      "bytes": 67845,
+      "lines": 557,
+      "role": "proj05_far_nf_r2",
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A"
+    },
+    {
+      "id": "S17-WM4",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_WM\\FHS-5_PLP_W4M_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "sha256": "f1df5835e44dc8a7aefe38246699bae77f7007f996d318fb6cc7f40fc37c4a22",
+      "bytes": 72962,
+      "lines": 1042,
+      "role": "w4m_handoff_interface",
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A"
+    },
+    {
+      "id": "S18-CTRL",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W3\\FHS-5_PLP_W3_GPT-WORK_最小執行控制包.md",
+      "sha256": "8690cdcef46ae7353c64376c34f83268e62de5adcfc1ade2b53dfec32d4f3345",
+      "bytes": 24047,
+      "lines": 158,
+      "role": "this_round_control_package",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S19-START",
+      "locator": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W3\\FHS-5_PLP_W3_GPT-WORK_啟動薄PROMPT.md",
+      "sha256": "d40742f85d364de7886a977f12f0b443e9e14a98992d96d059d02de5c2f6f771",
+      "bytes": 3121,
+      "lines": 29,
+      "role": "this_round_start_prompt",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S20-W2-CURRENT",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree\\W2_CURRENT.json",
+      "sha256": "1532901743f1bdc352ca4c9de2fd66896ee6ef1e5fc606eca7ce3cc9616eedfe",
+      "bytes": 2933,
+      "lines": 68,
+      "role": "w2_current_pointer_local_raw",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S21-W2-FIVE-PINS",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree\\24_W2_SCOPED_REPAIR_HERMES_20261126\\W2_FIVE_PINS.json",
+      "sha256": "74321487db0f6a1cf02b0eea8b91be0773308cdffc5ab6f7abfa8e16553ddd8f",
+      "bytes": 2940,
+      "lines": 66,
+      "role": "w2_five_pins_local_raw",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S22-W2-05",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST\\05_W2_SOURCE_MANIFEST.json",
+      "sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+      "bytes": 65377,
+      "lines": 2162,
+      "role": "w2_pack_manifest",
+      "read_state": "REFERENCED_ONLY"
+    },
+    {
+      "id": "S23-W2-25-MANIFEST",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree\\25_W2_FINAL_HANDOFF_HERMES_20261126\\DELIVERY_MANIFEST.json",
+      "sha256": "bec9a2fb5bbff50ba185675f36700681ceca3493445d930bf636fc826b32e5c5",
+      "bytes": 719,
+      "lines": 23,
+      "role": "w2_final_delivery_manifest_local_raw",
+      "read_state": "FULL_READ"
+    },
+    {
+      "id": "S24-W2-00",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST\\00_W2_PI_PD.md",
+      "sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92",
+      "bytes": 60853,
+      "lines": 632,
+      "role": "w2_pack_pi_pd",
+      "read_state": "REFERENCED_ONLY"
+    },
+    {
+      "id": "S25-W2-01",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST\\01_W2_DEV_ECP.md",
+      "sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d",
+      "bytes": 21795,
+      "lines": 326,
+      "role": "w2_pack_dev_ecp",
+      "read_state": "REFERENCED_ONLY"
+    },
+    {
+      "id": "S26-W2-02",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST\\02_W2_OPS_ECP.md",
+      "sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934",
+      "bytes": 19372,
+      "lines": 285,
+      "role": "w2_pack_ops_ecp",
+      "read_state": "REFERENCED_ONLY"
+    },
+    {
+      "id": "S27-W2-03",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST\\03_W2_TQAEP.md",
+      "sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a",
+      "bytes": 22289,
+      "lines": 373,
+      "role": "w2_pack_tqaep",
+      "read_state": "REFERENCED_ONLY"
+    },
+    {
+      "id": "S28-W2-04",
+      "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST\\04_W2_START_THIN_PROMPT.md",
+      "sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8",
+      "bytes": 7104,
+      "lines": 81,
+      "role": "w2_pack_start",
+      "read_state": "REFERENCED_ONLY"
+    }
+  ]
+}

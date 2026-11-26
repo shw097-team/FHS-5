@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "FHS5.PLP.W3.SourceManifest.NF@2",
+  "title": "W3 source manifest",
+  "type": "object",
+  "required": [
+    "schema",
+    "identity",
+    "profile",
+    "selection_state",
+    "sources",
+    "files",
+    "assets",
+    "case_refs",
+    "upstream",
+    "digest_contract",
+    "holds",
+    "claim_ceiling",
+    "external_seal_required"
+  ],
+  "properties": {
+    "schema": {
+      "const": "FHS5.PLP.W3.SourceManifest.NF@2"
+    },
+    "identity": {
+      "type": "object"
+    },
+    "profile": {
+      "const": "GENERIC_NATIVE_FIRST"
+    },
+    "selection_state": {
+      "enum": ["AUTHOR_CANDIDATE_PENDING_OWNER", "PRIMARY_CANDIDATE_PENDING_VERIFICATION", "PACK_PRIMARY_SELECTED"]
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1
+    },
+    "files": {
+      "type": "array",
+      "minItems": 5
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 1
+    },
+    "case_refs": {
+      "type": "array",
+      "minItems": 16
+    },
+    "upstream": {
+      "type": "object"
+    },
+    "digest_contract": {
+      "type": "object"
+    },
+    "holds": {
+      "type": "array"
+    },
+    "claim_ceiling": {
+      "type": "string"
+    },
+    "external_seal_required": {
+      "const": true
+    }
+  },
+  "additionalProperties": true
+}

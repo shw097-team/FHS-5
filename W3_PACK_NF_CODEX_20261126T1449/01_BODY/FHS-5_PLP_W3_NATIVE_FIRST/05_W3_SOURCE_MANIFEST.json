@@ -1,0 +1,2574 @@
+{
+  "schema": "FHS5.PLP.W3.SourceManifest.NF@2",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "wave_id": "W3",
+    "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "artifact_id": "FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY",
+    "version": "r2"
+  },
+  "profile": "GENERIC_NATIVE_FIRST",
+  "selection_state": "PACK_PRIMARY_SELECTED",
+  "claim_ceiling": "PACK_PRIMARY / LOCAL_DOCUMENT_VERIFIED / PACK_EXECUTABLE",
+  "generated_at": "2026-11-26T14:57:25+08:00",
+  "adoption": {
+    "decision_id": "W3-PACK-PRIMARY-20261126-01",
+    "decision_maker": "unique Human Owner (this task user)",
+    "issuer": "unique Human Owner; CODEX delegated executor/recorder",
+    "basis": "explicit user instruction for scoped W3 pack repair, conditional primary adoption, authorized W3 start, and necessary GitHub document publication",
+    "receipt_locator": "../../W3_OWNER_ADOPTION.json",
+    "external_seal_locator": "../../EXTERNAL_SEAL.json",
+    "self_embedded_manifest_sha256": false,
+    "state_binding": "effective after external seal and adoption receipt bind the final 05 raw SHA-256"
+  },
+  "state_authority": {
+    "PACK_PRIMARY_SELECTED": "V1-V3 PASS + external adoption/seal",
+    "PACK_EXECUTABLE": "fresh consumer parse/use + legal next action smoke",
+    "W3_TECHNICALLY_READY": "W2 requalified + current clean receive + real pins; NOT_CLAIMED",
+    "W3_EXECUTION_READY": "per-op ACL/roots/preimage/expiry/recovery; scope-bound, not global",
+    "W3_NF_VALIDATED": "all product criteria; NOT_CLAIMED",
+    "INDEPENDENT_PASS": "distinct product Checker; NOT_CLAIMED",
+    "RELEASED": "Publisher release; NOT_CLAIMED"
+  },
+  "line_count_convention": "len(raw.decode(\"utf-8\").splitlines()); 1-based inclusive spans; LF-oriented source bytes, no CRLF normalization",
+  "source_locator_scheme": {
+    "kind": "LOGICAL_V1",
+    "prefixes": {
+      "S": "read-only upstream source root",
+      "R": "workspace run root",
+      "G": "remote Git repository"
+    },
+    "private_map_locator": "../../02_EVIDENCE/private/SOURCE_LOCATORS.json",
+    "public_note": "logical locators are used in this manifest; absolute private paths live only in private evidence"
+  },
+  "sources": [
+    {
+      "id": "S01-PLAN",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/W3/FHS-5_PLP_W3_CODEX-NATIVE-FIRST_工程方案.md",
+      "version": null,
+      "role": "primary_engineering_plan",
+      "sha256": "f15d3da9f0e5fa5ad07e24be5eddb99e80693d67a0e9a049f00991b8057545e3",
+      "bytes": 134580,
+      "lines": 997,
+      "spans": [
+        {
+          "section": "§00",
+          "lines": [
+            8,
+            44
+          ]
+        },
+        {
+          "section": "§01",
+          "lines": [
+            45,
+            121
+          ]
+        },
+        {
+          "section": "§02",
+          "lines": [
+            122,
+            186
+          ]
+        },
+        {
+          "section": "§03",
+          "lines": [
+            187,
+            207
+          ]
+        },
+        {
+          "section": "§04",
+          "lines": [
+            208,
+            370
+          ]
+        },
+        {
+          "section": "§05",
+          "lines": [
+            371,
+            406
+          ]
+        },
+        {
+          "section": "§06",
+          "lines": [
+            407,
+            446
+          ]
+        },
+        {
+          "section": "§07",
+          "lines": [
+            447,
+            547
+          ]
+        },
+        {
+          "section": "§08",
+          "lines": [
+            548,
+            573
+          ]
+        },
+        {
+          "section": "§09",
+          "lines": [
+            574,
+            672
+          ]
+        },
+        {
+          "section": "§10",
+          "lines": [
+            673,
+            725
+          ]
+        },
+        {
+          "section": "§11",
+          "lines": [
+            726,
+            779
+          ]
+        },
+        {
+          "section": "§12",
+          "lines": [
+            780,
+            810
+          ]
+        },
+        {
+          "section": "Appendix A",
+          "lines": [
+            811,
+            864
+          ]
+        },
+        {
+          "section": "Appendix B",
+          "lines": [
+            865,
+            919
+          ]
+        },
+        {
+          "section": "Appendix C",
+          "lines": [
+            920,
+            983
+          ]
+        },
+        {
+          "section": "Appendix D",
+          "lines": [
+            984,
+            997
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S02-WM3",
+      "locator": "S:FHS-5_PLP_WM/FHS-5_PLP_W3M_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "version": null,
+      "role": "direct_wave_master_design",
+      "sha256": "a8addf259097d6507f64c233c704402389c1cb65aba1bb1325d6337341d0c292",
+      "bytes": 63090,
+      "lines": 961,
+      "spans": [
+        {
+          "section": "§00",
+          "lines": [
+            22,
+            116
+          ]
+        },
+        {
+          "section": "§01",
+          "lines": [
+            117,
+            162
+          ]
+        },
+        {
+          "section": "§02",
+          "lines": [
+            163,
+            247
+          ]
+        },
+        {
+          "section": "§03",
+          "lines": [
+            248,
+            285
+          ]
+        },
+        {
+          "section": "§04",
+          "lines": [
+            286,
+            339
+          ]
+        },
+        {
+          "section": "§05",
+          "lines": [
+            340,
+            394
+          ]
+        },
+        {
+          "section": "§06",
+          "lines": [
+            395,
+            499
+          ]
+        },
+        {
+          "section": "§07",
+          "lines": [
+            500,
+            616
+          ]
+        },
+        {
+          "section": "§08",
+          "lines": [
+            617,
+            653
+          ]
+        },
+        {
+          "section": "§09",
+          "lines": [
+            654,
+            746
+          ]
+        },
+        {
+          "section": "§10",
+          "lines": [
+            747,
+            803
+          ]
+        },
+        {
+          "section": "§11",
+          "lines": [
+            804,
+            879
+          ]
+        },
+        {
+          "section": "§12",
+          "lines": [
+            880,
+            961
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S03-WM0-R3",
+      "locator": "S:FHS-5_PLP_WM/FHS-5_PLP_W0M_完整實質正文.md",
+      "version": null,
+      "role": "w0m_nf_r3_primary_preimage",
+      "sha256": "a1f186cc337a4b3828e53f77533df5c97fdda63e132521d861a79b884f0c3aef",
+      "bytes": 106859,
+      "lines": 1176,
+      "spans": [
+        {
+          "section": "§00/§05/§08/§10/§11/§12",
+          "lines": [
+            1,
+            1176
+          ]
+        }
+      ],
+      "read_state": "TARGETED_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "note": "Not renamed to r4; r4 is the W0-adopted amendment.",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S04-WM0-R4",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/W0/FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付/W0M_CODEX_FIRST/FHS-5_PLP_W0M_完整實質正文_CODEX-FIRST-r4.md",
+      "version": null,
+      "role": "w0m_codex_first_r4_adopted_amendment",
+      "sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+      "bytes": 108861,
+      "lines": 1191,
+      "spans": [
+        {
+          "section": "§00.1–00.6",
+          "lines": [
+            24,
+            137
+          ]
+        },
+        {
+          "section": "§05",
+          "lines": [
+            414,
+            489
+          ]
+        },
+        {
+          "section": "§06.2–06.4",
+          "lines": [
+            505,
+            549
+          ]
+        },
+        {
+          "section": "§10.5–10.5A",
+          "lines": [
+            926,
+            968
+          ]
+        },
+        {
+          "section": "§11.1–11.5",
+          "lines": [
+            993,
+            1091
+          ]
+        }
+      ],
+      "read_state": "TARGETED_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S05-C0",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/ALL WAVE_CLOSEOUT & HANDOFF/FHS-5_PLP_W0_CLOSEOUT.md",
+      "version": null,
+      "role": "w0_actual_closeout",
+      "sha256": "23cfa1f640227c0f3ede052faacbeb14364f5a9337ca436970449de500827b3f",
+      "bytes": 21927,
+      "lines": 290,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            290
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_ACTUAL_SOURCE"
+    },
+    {
+      "id": "S06-H0",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/ALL WAVE_CLOSEOUT & HANDOFF/FHS-5_PLP_W0_HANDOFF.md",
+      "version": null,
+      "role": "w0_handoff_pins",
+      "sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+      "bytes": 3265,
+      "lines": 67,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            67
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_ACTUAL_SOURCE"
+    },
+    {
+      "id": "S07-C1",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/ALL WAVE_CLOSEOUT & HANDOFF/FHS-5_PLP_W1_CLOSEOUT.md",
+      "version": null,
+      "role": "w1_closeout",
+      "sha256": "2954523723b8275298299727b3f615d9d717536af464532b9eb2c0100055ac4a",
+      "bytes": 9231,
+      "lines": 172,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            172
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_ACTUAL_SOURCE"
+    },
+    {
+      "id": "S08-H1",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/ALL WAVE_CLOSEOUT & HANDOFF/FHS-5_PLP_W1_HANDOFF.md",
+      "version": null,
+      "role": "w1_handoff_pins",
+      "sha256": "ffea91770c055bf800889e268d265d046b81d7ae79433069fcff0b7f489b38d9",
+      "bytes": 1891,
+      "lines": 45,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            45
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_ACTUAL_SOURCE"
+    },
+    {
+      "id": "S09-C2",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/ALL WAVE_CLOSEOUT & HANDOFF/FHS-5_PLP_W2_CLOSEOUT.md",
+      "version": null,
+      "role": "w2_partial_closeout",
+      "sha256": "6dfba0997862e22efe6dbd22f1fe5db9dd00a8173029111c9a930a84ae127618",
+      "bytes": 8824,
+      "lines": 132,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            132
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_ACTUAL_SOURCE"
+    },
+    {
+      "id": "S10-H2",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/ALL WAVE_CLOSEOUT & HANDOFF/FHS-5_PLP_W2_HANDOFF.md",
+      "version": null,
+      "role": "w2_handoff",
+      "sha256": "e2c759a9b608deda654ccd9ff90b6c49cc60d3e905c4160a8d3b9419fd05f910",
+      "bytes": 5952,
+      "lines": 112,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            112
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_ACTUAL_SOURCE"
+    },
+    {
+      "id": "S11-B00",
+      "locator": "S:FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROG-00_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "version": null,
+      "role": "program_nf_r2",
+      "sha256": "cdd1d76ec20fad19bff96153b11a65a1d0ba98074e4d68d2abfaae5a72c89797",
+      "bytes": 126626,
+      "lines": 908,
+      "spans": [
+        {
+          "section": "PLAN Appendix A row B00",
+          "lines": [
+            1,
+            908
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S12-B01",
+      "locator": "S:FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-01_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "version": null,
+      "role": "proj01_tpm_reviewer_nf_r2",
+      "sha256": "aa823374dabce5218611a248fda3c8f68a7f0b0d6b51ffa2e4915f7aec4d0392",
+      "bytes": 68023,
+      "lines": 574,
+      "spans": [
+        {
+          "section": "PLAN Appendix A row B01",
+          "lines": [
+            1,
+            574
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S13-B02",
+      "locator": "S:FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-02_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "version": null,
+      "role": "proj02_guide_nf_r2",
+      "sha256": "37022f33e5a67ad3165b0a47d36b359255f13719047fa71508e2b80624fc3884",
+      "bytes": 65006,
+      "lines": 596,
+      "spans": [
+        {
+          "section": "PLAN Appendix A row B02",
+          "lines": [
+            1,
+            596
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S14-B03",
+      "locator": "S:FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-03_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "version": null,
+      "role": "proj03_bridge_nf_r2",
+      "sha256": "a13a9df4252a557a3e246035f136295fe1cad5990e828f9ec3d5df083307db98",
+      "bytes": 56268,
+      "lines": 490,
+      "spans": [
+        {
+          "section": "PLAN Appendix A row B03",
+          "lines": [
+            1,
+            490
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S15-B04",
+      "locator": "S:FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-04_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "version": null,
+      "role": "proj04_challenge_nf_r2",
+      "sha256": "fb529a784b7d929f15a23ed63ea82b7d5f5117e927311b1f164eb005da469323",
+      "bytes": 57182,
+      "lines": 506,
+      "spans": [
+        {
+          "section": "PLAN Appendix A row B04",
+          "lines": [
+            1,
+            506
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S16-B05",
+      "locator": "S:FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-05_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "version": null,
+      "role": "proj05_far_nf_r2",
+      "sha256": "794d91cc8080715886d5dc30b92e74b1f123fbe0aee47256bf1e84d749648dfe",
+      "bytes": 67845,
+      "lines": 557,
+      "spans": [
+        {
+          "section": "PLAN Appendix A row B05",
+          "lines": [
+            1,
+            557
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S17-WM4",
+      "locator": "S:FHS-5_PLP_WM/FHS-5_PLP_W4M_CODEX-NATIVE-FIRST_完整實質正文.md",
+      "version": null,
+      "role": "w4m_handoff_interface",
+      "sha256": "f1df5835e44dc8a7aefe38246699bae77f7007f996d318fb6cc7f40fc37c4a22",
+      "bytes": 72962,
+      "lines": 1042,
+      "spans": [
+        {
+          "section": "PLAN Appendix A row WM4",
+          "lines": [
+            1,
+            1042
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_BY_PLAN_APPENDIX_A",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_DESIGN_SOURCE"
+    },
+    {
+      "id": "S18-CTRL",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/W3/FHS-5_PLP_W3_GPT-WORK_最小執行控制包.md",
+      "version": null,
+      "role": "this_round_control_package",
+      "sha256": "8690cdcef46ae7353c64376c34f83268e62de5adcfc1ade2b53dfec32d4f3345",
+      "bytes": 24047,
+      "lines": 158,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            158
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_ACTUAL_SOURCE"
+    },
+    {
+      "id": "S19-START",
+      "locator": "S:FHS-5_PLP_W0-W4_執行控制小包/W3/FHS-5_PLP_W3_GPT-WORK_啟動薄PROMPT.md",
+      "version": null,
+      "role": "this_round_start_prompt",
+      "sha256": "d40742f85d364de7886a977f12f0b443e9e14a98992d96d059d02de5c2f6f771",
+      "bytes": 3121,
+      "lines": 29,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            29
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "CONSUMED_ACTUAL_SOURCE"
+    },
+    {
+      "id": "S20-W2-CURRENT",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/20_DEV/worktree/W2_CURRENT.json",
+      "version": null,
+      "role": "w2_current_pointer_local_raw",
+      "sha256": "1532901743f1bdc352ca4c9de2fd66896ee6ef1e5fc606eca7ce3cc9616eedfe",
+      "bytes": 2933,
+      "lines": 68,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            68
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "note": "Repo blob 54244c4d... is distinct from this local raw SHA.",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    },
+    {
+      "id": "S21-W2-FIVE-PINS",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/20_DEV/worktree/24_W2_SCOPED_REPAIR_HERMES_20261126/W2_FIVE_PINS.json",
+      "version": null,
+      "role": "w2_five_pins_local_raw",
+      "sha256": "74321487db0f6a1cf02b0eea8b91be0773308cdffc5ab6f7abfa8e16553ddd8f",
+      "bytes": 2940,
+      "lines": 66,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            66
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    },
+    {
+      "id": "S22-W2-05",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/10_PACK/19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/05_W2_SOURCE_MANIFEST.json",
+      "version": null,
+      "role": "w2_pack_manifest",
+      "sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+      "bytes": 65377,
+      "lines": 2162,
+      "spans": [
+        {
+          "section": "1-2000 referenced (partial; 2162 lines)",
+          "lines": [
+            1,
+            2000
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_ONLY",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    },
+    {
+      "id": "S23-W2-25-MANIFEST",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/20_DEV/worktree/25_W2_FINAL_HANDOFF_HERMES_20261126/DELIVERY_MANIFEST.json",
+      "version": null,
+      "role": "w2_final_delivery_manifest_local_raw",
+      "sha256": "bec9a2fb5bbff50ba185675f36700681ceca3493445d930bf636fc826b32e5c5",
+      "bytes": 719,
+      "lines": 23,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            23
+          ]
+        }
+      ],
+      "read_state": "FULL_READ",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    },
+    {
+      "id": "S24-W2-00",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/10_PACK/19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/00_W2_PI_PD.md",
+      "version": null,
+      "role": "w2_pack_pi_pd",
+      "sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92",
+      "bytes": 60853,
+      "lines": 632,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            632
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_ONLY",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    },
+    {
+      "id": "S25-W2-01",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/10_PACK/19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/01_W2_DEV_ECP.md",
+      "version": null,
+      "role": "w2_pack_dev_ecp",
+      "sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d",
+      "bytes": 21795,
+      "lines": 326,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            326
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_ONLY",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    },
+    {
+      "id": "S26-W2-02",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/10_PACK/19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/02_W2_OPS_ECP.md",
+      "version": null,
+      "role": "w2_pack_ops_ecp",
+      "sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934",
+      "bytes": 19372,
+      "lines": 285,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            285
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_ONLY",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    },
+    {
+      "id": "S27-W2-03",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/10_PACK/19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/03_W2_TQAEP.md",
+      "version": null,
+      "role": "w2_pack_tqaep",
+      "sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a",
+      "bytes": 22289,
+      "lines": 373,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            373
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_ONLY",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    },
+    {
+      "id": "S28-W2-04",
+      "locator": "R:W2_NATIVE_RUNS/20261126T1240_W2_SCOPED_REPAIR/10_PACK/19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/04_W2_START_THIN_PROMPT.md",
+      "version": null,
+      "role": "w2_pack_start",
+      "sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8",
+      "bytes": 7104,
+      "lines": 81,
+      "spans": [
+        {
+          "section": "whole",
+          "lines": [
+            1,
+            81
+          ]
+        }
+      ],
+      "read_state": "REFERENCED_ONLY",
+      "rights": "LOCAL_PROJECT_MATERIAL_READ_ONLY",
+      "locator_kind": "LOGICAL_V1",
+      "disposition": "UPSTREAM_READ_ONLY"
+    }
+  ],
+  "files": [
+    {
+      "path": "00_W3_PI_PD.md",
+      "kind": "markdown_normative",
+      "sha256": "8d9ff66626ab63571497d2620ac86e782b1de92b789f0c6b2e09b03cc096ec90",
+      "bytes": 77829,
+      "lines": 800
+    },
+    {
+      "path": "01_W3_DEV_ECP.md",
+      "kind": "markdown_normative",
+      "sha256": "2f943e1e5e6b333c05efc67b0cdfd0882049a07a401d42cf5fa23a779c61b5cd",
+      "bytes": 16083,
+      "lines": 294
+    },
+    {
+      "path": "02_W3_OPS_ECP.md",
+      "kind": "markdown_normative",
+      "sha256": "d4c244a7080793777aef7e35e595dab525cc25816effc4ec7146a68bd6c89c23",
+      "bytes": 9910,
+      "lines": 197
+    },
+    {
+      "path": "03_W3_TQAEP.md",
+      "kind": "markdown_normative",
+      "sha256": "d0d49c8c4930f1fa1e78e5432d5c327b4b446f34e2876c36e9d91e6b09802df9",
+      "bytes": 59884,
+      "lines": 751
+    },
+    {
+      "path": "04_W3_START_THIN_PROMPT.md",
+      "kind": "markdown_normative",
+      "sha256": "0ce02166f8cea579d31a1a8b9422f31da9244cc270a7a0447d7f1c1b93b46ddc",
+      "bytes": 5938,
+      "lines": 83
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/fixtures/W3-CHK-01.json",
+      "kind": "design_asset",
+      "sha256": "0598ea40dccf1a5e8726ab9e8b95432917b69761dd37f54c18f88f0560dfaef0",
+      "bytes": 1113,
+      "lines": 40
+    },
+    {
+      "path": "assets/fixtures/W3-FAR-01.json",
+      "kind": "design_asset",
+      "sha256": "f2107fadf360f449026f47e757d7a28cbb0a2aa72fc9bec43df73a5aae2799e2",
+      "bytes": 1310,
+      "lines": 52
+    },
+    {
+      "path": "assets/fixtures/W3-FAR-02.json",
+      "kind": "design_asset",
+      "sha256": "b894d39b74d14c48bc241fa12273229c32df18087d2b44ced54a460455881d61",
+      "bytes": 1662,
+      "lines": 62
+    },
+    {
+      "path": "assets/fixtures/W3-FR16-01.json",
+      "kind": "design_asset",
+      "sha256": "bc8f6e1de1211cc127c3971072fb7c7b03ebe55c00e44bd8467e546918e9b068",
+      "bytes": 1133,
+      "lines": 42
+    },
+    {
+      "path": "assets/fixtures/W3-FR17-01.json",
+      "kind": "design_asset",
+      "sha256": "ca65a5701883f74ff5ddbd3777b828dc466425c766c39f45b44d65265fe6c967",
+      "bytes": 1086,
+      "lines": 41
+    },
+    {
+      "path": "assets/fixtures/W3-FRZ-01.json",
+      "kind": "design_asset",
+      "sha256": "2ea7be05d07cdb3e25e2f46f420f95ed86582fbf73d5ebda11c28115fef4de92",
+      "bytes": 2065,
+      "lines": 62
+    },
+    {
+      "path": "assets/fixtures/W3-FRZ-02.json",
+      "kind": "design_asset",
+      "sha256": "e8b585981912599db1279ee893ec4e1fdf3203e35a9713a05e91118c8de8d204",
+      "bytes": 1296,
+      "lines": 46
+    },
+    {
+      "path": "assets/fixtures/W3-G2-01.json",
+      "kind": "design_asset",
+      "sha256": "34c0c4dd9a19f6f92bd4e8e7a83bb4561977a17922cc9dcaf09bb13185a717ee",
+      "bytes": 1198,
+      "lines": 44
+    },
+    {
+      "path": "assets/fixtures/W3-R3-01.json",
+      "kind": "design_asset",
+      "sha256": "380bf0618ca4225ee192df57ee2873bed5d2b37aebc1f28bceb59d63f03fba3d",
+      "bytes": 1162,
+      "lines": 41
+    },
+    {
+      "path": "assets/fixtures/W3-R3-02.json",
+      "kind": "design_asset",
+      "sha256": "54e37ff3c50b667d0b0a613ac8df10140d334e35d95cfcb30581764920a26de5",
+      "bytes": 1399,
+      "lines": 62
+    },
+    {
+      "path": "assets/fixtures/W3-R3-03.json",
+      "kind": "design_asset",
+      "sha256": "d0faad1c968b24f38fbec29577f083b5ad3eb8eb168e0c78f60ea2f868296cf6",
+      "bytes": 1122,
+      "lines": 40
+    },
+    {
+      "path": "assets/fixtures/W3-R3-04.json",
+      "kind": "design_asset",
+      "sha256": "a983c5be6cfaf5f16f266121a455cdb20593b120bc857af420d8b4422d1db0a1",
+      "bytes": 1063,
+      "lines": 38
+    },
+    {
+      "path": "assets/fixtures/W3-R3-05.json",
+      "kind": "design_asset",
+      "sha256": "ff731933792526da13c5188757027f63dfdbf452830559b8956e307edbb07bf2",
+      "bytes": 1427,
+      "lines": 50
+    },
+    {
+      "path": "assets/fixtures/W3-R3-06.json",
+      "kind": "design_asset",
+      "sha256": "e33ba60504566a85cbf30b178436d7d973dba60e12db49286edc82f4d78dd13e",
+      "bytes": 1053,
+      "lines": 37
+    },
+    {
+      "path": "assets/fixtures/W3-RUN-01.json",
+      "kind": "design_asset",
+      "sha256": "a13f479256e9d6f7ffb5beb77e7947ebb4a113fb9eb0b217a73cad61cec8779e",
+      "bytes": 1272,
+      "lines": 45
+    },
+    {
+      "path": "assets/fixtures/W3-RUN-02.json",
+      "kind": "design_asset",
+      "sha256": "41be9072ed9ed4e3ef58244e451bfdd1d67193be46d076b5af891f1b79a851d8",
+      "bytes": 1120,
+      "lines": 43
+    },
+    {
+      "path": "assets/oracles/W3-CHK-01.json",
+      "kind": "design_asset",
+      "sha256": "ffac9777f253e3c4ba5ab97e893a821537a17b5ad39dfaf1c739adeca90de655",
+      "bytes": 1098,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-FAR-01.json",
+      "kind": "design_asset",
+      "sha256": "b7eb3f62208784e3bf8e17aa2561828dd82c48abb8f73a0f8d2cb2948128aca6",
+      "bytes": 1161,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-FAR-02.json",
+      "kind": "design_asset",
+      "sha256": "2831c3420f0bdaeb5f84b704b5eb7b6353e7bf949359625be1217f0f48a02bbd",
+      "bytes": 1127,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-FR16-01.json",
+      "kind": "design_asset",
+      "sha256": "77b8ef4f564dd77deefd46270bba4018f70462f7ad29a4eb51e6331819824537",
+      "bytes": 1132,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-FR17-01.json",
+      "kind": "design_asset",
+      "sha256": "4df87ec8b6d58fd82477d90b5f923c8f66cdc30b750901fbde32708a9a320d05",
+      "bytes": 1044,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-FRZ-01.json",
+      "kind": "design_asset",
+      "sha256": "e17d90664f86d14764748822ed834e8301faa431a6eb5e3ec92c341edf464316",
+      "bytes": 1171,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-FRZ-02.json",
+      "kind": "design_asset",
+      "sha256": "5d00ebde2b1dfde9dbac39109976c3557300f96fc0c6ccd4ee69c726922c76d8",
+      "bytes": 1159,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-G2-01.json",
+      "kind": "design_asset",
+      "sha256": "639e31a68902f9e1566345d4ef9be7fe8e3f03195d5ef505251e79ba95bad9bd",
+      "bytes": 1091,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-R3-01.json",
+      "kind": "design_asset",
+      "sha256": "919d3a61d9c585985731b40020891e3fcad6d752e07d618e3a786700ec9fb6cd",
+      "bytes": 1025,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-R3-02.json",
+      "kind": "design_asset",
+      "sha256": "b5fc365df3d3a84de3072a2e1929d3199929f99fe3038180ebaad5943488a186",
+      "bytes": 1020,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-R3-03.json",
+      "kind": "design_asset",
+      "sha256": "9fbc7a90f788b53aca480873f04159c96b7839bd864c6dfa763e502e3e83e30f",
+      "bytes": 1151,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-R3-04.json",
+      "kind": "design_asset",
+      "sha256": "5eeb73dc78972d540aaae6d506ff2cb3869177bbd7c9a6d662a56820f4bc44e1",
+      "bytes": 1007,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-R3-05.json",
+      "kind": "design_asset",
+      "sha256": "6b14d77c459b6c4c64b4d68976db0338d6a5fecc544eb936aa83ee24ef224878",
+      "bytes": 1067,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-R3-06.json",
+      "kind": "design_asset",
+      "sha256": "422f1e6f9ea5339b421838405e077da50334ac44f9898179713a6e9b736bf4c6",
+      "bytes": 1029,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-RUN-01.json",
+      "kind": "design_asset",
+      "sha256": "34b9a16a3e1fca2fb45e2bfbed90f453b297386ec1dcffc6d763e31c0b2e1e80",
+      "bytes": 1120,
+      "lines": 24
+    },
+    {
+      "path": "assets/oracles/W3-RUN-02.json",
+      "kind": "design_asset",
+      "sha256": "d07cc6baadc48d00ab5578489b784bb9f9168a335cef930ceda42e971bbbd121",
+      "bytes": 1092,
+      "lines": 24
+    },
+    {
+      "path": "assets/schema/W3_CASE_CONTRACT.schema.json",
+      "kind": "design_asset",
+      "sha256": "5120be213d8921f7a190d6c2fa300275655672a92e277487f8a4f4c7076f06de",
+      "bytes": 1464,
+      "lines": 86
+    },
+    {
+      "path": "assets/schema/W3_PLAN_INDEX.json",
+      "kind": "design_asset",
+      "sha256": "fcdbf4f068e73717e1cabaecde48d8aa9d4af637a65ae03c41688c7be5e27dcd",
+      "bytes": 44507,
+      "lines": 1375
+    },
+    {
+      "path": "assets/schema/W3_SOURCE_MANIFEST.schema.json",
+      "kind": "design_asset",
+      "sha256": "2e0f51fb91057d54b860cb311e2db590f56f37e97c6d7b81f9cfb2d6667a6af8",
+      "bytes": 1322,
+      "lines": 67
+    },
+    {
+      "path": "assets/source_refs/W3_SOURCE_INDEX.json",
+      "kind": "design_asset",
+      "sha256": "4e42dd9fbfd92e03527b9baeb7a4989ec63b1ad1bc17b3069323627bbbefefbb",
+      "bytes": 11381,
+      "lines": 260
+    },
+    {
+      "path": "assets/tools/w3_consumer.py",
+      "kind": "consumer_tool",
+      "sha256": "6f220cd089c4d2ae6c9834e83fd689916d34086888dadb86be2719bc3feac1ac",
+      "bytes": 6399,
+      "lines": 83
+    }
+  ],
+  "case_refs": [
+    {
+      "case_id": "W3-FRZ-01",
+      "kind": "POS",
+      "wp": "WM3-P01",
+      "requirement_refs": [
+        "W3-A01",
+        "W3-CODEX-01",
+        "EC-FR01",
+        "EC-FR02",
+        "FAR-FR01"
+      ],
+      "child": "CH-FRZ-01-POS",
+      "fixture": {
+        "path": "assets/fixtures/W3-FRZ-01.json",
+        "sha256": "2ea7be05d07cdb3e25e2f46f420f95ed86582fbf73d5ebda11c28115fef4de92",
+        "bytes": 2065
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-FRZ-01.json",
+        "sha256": "e17d90664f86d14764748822ed834e8301faa431a6eb5e3ec92c341edf464316",
+        "bytes": 1171
+      },
+      "expected_exit_design": 0,
+      "expected_token": "FREEZE_LEDGER_VERIFIED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "real W2/W3 five-pin preimages are not frozen; the product freeze runner is UNBOUND; design digests are not product identity",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Challenger; FAR; Checker",
+      "smoke_status": "SMOKE_PASS",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-FRZ-01-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-FRZ-01",
+          "--fixture",
+          "assets/fixtures/W3-FRZ-01.json",
+          "--oracle",
+          "assets/oracles/W3-FRZ-01.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 0,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "FREEZE_LEDGER_VERIFIED",
+        "predicate": "all five pins reopen; source/candidate/evidence/oracle/case_set are distinct; no source byte changed; fixture/time/host/policy are separate fields"
+      }
+    },
+    {
+      "case_id": "W3-FRZ-02",
+      "kind": "NEG",
+      "wp": "WM3-P01",
+      "requirement_refs": [
+        "W3-A01",
+        "EC-FR02",
+        "EC-FR13"
+      ],
+      "child": "CH-FRZ-02-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-FRZ-02.json",
+        "sha256": "e8b585981912599db1279ee893ec4e1fdf3203e35a9713a05e91118c8de8d204",
+        "bytes": 1296
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-FRZ-02.json",
+        "sha256": "5d00ebde2b1dfde9dbac39109976c3557300f96fc0c6ccd4ee69c726922c76d8",
+        "bytes": 1159
+      },
+      "expected_exit_design": 2,
+      "expected_token": "FROZEN_IDENTITY_MISMATCH",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "the real refusal exit code must be frozen from the real intake ABI; exit 2 is a design placeholder",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "P02; Checker",
+      "smoke_status": "SMOKE_PASS",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-FRZ-02-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-FRZ-02",
+          "--fixture",
+          "assets/fixtures/W3-FRZ-02.json",
+          "--oracle",
+          "assets/oracles/W3-FRZ-02.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "FROZEN_IDENTITY_MISMATCH",
+        "predicate": "each subcase refuses before runner invocation; zero writes; source sentinel unchanged; applicable downstream token CANDIDATE_CHANGED or ORACLE_DRIFT is named"
+      }
+    },
+    {
+      "case_id": "W3-RUN-01",
+      "kind": "POS",
+      "wp": "WM3-P02/WM3-P03",
+      "requirement_refs": [
+        "W3-A02",
+        "EC-FR05",
+        "EC-FR06",
+        "EC-FR08",
+        "EC-FR09",
+        "FAR-FR02",
+        "FAR-FR03"
+      ],
+      "child": "CH-RUN-01-POS",
+      "fixture": {
+        "path": "assets/fixtures/W3-RUN-01.json",
+        "sha256": "a13f479256e9d6f7ffb5beb77e7947ebb4a113fb9eb0b217a73cad61cec8779e",
+        "bytes": 1272
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-RUN-01.json",
+        "sha256": "34b9a16a3e1fca2fb45e2bfbed90f453b297386ec1dcffc6d763e31c0b2e1e80",
+        "bytes": 1120
+      },
+      "expected_exit_design": 0,
+      "expected_token": "SEMANTIC_MATCH",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "the original runner/oracle/fixture are UNBOUND; exit 0 alone is not PASS",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "P03; FAR",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-RUN-01-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-RUN-01",
+          "--fixture",
+          "assets/fixtures/W3-RUN-01.json",
+          "--oracle",
+          "assets/oracles/W3-RUN-01.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 0,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "SEMANTIC_MATCH",
+        "predicate": "POS expected matches; NEG produces the expected refusal; Case PASS and operation-not-established are recorded separately; both raw records are independent"
+      }
+    },
+    {
+      "case_id": "W3-RUN-02",
+      "kind": "NEG",
+      "wp": "WM3-P02/WM3-P03",
+      "requirement_refs": [
+        "W3-A02",
+        "EC-FR06",
+        "EC-FR07"
+      ],
+      "child": "CH-RUN-02-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-RUN-02.json",
+        "sha256": "41be9072ed9ed4e3ef58244e451bfdd1d67193be46d076b5af891f1b79a851d8",
+        "bytes": 1120
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-RUN-02.json",
+        "sha256": "d07cc6baadc48d00ab5578489b784bb9f9168a335cef930ceda42e971bbbd121",
+        "bytes": 1092
+      },
+      "expected_exit_design": 2,
+      "expected_token": "UNREPRODUCED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "a real CaseRunner/Curator must supply the missing raw before any REPRODUCED claim",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "FAR; CaseRunner",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-RUN-02-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-RUN-02",
+          "--fixture",
+          "assets/fixtures/W3-RUN-02.json",
+          "--oracle",
+          "assets/oracles/W3-RUN-02.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "UNREPRODUCED",
+        "predicate": "each defect maps to UNREPRODUCED / RUNNER_UNBOUND / RAW_UNTRUSTED; executed=false; no fake exit; no stdout substitution"
+      }
+    },
+    {
+      "case_id": "W3-FAR-01",
+      "kind": "NEG",
+      "wp": "WM3-P04",
+      "requirement_refs": [
+        "W3-A04",
+        "FAR-FR07",
+        "EC-FR14"
+      ],
+      "child": "CH-FAR-01-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-FAR-01.json",
+        "sha256": "f2107fadf360f449026f47e757d7a28cbb0a2aa72fc9bec43df73a5aae2799e2",
+        "bytes": 1310
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-FAR-01.json",
+        "sha256": "b7eb3f62208784e3bf8e17aa2561828dd82c48abb8f73a0f8d2cb2948128aca6",
+        "bytes": 1161
+      },
+      "expected_exit_design": 2,
+      "expected_token": "UNAVAILABLE",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "Fabric/ResearchWO is not available; Generic legal local query is a design control only",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Guide; Research Owner",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-FAR-01-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-FAR-01",
+          "--fixture",
+          "assets/fixtures/W3-FAR-01.json",
+          "--oracle",
+          "assets/oracles/W3-FAR-01.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "UNAVAILABLE",
+        "predicate": "missing provider yields UNAVAILABLE with rows=null and zero_results=null; the injected zero becomes RESEARCH_REQUIRED; the reachable empty control is ZERO_RELEVANT_HIT with denominator"
+      }
+    },
+    {
+      "case_id": "W3-FAR-02",
+      "kind": "POS",
+      "wp": "WM3-P05",
+      "requirement_refs": [
+        "W3-A04",
+        "W3-A05",
+        "FAR-FR08",
+        "FAR-FR09",
+        "FAR-FR10",
+        "FAR-FR11",
+        "FAR-FR12",
+        "EC-FR10",
+        "FAR-FR04",
+        "FAR-FR05"
+      ],
+      "child": "CH-FAR-02-POS",
+      "fixture": {
+        "path": "assets/fixtures/W3-FAR-02.json",
+        "sha256": "b894d39b74d14c48bc241fa12273229c32df18087d2b44ced54a460455881d61",
+        "bytes": 1662
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-FAR-02.json",
+        "sha256": "2831c3420f0bdaeb5f84b704b5eb7b6353e7bf949359625be1217f0f48a02bbd",
+        "bytes": 1127
+      },
+      "expected_exit_design": 0,
+      "expected_token": "ALTERNATIVES_SUBSTANTIVE",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no real Finding/raw exists; this is a design contract only",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Guide; Owner",
+      "smoke_status": "SMOKE_PASS",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-FAR-02-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-FAR-02",
+          "--fixture",
+          "assets/fixtures/W3-FAR-02.json",
+          "--oracle",
+          "assets/oracles/W3-FAR-02.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 0,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "ALTERNATIVES_SUBSTANTIVE",
+        "predicate": "at least two different alternatives each with evidence, counterevidence, cost/risk (UNKNOWN allowed), ChangeCone, expected raw, owner and rollback; no fixed template"
+      }
+    },
+    {
+      "case_id": "W3-G2-01",
+      "kind": "NEG",
+      "wp": "WM3-P06",
+      "requirement_refs": [
+        "W3-A06",
+        "U-034",
+        "FAR-FR14",
+        "FAR-FR13"
+      ],
+      "child": "CH-G2-01-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-G2-01.json",
+        "sha256": "34c0c4dd9a19f6f92bd4e8e7a83bb4561977a17922cc9dcaf09bb13185a717ee",
+        "bytes": 1198
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-G2-01.json",
+        "sha256": "639e31a68902f9e1566345d4ef9be7fe8e3f03195d5ef505251e79ba95bad9bd",
+        "bytes": 1091
+      },
+      "expected_exit_design": 2,
+      "expected_token": "DELTA_UNVERIFIED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "WorldReader two-period receipts are UNBOUND",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Guide; Program",
+      "smoke_status": "SMOKE_PASS",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-G2-01-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-G2-01",
+          "--fixture",
+          "assets/fixtures/W3-G2-01.json",
+          "--oracle",
+          "assets/oracles/W3-G2-01.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "DELTA_UNVERIFIED",
+        "predicate": "one period / caller boolean / single evidence_sha cannot produce PARK or NO_DELTA; no re-dispatch; the two-period positive control is separately required"
+      }
+    },
+    {
+      "case_id": "W3-CHK-01",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "EC-FR12",
+        "EC-FR03",
+        "EC-FR04"
+      ],
+      "child": "CH-CHK-01-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-CHK-01.json",
+        "sha256": "0598ea40dccf1a5e8726ab9e8b95432917b69761dd37f54c18f88f0560dfaef0",
+        "bytes": 1113
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-CHK-01.json",
+        "sha256": "ffac9777f253e3c4ba5ab97e893a821537a17b5ad39dfaf1c739adeca90de655",
+        "bytes": 1098
+      },
+      "expected_exit_design": 2,
+      "expected_token": "FALSE_AUTHORITY",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no protected Checker signer exists; this is a design refusal contract",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Checker",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-CHK-01-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-CHK-01",
+          "--fixture",
+          "assets/fixtures/W3-CHK-01.json",
+          "--oracle",
+          "assets/oracles/W3-CHK-01.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "FALSE_AUTHORITY",
+        "predicate": "advisory PASS cannot write original_checker_verdict; publisher action refused; checker verdict remains null; report does not authorize"
+      }
+    },
+    {
+      "case_id": "W3-R3-01",
+      "kind": "POS",
+      "wp": "WM3-P01/WM3-P03",
+      "requirement_refs": [
+        "W3-A01",
+        "W3M-D06"
+      ],
+      "child": "CH-R3-01-POS",
+      "fixture": {
+        "path": "assets/fixtures/W3-R3-01.json",
+        "sha256": "380bf0618ca4225ee192df57ee2873bed5d2b37aebc1f28bceb59d63f03fba3d",
+        "bytes": 1162
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-R3-01.json",
+        "sha256": "919d3a61d9c585985731b40020891e3fcad6d752e07d618e3a786700ec9fb6cd",
+        "bytes": 1025
+      },
+      "expected_exit_design": 0,
+      "expected_token": "NOT_COVERED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "original CH-07 bytes are not present",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Curator; W4",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-R3-01-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-R3-01",
+          "--fixture",
+          "assets/fixtures/W3-R3-01.json",
+          "--oracle",
+          "assets/oracles/W3-R3-01.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 0,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "NOT_COVERED",
+        "predicate": "identity is preserved; missing bytes stay missing; no fabricated raw; no promotion to full coverage"
+      }
+    },
+    {
+      "case_id": "W3-R3-02",
+      "kind": "NEG",
+      "wp": "WM3-P06",
+      "requirement_refs": [
+        "W3-A06",
+        "W3M-D06"
+      ],
+      "child": "CH-R3-02-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-R3-02.json",
+        "sha256": "54e37ff3c50b667d0b0a613ac8df10140d334e35d95cfcb30581764920a26de5",
+        "bytes": 1399
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-R3-02.json",
+        "sha256": "b5fc365df3d3a84de3072a2e1929d3199929f99fe3038180ebaad5943488a186",
+        "bytes": 1020
+      },
+      "expected_exit_design": 2,
+      "expected_token": "DELTA_UNVERIFIED",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no two-period WorldReader raw",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Guide; WorldReader",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-R3-02-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-R3-02",
+          "--fixture",
+          "assets/fixtures/W3-R3-02.json",
+          "--oracle",
+          "assets/oracles/W3-R3-02.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "DELTA_UNVERIFIED",
+        "predicate": "count-only historical series is not WorldRaw; no PARK; two same-scope real receipts are required"
+      }
+    },
+    {
+      "case_id": "W3-R3-03",
+      "kind": "POS",
+      "wp": "WM3-P04",
+      "requirement_refs": [
+        "W3-A04",
+        "W3M-D05"
+      ],
+      "child": "CH-R3-03-POS",
+      "fixture": {
+        "path": "assets/fixtures/W3-R3-03.json",
+        "sha256": "d0faad1c968b24f38fbec29577f083b5ad3eb8eb168e0c78f60ea2f868296cf6",
+        "bytes": 1122
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-R3-03.json",
+        "sha256": "9fbc7a90f788b53aca480873f04159c96b7839bd864c6dfa763e502e3e83e30f",
+        "bytes": 1151
+      },
+      "expected_exit_design": 0,
+      "expected_token": "ZERO_RELEVANT_HIT",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "the 192-file historical raw is not re-enumerated in this author round; fresh results are a separate period",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "FAR; Research Owner",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-R3-03-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-R3-03",
+          "--fixture",
+          "assets/fixtures/W3-R3-03.json",
+          "--oracle",
+          "assets/oracles/W3-R3-03.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 0,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "ZERO_RELEVANT_HIT",
+        "predicate": "the historical root/query is scoped and enumerated; zero is relative to that root/query, not the whole library; missing original raw stays NotCovered"
+      }
+    },
+    {
+      "case_id": "W3-R3-04",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "W3M-D05",
+        "EC-FR11"
+      ],
+      "child": "CH-R3-04-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-R3-04.json",
+        "sha256": "a983c5be6cfaf5f16f266121a455cdb20593b120bc857af420d8b4422d1db0a1",
+        "bytes": 1063
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-R3-04.json",
+        "sha256": "5eeb73dc78972d540aaae6d506ff2cb3869177bbd7c9a6d662a56820f4bc44e1",
+        "bytes": 1007
+      },
+      "expected_exit_design": 2,
+      "expected_token": "FALSE_INDEPENDENT",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no distinct Checker exists",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Checker",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-R3-04-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-R3-04",
+          "--fixture",
+          "assets/fixtures/W3-R3-04.json",
+          "--oracle",
+          "assets/oracles/W3-R3-04.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "FALSE_INDEPENDENT",
+        "predicate": "self-check cannot raise the observation layer; a distinct Checker receipt is required"
+      }
+    },
+    {
+      "case_id": "W3-R3-05",
+      "kind": "POS",
+      "wp": "WM3-P05",
+      "requirement_refs": [
+        "W3-A04",
+        "W3M-D02"
+      ],
+      "child": "CH-R3-05-POS",
+      "fixture": {
+        "path": "assets/fixtures/W3-R3-05.json",
+        "sha256": "ff731933792526da13c5188757027f63dfdbf452830559b8956e307edbb07bf2",
+        "bytes": 1427
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-R3-05.json",
+        "sha256": "6b14d77c459b6c4c64b4d68976db0338d6a5fecc544eb936aa83ee24ef224878",
+        "bytes": 1067
+      },
+      "expected_exit_design": 0,
+      "expected_token": "ALTERNATIVES_SUBSTANTIVE",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "original sample rights/designation are not available",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "FAR; Owner",
+      "smoke_status": "SMOKE_PASS",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-R3-05-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-R3-05",
+          "--fixture",
+          "assets/fixtures/W3-R3-05.json",
+          "--oracle",
+          "assets/oracles/W3-R3-05.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 0,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "ALTERNATIVES_SUBSTANTIVE",
+        "predicate": "two substantive alternatives with Fit/NoFit and owner/scope; no new root cause or license claim without evidence"
+      }
+    },
+    {
+      "case_id": "W3-R3-06",
+      "kind": "NEG",
+      "wp": "WM3-P01/WM3-P04",
+      "requirement_refs": [
+        "W3-A01",
+        "W3M-D07"
+      ],
+      "child": "CH-R3-06-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-R3-06.json",
+        "sha256": "e33ba60504566a85cbf30b178436d7d973dba60e12db49286edc82f4d78dd13e",
+        "bytes": 1053
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-R3-06.json",
+        "sha256": "422f1e6f9ea5339b421838405e077da50334ac44f9898179713a6e9b736bf4c6",
+        "bytes": 1029
+      },
+      "expected_exit_design": 2,
+      "expected_token": "ORIGINAL_READER_UNBOUND",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "original Source Owner/Reader is absent",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Source Owner; Checker",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-R3-06-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-R3-06",
+          "--fixture",
+          "assets/fixtures/W3-R3-06.json",
+          "--oracle",
+          "assets/oracles/W3-R3-06.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "ORIGINAL_READER_UNBOUND",
+        "predicate": "a Generic file read continues; the original-domain ACK is not claimed; no invented reader"
+      }
+    },
+    {
+      "case_id": "W3-FR16-01",
+      "kind": "NEG",
+      "wp": "WM3-P03",
+      "requirement_refs": [
+        "W3-A07",
+        "EC-FR16",
+        "EC-FR15",
+        "FAR-FR06",
+        "FAR-FR15",
+        "FAR-FR16"
+      ],
+      "child": "CH-FR16-01-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-FR16-01.json",
+        "sha256": "bc8f6e1de1211cc127c3971072fb7c7b03ebe55c00e44bd8467e546918e9b068",
+        "bytes": 1133
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-FR16-01.json",
+        "sha256": "77b8ef4f564dd77deefd46270bba4018f70462f7ad29a4eb51e6331819824537",
+        "bytes": 1132
+      },
+      "expected_exit_design": 2,
+      "expected_token": "WRITE_SCOPE_VIOLATION",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no protected product target is touched in this design case",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Security; Repo Owner",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-FR16-01-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-FR16-01",
+          "--fixture",
+          "assets/fixtures/W3-FR16-01.json",
+          "--oracle",
+          "assets/oracles/W3-FR16-01.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "WRITE_SCOPE_VIOLATION",
+        "predicate": "malicious report write set is refused; zero subject/oracle/test/threshold mutation; canary unchanged; an independent Native role ECP is still required for any product patch"
+      }
+    },
+    {
+      "case_id": "W3-FR17-01",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "FAR-FR17"
+      ],
+      "child": "CH-FR17-01-NEG",
+      "fixture": {
+        "path": "assets/fixtures/W3-FR17-01.json",
+        "sha256": "ca65a5701883f74ff5ddbd3777b828dc466425c766c39f45b44d65265fe6c967",
+        "bytes": 1086
+      },
+      "oracle": {
+        "path": "assets/oracles/W3-FR17-01.json",
+        "sha256": "4df87ec8b6d58fd82477d90b5f923c8f66cdc30b750901fbde32708a9a320d05",
+        "bytes": 1044
+      },
+      "expected_exit_design": 2,
+      "expected_token": "FALSE_AUTHORITY",
+      "observed": null,
+      "verdict": "NOT_RUN",
+      "not_covered": "no Publisher/Checker is present",
+      "checker_route": "distinct Checker; not obtained",
+      "consumer": "Checker; Publisher",
+      "smoke_status": "MATERIAL_PARSE_OK",
+      "runner": {
+        "ref": "UNBOUND::W3/W3-FR17-01-runner",
+        "argv": [
+          "python",
+          "<real-runner>",
+          "--case",
+          "W3-FR17-01",
+          "--fixture",
+          "assets/fixtures/W3-FR17-01.json",
+          "--oracle",
+          "assets/oracles/W3-FR17-01.json",
+          "--out",
+          "<isolated-run-root>"
+        ],
+        "cwd": "<isolated-case-root>",
+        "timeout_s": 120,
+        "late_bind": "Case Owner names the real runner binary/source SHA, argv, cwd, timeout and ACL before any product run"
+      },
+      "expected": {
+        "exit": 2,
+        "exit_semantics": "DESIGN_PLACEHOLDER; the real exit code must be frozen from the runner ABI; refusal means non-success + typed token + zero effect",
+        "token": "FALSE_AUTHORITY",
+        "predicate": "FAR refuses WorkOrder/Grant/Release and subject/Host writes; authority=NONE; a separate Publisher/Checker is required"
+      }
+    }
+  ],
+  "requirement_crosswalk": [
+    {
+      "fr": "EC-FR01",
+      "primary_case": "W3-FRZ-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "EC-FR02",
+      "primary_case": "W3-FRZ-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "EC-FR03",
+      "primary_case": "W3-CHK-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR04",
+      "primary_case": "W3-CHK-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR05",
+      "primary_case": "W3-RUN-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR06",
+      "primary_case": "W3-RUN-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR07",
+      "primary_case": "W3-RUN-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR08",
+      "primary_case": "W3-RUN-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR09",
+      "primary_case": "W3-RUN-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR10",
+      "primary_case": "W3-FAR-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "EC-FR11",
+      "primary_case": "W3-R3-04",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR12",
+      "primary_case": "W3-CHK-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR13",
+      "primary_case": "W3-FRZ-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "EC-FR14",
+      "primary_case": "W3-FAR-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR15",
+      "primary_case": "W3-FR16-01",
+      "status": "NOT_RUN",
+      "profile_only": true,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "EC-FR16",
+      "primary_case": "W3-FR16-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "FAR-FR01",
+      "primary_case": "W3-FRZ-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR02",
+      "primary_case": "W3-RUN-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "FAR-FR03",
+      "primary_case": "W3-RUN-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "FAR-FR04",
+      "primary_case": "W3-FAR-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR05",
+      "primary_case": "W3-FAR-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR06",
+      "primary_case": "W3-FR16-01",
+      "status": "NOT_RUN",
+      "profile_only": true,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "FAR-FR07",
+      "primary_case": "W3-FAR-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "FAR-FR08",
+      "primary_case": "W3-FAR-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR09",
+      "primary_case": "W3-FAR-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR10",
+      "primary_case": "W3-FAR-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR11",
+      "primary_case": "W3-FAR-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR12",
+      "primary_case": "W3-FAR-02",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR13",
+      "primary_case": "W3-G2-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR14",
+      "primary_case": "W3-G2-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "SMOKE_PASS"
+    },
+    {
+      "fr": "FAR-FR15",
+      "primary_case": "W3-FR16-01",
+      "status": "NOT_RUN",
+      "profile_only": true,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "FAR-FR16",
+      "primary_case": "W3-FR16-01",
+      "status": "NOT_RUN",
+      "profile_only": true,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    },
+    {
+      "fr": "FAR-FR17",
+      "primary_case": "W3-FR17-01",
+      "status": "NOT_RUN",
+      "profile_only": false,
+      "reasoned_nc": false,
+      "smoke": "MATERIAL_PARSE_OK"
+    }
+  ],
+  "upstream": {
+    "w0": {
+      "subject_id": "FHS-5_PLP/W0",
+      "scope": "W0-NF",
+      "pack": "W0-NF-r3-CODEX-PRIMARY",
+      "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+      "candidate_commit": "bb66a276aae8c5d6aef549832c523587fc47d247",
+      "candidate_preimage": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+      "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+      "evidence_manifest_sha256": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93",
+      "w0m_adopted_amendment_sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+      "status": "W0_NF_VALIDATED",
+      "reuse_state": "SCOPED_REUSE_ONLY"
+    },
+    "w1": {
+      "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+      "scope": "W1-NF-01",
+      "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+      "source_set_sha256": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+      "status": "W1_NF_VALIDATED",
+      "w2_technical_readiness": "READY",
+      "reuse_state": "SCOPED_REUSE_ONLY"
+    },
+    "w2_subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+    "w2_scope": "W2-NF-01",
+    "w2_candidate_commit": "dada2354b7c25c8f4a316d9fae93827cef0d194e",
+    "w2_delivery_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+    "w2_pack_manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+    "w2_asset_count": 25,
+    "w2_status": "PARTIAL",
+    "w2_writer_state": "BLOCKED_NOT_ADMITTED",
+    "w2_current_raw_sha256": "1532901743f1bdc352ca4c9de2fd66896ee6ef1e5fc606eca7ce3cc9616eedfe",
+    "w2_five_pins_raw_sha256": "74321487db0f6a1cf02b0eea8b91be0773308cdffc5ab6f7abfa8e16553ddd8f",
+    "w2_oracle_sha256": null,
+    "w2_case_set_sha256": null,
+    "w2_evidence_seal_sha256": null,
+    "w3_receive_receipt_sha256": null,
+    "w3_r1_superseded_manifest_sha256": "88508d0bf7e7e557fe2447db07966197108c136a7634f34ed6c89ea5759a13ad"
+  },
+  "digest_contract": {
+    "raw_hash": "SHA-256",
+    "manifest_self_excluded": true,
+    "source_set_sha256": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+    "source_set_algorithm": "W3-SOURCE-SET-SHA256@1: sorted by source id; UTF-8 preimage lines `id\\t sha256 \\t bytes \\t locator \\n`",
+    "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
+    "package_tree_algorithm": "W3-PACK-TREE-SHA256@1: sorted normalized POSIX relative paths of 00-04 + assets, excluding 05 and seal; UTF-8 preimage lines `path\\t bytes \\t sha256 \\n`",
+    "context_sha256": null,
+    "legacy_package_sha256": null,
+    "notes": "source_set, file raw, 05 raw, package_tree, context and legacy projection are separate hash domains; no value substitutes for another. Logical source locators are part of the source_set preimage in r2; the private absolute-path map is outside 05.",
+    "package_tree_entries": 42
+  },
+  "verification": {
+    "v1": {
+      "status": "PASS",
+      "raw_stdout": "02_EVIDENCE/raw/checks/V1.stdout.txt",
+      "raw_stdout_sha256": "06bbb5aafde345034d849cf2e3a56d524fbd4f1bc98056e93a49d2993fad4971",
+      "exit": 0
+    },
+    "v2": {
+      "status": "PASS",
+      "raw_stdout": "02_EVIDENCE/raw/checks/V2.stdout.txt",
+      "raw_stdout_sha256": "c544ee212a1b4bcffd59fa7baa39c7349e1a5a6b65b024cb37c8370e0c8a8d7e",
+      "exit": 0
+    },
+    "v3": {
+      "status": "PASS",
+      "smoke_receipt": "02_EVIDENCE/raw/smoke_clean/SMOKE_RECEIPT.json",
+      "raw_stdout": "02_EVIDENCE/raw/checks/V3_SMOKE.stdout.txt",
+      "exit": 0,
+      "layer": "DOC/SMOKE"
+    },
+    "clean_copy_byte_equal": true,
+    "review_strength": "DISTINCT_READ_ONLY_SESSION_PASS",
+    "layer": "DOC/SMOKE; product COMPONENT/INVOCATION/E2E/HOST NOT_RUN"
+  },
+  "holds": [
+    {
+      "id": "W1_HOST_NINE_GRID",
+      "scope": "cross_wave_or_w3",
+      "owner": "Host Owner",
+      "resume": "per-Host actual manifest/loaded/invoked/served/consumed",
+      "state": "OPEN_SCOPED"
+    },
+    {
+      "id": "W1_PLUGIN_ALIAS",
+      "scope": "cross_wave_or_w3",
+      "owner": "Plugin/Host Owner",
+      "resume": "manifest/loaded ID/version/entrypoint",
+      "state": "OPEN_SCOPED"
+    },
+    {
+      "id": "W1_ABI_BOUND",
+      "scope": "cross_wave_or_w3",
+      "owner": "Guide/Bridge Owner",
+      "resume": "same-scope consumer raw and lossless map",
+      "state": "OPEN_SCOPED"
+    },
+    {
+      "id": "W1_W0_INPUT",
+      "scope": "cross_wave_or_w3",
+      "owner": "W1 Owner",
+      "resume": "same-version W0 handoff/consumer readback",
+      "state": "REQUALIFY_W1"
+    },
+    {
+      "id": "W0_PRIMARY_RECEIPT_STALE",
+      "scope": "cross_wave_or_w3",
+      "owner": "W0 Curator",
+      "resume": "recompute or written confirmation",
+      "state": "HISTORICAL_SCOPED"
+    },
+    {
+      "id": "W0-A_CASE_SELECTION",
+      "scope": "cross_wave_or_w3",
+      "owner": "Project/Source Owner",
+      "resume": "G4/SQS designation or typed ReasonedNA",
+      "state": "RESOLVED_FOR_W0_GENERIC"
+    },
+    {
+      "id": "W0-B_NOT_ADMITTED",
+      "scope": "cross_wave_or_w3",
+      "owner": "Repo/Host Owner",
+      "resume": "real ECP/ACL/preimage/recovery",
+      "state": "PROFILE_ONLY_REQUALIFY"
+    },
+    {
+      "id": "ORIGINAL_READER_UNBOUND",
+      "scope": "cross_wave_or_w3",
+      "owner": "PIPD Owner",
+      "resume": "original-domain typed readback",
+      "state": "REPLACE_NATIVE_PROFILE_ONLY"
+    },
+    {
+      "id": "ORACLE_FIXTURE_UNBOUND",
+      "scope": "cross_wave_or_w3",
+      "owner": "Case Owner",
+      "resume": "real bytes and freeze",
+      "state": "REQUALIFY_BY_CASE"
+    },
+    {
+      "id": "HOST_CAPABILITY_UNBOUND",
+      "scope": "cross_wave_or_w3",
+      "owner": "Host Owner",
+      "resume": "loaded/invoked/served/consumed",
+      "state": "OPEN_SCOPED"
+    },
+    {
+      "id": "CHECKER_PUBLISHER_UNBOUND",
+      "scope": "cross_wave_or_w3",
+      "owner": "Checker/Publisher",
+      "resume": "distinct receipt; Publisher separately",
+      "state": "SPLIT_RESPONSIBILITY"
+    },
+    {
+      "id": "SOURCE_REFERENCE_HASH_CONFLICT",
+      "scope": "cross_wave_or_w3",
+      "owner": "Source Curator",
+      "resume": "same ID/version/bytes",
+      "state": "REQUALIFY_BY_SOURCE"
+    },
+    {
+      "id": "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+      "scope": "cross_wave_or_w3",
+      "owner": "Profile Owner",
+      "resume": "applicable subset with real IDs",
+      "state": "PROFILE_ONLY_OPEN"
+    },
+    {
+      "id": "HOLD_CR-DOC04-STATE-MAP",
+      "scope": "cross_wave_or_w3",
+      "owner": "Original DOC04 owner",
+      "resume": "adjudication/readback",
+      "state": "PROFILE_ONLY"
+    },
+    {
+      "id": "W2_WRITER_BLOCKED",
+      "scope": "w2",
+      "owner": "Human Owner",
+      "resume": "new W2 named roots/targets/ops/expiry/recovery + real ACL",
+      "state": "OPEN"
+    },
+    {
+      "id": "W2_ORACLE_UNFROZEN",
+      "scope": "w2",
+      "owner": "W2 Case Owner",
+      "resume": "real 12-case oracle/fixture/case-set bytes",
+      "state": "OPEN"
+    },
+    {
+      "id": "W2_EVIDENCE_SEAL_PARTIAL",
+      "scope": "w2",
+      "owner": "W2 Checker/Curator",
+      "resume": "per-raw seal + external seal + fresh checkout",
+      "state": "OPEN"
+    },
+    {
+      "id": "W2_INDEPENDENT_PASS",
+      "scope": "w2",
+      "owner": "W2 Checker",
+      "resume": "distinct verdict on dada235",
+      "state": "OPEN"
+    },
+    {
+      "id": "W3_PACK_ABSENT",
+      "scope": "w3",
+      "owner": "W3 Owner",
+      "resume": "r2 PACK_PRIMARY_SELECTED + external seal/adoption; fresh receive tracked separately",
+      "state": "CLOSED_BY_ADOPTION"
+    },
+    {
+      "id": "W3_RUNNER",
+      "scope": "w3",
+      "owner": "W3 CaseRunner/Case Owner",
+      "resume": "same-scope argv/exit/raw/fixture/oracle",
+      "state": "OPEN"
+    },
+    {
+      "id": "W3_EVIDENCE",
+      "scope": "w3",
+      "owner": "W3 Evidence/WorldReader",
+      "resume": "trust chain + WorldRaw",
+      "state": "OPEN"
+    },
+    {
+      "id": "W3_FAR_SOURCE",
+      "scope": "w3",
+      "owner": "W3 Research/Fabric Owner",
+      "resume": "typed query receipt / original WO",
+      "state": "OPEN"
+    },
+    {
+      "id": "W3_DELTA",
+      "scope": "w3",
+      "owner": "W3 WorldReader/Guide",
+      "resume": "two same-scope real receipts",
+      "state": "OPEN"
+    },
+    {
+      "id": "W3_INDEPENDENT",
+      "scope": "w3",
+      "owner": "W3 Checker",
+      "resume": "distinct Checker verdict",
+      "state": "OPEN"
+    }
+  ],
+  "external_seal_required": true,
+  "not_claimed": [
+    "W2_NF_VALIDATED",
+    "W3_TECHNICALLY_READY",
+    "W3_NF_VALIDATED",
+    "INDEPENDENT_PASS",
+    "RELEASED"
+  ],
+  "notes": [
+    "16 original product cases remain observed=null / NOT_RUN; design assets are not original-domain oracle bytes.",
+    "W2 writer remains BLOCKED_NOT_ADMITTED; this pack does not unseal W2.",
+    "No candidate/evidence/oracle/case-set hash substitution is permitted.",
+    "The 33 FR crosswalk is a trace index; it is not a product PASS."
+  ]
+}

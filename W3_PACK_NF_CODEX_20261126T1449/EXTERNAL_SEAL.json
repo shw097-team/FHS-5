@@ -1,0 +1,24 @@
+{
+  "schema": "FHS5.PLP.W3.ExternalSeal.NF@2",
+  "identity": {
+    "project_id": "FHS-5_PLP",
+    "wave_id": "W3",
+    "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+    "scope": "W3-NF-01",
+    "artifact_id": "FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY",
+    "version": "r2"
+  },
+  "profile": "GENERIC_NATIVE_FIRST",
+  "selection_state": "PACK_PRIMARY_SELECTED",
+  "manifest_path": "01_BODY/FHS-5_PLP_W3_NATIVE_FIRST/05_W3_SOURCE_MANIFEST.json",
+  "manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+  "manifest_bytes": 79611,
+  "source_set_sha256": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+  "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
+  "package_tree_entries": 42,
+  "sealed_at": "2026-11-26T15:24:11+08:00",
+  "sealer": "W3_PACK_PRIMARY_CODEX_20261126T1449",
+  "claim_ceiling": "PACK_PRIMARY / LOCAL_DOCUMENT_VERIFIED / PACK_EXECUTABLE",
+  "self_excluded": true,
+  "note": "This seal is outside the pack. It binds the final 05 raw SHA-256, tree and identity; it does not write back to 05."
+}
