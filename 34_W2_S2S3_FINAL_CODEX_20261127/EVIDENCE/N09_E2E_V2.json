@@ -1,0 +1,58 @@
+{
+ "schema": "FHS5.PLP.W2.N09@2",
+ "work_order": "WO-W2-N04-N09-20261127",
+ "segments": [
+  {
+   "segment": "spec",
+   "role": "normative source",
+   "artifact": "S1_PACKS/FHS-5_PLP_W2_NATIVE_FIRST",
+   "sha256": "3eb3497cdc30021510cbb2be7a9d8763b86cfae70e25efb4292fac92f3dea32c"
+  },
+  {
+   "segment": "reader->tpm",
+   "role": "product candidate",
+   "artifact": "loaded_contracts.json",
+   "sha256": "98838551bff18f35ff68d4822f7c6db0b84189dcdf034fe8505775247e85aff8"
+  },
+  {
+   "segment": "host_serve",
+   "role": "native direct serve",
+   "artifact": "served_bundle.json",
+   "sha256": "6768b1b43321b61d026e1f0a7e93eb68b2e9adbc4f1f039eda6fb4941d9ac87a"
+  },
+  {
+   "segment": "consumer",
+   "role": "fresh consumer",
+   "artifact": "consumed_decision.json",
+   "sha256": "dabe364f768be32bc2511cffb17a6ffe309e3efeb9d9aec675ca203309533b40",
+   "decision": {
+    "selected_case": "W2-DEV-01",
+    "kind": "POS",
+    "runner": "check/run_cases_nf.py",
+    "fixture_present": true,
+    "oracle_present": true,
+    "fixture_sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001",
+    "oracle_sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb",
+    "fixture_sha_match": true,
+    "oracle_sha_match": true,
+    "next_legal_action": "RUN W2-DEV-01 via check/run_cases_nf.py"
+   }
+  },
+  {
+   "segment": "operation(reuse)",
+   "role": "upstream W1 delivery + W2 receiver",
+   "artifact": "28_ OPS-A",
+   "run": "20261127T000949_O03",
+   "note": "ran under the previous OPS decision and the W1 NF delivery; not under the current S1 contract"
+  }
+ ],
+ "causal_join": {
+  "spec_to_contracts": true,
+  "contracts_to_serve": true,
+  "serve_to_consume": true,
+  "contracts_to_operation": false
+ },
+ "missing": "an operation that consumes this S1 contract (or an explicit binding receipt)",
+ "verdict": "PARTIAL_REUSE",
+ "reason": "N04 chain is real and same-work-order; the operation segment is a valid historical run but was not driven by the current S1 contract"
+}

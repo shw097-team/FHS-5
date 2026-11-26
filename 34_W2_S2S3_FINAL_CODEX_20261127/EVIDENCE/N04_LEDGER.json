@@ -1,0 +1,70 @@
+{
+ "schema": "FHS5.PLP.W2.N04HostLedger@1",
+ "work_order": "WO-W2-N04-N09-20261127",
+ "stages": {
+  "Selected": {
+   "artifact": "selected.json",
+   "sha256": "3eb3497cdc30021510cbb2be7a9d8763b86cfae70e25efb4292fac92f3dea32c"
+  },
+  "Loaded": {
+   "argv_exit": 0,
+   "stderr": "",
+   "artifact": "loaded_contracts.json",
+   "sha256": "98838551bff18f35ff68d4822f7c6db0b84189dcdf034fe8505775247e85aff8"
+  },
+  "Installed": {
+   "status": "REASONED_NA_NATIVE_ENTRY",
+   "reason": "native direct entry; no plugin install stage"
+  },
+  "Bound": {
+   "work_order": "WO-W2-N04-N09-20261127",
+   "bound_identity": {
+    "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+    "scope": "W2-NF-01"
+   }
+  },
+  "Invoked": {
+   "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "tools/serve.py",
+    "loaded_contracts.json",
+    "served_bundle.json"
+   ],
+   "exit": 0,
+   "stdout": "{\"served\": true, \"cases\": 12}",
+   "stderr": ""
+  },
+  "ActualServed": {
+   "artifact": "served_bundle.json",
+   "sha256": "6768b1b43321b61d026e1f0a7e93eb68b2e9adbc4f1f039eda6fb4941d9ac87a"
+  },
+  "Consumed": {
+   "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "tools/consume.py",
+    "served_bundle.json",
+    "pack",
+    "consumed_decision.json"
+   ],
+   "exit": 0,
+   "stdout": "{\"consumed\": true, \"case\": \"W2-DEV-01\"}",
+   "stderr": "",
+   "artifact": "consumed_decision.json",
+   "sha256": "dabe364f768be32bc2511cffb17a6ffe309e3efeb9d9aec675ca203309533b40",
+   "decision": {
+    "selected_case": "W2-DEV-01",
+    "kind": "POS",
+    "runner": "check/run_cases_nf.py",
+    "fixture_present": true,
+    "oracle_present": true,
+    "fixture_sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001",
+    "oracle_sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb",
+    "fixture_sha_match": true,
+    "oracle_sha_match": true,
+    "next_legal_action": "RUN W2-DEV-01 via check/run_cases_nf.py"
+   }
+  }
+ },
+ "verdict": "PASS",
+ "note": "native direct; Installed is REASONED_NA, not observed"
+}

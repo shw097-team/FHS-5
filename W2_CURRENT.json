@@ -12,13 +12,13 @@
     "status": "ADOPTED_PRIMARY_USE_DO_NOT_MODIFY"
   },
   "current_delivery": {
-    "dir": "33_W2_S2S3_Q1Q4_CODEX_20261127",
-    "closeout": "33_W2_S2S3_Q1Q4_CODEX_20261127/FHS-5_PLP_W2_CLOSEOUT.md",
-    "handoff": "33_W2_S2S3_Q1Q4_CODEX_20261127/FHS-5_PLP_W2_HANDOFF.md",
-    "five_pins": "33_W2_S2S3_Q1Q4_CODEX_20261127/FIVE_PINS.json",
-    "closure_matrix": "33_W2_S2S3_Q1Q4_CODEX_20261127/CLOSURE_MATRIX.json",
-    "checker": "33_W2_S2S3_Q1Q4_CODEX_20261127/CHECKER_FINAL.json",
-    "consumer": "33_W2_S2S3_Q1Q4_CODEX_20261127/W3_CONSUMER.json",
+    "dir": "34_W2_S2S3_FINAL_CODEX_20261127",
+    "closeout": "34_W2_S2S3_FINAL_CODEX_20261127/FHS-5_PLP_W2_CLOSEOUT.md",
+    "handoff": "34_W2_S2S3_FINAL_CODEX_20261127/FHS-5_PLP_W2_HANDOFF.md",
+    "five_pins": "34_W2_S2S3_FINAL_CODEX_20261127/FIVE_PINS.json",
+    "closure_matrix": "34_W2_S2S3_FINAL_CODEX_20261127/CLOSURE_MATRIX.json",
+    "checker": "34_W2_S2S3_FINAL_CODEX_20261127/CHECKER_FINAL.json",
+    "consumer": "34_W2_S2S3_FINAL_CODEX_20261127/W3_CONSUMER.json",
     "candidate_aggregate_digest": "cb66d77bc8e1282cd18c1d8ebaa55f49ee1059dba55bc1cd33f0d097671a6794",
     "members": 16
   },
@@ -36,13 +36,7 @@
     "W3_EXECUTION_READY": "NOT_CLAIMED",
     "INDEPENDENT_PASS": "NOT_CLAIMED",
     "RELEASED": "NOT_CLAIMED",
-    "reason": "N04/N09 partial; W1 67 ECP not per-item; W0 OFF not rerun"
-  },
-  "writer_state": {
-    "state": "GENERATION_2 (config-driven authority)",
-    "note": "OPS decision expired 2026-11-27T23:59:59+08:00; new protected effect needs a new named scope",
-    "dev_scope": "W2-S2S3-OWNER-20261126-02 (expired)",
-    "ops_scope": "W2-S2S3-OWNER-20261127-03 (expired)"
+    "reason": "N09 operation segment not under current contract; W0 fresh consume not rerun"
   },
   "next_owner": "W3 P01 (see the handoff)",
   "candidate_members": [
@@ -62,5 +56,9 @@
     "W1/check/test_s1_contracts.py",
     "W1/check/test_j1_receiver.py",
     "W1/check/test_j1_strict.py"
-  ]
+  ],
+  "writer_state": {
+    "state": "GENERATION_2",
+    "note": "DEV/OPS decisions expire 2026-11-27T23:59:59+08:00; no new protected effect this round"
+  }
 }

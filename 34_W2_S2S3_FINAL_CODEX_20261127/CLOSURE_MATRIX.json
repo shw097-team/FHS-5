@@ -1,0 +1,137 @@
+{
+ "schema": "FHS5.PLP.W0W2.ClosureMatrix@7",
+ "rows": [
+  {
+   "wave": "W0",
+   "id": "S1_entry",
+   "status": "RERUN_PASS",
+   "ev": "30_/W0 entry"
+  },
+  {
+   "wave": "W0",
+   "id": "OFF",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W0_OFF.json (7/7, control_ok)"
+  },
+  {
+   "wave": "W0",
+   "id": "44_receipts",
+   "status": "REUSE_VERIFIED",
+   "ev": "13_/05_TQAEP/receipts"
+  },
+  {
+   "wave": "W0",
+   "id": "fresh_W1_consume",
+   "status": "NOT_RUN",
+   "ev": "-"
+  },
+  {
+   "wave": "W1",
+   "id": "67_ECP",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W1_ECP67.json",
+   "detail": {
+    "REUSE_VERIFIED": 64,
+    "REASONED_NA": 1,
+    "DEFERRED": 2
+   }
+  },
+  {
+   "wave": "W1",
+   "id": "S1_ABI",
+   "status": "RERUN_PASS",
+   "ev": "30_/W1 entry"
+  },
+  {
+   "wave": "W1",
+   "id": "118_rows",
+   "status": "REUSE_VERIFIED",
+   "ev": "18_/W1_CLOSURE_MATRIX.json"
+  },
+  {
+   "wave": "W1",
+   "id": "suite",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/TESTS_Q1.stdout.txt (115)"
+  },
+  {
+   "wave": "W1",
+   "id": "host_second_pack",
+   "status": "REUSE_VERIFIED",
+   "ev": "18_/W1-HOST-01, CODEX-05"
+  },
+  {
+   "wave": "W2",
+   "id": "ABI",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W2_CLI_V4.json"
+  },
+  {
+   "wave": "W2",
+   "id": "N01",
+   "status": "RERUN_PASS",
+   "ev": "33_/N09_E2E"
+  },
+  {
+   "wave": "W2",
+   "id": "N04",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/N04_LEDGER.json (7 stages)"
+  },
+  {
+   "wave": "W2",
+   "id": "N06",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/N06_UNKNOWN.json (4/4)"
+  },
+  {
+   "wave": "W2",
+   "id": "N09",
+   "status": "PARTIAL_REUSE",
+   "ev": "EVIDENCE/N09_E2E_V2.json"
+  },
+  {
+   "wave": "W2",
+   "id": "cases_7",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "wave": "W2",
+   "id": "cases_4",
+   "status": "REUSE_VERIFIED",
+   "ev": "DEV-01/02, OPS-01, DELTA-01"
+  },
+  {
+   "wave": "W2",
+   "id": "R3-04",
+   "status": "REUSE_NOT_RERUN",
+   "ev": "318/317 ledger"
+  },
+  {
+   "wave": "W2",
+   "id": "J1/J2/J3",
+   "status": "REUSE_VERIFIED",
+   "ev": "29_/32_"
+  }
+ ],
+ "counts": {
+  "RERUN_PASS": 10,
+  "REUSE_VERIFIED": 5,
+  "NOT_RUN": 1,
+  "PARTIAL_REUSE": 1,
+  "REUSE_NOT_RERUN": 1
+ },
+ "ecp67": {
+  "REUSE_VERIFIED": 64,
+  "REASONED_NA": 1,
+  "DEFERRED": 2
+ },
+ "verdicts": {
+  "W0": "PARTIAL",
+  "W1": "PARTIAL",
+  "W2": "PARTIAL",
+  "W2_NF_VALIDATED": false
+ },
+ "reason": "W0 fresh consume not rerun; W2 N09 operation segment not under current contract"
+}

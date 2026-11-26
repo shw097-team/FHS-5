@@ -1,0 +1,65 @@
+{
+ "schema": "FHS5.PLP.W3.CheckerVerdict@4",
+ "verdict": "PASS",
+ "failed": [],
+ "checks": [
+  {
+   "check": "pins_match_tree",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "evidence_seal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "abi_ok",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "dag_9",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w0_off_pass",
+   "ok": true,
+   "detail": "PASS"
+  },
+  {
+   "check": "w1_ecp67",
+   "ok": true,
+   "detail": "{'REUSE_VERIFIED': 64, 'REASONED_NA': 1, 'DEFERRED': 2}"
+  },
+  {
+   "check": "n04_seven_stages",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "n09_join_honest",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_cases_7",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "n06_four",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "suite_115",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "count": 11,
+ "candidate": "cb66d77bc8e1282cd18c1d8ebaa55f49ee1059dba55bc1cd33f0d097671a6794",
+ "claim_ceiling": "W0 OFF + W1 67 ECP disposition + W2 ABI/N04; N09 partial"
+}
