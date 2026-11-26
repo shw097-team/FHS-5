@@ -1,0 +1,43 @@
+{
+ "schema": "FHS5.PLP.W2S3.Trust@1",
+ "generation": 2,
+ "created_at": "2026-11-26T22:59:29+08:00",
+ "repo_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace",
+ "write_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\20_WORLD",
+ "domain": "DEV",
+ "scope": "W2-NF-01",
+ "decision": {
+  "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\10_DECISION\\W2_OWNER_DECISION_S2S3.json",
+  "sha256": "abde6b84d92d15ed6806ad6c9c81c999019d75948ba0d9f03e8d4309a920f5e1",
+  "decision_id": "W2-S2S3-OWNER-20261126-02",
+  "schema": "FHS5.PLP.W2.OwnerDecision@local-2"
+ },
+ "allowed_ops": [
+  {
+   "path": "W1/check/w2_receiver.py",
+   "operation": "MODIFY"
+  },
+  {
+   "path": "W1/check/test_j1_receiver.py",
+   "operation": "MODIFY"
+  }
+ ],
+ "not_after": "2026-11-27T23:59:59+08:00",
+ "revoked": [
+  {
+   "decision_id": "W2-NF-PRIMARY-20261126-01",
+   "token": "ADMISSION_TERMINATED_BY_SECURITY_FINDING",
+   "reason": "generation-1 decision ended on the independent verifier's security Finding; portable revocation, does not depend on a local marker file"
+  }
+ ],
+ "termination_markers": [
+  "W2_NATIVE_RUNS/W2_SECURITY_FINDING.json"
+ ],
+ "terminated_decision_ids": [
+  "W2-NF-PRIMARY-20261126-01"
+ ],
+ "notes": [
+  "the write root is a copy; the product tree is not the effect target",
+  "no caller-supplied trust path, root, scope or expiry is honoured"
+ ]
+}

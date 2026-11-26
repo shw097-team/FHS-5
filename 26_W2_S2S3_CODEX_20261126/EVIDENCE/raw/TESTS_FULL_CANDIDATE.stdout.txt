@@ -1,0 +1,1105 @@
+F......F.FFFFFFFFFFFFF.FF...............FF................EEEEEE [ 68%]
+EEEEEEEEEE...........EEEEEEEEE                                    [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of TestRunnerVerdict.test_exit0_without_consumed_is_not_pass _
+
+cls = <class 'test_negative_control.TestRunnerVerdict'>
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = Path(tempfile.mkdtemp(prefix="w1-verdict-"))
+>       cls.ctx = runner.Ctx(str(PACK), str(cls.tmp))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_negative_control.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+run_cases_nf.py:57: in __init__
+    self.insp = reader.inspect_package(self.pack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+__ ERROR at setup of TestRunnerVerdict.test_neg_with_expected_token_is_pass ___
+
+cls = <class 'test_negative_control.TestRunnerVerdict'>
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = Path(tempfile.mkdtemp(prefix="w1-verdict-"))
+>       cls.ctx = runner.Ctx(str(PACK), str(cls.tmp))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_negative_control.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+run_cases_nf.py:57: in __init__
+    self.insp = reader.inspect_package(self.pack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+____ ERROR at setup of TestRunnerVerdict.test_neg_with_wrong_token_is_fail ____
+
+cls = <class 'test_negative_control.TestRunnerVerdict'>
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = Path(tempfile.mkdtemp(prefix="w1-verdict-"))
+>       cls.ctx = runner.Ctx(str(PACK), str(cls.tmp))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_negative_control.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+run_cases_nf.py:57: in __init__
+    self.insp = reader.inspect_package(self.pack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+___ ERROR at setup of TestRunnerVerdict.test_neg_without_rejection_is_fail ____
+
+cls = <class 'test_negative_control.TestRunnerVerdict'>
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = Path(tempfile.mkdtemp(prefix="w1-verdict-"))
+>       cls.ctx = runner.Ctx(str(PACK), str(cls.tmp))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_negative_control.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+run_cases_nf.py:57: in __init__
+    self.insp = reader.inspect_package(self.pack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+___ ERROR at setup of TestRunnerVerdict.test_pos_empty_observation_is_fail ____
+
+cls = <class 'test_negative_control.TestRunnerVerdict'>
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = Path(tempfile.mkdtemp(prefix="w1-verdict-"))
+>       cls.ctx = runner.Ctx(str(PACK), str(cls.tmp))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_negative_control.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+run_cases_nf.py:57: in __init__
+    self.insp = reader.inspect_package(self.pack)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+____________ ERROR at setup of TestReader.test_abi_state_complete _____________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+________ ERROR at setup of TestReader.test_clause_index_has_negatives _________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+__________________ ERROR at setup of TestReader.test_counts ___________________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+__________ ERROR at setup of TestReader.test_digest_domains_distinct __________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_______________ ERROR at setup of TestReader.test_identity_echo _______________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_____ ERROR at setup of TestReader.test_manifest_sha_matches_upstream_pin _____
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_____ ERROR at setup of TestReader.test_missing_source_recorded_not_faked _____
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_______________ ERROR at setup of TestReader.test_neg_dag_cycle _______________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_____________ ERROR at setup of TestReader.test_neg_tampered_byte _____________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+____________ ERROR at setup of TestReader.test_neg_wrong_identity _____________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+___________ ERROR at setup of TestReader.test_unknown_is_preserved ____________
+
+cls = <class 'test_nf_reader.TestReader'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.insp = reader.inspect_package(PACK)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_nf_reader.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_______________ ERROR at setup of TestTPM.test_assets_pin_join ________________
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+____________________ ERROR at setup of TestTPM.test_counts ____________________
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+___________ ERROR at setup of TestTPM.test_five_views_one_identity ____________
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+____________ ERROR at setup of TestTPM.test_neg_identity_mismatch _____________
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_________ ERROR at setup of TestTPM.test_neg_work_identity_incomplete _________
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_______________ ERROR at setup of TestTPM.test_pi_pd_not_merged _______________
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_______ ERROR at setup of TestTPM.test_reviewer_detects_missing_binding _______
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+______ ERROR at setup of TestTPM.test_reviewer_detects_subject_mutation _______
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+______________ ERROR at setup of TestTPM.test_reviewer_readonly _______________
+
+cls = <class 'test_tpm_contracts.TestTPM'>
+
+    @classmethod
+    def setUpClass(cls):
+>       cls.c = tpm.build_contracts(str(PACK), WI)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_tpm_contracts.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\tpm_contracts_nf.py:165: in build_contracts
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+================================== FAILURES ===================================
+_____________________ TestBodyResolver.test_neg_absolute ______________________
+
+self = <test_body_resolver.TestBodyResolver testMethod=test_neg_absolute>
+
+    def test_neg_absolute(self):
+        with self.assertRaises(br.NFError) as cm:
+            br.resolve_body(PACK, "C:/x.md", 1, 1)
+>       self.assertIn(cm.exception.token, ("PATH_OUTSIDE_ROOT", "ABSOLUTE_PATH"))
+E       AssertionError: 'PACK_INCOMPLETE_LOCAL' not found in ('PATH_OUTSIDE_ROOT', 'ABSOLUTE_PATH')
+
+test_body_resolver.py:36: AssertionError
+_______________________ TestBodyResolver.test_neg_span ________________________
+
+self = <test_body_resolver.TestBodyResolver testMethod=test_neg_span>
+
+    def test_neg_span(self):
+        with self.assertRaises(br.NFError) as cm:
+            br.resolve_body(PACK, "00_W1_PI_PD.md", 5, 2)
+>       self.assertEqual(cm.exception.token, "SPAN_OUT_OF_RANGE")
+E       AssertionError: 'PACK_INCOMPLETE_LOCAL' != 'SPAN_OUT_OF_RANGE'
+E       - PACK_INCOMPLETE_LOCAL
+E       + SPAN_OUT_OF_RANGE
+
+test_body_resolver.py:53: AssertionError
+_________________ TestBodyResolver.test_pos_clause_full_body __________________
+
+self = <test_body_resolver.TestBodyResolver testMethod=test_pos_clause_full_body>
+
+    def test_pos_clause_full_body(self):
+>       c = br.resolve_clause(PACK, "01_W1_DEV_ECP.md", "2｜38 個原 DEV ECP ID：逐原義 Native 承接")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_body_resolver.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\body_resolver.py:253: in resolve_clause
+    r = canonical_root(root)
+        ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+____________________ TestBodyResolver.test_pos_span_digest ____________________
+
+self = <test_body_resolver.TestBodyResolver testMethod=test_pos_span_digest>
+
+    def test_pos_span_digest(self):
+>       r = br.resolve_body(PACK, "03_W1_TQAEP.md", 30, 60)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_body_resolver.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\body_resolver.py:275: in resolve_body
+    r = canonical_root(root)
+        ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+__________________ TestBodyResolver.test_scan_within_limits ___________________
+
+self = <test_body_resolver.TestBodyResolver testMethod=test_scan_within_limits>
+
+    def test_scan_within_limits(self):
+        s = br.scan_pack(PACK)
+        self.assertLessEqual(s["files"], br.MAX_FILES)
+>       self.assertGreater(s["files"], 5)
+E       AssertionError: 0 not greater than 5
+
+test_body_resolver.py:100: AssertionError
+__________________ TestBridge.test_compare_neg_cross_subject __________________
+
+self = <test_bridge_body.TestBridge testMethod=test_compare_neg_cross_subject>
+
+    def test_compare_neg_cross_subject(self):
+>       a = reader.inspect_package(PACK)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_bridge_body.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+____________________ TestBridge.test_compare_same_is_park _____________________
+
+self = <test_bridge_body.TestBridge testMethod=test_compare_same_is_park>
+
+    def test_compare_same_is_park(self):
+>       a = reader.inspect_package(PACK)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_bridge_body.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+________________ TestBridge.test_explain_carries_parent_chain _________________
+
+self = <test_bridge_body.TestBridge testMethod=test_explain_carries_parent_chain>
+
+    def test_explain_carries_parent_chain(self):
+>       e = bridge.explain_slice(str(PACK), "abi")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_bridge_body.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\bridge_nf.py:188: in explain_slice
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+______________________ TestBridge.test_explain_full_body ______________________
+
+self = <test_bridge_body.TestBridge testMethod=test_explain_full_body>
+
+    def test_explain_full_body(self):
+>       e = bridge.explain_slice(str(PACK), "abi")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_bridge_body.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\bridge_nf.py:188: in explain_slice
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+__________________ TestBridge.test_explain_neg_unknown_view ___________________
+
+self = <test_bridge_body.TestBridge testMethod=test_explain_neg_unknown_view>
+
+    def test_explain_neg_unknown_view(self):
+        with self.assertRaises(base.NFError) as cm:
+            bridge.explain_slice(str(PACK), "nope")
+>       self.assertEqual(cm.exception.token, "VIEW_UNKNOWN")
+E       AssertionError: 'PACK_INCOMPLETE_LOCAL' != 'VIEW_UNKNOWN'
+E       - PACK_INCOMPLETE_LOCAL
+E       + VIEW_UNKNOWN
+
+test_bridge_body.py:51: AssertionError
+____________________ TestBridge.test_inspect_neg_wrong_pin ____________________
+
+self = <test_bridge_body.TestBridge testMethod=test_inspect_neg_wrong_pin>
+
+    def test_inspect_neg_wrong_pin(self):
+        with self.assertRaises(base.NFError) as cm:
+            bridge.inspect_package(str(PACK / "05_W1_SOURCE_MANIFEST.json"), str(PACK),
+                                   expected_sha256="0" * 64)
+>       self.assertEqual(cm.exception.token, "SOURCE_INTEGRITY_FAILED")
+E       AssertionError: 'PACK_INCOMPLETE_LOCAL' != 'SOURCE_INTEGRITY_FAILED'
+E       - PACK_INCOMPLETE_LOCAL
+E       + SOURCE_INTEGRITY_FAILED
+
+test_bridge_body.py:34: AssertionError
+_________________________ TestBridge.test_inspect_pos _________________________
+
+manifest = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST\\05_W1_SOURCE_MANIFEST.json'
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+expected_sha256 = None
+
+    def inspect_package(manifest: str, root: str | None = None,
+                        expected_sha256: str | None = None) -> dict:
+        pack_root = Path(root) if root else Path(manifest).parent
+        mpath = Path(manifest)
+        try:
+>           insp = reader.inspect_package(pack_root, manifest_path=mpath)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+..\impl\bridge_nf.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\nf_reader.py:183: in inspect_package
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+
+During handling of the above exception, another exception occurred:
+
+self = <test_bridge_body.TestBridge testMethod=test_inspect_pos>
+
+    def test_inspect_pos(self):
+>       r = bridge.inspect_package(str(PACK / "05_W1_SOURCE_MANIFEST.json"), str(PACK))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_bridge_body.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\bridge_nf.py:64: in inspect_package
+    g = reader.inspect_generic(pack_root)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\impl\nf_reader.py:408: in inspect_generic
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = WindowsPath('C:/Users/user/Downloads/FHS-5/FHS-5_PLP_W0-W4_實作/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST')
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+_________________ TestBridge.test_render_markers_and_no_grant _________________
+
+self = <test_bridge_body.TestBridge testMethod=test_render_markers_and_no_grant>
+
+    def test_render_markers_and_no_grant(self):
+>       e = bridge.explain_slice(str(PACK), "dev")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_bridge_body.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\bridge_nf.py:188: in explain_slice
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+__________________ TestBridge.test_render_neg_scope_mismatch __________________
+
+self = <test_bridge_body.TestBridge testMethod=test_render_neg_scope_mismatch>
+
+    def test_render_neg_scope_mismatch(self):
+>       e = bridge.explain_slice(str(PACK), "dev")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_bridge_body.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\bridge_nf.py:188: in explain_slice
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+___________________ TestBridge.test_render_neg_unknown_host ___________________
+
+self = <test_bridge_body.TestBridge testMethod=test_render_neg_unknown_host>
+
+    def test_render_neg_unknown_host(self):
+>       e = bridge.explain_slice(str(PACK), "dev")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_bridge_body.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\bridge_nf.py:188: in explain_slice
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+___________________ TestConsumer.test_consume_neg_wrong_pin ___________________
+
+self = <test_consumer.TestConsumer testMethod=test_consume_neg_wrong_pin>
+
+    def test_consume_neg_wrong_pin(self):
+        with self.assertRaises(base.NFError) as cm:
+            consumer.consume(str(PACK), "case-checklist", "W1-API-01", "0" * 64, str(self.tmp))
+>       self.assertEqual(cm.exception.token, "SOURCE_INTEGRITY_FAILED")
+E       AssertionError: 'PACK_INCOMPLETE_LOCAL' != 'SOURCE_INTEGRITY_FAILED'
+E       - PACK_INCOMPLETE_LOCAL
+E       + SOURCE_INTEGRITY_FAILED
+
+test_consumer.py:42: AssertionError
+_______________________ TestConsumer.test_consume_real ________________________
+
+self = <test_consumer.TestConsumer testMethod=test_consume_real>
+
+    def test_consume_real(self):
+>       r = consumer.consume(str(PACK), "case-checklist", "W1-API-01", SHA, str(self.tmp))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_consumer.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\impl\w1_consumer.py:58: in consume
+    root = br.canonical_root(pack_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def canonical_root(root: str | os.PathLike) -> Path:
+        p = Path(root)
+        if not p.exists():
+>           raise NFError("PACK_INCOMPLETE_LOCAL", f"root not found: {p}")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: root not found: C:\Users\user\Downloads\FHS-5\FHS-5_PLP_W0-W4_實作\W1\W1_Native-first_CODEX_主用修補_交付\FHS-5_PLP_W1_NATIVE_FIRST
+
+..\impl\body_resolver.py:47: NFError
+______________________ TestGuide.test_receive_neg_scope _______________________
+
+self = <test_guide_nine_keys.TestGuide testMethod=test_receive_neg_scope>
+
+    def test_receive_neg_scope(self):
+        with self.assertRaises(base.NFError) as cm:
+            guide.inspect_guide_request({"scope": "W2-XYZ"}, str(PACK))
+>       self.assertEqual(cm.exception.token, "CONTEXT_SCOPE_MISMATCH")
+E       AssertionError: 'PACK_INCOMPLETE_LOCAL' != 'CONTEXT_SCOPE_MISMATCH'
+E       - PACK_INCOMPLETE_LOCAL
+E       + CONTEXT_SCOPE_MISMATCH
+
+test_guide_nine_keys.py:60: AssertionError
+_______________________ TestGuide.test_receive_package ________________________
+
+self = <test_guide_nine_keys.TestGuide testMethod=test_receive_package>
+
+    def test_receive_package(self):
+>       r = guide.inspect_guide_request({}, str(PACK))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_guide_nine_keys.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+req = {}
+root = 'C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_實作\\W1\\W1_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W1_NATIVE_FIRST'
+
+    def inspect_guide_request(req: dict, root: str) -> dict:
+        """CG-R2-REQ-01: receive real package bytes / sha / subject / scope."""
+        declared = req.get("expected_manifest_sha256")
+        r0 = Path(root)
+        cands = sorted(p.name for p in r0.glob("*SOURCE_MANIFEST*.json"))
+        if not cands:
+>           raise NFError("PACK_INCOMPLETE_LOCAL", "no manifest")
+E           w1_nf_reader.NFError: PACK_INCOMPLETE_LOCAL: no manifest
+
+..\impl\guide_nf.py:156: NFError
+=========================== short test summary info ===========================
+FAILED test_body_resolver.py::TestBodyResolver::test_neg_absolute - Assertion...
+FAILED test_body_resolver.py::TestBodyResolver::test_neg_span - AssertionErro...
+FAILED test_body_resolver.py::TestBodyResolver::test_pos_clause_full_body - w...
+FAILED test_body_resolver.py::TestBodyResolver::test_pos_span_digest - w1_nf_...
+FAILED test_body_resolver.py::TestBodyResolver::test_scan_within_limits - Ass...
+FAILED test_bridge_body.py::TestBridge::test_compare_neg_cross_subject - w1_n...
+FAILED test_bridge_body.py::TestBridge::test_compare_same_is_park - w1_nf_rea...
+FAILED test_bridge_body.py::TestBridge::test_explain_carries_parent_chain - w...
+FAILED test_bridge_body.py::TestBridge::test_explain_full_body - w1_nf_reader...
+FAILED test_bridge_body.py::TestBridge::test_explain_neg_unknown_view - Asser...
+FAILED test_bridge_body.py::TestBridge::test_inspect_neg_wrong_pin - Assertio...
+FAILED test_bridge_body.py::TestBridge::test_inspect_pos - w1_nf_reader.NFErr...
+FAILED test_bridge_body.py::TestBridge::test_render_markers_and_no_grant - w1...
+FAILED test_bridge_body.py::TestBridge::test_render_neg_scope_mismatch - w1_n...
+FAILED test_bridge_body.py::TestBridge::test_render_neg_unknown_host - w1_nf_...
+FAILED test_consumer.py::TestConsumer::test_consume_neg_wrong_pin - Assertion...
+FAILED test_consumer.py::TestConsumer::test_consume_real - w1_nf_reader.NFErr...
+FAILED test_guide_nine_keys.py::TestGuide::test_receive_neg_scope - Assertion...
+FAILED test_guide_nine_keys.py::TestGuide::test_receive_package - w1_nf_reade...
+ERROR test_negative_control.py::TestRunnerVerdict::test_exit0_without_consumed_is_not_pass
+ERROR test_negative_control.py::TestRunnerVerdict::test_neg_with_expected_token_is_pass
+ERROR test_negative_control.py::TestRunnerVerdict::test_neg_with_wrong_token_is_fail
+ERROR test_negative_control.py::TestRunnerVerdict::test_neg_without_rejection_is_fail
+ERROR test_negative_control.py::TestRunnerVerdict::test_pos_empty_observation_is_fail
+ERROR test_nf_reader.py::TestReader::test_abi_state_complete - w1_nf_reader.N...
+ERROR test_nf_reader.py::TestReader::test_clause_index_has_negatives - w1_nf_...
+ERROR test_nf_reader.py::TestReader::test_counts - w1_nf_reader.NFError: PACK...
+ERROR test_nf_reader.py::TestReader::test_digest_domains_distinct - w1_nf_rea...
+ERROR test_nf_reader.py::TestReader::test_identity_echo - w1_nf_reader.NFErro...
+ERROR test_nf_reader.py::TestReader::test_manifest_sha_matches_upstream_pin
+ERROR test_nf_reader.py::TestReader::test_missing_source_recorded_not_faked
+ERROR test_nf_reader.py::TestReader::test_neg_dag_cycle - w1_nf_reader.NFErro...
+ERROR test_nf_reader.py::TestReader::test_neg_tampered_byte - w1_nf_reader.NF...
+ERROR test_nf_reader.py::TestReader::test_neg_wrong_identity - w1_nf_reader.N...
+ERROR test_nf_reader.py::TestReader::test_unknown_is_preserved - w1_nf_reader...
+ERROR test_tpm_contracts.py::TestTPM::test_assets_pin_join - w1_nf_reader.NFE...
+ERROR test_tpm_contracts.py::TestTPM::test_counts - w1_nf_reader.NFError: PAC...
+ERROR test_tpm_contracts.py::TestTPM::test_five_views_one_identity - w1_nf_re...
+ERROR test_tpm_contracts.py::TestTPM::test_neg_identity_mismatch - w1_nf_read...
+ERROR test_tpm_contracts.py::TestTPM::test_neg_work_identity_incomplete - w1_...
+ERROR test_tpm_contracts.py::TestTPM::test_pi_pd_not_merged - w1_nf_reader.NF...
+ERROR test_tpm_contracts.py::TestTPM::test_reviewer_detects_missing_binding
+ERROR test_tpm_contracts.py::TestTPM::test_reviewer_detects_subject_mutation
+ERROR test_tpm_contracts.py::TestTPM::test_reviewer_readonly - w1_nf_reader.N...
+19 failed, 50 passed, 25 errors, 15 subtests passed in 11.30s

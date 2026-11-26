@@ -1,0 +1,31 @@
+{
+ "run_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929",
+ "world": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\20_WORLD",
+ "world_head": "2a50c911bf3ed6a502001efaa55084fbb3219485",
+ "base_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+ "decision": {
+  "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\10_DECISION\\W2_OWNER_DECISION_S2S3.json",
+  "sha256": "abde6b84d92d15ed6806ad6c9c81c999019d75948ba0d9f03e8d4309a920f5e1"
+ },
+ "trust": {
+  "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\40_TRUST\\TRUST.json",
+  "sha256": "c85ed0b0dac2dd4c47796711373616dfa4d8e94818aa513ca24960e0c1d0d6fd"
+ },
+ "preimage": {
+  "W1/check/w2_receiver.py": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+  "W1/check/test_j1_receiver.py": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28"
+ },
+ "patch": {
+  "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\30_PATCH\\dev_a.patch",
+  "sha256": "2be559ce48d068de53bcc9a281e6e8000bcd1d3eb3959776cbcb32df0856c8a9",
+  "bytes": 5985,
+  "files": [
+   "+++ b/W1/check/test_j1_receiver.py",
+   "+++ b/W1/check/w2_receiver.py"
+  ]
+ },
+ "probe": {
+  "rc": 3,
+  "stdout_sha256": "c0c27eb7d14ea6bf8094bd7a57580006fa64a3220ed5cf21839141a606af0d6c"
+ }
+}

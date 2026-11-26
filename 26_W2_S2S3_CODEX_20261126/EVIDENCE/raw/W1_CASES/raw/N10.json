@@ -1,0 +1,119 @@
+{
+  "schema": "FHS5.PLP.W1.Observation@1",
+  "case_id": "N10",
+  "kind": "SUBCASE",
+  "requirement_ref": "03 2",
+  "child": null,
+  "subject": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1-NF-01",
+  "profile": "generic-codx-native-first",
+  "host": "LOCAL",
+  "candidate_sha": "899df53b65a3f4602b3e5b68ef825c054b86ddefa1db693697c0f7978b9f5527",
+  "source_sha": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+  "pack_sha": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+  "case_set_sha256": "63a59b874485e44cd7d37c1186e9d615402ab49f4f5e86285713c2b54645cbce",
+  "oracle_sha256": null,
+  "runner_id": "check/run_cases_nf.py",
+  "runner_version": "1.0.0",
+  "argv": [
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\W1\\check\\run_cases_nf.py",
+    "N10"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\18_W1_NF_CODEX_20261126T000627\\control_pack\\FHS-5_PLP_W1_NATIVE_FIRST",
+  "timeout_ms": 120000,
+  "expected": {
+    "real": true
+  },
+  "first_fail": null,
+  "checker_id": null,
+  "consumer_id": null,
+  "recovery_ref": null,
+  "executor": "w1-exec",
+  "run_id": "20261126T231849",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "observed": {
+    "path_attacks": {
+      "C:/x.md": "REJECT",
+      "//srv/share/x.md": "REJECT",
+      "C:x.md": "REJECT",
+      "..": "REJECT",
+      "a\\b.md": "REJECT",
+      "a\u0000b.md": "REJECT",
+      "": "REJECT",
+      "dup_key": "REJECT",
+      "nan": "REJECT",
+      "bad_utf8": "REJECT",
+      "oversize": "REJECT",
+      "symlink": "NOT_VERIFIED"
+    },
+    "cold_off": {
+      "cold_off": true,
+      "blocked": [
+        "hgk_runtime",
+        "fabric_runtime",
+        "sbl_runtime",
+        "pipd_runtime",
+        "hermes_runtime"
+      ],
+      "leaked": [],
+      "exit": 0,
+      "stdout_sha256": "0f56a349f6282f6d169e24e8276c576348ed1c571fd87cea7714f7efd9bebfff",
+      "argv": [
+        "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-c",
+        "import json, sys\nmods = json.loads('[\"hgk_runtime\", \"fabric_runtime\", \"sbl_runtime\", \"pipd_runtime\", \"hermes_runtime\"]')\nblocked, leaked, errors = [], [], {}\nfor m in mods:\n    try:\n        __import__(m)\n        leaked.append(m)\n    except Exception as exc:\n        blocked.append(m)\n        errors[m] = type(exc).__name__\nprint(json.dumps({'blocked': blocked, 'leaked': leaked, 'errors': errors, 'child_python': sys.version.split()[0]}))\n"
+      ]
+    },
+    "positive_control": {
+      "schema": "FHS5.W1.R03.OffIsolation.PositiveControl@1",
+      "module": "json",
+      "argv": [
+        "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-c",
+        "import json, importlib, sys\nname = \"json\"\nimported, err = False, None\ntry:\n    importlib.import_module(name)\n    imported = True\nexcept Exception as exc:\n    err = type(exc).__name__\nprint(json.dumps({'module': name, 'imported': imported, 'error': err, 'child_python': sys.version.split()[0]}))\n"
+      ],
+      "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\_t",
+      "env_removed_keys": [],
+      "exit": 0,
+      "stdout": "{\"module\": \"json\", \"imported\": true, \"error\": null, \"child_python\": \"3.11.9\"}\r\n",
+      "stdout_sha256": "a7129fc65e0a5d869334c9aad76327c6829a0783431f14439984c0e7ff0552a9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "imported": true,
+      "state": "OBSERVED",
+      "import_error": null,
+      "child_python": "3.11.9"
+    },
+    "env_flag_only": {
+      "schema": "FHS5.W1.R03.OffIsolation.EnvFlagReject@1",
+      "rejected": true,
+      "token": "ENV_FLAG_NOT_EVIDENCE",
+      "marker": "W1_NATIVE_OFF",
+      "evidence": "none",
+      "env_read": false,
+      "env_written": false,
+      "reason": "A bare environment flag asserts a state; it carries no observation of a real process, path resolution, or byte digest, so it cannot discharge an isolation claim."
+    },
+    "canary": {
+      "schema": "FHS5.W1.R03.OffIsolation.CanaryCheck@1",
+      "paths": [
+        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\18_W1_NF_CODEX_20261126T000627\\control_pack\\FHS-5_PLP_W1_NATIVE_FIRST\\00_W1_PI_PD.md"
+      ],
+      "checked": [
+        {
+          "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\18_W1_NF_CODEX_20261126T000627\\control_pack\\FHS-5_PLP_W1_NATIVE_FIRST\\00_W1_PI_PD.md",
+          "sha256": "345cfdb846ab69a1d45acda7011f280218ff6b2642b19d5dd675c75b61e984c1",
+          "bytes": 34639,
+          "before_sha256": "345cfdb846ab69a1d45acda7011f280218ff6b2642b19d5dd675c75b61e984c1",
+          "before_bytes": 34639
+        }
+      ],
+      "unchanged": true,
+      "diff": []
+    },
+    "link_probe": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\_t\\w1-sec-2ytgcjlc\\link.md"
+  },
+  "exit": 0,
+  "verdict": "PASS",
+  "duration_ms": 144
+}

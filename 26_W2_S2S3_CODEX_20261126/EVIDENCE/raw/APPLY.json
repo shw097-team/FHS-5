@@ -1,0 +1,81 @@
+{
+ "ok": true,
+ "first_fail": null,
+ "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\20_WORLD",
+ "checks": [
+  {
+   "check": "effect_token",
+   "ok": true,
+   "detail": "REPOSITORY_WRITE"
+  },
+  {
+   "check": "admission",
+   "ok": true,
+   "detail": "c85ed0b0dac2dd4c47796711373616dfa4d8e94818aa513ca24960e0c1d0d6fd"
+  },
+  {
+   "check": "scope",
+   "ok": true,
+   "detail": "W2-NF-01"
+  },
+  {
+   "check": "repo_head",
+   "ok": true,
+   "detail": "2a50c911bf3ed6a502001efaa55084fbb3219485"
+  },
+  {
+   "check": "preimage:W1/check/w2_receiver.py",
+   "ok": true,
+   "detail": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59"
+  },
+  {
+   "check": "preimage:W1/check/test_j1_receiver.py",
+   "ok": true,
+   "detail": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28"
+  },
+  {
+   "check": "dirty_preservation",
+   "ok": true,
+   "detail": "0 dirty in write set"
+  },
+  {
+   "check": "recovery_kind",
+   "ok": true,
+   "detail": "REVERSE_PATCH_ON_COPY"
+  },
+  {
+   "check": "patch_apply",
+   "ok": true,
+   "detail": [
+    "W1/check/test_j1_receiver.py",
+    "W1/check/w2_receiver.py"
+   ]
+  },
+  {
+   "check": "post_readback",
+   "ok": true,
+   "detail": {
+    "changed": [
+     "W1/check/test_j1_receiver.py",
+     "W1/check/w2_receiver.py"
+    ]
+   }
+  }
+ ],
+ "wrote": [
+  "W1/check/test_j1_receiver.py",
+  "W1/check/w2_receiver.py"
+ ],
+ "product_calls": 0,
+ "world_before": "b91f9a6d8b04eca0c508b6e53c9915d5d6f6f42249401f8b31d00374e9bf22e6",
+ "preimage_sha256": {
+  "W1/check/w2_receiver.py": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+  "W1/check/test_j1_receiver.py": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28"
+ },
+ "postimage_sha256": {
+  "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+  "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+ },
+ "world_after": "4d64be1eee9f8e140937e99fa184e42c3f065970edf4a59fe30126c4bf45a42f",
+ "world_unchanged": false
+}

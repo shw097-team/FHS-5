@@ -1,0 +1,200 @@
+{
+ "schema": "FHS5.PLP.W2S3.Stage2@1",
+ "world": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\20_WORLD",
+ "world_head": "2a50c911bf3ed6a502001efaa55084fbb3219485",
+ "patch_sha256": "2be559ce48d068de53bcc9a281e6e8000bcd1d3eb3959776cbcb32df0856c8a9",
+ "preimage": {
+  "W1/check/w2_receiver.py": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+  "W1/check/test_j1_receiver.py": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28"
+ },
+ "postimage": {
+  "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+  "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+ },
+ "rows": [
+  {
+   "case": "S1_wrong_root",
+   "expected": "ROOT_NOT_AUTHORISED",
+   "observed": "ROOT_NOT_AUTHORISED",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": "ROOT_NOT_AUTHORISED: C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\_t"
+  },
+  {
+   "case": "S2_scope_mismatch",
+   "expected": "SCOPE_MISMATCH",
+   "observed": "SCOPE_MISMATCH",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": "SCOPE_MISMATCH: {'want': 'W2-NF-01', 'got': 'W2-NF-02'}"
+  },
+  {
+   "case": "S3_principal_domain",
+   "expected": "PRINCIPAL_DOMAIN_MISMATCH",
+   "observed": "PRINCIPAL_DOMAIN_MISMATCH",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": "PRINCIPAL_DOMAIN_MISMATCH: OPS"
+  },
+  {
+   "case": "S4_path_escape",
+   "expected": "WRITE_SET_UNBOUND",
+   "observed": "WRITE_SET_UNBOUND",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": "WRITE_SET_UNBOUND: ../escape.py"
+  },
+  {
+   "case": "S5_extra_target",
+   "expected": "WRITE_SET_UNBOUND",
+   "observed": "WRITE_SET_UNBOUND",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": "WRITE_SET_UNBOUND: {'want': [('W1/check/test_j1_receiver.py', 'MODIFY'), ('W1/check/w2_receiver.py', 'MODIFY')], 'got': [('W1/check/test_j1_receiver.py', 'MODIFY'), ('W1/check/w1_guard.py', 'MODIFY'),"
+  },
+  {
+   "case": "S6_fake_grant_override",
+   "expected": "TRUST_OVERRIDE_REJECTED",
+   "observed": "TRUST_OVERRIDE_REJECTED",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": "TRUST_OVERRIDE_REJECTED: ['trust_path']"
+  },
+  {
+   "case": "S7_unknown_effect",
+   "expected": "EFFECT_UNBOUND",
+   "observed": "EFFECT_UNBOUND",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": ""
+  },
+  {
+   "case": "S8_preimage_drift",
+   "expected": "WRITE_SET_UNBOUND",
+   "observed": "WRITE_SET_UNBOUND",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": ""
+  },
+  {
+   "case": "S9_head_mismatch",
+   "expected": "REPO_HEAD_MISMATCH",
+   "observed": "REPO_HEAD_MISMATCH",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": ""
+  },
+  {
+   "case": "S10_git_recovery_forbidden",
+   "expected": "RECOVERY_KIND_MISMATCH",
+   "observed": "RECOVERY_KIND_MISMATCH",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": ""
+  },
+  {
+   "case": "S11_expired_trust",
+   "expected": "ADMISSION_EXPIRED",
+   "observed": "ADMISSION_EXPIRED",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": ""
+  },
+  {
+   "case": "S12_revoked_generation1",
+   "expected": "NO_REFUSAL",
+   "observed": "NO_REFUSAL",
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": ""
+  },
+  {
+   "case": "P1_gate_check_positive",
+   "expected": true,
+   "observed": true,
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": null
+  },
+  {
+   "case": "P2_gate_apply_patch",
+   "expected": true,
+   "observed": true,
+   "verdict": "PASS",
+   "world_unchanged": false,
+   "detail": null
+  },
+  {
+   "case": "P3_tests_after_patch",
+   "expected": 0,
+   "observed": 0,
+   "verdict": "PASS",
+   "world_unchanged": false,
+   "detail": "15 passed, 8 subtests passed in 9.33s"
+  },
+  {
+   "case": "P4_probe_after_patch",
+   "expected": "GREEN",
+   "observed": "GREEN",
+   "verdict": "PASS",
+   "world_unchanged": false,
+   "detail": {
+    "unlisted_entry": {
+     "accepted": false,
+     "first_fail": "UNLISTED_ENTRY",
+     "checks_failed": [
+      "file_set_exact"
+     ]
+    },
+    "reparse_alias": {
+     "link_kind": "junction",
+     "accepted": false,
+     "first_fail": "PATH_ESCAPE",
+     "checks_failed": [
+      "path_confinement"
+     ]
+    }
+   }
+  },
+  {
+   "case": "P5_post_readback",
+   "expected": "changed",
+   "observed": {
+    "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+    "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+   },
+   "verdict": "PASS",
+   "world_unchanged": false,
+   "detail": {
+    "W1/check/w2_receiver.py": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+    "W1/check/test_j1_receiver.py": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28"
+   }
+  },
+  {
+   "case": "P6_reverse_on_copy",
+   "expected": true,
+   "observed": true,
+   "verdict": "PASS",
+   "world_unchanged": null,
+   "detail": null
+  },
+  {
+   "case": "P7_world_restored",
+   "expected": true,
+   "observed": {
+    "shas_match": true,
+    "digest_match": true
+   },
+   "verdict": "PASS",
+   "world_unchanged": true,
+   "detail": {
+    "rc": 0
+   }
+  }
+ ],
+ "counts": {
+  "PASS": 19
+ },
+ "world_digest_before": "b91f9a6d8b04eca0c508b6e53c9915d5d6f6f42249401f8b31d00374e9bf22e6",
+ "world_digest_after": "b91f9a6d8b04eca0c508b6e53c9915d5d6f6f42249401f8b31d00374e9bf22e6"
+}

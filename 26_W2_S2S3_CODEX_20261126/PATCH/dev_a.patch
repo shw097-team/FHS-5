@@ -1,0 +1,147 @@
+diff --git a/W1/check/test_j1_receiver.py b/W1/check/test_j1_receiver.py
+index fa9361f..9af6581 100644
+--- a/W1/check/test_j1_receiver.py
++++ b/W1/check/test_j1_receiver.py
+@@ -426,5 +426,52 @@ class J1ReceiverTests(unittest.TestCase):
+         self.assertTrue((out_ok / "material_copy" / "context_bundle.md").is_file())
+ 
+ 
++    # ---- J1-T07 -------------------------------------------------------
++    def test_j1_t07_unlisted_entry_refused(self):
++        """A file the manifest never names must not reach a product call.
++
++        The delivery is internally consistent (manifest and seal agree), so
++        only an exact file-set rule can refuse it: the receiver hands
++        delivery_root to the seam wiring, so unlisted bytes would be authority.
++        """
++        root = self.work / "unlisted"
++        payload = b"authority-injection\n"
++        pins = make_delivery(
++            root,
++            [entry("evidence/ok.json", b"{}\n")],
++            {"evidence/ok.json": b"{}\n",
++             "evidence/w2/material/injected.json": payload},
++        )
++        verified = R.verify_delivery(root, pins)
++        self.assertFalse(verified["ok"])
++        self.assertEqual(verified["first_fail"], "UNLISTED_ENTRY")
++        names = [c["name"] for c in verified["checks"] if not c["ok"]]
++        self.assertIn("file_set_exact", names)
++
++        out = self.work / "out_t07"
++        receipt = R.receive(root, self.ident(), pins, out)
++        self.assertFalse(receipt["accepted"])
++        self.assertEqual(receipt["first_fail"], "UNLISTED_ENTRY")
++        self.assertEqual(receipt["product_calls"], ZERO_CALLS)
++        self.assert_no_output(out)
++
++    # ---- J1-T08 -------------------------------------------------------
++    def test_j1_t08_reparse_alias_refused(self):
++        """A junction inside the root that aliases a listed path is refused.
++
++        The alias resolves inside the delivery root, so confinement alone
++        accepts it; only an explicit reparse-point rule refuses it.
++        """
++        root = self.work / "reparse"
++        data = b"same bytes\n"
++        (root / "store").mkdir(parents=True)
++        (root / "store" / "ok.txt").write_bytes(data)
++        make_junction(root / "data", root / "store")
++        pins = make_delivery(root, [entry("data/ok.txt", data)])
++        verified = R.verify_delivery(root, pins)
++        self.assertFalse(verified["ok"])
++        self.assertEqual(verified["first_fail"], "PATH_ESCAPE")
++        self.assertIn("reparse", json.dumps(verified["checks"]).lower())
++
+ if __name__ == "__main__":
+     unittest.main(verbosity=2)
+diff --git a/W1/check/w2_receiver.py b/W1/check/w2_receiver.py
+index 145cbba..cee63f4 100644
+--- a/W1/check/w2_receiver.py
++++ b/W1/check/w2_receiver.py
+@@ -164,6 +164,56 @@ def _confine(root: Path, raw: str):
+     return None
+ 
+ 
++
++FILE_ATTRIBUTE_REPARSE_POINT = 0x400
++
++_ENVELOPE_NAMES = frozenset({
++    "EVIDENCE_MANIFEST.json",
++    "DELIVERY_SEAL.json",
++    "EVIDENCE_MANIFEST.sha256",
++    "W2_RECEIVE_RECEIPT.json",
++})
++
++
++def _is_reparse_point(p):
++    try:
++        st = p.lstat()
++    except OSError:
++        return False
++    if p.is_symlink():
++        return True
++    return bool(getattr(st, "st_file_attributes", 0) & FILE_ATTRIBUTE_REPARSE_POINT)
++
++
++def _reparse_ancestor(delivery_root, raw):
++    """First component below the root that is a symlink/junction, else None."""
++    cur = delivery_root
++    if _is_reparse_point(cur):
++        return "."
++    acc = []
++    for part in Path(raw).parts:
++        cur = cur / part
++        acc.append(part)
++        if _is_reparse_point(cur):
++            return "/".join(acc)
++    return None
++
++
++def _unlisted_files(delivery_root, files):
++    """Regular files in the delivery tree that the manifest never names."""
++    listed = {os.path.normcase(e["path"]) for e in files}
++    unlisted = []
++    for p in sorted(delivery_root.rglob("*")):
++        if not p.is_file():
++            continue
++        rel = p.relative_to(delivery_root).as_posix()
++        if rel in _ENVELOPE_NAMES:
++            continue
++        if os.path.normcase(rel) in listed:
++            continue
++        unlisted.append(rel)
++    return unlisted
++
+ def _is_within(child: Path, parent: Path) -> bool:
+     child_s = os.path.normcase(str(child))
+     parent_s = os.path.normcase(str(parent))
+@@ -391,6 +441,12 @@ def verify_delivery(delivery_root, expected_pins) -> dict:
+                    f"{entry['path']!r}: {reason}")
+             return _verify_result(checks, False, "PATH_ESCAPE", d, pins,
+                                   manifest_sha, 0, seal_sha=seal_sha)
++        bad_link = _reparse_ancestor(d, entry["path"])
++        if bad_link is not None:
++            _check(checks, "path_confinement", False,
++                   f"{entry['path']!r}: reparse point at {bad_link!r}")
++            return _verify_result(checks, False, "PATH_ESCAPE", d, pins,
++                                  manifest_sha, 0, seal_sha=seal_sha)
+         try:
+             real = (d / entry["path"]).resolve()
+         except (OSError, RuntimeError) as exc:
+@@ -446,6 +502,15 @@ def verify_delivery(delivery_root, expected_pins) -> dict:
+         verified_paths.append(entry["path"])
+ 
+     _check(checks, "evidence_bytes", True, f"{len(verified_paths)} entries recomputed")
++    unlisted = _unlisted_files(d, files)
++    if unlisted:
++        _check(checks, "file_set_exact", False, {"unlisted": unlisted[:8]})
++        return _verify_result(checks, False, "UNLISTED_ENTRY", d, pins,
++                              manifest_sha, len(verified_paths),
++                              seal_sha=seal_sha, verified_paths=verified_paths)
++    _check(checks, "file_set_exact", True,
++           f"{len(files)} listed; envelope excluded")
++    _check(checks, "evidence_bytes", True, f"{len(verified_paths)} entries recomputed")
+     tree = tree_digest(d)
+     _check(checks, "delivery_tree", True, tree)
+     man["_seal_binding"] = binding.lower()

@@ -1,0 +1,23 @@
+{
+ "ok": true,
+ "first_fail": null,
+ "checks": [
+  {
+   "check": "reverse_apply",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "restored_matches_preimage",
+   "ok": true,
+   "detail": {
+    "W1/check/w2_receiver.py": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+    "W1/check/test_j1_receiver.py": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28"
+   }
+  }
+ ],
+ "restored": {
+  "W1/check/w2_receiver.py": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+  "W1/check/test_j1_receiver.py": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28"
+ }
+}

@@ -426,5 +426,52 @@ class J1ReceiverTests(unittest.TestCase):
         self.assertTrue((out_ok / "material_copy" / "context_bundle.md").is_file())
 
 
+    # ---- J1-T07 -------------------------------------------------------
+    def test_j1_t07_unlisted_entry_refused(self):
+        """A file the manifest never names must not reach a product call.
+
+        The delivery is internally consistent (manifest and seal agree), so
+        only an exact file-set rule can refuse it: the receiver hands
+        delivery_root to the seam wiring, so unlisted bytes would be authority.
+        """
+        root = self.work / "unlisted"
+        payload = b"authority-injection\n"
+        pins = make_delivery(
+            root,
+            [entry("evidence/ok.json", b"{}\n")],
+            {"evidence/ok.json": b"{}\n",
+             "evidence/w2/material/injected.json": payload},
+        )
+        verified = R.verify_delivery(root, pins)
+        self.assertFalse(verified["ok"])
+        self.assertEqual(verified["first_fail"], "UNLISTED_ENTRY")
+        names = [c["name"] for c in verified["checks"] if not c["ok"]]
+        self.assertIn("file_set_exact", names)
+
+        out = self.work / "out_t07"
+        receipt = R.receive(root, self.ident(), pins, out)
+        self.assertFalse(receipt["accepted"])
+        self.assertEqual(receipt["first_fail"], "UNLISTED_ENTRY")
+        self.assertEqual(receipt["product_calls"], ZERO_CALLS)
+        self.assert_no_output(out)
+
+    # ---- J1-T08 -------------------------------------------------------
+    def test_j1_t08_reparse_alias_refused(self):
+        """A junction inside the root that aliases a listed path is refused.
+
+        The alias resolves inside the delivery root, so confinement alone
+        accepts it; only an explicit reparse-point rule refuses it.
+        """
+        root = self.work / "reparse"
+        data = b"same bytes\n"
+        (root / "store").mkdir(parents=True)
+        (root / "store" / "ok.txt").write_bytes(data)
+        make_junction(root / "data", root / "store")
+        pins = make_delivery(root, [entry("data/ok.txt", data)])
+        verified = R.verify_delivery(root, pins)
+        self.assertFalse(verified["ok"])
+        self.assertEqual(verified["first_fail"], "PATH_ESCAPE")
+        self.assertIn("reparse", json.dumps(verified["checks"]).lower())
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

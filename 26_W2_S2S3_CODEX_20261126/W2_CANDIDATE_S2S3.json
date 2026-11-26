@@ -1,0 +1,75 @@
+{
+ "schema": "FHS5.PLP.W2.CandidatePins@2",
+ "round": "W2-S2S3-20261126T225929",
+ "source": {
+  "base_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+  "pack": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+  "pack_manifest_sha256": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b"
+ },
+ "candidate": {
+  "kind": "verified product set after DEV-A (receiver + J1 tests)",
+  "members": {
+   "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+   "W1/check/w2_dev_gate.py": "ecef3f39cf3ae4db1a387cca4eec2d5212d9cce8e1f81d7a91e0cb0ffd170db4",
+   "W1/check/w2_admission.py": "8caabfffd5c5c07040f0444e1d4ad23cbad939501b61597b726184f4816c4ae3",
+   "W1/impl/w2_nf_reader.py": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980",
+   "W1/check/test_j1_strict.py": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4",
+   "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+  },
+  "member_rows": [
+   {
+    "path": "W1/check/w2_receiver.py",
+    "bytes": 43052,
+    "sha256": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595"
+   },
+   {
+    "path": "W1/check/w2_dev_gate.py",
+    "bytes": 11403,
+    "sha256": "ecef3f39cf3ae4db1a387cca4eec2d5212d9cce8e1f81d7a91e0cb0ffd170db4"
+   },
+   {
+    "path": "W1/check/w2_admission.py",
+    "bytes": 10932,
+    "sha256": "8caabfffd5c5c07040f0444e1d4ad23cbad939501b61597b726184f4816c4ae3"
+   },
+   {
+    "path": "W1/impl/w2_nf_reader.py",
+    "bytes": 11519,
+    "sha256": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980"
+   },
+   {
+    "path": "W1/check/test_j1_strict.py",
+    "bytes": 6622,
+    "sha256": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4"
+   },
+   {
+    "path": "W1/check/test_j1_receiver.py",
+    "bytes": 20337,
+    "sha256": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+   }
+  ],
+  "aggregate_digest_canonical": "7fed022300a6c7c5b75edb36ff10c4188fc48d2309e84c54eda4cf88345d6d07",
+  "aggregate_digest_historical": "5387eb79935663715a9322ba6c9767a9bb0c6a8c635d83f82d15bda3b0fc84ff",
+  "note": "six members this round: the five generation-1 members plus W1/check/test_j1_receiver.py, which DEV-A also modified"
+ },
+ "oracle": {
+  "probe": "50_PROBES/probe_authority_injection.py",
+  "probe_oracle": {
+   "unlisted_entry": "refuse:UNLISTED_ENTRY",
+   "reparse_alias": "refuse:PATH_ESCAPE"
+  },
+  "pre_patch_raw": "60_EVIDENCE/raw/PROBE_PRE_PATCH.json",
+  "post_patch_raw": "60_EVIDENCE/raw/PROBE_POST_PATCH.json"
+ },
+ "case_set": {
+  "j1_receiver": "J1-T01..T08",
+  "j1_strict": "S1..S6",
+  "other_w1_suites": "run by pytest in W1/check",
+  "status": "executed this round"
+ },
+ "evidence": {
+  "stage1": "60_EVIDENCE/raw/STAGE1.json",
+  "stage2": "60_EVIDENCE/raw/STAGE2.json",
+  "security_verdict": "19/19 PASS"
+ }
+}

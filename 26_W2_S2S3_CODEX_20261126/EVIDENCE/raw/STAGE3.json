@@ -1,0 +1,16 @@
+{
+ "post": {
+  "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+  "W1/check/w2_dev_gate.py": "ecef3f39cf3ae4db1a387cca4eec2d5212d9cce8e1f81d7a91e0cb0ffd170db4",
+  "W1/check/w2_admission.py": "8caabfffd5c5c07040f0444e1d4ad23cbad939501b61597b726184f4816c4ae3",
+  "W1/impl/w2_nf_reader.py": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980",
+  "W1/check/test_j1_strict.py": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4",
+  "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+ },
+ "pytest_rc": 1,
+ "pytest_last": "19 failed, 50 passed, 25 errors, 15 subtests passed in 11.30s",
+ "run_cases_rc": 2,
+ "run_cases_last": [],
+ "canonical": "7fed022300a6c7c5b75edb36ff10c4188fc48d2309e84c54eda4cf88345d6d07",
+ "historical": "5387eb79935663715a9322ba6c9767a9bb0c6a8c635d83f82d15bda3b0fc84ff"
+}

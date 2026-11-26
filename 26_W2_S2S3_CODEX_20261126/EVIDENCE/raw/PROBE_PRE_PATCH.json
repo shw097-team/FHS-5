@@ -1,0 +1,22 @@
+{
+ "schema": "FHS5.PLP.W2S3.Probe@1",
+ "receiver_sha256": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+ "oracle": {
+  "unlisted_entry": "refuse:UNLISTED_ENTRY",
+  "reparse_alias": "refuse:PATH_ESCAPE"
+ },
+ "probes": {
+  "unlisted_entry": {
+   "accepted": true,
+   "first_fail": null,
+   "checks_failed": []
+  },
+  "reparse_alias": {
+   "link_kind": "junction",
+   "accepted": true,
+   "first_fail": null,
+   "checks_failed": []
+  }
+ },
+ "verdict": "RED_ACCEPTED"
+}

@@ -12,19 +12,19 @@
     "status": "ADOPTED_PRIMARY_USE_DO_NOT_MODIFY"
   },
   "current_delivery": {
-    "dir": "25_W2_FINAL_HANDOFF_HERMES_20261126",
-    "closeout": "25_W2_FINAL_HANDOFF_HERMES_20261126/FHS-5_PLP_W2_CLOSEOUT.md",
-    "handoff": "25_W2_FINAL_HANDOFF_HERMES_20261126/FHS-5_PLP_W2_HANDOFF.md",
-    "five_pins": "24_W2_SCOPED_REPAIR_HERMES_20261126/W2_FIVE_PINS.json",
-    "candidate_aggregate_digest": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
-    "note": "aggregate digest is authoritative only in W2_FIVE_PINS.json; this field is a pointer, not a second source",
+    "dir": "26_W2_S2S3_CODEX_20261126",
+    "closeout": "26_W2_S2S3_CODEX_20261126/FHS-5_PLP_W2_CLOSEOUT.md",
+    "handoff": "26_W2_S2S3_CODEX_20261126/FHS-5_PLP_W2_HANDOFF.md",
+    "candidate_pins": "26_W2_S2S3_CODEX_20261126/W2_CANDIDATE_S2S3.json",
     "candidate_members": [
       "W1/check/w2_receiver.py",
       "W1/check/w2_dev_gate.py",
       "W1/check/w2_admission.py",
       "W1/impl/w2_nf_reader.py",
-      "W1/check/test_j1_strict.py"
-    ]
+      "W1/check/test_j1_strict.py",
+      "W1/check/test_j1_receiver.py"
+    ],
+    "note": "S2/S3 round: DEV-A repair + generation-2 security matrix. OPS-A and the 12 original cases remain NOT_RUN."
   },
   "superseded": [
     {
@@ -60,9 +60,15 @@
     "primary_use_promotion": "NOT_PERFORMED — nothing was promoted, because no round satisfied the full W2 contract"
   },
   "writer_state": {
-    "state": "BLOCKED_NOT_ADMITTED",
+    "state": "BLOCKED_NOT_ADMITTED (generation-1); generation-2 DEV scope used in an isolated world only",
     "marker": "W2_NATIVE_RUNS/W2_SECURITY_FINDING.json",
-    "resume": "Owner re-authorisation naming roots, targets, ops, expiry and recovery"
+    "generation_2": {
+      "decision": "W2-S2S3-OWNER-20261126-02",
+      "write_root": "W2_NATIVE_RUNS/S2S3_20261126T225929/20_WORLD",
+      "allowed_ops": 2,
+      "revoked_generation_1": true
+    },
+    "resume": "OPS host effect needs its own named scope (roots/targets/ops/expiry/recovery)"
   },
   "next_owner": "W3 P01 (see the handoff)"
 }

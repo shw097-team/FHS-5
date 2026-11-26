@@ -1,0 +1,70 @@
+{
+ "schema": "FHS5.PLP.W2.OwnerDecision@local-2",
+ "decision_id": "W2-S2S3-OWNER-20261126-02",
+ "decision_kind": "HUMAN_OWNER_SCOPED_CONSTRUCTION_AUTHORIZATION",
+ "decision_maker": "Human Owner (single owner and issuer of record)",
+ "decided_at": "2026-11-26T22:59:29+08:00",
+ "authority_basis": {
+  "prompt": "FHS-5_PLP_W0-W2_S2-S3_本地CODEX_產品施工啟動薄PROMPT.md",
+  "prompt_sha256": "711ed32cf708ed2e8f9b2af4a0db262aded659294f4fe356ddb75942ea26c305",
+  "quote_1": "本輪指令授權上述受界施工任務及指定 G 正常工程交付，已有有效 scope 不重簽。",
+  "quote_2": "真安全前件成立後才取新具名 writer/effect scope。",
+  "quote_3": "具權後真 Gate/Admission check/apply_patch/reverse（或原採納等價）執行 DEV-A"
+ },
+ "supersedes": {
+  "decision_id": "W2-NF-PRIMARY-20261126-01",
+  "state": "TERMINATED_BY_SECURITY_FINDING_NOT_REVIVED",
+  "note": "The generation-1 decision ended on a security Finding. This document does not revive it; it authorises a disjoint, smaller effect under a new id and a separate trust config."
+ },
+ "scope": {
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "wave_id": "W2",
+  "domain": "DEV",
+  "write_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261126T225929\\20_WORLD",
+  "allowed_ops": [
+   {
+    "path": "W1/check/w2_receiver.py",
+    "operation": "MODIFY"
+   },
+   {
+    "path": "W1/check/test_j1_receiver.py",
+    "operation": "MODIFY"
+   }
+  ],
+  "effects_not_authorized": [
+   "RELEASE",
+   "external deploy",
+   "irreversible effect",
+   "any path outside the two named targets",
+   "OPS host effect is a separate named scope"
+  ]
+ },
+ "preconditions": {
+  "per_op": [
+   "this decision covers the op and its exact write set",
+   "the generation-2 trust config is readable and unmodified",
+   "live repo HEAD equals the asserted HEAD",
+   "every declared preimage matches the live bytes",
+   "reverse patch restores the preimage on a copy"
+  ],
+  "security_precondition": "the probe probe_authority_injection.py must be GREEN on the candidate before this decision's effect is applied"
+ },
+ "recovery": {
+  "kind": "REVERSE_PATCH_ON_COPY",
+  "restore": "restored bytes must equal the declared preimage digest",
+  "forbidden": [
+   "GIT_REVERT",
+   "GIT_RESET",
+   "GIT_CLEAN"
+  ]
+ },
+ "expiry": "2026-11-27T23:59:59+08:00",
+ "not_claimed": [
+  "W2_NF_VALIDATED",
+  "W3_TECHNICALLY_READY",
+  "W3_EXECUTION_READY",
+  "INDEPENDENT_PASS",
+  "RELEASED"
+ ]
+}

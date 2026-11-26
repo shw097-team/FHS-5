@@ -164,6 +164,56 @@ def _confine(root: Path, raw: str):
     return None
 
 
+
+FILE_ATTRIBUTE_REPARSE_POINT = 0x400
+
+_ENVELOPE_NAMES = frozenset({
+    "EVIDENCE_MANIFEST.json",
+    "DELIVERY_SEAL.json",
+    "EVIDENCE_MANIFEST.sha256",
+    "W2_RECEIVE_RECEIPT.json",
+})
+
+
+def _is_reparse_point(p):
+    try:
+        st = p.lstat()
+    except OSError:
+        return False
+    if p.is_symlink():
+        return True
+    return bool(getattr(st, "st_file_attributes", 0) & FILE_ATTRIBUTE_REPARSE_POINT)
+
+
+def _reparse_ancestor(delivery_root, raw):
+    """First component below the root that is a symlink/junction, else None."""
+    cur = delivery_root
+    if _is_reparse_point(cur):
+        return "."
+    acc = []
+    for part in Path(raw).parts:
+        cur = cur / part
+        acc.append(part)
+        if _is_reparse_point(cur):
+            return "/".join(acc)
+    return None
+
+
+def _unlisted_files(delivery_root, files):
+    """Regular files in the delivery tree that the manifest never names."""
+    listed = {os.path.normcase(e["path"]) for e in files}
+    unlisted = []
+    for p in sorted(delivery_root.rglob("*")):
+        if not p.is_file():
+            continue
+        rel = p.relative_to(delivery_root).as_posix()
+        if rel in _ENVELOPE_NAMES:
+            continue
+        if os.path.normcase(rel) in listed:
+            continue
+        unlisted.append(rel)
+    return unlisted
+
 def _is_within(child: Path, parent: Path) -> bool:
     child_s = os.path.normcase(str(child))
     parent_s = os.path.normcase(str(parent))
@@ -391,6 +441,12 @@ def verify_delivery(delivery_root, expected_pins) -> dict:
                    f"{entry['path']!r}: {reason}")
             return _verify_result(checks, False, "PATH_ESCAPE", d, pins,
                                   manifest_sha, 0, seal_sha=seal_sha)
+        bad_link = _reparse_ancestor(d, entry["path"])
+        if bad_link is not None:
+            _check(checks, "path_confinement", False,
+                   f"{entry['path']!r}: reparse point at {bad_link!r}")
+            return _verify_result(checks, False, "PATH_ESCAPE", d, pins,
+                                  manifest_sha, 0, seal_sha=seal_sha)
         try:
             real = (d / entry["path"]).resolve()
         except (OSError, RuntimeError) as exc:
@@ -445,6 +501,15 @@ def verify_delivery(delivery_root, expected_pins) -> dict:
                                       seal_sha=seal_sha, verified_paths=verified_paths)
         verified_paths.append(entry["path"])
 
+    _check(checks, "evidence_bytes", True, f"{len(verified_paths)} entries recomputed")
+    unlisted = _unlisted_files(d, files)
+    if unlisted:
+        _check(checks, "file_set_exact", False, {"unlisted": unlisted[:8]})
+        return _verify_result(checks, False, "UNLISTED_ENTRY", d, pins,
+                              manifest_sha, len(verified_paths),
+                              seal_sha=seal_sha, verified_paths=verified_paths)
+    _check(checks, "file_set_exact", True,
+           f"{len(files)} listed; envelope excluded")
     _check(checks, "evidence_bytes", True, f"{len(verified_paths)} entries recomputed")
     tree = tree_digest(d)
     _check(checks, "delivery_tree", True, tree)

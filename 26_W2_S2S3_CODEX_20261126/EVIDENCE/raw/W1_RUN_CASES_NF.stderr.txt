@@ -1,0 +1,2 @@
+usage: run_cases_nf.py [-h] --pack PACK --out OUT
+run_cases_nf.py: error: the following arguments are required: --pack, --out
