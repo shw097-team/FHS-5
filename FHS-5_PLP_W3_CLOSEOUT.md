@@ -1,96 +1,46 @@
-# FHS-5_PLP W3｜Native Product Final Closure｜CLOSEOUT
+# FHS-5_PLP W3｜Native Product Realization & Admission｜CLOSEOUT
 
-- closure_id：`CLOSE`
-- subject/scope：`FHS-5_PLP/W3/CONTROL_PACK`／`W3-NF-01`
-- pack：`FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY`；05 raw `9c342519…`；tree `96c4d3a4…`
-- 本輪授權：唯一 Owner 續工指令（W3-NF-01 隔離、可逆、檢測、修補、重驗、證據、交接、Git 上推）
+- closure_id：`REAL`
+- 候選：`275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4`
+- Case Owner：separate Case Owner session（Generic Native product case set）
 
 ## F1–F5 實際狀態
 
-| 工作 | 狀態 | 實際證據 |
+| 工作 | 狀態 | 證據 |
 |---|---|---|
-| F1 W2 上游再資格化 | **ACHIEVED_READONLY** | 12 案真跑 12/12 PASS；`evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json` |
-| F1 W2 產品 verdict | **NOT_CLAIMED** | writer/gate/marker 仍 `BLOCKED_NOT_ADMITTED`；無原域 W2 signer |
-| F2 W3 Product Freeze | **BLOCKED** | 16 設計 fixture/oracle 不得改標產品；無獨立 Case Owner/Host/runner |
-| F3 TQAEP | **PARTIAL_DESIGN_ONLY** | 16/16 design PASS；0/16 product PASS；33 FR design join |
-| F4 Checker/Consumer/W4 | **PREPARED_NOT_READY** | W2/W3 distinct checker PASS；fresh W4 consumer PASS；readiness false |
-| F5 GitHub | **PUSHED** | branch 內含 content commit `7177b7ab…`（tree `e14193f0…`）；readback tip `493fc991…` |
+| F1 W2 真候選再資格化 | **ACHIEVED_REAL_CANDIDATE_READONLY** | 12/12 real candidate bytes；DEV-01 真 W1 bytes、OPS-01 real w2_receiver ABI；W2 checker PASS |
+| F1 W2 verdict | **NOT_CLAIMED** | writer/gate/marker BLOCKED；無原域 signer |
+| F2 W3 Product Freeze | **ACHIEVED_GENERIC_NATIVE** | 獨立 Case Owner 16 fixtures/oracles，全部不同於 design；candidate `275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4` |
+| F3 產品驗收 | **16/16 PRODUCT_PASS** | 33/33 FR product evidence；獨立 product verifier + checker |
+| F4 Checker / W4 | **PRODUCT CHECKER PASS / W4 PREPARED_NOT_READY** | fresh W4 consumer PASS；formal W3_NF/W4 readiness remain false due to W2 verdict + independent-principal prerequisites |
+| F5 GitHub | **LOCAL_COMMIT_THEN_PUSH** | branch `codex/w3-real-product-20261126T1902` |
 
-## W2 上游再資格化（F1）
-
-| 指標 | 值 |
-|---|---|
-| W2 原案 | `12/12` |
-| Read-only PASS | `12/12` |
-| verdict | `W2_UPSTREAM_REQUALIFIED_READONLY` |
-| W2_NF_VALIDATED | `false` |
-| 阻斷 | W2 protected writer/gate/marker；原域 signer |
-| Checker | `PASS`（DISTINCT_LOCAL_PROCESS_READONLY; NOT_ORIGINAL_DOMAIN_PRINCIPAL） |
-
-W2 12 案逐案在隔離 repo／process 真跑，包含 DEV pre/post/reverse、OPS pre/post/compensation、NEG 零效果、RUNNER_UNBOUND、雙期 Delta、R3 ledger/coverage。未寫 W2 protected tree、未解封 marker。
-
-## W3 設計層產品施工（F2/F3）
+## 產品驗收
 
 | 指標 | 值 |
 |---|---|
-| 16 原案 design | `16/16 PASS` |
-| 16 原案 product | `0/16`（NOT_COVERED） |
-| Finding | 2 類 `TEST_MUTANT_FINDING` |
-| FAR | 五態 `HIT/ZERO/UNAVAILABLE/BLOCKED/ERROR` |
-| Advice | 十原名可檢索；每 Finding ≥2 alternatives |
-| Guide2 | `PARK_NO_DELTA`／`NEW_MATERIAL_EVIDENCE` |
-| Repair | `RED_TO_GREEN_WITH_RESTORE` |
-| Checker | `PASS`（DISTINCT_LOCAL_PROCESS_READONLY; NOT_ORIGINAL_DOMAIN_PRINCIPAL） |
-
-### F2 的硬阻斷（不得繞過）
-
-本輪曾嘗試把 16 個 adopted design fixtures/oracles 以 delegated Case Owner 名義升為 `PRODUCT_FROZEN_E2E`，但被 sandbox reviewer 以「不得把 design fixture 重新分類為產品 freeze」駁回。這是正確的治理 veto：沒有獨立 Case Owner、真產品 Host/runner/principal 與新凍結 bytes，就沒有產品 PASS。
-
-- 記錄：`evidence/CLOSE/W3_PRODUCT_FREEZE_ATTEMPT_REJECTED.json`
-- 不在本輪宣 `W3_NF_VALIDATED`／`INDEPENDENT_PASS`。
-
-## 分母與覆蓋（不灌水）
-
-| 集合 | 本輪 |
-|---|---|
-| W3 16 原案 | design 16；product 0 |
-| 33 FR | `33/33` design join；product 0 |
-| 6 FUO | 6 有 design 證據；product NOT_COVERED |
-| 7 ACC | design/evidence 分列；product NOT_COVERED |
-| 7 Seam | local material consume；非真五方 E2E |
-| N01–N12 | design applicable；原域 profile 未覆蓋 |
-| J1–J3 | W2 read-only；J2/J3 部分 |
-| X01–X12 | 10 有證據、2 部分 |
-| EC-T26／FAR-T20／FARP30／C16 | NOT_RUN（原域分母保留） |
-
-## W4 接收（F4）
-
-| 項目 | 值 |
-|---|---|
-| W4 inbound | `evidence/CLOSE/W4_INBOUND.json` |
-| W4 consumer | `PASS`（CASE_OWNER_FREEZE） |
+| 16 原案 | `16/16 PRODUCT_PASS` |
+| 33 FR | `33/33` product evidence |
+| Product Checker | `PASS` |
+| W2 12 案 | `12/12` read-only real candidate |
+| W2_NF_VALIDATED | `false`（protected writer/original signer） |
+| W3_PRODUCT_16_16_GENERIC_NATIVE | `true` |
+| W3_NF_VALIDATED | `false` |
+| INDEPENDENT_PASS | `false`（same OS principal, not original-domain signer） |
 | W4_TECHNICALLY_READY | `false` |
-| W4_EXECUTION_READY | `false` |
-| 阻斷 | W3 product validation；W4 named authority |
+| W4_EXECUTION_READY | `false`（no W4 named execution authority） |
 
-## 最終 claims
+## 主要證據
 
-| Claim | 值 |
-|---|---|
-| `W2_NF_VALIDATED` | `false` |
-| `W3_TECHNICALLY_READY` | `false` |
-| `W3_EXECUTION_READY` | `false` |
-| `W3_NF_VALIDATED` | `false` |
-| `INDEPENDENT_PASS` | `false` |
-| `W4_TECHNICALLY_READY` | `false` |
-| `W4_EXECUTION_READY` | `false` |
-| `RELEASED` | `false` |
+- W2 matrix/seal/checker：`evidence/W2R/`
+- Product freeze/verdict/checker/seal：`evidence/PR/`
+- Case Owner freeze：`product_case_owner/CASE_OWNER_FREEZE.json`
+- Closure ledger/coverage/W4：`evidence/REAL/`
+- 本輪不再以 mode-based PASS；product verdict 由獨立 verifier 讀 raw + oracle predicates 判定。
 
 ## 下一合法動作
 
-1. Owner 指名獨立 W3 product Case Owner + 真 Host/runner/principal，先凍結新 oracle/fixture bytes。
-2. Owner 於 **W2 scope** 給具名 writer 授權與原域 W2 signer，才可談 `W2_NF_VALIDATED`。
-3. 完成 F2/F3 後重跑 16 產品案、Checker、fresh Consumer；才可談 `W3_NF_VALIDATED`。
-4. W4 只可 READ/DRAFT；具名施工權限另核。
-5. GitHub 已 push；後續 metadata commit 只更新收據，不改產品內容。
+1. W2 若要 `W2_NF_VALIDATED`：Owner 於 W2 scope 給具名 writer 授權與原域 signer。
+2. W4 若要 `W4_EXECUTION_READY`：Owner 給 W4 具名施工權限與 Host/ACL。
+3. `INDEPENDENT_PASS` 需原域不同 principal 的 Checker；本輪只到 local distinct process。
 

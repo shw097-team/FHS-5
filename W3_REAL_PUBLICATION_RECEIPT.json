@@ -1,0 +1,19 @@
+﻿{
+    "schema":  "FHS5.PLP.W3.RealPublicationReceipt@1",
+    "state":  "PUSH_PENDING",
+    "branch":  "codex/w3-real-product-20261126T1902",
+    "content_commit":  "b9b48a103fe4b00b7ca1760b7363fffb44028dfb",
+    "content_tree":  "5b3ca39be214ab80fc8037d5fc54448928a6b9f8",
+    "candidate":  "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
+    "claims":  {
+                   "W2_NF_VALIDATED":  false,
+                   "W3_PRODUCT_16_16_GENERIC_NATIVE":  true,
+                   "W3_TECHNICALLY_READY":  false,
+                   "W3_EXECUTION_READY":  false,
+                   "W3_NF_VALIDATED":  false,
+                   "INDEPENDENT_PASS":  false,
+                   "W4_TECHNICALLY_READY":  false,
+                   "W4_EXECUTION_READY":  false,
+                   "RELEASED":  false
+               }
+}

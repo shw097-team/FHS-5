@@ -1,86 +1,25 @@
 {
-  "schema": "FHS5.PLP.W3.ProductCurrent.NF@2",
+  "schema": "FHS5.PLP.W3.ProductCurrent.NF@3",
   "subject_id": "FHS-5_PLP/W3/PRODUCT",
   "scope": "W3-NF-01",
-  "active_candidate": {
-    "schema": "FHS5.PLP.W3.FreezeLedger.NF@1",
-    "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
-    "scope": "W3-NF-01",
-    "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
-    "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
-    "pins": {
-      "source": {
-        "value": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
-        "kind": "W3 source_set over 28 sources",
-        "locator": "05_W3_SOURCE_MANIFEST.json#digest_contract.source_set_sha256"
-      },
-      "candidate": {
-        "value": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
-        "kind": "W2 five-member verified product set (upstream frozen input)",
-        "locator": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree\\24_W2_SCOPED_REPAIR_HERMES_20261126\\W2_FIVE_PINS.json",
-        "candidate_state": "W2_PARTIAL_UPSTREAM"
-      },
-      "evidence": {
-        "value": "cb9bc39d9a541db86571c3eda05db61674e69813029caa519054da054a2ca903",
-        "kind": "W3 pack external seal over manifest+tree",
-        "locator": "EXTERNAL_SEAL.json"
-      },
-      "oracle": {
-        "value": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
-        "kind": "digest over 16 design oracle rows (not product-frozen)",
-        "locator": "assets/oracles/*.json",
-        "design_state": "PROPOSED_DESIGN_ORACLE"
-      },
-      "case_set": {
-        "value": "a33e2047eeae517073666786b381a2ec1ed047ccc478384b939e39243d2f74a4",
-        "kind": "digest over plan index + 16 case ids",
-        "locator": "assets/schema/W3_PLAN_INDEX.json",
-        "design_state": "PROPOSED_DESIGN_FIXTURE"
-      }
-    },
-    "pins_distinct": true,
-    "pin_count": 5,
-    "fixture_time": "2026-11-26T14:57:25+08:00",
-    "host_policy": {
-      "host_id": "AUTHOR_LOCAL_WINDOWS",
-      "policy_epoch": "LOCAL-20261126",
-      "product_host": "UNBOUND"
-    },
-    "separate_fields": [
-      "pins",
-      "fixture_time",
-      "host_policy"
-    ],
-    "w2_upstream": {
-      "product_commit": "dada2354b7c25c8f4a316d9fae93827cef0d194e",
-      "delivery_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
-      "status": "PARTIAL",
-      "writer_state": "BLOCKED_NOT_ADMITTED",
-      "oracle_status": "PARTIALLY_FROZEN",
-      "case_set_status": "CARRIED_NOT_REFROZEN",
-      "evidence_status": "SEALED_AFTER_OBSERVED"
-    },
-    "claim": "FROZEN_IDENTITY_STRUCTURE_ONLY",
-    "not_claimed": [
-      "W2_NF_VALIDATED",
-      "W3_TECHNICALLY_READY",
-      "W3_NF_VALIDATED"
-    ]
+  "candidate": "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
+  "candidate_tree_sha256": "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
+  "pins": {
+    "source": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+    "candidate": "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
+    "evidence": "POST_EXECUTION_SEAL",
+    "oracle": "13063c81cfde4bb46dc8fab5001400f02347f046db0679e948fcb053b26564b3",
+    "case_set": "ac9f061bee576cdea93fdbdf5f49f61cb710873a4ad3308248297b4c1a6ed07f"
   },
-  "candidate_tree_sha256": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
-  "pack_ref": "FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY",
-  "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
-  "state": "W3_DESIGN_ENGINE_ONLY_PRODUCT_NOT_VALIDATED",
-  "supersedes": "20261126T1605",
-  "publication": {
-    "state": "PUSHED",
-    "local_only": false,
-    "remote_commit": "3d73705ff6f996d39fe9c6b9b15af0e492c9928f",
-    "remote_tree": "2443cf029dce19d176d6a6709d44658cd4f94e98",
-    "branch": "codex/w3-final-closure-20261126T1827"
+  "case_owner": "separate Case Owner session",
+  "product_cases": {
+    "total": 16,
+    "pass": 16
   },
+  "checker": "PASS",
   "claims": {
     "W2_NF_VALIDATED": false,
+    "W3_PRODUCT_16_16_GENERIC_NATIVE": true,
     "W3_TECHNICALLY_READY": false,
     "W3_EXECUTION_READY": false,
     "W3_NF_VALIDATED": false,
@@ -89,6 +28,14 @@
     "W4_EXECUTION_READY": false,
     "RELEASED": false
   },
-  "next_legal_action": "independent product Case Owner + real Host/runner freeze",
-  "updated_at": "2026-11-26T18:34:58+0800"
+  "state": "PRODUCT_PARTIAL",
+  "supersedes": [
+    "20261126T1827",
+    "20261126T1605"
+  ],
+  "publication": {
+    "state": "PUSH_PENDING",
+    "branch": "codex/w3-real-product-20261126T1902"
+  },
+  "candidate_commit": "b9b48a103fe4b00b7ca1760b7363fffb44028dfb"
 }
