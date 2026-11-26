@@ -1,6 +1,7 @@
 {
   "schema": "FHS5.PLP.W3.PublicEvidenceManifest@1",
   "run_id": "20261126T1605",
+  "self_excluded": true,
   "files": [
     {
       "path": "W3/check/checker_verify.py",
@@ -86,11 +87,6 @@
       "path": "W3/evidence/public/PIPELINE_SUMMARY.json",
       "sha256": "ced84e19dd7a3bb22cc89ba98f8698b6d1d7a79314f0e0d3166259051d60dbf2",
       "bytes": 1042
-    },
-    {
-      "path": "W3/evidence/public/PUBLIC_MANIFEST.json",
-      "sha256": "fa2b5c50330571781922c3878708c4e2b0925e50a12ac91ccf774297ca66548c",
-      "bytes": 8826
     },
     {
       "path": "W3/evidence/public/REPAIR_RECEIPT.json",
