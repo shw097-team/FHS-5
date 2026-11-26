@@ -1,4 +1,4 @@
-# FHS-5_PLP｜W3 r2｜主用交付索引（public export）
+# FHS-5_PLP｜W3 r2｜主用交付索引（本地 canonical）
 
 **artifact_id**：`FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY`｜**version**：`r2`｜**subject**：`FHS-5_PLP/W3/CONTROL_PACK`｜**scope**：`W3-NF-01`
 
@@ -18,9 +18,9 @@
 
 | Group | Result | Raw |
 |---|---|---|
-| V1 完整性/pin | PASS | `02_EVIDENCE/W3_檢查修補與驗收_證據型附錄.md` §04 |
-| V2 原義/可達性 | PASS | `02_EVIDENCE/W3_檢查修補與驗收_證據型附錄.md` §05 |
-| V3 可消費/啟動 | PASS（DOC/SMOKE） | `assets/tools/w3_consumer.py`；`02_EVIDENCE/W3_檢查修補與驗收_證據型附錄.md` §06 |
+| V1 完整性/pin | PASS | `02_EVIDENCE/raw/checks/V1.stdout.txt`；`FINAL_CHECK_RECEIPT.json` |
+| V2 原義/可達性 | PASS | `02_EVIDENCE/raw/checks/V2.stdout.txt` |
+| V3 可消費/啟動 | PASS（DOC/SMOKE） | `assets/tools/w3_consumer.py`；`raw/clean_run/.../smoke/SMOKE_RECEIPT.json` |
 
 Clean run byte equality：`True`；V1/V2/V3/consumer 全部 exit 0。
 
@@ -35,13 +35,13 @@ Clean run byte equality：`True`；V1/V2/V3/consumer 全部 exit 0。
 |  `04_W3_START_THIN_PROMPT.md`  |  5938  |  `0ce02166f8cea579d31a1a8b9422f31da9244cc270a7a0447d7f1c1b93b46ddc`  | `01_BODY/FHS-5_PLP_W3_NATIVE_FIRST/04_W3_START_THIN_PROMPT.md` |
 |  `05_W3_SOURCE_MANIFEST.json`  |  79611  |  `9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4`  | `01_BODY/FHS-5_PLP_W3_NATIVE_FIRST/05_W3_SOURCE_MANIFEST.json` |
 |  `EXTERNAL_SEAL.json`  |  1104  |  `cb9bc39d9a541db86571c3eda05db61674e69813029caa519054da054a2ca903`  | `EXTERNAL_SEAL.json` |
-|  `W3_OWNER_ADOPTION.json`  |  2641  |  `330476e77ec4bb2f1c20b25ca4d79ba751f67f48ac44d6a5cb5e235bde540bee`  | `W3_OWNER_ADOPTION.json` |
-|  `W3_CURRENT.json`  |  1237  |  `7536e09e87e6e769a15b3689569838a24a9e2ab623487b88892df4f6e93aeddf`  | `W3_CURRENT.json` |
+|  `W3_OWNER_ADOPTION.json`  |  3545  |  `42966993da3b82827380271506696b3975f7b86c44fa2f14d0064b423c045d89`  | `W3_OWNER_ADOPTION.json` |
+|  `W3_CURRENT.json`  |  1421  |  `b663221c35508434ef4475e8a070c4944036ecb016b9f809f6307926e1e54e55`  | `W3_CURRENT.json` |
 |  `W3_來源追溯與原義保全_證據型附錄.md`  |  18003  |  `0bcc990461a03806cd789cbe4876a835103b5b8f87d625a22264e5f0f080f0ad`  | `02_EVIDENCE/W3_來源追溯與原義保全_證據型附錄.md` |
-|  `W3_檢查修補與驗收_證據型附錄.md`  |  8799  |  `dc2bfe875fa6f9e03fae195c1302dabcd0b5e8a888ec8db8dee5e1c5db4e7f46`  | `02_EVIDENCE/W3_檢查修補與驗收_證據型附錄.md` |
-|  `W3_採納授權與GitHub讀回_證據型附錄.md`  |  3542  |  `311d5ab7742a7083c7a9eaa5085e5015f27a1a3b16de6a942aa7aece16075630`  | `02_EVIDENCE/W3_採納授權與GitHub讀回_證據型附錄.md` |
+|  `W3_檢查修補與驗收_證據型附錄.md`  |  8814  |  `35d4b29add58afbcb0fa442d0e0e1d2443fce369d256e03f99d4f2635a82cad3`  | `02_EVIDENCE/W3_檢查修補與驗收_證據型附錄.md` |
+|  `W3_採納授權與GitHub讀回_證據型附錄.md`  |  4006  |  `c948b747cf2e09b4759d9667e53545fc0591bd8e849f8417abbf8934e51a0fb8`  | `02_EVIDENCE/W3_採納授權與GitHub讀回_證據型附錄.md` |
 
-**證據 raw**：私有，未上推；公開只提供三份證據附錄與 `w3_consumer.py`。
+**證據 raw**：`02_EVIDENCE/raw/`（clean_run、checks、smoke、private map；私有，不上推）。
 
 ## 04｜LastGood 與回復
 
@@ -57,7 +57,7 @@ Clean run byte equality：`True`；V1/V2/V3/consumer 全部 exit 0。
 |---|---|
 | remote | `https://github.com/shw097-team/FHS-5` |
 | branch | `codex/w3-pack-nf-primary-20261126` |
-| commit / readback | 見 `02_EVIDENCE/W3_採納授權與GitHub讀回_證據型附錄.md` §04 |
+| remote readback | `PUBLICATION_RECEIPT.json`（commit/tree/05 SHA/seal/consumer） |
 | state | `PUSHED_PENDING_READBACK`（推送後更新） |
 
 ## 06｜限制

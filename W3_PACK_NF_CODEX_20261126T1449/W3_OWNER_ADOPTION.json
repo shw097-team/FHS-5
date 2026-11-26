@@ -72,5 +72,21 @@
     "INDEPENDENT_PASS",
     "RELEASED"
   ],
-  "note": "The Owner did not hand-sign this receipt; it is a delegated record of the explicit user instruction and the actual validation facts."
+  "note": "The Owner did not hand-sign this receipt; it is a delegated record of the explicit user instruction and the actual validation facts.",
+  "publication_state": "PUSHED",
+  "owner_promotion_approval": {
+    "approved": true,
+    "approved_at": "2026-11-26T15:35:17+08:00",
+    "message": "你可以使用憑證，並把修補新版升格/宣達/授權「主用+可執行施工」。",
+    "scope": "credential use for normal Git authentication; promote repaired W3 pack to primary + executable; authorize W3 start",
+    "not_covered": "does not by itself name the exact GitHub payload/branch for egress; publication remains blocked until exact push approval",
+    "recorded_as": "delegated record of explicit user message"
+  },
+  "publication": {
+    "state": "PUSHED",
+    "remote": "https://github.com/shw097-team/FHS-5",
+    "branch": "codex/w3-pack-nf-primary-20261126",
+    "readback_ref": "../../PUBLICATION_RECEIPT.json",
+    "note": "exact remote commit/tree are kept in the external publication receipt to avoid self-reference"
+  }
 }
