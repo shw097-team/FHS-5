@@ -1,11 +1,15 @@
 {
  "schema": "FHS5.PLP.W2.PublicationReceipt@local-1",
  "round": "HERMES-F5-W2-PACK-NF-FINAL-r1",
- "issued_at": "2026-11-26T10:18:24+08:00",
+ "issued_at": "2026-11-26T10:19:17+08:00",
+ "supersedes_receipt_commit": "5529cb06a59fd58f61afa50f04b9a9e182b293e3",
+ "supersedes_reason": "appendix republished to record the publication outcome (its previous text pointed at a section that did not exist)",
  "repo": "https://github.com/shw097-team/FHS-5",
  "branch": "hermes/w2-pack-nf-primary-20261126",
  "base_commit": "9fae9257a3402928efbe6ff0cd66f45761f52846",
  "content_commit": "d2589deae0a1c5df944fcb899e117123cbc7f4e6",
+ "appendix_commit": "8fa006413513bf07f04421fbf389fd56e5916551",
+ "receipt_commit": "this file's own commit (post-positioned; not self-referenced)",
  "main_head_at_receipt": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
  "main_touched_by_this_round": false,
  "artifact": {
@@ -14,216 +18,184 @@
   "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
   "manifest_bytes": 65377,
   "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
-  "appendix_sha256": "d192947c2642b0a18881e14243e3a58eaee7f662a3375d0afdea5fe967db7829",
-  "appendix_bytes": 24873,
+  "appendix_sha256": "e518b75a853244ef1b007544dfdeae24d1d946a432de224c6313fa23c446b217",
+  "appendix_bytes": 25233,
   "pointer_sha256": "1999ed8b454ae3ab48881366ba99e8893869d62ca00ce5fc655eacd881762524"
  },
  "verification": {
-  "method": "fresh clone of the pushed branch into an empty directory, then sha256 per file compared with the local canonical tree",
+  "method": "fresh clone of the pushed branch, then sha256 per file against the local canonical tree; repeated after each push",
   "files_compared": 33,
   "identical": 33,
   "differing": 0,
-  "eol_normalisation": "none (remote 05: 65377 bytes, CR count 0); subtree pinned `-text` in .gitattributes",
-  "self_hash": "this receipt is committed AFTER the content commit it names, so it cannot contain its own digest"
+  "eol_normalisation": "none (remote 05: 65377 bytes, CR count 0); subtree pinned `-text`",
+  "six_pack_files_unchanged_since_content_commit": true,
+  "receipt_self_hash": "not embedded; this receipt is committed after the content it names"
  },
  "files": [
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/00_W2_PI_PD.md",
    "bytes": 60853,
-   "sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92",
-   "git_blob": "8df6efbe6135c97a2351f991c542fd00d37c27cd"
+   "sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/01_W2_DEV_ECP.md",
    "bytes": 21795,
-   "sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d",
-   "git_blob": "5eadae2198d8e01f959918c3b5945125b23cdd45"
+   "sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/02_W2_OPS_ECP.md",
    "bytes": 19372,
-   "sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934",
-   "git_blob": "1c8258b260c43413aab72eecf51718fdea793b3f"
+   "sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/03_W2_TQAEP.md",
    "bytes": 22289,
-   "sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a",
-   "git_blob": "0f612d52e7251356ae61a228b98b555f4ecae692"
+   "sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/04_W2_START_THIN_PROMPT.md",
    "bytes": 7104,
-   "sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8",
-   "git_blob": "6edb9f93c2af52b963c15d8553eae950cd189bfe"
+   "sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/05_W2_SOURCE_MANIFEST.json",
    "bytes": 65377,
-   "sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
-   "git_blob": "4d9f2378b0443f8bc8d3686726fac88032a63609"
+   "sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/cases/case_index.json",
    "bytes": 6325,
-   "sha256": "b85ff62161fb8f2ed00a1884bd3b15a201327f0037eee701f8869212ebd46301",
-   "git_blob": "793fa8c0ab47fd0de60e64c237c48c9c8bd80912"
+   "sha256": "b85ff62161fb8f2ed00a1884bd3b15a201327f0037eee701f8869212ebd46301"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-AUTH-01.json",
    "bytes": 893,
-   "sha256": "80502748eece6d9619adb03228740f04f60dfe3fc918b22f75d19520d99045fa",
-   "git_blob": "a591a0c41285a02e18253cd2df8a14526b01537b"
+   "sha256": "80502748eece6d9619adb03228740f04f60dfe3fc918b22f75d19520d99045fa"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-DELTA-01.json",
    "bytes": 3521,
-   "sha256": "cb61b06f00559edcfa4d8fbc43c6fa812d4aa3cb1e19c65b1d5dac1bfe5e07ca",
-   "git_blob": "4deb40198e77060a1a9a4f0e67d794404943d842"
+   "sha256": "cb61b06f00559edcfa4d8fbc43c6fa812d4aa3cb1e19c65b1d5dac1bfe5e07ca"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-DEV-01.json",
    "bytes": 3380,
-   "sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001",
-   "git_blob": "4506b49db4122b840170d0e89ad2f87105d21822"
+   "sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-DEV-02.json",
    "bytes": 940,
-   "sha256": "99f910663b7f85afc598b5e84a91f2707d9181c386367195120ac5bf04a2e6b6",
-   "git_blob": "2c87518a37e43b5df9269459d202730a62389bfb"
+   "sha256": "99f910663b7f85afc598b5e84a91f2707d9181c386367195120ac5bf04a2e6b6"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-EFFECT-01.json",
    "bytes": 821,
-   "sha256": "3492f8cc0b774dbc5c6db301a08fc1efc4d3ed55045d7e856415f286a5b8ec57",
-   "git_blob": "c6512e121bea7370d1d5a9736152e9ca6ef8352b"
+   "sha256": "3492f8cc0b774dbc5c6db301a08fc1efc4d3ed55045d7e856415f286a5b8ec57"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-OPS-01.json",
    "bytes": 1492,
-   "sha256": "03494b3cca8e229064cfc98a791b18cea478a3cbc602a9f6dd6707608d463f17",
-   "git_blob": "c7df93068a0071cfe83d1532bec8384774d3da8a"
+   "sha256": "03494b3cca8e229064cfc98a791b18cea478a3cbc602a9f6dd6707608d463f17"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-OPS-02.json",
    "bytes": 834,
-   "sha256": "168e857025f505fb2fc9b56a5391f2e89d605fe0e9f72742c9093e1ed952b055",
-   "git_blob": "7820667021bb4a27b98ffcb6b2d77a4b21b63dae"
+   "sha256": "168e857025f505fb2fc9b56a5391f2e89d605fe0e9f72742c9093e1ed952b055"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-R3-01.json",
    "bytes": 3032,
-   "sha256": "5c721f1524cbdb1f63496773444b1e0f2535ea9cb082c067ec854aa696f98ca2",
-   "git_blob": "f93047352c37bae681980da0ae6321186137b626"
+   "sha256": "5c721f1524cbdb1f63496773444b1e0f2535ea9cb082c067ec854aa696f98ca2"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-R3-02.json",
    "bytes": 1124,
-   "sha256": "9867a71507bc5d1e4a6ee1d4bcb02b6d10c6cad37af78623a7aa67660b72d632",
-   "git_blob": "f1e85e8cc64ed3586115c2aa98c710f705641196"
+   "sha256": "9867a71507bc5d1e4a6ee1d4bcb02b6d10c6cad37af78623a7aa67660b72d632"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-R3-03.json",
    "bytes": 978,
-   "sha256": "8566b623ab3d16134e7e5461bf31e7b26a1087395103841e815c6fa3cfc51b2e",
-   "git_blob": "d70f79e713682943081b1677331ad7a563a51ae9"
+   "sha256": "8566b623ab3d16134e7e5461bf31e7b26a1087395103841e815c6fa3cfc51b2e"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-R3-04.json",
    "bytes": 837,
-   "sha256": "7c8ba861cbce7c5d92d4683005d4d8202c0907f89e65b3e7a88e759eb976c81e",
-   "git_blob": "4d61362225416dcd7aed99f4ae122a491b409f29"
+   "sha256": "7c8ba861cbce7c5d92d4683005d4d8202c0907f89e65b3e7a88e759eb976c81e"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/fixtures/W2-RUNNER-01.json",
    "bytes": 768,
-   "sha256": "7ea614b4f40f32c0bbff0964faca0229270e623cd8cec38ec9057b0fe6915ea9",
-   "git_blob": "b6ec7ab73fb95304bda00eb526ec81bf0e90e933"
+   "sha256": "7ea614b4f40f32c0bbff0964faca0229270e623cd8cec38ec9057b0fe6915ea9"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-AUTH-01.json",
    "bytes": 880,
-   "sha256": "6365e89546a7cd9755d78e03d27589c16e6a1bb4d17ee6b47a7008207e644b5f",
-   "git_blob": "5bb2beea3785317b85e51037f25f1b9dc0698d15"
+   "sha256": "6365e89546a7cd9755d78e03d27589c16e6a1bb4d17ee6b47a7008207e644b5f"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-DELTA-01.json",
    "bytes": 1221,
-   "sha256": "155dc1054bcc6a79d7c981a48abd4778618fa314ecfbbb443815ee15dcd293b5",
-   "git_blob": "735cc12e3b51688049bb5d276ea26e3d8f0e9740"
+   "sha256": "155dc1054bcc6a79d7c981a48abd4778618fa314ecfbbb443815ee15dcd293b5"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-DEV-01.json",
    "bytes": 1433,
-   "sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb",
-   "git_blob": "a7c8523f1f20ec3d1fd5815ba75bb299e78073cc"
+   "sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-DEV-02.json",
    "bytes": 841,
-   "sha256": "4d29d6270963f8f89e05e15c51b74ee2efeb28fa708c41c37c4787a0b1f00798",
-   "git_blob": "46c1262368548ef9286903c95ce5a5fab36702d7"
+   "sha256": "4d29d6270963f8f89e05e15c51b74ee2efeb28fa708c41c37c4787a0b1f00798"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-EFFECT-01.json",
    "bytes": 838,
-   "sha256": "a1e4c91f86e982ef857f89ef44025cfbea90392f3298750cdac809dec63e1695",
-   "git_blob": "dad62249242df9d7de48a532eb2c6b10147769fb"
+   "sha256": "a1e4c91f86e982ef857f89ef44025cfbea90392f3298750cdac809dec63e1695"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-OPS-01.json",
    "bytes": 1160,
-   "sha256": "9d5e723084add8c1cc14e33a1eba15e4f5a07a62cfbe49eda2d0df15c9b3aeab",
-   "git_blob": "f5aa39375bc6446f7b64815a8d49a15a59085df4"
+   "sha256": "9d5e723084add8c1cc14e33a1eba15e4f5a07a62cfbe49eda2d0df15c9b3aeab"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-OPS-02.json",
    "bytes": 831,
-   "sha256": "a5d8732e42719f6f73f56bed350604f13d0d0fad456a01148be3ccc4c3346b56",
-   "git_blob": "3a59281dece05e2228432f62e6e1958697d68f6e"
+   "sha256": "a5d8732e42719f6f73f56bed350604f13d0d0fad456a01148be3ccc4c3346b56"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-R3-01.json",
    "bytes": 880,
-   "sha256": "970ec9d73646a673b8e15320aa35efc3ad57e225a08867acbc70cd897ab365e2",
-   "git_blob": "e625aec49626bd6d3b1001a3280426bae57e75eb"
+   "sha256": "970ec9d73646a673b8e15320aa35efc3ad57e225a08867acbc70cd897ab365e2"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-R3-02.json",
    "bytes": 760,
-   "sha256": "3b2ed871b64c226b9aa834228100c167560360653d0c4593119f84d5300f1e2c",
-   "git_blob": "ed34db6ccd4ad2cdc4f5023222d73ed23cc16dbc"
+   "sha256": "3b2ed871b64c226b9aa834228100c167560360653d0c4593119f84d5300f1e2c"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-R3-03.json",
    "bytes": 794,
-   "sha256": "1f9d9e155317bf125eed1976731e094f75ee749d78d3d7a20af6927c00443743",
-   "git_blob": "beb2aaee30337005063f42bf0fc27fe64a0ab01e"
+   "sha256": "1f9d9e155317bf125eed1976731e094f75ee749d78d3d7a20af6927c00443743"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-R3-04.json",
    "bytes": 859,
-   "sha256": "d26358c730d2b2e789652a8813de427cb76bc6211422f00061abb7d8258d3b3b",
-   "git_blob": "f51cd7a05157469822c4c6662413a8321a429354"
+   "sha256": "d26358c730d2b2e789652a8813de427cb76bc6211422f00061abb7d8258d3b3b"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST/assets/oracles/W2-RUNNER-01.json",
    "bytes": 805,
-   "sha256": "22931f33af7a05eb637e211b966347815acf87ba4e0f25f78d2d2c3be36eecef",
-   "git_blob": "78207c217b28d2225c23ad356bde8815bc9c15d5"
+   "sha256": "22931f33af7a05eb637e211b966347815acf87ba4e0f25f78d2d2c3be36eecef"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_Native-first_HERMES_修補證據型附錄.md",
-   "bytes": 24873,
-   "sha256": "d192947c2642b0a18881e14243e3a58eaee7f662a3375d0afdea5fe967db7829",
-   "git_blob": "1a4f3faebf7915bbfbd3d06b56eed1371567804d"
+   "bytes": 25233,
+   "sha256": "e518b75a853244ef1b007544dfdeae24d1d946a432de224c6313fa23c446b217"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/PACK_POINTER.json",
    "bytes": 1588,
-   "sha256": "1999ed8b454ae3ab48881366ba99e8893869d62ca00ce5fc655eacd881762524",
-   "git_blob": "2bd75a42391b00b40f2ac2663d84a0c7f242bbd1"
+   "sha256": "1999ed8b454ae3ab48881366ba99e8893869d62ca00ce5fc655eacd881762524"
   }
  ],
  "claim_ceiling": "PRIMARY_AUTHORIZED_SCOPED_CONSTRUCTION_DOCUMENT_BASIS",
@@ -245,6 +217,6 @@
   "an independent Checker verdict",
   "an original-domain acceptance"
  ],
- "owner_selection": "the Owner's pre-authorization in this round is recorded in the appendix, bound to the 05 sha256 above; the branch is published for the next hand, the merge is the Owner's decision",
- "next_legal_action": "CODEX starts from 04_W2_START_THIN_PROMPT.md with P01/P02 trusted read/bind; no write before Owner scope, repo/HEAD/ACL, exact preimage, and recovery are established"
+ "owner_selection": "Owner pre-authorization recorded in the appendix, bound to the 05 sha256 above; merge into main remains the Owner's decision",
+ "next_legal_action": "CODEX starts from 04_W2_START_THIN_PROMPT.md with P01/P02 trusted read/bind; no write before Owner scope, repo/HEAD/ACL, exact preimage and recovery are established"
 }
