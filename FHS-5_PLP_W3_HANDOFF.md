@@ -12,15 +12,15 @@
 | `oracle_sha256` | `13063c81cfde4bb46dc8fab5001400f02347f046db0679e948fcb053b26564b3` |
 | `case_set_sha256` | `ac9f061bee576cdea93fdbdf5f49f61cb710873a4ad3308248297b4c1a6ed07f` |
 | `evidence_ref` | `evidence/PR` |
-| `evidence_manifest_sha256` | `871774406f94032e3ca81ee28baebc3f361e5eabba82745a01ad30d10cbdc778` |
+| `evidence_manifest_sha256` | `26b22b2e5416a17ca7ca168f6e7abc311fbbf45b0d4b8a8140ba185e7536a5da` |
 | `checker_ref` | `evidence/PR/PRODUCT_CHECKER.json` |
 | `consumer_ref` | `evidence/REAL/W4_CONSUMER.json` |
 | `next_legal_action` | `W4_EXECUTION_AUTHORITY_REQUIRED` |
 | `resume_predicate` | `same candidate + W4 named authority + Host/ACL` |
-| `publication_state` | `PUSHED` |
+| `publication_state` | `PUSH_PENDING` |
 | `execution_authority` | `None` |
-| `candidate_commit` | `b9b48a103fe4b00b7ca1760b7363fffb44028dfb` |
-| `candidate_preimage` | `275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4` |
+| `candidate_commit` | `aab17125dddae448aded1633b0d669e0c3a3e0a6` |
+| `candidate_preimage` | `e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7` |
 | `actual_readback` | `{"argv": ["python", "W4/check/consumer_w4.py"], "exit": 0, "raw": "evidence/REAL/W4_CONSUMER.json", "action": "W4_EXECUTION_AUTHORITY_REQUIRED", "result": "PENDING"}` |
 | `readiness` | `{"W4_TECHNICALLY_READY": false, "W4_EXECUTION_READY": false}` |
 | `not_covered` | `["W4 full 485/35/56/1011 assurance", "W4 execution authority", "original-domain principal"]` |
@@ -43,8 +43,3 @@
 
 W4 READ/DRAFT only until a named W4 execution authority is granted.
 
-
-## remote readback
-
-- remote tip `d89084a17c15186b07f4bd9a4dd58cfb1865c76c`
-- remote tree `a644ef6cf04ade5fa9d3e7a8144929e8e2c08deb`

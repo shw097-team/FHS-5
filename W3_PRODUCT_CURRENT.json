@@ -2,11 +2,11 @@
   "schema": "FHS5.PLP.W3.ProductCurrent.NF@3",
   "subject_id": "FHS-5_PLP/W3/PRODUCT",
   "scope": "W3-NF-01",
-  "candidate": "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
-  "candidate_tree_sha256": "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
+  "candidate": "e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7",
+  "candidate_tree_sha256": "e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7",
   "pins": {
     "source": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
-    "candidate": "275442fae37d1c1f971db2a8c0ac274d4731b36ed2352f52e1c498e13e9a23e4",
+    "candidate": "e858f69c46bcf5ed3ad1d351c2f277c63078b317739a8fc42115d7ee17dfe2d7",
     "evidence": "POST_EXECUTION_SEAL",
     "oracle": "13063c81cfde4bb46dc8fab5001400f02347f046db0679e948fcb053b26564b3",
     "case_set": "ac9f061bee576cdea93fdbdf5f49f61cb710873a4ad3308248297b4c1a6ed07f"
@@ -34,10 +34,8 @@
     "20261126T1605"
   ],
   "publication": {
-    "state": "PUSHED",
-    "branch": "codex/w3-real-product-20261126T1902",
-    "remote_commit": "46d0a163be7dd5048241cb7c5320f44a10852eeb",
-    "remote_tree": "a644ef6cf04ade5fa9d3e7a8144929e8e2c08deb"
+    "state": "PUSH_PENDING",
+    "branch": "codex/w3-real-product-20261126T1902"
   },
-  "candidate_commit": "b9b48a103fe4b00b7ca1760b7363fffb44028dfb"
+  "candidate_commit": "aab17125dddae448aded1633b0d669e0c3a3e0a6"
 }
