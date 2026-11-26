@@ -1,0 +1,68 @@
+{
+  "schema": "FHS5.PLP.W2.ConsumerReadback@1",
+  "consumer_id": "w2_consumer_o04 (separate process, no reuse of the maker's code path)",
+  "op_id": "OPS-O04",
+  "run_id": "20261126T040428Z-1929cd1c",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "same_host_epoch": {
+    "host_id": "DESKTOP-57EO414",
+    "epoch_state": "NOT_DECLARED_BY_HOST"
+  },
+  "checks": [
+    {
+      "check": "run_dir_exists",
+      "ok": true,
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS\\w2-ops-a-20261126T040428Z-1929cd1c"
+    },
+    {
+      "check": "receipt_present",
+      "ok": true,
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS\\w2-ops-a-20261126T040428Z-1929cd1c\\w2_binding_receipt.json"
+    },
+    {
+      "check": "receipt_accepted",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "check": "receipt_first_fail_null",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "check": "product_consumed",
+      "ok": true,
+      "detail": "{'build_contracts': 1, 'seam_wiring': 1}"
+    },
+    {
+      "check": "receipt_sha_matches_o03",
+      "ok": true,
+      "detail": "{'o03': 'f64ed32a0d7f963991e76954bff3dcd27ce61c2d361b0274f8b09676f4f17525', 'now': 'f64ed32a0d7f963991e76954bff3dcd27ce61c2d361b0274f8b09676f4f17525'}"
+    },
+    {
+      "check": "created_entries_present",
+      "ok": true,
+      "detail": "{'missing': [], 'n': 8}"
+    },
+    {
+      "check": "created_entries_nonempty",
+      "ok": true,
+      "detail": "8"
+    },
+    {
+      "check": "delivery_tree_unchanged",
+      "ok": true,
+      "detail": "{'evidence_manifest': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39', 'delivery_seal': 'f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73', 'handoff': 'ffea91770c055bf800889e268d265d046b81d7ae79433069fcff0b7f489b38d9', 'closeout': '2954523723b8275298299727b3f615d9d"
+    },
+    {
+      "check": "material_outside_delivery",
+      "ok": true,
+      "detail": "{'run_dir': 'C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\W2_NATIVE_RUNS\\\\20261126T1152_W2_CLOSURE\\\\40_OPS\\\\w2-ops-a-20261126T040428Z-1929cd1c', 'delivery': 'C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\W2_NATIVE_RUNS\\\\20261126T1152_W2_CLOSURE\\\\10_PACK\\\\18_W1_NF_CODEX_20261126T000627'}"
+    }
+  ],
+  "passed": 10,
+  "total": 10,
+  "consumed": true,
+  "verdict": "VERIFIED"
+}

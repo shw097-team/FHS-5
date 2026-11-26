@@ -1,0 +1,129 @@
+{
+  "schema": "FHS5.PLP.W2.CaseLedger@2",
+  "runner": "run_w2_cases.py (real scratch repo, real gate)",
+  "cases": [
+    {
+      "case_id": "W2-DEV-01",
+      "kind": "POS",
+      "expected": "gate ok, exact write set applied, post differs, reverse restores preimage",
+      "observed": {
+        "gate_ok": true,
+        "wrote": [
+          "mod_target.py"
+        ],
+        "post_sha": "3da6c4b355804b265ecef19dfe5945fe2790a8cc38dc9d0547fb1634c94cbbe7",
+        "reverse_restored": true
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-DEV-02",
+      "kind": "NEG",
+      "expected": "REPO_HEAD_MISMATCH, zero writes",
+      "observed": {
+        "first_fail": "REPO_HEAD_MISMATCH",
+        "wrote": [],
+        "unchanged": true
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-EFFECT-01",
+      "kind": "NEG",
+      "expected": "EFFECT_UNBOUND, never default to READ",
+      "observed": {
+        "first_fail": "EFFECT_UNBOUND",
+        "wrote": []
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-AUTH-01",
+      "kind": "NEG",
+      "expected": "no admission / expired / wrong scope all refused, zero writes",
+      "observed": {
+        "no_admission": "FALSE_AUTHORITY",
+        "expired": "FALSE_AUTHORITY",
+        "wrong_scope": "SCOPE_MISMATCH"
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-R3-03",
+      "kind": "NEG",
+      "expected": "WRITE_SET_UNBOUND when the declared preimage is not the live one",
+      "observed": {
+        "first_fail": "WRITE_SET_UNBOUND",
+        "wrote": []
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-R3-02",
+      "kind": "NEG",
+      "expected": "G4/tag_normalizer token is not a W2 effect",
+      "observed": {
+        "first_fail": "EFFECT_UNBOUND"
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-OPS-02",
+      "kind": "NEG",
+      "expected": "RECOVERY_KIND_MISMATCH for git revert / reset / clean",
+      "observed": {
+        "first_fail": "RECOVERY_KIND_MISMATCH",
+        "wrote": []
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-RUNNER-01",
+      "kind": "NEG",
+      "expected": "a case whose fixture is absent is refused as RUNNER_UNBOUND, never counted as executed",
+      "observed": {
+        "fixture_exists": false,
+        "executed": false,
+        "first_fail": "RUNNER_UNBOUND"
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-R3-01",
+      "kind": "POS",
+      "expected": "16 rows (13 original + 3 NF) carried with owner/resume; none silently marked satisfied",
+      "observed": {
+        "rows": 16,
+        "with_actual_ref": 0,
+        "owners_present": 16
+      },
+      "verdict": "PASS",
+      "raw": null
+    },
+    {
+      "case_id": "W2-R3-04",
+      "kind": "EDGE",
+      "expected": "workspace/manifest period drift is named, not silently reconciled",
+      "observed": {
+        "manifest_bytes": 65377,
+        "declared_manifest_bytes": 65377,
+        "note": "the 318/317 workspace drift belongs to the author workspace, which is not this run's repo; recorded as out-of-scope rather than asserted"
+      },
+      "verdict": "PASS",
+      "raw": null
+    }
+  ],
+  "counts": {
+    "PASS": 10,
+    "FAIL": 0
+  },
+  "total": 10
+}

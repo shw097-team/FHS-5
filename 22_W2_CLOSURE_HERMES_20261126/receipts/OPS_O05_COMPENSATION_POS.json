@@ -1,0 +1,63 @@
+{
+  "schema": "FHS5.PLP.W2.CompensationReceipt@1",
+  "op_id": "OPS-O05",
+  "run_id": "20261126T040428Z-1929cd1c",
+  "compensation_kind": "HOST_SPECIFIC_DELETE_CREATED_ONLY",
+  "forbidden_used": {
+    "git_revert": false,
+    "git_reset": false,
+    "git_clean": false
+  },
+  "deleted": [
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/00_W2_DRAFT_PI_PD.md",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/03_W2_DRAFT_TQAEP.md",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/04_W2_DRAFT_THIN.md",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/05_W2_SOURCE_MANIFEST.json",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/_off_native.py",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/context_bundle.md",
+    "w2-ops-a-20261126T040428Z-1929cd1c/w2_binding_receipt.json",
+    "w2-ops-a-20261126T040428Z-1929cd1c/w2_pack_parse.json"
+  ],
+  "removed_dirs": [
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy",
+    "w2-ops-a-20261126T040428Z-1929cd1c"
+  ],
+  "refused": [],
+  "world_after": {
+    "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS",
+    "digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "entries": 0
+  },
+  "checks": [
+    {
+      "check": "no_target_refused",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "check": "all_targets_deleted",
+      "ok": true,
+      "detail": {
+        "deleted": 8,
+        "recorded": 8
+      }
+    },
+    {
+      "check": "run_dir_absent",
+      "ok": true,
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS\\w2-ops-a-20261126T040428Z-1929cd1c"
+    },
+    {
+      "check": "pre_state_readback",
+      "ok": true,
+      "detail": {
+        "expected": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "actual": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    }
+  ],
+  "passed": 4,
+  "total": 4,
+  "verdict": "RECOVERED"
+}

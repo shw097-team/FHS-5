@@ -171,15 +171,39 @@ def _is_within(child: Path, parent: Path) -> bool:
 
 
 def _parse_json_bytes(raw: bytes):
-    """Strict UTF-8 + JSON parse; return (obj, error)."""
+    """Strict UTF-8 + JSON parse; return (obj, error).
+
+    Rejects: invalid UTF-8, duplicate object keys, NaN/Infinity/-Infinity, BOM,
+    and trailing content.  A duplicated key is how an attacker smuggles a second
+    "sha256" past a first-wins reader, so it must be refused, not resolved.
+    """
+    if raw[:3] == b"\xef\xbb\xbf":
+        return None, "BOM not allowed"
     try:
         text = raw.decode("utf-8")
     except UnicodeDecodeError as exc:
         return None, f"not UTF-8: {exc}"
+
+    duplicates = []
+
+    def _pairs(pairs):
+        seen = set()
+        for k, _ in pairs:
+            if k in seen:
+                duplicates.append(k)
+            seen.add(k)
+        return dict(pairs)
+
+    def _const(name):
+        raise ValueError(f"non-finite constant not allowed: {name}")
+
     try:
-        return json.loads(text), None
+        obj = json.loads(text, object_pairs_hook=_pairs, parse_constant=_const)
     except (json.JSONDecodeError, ValueError) as exc:
         return None, f"not JSON: {exc}"
+    if duplicates:
+        return None, f"duplicate keys: {sorted(set(duplicates))[:5]}"
+    return obj, None
 
 
 def _check(checks, name, ok, detail):
@@ -472,6 +496,22 @@ def consume_verified(validated, output_root) -> dict:
         raise NFError("OUTPUT_ROOT_INVALID",
                       "output_root must not be inside the delivery tree")
 
+    # TOCTOU: the bytes that were verified must still be the bytes on disk now.
+    # Without this, a delivery can be verified clean and then swapped before the
+    # product call, and consume_verified would still report ok.
+    _man_p = d / "EVIDENCE_MANIFEST.json"
+    _seal_p = d / "DELIVERY_SEAL.json"
+    try:
+        _now_manifest = sha256_file(_man_p)
+        _now_seal = sha256_file(_seal_p)
+    except OSError as exc:
+        raise NFError("TOCTOU_UNREADABLE", str(exc)) from exc
+    if _now_manifest != validated.get("manifest_sha256") \
+            or _now_seal != validated.get("delivery_seal_sha256"):
+        raise NFError("TOCTOU_DRIFT",
+                      str({"manifest": [validated.get("manifest_sha256"), _now_manifest],
+                           "seal": [validated.get("delivery_seal_sha256"), _now_seal]}))
+
     checks, rejected, reasons = [], [], []
     calls = {"build_contracts": 0, "seam_wiring": 0}
     first_fail = {"value": None}
@@ -671,8 +711,19 @@ def _preflight(ident, validated):
     except OSError as exc:
         chk("handoff_scope", False, exc, "ENTRY_MISSING")
     else:
+        # exact field match, not a substring test: "W1-NF-01" must not be
+        # satisfied by "W1-NF-011" or by the phrase inside prose
         scope = ident.get("scope")
-        chk("handoff_scope", bool(scope) and scope in hand, scope, "SCOPE_MISMATCH")
+        import re as _re
+        field = None
+        for line in hand.splitlines():
+            m = _re.match(r"^\s*(?:[-*]\s*)?scope\s*[:=]\s*(.+?)\s*$", line)
+            if m:
+                field = m.group(1).strip().strip("`").strip()
+                break
+        chk("handoff_scope",
+            field is not None and scope is not None and field == scope,
+            {"field": field, "requested": scope}, "SCOPE_MISMATCH")
     return checks, rejected, reasons, fail["value"]
 
 

@@ -1,0 +1,83 @@
+{
+ "schema": "FHS5.PLP.W2.DeliveryManifest@1",
+ "task_id": "HERMES-F5-W2-CLOSURE-r2",
+ "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+ "scope": "W2-NF-01",
+ "candidate": "W2-NF-r3-CODEX-PRIMARY",
+ "status": "PARTIAL — R01-R04 executed and read back; J3 not run",
+ "files": [
+  {
+   "path": "FHS-5_PLP_W2_CLOSEOUT.md",
+   "bytes": 5034,
+   "sha256": "eda2bf46356a89494122b2d41731eefa58d9438a4aad57897a48528b8b2d85ac"
+  },
+  {
+   "path": "FHS-5_PLP_W2_HANDOFF.md",
+   "bytes": 1514,
+   "sha256": "acfe876e7b24f7923225a5845ba9ca983dd13dd1ca98df8937a722a247a07c01"
+  },
+  {
+   "path": "receipts/expected_pins.json",
+   "bytes": 758,
+   "sha256": "fdb99b2a8853a2578847f99b8b0483402d9165280fd515fa664f39f2a0ca515c"
+  },
+  {
+   "path": "receipts/OPS_O03_WORLD_EFFECT_POS.json",
+   "bytes": 5407,
+   "sha256": "2a8ae681c0d277a41fa468059dd4f80d8a473a2f1e27af9ddef0d4d8eb1cf2c6"
+  },
+  {
+   "path": "receipts/OPS_O04_CONSUMER_READBACK.json",
+   "bytes": 2488,
+   "sha256": "98d1696b505780f93ee00a15ecadb6828c114ab18c8cbf2f6693fbec89a9b423"
+  },
+  {
+   "path": "receipts/OPS_O05_COMPENSATION_POS.json",
+   "bytes": 2186,
+   "sha256": "2cb581968850341bad151459cc01a34109420f508c8e805c2d5638c48467a056"
+  },
+  {
+   "path": "receipts/raw_j1_receiver.txt",
+   "bytes": 934,
+   "sha256": "d162d2eb7e02b431d08f514fc8e2a09ff87ab735cf80c6c9828fcefb732b68db"
+  },
+  {
+   "path": "receipts/raw_j1_strict.txt",
+   "bytes": 110,
+   "sha256": "d37ba7d49e75050a894c934db5ed05aad61a4d1d81c99cb8858c0ad8c0fa9340"
+  },
+  {
+   "path": "receipts/raw_w2_cases.txt",
+   "bytes": 63,
+   "sha256": "60e0d65bc144569632a14a30b1268e0e55e73421a33d3392323fbd9096874582"
+  },
+  {
+   "path": "W2_CASE_LEDGER_R2.json",
+   "bytes": 3420,
+   "sha256": "f79ac38673e2a6cfddf5a329e6bcf6a5dd6c45c42e6df9450ee176367772cbc5"
+  },
+  {
+   "path": "W2_CHANGESET.json",
+   "bytes": 5401,
+   "sha256": "94d95db498d28f0d688b4fcb0430d5dfa8abcafaec92d38578fc2bda8c9baf55"
+  },
+  {
+   "path": "W2_CONTRACTS.json",
+   "bytes": 40811,
+   "sha256": "d1c4d48da4ad7fdaa68a3ca5b18a31a6a0cd31c5eeebfb36f5c8c79956292496"
+  },
+  {
+   "path": "W2_GUIDE_NINE_KEYS.json",
+   "bytes": 4254,
+   "sha256": "d96908322f47f41d27816f5baaec2cbcdbab888e7767c87f41cfad805c5cfc37"
+  },
+  {
+   "path": "W2_UNKNOWN_FIXTURES.json",
+   "bytes": 3267,
+   "sha256": "ef19e76273fc68464dd3b99f2cb87f2cc1464c277b376a2557306fb2ca6c700b"
+  }
+ ],
+ "file_count": 14,
+ "self_excluded": true,
+ "manifest_self_hash": "EXTERNAL_RECORD_ONLY"
+}

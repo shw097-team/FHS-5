@@ -1,0 +1,136 @@
+{
+ "schema": "FHS5.PLP.W2.GuideNineKeys@1",
+ "keys": [
+  "subject",
+  "scope",
+  "source_sha",
+  "repo_head",
+  "host_id",
+  "policy_epoch",
+  "oracle_sha",
+  "world_raw_sha",
+  "first_fail"
+ ],
+ "P1": {
+  "period": "P1 prior run 20261126T1121",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "source_sha": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+  "repo_head": "bde47312646de1cf62ddfb2a8df2f4de93424dab",
+  "host_id": "DESKTOP-57EO414",
+  "policy_epoch": null,
+  "policy_epoch_state": "NOT_DECLARED_BY_HOST",
+  "oracle_sha": "1a059b260ea024394d3055c3397cca89a03db1938355e8abd31f02f59c416211",
+  "world_raw_sha": "5d6c70065a46ea3189b0256f96136a1e711e8a417da35550c268e8479dc22f7d",
+  "world_pre_sha": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "first_fail": null,
+  "candidate_sha": "ee92c8c853852909726fdae400837a52bc10788e59cdddb6f423d6061f4c207e",
+  "evidence_sha": "8e7cca8e95234026438768b0cc0fd422af4d078177b7fbacaaca5438df10295d"
+ },
+ "P2": {
+  "period": "P2 closure 20261126T1152",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "source_sha": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+  "repo_head": "uncommitted working tree on w2nf/closure-r2",
+  "host_id": "DESKTOP-57EO414",
+  "policy_epoch": null,
+  "policy_epoch_state": "NOT_DECLARED_BY_HOST",
+  "oracle_sha": null,
+  "world_raw_sha": "4ebfa5f7e7a68757514764275f58209c0998f8c9e5faa282e50df0684d5c4532",
+  "world_pre_sha": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "first_fail": null,
+  "candidate_sha": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+  "evidence_sha": "2a8ae681c0d277a41fa468059dd4f80d8a473a2f1e27af9ddef0d4d8eb1cf2c6"
+ },
+ "per_key": {
+  "subject": {
+   "P1": "FHS-5_PLP/W2/CONTROL_PACK",
+   "P2": "FHS-5_PLP/W2/CONTROL_PACK",
+   "same": true,
+   "unknown": false,
+   "note": null
+  },
+  "scope": {
+   "P1": "W2-NF-01",
+   "P2": "W2-NF-01",
+   "same": true,
+   "unknown": false,
+   "note": null
+  },
+  "source_sha": {
+   "P1": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+   "P2": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+   "same": true,
+   "unknown": false,
+   "note": null
+  },
+  "repo_head": {
+   "P1": "bde47312646de1cf62ddfb2a8df2f4de93424dab",
+   "P2": "uncommitted working tree on w2nf/closure-r2",
+   "same": false,
+   "unknown": false,
+   "note": null
+  },
+  "host_id": {
+   "P1": "DESKTOP-57EO414",
+   "P2": "DESKTOP-57EO414",
+   "same": true,
+   "unknown": false,
+   "note": null
+  },
+  "policy_epoch": {
+   "P1": null,
+   "P2": null,
+   "same": false,
+   "unknown": true,
+   "note": "two nulls are not a same-value claim"
+  },
+  "oracle_sha": {
+   "P1": "1a059b260ea024394d3055c3397cca89a03db1938355e8abd31f02f59c416211",
+   "P2": null,
+   "same": false,
+   "unknown": false,
+   "note": null
+  },
+  "world_raw_sha": {
+   "P1": "5d6c70065a46ea3189b0256f96136a1e711e8a417da35550c268e8479dc22f7d",
+   "P2": "4ebfa5f7e7a68757514764275f58209c0998f8c9e5faa282e50df0684d5c4532",
+   "same": false,
+   "unknown": false,
+   "note": null
+  },
+  "first_fail": {
+   "P1": null,
+   "P2": null,
+   "same": false,
+   "unknown": true,
+   "note": "two nulls are not a same-value claim"
+  }
+ },
+ "same_keys": [
+  "subject",
+  "scope",
+  "source_sha",
+  "host_id"
+ ],
+ "differing_keys": [
+  "repo_head",
+  "policy_epoch",
+  "oracle_sha",
+  "world_raw_sha",
+  "first_fail"
+ ],
+ "delta_verdict": "NEW_MATERIAL_EVIDENCE",
+ "why": {
+  "world_raw_sha": "P2 post-world has a different digest because the receiver and the W2 pack parse changed; that is new material, not a no-delta case",
+  "repo_head": "P1 is the published commit; P2 is the uncommitted closure tree",
+  "policy_epoch": "both null with epoch_state=NOT_DECLARED_BY_HOST; two nulls are not a same-value claim, so the key is recorded as unknown-not-equal"
+ },
+ "verifier": {
+  "id": "hermes independent checker oracle (distinct process)",
+  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\30_VERIFY\\raw\\CHECKER_J1_ORACLE.json",
+  "limit": "same principal as the maker; not INDEPENDENT_PASS"
+ },
+ "candidate_and_evidence_listed_separately": true
+}

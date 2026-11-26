@@ -1,0 +1,154 @@
+{
+ "schema": "FHS5.PLP.W2.ChangeSet@1",
+ "base_commit": "35d5387f9c98eaebc2d4cee742afcb4509a7d8c3",
+ "committed_head": "bde47312646de1cf62ddfb2a8df2f4de93424dab",
+ "committed": [
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/DELIVERY_MANIFEST.json",
+   "before_sha256": null,
+   "after_sha256": "ae3bb6e041cd1b1964c9ae9c94450fe8fc34ab29d11336794b2299bd60b4ab17",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/FHS-5_PLP_W2_CLOSEOUT.md",
+   "before_sha256": null,
+   "after_sha256": "5480bb67bd41c841b99a0a1e3d2b890197c72ca8d271ac3d4ead2611d00c5e5c",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/FHS-5_PLP_W2_HANDOFF.md",
+   "before_sha256": null,
+   "after_sha256": "f353537616e3322f73167d2cfde0c6bc2b958e369ca2f32ca67fc238f3cb435c",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/W2_CASE_LEDGER.json",
+   "before_sha256": null,
+   "after_sha256": "2363e9fa8d77acd851ac3af4c46bfa8c3b5ebe588ba23dc77168585e432a57b9",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/W2_WORLD_EFFECT_LEDGER.json",
+   "before_sha256": null,
+   "after_sha256": "b909b6c55c8c202f6ef67153d2f824780ef3ed84c298540897d3f5e3379679e3",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/J1_verify_only_pre_repair.json",
+   "before_sha256": null,
+   "after_sha256": "066f6703ac9abd2459c78108cef8b447c842e1172836dfbedea3b6cb18e39bb7",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/NEG_scope_mismatch_receipt.json",
+   "before_sha256": null,
+   "after_sha256": "fc1fca1317c23a7b6d93319e467a6cd179e424a0069217cd2cc10c1632db8841",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/OPS_O03_WORLD_EFFECT_POS.json",
+   "before_sha256": null,
+   "after_sha256": "3dc6f7826968549610f8ebb9b5d360f20dae87090ab3f0ca0e72091605db4625",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/OPS_O04_CONSUMER_READBACK.json",
+   "before_sha256": null,
+   "after_sha256": "62e7a3e2362058b45a28b2c9e5ecca15bba92f39f49ff490bb0c01de36952ec4",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/OPS_O05_COMPENSATION_POS.json",
+   "before_sha256": null,
+   "after_sha256": "2836d12efe7b847769376621d3365488d9473cef45c903183f755112909434e4",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/checker_j1_oracle.json",
+   "before_sha256": null,
+   "after_sha256": "3baf9ca71ec2d7e51514888a20c71e4b6c9b6f8de58a1e1559e0ca18e03f57ee",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/expected_pins.json",
+   "before_sha256": null,
+   "after_sha256": "4b1c0385c1ca9a4122ffad297d6db58d2b68154b53176efe428a8cfa9d27ff40",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/hardening_probe.json",
+   "before_sha256": null,
+   "after_sha256": "3283fdcaf24064bc3dc0c08feed275a3d9f4a71dca3b7ac23728c3b3b75006f6",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/maker_tests.txt",
+   "before_sha256": null,
+   "after_sha256": "73c639c09be8fb37bce8170bd589d163ac7e56ab10d13af6e45a58bb4b7f73d3",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "21_W2_PRODUCT_HERMES_20261126/receipts/w2_pack_consumer.json",
+   "before_sha256": null,
+   "after_sha256": "77095fb87c7f936386ba28df2662de7710235eb37d27059df11cf13fa7f9be8c",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "ADD",
+   "path": "W1/check/test_j1_receiver.py",
+   "before_sha256": null,
+   "after_sha256": "2f943e3bf160373f5432887ab93a4c9324d690ac44a2a3d481c39af83368e989",
+   "source": "committed (bde4731)"
+  },
+  {
+   "kind": "MODIFY",
+   "path": "W1/check/w2_receiver.py",
+   "before_sha256": "a791f0ebfab3deb36e4898898624781ddafec519892ef1192d4da07f29ac6cc8",
+   "after_sha256": "1af0a6903c7257b2720da3aeef88cc7536f2ae19f03bbee1544289ea9a8e1b47",
+   "source": "committed (bde4731)"
+  }
+ ],
+ "pending": [
+  {
+   "kind": "ADD",
+   "path": "W1/check/test_j1_strict.py",
+   "before_sha256": null,
+   "after_sha256": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4",
+   "source": "working tree (this round, uncommitted)"
+  },
+  {
+   "kind": "ADD",
+   "path": "W1/check/w2_dev_gate.py",
+   "before_sha256": null,
+   "after_sha256": "a11d3aa333ccb78b6832b468ed1349ff2ac377e97d7a094580f5d5f1709b45f9",
+   "source": "working tree (this round, uncommitted)"
+  },
+  {
+   "kind": "ADD",
+   "path": "W1/impl/w2_nf_reader.py",
+   "before_sha256": null,
+   "after_sha256": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980",
+   "source": "working tree (this round, uncommitted)"
+  }
+ ],
+ "committed_count": 17,
+ "pending_count": 3,
+ "changeset_present": true,
+ "hash_contract": "sha256 over the full file bytes; before=None means ADD",
+ "not_a_count_substitute": "each row carries exact kind/path/before/after; a count alone is not COMPLETE"
+}

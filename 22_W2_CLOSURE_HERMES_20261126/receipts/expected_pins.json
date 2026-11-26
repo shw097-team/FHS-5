@@ -1,0 +1,11 @@
+{
+ "schema": "FHS5.PLP.W2.J1.ExpectedPins@1",
+ "note": "external trust anchor for J1 verify_delivery; produced by the W2 run, not shipped by the delivery",
+ "delivery": "10_PACK/18_W1_NF_CODEX_20261126T000627",
+ "evidence_manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+ "delivery_seal_sha256": "f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73",
+ "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+ "handoff_sha256": "ffea91770c055bf800889e268d265d046b81d7ae79433069fcff0b7f489b38d9",
+ "closeout_sha256": "2954523723b8275298299727b3f615d9d717536af464532b9eb2c0100055ac4a",
+ "receiver_sha256": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+}
