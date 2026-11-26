@@ -1,0 +1,28 @@
+﻿{
+    "schema":  "FHS5.PLP.W3.PublicationReceipt@1",
+    "state":  "PUSH_BLOCKED",
+    "run_id":  "20261126T1605",
+    "remote":  "https://github.com/shw097-team/FHS-5",
+    "branch":  "codex/w3-product-20261126T1605",
+    "base_commit":  "dada2354b7c25c8f4a316d9fae93827cef0d194e",
+    "content_commit":  "4bfc0145acf1bf30e2072935086db269115c6b3a",
+    "content_tree":  "021ccc54b585c7211715ef1db9e6df2d5db88775",
+    "receipt_commit":  null,
+    "pushed":  false,
+    "readback":  "NOT_PERFORMED",
+    "blocked":  {
+                    "reason":  "credential egress to GitHub requires explicit user approval; the sandbox reviewer rejected two remote attempts",
+                    "reviewer":  "auto_review",
+                    "attempts":  2,
+                    "token_file_read":  false,
+                    "token_egress":  false,
+                    "workaround_attempted":  false
+                },
+    "local_only":  {
+                       "repo":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\product_repo",
+                       "closeout":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\FHS-5_PLP_W3_CLOSEOUT.md",
+                       "handoff":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\FHS-5_PLP_W3_HANDOFF.md",
+                       "evidence":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\evidence\\20261126T1605"
+                   },
+    "next_action":  "Owner approval for one normal authenticated push of this branch, or export the local commit/tree as a bundle"
+}
