@@ -1,0 +1,118 @@
+{
+  "schema": "FHS5.PLP.W2.CheckerOracle@1",
+  "checker": "hermes-run independent oracle",
+  "candidate": {
+    "w2_receiver_sha256": "ee92c8c853852909726fdae400837a52bc10788e59cdddb6f423d6061f4c207e",
+    "bytes": 38753
+  },
+  "checks": [
+    {
+      "check": "API.verify_delivery",
+      "ok": true,
+      "detail": "attribute present"
+    },
+    {
+      "check": "API.consume_verified",
+      "ok": true,
+      "detail": "attribute present"
+    },
+    {
+      "check": "J1-T01.accepted",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "check": "J1-T01.product_consumed",
+      "ok": true,
+      "detail": "{'build_contracts': 3, 'seam_wiring': 1}"
+    },
+    {
+      "check": "J1-T01.delivery_tree_unchanged",
+      "ok": true,
+      "detail": "{'changed': []}"
+    },
+    {
+      "check": "J1-T02.refused",
+      "ok": true,
+      "detail": "BYTES_MISMATCH"
+    },
+    {
+      "check": "J1-T02.zero_product_calls",
+      "ok": true,
+      "detail": "{'build_contracts': 0, 'seam_wiring': 0}"
+    },
+    {
+      "check": "J1-T02.first_fail_named",
+      "ok": true,
+      "detail": "BYTES_MISMATCH"
+    },
+    {
+      "check": "J1-T03.fake_grant_refused",
+      "ok": true,
+      "detail": "['no_fake_grant']"
+    },
+    {
+      "check": "J1-T03.zero_product_calls",
+      "ok": true,
+      "detail": "{'build_contracts': 0, 'seam_wiring': 0}"
+    },
+    {
+      "check": "J1-T03.pins_absent_fail_closed",
+      "ok": true,
+      "detail": "{'accepted': False, 'first_fail': 'PINS_MISSING'}"
+    },
+    {
+      "check": "J1-T03.pins_absent_zero_calls",
+      "ok": true,
+      "detail": "{'build_contracts': 0, 'seam_wiring': 0}"
+    },
+    {
+      "check": "J1-T04.escape_refused",
+      "ok": true,
+      "detail": "BYTES_MISMATCH"
+    },
+    {
+      "check": "J1-T04.path_escape_named",
+      "ok": true,
+      "detail": "BYTES_MISMATCH"
+    },
+    {
+      "check": "J1-T04.zero_product_calls",
+      "ok": true,
+      "detail": "{'build_contracts': 0, 'seam_wiring': 0}"
+    },
+    {
+      "check": "J1-T05.forgery_refused",
+      "ok": true,
+      "detail": "BYTES_MISMATCH"
+    },
+    {
+      "check": "J1-T05.zero_product_calls",
+      "ok": true,
+      "detail": "{'build_contracts': 0, 'seam_wiring': 0}"
+    },
+    {
+      "check": "J1-T06.zero_product_calls_on_failure",
+      "ok": true,
+      "detail": "{'build_contracts': 0, 'seam_wiring': 0}"
+    },
+    {
+      "check": "J1-T06.no_output_on_failure",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "J1-T06.positive_control_nonzero",
+      "ok": true,
+      "detail": "{'build_contracts': 3, 'seam_wiring': 1}"
+    },
+    {
+      "check": "J1-T06b.input_untouched_on_failure",
+      "ok": true,
+      "detail": "{'sentinel_sha': 'a5c4718a11955dbd03a4742f7ea0f7105ec1ef5982920d3fe2579b5614daaf4e', 'after': 'a5c4718a11955dbd03a4742f7ea0f7105ec1ef5982920d3fe2579b5614daaf4e'}"
+    }
+  ],
+  "passed": 21,
+  "total": 21,
+  "verdict": "PASS"
+}

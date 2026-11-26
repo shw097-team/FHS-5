@@ -1,0 +1,281 @@
+{
+  "schema": "FHS5.PLP.W2.ReceiveReceipt@1",
+  "receiver": "w2_receiver (independent)",
+  "generated_at": "2026-11-26T03:40:26Z",
+  "w2_identity": {
+    "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+    "scope": "W2-NF-01",
+    "permission_state": "NONE_GRANTED",
+    "producer_identity": "FHS-5_PLP/W1/CONTROL_PACK",
+    "consumer_identity": "FHS-5_PLP/W2/CONSUMER",
+    "expected_pack_sha256": null
+  },
+  "accepted": false,
+  "first_fail": "SCOPE_MISMATCH",
+  "rejected_checks": [
+    "handoff_scope"
+  ],
+  "reasons": [
+    "handoff_scope: W2-NF-01"
+  ],
+  "checks": [
+    {
+      "name": "pins_present",
+      "check": "pins_present",
+      "ok": true,
+      "detail": "delivery_seal_sha256, evidence_manifest_sha256, pack_manifest_sha256"
+    },
+    {
+      "name": "evidence_manifest_pin",
+      "check": "evidence_manifest_pin",
+      "ok": true,
+      "detail": "{'expected': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39', 'actual': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39'}"
+    },
+    {
+      "name": "delivery_seal_pin",
+      "check": "delivery_seal_pin",
+      "ok": true,
+      "detail": "{'expected': 'f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73', 'actual': 'f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73'}"
+    },
+    {
+      "name": "manifest_parse",
+      "check": "manifest_parse",
+      "ok": true,
+      "detail": "utf-8 json object"
+    },
+    {
+      "name": "manifest_schema",
+      "check": "manifest_schema",
+      "ok": true,
+      "detail": "FHS5.PLP.W1.EvidenceManifest@2"
+    },
+    {
+      "name": "manifest_entry_schema",
+      "check": "manifest_entry_schema",
+      "ok": true,
+      "detail": "118 entries"
+    },
+    {
+      "name": "manifest_pack_pin",
+      "check": "manifest_pack_pin",
+      "ok": true,
+      "detail": "{'expected': '61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a', 'claimed': '61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a'}"
+    },
+    {
+      "name": "seal_parse",
+      "check": "seal_parse",
+      "ok": true,
+      "detail": "utf-8 json object"
+    },
+    {
+      "name": "seal_manifest_binding",
+      "check": "seal_manifest_binding",
+      "ok": true,
+      "detail": "{'seal': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39', 'recomputed': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39'}"
+    },
+    {
+      "name": "seal_pack_pin",
+      "check": "seal_pack_pin",
+      "ok": true,
+      "detail": "{'seal': '61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a'}"
+    },
+    {
+      "name": "path_confinement",
+      "check": "path_confinement",
+      "ok": true,
+      "detail": "118 relative paths confined"
+    },
+    {
+      "name": "evidence_bytes",
+      "check": "evidence_bytes",
+      "ok": true,
+      "detail": "118 entries recomputed"
+    },
+    {
+      "name": "delivery_tree",
+      "check": "delivery_tree",
+      "ok": true,
+      "detail": "7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab"
+    },
+    {
+      "name": "no_fake_grant",
+      "check": "no_fake_grant",
+      "ok": true,
+      "detail": "NONE_GRANTED"
+    },
+    {
+      "name": "caller_pack_pin",
+      "check": "caller_pack_pin",
+      "ok": true,
+      "detail": "None"
+    },
+    {
+      "name": "identity_split",
+      "check": "identity_split",
+      "ok": true,
+      "detail": "{'producer': 'FHS-5_PLP/W1/CONTROL_PACK', 'consumer': 'FHS-5_PLP/W2/CONSUMER'}"
+    },
+    {
+      "name": "subject_identity",
+      "check": "subject_identity",
+      "ok": true,
+      "detail": "{'producer': 'FHS-5_PLP/W1/CONTROL_PACK', 'manifest': 'FHS-5_PLP/W1/CONTROL_PACK'}"
+    },
+    {
+      "name": "handoff_scope",
+      "check": "handoff_scope",
+      "ok": false,
+      "detail": "W2-NF-01"
+    }
+  ],
+  "check_count": 18,
+  "permission_boundary": "W2 receives evidence only; no grant issued, no protected effect",
+  "pack_manifest_sha256": null,
+  "w1_claim_seen": "see CLOSEOUT",
+  "verified_entries": 118,
+  "product_calls": {
+    "build_contracts": 0,
+    "seam_wiring": 0
+  },
+  "pins_used": {
+    "evidence_manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+    "delivery_seal_sha256": "f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73",
+    "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a"
+  },
+  "manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+  "delivery_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1121_W2_PRODUCT\\10_PACK\\18_W1_NF_CODEX_20261126T000627",
+  "delivery_tree_sha256": "7727c9058e93d886266ae2fc718f14ce70d5c388296ae4fa4ed89091438399ab",
+  "consume_performed": false,
+  "receipt_excluded_from_manifest": true,
+  "stop": "wrong candidate/pack/oracle/evidence/handoff/scope, missing pins, path escape, or any fake grant",
+  "resume": "same subject+scope+pack pin typed receipt; pins supplied externally; re-verify ACL/principal",
+  "manifest_sha256_at_receive": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+  "seal_evidence_manifest_sha256_at_receive": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+  "next_operation": null,
+  "w2_task": {
+    "kind": "READ",
+    "action": "reject identity/scope",
+    "readback": "preflight checks",
+    "accepted": false
+  },
+  "verified_paths": [
+    ".gitattributes",
+    "control_pack/evidence/PUSH_RECEIPT.json",
+    "control_pack/evidence/raw/bootstrap_consume.json",
+    "control_pack/evidence/raw/candidate_findings.json",
+    "control_pack/evidence/raw/clean_receive.txt",
+    "control_pack/evidence/raw/final_readback.json",
+    "control_pack/evidence/raw/guard_result.json",
+    "control_pack/evidence/raw/host_probe.json",
+    "control_pack/evidence/raw/host_probe.txt",
+    "control_pack/evidence/raw/mutation_results.txt",
+    "control_pack/evidence/raw/source_freeze.json",
+    "control_pack/evidence/SEAL.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/00_W1_PI_PD.md",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/01_W1_DEV_ECP.md",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/02_W1_OPS_ECP.md",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/03_W1_TQAEP.md",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/04_W1_START_THIN_PROMPT.md",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/05_W1_SOURCE_MANIFEST.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-ABI-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-ABI-02.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-API-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-HERMES-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-HOST-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-HOST-02.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-HOST-03.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-02.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-03.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-04.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-R3-05.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/fixtures/W1-SEC-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-ABI-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-ABI-02.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-API-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-HERMES-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-HOST-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-HOST-02.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-HOST-03.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-02.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-03.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-04.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-R3-05.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/assets/oracles/W1-SEC-01.json",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/tools/nf_pack_guard.py",
+    "control_pack/FHS-5_PLP_W1_NATIVE_FIRST/tools/run_mutations.py",
+    "evidence/cases.json",
+    "evidence/cases_stdout.txt",
+    "evidence/consumer/consumed_W1-API-01.md",
+    "evidence/consumer_second/consumed_W0-summary.md",
+    "evidence/host/artifact_for_cons_pkg2.json",
+    "evidence/host/artifact_for_cons_pkgs.json",
+    "evidence/host/consumer_cons_pkg2.py",
+    "evidence/host/consumer_cons_pkgs.py",
+    "evidence/host/host_receipt.json",
+    "evidence/host/pkgA_w1_artifact.json",
+    "evidence/host/pkgA_w1_stderr.txt",
+    "evidence/host/pkgA_w1_stdout.txt",
+    "evidence/host/pkgB_w0_artifact.json",
+    "evidence/host/pkgB_w0_stderr.txt",
+    "evidence/host/pkgB_w0_stdout.txt",
+    "evidence/host/readback_cons_pkg2.json",
+    "evidence/host/readback_cons_pkgs.json",
+    "evidence/host/work_a/context.md",
+    "evidence/host/work_b/context.md",
+    "evidence/host_stdout.txt",
+    "evidence/how_to/independent_check.json",
+    "evidence/how_to/independent_check.md",
+    "evidence/inspect.json",
+    "evidence/off_task_receipt.json",
+    "evidence/raw/_host.json",
+    "evidence/raw/_oracle.json",
+    "evidence/raw/_policy.json",
+    "evidence/raw/_repo_head.txt",
+    "evidence/raw/_world.json",
+    "evidence/raw/_world2.json",
+    "evidence/raw/N01.json",
+    "evidence/raw/N02.json",
+    "evidence/raw/N03.json",
+    "evidence/raw/N04.json",
+    "evidence/raw/N10.json",
+    "evidence/raw/N11.json",
+    "evidence/raw/W1-ABI-01.json",
+    "evidence/raw/W1-ABI-02.json",
+    "evidence/raw/W1-API-01.json",
+    "evidence/raw/W1-CODEX-05.json",
+    "evidence/raw/W1-HOST-01.json",
+    "evidence/raw/W1-HOST-02.json",
+    "evidence/raw/W1-HOST-03.json",
+    "evidence/raw/W1-R3-01.json",
+    "evidence/raw/W1-R3-02.json",
+    "evidence/raw/W1-R3-03.json",
+    "evidence/raw/W1-R3-04.json",
+    "evidence/raw/W1-R3-05.json",
+    "evidence/raw/W1-SEC-01.json",
+    "evidence/test_run.txt",
+    "evidence/w2/material/00_W2_DRAFT_PI_PD.md",
+    "evidence/w2/material/03_W2_DRAFT_TQAEP.md",
+    "evidence/w2/material/04_W2_DRAFT_THIN.md",
+    "evidence/w2/material/05_W2_SOURCE_MANIFEST.json",
+    "evidence/w2/material/_off_native.py",
+    "evidence/w2/material/context_bundle.md",
+    "evidence/w2/thin_start.md",
+    "evidence/w2/w2_artifact.json",
+    "evidence/w2/w2_artifact_cons_w2.json",
+    "evidence/w2/w2_consumer_cons_w2.py",
+    "evidence/w2/w2_inbound_receipt.json",
+    "evidence/w2/w2_readback_cons_w2.json",
+    "evidence/w2/w2_rows.json",
+    "evidence/w2/w2_stderr.txt",
+    "evidence/w2/w2_stdout.txt",
+    "evidence/w2_stdout.txt",
+    "FHS-5_PLP_W1_CLOSEOUT.md",
+    "FHS-5_PLP_W1_HANDOFF.md",
+    "make_delivery4.py",
+    "W1_CLOSURE_MATRIX.json",
+    "W1_CLOSURE_MATRIX.md",
+    "W1_UPSTREAM_CHANGESET.md"
+  ]
+}

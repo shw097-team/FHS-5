@@ -1,0 +1,213 @@
+{
+ "schema": "FHS5.PLP.W2.CaseLedger@1",
+ "produced_at": "2026-11-26T11:42:59+0800",
+ "cases": [
+  {
+   "case_id": "W2-DEV-01",
+   "kind": "POS",
+   "verdict": "PASS",
+   "basis": "exact 2-file write set; pre/post SHA; reverse patch restored the preimage byte-exactly"
+  },
+  {
+   "case_id": "W2-DEV-02",
+   "kind": "NEG",
+   "verdict": "NOT_RUN",
+   "basis": "caller-HEAD mismatch not exercised as a formal case this round"
+  },
+  {
+   "case_id": "W2-OPS-01",
+   "kind": "POS",
+   "verdict": "PASS_WITH_EPOCH_CAVEAT",
+   "basis": "real host effect, pre/post WorldRaw, consumer readback, host-specific compensation; policy_epoch=NOT_DECLARED_BY_HOST"
+  },
+  {
+   "case_id": "W2-OPS-02",
+   "kind": "NEG",
+   "verdict": "STRUCTURAL_ONLY",
+   "basis": "compensation implemented as delete-created-only; no git revert path exists in O05 (forbidden_used all false) — not exercised as a failing case"
+  },
+  {
+   "case_id": "W2-EFFECT-01",
+   "kind": "NEG",
+   "verdict": "NOT_RUN",
+   "basis": "unknown effect token path not exercised at W2 level"
+  },
+  {
+   "case_id": "W2-AUTH-01",
+   "kind": "NEG",
+   "verdict": "PARTIAL",
+   "basis": "receiver refuses permission_state=GRANTED (J1-T03, 0 product calls); W2 admission-level fake grant not exercised"
+  },
+  {
+   "case_id": "W2-RUNNER-01",
+   "kind": "NEG",
+   "verdict": "PASS",
+   "basis": "real runner bound: python -m unittest (exit 0) + codex exec with argv/exit recorded"
+  },
+  {
+   "case_id": "W2-DELTA-01",
+   "kind": "POS",
+   "verdict": "NOT_RUN",
+   "basis": "no LastGood delta comparison this round"
+  },
+  {
+   "case_id": "W2-R3-01",
+   "kind": "POS",
+   "verdict": "PASS",
+   "basis": "16 requirement rows carried with actual_ref; none set true"
+  },
+  {
+   "case_id": "W2-R3-02",
+   "kind": "NEG",
+   "verdict": "STRUCTURAL_ONLY",
+   "basis": "G4/tag_normalizer is not referenced anywhere in this run's write set or oracles"
+  },
+  {
+   "case_id": "W2-R3-03",
+   "kind": "NEG",
+   "verdict": "STRUCTURAL_ONLY",
+   "basis": "no substitute preimage: every DEV preimage is the real git blob at 35d5387"
+  },
+  {
+   "case_id": "W2-R3-04",
+   "kind": "EDGE",
+   "verdict": "NOT_RUN",
+   "basis": "workspace period-drift case not exercised"
+  }
+ ],
+ "case_counts": {
+  "PASS": 3,
+  "PASS_WITH_CAVEAT": 1,
+  "PARTIAL": 1,
+  "STRUCTURAL_ONLY": 3,
+  "NOT_RUN": 4,
+  "total": 12
+ },
+ "subcases": {
+  "J1": {
+   "verdict": "PASS",
+   "detail": "6/6 maker tests + 21/21 independent oracle + hardening probe",
+   "checks": [
+    {
+     "case_id": "API.verify_delivery",
+     "verdict": "PASS",
+     "check": "API.verify_delivery"
+    },
+    {
+     "case_id": "API.consume_verified",
+     "verdict": "PASS",
+     "check": "API.consume_verified"
+    },
+    {
+     "case_id": "J1-T01.accepted",
+     "verdict": "PASS",
+     "check": "J1-T01.accepted"
+    },
+    {
+     "case_id": "J1-T01.product_consumed",
+     "verdict": "PASS",
+     "check": "J1-T01.product_consumed"
+    },
+    {
+     "case_id": "J1-T01.delivery_tree_unchanged",
+     "verdict": "PASS",
+     "check": "J1-T01.delivery_tree_unchanged"
+    },
+    {
+     "case_id": "J1-T02.refused",
+     "verdict": "PASS",
+     "check": "J1-T02.refused"
+    },
+    {
+     "case_id": "J1-T02.zero_product_calls",
+     "verdict": "PASS",
+     "check": "J1-T02.zero_product_calls"
+    },
+    {
+     "case_id": "J1-T02.first_fail_named",
+     "verdict": "PASS",
+     "check": "J1-T02.first_fail_named"
+    },
+    {
+     "case_id": "J1-T03.fake_grant_refused",
+     "verdict": "PASS",
+     "check": "J1-T03.fake_grant_refused"
+    },
+    {
+     "case_id": "J1-T03.zero_product_calls",
+     "verdict": "PASS",
+     "check": "J1-T03.zero_product_calls"
+    },
+    {
+     "case_id": "J1-T03.pins_absent_fail_closed",
+     "verdict": "PASS",
+     "check": "J1-T03.pins_absent_fail_closed"
+    },
+    {
+     "case_id": "J1-T03.pins_absent_zero_calls",
+     "verdict": "PASS",
+     "check": "J1-T03.pins_absent_zero_calls"
+    },
+    {
+     "case_id": "J1-T04.escape_refused",
+     "verdict": "PASS",
+     "check": "J1-T04.escape_refused"
+    },
+    {
+     "case_id": "J1-T04.path_escape_named",
+     "verdict": "PASS",
+     "check": "J1-T04.path_escape_named"
+    },
+    {
+     "case_id": "J1-T04.zero_product_calls",
+     "verdict": "PASS",
+     "check": "J1-T04.zero_product_calls"
+    },
+    {
+     "case_id": "J1-T05.forgery_refused",
+     "verdict": "PASS",
+     "check": "J1-T05.forgery_refused"
+    },
+    {
+     "case_id": "J1-T05.zero_product_calls",
+     "verdict": "PASS",
+     "check": "J1-T05.zero_product_calls"
+    },
+    {
+     "case_id": "J1-T06.zero_product_calls_on_failure",
+     "verdict": "PASS",
+     "check": "J1-T06.zero_product_calls_on_failure"
+    },
+    {
+     "case_id": "J1-T06.no_output_on_failure",
+     "verdict": "PASS",
+     "check": "J1-T06.no_output_on_failure"
+    },
+    {
+     "case_id": "J1-T06.positive_control_nonzero",
+     "verdict": "PASS",
+     "check": "J1-T06.positive_control_nonzero"
+    },
+    {
+     "case_id": "J1-T06b.input_untouched_on_failure",
+     "verdict": "PASS",
+     "check": "J1-T06b.input_untouched_on_failure"
+    }
+   ]
+  },
+  "J2": {
+   "verdict": "PARTIAL",
+   "detail": "J2-pre field-level pack readback CONSUMED 21/21; five-seam ChangeCone/ChangeSet and Guide nine-key double-period not produced"
+  },
+  "J3": {
+   "verdict": "NOT_RUN",
+   "detail": "ON/OFF parity, positive control and double-failure refusal not executed"
+  },
+  "N": {
+   "verdict": "NOT_RUN",
+   "detail": "N01..N12 not exercised as a set"
+  }
+ },
+ "not_a_boolean_sum": true,
+ "claim_ceiling": "PARTIAL_PRODUCT_EFFECT_VERIFIED"
+}

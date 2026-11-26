@@ -1,0 +1,139 @@
+{
+ "schema": "FHS5.PLP.W2.WorldEffectLedger@1",
+ "produced_at": "2026-11-26T11:42:59+0800",
+ "task_id": "HERMES-F5-W2-PRODUCT-r1",
+ "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+ "scope": "W2-NF-01",
+ "candidate": "W2-NF-r3-CODEX-PRIMARY",
+ "pins": {
+  "pack_manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+  "owner_decision_sha256": "1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7",
+  "expected_pins_sha256": "fdb99b2a8853a2578847f99b8b0483402d9165280fd515fa664f39f2a0ca515c",
+  "adopted_head": "35d5387f9c98eaebc2d4cee742afcb4509a7d8c3",
+  "dev_base_head": "35d5387f9c98eaebc2d4cee742afcb4509a7d8c3"
+ },
+ "records": [
+  {
+   "op_id": "DEV-D01/D02/D03",
+   "kind": "READ",
+   "state": "OBSERVED",
+   "detail": "repo/HEAD/branch/dirty probed; target set frozen; preimage c6667402 measured",
+   "evidence": [
+    "00_PREFLIGHT/P02_repo_host_bind.json",
+    "20_DEV/j1_red/raw/J1_VERIFY_ONLY.json"
+   ]
+  },
+  {
+   "op_id": "DEV-D04",
+   "kind": "REPOSITORY_WRITE",
+   "state": "EFFECT_APPLIED",
+   "write_set": [
+    {
+     "path": "W1/check/w2_receiver.py",
+     "op": "MODIFY",
+     "before": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+     "after": "ee92c8c853852909726fdae400837a52bc10788e59cdddb6f423d6061f4c207e",
+     "bytes": 38753
+    },
+    {
+     "path": "W1/check/test_j1_receiver.py",
+     "op": "ADD",
+     "before": null,
+     "after": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28",
+     "bytes": 18158
+    }
+   ],
+   "unlisted_drift": [],
+   "producer": "codex-cli 0.164.0 (codex exec, workspace-write)"
+  },
+  {
+   "op_id": "DEV-D05",
+   "kind": "POST_READBACK",
+   "state": "VERIFIED",
+   "maker_tests": {
+    "argv": "python -m unittest test_j1_receiver",
+    "exit": 0,
+    "raw": "30_VERIFY/raw_maker_tests.txt"
+   },
+   "independent_oracle": {
+    "verdict": "PASS",
+    "passed": 21,
+    "total": 21
+   },
+   "hardening": {
+    "verdict": "HARDENING_PASS",
+    "traversal": "PATH_ESCAPE",
+    "junction": "PATH_ESCAPE"
+   }
+  },
+  {
+   "op_id": "DEV-D06",
+   "kind": "REPOSITORY_RECOVERY",
+   "state": "RECOVERED",
+   "mechanism": "reverse patch applied to an independent same-preimage copy (patch -R --binary)",
+   "result_sha256": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+   "candidate_preserved_in_worktree": true
+  },
+  {
+   "op_id": "OPS-O03",
+   "kind": "HOST_EFFECT",
+   "state": "EFFECT_APPLIED",
+   "run_id": "20261126T034218Z-d34640e6",
+   "exit": 0,
+   "accepted": true,
+   "pre_world_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+   "post_world_digest": "5d6c70065a46ea3189b0256f96136a1e711e8a417da35550c268e8479dc22f7d",
+   "created_entries": 8,
+   "receiver_argv": [
+    "C:\\Users\\user\\AppData\\Local\\hermes\\installs\\0d1790b230609f8c\\environments\\2e40a7b72ed941c691e747bed9c9928f\\venv\\Scripts\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1121_W2_PRODUCT\\20_DEV\\worktree\\W1\\check\\w2_receiver.py",
+    "--delivery",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1121_W2_PRODUCT\\10_PACK\\18_W1_NF_CODEX_20261126T000627",
+    "--pins",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1121_W2_PRODUCT\\30_VERIFY\\expected_pins.json",
+    "--output-root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1121_W2_PRODUCT\\40_OPS\\.tmp\\stage-20261126T034218Z-d34640e6\\material_copy",
+    "--out",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1121_W2_PRODUCT\\40_OPS\\.tmp\\stage-20261126T034218Z-d34640e6\\w2_binding_receipt.json",
+    "--scope",
+    "W1-NF-01"
+   ],
+   "host": {
+    "host_id": "DESKTOP-57EO414",
+    "principal": "user",
+    "policy_epoch": null,
+    "epoch_state": "NOT_DECLARED_BY_HOST"
+   }
+  },
+  {
+   "op_id": "OPS-O04",
+   "kind": "READBACK",
+   "state": "VERIFIED",
+   "passed": 10,
+   "total": 10,
+   "consumer_id": "w2_consumer_o04 (separate process, no reuse of the maker's code path)"
+  },
+  {
+   "op_id": "OPS-O05",
+   "kind": "HOST_COMPENSATION",
+   "state": "RECOVERED",
+   "passed": 4,
+   "total": 4,
+   "compensation_kind": "HOST_SPECIFIC_DELETE_CREATED_ONLY",
+   "deleted": 8,
+   "forbidden_used": {
+    "git_revert": false,
+    "git_reset": false,
+    "git_clean": false
+   }
+  }
+ ],
+ "unknown": [],
+ "first_fail": null,
+ "not_covered": [
+  "J3 ON/OFF parity not run",
+  "J2-post ChangeSet not produced (no commit at J2 time)",
+  "W3 receive not produced",
+  "GitHub push outcome recorded separately"
+ ]
+}

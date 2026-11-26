@@ -1,0 +1,80 @@
+{
+  "pins": {
+    "receiver_sha256": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+    "pin": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+    "match": true,
+    "inbound_sha256": "391dd7072ca84ab3ef40a859867efc2cdcfd3be186ab9e6892e44d145aab0555",
+    "inbound_pin": "391dd7072ca84ab3ef40a859867efc2cdcfd3be186ab9e6892e44d145aab0555",
+    "inbound_match": true,
+    "receiver_has_verify_delivery": false,
+    "receiver_has_consume_verified": false
+  },
+  "J1-T01_baseline": {
+    "accepted": true,
+    "rejected": [],
+    "checks": 29,
+    "calls": {
+      "build_contracts": 3,
+      "seam_wiring": 1
+    },
+    "delivery_tree_unchanged": true
+  },
+  "J1-T02_wrong_pin": {
+    "accepted": false,
+    "rejected": [
+      "caller_pack_pin"
+    ],
+    "calls": {
+      "build_contracts": 3,
+      "seam_wiring": 1
+    }
+  },
+  "J1-T03_fake_grant": {
+    "accepted": false,
+    "rejected": [
+      "no_fake_grant"
+    ],
+    "calls": {
+      "build_contracts": 3,
+      "seam_wiring": 1
+    },
+    "verdict": "PRODUCT_CALLED_ON_FAILURE_PATH"
+  },
+  "J1-T04_path_escape": {
+    "declared": "../canary/ESCAPE.txt",
+    "canary_sha256": "72c1637f4a6f27277a5622aa0bd439f4d172c3eb21c311fe16ffd1143b036ad5",
+    "recompute_ok": true,
+    "verdict": "OUT_OF_ROOT_FILE_ACCEPTED"
+  },
+  "J1-T06_input_write": {
+    "pre_sha": "2d7df9c3f49f0f1fc5516c170552baeef2617fbbf5d0261e2f678d0a9c13c232",
+    "sentinel_sha": "0a6a5c096b329be1ab8f2bb1e03986a3082df7f1e36459c93e6cff1b8cee7179",
+    "post_sha": "2d7df9c3f49f0f1fc5516c170552baeef2617fbbf5d0261e2f678d0a9c13c232",
+    "sentinel_survived": false,
+    "verdict": "INPUT_OVERWRITTEN_BY_RECEIVER"
+  },
+  "J1-T05_forgery": {
+    "original": "345cfdb846ab69a1d45acda7011f280218ff6b2642b19d5dd675c75b61e984c1",
+    "forged": "07d3991b847f99dc5f8fb928092075697b5a216ef8d6cad46a3320b49cdee2e2",
+    "accepted": false,
+    "rejected": [
+      "pack_inspect"
+    ],
+    "verdict": "FORGERY_REFUSED"
+  },
+  "summary": {
+    "defects_confirmed": [
+      "J1-T03_fake_grant",
+      "J1-T04_path_escape",
+      "J1-T06_input_write"
+    ],
+    "controls_holding": [
+      "pack PACK_PIN refuses a forged pack file (J1-T05)",
+      "DELIVERY_SEAL binding detects a rewritten manifest"
+    ],
+    "receiver_lacks": [
+      "verify_delivery",
+      "consume_verified"
+    ]
+  }
+}

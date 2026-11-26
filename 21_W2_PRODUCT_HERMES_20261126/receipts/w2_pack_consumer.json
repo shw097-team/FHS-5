@@ -1,0 +1,130 @@
+{
+  "schema": "FHS5.PLP.W2.PackConsumerReceipt@1",
+  "consumer_id": "w2_pack_consumer (BUILD_MINIMAL, single file)",
+  "why_build_minimal": "nf_reader.inspect_package refuses a W2 pack: PACK_INCOMPLETE_LOCAL: 05_W1_SOURCE_MANIFEST.json",
+  "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1121_W2_PRODUCT\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST",
+  "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+  "observed": {
+    "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+    "candidate": "W2-NF-r3-CODEX-PRIMARY",
+    "scope": "W2-NF-01",
+    "requirements_total": 16,
+    "cases": 12,
+    "crs": 37,
+    "holds": 14,
+    "w2_special_holds": 6,
+    "pack_files": 5,
+    "assets": 25,
+    "permission_state": "NONE_GRANTED"
+  },
+  "checks": [
+    {
+      "check": "manifest_present",
+      "ok": true,
+      "detail": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1121_W2_PRODUCT\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST\\05_W2_SOURCE_MANIFEST.json"
+    },
+    {
+      "check": "manifest_strict_json",
+      "ok": true,
+      "detail": "parsed, no duplicate keys"
+    },
+    {
+      "check": "manifest_sha256",
+      "ok": true,
+      "detail": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b"
+    },
+    {
+      "check": "identity.artifact_id",
+      "ok": true,
+      "detail": "FHS5-PLP/W2/PACK-NF-20261126-r3"
+    },
+    {
+      "check": "identity.candidate",
+      "ok": true,
+      "detail": "W2-NF-r3-CODEX-PRIMARY"
+    },
+    {
+      "check": "identity.subject_id",
+      "ok": true,
+      "detail": "FHS-5_PLP/W2/CONTROL_PACK"
+    },
+    {
+      "check": "identity.scope",
+      "ok": true,
+      "detail": "W2-NF-01"
+    },
+    {
+      "check": "identity.scope_is_not_authority",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "pack_files_rehash",
+      "ok": true,
+      "detail": "{'bad': [], 'n': 5}"
+    },
+    {
+      "check": "assets_rehash",
+      "ok": true,
+      "detail": "{'bad': [], 'n': 25}"
+    },
+    {
+      "check": "source_set_digest",
+      "ok": true,
+      "detail": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044"
+    },
+    {
+      "check": "requirements.13_plus_3",
+      "ok": true,
+      "detail": "{'original_13': 13, 'nf_3': 3, 'total': 16, 'not_a_boolean_sum': True}"
+    },
+    {
+      "check": "requirements.not_boolean_sum",
+      "ok": true,
+      "detail": "True"
+    },
+    {
+      "check": "cases.count_12",
+      "ok": true,
+      "detail": "12"
+    },
+    {
+      "check": "crs.count_37",
+      "ok": true,
+      "detail": "37"
+    },
+    {
+      "check": "holds.count_14",
+      "ok": true,
+      "detail": "14"
+    },
+    {
+      "check": "w2_special_holds.count_6",
+      "ok": true,
+      "detail": "6"
+    },
+    {
+      "check": "case_index.exact_set",
+      "ok": true,
+      "detail": "{'manifest': ['W2-AUTH-01', 'W2-DELTA-01', 'W2-DEV-01', 'W2-DEV-02', 'W2-EFFECT-01', 'W2-OPS-01', 'W2-OPS-02', 'W2-R3-01', 'W2-R3-02', 'W2-R3-03', 'W2-R3-04', 'W2-RUNNER-01'], 'index': ['W2-AUTH-01', 'W2-DELTA-01', 'W2-DEV-01', 'W2-DEV-02', 'W2-EFFECT-01', 'W2-OPS-01', 'W2-OPS-02', 'W2-R3-01', 'W2-R"
+    },
+    {
+      "check": "subcases.j1_j2_j3_six",
+      "ok": true,
+      "detail": "{'J1': 6, 'J2': 6, 'J3': 6}"
+    },
+    {
+      "check": "subcases.N_twelve",
+      "ok": true,
+      "detail": "12"
+    },
+    {
+      "check": "authority.no_grant_shipped",
+      "ok": true,
+      "detail": "NONE_GRANTED"
+    }
+  ],
+  "passed": 21,
+  "total": 21,
+  "verdict": "CONSUMED"
+}

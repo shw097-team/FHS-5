@@ -1,0 +1,103 @@
+{
+ "schema": "FHS5.PLP.W2.DeliveryManifest@1",
+ "task_id": "HERMES-F5-W2-PRODUCT-r1",
+ "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+ "scope": "W2-NF-01",
+ "candidate": "W2-NF-r3-CODEX-PRIMARY",
+ "adopted_base": "35d5387f9c98eaebc2d4cee742afcb4509a7d8c3",
+ "status": "PARTIAL — real DEV and real OPS executed; W2_NF_VALIDATED not claimed",
+ "code_changes": [
+  {
+   "path": "W1/check/w2_receiver.py",
+   "op": "MODIFY",
+   "before_sha256": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+   "after_sha256": "ee92c8c853852909726fdae400837a52bc10788e59cdddb6f423d6061f4c207e"
+  },
+  {
+   "path": "W1/check/test_j1_receiver.py",
+   "op": "ADD",
+   "after_sha256": "0dab8ebfd1cd303aa0967a7346f5728cc34a0f73432eb955859f79078e2aec28"
+  }
+ ],
+ "files": [
+  {
+   "path": "FHS-5_PLP_W2_CLOSEOUT.md",
+   "bytes": 7515,
+   "sha256": "cd1518010dca78f102c5dc501f3b820bea8166dbff40a1422a69dbd70c11f741"
+  },
+  {
+   "path": "FHS-5_PLP_W2_HANDOFF.md",
+   "bytes": 3357,
+   "sha256": "db65648a2b33ef3af5139c40f6d1029966606a6eb7eb6a1a07433ed92973174e"
+  },
+  {
+   "path": "receipts/checker_j1_oracle.json",
+   "bytes": 2941,
+   "sha256": "1a059b260ea024394d3055c3397cca89a03db1938355e8abd31f02f59c416211"
+  },
+  {
+   "path": "receipts/expected_pins.json",
+   "bytes": 758,
+   "sha256": "fdb99b2a8853a2578847f99b8b0483402d9165280fd515fa664f39f2a0ca515c"
+  },
+  {
+   "path": "receipts/hardening_probe.json",
+   "bytes": 400,
+   "sha256": "acfc8bd3dce00f470453515e05e36cbd7233726a4adceb5fb368ae2a359650f8"
+  },
+  {
+   "path": "receipts/J1_verify_only_pre_repair.json",
+   "bytes": 2346,
+   "sha256": "c4717246cb32b5b72d19c04154982b0e4218bc144f945f05dda5cf06e89d639d"
+  },
+  {
+   "path": "receipts/maker_tests.txt",
+   "bytes": 934,
+   "sha256": "7dfb79d7ca83a379348e8e84cf42cbf16d2a01937b2c40ff01ccb068b96e1404"
+  },
+  {
+   "path": "receipts/NEG_scope_mismatch_receipt.json",
+   "bytes": 11246,
+   "sha256": "d0eef56c7c76cbd9f87a941f5f8a96a4276b4b3603a7f1b2b917fe1f4efe476b"
+  },
+  {
+   "path": "receipts/OPS_O03_WORLD_EFFECT_POS.json",
+   "bytes": 4954,
+   "sha256": "8e7cca8e95234026438768b0cc0fd422af4d078177b7fbacaaca5438df10295d"
+  },
+  {
+   "path": "receipts/OPS_O04_CONSUMER_READBACK.json",
+   "bytes": 2488,
+   "sha256": "94f5531753726ec43c024926fcb3bac983eaaec16de8ab9cda0e797816656c9d"
+  },
+  {
+   "path": "receipts/OPS_O05_COMPENSATION_POS.json",
+   "bytes": 2186,
+   "sha256": "59a9d621db19738d34f0f9af6fefdff734c9031497e61df7c4240d203d6030c1"
+  },
+  {
+   "path": "receipts/w2_pack_consumer.json",
+   "bytes": 3620,
+   "sha256": "f4735ea0508177baa5599249ecfaa27040ac4a0c9b179f566e3acfb7a33ade7a"
+  },
+  {
+   "path": "W2_CASE_LEDGER.json",
+   "bytes": 5567,
+   "sha256": "8a836cde1fc2da59d16cbf57f51c5c27b0cf7e8cbbe1a4c6e5bfda50d140188d"
+  },
+  {
+   "path": "W2_WORLD_EFFECT_LEDGER.json",
+   "bytes": 4615,
+   "sha256": "021e3d9cf3bdd6103cbd936ecf8de643dc8e35f87f99603248f065836fcb7e1c"
+  }
+ ],
+ "file_count": 14,
+ "self_excluded": true,
+ "manifest_self_hash": "EXTERNAL_RECORD_ONLY",
+ "hash_contract": {
+  "algorithm": "sha256 over raw bytes",
+  "excludes": [
+   "DELIVERY_MANIFEST.json"
+  ]
+ }
+}
