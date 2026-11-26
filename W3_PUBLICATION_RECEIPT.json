@@ -32,6 +32,7 @@
     "lf_stable_commit":  "a7100d0fdf424be7bf74d7806327ea509eeddfa4",
     "lf_stable":  true,
     "final_evidence_commit":  "e971456b623605645e0ea66979479b2f9c7ae665",
-    "tip_commit":  "e971456b623605645e0ea66979479b2f9c7ae665",
-    "tip_tree":  "65a330d8a933f8d12fdfa6916ca636096a23072b"
+    "candidate_rebind_commit":  "a521e03af1e6dc56c7ab1c7ff8e0c25ed6f63106",
+    "tip_commit":  "a521e03af1e6dc56c7ab1c7ff8e0c25ed6f63106",
+    "tip_tree":  "0a47c8fbc10d03264232556e650004311d29d9d0"
 }
