@@ -19,10 +19,12 @@
                     "workaround_attempted":  false
                 },
     "local_only":  {
-                       "repo":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\product_repo",
-                       "closeout":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\FHS-5_PLP_W3_CLOSEOUT.md",
-                       "handoff":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\FHS-5_PLP_W3_HANDOFF.md",
-                       "evidence":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\evidence\\20261126T1605"
+                       "repo":  "\u003cRUN_ROOT\u003e/product_repo",
+                       "closeout":  "\u003cRUN_ROOT\u003e/FHS-5_PLP_W3_CLOSEOUT.md",
+                       "handoff":  "\u003cRUN_ROOT\u003e/FHS-5_PLP_W3_HANDOFF.md",
+                       "evidence":  "\u003cRUN_ROOT\u003e/evidence/20261126T1605"
                    },
-    "next_action":  "Owner approval for one normal authenticated push of this branch, or export the local commit/tree as a bundle"
+    "next_action":  "Owner approval for one normal authenticated push of this branch, or export the local commit/tree as a bundle",
+    "receipt_tree":  "0a9d37320afe029d7f2fc7eca18a715fc581f3b3",
+    "tip_before_redaction":  "8bd7bc63683e3a4533c12c21e51b0d55cf91c875"
 }
