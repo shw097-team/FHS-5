@@ -1,35 +1,45 @@
 {
  "schema": "FHS5.PLP.W2.PublicationReceipt@local-1",
  "round": "HERMES-F5-W2-PACK-NF-FINAL-r1",
- "issued_at": "2026-11-26T10:19:17+08:00",
- "supersedes_receipt_commit": "5529cb06a59fd58f61afa50f04b9a9e182b293e3",
- "supersedes_reason": "appendix republished to record the publication outcome (its previous text pointed at a section that did not exist)",
+ "issued_at": "2026-11-26T10:23:38+08:00",
+ "supersedes_receipt_commit": "86b7624c6210b683b113b86e7d571fe66c42cf34",
+ "supersedes_reason": "owner decision published; appendix §2 rewritten to carry the typed decision; pointer gained owner_decision",
  "repo": "https://github.com/shw097-team/FHS-5",
  "branch": "hermes/w2-pack-nf-primary-20261126",
  "base_commit": "9fae9257a3402928efbe6ff0cd66f45761f52846",
  "content_commit": "d2589deae0a1c5df944fcb899e117123cbc7f4e6",
- "appendix_commit": "8fa006413513bf07f04421fbf389fd56e5916551",
- "receipt_commit": "this file's own commit (post-positioned; not self-referenced)",
+ "decision_commit": "4a7540ea743046912de6c20a2db59d981fb7d3f8",
  "main_head_at_receipt": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
  "main_touched_by_this_round": false,
+ "owner_decision": {
+  "decision_id": "W2-NF-PRIMARY-20261126-01",
+  "file": "19_W2_NF_CODEX_20261126/W2_OWNER_DECISION.json",
+  "sha256": "1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7"
+ },
  "artifact": {
   "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r3",
   "candidate": "W2-NF-r3-CODEX-PRIMARY",
   "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
   "manifest_bytes": 65377,
   "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
-  "appendix_sha256": "e518b75a853244ef1b007544dfdeae24d1d946a432de224c6313fa23c446b217",
-  "appendix_bytes": 25233,
-  "pointer_sha256": "1999ed8b454ae3ab48881366ba99e8893869d62ca00ce5fc655eacd881762524"
+  "appendix_sha256": "29096e2dd7e0bddbdafb55b3d3bb8d36fc3272848a250a7a09560f4766e33ae2",
+  "appendix_bytes": 25407,
+  "pointer_sha256": "e1ea1b9c26db9432d15e8857ddf21bf93e6723037627d8478b78eee533d56bdd",
+  "declaration_sha256": "0e8817133f5fe7b15eef32df12d58facea1714bb62fcd67473959cfb58ab0e25"
+ },
+ "effective_state": {
+  "pack_selection": "PRIMARY_AUTHORIZED",
+  "construction": "AUTHORIZED_SCOPED",
+  "bootstrap": "ENABLED_AFTER_ROOTS_NAMED",
+  "W2_EXECUTION_READY": "NOT_CLAIMED_BOOTSTRAP_PENDING"
  },
  "verification": {
-  "method": "fresh clone of the pushed branch, then sha256 per file against the local canonical tree; repeated after each push",
-  "files_compared": 33,
-  "identical": 33,
+  "method": "fresh clone of the pushed branch, sha256 per file against the local tree, repeated after each push",
+  "files_compared": 35,
+  "identical": 35,
   "differing": 0,
-  "eol_normalisation": "none (remote 05: 65377 bytes, CR count 0); subtree pinned `-text`",
-  "six_pack_files_unchanged_since_content_commit": true,
-  "receipt_self_hash": "not embedded; this receipt is committed after the content it names"
+  "eol_normalisation": "none (remote 05 bytes unchanged since content commit)",
+  "receipt_self_hash": "not embedded; committed after the content it names"
  },
  "files": [
   {
@@ -189,13 +199,23 @@
   },
   {
    "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_Native-first_HERMES_修補證據型附錄.md",
-   "bytes": 25233,
-   "sha256": "e518b75a853244ef1b007544dfdeae24d1d946a432de224c6313fa23c446b217"
+   "bytes": 25407,
+   "sha256": "29096e2dd7e0bddbdafb55b3d3bb8d36fc3272848a250a7a09560f4766e33ae2"
+  },
+  {
+   "path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_Primary_Declaration.md",
+   "bytes": 6371,
+   "sha256": "0e8817133f5fe7b15eef32df12d58facea1714bb62fcd67473959cfb58ab0e25"
   },
   {
    "path": "19_W2_NF_CODEX_20261126/PACK_POINTER.json",
-   "bytes": 1588,
-   "sha256": "1999ed8b454ae3ab48881366ba99e8893869d62ca00ce5fc655eacd881762524"
+   "bytes": 2466,
+   "sha256": "e1ea1b9c26db9432d15e8857ddf21bf93e6723037627d8478b78eee533d56bdd"
+  },
+  {
+   "path": "19_W2_NF_CODEX_20261126/W2_OWNER_DECISION.json",
+   "bytes": 4595,
+   "sha256": "1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7"
   }
  ],
  "claim_ceiling": "PRIMARY_AUTHORIZED_SCOPED_CONSTRUCTION_DOCUMENT_BASIS",
@@ -217,6 +237,5 @@
   "an independent Checker verdict",
   "an original-domain acceptance"
  ],
- "owner_selection": "Owner pre-authorization recorded in the appendix, bound to the 05 sha256 above; merge into main remains the Owner's decision",
- "next_legal_action": "CODEX starts from 04_W2_START_THIN_PROMPT.md with P01/P02 trusted read/bind; no write before Owner scope, repo/HEAD/ACL, exact preimage and recovery are established"
+ "next_legal_action": "Owner names repo/host/output root, then CODEX boots from 04: P01/P02 trusted read/bind -> P03/P04 -> first op admission -> P05/P06"
 }
