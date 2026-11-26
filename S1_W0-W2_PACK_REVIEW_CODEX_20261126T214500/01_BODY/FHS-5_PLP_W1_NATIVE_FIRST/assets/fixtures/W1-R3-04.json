@@ -1,0 +1,22 @@
+{
+  "schema": "FHS5.W1.AuthorFixture@1",
+  "case_id": "W1-R3-04",
+  "kind": "EDGE",
+  "state": "AUTHOR_FIXTURE_NOT_LIVE",
+  "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+  "scope": "W1 Guide/Bridge ABI + 3-Host consumption + Contract Context author pack; SOURCE_READ+ISOLATED_DRAFT_WRITE+LOCAL_CHECK+LOCAL_PACKAGE; no repo/host/native/release write",
+  "input": {
+    "statement": "workspace 與 PRIMARY 分帳",
+    "source_case_row": "W1M:L674",
+    "constraint": "synthetic author input; no original Host, Runner, Oracle or receipt"
+  },
+  "executable": true,
+  "predicate": "bound_workspace_drift",
+  "request": {
+    "workspace_entries": 318,
+    "primary_entries": 34,
+    "primary_hash_changed": false,
+    "claimed": "same"
+  },
+  "expect_error": "WORKSPACE_DRIFT_BOUNDED"
+}

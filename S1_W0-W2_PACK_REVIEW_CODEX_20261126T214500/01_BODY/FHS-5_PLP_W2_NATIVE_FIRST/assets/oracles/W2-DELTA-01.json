@@ -1,0 +1,44 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-DELTA-01",
+  "kind": "POS",
+  "pass_predicate": "both variants judged correctly: same -> REUSE_LASTGOOD; delta -> NEW_MATERIAL_EVIDENCE/requalify; and the two periods are independently produced (not read back from this fixture)",
+  "required_observations": [
+    "nine_keys_A",
+    "nine_keys_B",
+    "verifier_receipt",
+    "candidate_sha",
+    "evidence_sha",
+    "period_provenance_two_independent_records"
+  ],
+  "expected_tokens": [
+    "REUSE_LASTGOOD",
+    "DELTA_UNVERIFIED",
+    "PARK_NO_DELTA_CANDIDATE"
+  ],
+  "forbidden_tokens": [
+    "PARK_WITHOUT_TWO_PERIODS",
+    "FIXTURE_ONLY_PARK"
+  ],
+  "fail_if": [
+    "missing period but PARK",
+    "no verifier but PARK",
+    "cross subject accepted",
+    "period B read back from the fixture rather than produced",
+    "delta variant reported as REUSE_LASTGOOD"
+  ],
+  "raw_schema": [
+    "period_a",
+    "period_b",
+    "verifier_raw",
+    "candidate_evidence_pins"
+  ],
+  "not_covered": [
+    "W3 FAR"
+  ]
+}

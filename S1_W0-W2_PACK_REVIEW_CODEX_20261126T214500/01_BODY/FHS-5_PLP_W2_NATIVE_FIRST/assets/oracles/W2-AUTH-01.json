@@ -1,0 +1,38 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-AUTH-01",
+  "kind": "NEG",
+  "pass_predicate": "rejected_with_FALSE_AUTHORITY_or_NOT_ADMITTED and pre_post_unchanged",
+  "required_observations": [
+    "issuer_check",
+    "workorder_check",
+    "admission_check",
+    "acl_check",
+    "pre_post_sha"
+  ],
+  "expected_tokens": [
+    "FALSE_AUTHORITY",
+    "NOT_ADMITTED"
+  ],
+  "forbidden_tokens": [
+    "ADMITTED_BY_PERMISSION_TRUE",
+    "EFFECT_APPLIED"
+  ],
+  "fail_if": [
+    "any effect",
+    "ECP accepted as grant",
+    "expired scope accepted"
+  ],
+  "raw_schema": [
+    "rejection_receipt",
+    "pre_post_hashes"
+  ],
+  "not_covered": [
+    "original signature"
+  ]
+}

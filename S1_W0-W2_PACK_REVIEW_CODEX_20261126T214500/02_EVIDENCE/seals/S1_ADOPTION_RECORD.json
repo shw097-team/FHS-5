@@ -1,0 +1,94 @@
+{
+  "schema": "FHS5.PLP.S1.AdoptionRecord@1",
+  "decision_id": "S1-W0W2-CODEX-ADOPT-20261126-01",
+  "issued_at": "2026-11-26T22:20:00+08:00",
+  "issuer": {
+    "role": "Human Owner / issuer (single)",
+    "identity_ref": "this thread user",
+    "signature": "TEXT_AUTHORIZATION_NOT_CRYPTOGRAPHIC"
+  },
+  "authority_basis": {
+    "thin_prompt_quote": "本次 Owner 明示預授權：經本輪實際驗收合格的 W0～W2 修補新版控制包，直接採納為主用＋可執行施工，並作必要 Repo 正常上推、升格、宣達。",
+    "control_pack_quote": "僅對 V1–V3 當期 required 全成立且真原義、適用採納前件已滿足的包，直接完成當期採納，無需第二人簽核。",
+    "plan_sha256": "7d628073b3f755cf2e81c127d612342918b5e229d0c1e522e75f98cb39463933",
+    "adr_sha256": "a36b22fe9d49b12d03f95722514ed0416942337729bd090089337a04f1d5350c",
+    "control_pack_sha256": "5bfd1c281faac18073818785b990fc03327f063339a37ee560a45fb02d4a4217",
+    "start_prompt_sha256": "cecdac368e12c33fcdc24938ca4291fd302be71351c265064a42ac66a1faca9d"
+  },
+  "scope": {
+    "packs": [
+      "FHS5-PLP/W0/PACK-S1-20261126-r2",
+      "FHS5-PLP/W1/CONTROL_PACK/2026-11-26-s1-r2",
+      "FHS5-PLP/W2/PACK-S1-20261126-r2"
+    ],
+    "effect": "document primary + scoped construction readiness (S1)",
+    "excluded": [
+      "product validation (W0/W1/W2 product cases remain NOT_RUN)",
+      "W2 protected writer/DEV/OPS effect",
+      "W3/W4 execution",
+      "release/publisher",
+      "any OS/Repo/Host ACL change"
+    ],
+    "not_granted": [
+      "ECP/Advice/permit=true is not a Grant",
+      "document adoption does not create external permissions"
+    ]
+  },
+  "subjects": [
+    {
+      "wave": "W0",
+      "artifact_id": "FHS5-PLP/W0/PACK-S1-20261126-r2",
+      "candidate": "W0-S1-r2-CODEX-PRIMARY",
+      "path": "01_BODY/FHS-5_PLP_W0_NATIVE_FIRST",
+      "manifest_sha256": "97017494984e1d1a3b1b62de61f28c6ab0aea7a7f1caf67f65925039033c5e98",
+      "manifest_bytes": 13270,
+      "pack_tree_sha256": "b5b67fd1c24586cdad78f908cba17b4b39e66a19a417d5d83daa8b765fe58ff1",
+      "files": 5,
+      "assets": 0
+    },
+    {
+      "wave": "W1",
+      "artifact_id": "FHS5-PLP/W1/CONTROL_PACK/2026-11-26-s1-r2",
+      "candidate": "W1-S1-r2-CODEX-PRIMARY",
+      "path": "01_BODY/FHS-5_PLP_W1_NATIVE_FIRST",
+      "manifest_sha256": "d1c741533bea41b8d786ec870b6f66323739a65ebdafd241545dc4afa9dff28c",
+      "manifest_bytes": 16876,
+      "pack_tree_sha256": "593314d503a162caea4c05dc263cd6e68511cfe5b70446043560bc757347d18f",
+      "files": 5,
+      "assets": 26
+    },
+    {
+      "wave": "W2",
+      "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+      "candidate": "W2-S1-r2-CODEX-PRIMARY",
+      "path": "01_BODY/FHS-5_PLP_W2_NATIVE_FIRST",
+      "manifest_sha256": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b",
+      "manifest_bytes": 17216,
+      "pack_tree_sha256": "cc7d91a1f7f63e89b93c9a216286d746cccd0622c14d9448afc8a935cbb77943",
+      "files": 5,
+      "assets": 25
+    }
+  ],
+  "supersedes": {
+    "revision": "S1 r1 AUTHOR_CANDIDATE (preserved, not overwritten)",
+    "original_packs": [
+      "FHS5-PLP/W0/PACK-NF-20261125-03",
+      "FHS5-PLP/W1/CONTROL_PACK/2026-11-25-nf-r2",
+      "FHS5-PLP/W2/PACK-NF-20261126-r3"
+    ]
+  },
+  "preserved": [
+    "original NF packs and their external seals",
+    "W2 writer BLOCKED_NOT_ADMITTED and security findings",
+    "W2 protected gates/tokens/roots",
+    "all original IDs, denominators, fixtures/oracles, historical receipts"
+  ],
+  "review_results": "02_EVIDENCE/S1_CODEX_REVIEW_RESULTS.json",
+  "current_pointer": "02_EVIDENCE/seals/S1_CURRENT_POINTER.json",
+  "conditions": [
+    "only lawful local write roots",
+    "per-operation ACL/preimage/recovery check remains mandatory for any later effect",
+    "W2 protected write requires a new named scope"
+  ],
+  "verdict": "ACCEPT_DOCUMENT_SCOPE"
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "FHS5.PLP.S1.CurrentPointer@1",
+  "decision_id": "S1-W0W2-CODEX-ADOPT-20261126-01",
+  "updated_at": "2026-11-26T22:20:00+08:00",
+  "scope": "S1 W0-W2 (document primary; scoped construction readiness)",
+  "active": {
+    "W0": {
+      "artifact_id": "FHS5-PLP/W0/PACK-S1-20261126-r2",
+      "candidate": "W0-S1-r2-CODEX-PRIMARY",
+      "locator": "01_BODY/FHS-5_PLP_W0_NATIVE_FIRST",
+      "manifest_sha256": "97017494984e1d1a3b1b62de61f28c6ab0aea7a7f1caf67f65925039033c5e98",
+      "pack_tree_sha256": "b5b67fd1c24586cdad78f908cba17b4b39e66a19a417d5d83daa8b765fe58ff1",
+      "external_seal": "02_EVIDENCE/seals/W0_PACK_SEAL.json"
+    },
+    "W1": {
+      "artifact_id": "FHS5-PLP/W1/CONTROL_PACK/2026-11-26-s1-r2",
+      "candidate": "W1-S1-r2-CODEX-PRIMARY",
+      "locator": "01_BODY/FHS-5_PLP_W1_NATIVE_FIRST",
+      "manifest_sha256": "d1c741533bea41b8d786ec870b6f66323739a65ebdafd241545dc4afa9dff28c",
+      "pack_tree_sha256": "593314d503a162caea4c05dc263cd6e68511cfe5b70446043560bc757347d18f",
+      "external_seal": "02_EVIDENCE/seals/W1_PACK_SEAL.json"
+    },
+    "W2": {
+      "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+      "candidate": "W2-S1-r2-CODEX-PRIMARY",
+      "locator": "01_BODY/FHS-5_PLP_W2_NATIVE_FIRST",
+      "manifest_sha256": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b",
+      "pack_tree_sha256": "cc7d91a1f7f63e89b93c9a216286d746cccd0622c14d9448afc8a935cbb77943",
+      "external_seal": "02_EVIDENCE/seals/W2_PACK_SEAL.json"
+    }
+  },
+  "last_good": {
+    "W0": "FHS5-PLP/W0/PACK-NF-20261125-03",
+    "W1": "FHS5-PLP/W1/CONTROL_PACK/2026-11-25-nf-r2",
+    "W2": "FHS5-PLP/W2/PACK-NF-20261126-r3"
+  },
+  "notes": [
+    "local workspace R is not the product repo",
+    "original packs remain readable and unmodified"
+  ]
+}

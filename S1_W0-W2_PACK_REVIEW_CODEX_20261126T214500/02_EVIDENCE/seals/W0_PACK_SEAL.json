@@ -1,0 +1,54 @@
+{
+  "schema": "FHS5.PLP.S1.PackSeal@1",
+  "wave": "W0",
+  "candidate": "W0-S1-r2-CODEX-PRIMARY",
+  "artifact_id": "FHS5-PLP/W0/PACK-S1-20261126-r2",
+  "sealed_at": "2026-11-26T22:20:00+08:00",
+  "manifest": {
+    "path": "01_BODY/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+    "bytes": 13270,
+    "sha256": "97017494984e1d1a3b1b62de61f28c6ab0aea7a7f1caf67f65925039033c5e98"
+  },
+  "pack_files": [
+    {
+      "path": "00_W0_PI_PD.md",
+      "bytes": 40020,
+      "sha256": "e9714d312ad07203d3cda5fd3652ec6f1918f711278230718fb49e8081f9a2c7",
+      "lines": 492
+    },
+    {
+      "path": "01_W0_DEV_ECP.md",
+      "bytes": 16120,
+      "sha256": "c0755bd7d6d16ca0f3b4acf65f8c51373bad61c75ead0af99ff2ec252fd84b85",
+      "lines": 274
+    },
+    {
+      "path": "02_W0_OPS_ECP.md",
+      "bytes": 14787,
+      "sha256": "863331d96f662a866febe15f11f35748a308eb6384c3519e2b23f0e8749f1906",
+      "lines": 280
+    },
+    {
+      "path": "03_W0_TQAEP.md",
+      "bytes": 17698,
+      "sha256": "f8ecb7518e834fc4584cce5188e49ade8a2f489c77938a4d659e06194085d3f2",
+      "lines": 240
+    },
+    {
+      "path": "04_W0_START_THIN_PROMPT.md",
+      "bytes": 4454,
+      "sha256": "83cddd44b39799dd44afd32a3d69cf0c3ff7dbac7efad88f1c1f4ccc727f408b",
+      "lines": 73
+    }
+  ],
+  "assets": [],
+  "pack_tree_sha256": "b5b67fd1c24586cdad78f908cba17b4b39e66a19a417d5d83daa8b765fe58ff1",
+  "algorithm": "sha256 over sorted UTF-8 lines 'path|bytes|sha256' (LF, no trailing LF) for the 5 pack files; 05 and seals are external",
+  "adoption": {
+    "decision_id": "S1-W0W2-CODEX-ADOPT-20261126-01",
+    "record": "02_EVIDENCE/seals/S1_ADOPTION_RECORD.json",
+    "record_sha256": "831ebcaecf47ecd0fa8c484bd816179b4ee394d512dca4ab1b92162b76d23c81"
+  },
+  "review_results": "02_EVIDENCE/S1_CODEX_REVIEW_RESULTS.json",
+  "self_hash": "EXTERNAL_RECORD_ONLY"
+}

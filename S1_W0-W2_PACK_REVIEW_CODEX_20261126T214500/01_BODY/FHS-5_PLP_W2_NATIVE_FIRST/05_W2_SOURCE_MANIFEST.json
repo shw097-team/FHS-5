@@ -1,0 +1,496 @@
+{
+  "schema": "FHS5.PLP.W2.SourceManifest.S1@1",
+  "candidate": "W2-S1-r2-CODEX-PRIMARY",
+  "pack_version": "W2-S1-r2-CODEX-PRIMARY",
+  "artifact_id": "FHS5-PLP/W2/PACK-S1-20261126-r2",
+  "project_id": "FHS-5_PLP",
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "wave_id": "W2",
+  "batch_id": "W2-NF-01",
+  "profile": "GENERIC_CODEX_NATIVE_FIRST",
+  "draft": false,
+  "adoption_state": "PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
+  "claim_ceiling": "S1_DOC_VALIDATED_DOCUMENT_ONLY",
+  "not_claimed": [
+    "B0_PASS",
+    "W0_NF_VALIDATED",
+    "W1_NF_VALIDATED",
+    "W2_NF_VALIDATED",
+    "NATIVE_PASS",
+    "INDEPENDENT_PASS",
+    "CONSUMED",
+    "RELEASED",
+    "W2_WRITER_UNBLOCKED"
+  ],
+  "authority": {
+    "owner_ref": "Human Owner (this thread user) via FHS-5_PLP_S1_W0-W2_CODEX_啟動薄PROMPT GOAL/AUTHORITY",
+    "adoption_ref": "02_EVIDENCE/seals/S1_ADOPTION_RECORD.json#decision_id=S1-W0W2-CODEX-ADOPT-20261126-01",
+    "adoption_state": "ADOPTED_FOR_SCOPED_CONSTRUCTION",
+    "plan_sha256": "7d628073b3f755cf2e81c127d612342918b5e229d0c1e522e75f98cb39463933",
+    "adr_sha256": "a36b22fe9d49b12d03f95722514ed0416942337729bd090089337a04f1d5350c",
+    "control_pack_sha256": "b724f09dedec2de2c71cccb0be6844e6b7c833d0060c2ff70299208a79e89332",
+    "start_prompt_sha256": "92b350a0d8d9e3173c601e704c4291b80047c7e73ec9c0e028c912b778a3f73c",
+    "scope_grant": "DOCUMENT_PRIMARY + SCOPED_CONSTRUCTION_READY",
+    "actual_grant": "no DEV/OPS/REPO/HOST/RELEASE grant in this S1 review pass; product effects remain NOT_RUN",
+    "original_primary_ref": "FHS5-PLP/W2/PACK-NF-20261126-r3 / W2-NF-r3-CODEX-PRIMARY",
+    "note": "S1 r2 is the reviewed+promoted revision; r1 AUTHOR_CANDIDATE and the original NF pack are preserved"
+  },
+  "upstream": {
+    "original_pack": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+    "original_version": "W2-NF-r3-CODEX-PRIMARY",
+    "original_manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+    "fixed_commit": "35d5387f9c98eaebc2d4cee742afcb4509a7d8c3",
+    "repo": "https://github.com/shw097-team/FHS-5",
+    "git_path": "19_W2_NF_CODEX_20261126/FHS-5_PLP_W2_NATIVE_FIRST",
+    "git_blob_equality": "18/18 local files byte-identical to fixed commit blobs",
+    "product_state_recorded": "NOT_RUN",
+    "source_manifest_sources": {
+      "count": 24,
+      "sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+      "note": "original 05 source list preserved in the original manifest (GIT_EQ); this S1 manifest lists only current-pass sources"
+    }
+  },
+  "sources": [
+    {
+      "id": "PLAN",
+      "role": "engineering plan (design basis, adoption pending)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_Dual-Decoupling_Native-first_全波次實證閉合工程方案.md",
+      "bytes": 110268,
+      "sha256": "7d628073b3f755cf2e81c127d612342918b5e229d0c1e522e75f98cb39463933",
+      "read_level": "READ_FULL"
+    },
+    {
+      "id": "ADR",
+      "role": "S0 minimum ADR DD01-DD10 (design basis, adoption pending)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_Dual-Decoupling_Native-first_S0_最小ADR上位架構裁決.md",
+      "bytes": 54553,
+      "sha256": "a36b22fe9d49b12d03f95722514ed0416942337729bd090089337a04f1d5350c",
+      "read_level": "READ_FULL"
+    },
+    {
+      "id": "CTRL",
+      "role": "S1 execution control pack",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_S1_W0-W2_GPT-WORK_最小執行控制包.md",
+      "bytes": 27318,
+      "sha256": "b724f09dedec2de2c71cccb0be6844e6b7c833d0060c2ff70299208a79e89332",
+      "read_level": "READ_FULL"
+    },
+    {
+      "id": "PROMPT",
+      "role": "S1 thin start prompt",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_S1_W0-W2_GPT-WORK_啟動薄PROMPT.md",
+      "bytes": 4955,
+      "sha256": "92b350a0d8d9e3173c601e704c4291b80047c7e73ec9c0e028c912b778a3f73c",
+      "read_level": "READ_FULL"
+    },
+    {
+      "id": "ORIG-05",
+      "role": "original source manifest (superseded)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\05_W2_SOURCE_MANIFEST.json",
+      "bytes": 65377,
+      "sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-00",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\00_W2_PI_PD.md",
+      "bytes": 60853,
+      "sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-01",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\01_W2_DEV_ECP.md",
+      "bytes": 21795,
+      "sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-02",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\02_W2_OPS_ECP.md",
+      "bytes": 19372,
+      "sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-03",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\03_W2_TQAEP.md",
+      "bytes": 22289,
+      "sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-04",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W2\\W2_Native-first_HERMES_主用修補_交付\\FHS-5_PLP_W2_NATIVE_FIRST\\04_W2_START_THIN_PROMPT.md",
+      "bytes": 7104,
+      "sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8",
+      "read_level": "GIT_EQ_VERIFIED"
+    }
+  ],
+  "pack_files": [
+    {
+      "path": "00_W2_PI_PD.md",
+      "bytes": 69222,
+      "sha256": "c83815061a7604ed6f276c6dba50b216e9dd96d0742f0c52ac86468d56d53e7c",
+      "lines": 726
+    },
+    {
+      "path": "01_W2_DEV_ECP.md",
+      "bytes": 25747,
+      "sha256": "698ffe006ec2b8a4dcf45ef24cd1a40f8d7f0360a1e647f509a83eb98310147b",
+      "lines": 383
+    },
+    {
+      "path": "02_W2_OPS_ECP.md",
+      "bytes": 23141,
+      "sha256": "58a34bfc1d4a57b5c878dca05edfbf6c32bc64c755a1592659affaa2777e5ddf",
+      "lines": 344
+    },
+    {
+      "path": "03_W2_TQAEP.md",
+      "bytes": 25938,
+      "sha256": "a539ab2ee57c20f413d657b09c7f8016e4c7074fae64c32abda15b71d540dfcc",
+      "lines": 420
+    },
+    {
+      "path": "04_W2_START_THIN_PROMPT.md",
+      "bytes": 5121,
+      "sha256": "45686eb470f8d790b8d37c748a3db7442492fdf270713ee3208d0badd042b8b4",
+      "lines": 82
+    }
+  ],
+  "pack_files_self_excluded": [
+    "05_W2_SOURCE_MANIFEST.json"
+  ],
+  "assets": [
+    {
+      "path": "assets/cases/case_index.json",
+      "bytes": 6325,
+      "sha256": "b85ff62161fb8f2ed00a1884bd3b15a201327f0037eee701f8869212ebd46301"
+    },
+    {
+      "path": "assets/fixtures/W2-AUTH-01.json",
+      "bytes": 893,
+      "sha256": "80502748eece6d9619adb03228740f04f60dfe3fc918b22f75d19520d99045fa"
+    },
+    {
+      "path": "assets/fixtures/W2-DELTA-01.json",
+      "bytes": 3521,
+      "sha256": "cb61b06f00559edcfa4d8fbc43c6fa812d4aa3cb1e19c65b1d5dac1bfe5e07ca"
+    },
+    {
+      "path": "assets/fixtures/W2-DEV-01.json",
+      "bytes": 3380,
+      "sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001"
+    },
+    {
+      "path": "assets/fixtures/W2-DEV-02.json",
+      "bytes": 940,
+      "sha256": "99f910663b7f85afc598b5e84a91f2707d9181c386367195120ac5bf04a2e6b6"
+    },
+    {
+      "path": "assets/fixtures/W2-EFFECT-01.json",
+      "bytes": 821,
+      "sha256": "3492f8cc0b774dbc5c6db301a08fc1efc4d3ed55045d7e856415f286a5b8ec57"
+    },
+    {
+      "path": "assets/fixtures/W2-OPS-01.json",
+      "bytes": 1492,
+      "sha256": "03494b3cca8e229064cfc98a791b18cea478a3cbc602a9f6dd6707608d463f17"
+    },
+    {
+      "path": "assets/fixtures/W2-OPS-02.json",
+      "bytes": 834,
+      "sha256": "168e857025f505fb2fc9b56a5391f2e89d605fe0e9f72742c9093e1ed952b055"
+    },
+    {
+      "path": "assets/fixtures/W2-R3-01.json",
+      "bytes": 3032,
+      "sha256": "5c721f1524cbdb1f63496773444b1e0f2535ea9cb082c067ec854aa696f98ca2"
+    },
+    {
+      "path": "assets/fixtures/W2-R3-02.json",
+      "bytes": 1124,
+      "sha256": "9867a71507bc5d1e4a6ee1d4bcb02b6d10c6cad37af78623a7aa67660b72d632"
+    },
+    {
+      "path": "assets/fixtures/W2-R3-03.json",
+      "bytes": 978,
+      "sha256": "8566b623ab3d16134e7e5461bf31e7b26a1087395103841e815c6fa3cfc51b2e"
+    },
+    {
+      "path": "assets/fixtures/W2-R3-04.json",
+      "bytes": 837,
+      "sha256": "7c8ba861cbce7c5d92d4683005d4d8202c0907f89e65b3e7a88e759eb976c81e"
+    },
+    {
+      "path": "assets/fixtures/W2-RUNNER-01.json",
+      "bytes": 768,
+      "sha256": "7ea614b4f40f32c0bbff0964faca0229270e623cd8cec38ec9057b0fe6915ea9"
+    },
+    {
+      "path": "assets/oracles/W2-AUTH-01.json",
+      "bytes": 880,
+      "sha256": "6365e89546a7cd9755d78e03d27589c16e6a1bb4d17ee6b47a7008207e644b5f"
+    },
+    {
+      "path": "assets/oracles/W2-DELTA-01.json",
+      "bytes": 1221,
+      "sha256": "155dc1054bcc6a79d7c981a48abd4778618fa314ecfbbb443815ee15dcd293b5"
+    },
+    {
+      "path": "assets/oracles/W2-DEV-01.json",
+      "bytes": 1433,
+      "sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb"
+    },
+    {
+      "path": "assets/oracles/W2-DEV-02.json",
+      "bytes": 841,
+      "sha256": "4d29d6270963f8f89e05e15c51b74ee2efeb28fa708c41c37c4787a0b1f00798"
+    },
+    {
+      "path": "assets/oracles/W2-EFFECT-01.json",
+      "bytes": 838,
+      "sha256": "a1e4c91f86e982ef857f89ef44025cfbea90392f3298750cdac809dec63e1695"
+    },
+    {
+      "path": "assets/oracles/W2-OPS-01.json",
+      "bytes": 1160,
+      "sha256": "9d5e723084add8c1cc14e33a1eba15e4f5a07a62cfbe49eda2d0df15c9b3aeab"
+    },
+    {
+      "path": "assets/oracles/W2-OPS-02.json",
+      "bytes": 831,
+      "sha256": "a5d8732e42719f6f73f56bed350604f13d0d0fad456a01148be3ccc4c3346b56"
+    },
+    {
+      "path": "assets/oracles/W2-R3-01.json",
+      "bytes": 880,
+      "sha256": "970ec9d73646a673b8e15320aa35efc3ad57e225a08867acbc70cd897ab365e2"
+    },
+    {
+      "path": "assets/oracles/W2-R3-02.json",
+      "bytes": 760,
+      "sha256": "3b2ed871b64c226b9aa834228100c167560360653d0c4593119f84d5300f1e2c"
+    },
+    {
+      "path": "assets/oracles/W2-R3-03.json",
+      "bytes": 794,
+      "sha256": "1f9d9e155317bf125eed1976731e094f75ee749d78d3d7a20af6927c00443743"
+    },
+    {
+      "path": "assets/oracles/W2-R3-04.json",
+      "bytes": 859,
+      "sha256": "d26358c730d2b2e789652a8813de427cb76bc6211422f00061abb7d8258d3b3b"
+    },
+    {
+      "path": "assets/oracles/W2-RUNNER-01.json",
+      "bytes": 805,
+      "sha256": "22931f33af7a05eb637e211b966347815acf87ba4e0f25f78d2d2c3be36eecef"
+    }
+  ],
+  "assets_note": "assets extracted from the fixed commit and kept under the pack root to preserve reader ABI",
+  "cases": [
+    {
+      "case_id": "W2-DEV-01",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-DEV-02",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-OPS-01",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-OPS-02",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-EFFECT-01",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-AUTH-01",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-RUNNER-01",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-DELTA-01",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-R3-01",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-R3-02",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-R3-03",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "W2-R3-04",
+      "status": "NOT_RUN"
+    }
+  ],
+  "case_count": 12,
+  "denominators": {
+    "wp": 6,
+    "fuo": 6,
+    "acc": 6,
+    "codex_acc": 6,
+    "requirements": 16,
+    "j_subcases": 18,
+    "n_cases": 12,
+    "crs": 37,
+    "b_index_ops": 13,
+    "b_index_nf": 3
+  },
+  "holds": [
+    {
+      "id": "W1_HOST_NINE_GRID",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W1_PLUGIN_ALIAS",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W1_ABI_BOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W1_W0_INPUT",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W0_PRIMARY_RECEIPT_STALE",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W0-A_CASE_SELECTION",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W0-B_NOT_ADMITTED",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "ORIGINAL_READER_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "ORACLE_FIXTURE_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "HOST_CAPABILITY_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "CHECKER_PUBLISHER_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "SOURCE_REFERENCE_HASH_CONFLICT",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "HOLD_CR-DOC04-STATE-MAP",
+      "disposition": "OPEN_PRESERVED"
+    }
+  ],
+  "digest_contract": {
+    "file_sha256": "sha256 over exact file bytes; CRLF not normalized",
+    "pack_manifest_sha256": "sha256 over raw 05 bytes; recorded outside 05",
+    "pack_tree_sha256": "sha256 over sorted UTF-8 lines 'path|bytes|sha256' (LF, no trailing LF), excluding 05 and seals",
+    "source_set_algorithm": "sha256(UTF-8 join(sorted(id|sha256|bytes), '\\n'))",
+    "manifest_self_hash": "EXTERNAL_RECORD_ONLY"
+  },
+  "unresolved_refs": [
+    {
+      "id": "owner_adoption",
+      "reason": "no Owner adoption record for PLAN/ADR found locally",
+      "owner": "Human Owner",
+      "resume": "adoption ref bound to PLAN/ADR SHA"
+    },
+    {
+      "id": "product_runtime",
+      "reason": "B0/W1/W2 product effects not run in this author pass",
+      "owner": "S2/S3 Owner",
+      "resume": "real repo/host/ACL and scoped grant"
+    },
+    {
+      "id": "independent_checker",
+      "reason": "author self-review only",
+      "owner": "Checker",
+      "resume": "distinct session receipt"
+    }
+  ],
+  "readiness": {
+    "document": "S1_DOC_VALIDATED_PRIMARY_ADOPTED",
+    "technical": "NOT_CLAIMED",
+    "op_admission": "NOT_ADMITTED",
+    "independent": "NOT_RUN",
+    "release": "NOT_CLAIMED"
+  },
+  "manifest_self_hash": "EXTERNAL_RECORD_ONLY",
+  "external_seal": "02_EVIDENCE/seals/W2_PACK_SEAL.json",
+  "safety": {
+    "w2_writer": "BLOCKED_NOT_ADMITTED",
+    "old_revocation_preserved": true,
+    "trust_decoupling": "proposed; protected write needs separate named scope",
+    "five_members_recomputed": {
+      "historical": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+      "canonical": "b30e8a2d34649401b5a8d04492f3ae5b6ef75a174bd9d96ab87185a4a3c75381",
+      "product_commit": "dada2354b7c25c8f4a316d9fae93827cef0d194e",
+      "delivery_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+      "tree": "9b20abed003f14161297efc5260ba3bb0a55d4aa"
+    }
+  },
+  "adoption": {
+    "decision_id": "S1-W0W2-CODEX-ADOPT-20261126-01",
+    "record": "02_EVIDENCE/seals/S1_ADOPTION_RECORD.json",
+    "issuer": "Human Owner",
+    "scope": "S1 W0-W2 control packs: document primary + scoped construction readiness",
+    "conditions": [
+      "document V1-V3 / DOC-01..06 required items pass",
+      "original IDs/denominators preserved",
+      "no product claim"
+    ],
+    "limits": [
+      "no DEV/OPS/REPO/HOST/RELEASE grant",
+      "W2 Writer stays BLOCKED_NOT_ADMITTED",
+      "W2 protected gate/token/root unchanged"
+    ],
+    "adopted_at": "2026-11-26T22:20:00+08:00"
+  },
+  "review": {
+    "review_run": "S1_W0-W2_PACK_REVIEW_CODEX_20261126T214500",
+    "reviewer": "CODEX Native main session (local)",
+    "method": "V1-V3 / DOC-01..06 reuse + independent re-run + isolated mutation controls",
+    "results": "02_EVIDENCE/S1_CODEX_REVIEW_RESULTS.json",
+    "repairs": [
+      "stale source-count text in 04 (42 -> 10 current sources; original count recorded in upstream.source_manifest_sources)",
+      "machine-readable denominators completed",
+      "adoption/version promotion and re-seal"
+    ]
+  }
+}

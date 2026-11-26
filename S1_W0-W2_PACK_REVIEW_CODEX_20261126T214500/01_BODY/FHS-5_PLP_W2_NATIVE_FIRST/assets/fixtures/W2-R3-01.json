@@ -1,0 +1,131 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-R3-01",
+  "kind": "POS",
+  "requirement_refs": [
+    "13+3",
+    "W2-CODEX-05"
+  ],
+  "child": [
+    "W2-B01..B13",
+    "W2-NF-A",
+    "W2-NF-B",
+    "W2-NF-C"
+  ],
+  "effect": "READ",
+  "inputs": {
+    "rows": [
+      {
+        "id": "W2-B01",
+        "predecessor": "Original OperationType",
+        "owner": "Effect Owner",
+        "w0_evidence": "original_effect_registry_ref=null"
+      },
+      {
+        "id": "W2-B02",
+        "predecessor": "RepoContext",
+        "owner": "Repo Owner",
+        "w0_evidence": "no repo binding"
+      },
+      {
+        "id": "W2-B03",
+        "predecessor": "HostID/OS Principal/PolicyEpoch",
+        "owner": "Host/OS Owner",
+        "w0_evidence": "no receipt"
+      },
+      {
+        "id": "W2-B04",
+        "predecessor": "Original DEV ECP",
+        "owner": "Repo+Issuer",
+        "w0_evidence": "original_ecp_ref=null"
+      },
+      {
+        "id": "W2-B05",
+        "predecessor": "Original OPS ECP",
+        "owner": "Host+OS",
+        "w0_evidence": "original_ecp_ref=null"
+      },
+      {
+        "id": "W2-B06",
+        "predecessor": "Issuer",
+        "owner": "Original Issuer",
+        "w0_evidence": "UNBOUND"
+      },
+      {
+        "id": "W2-B07",
+        "predecessor": "WorkOrder",
+        "owner": "Original Issuer",
+        "w0_evidence": "null"
+      },
+      {
+        "id": "W2-B08",
+        "predecessor": "ExecutionAdmission",
+        "owner": "Original Issuer",
+        "w0_evidence": "null"
+      },
+      {
+        "id": "W2-B09",
+        "predecessor": "Exact WriteSet/preimage",
+        "owner": "Repo/OPS Owner",
+        "w0_evidence": "none"
+      },
+      {
+        "id": "W2-B10",
+        "predecessor": "WorldReader/RepoReader",
+        "owner": "Reader Owner",
+        "w0_evidence": "UNBOUND"
+      },
+      {
+        "id": "W2-B11",
+        "predecessor": "Protected Checker",
+        "owner": "Checker",
+        "w0_evidence": "null"
+      },
+      {
+        "id": "W2-B12",
+        "predecessor": "Publisher",
+        "owner": "Publisher",
+        "w0_evidence": "null"
+      },
+      {
+        "id": "W2-B13",
+        "predecessor": "Recovery ABI",
+        "owner": "Repo/Host Owner",
+        "w0_evidence": "none"
+      }
+    ],
+    "nf_rows": [
+      {
+        "id": "W2-NF-A",
+        "predecessor": "TQAEP/Case",
+        "owner": "Case Owner"
+      },
+      {
+        "id": "W2-NF-B",
+        "predecessor": "Receiver ABI",
+        "owner": "Host/Receiver Owner"
+      },
+      {
+        "id": "W2-NF-C",
+        "predecessor": "Host preimage",
+        "owner": "Host/OS Reader"
+      }
+    ],
+    "all_actual_null": true
+  },
+  "preconditions": [
+    "source/WM2 alignment"
+  ],
+  "forbidden_actions": [
+    "fill 13/13 true",
+    "merge NF into 13",
+    "drop owner/resume"
+  ],
+  "not_covered": [
+    "original domain 13/13 close"
+  ]
+}

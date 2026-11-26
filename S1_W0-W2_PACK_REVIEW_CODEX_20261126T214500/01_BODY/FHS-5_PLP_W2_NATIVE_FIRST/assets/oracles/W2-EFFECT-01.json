@@ -1,0 +1,37 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-EFFECT-01",
+  "kind": "NEG",
+  "pass_predicate": "rejected_with_EFFECT_UNBOUND_or_EFFECT_MAPPING_UNVERIFIED and effect_calls == 0",
+  "required_observations": [
+    "token",
+    "mapping",
+    "effect_call_count",
+    "default_read_flag"
+  ],
+  "expected_tokens": [
+    "EFFECT_UNBOUND",
+    "EFFECT_MAPPING_UNVERIFIED"
+  ],
+  "forbidden_tokens": [
+    "DEFAULT_READ",
+    "EFFECT_APPLIED"
+  ],
+  "fail_if": [
+    "inferred effect",
+    "default READ",
+    "effect call"
+  ],
+  "raw_schema": [
+    "rejection_receipt",
+    "call_log"
+  ],
+  "not_covered": [
+    "full registry"
+  ]
+}

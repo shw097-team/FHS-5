@@ -1,0 +1,400 @@
+{
+  "schema": "FHS5.PLP.W0.SourceManifest.S1@1",
+  "candidate": "W0-S1-r2-CODEX-PRIMARY",
+  "pack_version": "W0-S1-r2-CODEX-PRIMARY",
+  "artifact_id": "FHS5-PLP/W0/PACK-S1-20261126-r2",
+  "project_id": "FHS-5_PLP",
+  "subject_id": "FHS-5_PLP/W0",
+  "scope": "FHS-5/W0/B0-NF",
+  "wave_id": "W0",
+  "batch_id": "FHS-5/W0/B0-NF",
+  "profile": "GENERIC_CODEX_NATIVE_FIRST",
+  "draft": false,
+  "adoption_state": "PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
+  "claim_ceiling": "S1_DOC_VALIDATED_DOCUMENT_ONLY",
+  "not_claimed": [
+    "B0_PASS",
+    "W0_NF_VALIDATED",
+    "W1_NF_VALIDATED",
+    "W2_NF_VALIDATED",
+    "NATIVE_PASS",
+    "INDEPENDENT_PASS",
+    "CONSUMED",
+    "RELEASED",
+    "W2_WRITER_UNBLOCKED"
+  ],
+  "authority": {
+    "owner_ref": "Human Owner (this thread user) via FHS-5_PLP_S1_W0-W2_CODEX_啟動薄PROMPT GOAL/AUTHORITY",
+    "adoption_ref": "02_EVIDENCE/seals/S1_ADOPTION_RECORD.json#decision_id=S1-W0W2-CODEX-ADOPT-20261126-01",
+    "adoption_state": "ADOPTED_FOR_SCOPED_CONSTRUCTION",
+    "plan_sha256": "7d628073b3f755cf2e81c127d612342918b5e229d0c1e522e75f98cb39463933",
+    "adr_sha256": "a36b22fe9d49b12d03f95722514ed0416942337729bd090089337a04f1d5350c",
+    "control_pack_sha256": "b724f09dedec2de2c71cccb0be6844e6b7c833d0060c2ff70299208a79e89332",
+    "start_prompt_sha256": "92b350a0d8d9e3173c601e704c4291b80047c7e73ec9c0e028c912b778a3f73c",
+    "scope_grant": "DOCUMENT_PRIMARY + SCOPED_CONSTRUCTION_READY",
+    "actual_grant": "no DEV/OPS/REPO/HOST/RELEASE grant in this S1 review pass; product effects remain NOT_RUN",
+    "original_primary_ref": "FHS5-PLP/W0/PACK-NF-20261125-03 / W0-NF-r3-CODEX-PRIMARY",
+    "note": "S1 r2 is the reviewed+promoted revision; r1 AUTHOR_CANDIDATE and the original NF pack are preserved"
+  },
+  "upstream": {
+    "original_pack": "FHS5-PLP/W0/PACK-NF-20261125-03",
+    "original_version": "W0-NF-r3-CODEX-PRIMARY",
+    "original_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+    "fixed_commit": "ae05a74514d2c310f82bbf9bb1a2009078f11c87",
+    "repo": "https://github.com/shw097-team/FHS-5",
+    "git_path": "13_W0_NF_CODEX_20261125/01_PACK/FHS-5_PLP_W0_NATIVE_FIRST",
+    "git_blob_equality": "18/18 local files byte-identical to fixed commit blobs",
+    "product_state_recorded": "NOT_RUN",
+    "source_manifest_sources": {
+      "count": 33,
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+      "note": "original 05 source list preserved in the original manifest (GIT_EQ); this S1 manifest lists only current-pass sources"
+    }
+  },
+  "sources": [
+    {
+      "id": "PLAN",
+      "role": "engineering plan (design basis, adoption pending)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_Dual-Decoupling_Native-first_全波次實證閉合工程方案.md",
+      "bytes": 110268,
+      "sha256": "7d628073b3f755cf2e81c127d612342918b5e229d0c1e522e75f98cb39463933",
+      "read_level": "READ_FULL"
+    },
+    {
+      "id": "ADR",
+      "role": "S0 minimum ADR DD01-DD10 (design basis, adoption pending)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_Dual-Decoupling_Native-first_S0_最小ADR上位架構裁決.md",
+      "bytes": 54553,
+      "sha256": "a36b22fe9d49b12d03f95722514ed0416942337729bd090089337a04f1d5350c",
+      "read_level": "READ_FULL"
+    },
+    {
+      "id": "CTRL",
+      "role": "S1 execution control pack",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_S1_W0-W2_GPT-WORK_最小執行控制包.md",
+      "bytes": 27318,
+      "sha256": "b724f09dedec2de2c71cccb0be6844e6b7c833d0060c2ff70299208a79e89332",
+      "read_level": "READ_FULL"
+    },
+    {
+      "id": "PROMPT",
+      "role": "S1 thin start prompt",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\FHS-5_PLP_S1_W0-W2_GPT-WORK_啟動薄PROMPT.md",
+      "bytes": 4955,
+      "sha256": "92b350a0d8d9e3173c601e704c4291b80047c7e73ec9c0e028c912b778a3f73c",
+      "read_level": "READ_FULL"
+    },
+    {
+      "id": "ORIG-05",
+      "role": "original source manifest (superseded)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST\\05_W0_SOURCE_MANIFEST.json",
+      "bytes": 18821,
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-00",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST\\00_W0_PI_PD.md",
+      "bytes": 31783,
+      "sha256": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-01",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST\\01_W0_DEV_ECP.md",
+      "bytes": 11556,
+      "sha256": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-02",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST\\02_W0_OPS_ECP.md",
+      "bytes": 11075,
+      "sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-03",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST\\03_W0_TQAEP.md",
+      "bytes": 13805,
+      "sha256": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb",
+      "read_level": "GIT_EQ_VERIFIED"
+    },
+    {
+      "id": "ORIG-04",
+      "role": "superseded original body (read-only lineage)",
+      "path": "C:\\Users\\user\\Downloads\\FHS-5\\FHS-5_PLP_W0-W4_執行控制小包\\W0\\FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付\\FHS-5_PLP_W0_NATIVE_FIRST\\04_W0_START_THIN_PROMPT.md",
+      "bytes": 7780,
+      "sha256": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554",
+      "read_level": "GIT_EQ_VERIFIED"
+    }
+  ],
+  "pack_files": [
+    {
+      "path": "00_W0_PI_PD.md",
+      "bytes": 40020,
+      "sha256": "e9714d312ad07203d3cda5fd3652ec6f1918f711278230718fb49e8081f9a2c7",
+      "lines": 492
+    },
+    {
+      "path": "01_W0_DEV_ECP.md",
+      "bytes": 16120,
+      "sha256": "c0755bd7d6d16ca0f3b4acf65f8c51373bad61c75ead0af99ff2ec252fd84b85",
+      "lines": 274
+    },
+    {
+      "path": "02_W0_OPS_ECP.md",
+      "bytes": 14787,
+      "sha256": "863331d96f662a866febe15f11f35748a308eb6384c3519e2b23f0e8749f1906",
+      "lines": 280
+    },
+    {
+      "path": "03_W0_TQAEP.md",
+      "bytes": 17698,
+      "sha256": "f8ecb7518e834fc4584cce5188e49ade8a2f489c77938a4d659e06194085d3f2",
+      "lines": 240
+    },
+    {
+      "path": "04_W0_START_THIN_PROMPT.md",
+      "bytes": 4454,
+      "sha256": "83cddd44b39799dd44afd32a3d69cf0c3ff7dbac7efad88f1c1f4ccc727f408b",
+      "lines": 73
+    }
+  ],
+  "pack_files_self_excluded": [
+    "05_W0_SOURCE_MANIFEST.json"
+  ],
+  "assets": [],
+  "assets_note": "no separate asset bytes; W0 fixtures are defined inline in 03",
+  "cases": [
+    {
+      "case_id": "F5-W0-T01",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T02",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T03",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T04",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T05",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T06",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T07",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T08",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T09",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T10",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T11",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T12",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T13",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T14",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T15",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T16",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T17",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T18",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T19",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T20",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T21",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T22",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T23",
+      "status": "NOT_RUN"
+    },
+    {
+      "case_id": "F5-W0-T24",
+      "status": "NOT_RUN"
+    }
+  ],
+  "case_count": 24,
+  "denominators": {
+    "nf": 10,
+    "sample": 10,
+    "historical_receipts": 44,
+    "wp": 14
+  },
+  "holds": [
+    {
+      "id": "W1_HOST_NINE_GRID",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W1_PLUGIN_ALIAS",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W1_ABI_BOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W1_W0_INPUT",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W0_PRIMARY_RECEIPT_STALE",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W0-A_CASE_SELECTION",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W0-B_NOT_ADMITTED",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "ORIGINAL_READER_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "ORACLE_FIXTURE_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "HOST_CAPABILITY_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "CHECKER_PUBLISHER_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "SOURCE_REFERENCE_HASH_CONFLICT",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+      "disposition": "OPEN_PRESERVED"
+    },
+    {
+      "id": "HOLD_CR-DOC04-STATE-MAP",
+      "disposition": "OPEN_PRESERVED"
+    }
+  ],
+  "digest_contract": {
+    "file_sha256": "sha256 over exact file bytes; CRLF not normalized",
+    "pack_manifest_sha256": "sha256 over raw 05 bytes; recorded outside 05",
+    "pack_tree_sha256": "sha256 over sorted UTF-8 lines 'path|bytes|sha256' (LF, no trailing LF), excluding 05 and seals",
+    "source_set_algorithm": "sha256(UTF-8 join(sorted(id|sha256|bytes), '\\n'))",
+    "manifest_self_hash": "EXTERNAL_RECORD_ONLY"
+  },
+  "unresolved_refs": [
+    {
+      "id": "owner_adoption",
+      "reason": "no Owner adoption record for PLAN/ADR found locally",
+      "owner": "Human Owner",
+      "resume": "adoption ref bound to PLAN/ADR SHA"
+    },
+    {
+      "id": "product_runtime",
+      "reason": "B0/W1/W2 product effects not run in this author pass",
+      "owner": "S2/S3 Owner",
+      "resume": "real repo/host/ACL and scoped grant"
+    },
+    {
+      "id": "independent_checker",
+      "reason": "author self-review only",
+      "owner": "Checker",
+      "resume": "distinct session receipt"
+    }
+  ],
+  "readiness": {
+    "document": "S1_DOC_VALIDATED_PRIMARY_ADOPTED",
+    "technical": "NOT_CLAIMED",
+    "op_admission": "NOT_ADMITTED",
+    "independent": "NOT_RUN",
+    "release": "NOT_CLAIMED"
+  },
+  "manifest_self_hash": "EXTERNAL_RECORD_ONLY",
+  "external_seal": "02_EVIDENCE/seals/W0_PACK_SEAL.json",
+  "adoption": {
+    "decision_id": "S1-W0W2-CODEX-ADOPT-20261126-01",
+    "record": "02_EVIDENCE/seals/S1_ADOPTION_RECORD.json",
+    "issuer": "Human Owner",
+    "scope": "S1 W0-W2 control packs: document primary + scoped construction readiness",
+    "conditions": [
+      "document V1-V3 / DOC-01..06 required items pass",
+      "original IDs/denominators preserved",
+      "no product claim"
+    ],
+    "limits": [
+      "no DEV/OPS/REPO/HOST/RELEASE grant",
+      "W2 Writer stays BLOCKED_NOT_ADMITTED",
+      "W2 protected gate/token/root unchanged"
+    ],
+    "adopted_at": "2026-11-26T22:20:00+08:00"
+  },
+  "review": {
+    "review_run": "S1_W0-W2_PACK_REVIEW_CODEX_20261126T214500",
+    "reviewer": "CODEX Native main session (local)",
+    "method": "V1-V3 / DOC-01..06 reuse + independent re-run + isolated mutation controls",
+    "results": "02_EVIDENCE/S1_CODEX_REVIEW_RESULTS.json",
+    "repairs": [
+      "stale source-count text in 04 (42 -> 10 current sources; original count recorded in upstream.source_manifest_sources)",
+      "machine-readable denominators completed",
+      "adoption/version promotion and re-seal"
+    ]
+  }
+}

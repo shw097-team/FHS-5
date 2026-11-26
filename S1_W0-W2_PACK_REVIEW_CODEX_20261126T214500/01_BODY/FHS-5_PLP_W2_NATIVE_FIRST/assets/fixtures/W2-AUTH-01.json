@@ -1,0 +1,44 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-AUTH-01",
+  "kind": "NEG",
+  "requirement_refs": [
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "ADR-W2-02",
+    "U-046"
+  ],
+  "child": [
+    "Issuer",
+    "WorkOrder",
+    "ExecutionAdmission"
+  ],
+  "effect": "HOST_EFFECT",
+  "inputs": {
+    "permission": true,
+    "issuer_id": null,
+    "workorder_ref": null,
+    "admission_ref": null,
+    "scope": "W2-NF-01",
+    "scope_expired": true,
+    "principal_matches": false,
+    "ecp_present": true
+  },
+  "preconditions": [
+    "caller asserts permission=true"
+  ],
+  "forbidden_actions": [
+    "effect",
+    "write",
+    "treat ECP as grant",
+    "treat expired scope as valid"
+  ],
+  "not_covered": [
+    "original Issuer signature"
+  ]
+}

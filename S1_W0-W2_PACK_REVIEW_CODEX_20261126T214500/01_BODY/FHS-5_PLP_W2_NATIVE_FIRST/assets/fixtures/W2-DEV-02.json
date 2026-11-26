@@ -1,0 +1,43 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-DEV-02",
+  "kind": "NEG",
+  "requirement_refs": [
+    "U-013.a",
+    "W2-R3-03",
+    "J1-T02"
+  ],
+  "child": [
+    "RepoContext"
+  ],
+  "effect": "REPOSITORY_WRITE",
+  "inputs": {
+    "caller_head": "1111111111111111111111111111111111111111",
+    "live_head": "2222222222222222222222222222222222222222",
+    "head_mismatch": true,
+    "write_set": [
+      {
+        "path": "src/tag_normalizer.py",
+        "operation": "modify"
+      }
+    ],
+    "stale_acl_variant": true,
+    "stale_preimage_variant": true
+  },
+  "preconditions": [
+    "caller supplies a stale baseline"
+  ],
+  "forbidden_actions": [
+    "patch apply",
+    "write",
+    "checkout",
+    "use caller HEAD as live"
+  ],
+  "not_covered": [
+    "TOCTOU race (J1-T04)"
+  ]
+}

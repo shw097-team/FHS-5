@@ -1,0 +1,578 @@
+{
+  "generated_at": "2026-11-26T21:45:00+08:00",
+  "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\S1_W0-W2_PACK_AUTHOR_GPT_WORK_20261126T214500",
+  "computed_on": "C:\\Users\\user\\Documents\\Codex\\2026-11-26\\fhs-5-plp-w0-native-first-6\\work\\s1_build\\O",
+  "review_strength": "SELF_REVIEW (author), not an independent product Checker",
+  "git_provenance": {
+    "pack_files": [
+      {
+        "wave": "W0",
+        "file": "00_W0_PI_PD.md",
+        "exit": 0,
+        "git_bytes": 31783,
+        "local_bytes": 31783,
+        "git_sha256": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11",
+        "local_sha256": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W0",
+        "file": "01_W0_DEV_ECP.md",
+        "exit": 0,
+        "git_bytes": 11556,
+        "local_bytes": 11556,
+        "git_sha256": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6",
+        "local_sha256": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W0",
+        "file": "02_W0_OPS_ECP.md",
+        "exit": 0,
+        "git_bytes": 11075,
+        "local_bytes": 11075,
+        "git_sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747",
+        "local_sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W0",
+        "file": "03_W0_TQAEP.md",
+        "exit": 0,
+        "git_bytes": 13805,
+        "local_bytes": 13805,
+        "git_sha256": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb",
+        "local_sha256": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W0",
+        "file": "04_W0_START_THIN_PROMPT.md",
+        "exit": 0,
+        "git_bytes": 7780,
+        "local_bytes": 7780,
+        "git_sha256": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554",
+        "local_sha256": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W1",
+        "file": "00_W1_PI_PD.md",
+        "exit": 0,
+        "git_bytes": 34639,
+        "local_bytes": 34639,
+        "git_sha256": "345cfdb846ab69a1d45acda7011f280218ff6b2642b19d5dd675c75b61e984c1",
+        "local_sha256": "345cfdb846ab69a1d45acda7011f280218ff6b2642b19d5dd675c75b61e984c1",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W1",
+        "file": "01_W1_DEV_ECP.md",
+        "exit": 0,
+        "git_bytes": 20804,
+        "local_bytes": 20804,
+        "git_sha256": "257c6dac294699a81111ea654cf135b3e55ddf0cde27e36c8bf3e7c8399bcb4c",
+        "local_sha256": "257c6dac294699a81111ea654cf135b3e55ddf0cde27e36c8bf3e7c8399bcb4c",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W1",
+        "file": "02_W1_OPS_ECP.md",
+        "exit": 0,
+        "git_bytes": 12290,
+        "local_bytes": 12290,
+        "git_sha256": "14b1571ab26474c325c2f001c8fddee7cc81c4abbec79152e669c6f5766d44e5",
+        "local_sha256": "14b1571ab26474c325c2f001c8fddee7cc81c4abbec79152e669c6f5766d44e5",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W1",
+        "file": "03_W1_TQAEP.md",
+        "exit": 0,
+        "git_bytes": 19804,
+        "local_bytes": 19804,
+        "git_sha256": "66a53d2854debafc599b8a4f6611aa44236d099d380d93828c43aa20e227c691",
+        "local_sha256": "66a53d2854debafc599b8a4f6611aa44236d099d380d93828c43aa20e227c691",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W1",
+        "file": "04_W1_START_THIN_PROMPT.md",
+        "exit": 0,
+        "git_bytes": 10066,
+        "local_bytes": 10066,
+        "git_sha256": "2a5ad071f6438f57528032f0f7d6fd1dc687dfec91aca67415f228d80296eb47",
+        "local_sha256": "2a5ad071f6438f57528032f0f7d6fd1dc687dfec91aca67415f228d80296eb47",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W2",
+        "file": "00_W2_PI_PD.md",
+        "exit": 0,
+        "git_bytes": 60853,
+        "local_bytes": 60853,
+        "git_sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92",
+        "local_sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W2",
+        "file": "01_W2_DEV_ECP.md",
+        "exit": 0,
+        "git_bytes": 21795,
+        "local_bytes": 21795,
+        "git_sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d",
+        "local_sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W2",
+        "file": "02_W2_OPS_ECP.md",
+        "exit": 0,
+        "git_bytes": 19372,
+        "local_bytes": 19372,
+        "git_sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934",
+        "local_sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W2",
+        "file": "03_W2_TQAEP.md",
+        "exit": 0,
+        "git_bytes": 22289,
+        "local_bytes": 22289,
+        "git_sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a",
+        "local_sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a",
+        "verdict": "GIT_EQ"
+      },
+      {
+        "wave": "W2",
+        "file": "04_W2_START_THIN_PROMPT.md",
+        "exit": 0,
+        "git_bytes": 7104,
+        "local_bytes": 7104,
+        "git_sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8",
+        "local_sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8",
+        "verdict": "GIT_EQ"
+      }
+    ],
+    "all_git_eq": true,
+    "w3_support": {
+      "4f489a6aa74d055b087deb5146022da12a99cf86": {
+        "exit": 128,
+        "type": null,
+        "state": "UNBOUND_NOT_IN_LOCAL_REPO"
+      },
+      "563a9b22458fd75ec160d7f397d47b00b2f64d38": {
+        "exit": 128,
+        "type": null,
+        "state": "UNBOUND_NOT_IN_LOCAL_REPO"
+      }
+    }
+  },
+  "waves": {
+    "W0": {
+      "errors": [],
+      "missing_ids": [],
+      "docs": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "checks": {
+        "DOC-01": {
+          "what": "5 MD＋1 JSON、非空、strict JSON、pack_files exact",
+          "actual": "errs=0",
+          "verdict": "PASS"
+        },
+        "DOC-02": {
+          "what": "raw SHA／bytes、assets、外置 seal、來源 pin",
+          "actual": "seal_files_join=True；asset_rows=0",
+          "verdict": "PASS"
+        },
+        "DOC-03": {
+          "what": "原 ID／案件／分母雙向 join",
+          "actual": "missing=0",
+          "verdict": "PASS"
+        },
+        "DOC-04": {
+          "what": "WP/ECP/Case/Seam/Owner/Resume 可定位",
+          "actual": "missing=0",
+          "verdict": "PASS"
+        },
+        "DOC-05": {
+          "what": "scope/claim/adoption/撤權/無 Grant",
+          "actual": "adoption=AUTHOR_CANDIDATE；product=NOT_RUN",
+          "verdict": "PASS"
+        },
+        "DOC-06": {
+          "what": "clean-copy 回讀＋index/seal 可重建",
+          "actual": "clean_errs=0；mismatch=0",
+          "verdict": "PASS"
+        }
+      }
+    },
+    "W1": {
+      "errors": [],
+      "missing_ids": [],
+      "docs": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "checks": {
+        "DOC-01": {
+          "what": "5 MD＋1 JSON、非空、strict JSON、pack_files exact",
+          "actual": "errs=0",
+          "verdict": "PASS"
+        },
+        "DOC-02": {
+          "what": "raw SHA／bytes、assets、外置 seal、來源 pin",
+          "actual": "seal_files_join=True；asset_rows=26",
+          "verdict": "PASS"
+        },
+        "DOC-03": {
+          "what": "原 ID／案件／分母雙向 join",
+          "actual": "missing=0",
+          "verdict": "PASS"
+        },
+        "DOC-04": {
+          "what": "WP/ECP/Case/Seam/Owner/Resume 可定位",
+          "actual": "missing=0",
+          "verdict": "PASS"
+        },
+        "DOC-05": {
+          "what": "scope/claim/adoption/撤權/無 Grant",
+          "actual": "adoption=AUTHOR_CANDIDATE；product=NOT_RUN",
+          "verdict": "PASS"
+        },
+        "DOC-06": {
+          "what": "clean-copy 回讀＋index/seal 可重建",
+          "actual": "clean_errs=0；mismatch=0",
+          "verdict": "PASS"
+        }
+      }
+    },
+    "W2": {
+      "errors": [],
+      "missing_ids": [],
+      "docs": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "checks": {
+        "DOC-01": {
+          "what": "5 MD＋1 JSON、非空、strict JSON、pack_files exact",
+          "actual": "errs=0",
+          "verdict": "PASS"
+        },
+        "DOC-02": {
+          "what": "raw SHA／bytes、assets、外置 seal、來源 pin",
+          "actual": "seal_files_join=True；asset_rows=25",
+          "verdict": "PASS"
+        },
+        "DOC-03": {
+          "what": "原 ID／案件／分母雙向 join",
+          "actual": "missing=0",
+          "verdict": "PASS"
+        },
+        "DOC-04": {
+          "what": "WP/ECP/Case/Seam/Owner/Resume 可定位",
+          "actual": "missing=0",
+          "verdict": "PASS"
+        },
+        "DOC-05": {
+          "what": "scope/claim/adoption/撤權/無 Grant",
+          "actual": "adoption=AUTHOR_CANDIDATE；product=NOT_RUN",
+          "verdict": "PASS"
+        },
+        "DOC-06": {
+          "what": "clean-copy 回讀＋index/seal 可重建",
+          "actual": "clean_errs=0；mismatch=0",
+          "verdict": "PASS"
+        }
+      }
+    },
+    "clean_copy": {
+      "errors": [],
+      "mismatch": 0,
+      "verdict": "PASS"
+    },
+    "mutations": {
+      "W0": [
+        {
+          "case": "baseline_accept",
+          "expected": "accept",
+          "errors": [],
+          "verdict": "PASS"
+        },
+        {
+          "case": "missing_03",
+          "expected": "reject",
+          "errors": [
+            "MD_COUNT=4",
+            "PACK_FILE_MISSING:03_W0_TQAEP.md",
+            "PACK_FILE_SET"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "empty_00",
+          "expected": "reject",
+          "errors": [
+            "EMPTY:00_W0_PI_PD.md",
+            "TOO_SMALL:00_W0_PI_PD.md",
+            "PACK_FILE_MISMATCH:00_W0_PI_PD.md",
+            "IDENTITY:00_W0_PI_PD.md"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "duplicate_json_key",
+          "expected": "reject",
+          "errors": [
+            "MANIFEST_PARSE:duplicate key: schema"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "byte_flip",
+          "expected": "reject",
+          "errors": [
+            "PACK_FILE_MISMATCH:00_W0_PI_PD.md"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "path_escape",
+          "expected": "reject",
+          "errors": [
+            "PATH_ESCAPE",
+            "PACK_FILE_MISSING:../escape.md",
+            "PACK_FILE_SET",
+            "SEAL_MANIFEST",
+            "SEAL_MANIFEST_BYTES",
+            "SEAL_TREE"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "seal_tamper",
+          "expected": "reject",
+          "errors": [
+            "SEAL_TREE"
+          ],
+          "verdict": "PASS"
+        }
+      ],
+      "W1": [
+        {
+          "case": "baseline_accept",
+          "expected": "accept",
+          "errors": [],
+          "verdict": "PASS"
+        },
+        {
+          "case": "missing_03",
+          "expected": "reject",
+          "errors": [
+            "MD_COUNT=4",
+            "PACK_FILE_MISSING:03_W1_TQAEP.md",
+            "PACK_FILE_SET"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "empty_00",
+          "expected": "reject",
+          "errors": [
+            "EMPTY:00_W1_PI_PD.md",
+            "TOO_SMALL:00_W1_PI_PD.md",
+            "PACK_FILE_MISMATCH:00_W1_PI_PD.md",
+            "IDENTITY:00_W1_PI_PD.md"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "duplicate_json_key",
+          "expected": "reject",
+          "errors": [
+            "MANIFEST_PARSE:duplicate key: schema"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "byte_flip",
+          "expected": "reject",
+          "errors": [
+            "PACK_FILE_MISMATCH:00_W1_PI_PD.md"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "path_escape",
+          "expected": "reject",
+          "errors": [
+            "PATH_ESCAPE",
+            "PACK_FILE_MISSING:../escape.md",
+            "PACK_FILE_SET",
+            "SEAL_MANIFEST",
+            "SEAL_MANIFEST_BYTES",
+            "SEAL_TREE"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "seal_tamper",
+          "expected": "reject",
+          "errors": [
+            "SEAL_TREE"
+          ],
+          "verdict": "PASS"
+        }
+      ],
+      "W2": [
+        {
+          "case": "baseline_accept",
+          "expected": "accept",
+          "errors": [],
+          "verdict": "PASS"
+        },
+        {
+          "case": "missing_03",
+          "expected": "reject",
+          "errors": [
+            "MD_COUNT=4",
+            "PACK_FILE_MISSING:03_W2_TQAEP.md",
+            "PACK_FILE_SET"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "empty_00",
+          "expected": "reject",
+          "errors": [
+            "EMPTY:00_W2_PI_PD.md",
+            "TOO_SMALL:00_W2_PI_PD.md",
+            "PACK_FILE_MISMATCH:00_W2_PI_PD.md",
+            "IDENTITY:00_W2_PI_PD.md"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "duplicate_json_key",
+          "expected": "reject",
+          "errors": [
+            "MANIFEST_PARSE:duplicate key: schema"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "byte_flip",
+          "expected": "reject",
+          "errors": [
+            "PACK_FILE_MISMATCH:00_W2_PI_PD.md"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "path_escape",
+          "expected": "reject",
+          "errors": [
+            "PATH_ESCAPE",
+            "PACK_FILE_MISSING:../escape.md",
+            "PACK_FILE_SET",
+            "SEAL_MANIFEST",
+            "SEAL_MANIFEST_BYTES",
+            "SEAL_TREE"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "case": "seal_tamper",
+          "expected": "reject",
+          "errors": [
+            "SEAL_TREE"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    "five_members": {
+      "rows": [
+        {
+          "path": "W1/check/test_j1_strict.py",
+          "bytes": 6622,
+          "sha256": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4"
+        },
+        {
+          "path": "W1/check/w2_admission.py",
+          "bytes": 10932,
+          "sha256": "8caabfffd5c5c07040f0444e1d4ad23cbad939501b61597b726184f4816c4ae3"
+        },
+        {
+          "path": "W1/check/w2_dev_gate.py",
+          "bytes": 11403,
+          "sha256": "ecef3f39cf3ae4db1a387cca4eec2d5212d9cce8e1f81d7a91e0cb0ffd170db4"
+        },
+        {
+          "path": "W1/check/w2_receiver.py",
+          "bytes": 40842,
+          "sha256": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59"
+        },
+        {
+          "path": "W1/impl/w2_nf_reader.py",
+          "bytes": 11519,
+          "sha256": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980"
+        }
+      ],
+      "historical": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+      "canonical": "b30e8a2d34649401b5a8d04492f3ae5b6ef75a174bd9d96ab87185a4a3c75381"
+    }
+  },
+  "summary": {
+    "W0": {
+      "docs": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "ready": "AUTHOR_READY"
+    },
+    "W1": {
+      "docs": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "ready": "AUTHOR_READY"
+    },
+    "W2": {
+      "docs": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "ready": "AUTHOR_READY"
+    }
+  }
+}

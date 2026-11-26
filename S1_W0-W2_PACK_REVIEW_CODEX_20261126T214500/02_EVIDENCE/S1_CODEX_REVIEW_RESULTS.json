@@ -1,0 +1,358 @@
+{
+  "schema": "FHS5.PLP.S1.CodexReviewResults@1",
+  "review_run": "S1_W0-W2_PACK_REVIEW_CODEX_20261126T214500",
+  "reviewed_at": "2026-11-26T22:20:00+08:00",
+  "reviewer": "CODEX Native main session (local)",
+  "review_strength": "SELF_REVIEW (main session) + independent re-execution of checks; no separate human Checker",
+  "tools": {
+    "git": "2.53.0.windows.1",
+    "python": "3.11.9",
+    "openspec": "2.0.0 (no initialized project in R: openspec/ absent)"
+  },
+  "sources": {
+    "plan_sha256": "7d628073b3f755cf2e81c127d612342918b5e229d0c1e522e75f98cb39463933",
+    "adr_sha256": "a36b22fe9d49b12d03f95722514ed0416942337729bd090089337a04f1d5350c",
+    "work_control_sha256": "b724f09dedec2de2c71cccb0be6844e6b7c833d0060c2ff70299208a79e89332",
+    "work_prompt_sha256": "92b350a0d8d9e3173c601e704c4291b80047c7e73ec9c0e028c912b778a3f73c",
+    "original_pack_git_equality": "18/18 files byte-identical to fixed commit blobs (W0 ae05a74, W1 9fae925, W2 35d5387)"
+  },
+  "w2_five_pins": {
+    "product_commit": "dada2354b7c25c8f4a316d9fae93827cef0d194e",
+    "tree": "9b20abed003f14161297efc5260ba3bb0a55d4aa",
+    "members": {
+      "W1/check/w2_receiver.py": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+      "W1/check/w2_dev_gate.py": "ecef3f39cf3ae4db1a387cca4eec2d5212d9cce8e1f81d7a91e0cb0ffd170db4",
+      "W1/check/w2_admission.py": "8caabfffd5c5c07040f0444e1d4ad23cbad939501b61597b726184f4816c4ae3",
+      "W1/impl/w2_nf_reader.py": "738bfe15ce3220d523a7306f98817dd9f5bc569f87fce107231c34e0e626d980",
+      "W1/check/test_j1_strict.py": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4"
+    },
+    "historical_aggregate": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+    "canonical_aggregate": "b30e8a2d34649401b5a8d04492f3ae5b6ef75a174bd9d96ab87185a4a3c75381",
+    "verdict": "MATCH (recomputed from git blobs)"
+  },
+  "negative_controls": [
+    {
+      "case": "missing_03",
+      "wave": "W0",
+      "expected": "reject",
+      "errors": [
+        "MD_COUNT=4",
+        "PACK_FILE_MISSING:03_W0_TQAEP.md",
+        "TEXT_MISSING:03_W0_TQAEP.md",
+        "CASE_NOT_IN_03:F5-W0-T01",
+        "CASE_NOT_IN_03:F5-W0-T02",
+        "CASE_NOT_IN_03:F5-W0-T03",
+        "CASE_NOT_IN_03:F5-W0-T04",
+        "CASE_NOT_IN_03:F5-W0-T05",
+        "CASE_NOT_IN_03:F5-W0-T06",
+        "CASE_NOT_IN_03:F5-W0-T07",
+        "CASE_NOT_IN_03:F5-W0-T08",
+        "CASE_NOT_IN_03:F5-W0-T09",
+        "CASE_NOT_IN_03:F5-W0-T10",
+        "CASE_NOT_IN_03:F5-W0-T11",
+        "CASE_NOT_IN_03:F5-W0-T12",
+        "CASE_NOT_IN_03:F5-W0-T13",
+        "CASE_NOT_IN_03:F5-W0-T14",
+        "CASE_NOT_IN_03:F5-W0-T15",
+        "CASE_NOT_IN_03:F5-W0-T16",
+        "CASE_NOT_IN_03:F5-W0-T17",
+        "CASE_NOT_IN_03:F5-W0-T18",
+        "CASE_NOT_IN_03:F5-W0-T19",
+        "CASE_NOT_IN_03:F5-W0-T20",
+        "CASE_NOT_IN_03:F5-W0-T21",
+        "CASE_NOT_IN_03:F5-W0-T22",
+        "CASE_NOT_IN_03:F5-W0-T23",
+        "CASE_NOT_IN_03:F5-W0-T24",
+        "DEN_NF_NOT_ECHOED"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "empty_00",
+      "wave": "W1",
+      "expected": "reject",
+      "errors": [
+        "EMPTY:00_W1_PI_PD.md",
+        "TOO_SMALL:00_W1_PI_PD.md",
+        "UTF8:00_W1_PI_PD.md",
+        "PACK_FILE_MISMATCH:00_W1_PI_PD.md",
+        "HOLD_NOT_IN_TEXT:W1_HOST_NINE_GRID",
+        "HOLD_NOT_IN_TEXT:W1_ABI_BOUND",
+        "HOLD_NOT_IN_TEXT:W1_W0_INPUT",
+        "HOLD_NOT_IN_TEXT:W0-A_CASE_SELECTION",
+        "HOLD_NOT_IN_TEXT:W0-B_NOT_ADMITTED",
+        "HOLD_NOT_IN_TEXT:ORIGINAL_READER_UNBOUND",
+        "HOLD_NOT_IN_TEXT:ORACLE_FIXTURE_UNBOUND",
+        "HOLD_NOT_IN_TEXT:HOST_CAPABILITY_UNBOUND",
+        "HOLD_NOT_IN_TEXT:CHECKER_PUBLISHER_UNBOUND",
+        "HOLD_NOT_IN_TEXT:SOURCE_REFERENCE_HASH_CONFLICT",
+        "HOLD_NOT_IN_TEXT:W0C_DENOMINATOR_ID_LIST_UNBOUND",
+        "HOLD_NOT_IN_TEXT:HOLD_CR-DOC04-STATE-MAP"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "duplicate_json_key",
+      "wave": "W2",
+      "expected": "reject",
+      "errors": [
+        "MANIFEST_PARSE:duplicate key: schema"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "byte_flip",
+      "wave": "W0",
+      "expected": "reject",
+      "errors": [
+        "PACK_FILE_MISMATCH:01_W0_DEV_ECP.md"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "path_escape",
+      "wave": "W1",
+      "expected": "reject",
+      "errors": [
+        "PACK_FILE_MISSING:../escape.md",
+        "SEAL_MANIFEST",
+        "SEAL_PACK_FILES",
+        "SEAL_TREE"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "seal_tamper",
+      "wave": "W2",
+      "expected": "reject",
+      "errors": [
+        "SEAL_TREE"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "draft_flag",
+      "wave": "W0",
+      "expected": "reject",
+      "errors": [
+        "SEAL_MANIFEST",
+        "DRAFT_FLAG"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "wrong_case_id",
+      "wave": "W2",
+      "expected": "reject",
+      "errors": [
+        "SEAL_MANIFEST",
+        "CASE_NOT_IN_03:W2-NOT-A-CASE",
+        "FIXTURE_ROW_MISSING:W2-NOT-A-CASE",
+        "ORACLE_ROW_MISSING:W2-NOT-A-CASE",
+        "CASE_INDEX_SET"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "asset_flip",
+      "wave": "W1",
+      "expected": "reject",
+      "errors": [
+        "ASSET_MISMATCH:assets/fixtures/W1-ABI-01.json"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "orphan_oracle",
+      "wave": "W2",
+      "expected": "reject",
+      "errors": [
+        "ASSET_MISSING:assets/oracles/W2-DEV-01.json",
+        "CASE_INDEX_ORACLE:W2-DEV-01"
+      ],
+      "verdict": "PASS"
+    }
+  ],
+  "waves": {
+    "W0": {
+      "structural": {
+        "tree_recomputed": "6fcdd8944380334f15a97d0ee1db3305775b9782e601ec7e5f63adf5888d7373",
+        "assets_checked": 0,
+        "sources_checked": 10,
+        "sources_missing": 0,
+        "holds": 14,
+        "denominators": {
+          "nf": 10,
+          "sample": 10,
+          "historical_receipts": 44,
+          "wp": 14
+        }
+      },
+      "errors": [],
+      "V1": "PASS",
+      "V2": "PASS (document; product NOT_RUN/UNBOUND)",
+      "V3": "PASS (document adoption; product and protected effect not claimed)",
+      "DOC": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "product": "NOT_RUN"
+    },
+    "W1": {
+      "structural": {
+        "tree_recomputed": "6da4d4bbe89a2f071b8b3132b57001b1b67506bd0d4b8bac2ad8c8d7df9d7e8e",
+        "assets_checked": 26,
+        "sources_checked": 10,
+        "sources_missing": 0,
+        "holds": 14,
+        "denominators": {
+          "dev": 38,
+          "ops": 29,
+          "wp": 6,
+          "acc": 12,
+          "host_cells": 21,
+          "closure_rows": 118,
+          "acceptance_rows": 20,
+          "fuo": 6,
+          "receiver_checks": 29
+        }
+      },
+      "errors": [],
+      "V1": "PASS",
+      "V2": "PASS (document; product NOT_RUN/UNBOUND)",
+      "V3": "PASS (document adoption; product and protected effect not claimed)",
+      "DOC": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "product": "NOT_RUN"
+    },
+    "W2": {
+      "structural": {
+        "tree_recomputed": "2b576434ec67d0d4d14a492ed0f563fca16512fb96bf69baeab2a7a1dec6f47e",
+        "assets_checked": 25,
+        "sources_checked": 10,
+        "sources_missing": 0,
+        "holds": 14,
+        "denominators": {
+          "wp": 6,
+          "fuo": 6,
+          "acc": 6,
+          "codex_acc": 6,
+          "requirements": 16,
+          "j_subcases": 18,
+          "n_cases": 12,
+          "crs": 37,
+          "b_index_ops": 13,
+          "b_index_nf": 3
+        }
+      },
+      "errors": [],
+      "V1": "PASS",
+      "V2": "PASS (document; product NOT_RUN/UNBOUND)",
+      "V3": "PASS (document adoption; product and protected effect not claimed)",
+      "DOC": {
+        "DOC-01": "PASS",
+        "DOC-02": "PASS",
+        "DOC-03": "PASS",
+        "DOC-04": "PASS",
+        "DOC-05": "PASS",
+        "DOC-06": "PASS"
+      },
+      "product": "NOT_RUN"
+    }
+  },
+  "first_fail": [
+    {
+      "id": "FF-01",
+      "wave": [
+        "W1",
+        "W2"
+      ],
+      "where": "04_W1/04_W2 §1 SOURCE list",
+      "expected": "lists match 05 sources",
+      "observed": "claimed 42 sources while 05 declares 10",
+      "repair": "text corrected to 10 current sources; original counts 42/24 recorded in 05 upstream.source_manifest_sources",
+      "verdict": "FIXED"
+    },
+    {
+      "id": "FF-02",
+      "wave": [
+        "W0",
+        "W1",
+        "W2"
+      ],
+      "where": "05 denominators",
+      "expected": "required denominators machine-readable",
+      "observed": "missing wp (W0), fuo/receiver_checks (W1), 13+3 split (W2)",
+      "repair": "added wp=14; fuo=6, receiver_checks=29; b_index_ops=13, b_index_nf=3",
+      "verdict": "FIXED"
+    },
+    {
+      "id": "FF-03",
+      "wave": [
+        "W0",
+        "W1",
+        "W2"
+      ],
+      "where": "header/05 adoption state",
+      "expected": "promoted state after this pass",
+      "observed": "AUTHOR_CANDIDATE_NOT_ADOPTED, draft=true, not_claimed includes ADOPTED_AS_CURRENT",
+      "repair": "r2 CODEX-PRIMARY identity; adoption_state=PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION; seals re-frozen; adoption record bound",
+      "verdict": "FIXED"
+    },
+    {
+      "id": "FF-04",
+      "wave": [
+        "review tooling"
+      ],
+      "where": "local verifier",
+      "expected": "missing file => reject, not crash",
+      "observed": "missing 03 raised exception (ERR instead of FAIL)",
+      "repair": "checker handles missing text explicitly; negative control now rejects with PACK_FILE_MISSING/TEXT_MISSING",
+      "verdict": "FIXED (review tool, not pack)"
+    }
+  ],
+  "c1_c7": {
+    "C1": "PASS",
+    "C2": "PASS",
+    "C3": "PASS",
+    "C4": "PASS",
+    "C5": "PASS",
+    "C6": "PASS (document; product entry UNBOUND => NotCovered)",
+    "C7": "PASS (document; product cases NOT_RUN)"
+  },
+  "not_covered": [
+    "W2 product DEV/OPS effect (no named scope)",
+    "all product cases (W0/W1/W2) NOT_RUN",
+    "independent product Checker/Consumer receipts",
+    "W2 protected gate change",
+    "W3/W4 execution and release"
+  ],
+  "clean_copy": {
+    "W0": {
+      "errors": [],
+      "verdict": "PASS"
+    },
+    "W1": {
+      "errors": [],
+      "verdict": "PASS"
+    },
+    "W2": {
+      "errors": [],
+      "verdict": "PASS"
+    }
+  },
+  "crosscheck": {
+    "errors": [],
+    "verdict": "PASS"
+  }
+}
