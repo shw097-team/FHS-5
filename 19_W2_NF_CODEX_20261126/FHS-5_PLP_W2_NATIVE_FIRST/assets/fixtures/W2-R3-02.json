@@ -1,0 +1,45 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-R3-02",
+  "kind": "NEG",
+  "requirement_refs": [
+    "ADR-W2-04",
+    "D02",
+    "D03",
+    "W2-CODEX-06"
+  ],
+  "child": [
+    "SyntheticAnalogue"
+  ],
+  "effect": "SYNTHETIC_ANALOGUE",
+  "inputs": {
+    "g4": {
+      "post_bytes": 444,
+      "post_sha256": "9961be52e60b092a8927704cdc1df0fee4178283d4d494017994ea5f1c92b2da",
+      "pre_bytes": 125,
+      "pre_sha256": "13df86fa8b75dc454351e584f8d2f363b0323f8c9b6948851ea40c1428e4423a",
+      "test_bytes": 547,
+      "test_sha256": "e2eec52a8edcd67f0b89320c743f12027cce26e1d23528652ca6f5563a1c0162",
+      "tests_reported": 3,
+      "exit_reported": 0,
+      "has_license": false,
+      "has_git": false
+    },
+    "claim": "G4 tests are W2 admitted effect or License Fit"
+  },
+  "preconditions": [
+    "historical G4 bytes only"
+  ],
+  "forbidden_actions": [
+    "admit G4",
+    "License Fit",
+    "replace W2 repo"
+  ],
+  "not_covered": [
+    "G4 original domain"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-R3-04",
+  "kind": "EDGE",
+  "requirement_refs": [
+    "W0-F-09",
+    "W2-B02",
+    "W2-B10",
+    "N11"
+  ],
+  "child": [
+    "WorkspaceDrift"
+  ],
+  "effect": "READ",
+  "inputs": {
+    "workspace_files": 318,
+    "workspace_self": 1,
+    "workspace_total": 319,
+    "closeout_entries": 317,
+    "periods": [
+      "W0-20261125",
+      "W1-20261126"
+    ],
+    "same_candidate": false
+  },
+  "preconditions": [
+    "different periods/closeout counts"
+  ],
+  "forbidden_actions": [
+    "whole-workspace rewrite",
+    "fabricate old bytes",
+    "merge periods into one truth"
+  ],
+  "not_covered": [
+    "full historical revalidation"
+  ]
+}

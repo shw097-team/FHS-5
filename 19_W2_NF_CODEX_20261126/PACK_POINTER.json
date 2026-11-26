@@ -1,0 +1,42 @@
+{
+ "round": "HERMES-F5-W2-PACK-NF-FINAL-r1",
+ "canonical": {
+  "dir": "W2_Native-first_HERMES_主用修補_交付/FHS-5_PLP_W2_NATIVE_FIRST",
+  "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+  "candidate": "W2-NF-r3-CODEX-PRIMARY",
+  "manifest": "05_W2_SOURCE_MANIFEST.json",
+  "manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+  "manifest_bytes": 65377,
+  "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+  "files": 31
+ },
+ "supplementary": {
+  "appendix": "W2_Native-first_HERMES_主用修補_交付/FHS-5_PLP_W2_Native-first_HERMES_修補證據型附錄.md",
+  "appendix_sha256": "d192947c2642b0a18881e14243e3a58eaee7f662a3375d0afdea5fe967db7829",
+  "appendix_bytes": 24873,
+  "role": "evidence + owner-selection record; not a seventh normative document"
+ },
+ "non_canonical_preimages": [
+  {
+   "dir": "00_frozen_input/r1/FHS-5_PLP_W2_NATIVE_FIRST",
+   "role": "author candidate (GPT WORK), read-only"
+  },
+  {
+   "dir": "00_frozen_input/r2/FHS-5_PLP_W2_NATIVE_FIRST",
+   "role": "first repair pass, read-only"
+  }
+ ],
+ "rule": "only the canonical dir may be executed; a preimage is evidence, never a second candidate",
+ "claim_ceiling": "PRIMARY_AUTHORIZED_SCOPED_CONSTRUCTION_DOCUMENT_BASIS",
+ "not_claimed": [
+  "W2_EXECUTION_READY",
+  "W2_NF_VALIDATED",
+  "NATIVE_PASS",
+  "INDEPENDENT_PASS",
+  "W3_TECHNICALLY_READY",
+  "RELEASED",
+  "M-DONE",
+  "W2_TECHNICALLY_READY"
+ ],
+ "owner_selection": "bound to manifest_sha256 above, recorded in the appendix; absent appendix -> PACK_SELECTION_UNVERIFIED"
+}

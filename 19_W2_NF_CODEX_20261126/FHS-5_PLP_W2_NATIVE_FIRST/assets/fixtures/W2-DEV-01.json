@@ -1,0 +1,132 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-DEV-01",
+  "kind": "POS",
+  "requirement_refs": [
+    "U-013.a",
+    "U-013.b",
+    "U-013.c",
+    "W2-CODEX-01",
+    "W2-A03"
+  ],
+  "child": [
+    "RepoContext",
+    "PrePost",
+    "WriteSet"
+  ],
+  "effect": "REPOSITORY_WRITE",
+  "note": "Runtime repo/HEAD/preimage are intentionally null; the fixture encodes relations and shapes, not a real repository value.",
+  "inputs": {
+    "repo": {
+      "root_ref": "OWNER_ALLOWED_REPO_ROOT",
+      "head": null,
+      "head_relation": "live_git_rev_parse_HEAD",
+      "branch": null,
+      "dirty_preservation": true,
+      "untracked_preservation": true,
+      "acl_ref": null
+    },
+    "write_set": [
+      {
+        "path": "src/tag_normalizer.py",
+        "operation": "modify",
+        "before": {
+          "exists": true,
+          "bytes": null,
+          "sha256": null,
+          "relation": "must_equal_live_preimage"
+        },
+        "post_relation": "sha256_changed_and_expected_frozen"
+      },
+      {
+        "path": "tests/test_tag_normalizer_w2.py",
+        "operation": "add",
+        "before": {
+          "exists": false,
+          "parent_exists": true,
+          "sha256": null
+        },
+        "post_relation": "exists_with_frozen_expected_sha"
+      },
+      {
+        "path": "legacy/old_tag_adapter.py",
+        "operation": "delete",
+        "before": {
+          "exists": true,
+          "bytes": null,
+          "sha256": null,
+          "relation": "must_equal_live_preimage"
+        },
+        "post_relation": "absent"
+      }
+    ],
+    "tests": [
+      {
+        "id": "affected-unit",
+        "expected_exit": 0,
+        "semantic_required": true
+      }
+    ],
+    "reverse": {
+      "kind": "REVERSE_PATCH_OR_PREIMAGE_RESTORE",
+      "independent_copy": true
+    }
+  },
+  "preconditions": [
+    "Owner DEV authorization",
+    "repo ACL",
+    "exact preimage/absence",
+    "frozen oracle",
+    "reverse capability"
+  ],
+  "forbidden_actions": [
+    "whole-repo glob",
+    "git reset --hard",
+    "git clean -fd",
+    "unlisted delete",
+    "empty-string as absence"
+  ],
+  "not_covered": [
+    "original-domain DEV ECP",
+    "different principal",
+    "W3/W4 full scope"
+  ],
+  "write_set": [
+    {
+      "path": "W1/check/w2_receiver.py",
+      "operation": "modify",
+      "before": {
+        "exists": true,
+        "bytes": null,
+        "sha256": null,
+        "relation": "must_equal_live_preimage_at_bound_head",
+        "recorded_pin": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+        "recorded_pin_must_be_recomputed": true
+      },
+      "post_relation": "sha256_changed_and_expected_frozen"
+    },
+    {
+      "path": "W1/check/test_j1_receiver.py",
+      "operation": "add",
+      "before": {
+        "exists": false,
+        "parent_exists": true,
+        "sha256": null
+      },
+      "post_relation": "exists_with_frozen_expected_sha"
+    }
+  ],
+  "write_set_binding": {
+    "ecp": "01_W2_DEV_ECP.md §5.1",
+    "rule": "exact equality; any target not listed here is out of scope",
+    "forbidden_target_families": [
+      "G4/tag_normalizer analogue paths (ADR-W2-04)",
+      "any path not listed in 01 §5.1"
+    ],
+    "delete_targets": []
+  }
+}

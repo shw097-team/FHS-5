@@ -1,0 +1,39 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-R3-01",
+  "kind": "POS",
+  "pass_predicate": "len(rows)==13 and len(nf_rows)==3 and each row has owner/request/receipt_route and actual_null_preserved",
+  "required_observations": [
+    "row_ids",
+    "owners",
+    "typed_fields",
+    "resume",
+    "actual_refs"
+  ],
+  "expected_tokens": [
+    "THIRTEEN_ROWS",
+    "THREE_NF_ROWS",
+    "NULL_PRESERVED"
+  ],
+  "forbidden_tokens": [
+    "ALL_TRUE",
+    "NF_MERGED_INTO_13"
+  ],
+  "fail_if": [
+    "missing row",
+    "true without receipt",
+    "dropped owner"
+  ],
+  "raw_schema": [
+    "row_table",
+    "source_pins"
+  ],
+  "not_covered": [
+    "original domain close"
+  ]
+}

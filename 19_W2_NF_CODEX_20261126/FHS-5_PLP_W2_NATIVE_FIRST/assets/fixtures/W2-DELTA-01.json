@@ -1,0 +1,117 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-DELTA-01",
+  "kind": "POS",
+  "requirement_refs": [
+    "J2-T05",
+    "J2-T06",
+    "W2-B10",
+    "GUIDE-NINE-KEYS"
+  ],
+  "child": [
+    "GuideDelta"
+  ],
+  "effect": "READ",
+  "inputs": {
+    "periods": {
+      "A": {
+        "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+        "scope": "W2-NF-01",
+        "source_sha": "SOURCE_SET_SHA_A",
+        "repo_head": "HEAD_A",
+        "host_id": "HOST_A",
+        "policy_epoch": "EPOCH_A",
+        "oracle_sha": "ORACLE_A",
+        "world_raw_sha": "WORLD_A",
+        "first_fail": "FIRST_FAIL_A"
+      },
+      "B": {
+        "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+        "scope": "W2-NF-01",
+        "source_sha": "SOURCE_SET_SHA_A",
+        "repo_head": "HEAD_A",
+        "host_id": "HOST_A",
+        "policy_epoch": "EPOCH_A",
+        "oracle_sha": "ORACLE_A",
+        "world_raw_sha": "WORLD_A",
+        "first_fail": "FIRST_FAIL_A"
+      }
+    },
+    "verifier": "guide_nf.reconcile_guide_delta",
+    "candidate_sha_same": true,
+    "evidence_sha_same": true,
+    "missing_verifier_variant": true,
+    "missing_period_variant": true,
+    "variants": {
+      "same": {
+        "A": {
+          "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+          "scope": "W2-NF-01",
+          "source_sha": "SOURCE_SET_SHA_A",
+          "repo_head": "HEAD_A",
+          "host_id": "HOST_A",
+          "policy_epoch": "EPOCH_A",
+          "oracle_sha": "ORACLE_A",
+          "world_raw_sha": "WORLD_A",
+          "first_fail": "FIRST_FAIL_A"
+        },
+        "B": {
+          "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+          "scope": "W2-NF-01",
+          "source_sha": "SOURCE_SET_SHA_A",
+          "repo_head": "HEAD_A",
+          "host_id": "HOST_A",
+          "policy_epoch": "EPOCH_A",
+          "oracle_sha": "ORACLE_A",
+          "world_raw_sha": "WORLD_A",
+          "first_fail": "FIRST_FAIL_A"
+        },
+        "expected": "REUSE_LASTGOOD"
+      },
+      "delta": {
+        "A": {
+          "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+          "scope": "W2-NF-01",
+          "source_sha": "SOURCE_SET_SHA_A",
+          "repo_head": "HEAD_A",
+          "host_id": "HOST_A",
+          "policy_epoch": "EPOCH_A",
+          "oracle_sha": "ORACLE_A",
+          "world_raw_sha": "WORLD_A",
+          "first_fail": "FIRST_FAIL_A"
+        },
+        "B": {
+          "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+          "scope": "W2-NF-01",
+          "source_sha": "SOURCE_SET_SHA_A",
+          "repo_head": "HEAD_A",
+          "host_id": "HOST_A",
+          "policy_epoch": "EPOCH_A",
+          "oracle_sha": "ORACLE_A",
+          "world_raw_sha": "WORLD_B_DIFFERS",
+          "first_fail": "FIRST_FAIL_A"
+        },
+        "expected": "NEW_MATERIAL_EVIDENCE"
+      }
+    },
+    "fixture_never_sufficient": true
+  },
+  "preconditions": [
+    "two true periods",
+    "true verifier",
+    "same subject/scope/candidate"
+  ],
+  "forbidden_actions": [
+    "PARK on one period",
+    "fixture-only PARK",
+    "caller verified=true without verifier"
+  ],
+  "not_covered": [
+    "W3 FAR seven keys"
+  ],
+  "note": "Periods here are SHAPES, not two measured periods. A runner must obtain two independently produced nine-key records; reading these values back and reporting agreement is fixture-only PARK and is forbidden. The `delta` variant exists so the case can falsify as well as confirm."
+}

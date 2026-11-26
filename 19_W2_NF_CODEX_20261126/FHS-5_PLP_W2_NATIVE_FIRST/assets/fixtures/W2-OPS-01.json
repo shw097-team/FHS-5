@@ -1,0 +1,72 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-OPS-01",
+  "kind": "POS",
+  "requirement_refs": [
+    "U-014.a",
+    "U-014.b",
+    "U-014.c",
+    "U-014.d",
+    "W2-CODEX-02",
+    "W2-A03",
+    "W2-A05"
+  ],
+  "child": [
+    "HostID",
+    "OSPrincipal",
+    "PolicyEpoch",
+    "Recovery"
+  ],
+  "effect": "HOST_EFFECT",
+  "inputs": {
+    "host_id": null,
+    "principal_ref": null,
+    "policy_epoch": null,
+    "receiver_abi": null,
+    "allowed_output_root": "OWNER_ALLOWED_W2_OPS_ROOT",
+    "target": {
+      "path": "out/w2/OPS-A/w2_binding_receipt.json",
+      "before": {
+        "exists": false,
+        "parent_exists": true
+      },
+      "post": {
+        "exists": true,
+        "semantic_fields": [
+          "subject",
+          "scope",
+          "pins",
+          "parsed",
+          "readback"
+        ]
+      }
+    },
+    "world_reader": null,
+    "compensation": {
+      "kind": "DELETE_CREATED_ONLY_OR_HOST_RESTORE",
+      "git_revert_allowed": false
+    }
+  },
+  "preconditions": [
+    "Owner OPS authorization",
+    "Host/OS ACL",
+    "receiver",
+    "preimage/absence",
+    "host-specific recovery"
+  ],
+  "forbidden_actions": [
+    "git revert as OPS",
+    "exit0 as world",
+    "write outside allowed root",
+    "delete others"
+  ],
+  "not_covered": [
+    "other hosts",
+    "container/cloud",
+    "Publisher"
+  ]
+}

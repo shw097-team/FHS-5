@@ -1,0 +1,37 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-R3-04",
+  "kind": "EDGE",
+  "pass_predicate": "reported_WORKSPACE_DRIFT_BOUNDED and period_split_preserved and affected_only",
+  "required_observations": [
+    "workspace_counts",
+    "period_pins",
+    "affected_cone",
+    "no_rewrite_probe"
+  ],
+  "expected_tokens": [
+    "WORKSPACE_DRIFT_BOUNDED"
+  ],
+  "forbidden_tokens": [
+    "WHOLE_WORKSPACE_REWRITE",
+    "PERIOD_MERGE"
+  ],
+  "fail_if": [
+    "fabricated bytes",
+    "global rewrite",
+    "one count forced to another"
+  ],
+  "raw_schema": [
+    "count_table",
+    "period_pins",
+    "affected_list"
+  ],
+  "not_covered": [
+    "history"
+  ]
+}

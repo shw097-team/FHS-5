@@ -1,0 +1,46 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-R3-03",
+  "kind": "NEG",
+  "requirement_refs": [
+    "U-013.b",
+    "U-013.c",
+    "W0-F-08",
+    "D06",
+    "W2-B09"
+  ],
+  "child": [
+    "PrePost",
+    "WriteSet"
+  ],
+  "effect": "REPOSITORY_WRITE",
+  "inputs": {
+    "historical_preimage": {
+      "source": "G4/CH-07",
+      "bytes": 125,
+      "sha256": "13df86fa8b75dc454351e584f8d2f363b0323f8c9b6948851ea40c1428e4423a"
+    },
+    "live_preimage": null,
+    "proposed_write_set": [
+      {
+        "path": "src/tag_normalizer.py",
+        "operation": "modify"
+      }
+    ]
+  },
+  "preconditions": [
+    "historical preimage exists; live preimage missing"
+  ],
+  "forbidden_actions": [
+    "use historical bytes as live",
+    "write",
+    "fabricate live preimage"
+  ],
+  "not_covered": [
+    "CH-07 missing bytes"
+  ]
+}

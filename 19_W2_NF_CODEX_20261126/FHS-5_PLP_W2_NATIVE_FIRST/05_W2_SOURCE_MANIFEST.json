@@ -1,0 +1,2162 @@
+{
+ "schema": "FHS5.PLP.W2.SourceManifest.NF@2",
+ "pack_version": "W2-NF-r3-CODEX-PRIMARY",
+ "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+ "project_id": "FHS-5_PLP",
+ "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+ "scope": "W2-NF-01",
+ "wave_id": "W2",
+ "batch_id": "W2-NF-01",
+ "profile": "GENERIC_CODEX_NATIVE_FIRST",
+ "draft": false,
+ "author_state": "W2_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
+ "claim_ceiling": "PRIMARY_AUTHORIZED_SCOPED_CONSTRUCTION_DOCUMENT_BASIS",
+ "not_claimed": [
+  "W2_EXECUTION_READY",
+  "W2_NF_VALIDATED",
+  "NATIVE_PASS",
+  "INDEPENDENT_PASS",
+  "W3_TECHNICALLY_READY",
+  "RELEASED",
+  "M-DONE",
+  "W2_TECHNICALLY_READY"
+ ],
+ "identity": {
+  "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+  "candidate": "W2-NF-r3-CODEX-PRIMARY",
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "wave_id": "W2",
+  "batch_id": "W2-NF-01",
+  "distinct_from": [
+   "FHS-5_PLP/W1/CONTROL_PACK",
+   "FHS-5_PLP/W2/INBOUND_DRAFT",
+   "FHS5-PLP/W2/PACK-NF-20261126-r1",
+   "FHS5-PLP/W2/PACK-NF-20261126-r2"
+  ],
+  "scope_is_not_authority": true
+ },
+ "authority_product_scope": {
+  "owner_ref": null,
+  "adoption_ref": null,
+  "allowed_read_roots_request": [
+   "OWNER_SPECIFIED_REPO_OR_HOST_ROOT"
+  ],
+  "allowed_output_root_request": "OWNER_SPECIFIED_W2_OUTPUT_ROOT",
+  "effect_applicability": [
+   "READ",
+   "DRAFT",
+   "DEV",
+   "OPS"
+  ],
+  "not_applicable_this_pack": [
+   "USER",
+   "RELEASE"
+  ],
+  "permission_state": "NONE_GRANTED",
+  "grant_ref": null,
+  "admission_state": "NOT_ADMITTED"
+ },
+ "source_roots": {
+  "S": {
+   "root_path_local_hint": "C:\\Users\\user\\Downloads\\FHS-5",
+   "rights": "OWNER_INTERNAL_READONLY",
+   "note": "local hint only; not a W2 runtime root"
+  },
+  "WORK": {
+   "root_path_local_hint": "C:\\Users\\user\\Documents\\Codex\\2026-11-26\\fhs-5-plp-w2-codex-native-5",
+   "rights": "AUTHOR_WORK_SCRATCH_READONLY",
+   "note": "author work files fetched or generated in this run"
+  }
+ },
+ "sources": [
+  {
+   "id": "M",
+   "role": "MASTER r3 affected law/CR",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_總藍圖/FHS-5_PLP_總藍圖_2026-11-21_r3_高保留全量升級修補_完整實質正文.md",
+   "bytes": 325511,
+   "sha256": "2026da4b847c1368e44e4488443b6ba58416b269fc7c67b3c1faed8cfd19f2c7",
+   "lines": 3016,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_READ",
+   "version": "r3"
+  },
+  {
+   "id": "B00",
+   "role": "PROG-00 NF-r2",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROG-00_CODEX-NATIVE-FIRST_完整實質正文.md",
+   "bytes": 126626,
+   "sha256": "cdd1d76ec20fad19bff96153b11a65a1d0ba98074e4d68d2abfaae5a72c89797",
+   "lines": 908,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_FULL_READ",
+   "version": "NF-r2"
+  },
+  {
+   "id": "B01",
+   "role": "PROJ-01 TPM/Reviewer NF-r2",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-01_CODEX-NATIVE-FIRST_完整實質正文.md",
+   "bytes": 68023,
+   "sha256": "aa823374dabce5218611a248fda3c8f68a7f0b0d6b51ffa2e4915f7aec4d0392",
+   "lines": 574,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_FULL_READ",
+   "version": "NF-r2"
+  },
+  {
+   "id": "B02",
+   "role": "PROJ-02 Guide NF-r2",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-02_CODEX-NATIVE-FIRST_完整實質正文.md",
+   "bytes": 65006,
+   "sha256": "37022f33e5a67ad3165b0a47d36b359255f13719047fa71508e2b80624fc3884",
+   "lines": 596,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_FULL_READ",
+   "version": "NF-r2"
+  },
+  {
+   "id": "B03",
+   "role": "PROJ-03 Bridge NF-r2",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-03_CODEX-NATIVE-FIRST_完整實質正文.md",
+   "bytes": 56268,
+   "sha256": "a13a9df4252a557a3e246035f136295fe1cad5990e828f9ec3d5df083307db98",
+   "lines": 490,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_FULL_READ",
+   "version": "NF-r2"
+  },
+  {
+   "id": "B04",
+   "role": "PROJ-04 Challenge NF-r2",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-04_CODEX-NATIVE-FIRST_完整實質正文.md",
+   "bytes": 57182,
+   "sha256": "fb529a784b7d929f15a23ed63ea82b7d5f5117e927311b1f164eb005da469323",
+   "lines": 506,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_FULL_READ",
+   "version": "NF-r2"
+  },
+  {
+   "id": "B05",
+   "role": "PROJ-05 FAR NF-r2",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_PROG_全PROJ/FHS-5_PLP_PROJ-05_CODEX-NATIVE-FIRST_完整實質正文.md",
+   "bytes": 67845,
+   "sha256": "794d91cc8080715886d5dc30b92e74b1f123fbe0aee47256bf1e84d749648dfe",
+   "lines": 557,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_FULL_READ",
+   "version": "NF-r2"
+  },
+  {
+   "id": "WM0",
+   "role": "W0M CODEX-FIRST-r4",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_W0-W4_執行控制小包/W0/FHS-5_PLP_W0_Native-first_CODEX_主用修補_交付/W0M_CODEX_FIRST/FHS-5_PLP_W0M_完整實質正文_CODEX-FIRST-r4.md",
+   "bytes": 108861,
+   "sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+   "lines": 1191,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_SECTIONS_NOT_REOPENED",
+   "version": "CODEX-FIRST-r4"
+  },
+  {
+   "id": "WM1",
+   "role": "W1M NF-r2",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_WM/FHS-5_PLP_W1M_CODEX-NATIVE-FIRST_完整實質正文.md",
+   "bytes": 99289,
+   "sha256": "a91c4ed36cc2977372a5333bce068abe6a5e222b95cda5fe5dc81ef6cfe6c9c1",
+   "lines": 1202,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_FULL_READ",
+   "version": "NF-r2"
+  },
+  {
+   "id": "WM2",
+   "role": "W2M NF-r2 direct design source",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_WM/FHS-5_PLP_W2M_CODEX-NATIVE-FIRST_完整實質正文.md",
+   "bytes": 67015,
+   "sha256": "2b98be965651721257164c555f7e9f86228e5e6dd15787c0540c1a6a0cd90093",
+   "lines": 1011,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "NF-r2"
+  },
+  {
+   "id": "C0",
+   "role": "W0 CLOSEOUT latest",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_W0-W4_執行控制小包/CLOSEOUT & HANDOFF/FHS-5_PLP_W0_CLOSEOUT.md",
+   "bytes": 21927,
+   "sha256": "23cfa1f640227c0f3ede052faacbeb14364f5a9337ca436970449de500827b3f",
+   "lines": 290,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "KEY_SECTIONS_READ",
+   "version": "W0-NF"
+  },
+  {
+   "id": "H0",
+   "role": "W0 HANDOFF W0-NF-HANDOFF-20261125-03",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_W0-W4_執行控制小包/CLOSEOUT & HANDOFF/FHS-5_PLP_W0_HANDOFF.md",
+   "bytes": 3265,
+   "sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+   "lines": 67,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "W0-NF"
+  },
+  {
+   "id": "C1",
+   "role": "W1 CLOSEOUT NF-r4 run 20261126T003047",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_W0-W4_執行控制小包/CLOSEOUT & HANDOFF/FHS-5_PLP_W1_CLOSEOUT.md",
+   "bytes": 9231,
+   "sha256": "2954523723b8275298299727b3f615d9d717536af464532b9eb2c0100055ac4a",
+   "lines": 172,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "NF-r4"
+  },
+  {
+   "id": "H1",
+   "role": "W1 HANDOFF NF-r4 run 20261126T003047",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_W0-W4_執行控制小包/CLOSEOUT & HANDOFF/FHS-5_PLP_W1_HANDOFF.md",
+   "bytes": 1891,
+   "sha256": "ffea91770c055bf800889e268d265d046b81d7ae79433069fcff0b7f489b38d9",
+   "lines": 45,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "NF-r4"
+  },
+  {
+   "id": "PLAN",
+   "role": "F5-W2-PACK-NF-PLAN-r1 engineering plan",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_W0-W4_執行控制小包/W2/FHS-5_PLP_W2_執行控制小包_CODEX_Native-first_高保留全量精簡重構_工程方案.md",
+   "bytes": 123698,
+   "sha256": "f92213a1aabcde1586025eae3dc0c7ebfc5886584e4d4af3c84b4669e9651ab7",
+   "lines": 731,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "r1"
+  },
+  {
+   "id": "CONTROL",
+   "role": "WORK-F5-W2-PACK-NF-r1 author control pack",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_W0-W4_執行控制小包/W2/OLD/FHS-5_PLP_W2_CODEX_Native-first_GPT_WORK_最小執行控制包.md",
+   "bytes": 32402,
+   "sha256": "7f0de5f58b7080944dede3a70864c682efad7a047e61ce66344a4169843398c4",
+   "lines": 188,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "r1",
+   "relocated_from": "FHS-5_PLP_W0-W4_執行控制小包/W2/FHS-5_PLP_W2_CODEX_Native-first_GPT_WORK_最小執行控制包.md",
+   "relocation_note": "verified byte-identical at the OLD/ path (32402 B, sha256 7f0de5f5…); path corrected in r2, digest/bytes unchanged"
+  },
+  {
+   "id": "W1-05",
+   "role": "W1 pack manifest 05 (pack_manifest_sha256)",
+   "locator_type": "local_readonly",
+   "source_root_ref": "S",
+   "path": "FHS-5_PLP_W0-W4_執行控制小包/W1/W1_Native-first_CODEX_主用修補_交付/FHS-5_PLP_W1_NATIVE_FIRST/05_W1_SOURCE_MANIFEST.json",
+   "bytes": 35959,
+   "sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+   "lines": 990,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "HASH_VERIFIED_NOT_FULL_READ",
+   "version": "NF-r5"
+  },
+  {
+   "id": "W2-DRAFT-MANIFEST",
+   "role": "W1 G1 W2 inbound DRAFT manifest; 13 rows, 3 MD, NONE_GRANTED",
+   "locator_type": "fetched_readonly_snapshot",
+   "source_root_ref": "WORK",
+   "path": "work/draft_manifest.json",
+   "bytes": 4611,
+   "sha256": "c251ebc0f9ad292fa08511991488b988a92ac1b82a150da3a492aed4d401bfa8",
+   "lines": 159,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "W2-INBOUND-DRAFT-r1"
+  },
+  {
+   "id": "W2-INBOUND-RECEIPT",
+   "role": "W1 G1 W2 inbound receipt; 5 seams, 13 rows, consumer readback",
+   "locator_type": "fetched_readonly_snapshot",
+   "source_root_ref": "WORK",
+   "path": "work/w2_inbound_receipt.json",
+   "bytes": 11018,
+   "sha256": "2633ad90af8ddc332457ecd57cd0757775a06365c2ffb02761f6f7faa328ab67",
+   "lines": 229,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "20261126T001050"
+  },
+  {
+   "id": "W2-RECEIVE-RECEIPT",
+   "role": "W1 G1 W2 receive receipt; 29 checks",
+   "locator_type": "fetched_readonly_snapshot",
+   "source_root_ref": "WORK",
+   "path": "work/w2_receive_receipt.json",
+   "bytes": 5560,
+   "sha256": "896e84632c3c6c8be19409b590f6cf5c4b59f2db7bd273a0018a129103e23462",
+   "lines": 200,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "2026-11-25T16:30:49Z"
+  },
+  {
+   "id": "W1-DELIVERY-SEAL",
+   "role": "W1 G1 DELIVERY_SEAL",
+   "locator_type": "fetched_readonly_snapshot",
+   "source_root_ref": "WORK",
+   "path": "work/w1_delivery_seal.json",
+   "bytes": 566,
+   "sha256": "f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73",
+   "lines": 12,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ",
+   "availability": "LOCAL_READONLY",
+   "read_level": "FULL_READ",
+   "version": "NF-r5"
+  },
+  {
+   "id": "W1-RECEIVER",
+   "role": "W1 w2_receiver.py; J1 repair target",
+   "locator_type": "git_commit_path",
+   "repo_url": "https://github.com/shw097-team/FHS-5",
+   "commit": "9fae9257a3402928efbe6ff0cd66f45761f52846",
+   "path": "W1/check/w2_receiver.py",
+   "git_blob_sha": "406b20ac527609d976f93c62cd9cdfbc2f7015a1",
+   "bytes": 9336,
+   "sha256": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+   "lines": null,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ; REPO_NOTICE_APPLIES",
+   "availability": "GIT_PATH_VERIFIED; RAW_BYTES_RECORDED_IN_C1_NOT_LOCALLY_RECOMPUTED",
+   "read_level": "RECORDED_PIN_NOT_REOPENED",
+   "version": "NF-r5"
+  },
+  {
+   "id": "W1-INBOUND",
+   "role": "W1 w2_inbound.py; J2 five-seam code",
+   "locator_type": "git_commit_path",
+   "repo_url": "https://github.com/shw097-team/FHS-5",
+   "commit": "9fae9257a3402928efbe6ff0cd66f45761f52846",
+   "path": "W1/impl/w2_inbound.py",
+   "git_blob_sha": "1fbb0f40db3ce23341138ce730d2038fa769e1b3",
+   "bytes": 11374,
+   "sha256": "391dd7072ca84ab3ef40a859867efc2cdcfd3be186ab9e6892e44d145aab0555",
+   "lines": null,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ; REPO_NOTICE_APPLIES",
+   "availability": "GIT_PATH_VERIFIED; RAW_BYTES_RECORDED_IN_C1_NOT_LOCALLY_RECOMPUTED",
+   "read_level": "RECORDED_PIN_NOT_REOPENED",
+   "version": "NF-r5"
+  },
+  {
+   "id": "W1-GUIDE",
+   "role": "W1 guide_nf.py; nine keys",
+   "locator_type": "git_commit_path",
+   "repo_url": "https://github.com/shw097-team/FHS-5",
+   "commit": "9fae9257a3402928efbe6ff0cd66f45761f52846",
+   "path": "W1/impl/guide_nf.py",
+   "git_blob_sha": "f090775f7ec644319a85d48b665c9e9ff857e5e2",
+   "bytes": 13516,
+   "sha256": "90e9b6b5fbd596ca85150ddb2bb721f4cdc1c1cc49ce0f34d5617040096c928e",
+   "lines": null,
+   "spans": [],
+   "rights": "OWNER_INTERNAL_READ; REPO_NOTICE_APPLIES",
+   "availability": "GIT_PATH_VERIFIED; RAW_BYTES_RECORDED_IN_C1_NOT_LOCALLY_RECOMPUTED",
+   "read_level": "RECORDED_PIN_NOT_REOPENED",
+   "version": "NF-r5"
+  }
+ ],
+ "source_set_sha256": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+ "source_set_algorithm": "sha256(UTF-8 join(sorted(id|sha256|bytes), '\\n'))",
+ "pack_files": [
+  {
+   "path": "00_W2_PI_PD.md",
+   "bytes": 60853,
+   "sha256": "87899d13056294e5f065a5338250064f7e6ba134c3b47a6060a6b62b2d925c92",
+   "lines": 632,
+   "role": "PI/PD core: three SPEC, 13+3, 6 WP, DAG, 7 seams, J1-J3, HOLD/CR/RQ"
+  },
+  {
+   "path": "01_W2_DEV_ECP.md",
+   "bytes": 21795,
+   "sha256": "8c70e65eb020228811289461a7ced4d0ca484c05074cc149496407b44340263d",
+   "lines": 326,
+   "role": "DEV ECP: DEV-D01..D07, J1 repair, exact write set, recovery"
+  },
+  {
+   "path": "02_W2_OPS_ECP.md",
+   "bytes": 19372,
+   "sha256": "3716a50411558954ff6c47d70949117a73a8418c6f786280ac9defe7bbcbb934",
+   "lines": 285,
+   "role": "OPS ECP: O01..O06, host effect, WorldRaw, compensation, UNKNOWN"
+  },
+  {
+   "path": "03_W2_TQAEP.md",
+   "bytes": 22289,
+   "sha256": "f4ee273004210a7b850ad43a6b0367775cf1c81bf2ea19da3966b97383ab6c8a",
+   "lines": 373,
+   "role": "TQAEP: 12 original cases, J/N subcases, fixtures/oracles/runner routes"
+  },
+  {
+   "path": "04_W2_START_THIN_PROMPT.md",
+   "bytes": 7104,
+   "sha256": "b62a62e8a43bf89c06d4b6b2ff18ea08746730e9896e8c75519285e741e9d1d8",
+   "lines": 81,
+   "role": "Unique CODEX start entry"
+  }
+ ],
+ "pack_files_self_excluded": [
+  "05_W2_SOURCE_MANIFEST.json"
+ ],
+ "assets": [
+  {
+   "path": "assets/cases/case_index.json",
+   "bytes": 6325,
+   "sha256": "b85ff62161fb8f2ed00a1884bd3b15a201327f0037eee701f8869212ebd46301",
+   "role": "case_index"
+  },
+  {
+   "path": "assets/fixtures/W2-AUTH-01.json",
+   "bytes": 893,
+   "sha256": "80502748eece6d9619adb03228740f04f60dfe3fc918b22f75d19520d99045fa",
+   "role": "case_fixture",
+   "case_id": "W2-AUTH-01"
+  },
+  {
+   "path": "assets/fixtures/W2-DELTA-01.json",
+   "bytes": 3521,
+   "sha256": "cb61b06f00559edcfa4d8fbc43c6fa812d4aa3cb1e19c65b1d5dac1bfe5e07ca",
+   "role": "case_fixture",
+   "case_id": "W2-DELTA-01"
+  },
+  {
+   "path": "assets/fixtures/W2-DEV-01.json",
+   "bytes": 3380,
+   "sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001",
+   "role": "case_fixture",
+   "case_id": "W2-DEV-01"
+  },
+  {
+   "path": "assets/fixtures/W2-DEV-02.json",
+   "bytes": 940,
+   "sha256": "99f910663b7f85afc598b5e84a91f2707d9181c386367195120ac5bf04a2e6b6",
+   "role": "case_fixture",
+   "case_id": "W2-DEV-02"
+  },
+  {
+   "path": "assets/fixtures/W2-EFFECT-01.json",
+   "bytes": 821,
+   "sha256": "3492f8cc0b774dbc5c6db301a08fc1efc4d3ed55045d7e856415f286a5b8ec57",
+   "role": "case_fixture",
+   "case_id": "W2-EFFECT-01"
+  },
+  {
+   "path": "assets/fixtures/W2-OPS-01.json",
+   "bytes": 1492,
+   "sha256": "03494b3cca8e229064cfc98a791b18cea478a3cbc602a9f6dd6707608d463f17",
+   "role": "case_fixture",
+   "case_id": "W2-OPS-01"
+  },
+  {
+   "path": "assets/fixtures/W2-OPS-02.json",
+   "bytes": 834,
+   "sha256": "168e857025f505fb2fc9b56a5391f2e89d605fe0e9f72742c9093e1ed952b055",
+   "role": "case_fixture",
+   "case_id": "W2-OPS-02"
+  },
+  {
+   "path": "assets/fixtures/W2-R3-01.json",
+   "bytes": 3032,
+   "sha256": "5c721f1524cbdb1f63496773444b1e0f2535ea9cb082c067ec854aa696f98ca2",
+   "role": "case_fixture",
+   "case_id": "W2-R3-01"
+  },
+  {
+   "path": "assets/fixtures/W2-R3-02.json",
+   "bytes": 1124,
+   "sha256": "9867a71507bc5d1e4a6ee1d4bcb02b6d10c6cad37af78623a7aa67660b72d632",
+   "role": "case_fixture",
+   "case_id": "W2-R3-02"
+  },
+  {
+   "path": "assets/fixtures/W2-R3-03.json",
+   "bytes": 978,
+   "sha256": "8566b623ab3d16134e7e5461bf31e7b26a1087395103841e815c6fa3cfc51b2e",
+   "role": "case_fixture",
+   "case_id": "W2-R3-03"
+  },
+  {
+   "path": "assets/fixtures/W2-R3-04.json",
+   "bytes": 837,
+   "sha256": "7c8ba861cbce7c5d92d4683005d4d8202c0907f89e65b3e7a88e759eb976c81e",
+   "role": "case_fixture",
+   "case_id": "W2-R3-04"
+  },
+  {
+   "path": "assets/fixtures/W2-RUNNER-01.json",
+   "bytes": 768,
+   "sha256": "7ea614b4f40f32c0bbff0964faca0229270e623cd8cec38ec9057b0fe6915ea9",
+   "role": "case_fixture",
+   "case_id": "W2-RUNNER-01"
+  },
+  {
+   "path": "assets/oracles/W2-AUTH-01.json",
+   "bytes": 880,
+   "sha256": "6365e89546a7cd9755d78e03d27589c16e6a1bb4d17ee6b47a7008207e644b5f",
+   "role": "case_oracle",
+   "case_id": "W2-AUTH-01"
+  },
+  {
+   "path": "assets/oracles/W2-DELTA-01.json",
+   "bytes": 1221,
+   "sha256": "155dc1054bcc6a79d7c981a48abd4778618fa314ecfbbb443815ee15dcd293b5",
+   "role": "case_oracle",
+   "case_id": "W2-DELTA-01"
+  },
+  {
+   "path": "assets/oracles/W2-DEV-01.json",
+   "bytes": 1433,
+   "sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb",
+   "role": "case_oracle",
+   "case_id": "W2-DEV-01"
+  },
+  {
+   "path": "assets/oracles/W2-DEV-02.json",
+   "bytes": 841,
+   "sha256": "4d29d6270963f8f89e05e15c51b74ee2efeb28fa708c41c37c4787a0b1f00798",
+   "role": "case_oracle",
+   "case_id": "W2-DEV-02"
+  },
+  {
+   "path": "assets/oracles/W2-EFFECT-01.json",
+   "bytes": 838,
+   "sha256": "a1e4c91f86e982ef857f89ef44025cfbea90392f3298750cdac809dec63e1695",
+   "role": "case_oracle",
+   "case_id": "W2-EFFECT-01"
+  },
+  {
+   "path": "assets/oracles/W2-OPS-01.json",
+   "bytes": 1160,
+   "sha256": "9d5e723084add8c1cc14e33a1eba15e4f5a07a62cfbe49eda2d0df15c9b3aeab",
+   "role": "case_oracle",
+   "case_id": "W2-OPS-01"
+  },
+  {
+   "path": "assets/oracles/W2-OPS-02.json",
+   "bytes": 831,
+   "sha256": "a5d8732e42719f6f73f56bed350604f13d0d0fad456a01148be3ccc4c3346b56",
+   "role": "case_oracle",
+   "case_id": "W2-OPS-02"
+  },
+  {
+   "path": "assets/oracles/W2-R3-01.json",
+   "bytes": 880,
+   "sha256": "970ec9d73646a673b8e15320aa35efc3ad57e225a08867acbc70cd897ab365e2",
+   "role": "case_oracle",
+   "case_id": "W2-R3-01"
+  },
+  {
+   "path": "assets/oracles/W2-R3-02.json",
+   "bytes": 760,
+   "sha256": "3b2ed871b64c226b9aa834228100c167560360653d0c4593119f84d5300f1e2c",
+   "role": "case_oracle",
+   "case_id": "W2-R3-02"
+  },
+  {
+   "path": "assets/oracles/W2-R3-03.json",
+   "bytes": 794,
+   "sha256": "1f9d9e155317bf125eed1976731e094f75ee749d78d3d7a20af6927c00443743",
+   "role": "case_oracle",
+   "case_id": "W2-R3-03"
+  },
+  {
+   "path": "assets/oracles/W2-R3-04.json",
+   "bytes": 859,
+   "sha256": "d26358c730d2b2e789652a8813de427cb76bc6211422f00061abb7d8258d3b3b",
+   "role": "case_oracle",
+   "case_id": "W2-R3-04"
+  },
+  {
+   "path": "assets/oracles/W2-RUNNER-01.json",
+   "bytes": 805,
+   "sha256": "22931f33af7a05eb637e211b966347815acf87ba4e0f25f78d2d2c3be36eecef",
+   "role": "case_oracle",
+   "case_id": "W2-RUNNER-01"
+  }
+ ],
+ "upstream_handoff": {
+  "W0": {
+   "handoff_id": "W0-NF-HANDOFF-20261125-03",
+   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+   "w0m_amendment_sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+   "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
+   "preimage": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+   "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+   "evidence_manifest_sha256": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93",
+   "consumer_version": "@3",
+   "claim": "W0_NF_VALIDATED (recorded); not W2 grant"
+  },
+  "W1": {
+   "run_id": "20261126T003047",
+   "subject_id": "FHS-5_PLP/W1/CONTROL_PACK",
+   "scope": "W1-NF-01",
+   "pack_manifest_sha256": "61f34a08fa63190b9213d2affab2df0688a2497ba0bf753edf60c82ce4bfa30a",
+   "source_set_sha256": "8f2e484f46ff99bff9e1a0e6bf9dada0daea5ad2ee3b5357deb72435db32636c",
+   "candidate_sha256": "e28d959093c7f1a3e6773f8ac8533c3dc364b726766494e60f3c58f85d205c7c",
+   "case_set_sha256": "63a59b874485e44cd7d37c1186e9d615402ab49f4f5e86285713c2b54645cbce",
+   "evidence_manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+   "w2_receive_receipt_sha256": "896e84632c3c6c8be19409b590f6cf5c4b59f2db7bd273a0018a129103e23462",
+   "delivery_seal_sha256": "f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73",
+   "github": {
+    "repo_url": "https://github.com/shw097-team/FHS-5",
+    "branch": "codex/w1-nf-r3-20261125",
+    "commit": "9fae9257a3402928efbe6ff0cd66f45761f52846",
+    "main": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+    "branch_head_verified_live": true
+   },
+   "claim": "W1_NF_VALIDATED / W2_TECHNICALLY_READY=READY (recorded); W2_EXECUTION_READY not claimed"
+  },
+  "W2_DRAFT": {
+   "artifact_id": "FHS5-PLP/W2/INBOUND_DRAFT/2026-11-25-r1",
+   "subject_id": "FHS-5_PLP/W2/INBOUND_DRAFT",
+   "scope": "W2-READ-01",
+   "batch_id": "W2-IN-DRAFT-01",
+   "schema": "FHS5.PLP.W2.SourceManifest.NF@1",
+   "manifest_sha256": "c251ebc0f9ad292fa08511991488b988a92ac1b82a150da3a492aed4d401bfa8",
+   "manifest_path": "18_W1_NF_CODEX_20261126T000627/evidence/w2/material/05_W2_SOURCE_MANIFEST.json",
+   "bytes": 4611,
+   "rows": 13,
+   "pack_files": 3,
+   "pack_files_list": [
+    "00_W2_DRAFT_PI_PD.md",
+    "03_W2_DRAFT_TQAEP.md",
+    "04_W2_DRAFT_THIN.md"
+   ],
+   "inbound_receipt_sha256": "2633ad90af8ddc332457ecd57cd0757775a06365c2ffb02761f6f7faa328ab67",
+   "permission_state": "NONE_GRANTED",
+   "claim": "draft material only; not a W2 primary pack and not a grant"
+  }
+ },
+ "requirements": [
+  {
+   "id": "W2-B01",
+   "original_ref": "Original OperationType",
+   "fields": "effect.operation_type/effect.token",
+   "type": "enum/string",
+   "owner": "Effect Owner",
+   "original_state": "original_effect_registry_ref=null",
+   "native_equivalent": "00 §4.1 W2-B01",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Effect Owner",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before effect mapping for the applicable op; unknown token is not READ",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "EFFECT_UNBOUND",
+   "resume": "same-scope typed token",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=1",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B02",
+   "original_ref": "RepoContext",
+   "fields": "repo.root/head/branch/dirty",
+   "type": "object",
+   "owner": "Repo Owner",
+   "original_state": "no repo binding",
+   "native_equivalent": "00 §4.1 W2-B02",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Repo Owner",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before any DEV write (P05); not required for READ/DRAFT",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "W2_REPO_BIND",
+   "resume": "live probe + HEAD SHA",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=2",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B03",
+   "original_ref": "HostID/OS Principal/PolicyEpoch",
+   "fields": "host.host_id/principal/epoch",
+   "type": "object",
+   "owner": "Host/OS Owner",
+   "original_state": "no receipt",
+   "native_equivalent": "00 §4.1 W2-B03",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Host/OS Owner",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before any OPS effect; not required for DEV",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "W2_HOST_BIND",
+   "resume": "same Host/Epoch readback",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=3",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B04",
+   "original_ref": "Original DEV ECP",
+   "fields": "ecp.dev_ref",
+   "type": "ref",
+   "owner": "Repo+Issuer",
+   "original_state": "original_ecp_ref=null",
+   "native_equivalent": "00 §4.1 W2-B04",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Repo+Issuer",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before a DEV effect (the document itself may be authored earlier, PLAN §03.3)",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "ECP_NOT_GRANT",
+   "resume": "original DEV ECP typed ref",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=4",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B05",
+   "original_ref": "Original OPS ECP",
+   "fields": "ecp.ops_ref",
+   "type": "ref",
+   "owner": "Host+OS",
+   "original_state": "original_ecp_ref=null",
+   "native_equivalent": "00 §4.1 W2-B05",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Host+OS",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before an OPS effect (the document itself may be authored earlier)",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "ECP_NOT_GRANT",
+   "resume": "original OPS ECP typed ref",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=5",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B06",
+   "original_ref": "Issuer",
+   "fields": "admission.issuer_id",
+   "type": "string",
+   "owner": "Original Issuer",
+   "original_state": "UNBOUND",
+   "native_equivalent": "00 §4.1 W2-B06",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Original Issuer",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before any protected effect (Owner decision: issuer id + scope + expiry + revocation)",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "FALSE_AUTHORITY",
+   "resume": "issuer ID + policy ref",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=6",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B07",
+   "original_ref": "WorkOrder",
+   "fields": "admission.workorder_ref",
+   "type": "ref",
+   "owner": "Original Issuer",
+   "original_state": "null",
+   "native_equivalent": "00 §4.1 W2-B07",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Original Issuer",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before any protected effect (Owner work order bytes + SHA + allowed targets)",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "W2_ADMISSION",
+   "resume": "WorkOrder bytes + SHA",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=7",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B08",
+   "original_ref": "ExecutionAdmission",
+   "fields": "admission.receipt_ref",
+   "type": "ref",
+   "owner": "Original Issuer",
+   "original_state": "null",
+   "native_equivalent": "00 §4.1 W2-B08",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Original Issuer",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before the effect it admits; never satisfied by that effect's own output",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "W2_ADMISSION",
+   "resume": "same subject/scope receipt",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=8",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B09",
+   "original_ref": "Exact WriteSet/preimage",
+   "fields": "write_set[]/preimage_sha256",
+   "type": "array/64-hex",
+   "owner": "Repo/OPS Owner",
+   "original_state": "none",
+   "native_equivalent": "00 §4.1 W2-B09",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Repo/OPS Owner",
+   "consumer": "01/02/03 + P05",
+   "required_when": "before the write it governs",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "WRITESET_UNBOUND",
+   "resume": "exact path set + preimage SHA",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=9",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B10",
+   "original_ref": "WorldReader/RepoReader",
+   "fields": "reader.world/reader.repo",
+   "type": "ref",
+   "owner": "Reader Owner",
+   "original_state": "UNBOUND",
+   "native_equivalent": "00 §4.1 W2-B10",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Reader Owner",
+   "consumer": "01/02/03 + P05",
+   "required_when": "pre: reader capability only; the post readback it produces is POST and is not a precondition of the same op",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "W2_RECOVERY",
+   "resume": "same Host/Epoch readback",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=10",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B11",
+   "original_ref": "Protected Checker",
+   "fields": "checker.receipt_ref",
+   "type": "ref",
+   "owner": "Checker",
+   "original_state": "null",
+   "native_equivalent": "00 §4.1 W2-B11",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Checker",
+   "consumer": "01/02/03 + P05",
+   "required_when": "POST only, after candidate and raw exist; never a precondition of the effect it checks",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "CHECKER_PUBLISHER_UNBOUND",
+   "resume": "same candidate distinct receipt",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=11",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B12",
+   "original_ref": "Publisher",
+   "fields": "publisher.receipt_ref",
+   "type": "ref",
+   "owner": "Publisher",
+   "original_state": "null",
+   "native_equivalent": "00 §4.1 W2-B12",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Publisher",
+   "consumer": "01/02/03 + P05",
+   "required_when": "RELEASE only; never a precondition of DEV/OPS",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "RELEASE_NOT_CLAIMED",
+   "resume": "original release procedure",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=12",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-B13",
+   "original_ref": "Recovery ABI",
+   "fields": "recovery.kind/recovery.ref",
+   "type": "enum/ref",
+   "owner": "Repo/Host Owner",
+   "original_state": "none",
+   "native_equivalent": "00 §4.1 W2-B13",
+   "applicable_to": "per-op applicability; not a 16-boolean gate",
+   "producer": "Repo/Host Owner",
+   "consumer": "01/02/03 + P05",
+   "required_when": "pre: recoverability established before the effect; the actual restore is POST",
+   "expected_receipt": "typed receipt or explicit UNBOUND/null",
+   "actual_ref": null,
+   "first_fail": "W2_RECOVERY",
+   "resume": "DEV reverse patch / Host recovery",
+   "draft_source": "W1 DRAFT manifest c251ebc0... n=13",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-NF-A",
+   "original_ref": "TQAEP/Case",
+   "fields": "case/fixture/oracle/runner/expected",
+   "type": "typed refs",
+   "owner": "Case Owner",
+   "original_state": "new NF",
+   "native_equivalent": "03 full TQAEP",
+   "applicable_to": "test pre",
+   "producer": "Case Owner",
+   "consumer": "Checker/P05",
+   "required_when": "before executing an affected test; not before READ/DRAFT",
+   "expected_receipt": "frozen case set + fixture/oracle/runner pins",
+   "actual_ref": null,
+   "first_fail": "RUNNER_UNBOUND",
+   "resume": "same candidate freeze",
+   "draft_source": "PLAN §05 NF-A",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-NF-B",
+   "original_ref": "Receiver ABI",
+   "fields": "receiver/parse/use/readback",
+   "type": "typed ref",
+   "owner": "Host/Receiver Owner",
+   "original_state": "new NF",
+   "native_equivalent": "J1/J2 + 01/02",
+   "applicable_to": "interface pre; consume post",
+   "producer": "Host/Receiver Owner",
+   "consumer": "Consumer",
+   "required_when": "pre: before the interface is consumed",
+   "expected_receipt": "receiver receipt + parsed readback",
+   "actual_ref": null,
+   "first_fail": "CONSUMER_UNVERIFIED",
+   "resume": "true receiver readback",
+   "draft_source": "PLAN §05 NF-B",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  },
+  {
+   "id": "W2-NF-C",
+   "original_ref": "Host preimage",
+   "fields": "host pre-state/output root/existence/hash",
+   "type": "typed ref",
+   "owner": "Host/OS Reader",
+   "original_state": "new NF",
+   "native_equivalent": "02 O02/O05",
+   "applicable_to": "OPS pre",
+   "producer": "Host/OS Reader",
+   "consumer": "02/WorldReader",
+   "required_when": "before any OPS overwrite",
+   "expected_receipt": "host preimage receipt + absence",
+   "actual_ref": null,
+   "first_fail": "W2_HOST_BIND",
+   "resume": "same Host/Epoch preimage",
+   "draft_source": "PLAN §05 NF-C",
+   "source_sha": null,
+   "span": null,
+   "reader_state": "UNBOUND"
+  }
+ ],
+ "requirements_count": {
+  "original_13": 13,
+  "nf_3": 3,
+  "total": 16,
+  "not_a_boolean_sum": true
+ },
+ "cases": [
+  {
+   "case_id": "W2-DEV-01",
+   "kind": "POS",
+   "fixture": "assets/fixtures/W2-DEV-01.json",
+   "oracle": "assets/oracles/W2-DEV-01.json",
+   "runner_id": "RUN-DEV-01",
+   "status": "NOT_RUN",
+   "wp": "P02/P03/P05/P06",
+   "requirement_refs": [
+    "U-013.a",
+    "U-013.b",
+    "U-013.c",
+    "W2-CODEX-01",
+    "W2-A03"
+   ],
+   "fixture_sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001",
+   "oracle_sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-DEV-02",
+   "kind": "NEG",
+   "fixture": "assets/fixtures/W2-DEV-02.json",
+   "oracle": "assets/oracles/W2-DEV-02.json",
+   "runner_id": "RUN-DEV-02",
+   "status": "NOT_RUN",
+   "wp": "P02/P05",
+   "requirement_refs": [
+    "U-013.a",
+    "W2-R3-03",
+    "J1-T02"
+   ],
+   "fixture_sha256": "99f910663b7f85afc598b5e84a91f2707d9181c386367195120ac5bf04a2e6b6",
+   "oracle_sha256": "4d29d6270963f8f89e05e15c51b74ee2efeb28fa708c41c37c4787a0b1f00798",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-OPS-01",
+   "kind": "POS",
+   "fixture": "assets/fixtures/W2-OPS-01.json",
+   "oracle": "assets/oracles/W2-OPS-01.json",
+   "runner_id": "RUN-OPS-01",
+   "status": "NOT_RUN",
+   "wp": "P02/P03/P05/P06",
+   "requirement_refs": [
+    "U-014.a",
+    "U-014.b",
+    "U-014.c",
+    "U-014.d",
+    "W2-CODEX-02",
+    "W2-A03",
+    "W2-A05"
+   ],
+   "fixture_sha256": "03494b3cca8e229064cfc98a791b18cea478a3cbc602a9f6dd6707608d463f17",
+   "oracle_sha256": "9d5e723084add8c1cc14e33a1eba15e4f5a07a62cfbe49eda2d0df15c9b3aeab",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-OPS-02",
+   "kind": "NEG",
+   "fixture": "assets/fixtures/W2-OPS-02.json",
+   "oracle": "assets/oracles/W2-OPS-02.json",
+   "runner_id": "RUN-OPS-02",
+   "status": "NOT_RUN",
+   "wp": "P03/P04",
+   "requirement_refs": [
+    "U-014.d",
+    "W2-A05",
+    "J3-T02"
+   ],
+   "fixture_sha256": "168e857025f505fb2fc9b56a5391f2e89d605fe0e9f72742c9093e1ed952b055",
+   "oracle_sha256": "a5d8732e42719f6f73f56bed350604f13d0d0fad456a01148be3ccc4c3346b56",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-EFFECT-01",
+   "kind": "NEG",
+   "fixture": "assets/fixtures/W2-EFFECT-01.json",
+   "oracle": "assets/oracles/W2-EFFECT-01.json",
+   "runner_id": "RUN-EFFECT-01",
+   "status": "NOT_RUN",
+   "wp": "P01",
+   "requirement_refs": [
+    "W2-B01",
+    "ADR-W2-02",
+    "W2-CODEX-05"
+   ],
+   "fixture_sha256": "3492f8cc0b774dbc5c6db301a08fc1efc4d3ed55045d7e856415f286a5b8ec57",
+   "oracle_sha256": "a1e4c91f86e982ef857f89ef44025cfbea90392f3298750cdac809dec63e1695",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-AUTH-01",
+   "kind": "NEG",
+   "fixture": "assets/fixtures/W2-AUTH-01.json",
+   "oracle": "assets/oracles/W2-AUTH-01.json",
+   "runner_id": "RUN-AUTH-01",
+   "status": "NOT_RUN",
+   "wp": "P01/P03/P05",
+   "requirement_refs": [
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "ADR-W2-02",
+    "U-046"
+   ],
+   "fixture_sha256": "80502748eece6d9619adb03228740f04f60dfe3fc918b22f75d19520d99045fa",
+   "oracle_sha256": "6365e89546a7cd9755d78e03d27589c16e6a1bb4d17ee6b47a7008207e644b5f",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-RUNNER-01",
+   "kind": "NEG",
+   "fixture": "assets/fixtures/W2-RUNNER-01.json",
+   "oracle": "assets/oracles/W2-RUNNER-01.json",
+   "runner_id": "RUN-RUNNER-01",
+   "status": "NOT_RUN",
+   "wp": "P04",
+   "requirement_refs": [
+    "W2-NF-A",
+    "W2-CODEX-06"
+   ],
+   "fixture_sha256": "7ea614b4f40f32c0bbff0964faca0229270e623cd8cec38ec9057b0fe6915ea9",
+   "oracle_sha256": "22931f33af7a05eb637e211b966347815acf87ba4e0f25f78d2d2c3be36eecef",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-DELTA-01",
+   "kind": "POS",
+   "fixture": "assets/fixtures/W2-DELTA-01.json",
+   "oracle": "assets/oracles/W2-DELTA-01.json",
+   "runner_id": "RUN-DELTA-01",
+   "status": "NOT_RUN",
+   "wp": "P06",
+   "requirement_refs": [
+    "J2-T05",
+    "J2-T06",
+    "W2-B10",
+    "GUIDE-NINE-KEYS"
+   ],
+   "fixture_sha256": "cb61b06f00559edcfa4d8fbc43c6fa812d4aa3cb1e19c65b1d5dac1bfe5e07ca",
+   "oracle_sha256": "155dc1054bcc6a79d7c981a48abd4778618fa314ecfbbb443815ee15dcd293b5",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-R3-01",
+   "kind": "POS",
+   "fixture": "assets/fixtures/W2-R3-01.json",
+   "oracle": "assets/oracles/W2-R3-01.json",
+   "runner_id": "RUN-R3-01",
+   "status": "NOT_RUN",
+   "wp": "P01/P02/P03",
+   "requirement_refs": [
+    "13+3",
+    "W2-CODEX-05"
+   ],
+   "fixture_sha256": "5c721f1524cbdb1f63496773444b1e0f2535ea9cb082c067ec854aa696f98ca2",
+   "oracle_sha256": "970ec9d73646a673b8e15320aa35efc3ad57e225a08867acbc70cd897ab365e2",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-R3-02",
+   "kind": "NEG",
+   "fixture": "assets/fixtures/W2-R3-02.json",
+   "oracle": "assets/oracles/W2-R3-02.json",
+   "runner_id": "RUN-R3-02",
+   "status": "NOT_RUN",
+   "wp": "P01/P04",
+   "requirement_refs": [
+    "ADR-W2-04",
+    "D02",
+    "D03",
+    "W2-CODEX-06"
+   ],
+   "fixture_sha256": "9867a71507bc5d1e4a6ee1d4bcb02b6d10c6cad37af78623a7aa67660b72d632",
+   "oracle_sha256": "3b2ed871b64c226b9aa834228100c167560360653d0c4593119f84d5300f1e2c",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-R3-03",
+   "kind": "NEG",
+   "fixture": "assets/fixtures/W2-R3-03.json",
+   "oracle": "assets/oracles/W2-R3-03.json",
+   "runner_id": "RUN-R3-03",
+   "status": "NOT_RUN",
+   "wp": "P02/P03/P05",
+   "requirement_refs": [
+    "U-013.b",
+    "U-013.c",
+    "W0-F-08",
+    "D06",
+    "W2-B09"
+   ],
+   "fixture_sha256": "8566b623ab3d16134e7e5461bf31e7b26a1087395103841e815c6fa3cfc51b2e",
+   "oracle_sha256": "1f9d9e155317bf125eed1976731e094f75ee749d78d3d7a20af6927c00443743",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  },
+  {
+   "case_id": "W2-R3-04",
+   "kind": "EDGE",
+   "fixture": "assets/fixtures/W2-R3-04.json",
+   "oracle": "assets/oracles/W2-R3-04.json",
+   "runner_id": "RUN-R3-04",
+   "status": "NOT_RUN",
+   "wp": "P01/P06",
+   "requirement_refs": [
+    "W0-F-09",
+    "W2-B02",
+    "W2-B10",
+    "N11"
+   ],
+   "fixture_sha256": "7c8ba861cbce7c5d92d4683005d4d8202c0907f89e65b3e7a88e759eb976c81e",
+   "oracle_sha256": "d26358c730d2b2e789652a8813de427cb76bc6211422f00061abb7d8258d3b3b",
+   "observed": null,
+   "verdict": "NOT_RUN"
+  }
+ ],
+ "case_index": "assets/cases/case_index.json",
+ "case_count": 12,
+ "subcases": {
+  "J1": [
+   {
+    "id": "J1-T01",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03"
+   },
+   {
+    "id": "J1-T02",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03"
+   },
+   {
+    "id": "J1-T03",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03"
+   },
+   {
+    "id": "J1-T04",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03"
+   },
+   {
+    "id": "J1-T05",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03"
+   },
+   {
+    "id": "J1-T06",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03"
+   }
+  ],
+  "J2": [
+   {
+    "id": "J2-T01",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03/P06"
+   },
+   {
+    "id": "J2-T02",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03/P06"
+   },
+   {
+    "id": "J2-T03",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03/P06"
+   },
+   {
+    "id": "J2-T04",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03/P06"
+   },
+   {
+    "id": "J2-T05",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03/P06"
+   },
+   {
+    "id": "J2-T06",
+    "status": "NOT_RUN",
+    "wp": "P01/P02/P03/P06"
+   }
+  ],
+  "J3": [
+   {
+    "id": "J3-T01",
+    "status": "NOT_RUN",
+    "wp": "P04/P05/P06"
+   },
+   {
+    "id": "J3-T02",
+    "status": "NOT_RUN",
+    "wp": "P04/P05/P06"
+   },
+   {
+    "id": "J3-T03",
+    "status": "NOT_RUN",
+    "wp": "P04/P05/P06"
+   },
+   {
+    "id": "J3-T04",
+    "status": "NOT_RUN",
+    "wp": "P04/P05/P06"
+   },
+   {
+    "id": "J3-T05",
+    "status": "NOT_RUN",
+    "wp": "P04/P05/P06"
+   },
+   {
+    "id": "J3-T06",
+    "status": "NOT_RUN",
+    "wp": "P04/P05/P06"
+   }
+  ],
+  "N": [
+   {
+    "id": "N01",
+    "status": "NOT_RUN",
+    "group": "Source->TPM"
+   },
+   {
+    "id": "N02",
+    "status": "NOT_RUN",
+    "group": "six-file ABI"
+   },
+   {
+    "id": "N03",
+    "status": "NOT_RUN",
+    "group": "Guide Delta"
+   },
+   {
+    "id": "N04",
+    "status": "NOT_RUN",
+    "group": "Host actual"
+   },
+   {
+    "id": "N05",
+    "status": "NOT_RUN",
+    "group": "Native authority/recovery"
+   },
+   {
+    "id": "N06",
+    "status": "NOT_RUN",
+    "group": "UNKNOWN"
+   },
+   {
+    "id": "N07",
+    "status": "NOT_RUN",
+    "group": "frozen Challenge"
+   },
+   {
+    "id": "N08",
+    "status": "NOT_RUN",
+    "group": "FAR dynamic"
+   },
+   {
+    "id": "N09",
+    "status": "NOT_RUN",
+    "group": "combined E2E"
+   },
+   {
+    "id": "N10",
+    "status": "NOT_RUN",
+    "group": "OFF/security"
+   },
+   {
+    "id": "N11",
+    "status": "NOT_RUN",
+    "group": "fresh receive"
+   },
+   {
+    "id": "N12",
+    "status": "NOT_RUN",
+    "group": "applicability/release"
+   }
+  ]
+ },
+ "dag": {
+  "nodes": [
+   {
+    "id": "WM2-P01",
+    "owner": "Effect Owner",
+    "exit": "EffectBindingRequest",
+    "actual": null
+   },
+   {
+    "id": "WM2-P02",
+    "owner": "Repo/Host/OS Owner",
+    "exit": "BindingCandidate",
+    "actual": null
+   },
+   {
+    "id": "WM2-P03",
+    "owner": "Maker",
+    "exit": "ConstructionContract+ECP",
+    "actual": null
+   },
+   {
+    "id": "WM2-P04",
+    "owner": "Case Owner",
+    "exit": "WaveAssurancePlan+frozen assets",
+    "actual": null
+   },
+   {
+    "id": "WM2-P05",
+    "owner": "Human Owner/Executor",
+    "exit": "WorldEffectRecord",
+    "actual": null
+   },
+   {
+    "id": "WM2-P06",
+    "owner": "Reader/Checker/Consumer",
+    "exit": "WorldEffectLedger/AsBuilt",
+    "actual": null
+   }
+  ],
+  "edges": [
+   {
+    "from": "WM2-P01",
+    "to": "WM2-P02",
+    "class": "HARD",
+    "reason": "effect/13+3 before live bind",
+    "stop": "stop P02; READ/DRAFT continues",
+    "wm2_class": "HARD_SOURCE_VERIFIED",
+    "hardening_reason": "PLAN §08 承原硬邊"
+   },
+   {
+    "from": "WM2-P02",
+    "to": "WM2-P03",
+    "class": "HARD",
+    "reason": "ECP needs live repo/host binding",
+    "stop": "write request only",
+    "wm2_class": "AUTHOR_DOC_ORDER",
+    "hardening_reason": "原為文件順序；升硬是因為 exec bind 未成立不得進 P05"
+   },
+   {
+    "from": "WM2-P01",
+    "to": "WM2-P04",
+    "class": "AUTHOR_DOC_ORDER",
+    "reason": "case planning may start from source",
+    "stop": "preflight limited",
+    "wm2_class": "AUTHOR_DOC_ORDER",
+    "hardening_reason": "原值保留"
+   },
+   {
+    "from": "WM2-P03",
+    "to": "WM2-P04",
+    "class": "SOFT",
+    "reason": "ECP/TQAEP parallel but freeze before P05",
+    "stop": "no effect before freeze",
+    "wm2_class": "SOFT",
+    "hardening_reason": "原值保留（P05 前必須 freeze）"
+   },
+   {
+    "from": "WM2-P03",
+    "to": "WM2-P05",
+    "class": "HARD",
+    "reason": "no ECP/write set/recovery -> no effect",
+    "stop": "stop P05",
+    "wm2_class": "UNVERIFIED",
+    "hardening_reason": "升硬理由＝安全：無 preimage/recovery 的寫入不可回復"
+   },
+   {
+    "from": "WM2-P04",
+    "to": "WM2-P05",
+    "class": "HARD",
+    "reason": "no frozen oracle/fixture -> no affected effect",
+    "stop": "stop affected case",
+    "wm2_class": "UNVERIFIED",
+    "hardening_reason": "升硬理由＝可證性：無 frozen oracle 的執行不可判定"
+   },
+   {
+    "from": "WM2-P05",
+    "to": "WM2-P06",
+    "class": "POST",
+    "reason": "readback/Checker/Consumer after effect",
+    "stop": "never reverse into pre",
+    "wm2_class": "POST",
+    "hardening_reason": "原值保留，不得反向"
+   },
+   {
+    "from": "WM2-P02",
+    "to": "WM2-P06",
+    "class": "SOFT",
+    "reason": "bind evidence supports readback",
+    "stop": "does not block other ops",
+    "wm2_class": "SOFT",
+    "hardening_reason": "原值保留"
+   }
+  ],
+  "cycle": false,
+  "op_edges": [
+   {
+    "from": "DEV-D04",
+    "to": "OPS-O03",
+    "class": "HARD",
+    "wm2_class": "NOT_DECLARED_UPSTREAM",
+    "reason": "OPS-A receiver R2 is the DEV-D04 product (or the D02-selected thin wrapper); cross-domain but same subject/scope/session, serialised, single writer",
+    "stop": "stop OPS-O03; OPS design continues, DEV unaffected"
+   }
+  ],
+  "class_note": "Edges upgraded from AUTHOR_DOC_ORDER/UNVERIFIED to HARD carry an explicit reason and stop point; 01/02 are P03 *documents* (all runtime values null) which PLAN §03.3 permits to be drafted before binding, so the HARD edge constrains entry to P05, not authorship."
+ },
+ "holds": [
+  {
+   "id": "W1_HOST_NINE_GRID",
+   "disposition": "OPEN_SCOPED",
+   "resume": "W2 live Host; GPT CHAT/WORK/HERMES separate",
+   "actual_ref": null
+  },
+  {
+   "id": "W1_PLUGIN_ALIAS",
+   "disposition": "OPEN_SCOPED",
+   "resume": "true manifest/id/version/entrypoint",
+   "actual_ref": null
+  },
+  {
+   "id": "W1_ABI_BOUND",
+   "disposition": "J2_REQUALIFY",
+   "resume": "exact five seams + actual W2 consumer",
+   "actual_ref": null
+  },
+  {
+   "id": "W1_W0_INPUT",
+   "disposition": "REUSE_SCOPED",
+   "resume": "W0 clean-receive proven; J1 fresh consume",
+   "actual_ref": null
+  },
+  {
+   "id": "W0_PRIMARY_RECEIPT_STALE",
+   "disposition": "HISTORICAL_SCOPED",
+   "resume": "4,222 vs 3,986 preserved; new NF seals",
+   "actual_ref": null
+  },
+  {
+   "id": "W0-A_CASE_SELECTION",
+   "disposition": "RESOLVED_FOR_W0_GENERIC",
+   "resume": "W2 selects its own real cases",
+   "actual_ref": null
+  },
+  {
+   "id": "W0-B_NOT_ADMITTED",
+   "disposition": "PROFILE_ONLY+REQUALIFY",
+   "resume": "original 13 not closed; per-op true prerequisites",
+   "actual_ref": null
+  },
+  {
+   "id": "ORIGINAL_READER_UNBOUND",
+   "disposition": "REPLACE_NATIVE/PROFILE_ONLY",
+   "resume": "Native safe bytes/Git/process/readback",
+   "actual_ref": null
+  },
+  {
+   "id": "ORACLE_FIXTURE_UNBOUND",
+   "disposition": "REQUALIFY_BY_CASE",
+   "resume": "12 W2 frozen assets; W0/W1 not counted",
+   "actual_ref": null
+  },
+  {
+   "id": "HOST_CAPABILITY_UNBOUND",
+   "disposition": "OPEN_SCOPED",
+   "resume": "W2 actual host/receiver/stages",
+   "actual_ref": null
+  },
+  {
+   "id": "CHECKER_PUBLISHER_UNBOUND",
+   "disposition": "SPLIT_RESPONSIBILITY",
+   "resume": "J3 distinct checker/consumer; publisher release-only",
+   "actual_ref": null
+  },
+  {
+   "id": "SOURCE_REFERENCE_HASH_CONFLICT",
+   "disposition": "REQUALIFY_BY_SOURCE",
+   "resume": "version/bytes/role resolution",
+   "actual_ref": null
+  },
+  {
+   "id": "W0C_DENOMINATOR_ID_LIST_UNBOUND",
+   "disposition": "PROFILE_ONLY/OPEN",
+   "resume": "W4 435 count-only; no invented IDs",
+   "actual_ref": null
+  },
+  {
+   "id": "HOLD_CR-DOC04-STATE-MAP",
+   "disposition": "PROFILE_ONLY",
+   "resume": "original T4/T5 DOC04 mapping separate",
+   "actual_ref": null
+  }
+ ],
+ "w2_special_holds": [
+  {
+   "id": "W2_EFFECT_REGISTRY",
+   "owner": "Effect Owner",
+   "resume": "same-scope typed token",
+   "actual_ref": null
+  },
+  {
+   "id": "W2_REPO_BIND",
+   "owner": "Repo Owner",
+   "resume": "live git probe + preimage",
+   "actual_ref": null
+  },
+  {
+   "id": "W2_HOST_BIND",
+   "owner": "Host/OS Owner",
+   "resume": "true host/principal readback",
+   "actual_ref": null
+  },
+  {
+   "id": "W2_ADMISSION",
+   "owner": "Original Issuer",
+   "resume": "same subject/scope/host/epoch admission",
+   "actual_ref": null
+  },
+  {
+   "id": "W2_RECOVERY",
+   "owner": "WorldReader/Host Owner",
+   "resume": "pre/post WorldRaw + recovery",
+   "actual_ref": null
+  },
+  {
+   "id": "W2_RUNNER",
+   "owner": "Case Owner",
+   "resume": "same candidate runner/raw",
+   "actual_ref": null
+  }
+ ],
+ "crs": [
+  {
+   "id": "R3-CR01",
+   "name": "tpm-sp-plp vs plp-tpm-review Host alias",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR02",
+   "name": "Original PIPD/PI-PD/ECP/TQAEP/Case Reader",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR03",
+   "name": "RepoRoot/HEAD/Dirty/ACL/Preimage/WriteSet",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR04",
+   "name": "Host/OS/EffectRegistry/Issuer/Admission/Recovery",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR05",
+   "name": "Guide/Bridge/Challenge/FAR true Host Loaded/Invoked",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR06",
+   "name": "Original Runner/Oracle/Checker/Publisher",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR07",
+   "name": "485/35 Tool Slot Fit/License/Pin/NoFit",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR08",
+   "name": "r2 referenced large FHS_vNEXT five files/skipped bytes",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR09",
+   "name": "Actions v7 Pin/Runner/Repo Ruleset",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR10",
+   "name": "Fabric FAR Patch/ResearchWorkOrder/three sources",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR11",
+   "name": "Actual W0-A Local Host/OriginalConsumer E2E",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "R3-CR12",
+   "name": "Actual W0-B world effect/recovery/independent acceptance",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR01",
+   "name": "tpm-sp-plp vs plp-tpm-review alias",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR02",
+   "name": "five proposal-2 lack true Lossless Consumer Crosswalk",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR03",
+   "name": "original Source/PI Reader semantics unbound",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR04",
+   "name": "original RepoContext/HostContext/Effect Registry unread",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR05",
+   "name": "ExecutionAdmission/OS Principal/Issuer missing",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR06",
+   "name": "Bridge original plugin loader/Host wiring unseen",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR07",
+   "name": "Guide Host alias/Touchpoint2 ActualReadback unseen",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR08",
+   "name": "Challenge Original Runner/Case/Oracle missing",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR09",
+   "name": "FAR Fabric typed source patch not applied",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR10",
+   "name": "Source unavailable misread as ZERO",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR11",
+   "name": "FHS 485/original Case/Tool Reader Fit/N/A missing",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR12",
+   "name": "Challenger advisory vs Original Checker not separated",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR13",
+   "name": "same FirstFail two-period World/Repo Reader missing",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR14",
+   "name": "Wn file names only, no ECP/TQAEP substance",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR15",
+   "name": "original Consumer/Publisher not truly accepted",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR16",
+   "name": "paired evidence annex/original Audit not fully mounted",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR17",
+   "name": "Workflow action SHA vs Repo Host Policy",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR18",
+   "name": "public/private GitHub Repo authorization/Rulesets",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR19",
+   "name": "SBOM/SLSA provenance not accepted",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR20",
+   "name": "Tool version/License/OS/HostFit not confirmed",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR21",
+   "name": "original Pipeline Required Check name conflict",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR22",
+   "name": "2026 web/support timeliness/sample size",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR23",
+   "name": "Windows reparse point/ACL/NTFS identity",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR24",
+   "name": "historical documents not revalidated locally",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  },
+  {
+   "id": "F5-CR25",
+   "name": "secret leak/private repo to public CI risk",
+   "disposition": "OPEN_PRESERVED",
+   "actual_ref": null
+  }
+ ],
+ "crs_count": 37,
+ "rqs": [
+  {
+   "id": "RQ-01",
+   "focus": "seven seams / fake fallback",
+   "w2": "J2/N09 true field-level consume"
+  },
+  {
+   "id": "RQ-02",
+   "focus": "five-party invocation to consumption",
+   "w2": "N01/02/04"
+  },
+  {
+   "id": "RQ-03",
+   "focus": "Legacy/Bridge/FAR OFF",
+   "w2": "J3/N10 real effect+compensation"
+  },
+  {
+   "id": "RQ-04",
+   "focus": "path/security",
+   "w2": "J1 scope-safe reader; Windows limits preserved"
+  },
+  {
+   "id": "RQ-05",
+   "focus": "consumer pins/raw",
+   "w2": "J1+J3 early fail-closed/clean receive"
+  },
+  {
+   "id": "RQ-06",
+   "focus": "Guide single evidence_sha",
+   "w2": "J2/N03/N06 true two-period"
+  },
+  {
+   "id": "RQ-07",
+   "focus": "documentation/publication delta",
+   "w2": "actual pin/version split"
+  }
+ ],
+ "denominators": {
+  "PROG": "U-001..056, R01..24, P00-01..06, seven upper seams/32 historical rows",
+  "B01": "F01..14, U01..16, QA26, 35 tools",
+  "B02": "U01..26, CG-R2-REQ01..16, CG-SEM01..17, CG-X01..13, CG-FAR01..10",
+  "B03": "PCB-FR01..17, four APIs, 38+28, A-PCB-001..022, AV3-001..030",
+  "B04": "EC-FR01..16, C16/F5-T12, EC-T01..26 + X27..36",
+  "B05": "FAR-FR01..17, RQ0..8, FAR-T20, FARP30, 10 Advice",
+  "W0": "14 WP, 24 + 10 NF + 10 sample = 44 receipts",
+  "W1": "6 WP, 13 Case, 38 DEV + 29 OPS, 20 obs / 79 tests / 118 matrix",
+  "WM1..4": "24 WP / 55 Case = 13+12+16+14; W2 only 6 WP/12 cases/6+6 ACC",
+  "FHS": "1011 = 576 identified + 435 count-only; 576 = 485 ToolNeed + 35 T + 56 U; 435 = 22 WP + 36 Edge + 50 H1 + 39 ModeGate + 96 Oracle + 192 Cell"
+ },
+ "change_projection_15_to_6": {
+  "SOURCE_MANIFEST.json": "05.sources",
+  "PACKAGE_FILE_MANIFEST.json": "05.pack_files + external seal",
+  "00_WAVE_RUN_MANIFEST.json": "05.identity + 00",
+  "00_WAVE_RUN_MANIFEST.md": "00",
+  "01_SOURCE_SCOPE_AND_CONSTRUCTION.md": "00 + 01/02",
+  "02_ORIGINAL_CONTRACT_REFS.json": "05.requirements + 00 — PARTIAL_UNBOUND: refs carry kind/id/owner/first_fail/resume plus declared-null source_sha/span/reader_state; original-domain bytes are absent, so the projection is lossless only for the fields the original does not hold",
+  "03_DEV_ECP.md": "01",
+  "04_OPS_ECP.md": "02",
+  "05_PLANNED_TQAEP.md": "03",
+  "05_PLANNED_TQAEP.json": "optional projection of 03 only",
+  "06_PERMISSION_STOP_RESUME.md": "00/01/02/04",
+  "07_EVIDENCE_AND_CHECKER.md": "03",
+  "08_AS_BUILT_AND_HANDOFF.md": "expected in 00/04; actual produced by CODEX",
+  "09_README_RUN_ORDER.md": "00 DAG + 04",
+  "{wave_id}_START_THIN_PROMPT.md": "04"
+ },
+ "digest_contract": {
+  "raw_sha256": "SHA-256 over raw file bytes; no encoding normalization; no Git blob substitution",
+  "candidate_digest": "sha256 over sorted UTF-8 lines 'path|bytes|sha256' (LF, no trailing LF), excluding evidence, self-referential files and build caches",
+  "source_set_algorithm": "sha256(UTF-8 join(sorted(id|sha256|bytes), '\\n'))",
+  "manifest_self_hash": "EXTERNAL_RECORD_ONLY",
+  "external_seal": "evidence appendix records the manifest raw SHA-256; manifest does not embed it",
+  "evidence_exclusions": [
+   "evidence manifest",
+   "checker receipt",
+   "consumer receipt",
+   "publication receipt"
+  ]
+ },
+ "readiness": {
+  "document": "W2_PACK_PRIMARY_AUTHORIZED_FOR_SCOPED_CONSTRUCTION",
+  "technical": "NOT_CLAIMED",
+  "op_admission": "NOT_ADMITTED",
+  "actual_effect": "NULL",
+  "independent": "NOT_CLAIMED",
+  "release": "NOT_CLAIMED",
+  "w3_handoff": "DEFINED_NOT_EMITTED"
+ },
+ "body_locators": {
+  "three_spec": "00 §2",
+  "requirements_13_plus_3": "00 §4.1",
+  "six_wp": "00 §5.1",
+  "dag": "00 §5.2",
+  "seven_seams": "00 §6",
+  "j1_j2_j3": "00 §6.1-6.3",
+  "dev_ops": "01/02",
+  "cases": "03 §1",
+  "fixtures": "assets/fixtures",
+  "oracles": "assets/oracles",
+  "case_index": "assets/cases/case_index.json",
+  "source_manifest": "05",
+  "start_entry": "04"
+ },
+ "dev_ops_locators": {
+  "DEV-D01": "01 §2",
+  "DEV-D02": "01 §3",
+  "DEV-D03": "01 §4",
+  "DEV-D04": "01 §5",
+  "DEV-D05": "01 §6",
+  "DEV-D06": "01 §7",
+  "DEV-D07": "01 §8",
+  "O01": "02 §2",
+  "O02": "02 §3",
+  "O03": "02 §4",
+  "O04": "02 §5",
+  "O05": "02 §6",
+  "O06": "02 §7"
+ },
+ "j_seam_locators": {
+  "J1": "00 §6.1; 01 §3/§5",
+  "J2": "00 §6.2; 03 §3.2",
+  "J3": "00 §6.3; 03 §3.3",
+  "SM01..SM07": "00 §2.2 seam table; 00 §6 (J1/J2/J3 rules)"
+ },
+ "planned_refs_vs_actual": {
+  "planned": [
+   "repo/head/acl",
+   "host/principal/epoch/receiver",
+   "preimage",
+   "admission",
+   "world_raw",
+   "12 case raw",
+   "checker/consumer"
+  ],
+  "actual_pending": "all runtime values null; no product effect in this author pass"
+ },
+ "author_run": {
+  "date": "2026-11-26",
+  "timezone": "Asia/Taipei",
+  "host_role": "GPT WORK author (documentation) -> HERMES repair round (documentation)",
+  "network": "GitHub branch heads verified live; W2 DRAFT manifest/receipts fetched read-only; no repo write in the author pass",
+  "not_done": [
+   "product codex exec",
+   "repo commit/push",
+   "product DEV/OPS",
+   "grant issuance",
+   "independent Checker verdict",
+   "Release"
+  ],
+  "hermes_repair_pass": {
+   "checks_executed": "PKG01..PKG06 document-layer validator (29 assertions) + 14 negative mutations",
+   "independent_review": "separate session, verdict REWORK_REQUIRED; 23 of 25 findings repaired in r3, 2 had already been repaired in r2",
+   "line_endings": "pack is LF-only (CR byte count = 0 verified); delivery branch pins `* -text`"
+  }
+ },
+ "lineage": {
+  "supersedes": "FHS5-PLP/W2/PACK-NF-20261126-r2",
+  "chain": [
+   {
+    "rev": "r1",
+    "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r1",
+    "manifest_sha256": "738cf348da5f093131cef890f52127143872c5ea58104f9020e6586df33f46bd",
+    "role": "author candidate (GPT WORK)"
+   },
+   {
+    "rev": "r2",
+    "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r2",
+    "manifest_sha256": "a69a25b69eb98c505b55b9547d103cb0c21f230525360fd3f6ba67f04f206669",
+    "role": "first HERMES repair (locator/referential/identity defects)"
+   },
+   {
+    "rev": "r3",
+    "artifact_id": "FHS5-PLP/W2/PACK-NF-20261126-r3",
+    "manifest_sha256": "EXTERNAL_RECORD_ONLY",
+    "role": "second HERMES repair (independent review findings)"
+   }
+  ],
+  "last_good": "FHS5-PLP/W2/PACK-NF-20261126-r2",
+  "repair_round": "HERMES-F5-W2-PACK-NF-FINAL-r1",
+  "repair_scope": "no obligation added or removed; machine-layer contradictions and two fixtures corrected"
+ },
+ "requirements_note": "required_when is per row, not generic: B10-B12 are POST/RELEASE artefacts and are explicitly not preconditions of the effect they observe (00 §4.2 rule 2). source_sha/span/reader_state are the columns WM2 §11.2 requires of 02_ORIGINAL_CONTRACT_REFS.json; they are null/UNBOUND because no original-domain bytes are held locally, and that gap is declared rather than papered over.",
+ "pack_selection": {
+  "decision_kind": "HUMAN_OWNER_PREAUTHORIZED_CONDITIONAL_PRIMARY_AND_SCOPED_CONSTRUCTION",
+  "decision_source": "the Owner's instruction in this round (recorded verbatim in the appendix)",
+  "binding_record": "external evidence appendix (this manifest does not self-certify)",
+  "appendix": "FHS-5_PLP_W2_Native-first_HERMES_修補證據型附錄.md",
+  "selection_state": "PRIMARY_AUTHORIZED_PENDING_APPENDIX_SEAL",
+  "fallback_if_appendix_absent": "PACK_SELECTION_UNVERIFIED",
+  "does_not_mean": [
+   "original-domain Issuer receipt obtained (owner_ref stays null)",
+   "any op ADMITTED",
+   "W2_EXECUTION_READY",
+   "product effect, independent verdict, or Release"
+  ],
+  "owner_ref_field_note": "authority_product_scope.owner_ref = null records the *original-domain* issuer receipt, a different field from this selection; neither substitutes for the other (00 §4.2 rule 8)"
+ },
+ "upstream_recorded_claims": {
+  "W2_TECHNICALLY_READY": "READY (recorded in W1 C1; not re-verified by this pack and not claimed here)"
+ },
+ "review_round": {
+  "reviewer": "separate session, same principal (not a different principal)",
+  "verdict": "REWORK_REQUIRED",
+  "counts": {
+   "blocking": 2,
+   "major": 14,
+   "minor": 9
+  },
+  "repaired_in_r3": [
+   "Q1-01",
+   "Q1-02",
+   "Q1-03",
+   "Q1-04",
+   "Q2-01",
+   "Q2-02",
+   "Q2-03",
+   "Q2-04",
+   "Q2-05",
+   "Q2-06",
+   "Q2-07",
+   "Q2-09",
+   "Q3-01",
+   "Q3-02",
+   "Q3-03",
+   "Q3-04",
+   "Q3-05",
+   "Q3-06",
+   "Q4-01",
+   "Q4-02",
+   "Q4-03",
+   "Q4-04",
+   "Q4-05"
+  ],
+  "already_repaired_in_r2": [
+   "Q2-08",
+   "Q3-07"
+  ],
+  "not_a_substitute_for": "an independent Checker verdict over a product candidate"
+ }
+}

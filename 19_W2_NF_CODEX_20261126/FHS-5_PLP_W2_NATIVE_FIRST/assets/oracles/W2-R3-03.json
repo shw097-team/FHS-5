@@ -1,0 +1,37 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-R3-03",
+  "kind": "NEG",
+  "pass_predicate": "rejected_with_WRITESET_UNBOUND and write_count == 0",
+  "required_observations": [
+    "historical_pin",
+    "live_pin",
+    "write_count",
+    "target_hashes"
+  ],
+  "expected_tokens": [
+    "WRITESET_UNBOUND"
+  ],
+  "forbidden_tokens": [
+    "HISTORICAL_AS_LIVE",
+    "WRITE_APPLIED"
+  ],
+  "fail_if": [
+    "historical used",
+    "write",
+    "no rejection"
+  ],
+  "raw_schema": [
+    "pin_table",
+    "rejection_receipt",
+    "target_hashes"
+  ],
+  "not_covered": [
+    "CH-07 bytes"
+  ]
+}

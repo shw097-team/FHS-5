@@ -1,0 +1,44 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-OPS-02",
+  "kind": "NEG",
+  "requirement_refs": [
+    "U-014.d",
+    "W2-A05",
+    "J3-T02"
+  ],
+  "child": [
+    "Recovery"
+  ],
+  "effect": "HOST_EFFECT",
+  "inputs": {
+    "recovery_kind": "GIT_REVERT",
+    "recovery_argv": [
+      "git",
+      "revert",
+      "<sha>"
+    ],
+    "target_pre": {
+      "exists": true
+    },
+    "variants": [
+      "GIT_RESET",
+      "WHOLE_REPO_ROLLBACK"
+    ]
+  },
+  "preconditions": [
+    "caller proposes a DEV recovery for an OPS effect"
+  ],
+  "forbidden_actions": [
+    "execute git",
+    "change world",
+    "call it OPS recovery"
+  ],
+  "not_covered": [
+    "real host recovery argv"
+  ]
+}

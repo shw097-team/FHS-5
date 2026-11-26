@@ -1,0 +1,42 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-EFFECT-01",
+  "kind": "NEG",
+  "requirement_refs": [
+    "W2-B01",
+    "ADR-W2-02",
+    "W2-CODEX-05"
+  ],
+  "child": [
+    "OperationType"
+  ],
+  "effect": "UNKNOWN",
+  "inputs": {
+    "tokens": [
+      "OPAQUE",
+      "PATH_INFERRED_READ",
+      ""
+    ],
+    "paths": [
+      "docs/readme.md",
+      "../outside"
+    ],
+    "registry_ref": null,
+    "permission_state": "NONE_GRANTED"
+  },
+  "preconditions": [
+    "no typed registry token"
+  ],
+  "forbidden_actions": [
+    "infer READ from filename",
+    "call effect",
+    "treat empty token as READ"
+  ],
+  "not_covered": [
+    "full original EffectRegistry"
+  ]
+}

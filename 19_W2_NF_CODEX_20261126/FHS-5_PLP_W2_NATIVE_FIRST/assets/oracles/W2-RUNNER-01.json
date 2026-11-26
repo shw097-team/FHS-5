@@ -1,0 +1,36 @@
+{
+  "schema": "FHS5.PLP.W2.Oracle@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "frozen_before_run": true,
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "checker_route": "DISTINCT_SESSION_OR_WORKTREE",
+  "case_id": "W2-RUNNER-01",
+  "kind": "NEG",
+  "pass_predicate": "reported_RUNNER_UNBOUND and executed == false and raw == null",
+  "required_observations": [
+    "runner_ref",
+    "oracle_ref",
+    "fixture_ref",
+    "executed_flag",
+    "raw_ref"
+  ],
+  "expected_tokens": [
+    "RUNNER_UNBOUND"
+  ],
+  "forbidden_tokens": [
+    "EXECUTED_WITHOUT_RUNNER",
+    "SUMMARY_AS_RAW"
+  ],
+  "fail_if": [
+    "executed=true",
+    "fabricated argv",
+    "summary counted as raw"
+  ],
+  "raw_schema": [
+    "rejection_receipt"
+  ],
+  "not_covered": [
+    "real runner"
+  ]
+}

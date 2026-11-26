@@ -1,0 +1,39 @@
+{
+  "schema": "FHS5.PLP.W2.Fixture@1",
+  "status": "AUTHOR_DESIGN_INPUT_NOT_PRODUCT_ORACLE",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "profile": "GENERIC",
+  "case_id": "W2-RUNNER-01",
+  "kind": "NEG",
+  "requirement_refs": [
+    "W2-NF-A",
+    "W2-CODEX-06"
+  ],
+  "child": [
+    "TQAEP-Case"
+  ],
+  "effect": "READ",
+  "inputs": {
+    "runner_id": null,
+    "oracle_ref": null,
+    "fixture_ref": null,
+    "unit_summary": {
+      "tests": 3,
+      "exit": 0,
+      "raw": null
+    },
+    "claimed_executed": true
+  },
+  "preconditions": [
+    "no frozen runner/oracle/fixture"
+  ],
+  "forbidden_actions": [
+    "claim executed",
+    "use nonempty summary as raw",
+    "invent argv"
+  ],
+  "not_covered": [
+    "real runner full set"
+  ]
+}
