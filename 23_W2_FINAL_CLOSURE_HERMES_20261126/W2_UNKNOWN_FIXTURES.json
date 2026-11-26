@@ -1,0 +1,97 @@
+{
+  "schema": "FHS5.PLP.W2.UnknownFixtures@1",
+  "world_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1225_W2_FINAL_CLOSURE\\20_DEV\\unknown_world",
+  "rows": [
+    {
+      "fixture": "F-TO-BEFORE",
+      "injected_error": "TimeoutError: timeout before write",
+      "pre_world": {
+        "a.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9",
+        "b.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9",
+        "c.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9"
+      },
+      "observed": {
+        "state": "STILL_PRE",
+        "reached": 0,
+        "changed": 0,
+        "decision": "RETRY_ONCE_ALLOWED_IF_GRANT_VALID_AND_IDEMPOTENT"
+      },
+      "expected_state": "STILL_PRE",
+      "expected_decision": "RETRY_ONCE_ALLOWED_IF_GRANT_VALID_AND_IDEMPOTENT",
+      "verdict": "PASS"
+    },
+    {
+      "fixture": "F-TO-AFTER",
+      "injected_error": "TimeoutError: timeout after write (response lost)",
+      "pre_world": {
+        "a.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9",
+        "b.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9",
+        "c.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9"
+      },
+      "observed": {
+        "state": "POST_REACHED",
+        "reached": 3,
+        "changed": 3,
+        "decision": "VERIFY_NO_OP_DO_NOT_REPEAT"
+      },
+      "expected_state": "POST_REACHED",
+      "expected_decision": "VERIFY_NO_OP_DO_NOT_REPEAT",
+      "verdict": "PASS"
+    },
+    {
+      "fixture": "F-PARTIAL",
+      "injected_error": "OSError: connection reset mid-write",
+      "pre_world": {
+        "a.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9",
+        "b.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9",
+        "c.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9"
+      },
+      "observed": {
+        "state": "PARTIAL",
+        "reached": 2,
+        "changed": 2,
+        "decision": "SCOPED_COMPENSATION_OR_STOP"
+      },
+      "expected_state": "PARTIAL",
+      "expected_decision": "SCOPED_COMPENSATION_OR_STOP",
+      "verdict": "PASS"
+    },
+    {
+      "fixture": "F-EXIT0-WRONG",
+      "injected_error": null,
+      "pre_world": {
+        "a.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9",
+        "b.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9",
+        "c.txt": "a1f194e7d5947c9e2c01a51ae5337293c3d39067e89c163d96d3ee295ed66ba9"
+      },
+      "observed": {
+        "state": "EXIT0_WRONG_POST",
+        "reached": 0,
+        "changed": 3,
+        "decision": "EFFECT_NOT_VERIFIED_NOT_PASS"
+      },
+      "expected_state": "EXIT0_WRONG_POST",
+      "expected_decision": "EFFECT_NOT_VERIFIED_NOT_PASS",
+      "verdict": "PASS"
+    }
+  ],
+  "compensation_demo": {
+    "F-PARTIAL": {
+      "files_left": [
+        "a.txt"
+      ],
+      "compensated": true
+    },
+    "F-EXIT0-WRONG": {
+      "files_left": [
+        "a.txt"
+      ],
+      "compensated": true
+    }
+  },
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0
+  },
+  "note": "each fixture produced a real on-disk state and was read back; no verdict was passed in"
+}

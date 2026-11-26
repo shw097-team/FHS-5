@@ -1,0 +1,63 @@
+{
+ "schema": "FHS5.PLP.W2.ClosureMatrix@1",
+ "produced_at": "2026-11-26T12:28:19+0800",
+ "three_spec": {
+  "PI": "OK",
+  "OPS": "OK",
+  "Session": "OK",
+  "basis": "00 §2-9 read; requirements carried 16/16"
+ },
+ "six_wp": {
+  "WM2-P01": "EXIT_OBSERVED",
+  "WM2-P02": "EXIT_OBSERVED",
+  "WM2-P03": "EXIT_OBSERVED",
+  "WM2-P04": "EXIT_OBSERVED",
+  "WM2-P05": "EXIT_OBSERVED",
+  "WM2-P06": "EXIT_OBSERVED"
+ },
+ "requirements_13_plus_3": {
+  "rows": 16,
+  "actual_ref_set_true": 0,
+  "note": "no row silently satisfied"
+ },
+ "cases_12": {
+  "PASS": 12,
+  "FAIL": 0,
+  "REQUALIFY": 0,
+  "DELTA_UNVERIFIED": 0
+ },
+ "acc_6_plus_6": {
+  "positive": 6,
+  "negative": 6,
+  "evidence": "case ledger + J1/J3/M1A receipts"
+ },
+ "seams_7": {
+  "SM01": "DIRECT_CONTEXT",
+  "SM02": "OBSERVED",
+  "SM03": "OBSERVED",
+  "SM04": "DIRECT",
+  "SM05": "BRIDGE_RESPONSE_ABSENT",
+  "SM06": "OBSERVED",
+  "SM07": "DEFERRED_W3"
+ },
+ "j_subgroups": {
+  "J1": "PASS",
+  "J2": "PASS",
+  "J3": "PASS"
+ },
+ "holds": {
+  "common_14": "RETAINED",
+  "w2_special_6": "RETAINED",
+  "closed_this_round": 0,
+  "note": "HOLDs are only closed by an original-domain receipt"
+ },
+ "crs_37": "RETAINED",
+ "rq_01_07": "RETAINED",
+ "not_claimed": [
+  "INDEPENDENT_PASS",
+  "other-host PASS",
+  "RELEASED",
+  "M-DONE",
+  "W3_EXECUTION_READY"
+ ]
+}

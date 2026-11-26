@@ -1,0 +1,52 @@
+{
+  "schema": "FHS5.PLP.W2.AdmissionBinding@1",
+  "decision": {
+    "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1225_W2_FINAL_CLOSURE\\10_PACK\\19_W2_NF_CODEX_20261126\\W2_OWNER_DECISION.json",
+    "sha256": "1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7",
+    "pin": "1ef19c0f0b4212c087a43bf3b8e415f844004448cc0848bafb7da0aeba191ff7"
+  },
+  "rows": [
+    {
+      "case": "A1_caller_dict_refused",
+      "want_first_fail": "FALSE_AUTHORITY",
+      "observed_first_fail": "FALSE_AUTHORITY",
+      "wrote": [],
+      "verdict": "PASS"
+    },
+    {
+      "case": "A2_pinned_receipt_accepted",
+      "want_first_fail": null,
+      "observed_first_fail": null,
+      "wrote": [
+        "t.py"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "A3_tampered_receipt_refused",
+      "want_first_fail": "FALSE_AUTHORITY",
+      "observed_first_fail": "FALSE_AUTHORITY",
+      "wrote": [],
+      "verdict": "PASS"
+    },
+    {
+      "case": "A4_wrong_pin_refused",
+      "want_first_fail": "FALSE_AUTHORITY",
+      "observed_first_fail": "FALSE_AUTHORITY",
+      "wrote": [],
+      "verdict": "PASS"
+    },
+    {
+      "case": "A5_unauthorised_effect_refused",
+      "want_first_fail": "FALSE_AUTHORITY",
+      "observed_first_fail": "FALSE_AUTHORITY",
+      "wrote": [],
+      "verdict": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 5,
+    "FAIL": 0
+  },
+  "note": "the receipt is derived from the pinned document and re-derived on use; a hand-built dict cannot pass strict mode"
+}

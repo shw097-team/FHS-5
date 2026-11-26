@@ -70,9 +70,19 @@ def check(asserted: dict, repo_root, write_set: list) -> dict:
         return _decision(checks, token["v"], repo, None)
     ok("effect_token", effect)
 
-    # 2 admission must be present and unexpired; a bare permission flag is not a grant
+    # 2 admission: a caller dict is not a grant. Under strict mode the gate
+    #    requires a receipt that re-derives from the hash-pinned Owner decision.
     adm = asserted.get("admission") or {}
-    if not adm.get("decision_id") or adm.get("expired") is True:
+    strict = bool(asserted.get("require_verified_admission"))
+    if strict:
+        try:
+            import w2_admission as ADM
+            pin = asserted.get("admission_pin")
+            ADM.require(adm, pin)
+            ok("admission", f"receipt verified against pinned decision {pin[:12]}")
+        except Exception as exc:  # noqa: BLE001
+            fail("admission", "FALSE_AUTHORITY", str(exc)[:200])
+    elif not adm.get("decision_id") or adm.get("expired") is True:
         fail("admission", "FALSE_AUTHORITY", adm)
     else:
         ok("admission", adm.get("decision_id"))

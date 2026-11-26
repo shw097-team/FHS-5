@@ -1,0 +1,113 @@
+{
+  "schema": "FHS5.PLP.W2.WorldEffectRecord@1",
+  "op_id": "OPS-O03",
+  "tag": "POS",
+  "work": "W2-NF-O03-20261126T040428Z-1929cd1c",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "receiver_scope_argument": "W1-NF-01",
+  "receipt_subject": "FHS-5_PLP/W1/CONTROL_PACK (the delivery's own subject; the W2 subject is carried by this record)",
+  "candidate": {
+    "w2_receiver_sha256": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+    "bytes": 40842
+  },
+  "pins": {
+    "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\30_VERIFY\\expected_pins.json",
+    "sha256": "fdb99b2a8853a2578847f99b8b0483402d9165280fd515fa664f39f2a0ca515c"
+  },
+  "host": {
+    "host_id": "DESKTOP-57EO414",
+    "principal": "user",
+    "policy_epoch": null,
+    "epoch_state": "NOT_DECLARED_BY_HOST"
+  },
+  "receiver": {
+    "id": "R2",
+    "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\20_DEV\\worktree\\W1\\check\\w2_receiver.py",
+    "argv": [
+      "C:\\Users\\user\\AppData\\Local\\hermes\\installs\\0d1790b230609f8c\\environments\\2e40a7b72ed941c691e747bed9c9928f\\venv\\Scripts\\python.exe",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\20_DEV\\worktree\\W1\\check\\w2_receiver.py",
+      "--delivery",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\10_PACK\\18_W1_NF_CODEX_20261126T000627",
+      "--pins",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\30_VERIFY\\expected_pins.json",
+      "--output-root",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS\\.tmp\\stage-20261126T040428Z-1929cd1c\\material_copy",
+      "--out",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS\\.tmp\\stage-20261126T040428Z-1929cd1c\\w2_binding_receipt.json",
+      "--scope",
+      "W1-NF-01"
+    ],
+    "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\20_DEV\\worktree\\W1\\check",
+    "elapsed_s": 0.877
+  },
+  "exit": 0,
+  "stdout": "{\"accepted\": true, \"first_fail\": null, \"checks\": 44, \"rejected\": [], \"product_calls\": {\"build_contracts\": 1, \"seam_wiring\": 1}, \"next\": \"W2-READ: build the 13-row Draft BindingRequest plan inside W2-READ-01; no grant, no protected effect\"}\r\n",
+  "stderr": "",
+  "stdout_sha256": "d6b812f72c4f049496a8135a261d0c5f8a16a0ceda2a372a4a74e78e78feb712",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "run_dir": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS\\w2-ops-a-20261126T040428Z-1929cd1c",
+  "run_id": "20261126T040428Z-1929cd1c",
+  "pre_world": {
+    "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS",
+    "digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "entries": 0
+  },
+  "post_world": {
+    "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS",
+    "digest": "4ebfa5f7e7a68757514764275f58209c0998f8c9e5faa282e50df0684d5c4532",
+    "entries": 8
+  },
+  "created_entries": [
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/00_W2_DRAFT_PI_PD.md",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/03_W2_DRAFT_TQAEP.md",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/04_W2_DRAFT_THIN.md",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/05_W2_SOURCE_MANIFEST.json",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/_off_native.py",
+    "w2-ops-a-20261126T040428Z-1929cd1c/material_copy/material_copy/context_bundle.md",
+    "w2-ops-a-20261126T040428Z-1929cd1c/w2_binding_receipt.json",
+    "w2-ops-a-20261126T040428Z-1929cd1c/w2_pack_parse.json"
+  ],
+  "atomic": "stage under 40_OPS/.tmp then os.replace(dir) — no partial publish",
+  "receiver_receipt": {
+    "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\40_OPS\\w2-ops-a-20261126T040428Z-1929cd1c\\w2_binding_receipt.json",
+    "sha256": "f64ed32a0d7f963991e76954bff3dcd27ce61c2d361b0274f8b09676f4f17525",
+    "accepted": true,
+    "first_fail": null,
+    "product_calls": {
+      "build_contracts": 1,
+      "seam_wiring": 1
+    },
+    "verified_entries": 118
+  },
+  "w2_pack_parse": {
+    "schema": "FHS5.PLP.W2.PackParse@1",
+    "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1152_W2_CLOSURE\\10_PACK\\19_W2_NF_CODEX_20261126\\FHS-5_PLP_W2_NATIVE_FIRST",
+    "ok": true,
+    "reader": "w2_nf_reader.build_contracts",
+    "pack_manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+    "counts": {
+      "pack_files": 5,
+      "assets": 25,
+      "sources": 24,
+      "requirements": 16,
+      "cases": 12,
+      "crs": 37,
+      "holds": 14,
+      "w2_special_holds": 6
+    },
+    "views": [
+      "DEV",
+      "ENTRY",
+      "OPS",
+      "PD",
+      "PI",
+      "TQAEP"
+    ],
+    "requirements": 16,
+    "cases": 12,
+    "dev_write_set_rows": 2,
+    "problems": []
+  },
+  "compensation": "DEFERRED_TO_O05"
+}

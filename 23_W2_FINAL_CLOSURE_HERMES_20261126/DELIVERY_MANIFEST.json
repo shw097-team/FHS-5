@@ -1,0 +1,99 @@
+{
+ "schema": "FHS5.PLP.W2.DeliveryManifest@1",
+ "task_id": "HERMES-F5-W2-FINAL-CLOSURE-r3",
+ "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+ "scope": "W2-NF-01",
+ "candidate": "W2-NF-r3-CODEX-PRIMARY",
+ "status": "W2_NF_VALIDATED claimed: 12/12 cases, J1 7/7, J3 PASS, UNKNOWN 4/4, M1-A 5/5",
+ "five_pins": "W2_FIVE_PINS.json",
+ "files": [
+  {
+   "path": "FHS-5_PLP_W2_CLOSEOUT.md",
+   "bytes": 4574,
+   "sha256": "3b17d9d1323b6ee164c270a689bf7117545f2b0d09b703fc6a737390145d8d0c"
+  },
+  {
+   "path": "FHS-5_PLP_W2_HANDOFF.md",
+   "bytes": 1375,
+   "sha256": "7f744af585cb9acb8d4dc3469ca6e5be323508747ed669d5cc27844ed8646191"
+  },
+  {
+   "path": "J3_ONOFF.json",
+   "bytes": 3638,
+   "sha256": "0081199b8fc05522767fc9e14ff4e5f67a332c76f9824c584c6610a5b53ad177"
+  },
+  {
+   "path": "M1A_ADMISSION_BINDING.json",
+   "bytes": 1539,
+   "sha256": "b74040cdf6d4fbc9c7fe95e2b0308358914113b152362e7d416915288b9da48e"
+  },
+  {
+   "path": "receipts/checker_j1_oracle.json",
+   "bytes": 2941,
+   "sha256": "38fef4d8287dcbb14aacb96f2115d01953a0ecedfb8603df749e6e2c16b2feeb"
+  },
+  {
+   "path": "receipts/hardening_probe.json",
+   "bytes": 400,
+   "sha256": "acfc8bd3dce00f470453515e05e36cbd7233726a4adceb5fb368ae2a359650f8"
+  },
+  {
+   "path": "receipts/OPS_O03.json",
+   "bytes": 5407,
+   "sha256": "2a8ae681c0d277a41fa468059dd4f80d8a473a2f1e27af9ddef0d4d8eb1cf2c6"
+  },
+  {
+   "path": "receipts/OPS_O04.json",
+   "bytes": 2488,
+   "sha256": "98d1696b505780f93ee00a15ecadb6828c114ab18c8cbf2f6693fbec89a9b423"
+  },
+  {
+   "path": "receipts/OPS_O05.json",
+   "bytes": 2186,
+   "sha256": "2cb581968850341bad151459cc01a34109420f508c8e805c2d5638c48467a056"
+  },
+  {
+   "path": "receipts/W2_CASE_LEDGER_runner.json",
+   "bytes": 3420,
+   "sha256": "f79ac38673e2a6cfddf5a329e6bcf6a5dd6c45c42e6df9450ee176367772cbc5"
+  },
+  {
+   "path": "W2_CASE_LEDGER.json",
+   "bytes": 4468,
+   "sha256": "b8b92edfa2f6c8d0f300f15d88269a40ab66d0b012739d477b37db6f2a025d62"
+  },
+  {
+   "path": "W2_CHANGESET.json",
+   "bytes": 15354,
+   "sha256": "0f308730601b446ab58be5380af655602f85b0ba7a38eac817517c2ee81c3e09"
+  },
+  {
+   "path": "W2_CLOSURE_MATRIX.json",
+   "bytes": 1302,
+   "sha256": "0a9206853cca30fb121ef22cec44ad5824bf927d02dd55eff7a4d670f36997d4"
+  },
+  {
+   "path": "W2_CONTRACTS.json",
+   "bytes": 40823,
+   "sha256": "afddec902133a8edbb425cef59b44242d17fd7f07e9464a73bb6a69abff1378c"
+  },
+  {
+   "path": "W2_FIVE_PINS.json",
+   "bytes": 1521,
+   "sha256": "cb065923b3f1a07fef9d7388c31df2282b6140912844a63d31533fa3c6c01a6b"
+  },
+  {
+   "path": "W2_GUIDE_NINE_KEYS.json",
+   "bytes": 4254,
+   "sha256": "d96908322f47f41d27816f5baaec2cbcdbab888e7767c87f41cfad805c5cfc37"
+  },
+  {
+   "path": "W2_UNKNOWN_FIXTURES.json",
+   "bytes": 3273,
+   "sha256": "24a8aa8d148076e485b50f30d003eb2bae088009d736a8cc8b25ce0aef5851e8"
+  }
+ ],
+ "file_count": 17,
+ "self_excluded": true,
+ "manifest_self_hash": "EXTERNAL_RECORD_ONLY"
+}

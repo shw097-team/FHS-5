@@ -1,0 +1,128 @@
+{
+  "schema": "FHS5.PLP.W2.J3Parity@1",
+  "task": "verify+consume frozen W1 delivery",
+  "roots": {
+    "on": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1225_W2_FINAL_CLOSURE\\40_OPS\\j3\\on",
+    "off": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\20261126T1225_W2_FINAL_CLOSURE\\40_OPS\\j3\\off"
+  },
+  "stable_keys": [
+    "accepted",
+    "first_fail",
+    "manifest_sha256",
+    "seal_sha256",
+    "verified_entries",
+    "effect_created",
+    "delivery_tree_unchanged"
+  ],
+  "projections": {
+    "on": {
+      "accepted": true,
+      "first_fail": null,
+      "manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+      "seal_sha256": "f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73",
+      "verified_entries": 118,
+      "effect_created": true,
+      "effect_file_count_observed": 6,
+      "delivery_tree_unchanged": true,
+      "mode": "on",
+      "imported_product_modules": [
+        "w2_receiver"
+      ],
+      "blocker_positive_control": null
+    },
+    "off": {
+      "accepted": true,
+      "first_fail": null,
+      "manifest_sha256": "9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39",
+      "seal_sha256": "f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73",
+      "verified_entries": 118,
+      "effect_created": true,
+      "effect_file_count_observed": 1,
+      "delivery_tree_unchanged": true,
+      "mode": "off",
+      "imported_product_modules": [],
+      "blocker_positive_control": "BLOCKED"
+    }
+  },
+  "normalised": "paths/run ids excluded; only stable semantics compared",
+  "checks": [
+    {
+      "check": "both_sides_produced_a_projection",
+      "ok": true,
+      "detail": "{'on': {'exit': 0, 'stderr': ''}, 'off': {'exit': 0, 'stderr': ''}}"
+    },
+    {
+      "check": "parity.accepted",
+      "ok": true,
+      "detail": "{'on': True, 'off': True}"
+    },
+    {
+      "check": "parity.first_fail",
+      "ok": true,
+      "detail": "{'on': None, 'off': None}"
+    },
+    {
+      "check": "parity.manifest_sha256",
+      "ok": true,
+      "detail": "{'on': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39', 'off': '9546d6be36545a2531e9fdb78d20fd1effadd91e43492ed6624546274a860d39'}"
+    },
+    {
+      "check": "parity.seal_sha256",
+      "ok": true,
+      "detail": "{'on': 'f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73', 'off': 'f177229271e4ec605942684a35cbf0806d83e23c4457c10fe41b92bb66be9e73'}"
+    },
+    {
+      "check": "parity.verified_entries",
+      "ok": true,
+      "detail": "{'on': 118, 'off': 118}"
+    },
+    {
+      "check": "parity.effect_created",
+      "ok": true,
+      "detail": "{'on': True, 'off': True}"
+    },
+    {
+      "check": "parity.delivery_tree_unchanged",
+      "ok": true,
+      "detail": "{'on': True, 'off': True}"
+    },
+    {
+      "check": "on_used_product_stack",
+      "ok": true,
+      "detail": "['w2_receiver']"
+    },
+    {
+      "check": "off_imported_no_product",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "off_blocker_positive_control",
+      "ok": true,
+      "detail": "BLOCKED"
+    },
+    {
+      "check": "both_really_succeeded",
+      "ok": true,
+      "detail": "{'on': True, 'off': True}"
+    },
+    {
+      "check": "delivery_not_written",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "effect_created_on_both",
+      "ok": true,
+      "detail": "{'on': 6, 'off': 1}"
+    },
+    {
+      "check": "double_failure_is_not_pass",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "passed": 15,
+  "total": 15,
+  "verdict": "PASS"
+}

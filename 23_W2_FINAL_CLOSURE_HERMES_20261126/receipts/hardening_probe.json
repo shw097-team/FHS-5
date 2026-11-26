@@ -1,0 +1,19 @@
+{
+  "H0_control": {
+    "ok": true,
+    "first_fail": null,
+    "expect": "ok=True"
+  },
+  "H1_traversal_repinned": {
+    "ok": false,
+    "first_fail": "PATH_ESCAPE",
+    "expect": "PATH_ESCAPE (not BYTES_MISMATCH / PINS)"
+  },
+  "H2_junction_escape": {
+    "junction_created": true,
+    "ok": false,
+    "first_fail": "PATH_ESCAPE",
+    "expect": "PATH_ESCAPE"
+  },
+  "verdict": "HARDENING_PASS"
+}
