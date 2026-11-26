@@ -1,0 +1,177 @@
+{
+  "schema": "FHS5.PLP.W2.RequalificationMatrix@2",
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "rows": [
+    {
+      "case_id": "W2-DEV-01",
+      "kind": "POS",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "DEV_VERIFIED",
+        "REVERSE_RESTORED"
+      ],
+      "raw_sha256": "3a4c449163367a1c2f79f4d80c353592983560d843a211c222365ba3412c2bdc",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-DEV-01\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-DEV-02",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "REPO_HEAD_MISMATCH"
+      ],
+      "raw_sha256": "47b37d3f821f22d49f22656355f977217069a1ebefbec7ca633470bf2a6de811",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-DEV-02\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-OPS-01",
+      "kind": "POS",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "OPS_VERIFIED",
+        "RECOVERED_PRE_STATE"
+      ],
+      "raw_sha256": "240f06560f0214c3704fe06944aec50701d4bee236fe21e2e2bc9b5d1e295339",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-OPS-01\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-OPS-02",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "RECOVERY_KIND_MISMATCH"
+      ],
+      "raw_sha256": "5a0f46554ee1db50f547e171a52e21d285d3347cbc797cb8672c0c3909e033fd",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-OPS-02\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-EFFECT-01",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "EFFECT_UNBOUND"
+      ],
+      "raw_sha256": "ab70f83c0b254040f1f99dc73beb76dee02a907095cec2d1609940ff7ca1c6ec",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-EFFECT-01\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-AUTH-01",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "FALSE_AUTHORITY",
+        "NOT_ADMITTED"
+      ],
+      "raw_sha256": "4cbeb0ebc22766ec02729d19c3032ebce7a46452bef1e8d165c8830b67964536",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-AUTH-01\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-RUNNER-01",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "RUNNER_UNBOUND"
+      ],
+      "raw_sha256": "e8b72e4813d767532c494c061a465f3d6ce1d8d2408d9eea21b10b59a1dc3cab",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-RUNNER-01\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-DELTA-01",
+      "kind": "POS",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "REUSE_LASTGOOD",
+        "DELTA_UNVERIFIED",
+        "PARK_NO_DELTA_CANDIDATE",
+        "NEW_MATERIAL_EVIDENCE"
+      ],
+      "raw_sha256": "aac403492201ddb844b4bb0f88b337239946567b24acc888cd36d2833fd861ba",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-DELTA-01\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-R3-01",
+      "kind": "POS",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "THIRTEEN_ROWS",
+        "THREE_NF_ROWS",
+        "NULL_PRESERVED"
+      ],
+      "raw_sha256": "c34652efa858cd8167578c016f27545930c628ff609514a6899a7227df4b6dd6",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-R3-01\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-R3-02",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "NOT_ADMITTED"
+      ],
+      "raw_sha256": "0412fbe20e6c644d53ddb664396bb118d7fe817768232463c87fe945f3034506",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-R3-02\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-R3-03",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "WRITESET_UNBOUND"
+      ],
+      "raw_sha256": "ecc322bc1bcb95dff314ce3e8fd5b3a46b5739c5f5236e176587834568547984",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-R3-03\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    },
+    {
+      "case_id": "W2-R3-04",
+      "kind": "EDGE",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "WORKSPACE_DRIFT_BOUNDED"
+      ],
+      "raw_sha256": "677824afe3e693ec51698e948ad24cc2346ed6d60adbe3a7f4b3e379372144e2",
+      "record_ref": "<RUN_ROOT>\\evidence\\W2RQ\\cases\\W2-R3-04\\record.json",
+      "product_case_state": "W2_READONLY_REQUALIFIED"
+    }
+  ],
+  "row_count": 12,
+  "pass_count": 12,
+  "freeze": {
+    "schema": "FHS5.PLP.W2.RequalFreezeLedger@1",
+    "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+    "scope": "W2-NF-01",
+    "pins": {
+      "source": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+      "candidate": "2c4fdf05c755c9607f6857ae95a2ea5f125255e3",
+      "evidence": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+      "oracle": "7d2faad4db33a01b46f124660692dfe6f64f7ed3b019ed74ad23f73a5bfde49d",
+      "case_set": "ea90829f75177150fe0d36df39c63481db029fb3757b2f4fdff51f6e4dfcf4f8"
+    },
+    "pins_distinct": true,
+    "candidate_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+    "candidate_tree": "2c4fdf05c755c9607f6857ae95a2ea5f125255e3",
+    "candidate_aggregate_digest": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+    "aggregate_algorithm": "UNDECLARED_OLD_VALUE_PRESERVED",
+    "aggregate_reproducible": false,
+    "frozen_at": "2026-11-26T18:31:27+0800",
+    "case_owner": "CODEX delegated Case Owner"
+  },
+  "verdict": "W2_UPSTREAM_REQUALIFIED_READONLY",
+  "W2_NF_VALIDATED": false,
+  "w2_nf_reason": "W2 protected writer/gate/marker remains BLOCKED_NOT_ADMITTED; no original-domain W2 signer",
+  "not_covered": [
+    "R4 protected writer",
+    "W2 original-domain signature",
+    "W2 gate/marker change"
+  ]
+}

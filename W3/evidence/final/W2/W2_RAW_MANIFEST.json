@@ -1,0 +1,128 @@
+{
+  "schema": "FHS5.PLP.W2.RequalRawManifest@1",
+  "run_id": "W2RQ",
+  "files": [
+    {
+      "path": "evidence/W2RQ/cases/W2-AUTH-01/record.json",
+      "sha256": "f955412d05504f334a8f642eaa70b4f42b112e3f0926b246fe81243df1c2b92b",
+      "bytes": 2472
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-AUTH-01/stdout.txt",
+      "sha256": "d749c22a9bc9b02412670af81b0f60c9852e74f3dcdedc161d247630bf89b38f",
+      "bytes": 1337
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-DELTA-01/record.json",
+      "sha256": "5d283a16107a0970864995fe53658ddb0533e8de6c80ee4cbb004aae22124efe",
+      "bytes": 13976
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-DELTA-01/stdout.txt",
+      "sha256": "09e2db6b36b2b300763e54974182bd6fbcdf2770bac14f192bae535416f8d2a5",
+      "bytes": 12598
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-DEV-01/record.json",
+      "sha256": "775c9b4cee66218a22563012df1cbdfbd80e5f9be1f2a66729d0ee239c64ce02",
+      "bytes": 2834
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-DEV-01/stdout.txt",
+      "sha256": "6f039ac46b15366998593cc71c5ecffd5dbe3dab0ffc92d50b4fbab95a1beb9d",
+      "bytes": 1696
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-DEV-02/record.json",
+      "sha256": "5dc75073ca4a1f450ba9d6b077fcd3903d018da0ed3a469148b5e1299e6a39c2",
+      "bytes": 2573
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-DEV-02/stdout.txt",
+      "sha256": "3f0f37d5181ddcec8381965114b240d62a7ea0180be82db186039867afd3f0c1",
+      "bytes": 1443
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-EFFECT-01/record.json",
+      "sha256": "11420ec371953d742a1aabc9162168906580f17f82f4c5ad754c9d9fc17d1615",
+      "bytes": 2443
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-EFFECT-01/stdout.txt",
+      "sha256": "94cc3d8a95e4e17160a8c788956bffeef998058e6587c1823854b8c29fb00cc2",
+      "bytes": 1307
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-OPS-01/record.json",
+      "sha256": "9765662c4ae6ea3a41a127be43e886098e15ba341ae52c5888cd503681fd83fc",
+      "bytes": 2841
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-OPS-01/stdout.txt",
+      "sha256": "e29076be9fd9d34847301c043d1ec393c6c40eefb767cacdbc7b5ce3ac230749",
+      "bytes": 1701
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-OPS-02/record.json",
+      "sha256": "39b6a04cec496bd3eba177380378bff7fade59c57d5bfecd04fe1f398b818d4e",
+      "bytes": 2336
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-OPS-02/stdout.txt",
+      "sha256": "1e94b07e5afa839c240b78fa6ad656ba621ef101a324fe76572c2dd63954b77b",
+      "bytes": 1211
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-R3-01/record.json",
+      "sha256": "67198ab278d074fd6131f65790c4e5c9e75a99a86592c12361609aebef456a2b",
+      "bytes": 5408
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-R3-01/stdout.txt",
+      "sha256": "59e66c7799ec803079eb406148da856f91d70e964bc3f108a273328fbd0c3696",
+      "bytes": 4172
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-R3-02/record.json",
+      "sha256": "301601053b887101f80c0aac57636f1c532898171ed464423eaabfaf132ffee7",
+      "bytes": 2758
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-R3-02/stdout.txt",
+      "sha256": "349bfef6dd44643f74ce2c891c5ebc58f3ca7d76cf420da806301080e2ddc2bc",
+      "bytes": 1623
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-R3-03/record.json",
+      "sha256": "0b30b2daa4bcd9a563ee826ac0bc73e7b8704bca91265238bcacc84d1bdac18d",
+      "bytes": 2490
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-R3-03/stdout.txt",
+      "sha256": "3b25da7ee8d36c99878515bfb396b9296cb61d81fb2e5149348c56639962b920",
+      "bytes": 1360
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-R3-04/record.json",
+      "sha256": "e70af78590d561d02fba5fef4527ee4ec02e97859c2d87f918926c4cd06c4abf",
+      "bytes": 2414
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-R3-04/stdout.txt",
+      "sha256": "ff410bd2e339c1f37e3d9fca6fdbff5a209dcf56809190bd3809d1dc1ec598cf",
+      "bytes": 1285
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-RUNNER-01/record.json",
+      "sha256": "6e2b8e5efefa9f94f47f186fd051d48584a1a3fbea2d236802c563691718a269",
+      "bytes": 2410
+    },
+    {
+      "path": "evidence/W2RQ/cases/W2-RUNNER-01/stdout.txt",
+      "sha256": "abdedcccd9ec90f5e79253f91d273fcb052c7760c0aa07fd60039c2cfb3fbd21",
+      "bytes": 1274
+    }
+  ],
+  "file_count": 24,
+  "self_excluded": true
+}

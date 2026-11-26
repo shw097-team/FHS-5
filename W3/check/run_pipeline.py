@@ -468,7 +468,8 @@ def write_specs(root, pack, ev, man):
     bind = {
         "schema": "FHS5.PLP.W3.RunnerBind@1",
         "runner_ref": "W3/check/run_w3_case.py",
-        "binary": sys.executable,
+        "binary": os.path.basename(sys.executable),
+        "binary_sha256": sha256_file(sys.executable),
         "python_version": sys.version.split()[0],
         "argv_template": ["python", "W3/check/run_w3_case.py", "--case", "<case_id>"],
         "cwd": "<isolated run root>",

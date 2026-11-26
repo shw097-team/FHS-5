@@ -1,0 +1,20 @@
+{
+  "schema": "FHS5.PLP.W2.RequalCheckerReceipt@1",
+  "checker_role": "DISTINCT_READ_ONLY_CHECKER",
+  "checker_script_sha256": "25ac33c7a0f1d8f30866983c3b254ef0f8375bdff5fd957c556d101965cca388",
+  "argv": [
+    "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "<RUN_ROOT>\\W2\\check\\checker_w2.py"
+  ],
+  "cwd": "<RUN_ROOT>",
+  "run_id": "W2RQ",
+  "rows_checked": 12,
+  "errors": [],
+  "verdict": "PASS",
+  "strength": "DISTINCT_LOCAL_PROCESS_READONLY; NOT_ORIGINAL_DOMAIN_PRINCIPAL",
+  "limitations": [
+    "same OS principal as the executor",
+    "W2 protected writer/gate/marker untouched and still blocked",
+    "read-only requalification of the published 12 cases, not a W2 product write"
+  ]
+}

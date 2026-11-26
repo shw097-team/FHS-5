@@ -1,0 +1,762 @@
+{
+  "schema": "FHS5.PLP.W3.FinalClosureCoverage@1",
+  "closure_id": "CLOSE",
+  "cases": [
+    {
+      "case_id": "W3-CHK-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_AUTHORITY",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-CHK-01\\record.json",
+      "record_sha256": "804e5da26cada2b65bf98f1de93d66688f218ef209603f87925b2e512ee3b618"
+    },
+    {
+      "case_id": "W3-FAR-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "UNAVAILABLE",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-FAR-01\\record.json",
+      "record_sha256": "5f7d0c22e2f67370bf7cd7de0e588754f86c09a67a24d79ad1958216132aa1d6"
+    },
+    {
+      "case_id": "W3-FAR-02",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ALTERNATIVES_SUBSTANTIVE",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-FAR-02\\record.json",
+      "record_sha256": "33007e582f71931ccd00acbcfe4dc99b7ff5c35216bfa12df0d3a70b61081641"
+    },
+    {
+      "case_id": "W3-FR16-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "WRITE_SCOPE_VIOLATION",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-FR16-01\\record.json",
+      "record_sha256": "5742ee812c6c667849f530a0573beb6a250e5ddc5b24d1f5aaff945d01402d89"
+    },
+    {
+      "case_id": "W3-FR17-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_AUTHORITY",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-FR17-01\\record.json",
+      "record_sha256": "7ef3c8f80136fc5af31f4fda6c854a36deaedb0164f59e909eca1da1358fa3cf"
+    },
+    {
+      "case_id": "W3-FRZ-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "FREEZE_LEDGER_VERIFIED",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-FRZ-01\\record.json",
+      "record_sha256": "e1683b4d47611a3ce2c32474bb4342c2e11b82c46ed405109a2e80f1d12cb3f9"
+    },
+    {
+      "case_id": "W3-FRZ-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FROZEN_IDENTITY_MISMATCH",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-FRZ-02\\record.json",
+      "record_sha256": "0894c935f11d6d8a5caf075eb8d7534bd6df594825e192585f728c19279ad9ad"
+    },
+    {
+      "case_id": "W3-G2-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "DELTA_UNVERIFIED",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-G2-01\\record.json",
+      "record_sha256": "7bc0b9fae91952df97d223c557d1294ede20c6acefcc8675dec0a05c208a540d"
+    },
+    {
+      "case_id": "W3-R3-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "NOT_COVERED",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-R3-01\\record.json",
+      "record_sha256": "fe88cd3d2e2d8a40efcddd5ff6d5132eaf9722e1e8e0e942997309b5865bc694"
+    },
+    {
+      "case_id": "W3-R3-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "DELTA_UNVERIFIED",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-R3-02\\record.json",
+      "record_sha256": "ac157a4c3cbb360446ea98656155fd42bdfac6db9711a29700e7771b82df024e"
+    },
+    {
+      "case_id": "W3-R3-03",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ZERO_RELEVANT_HIT",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-R3-03\\record.json",
+      "record_sha256": "5d8a1fada4ae513672233b974dcdaf817e20400382230842e79aa48174e8cdc6"
+    },
+    {
+      "case_id": "W3-R3-04",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_INDEPENDENT",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-R3-04\\record.json",
+      "record_sha256": "2d4109da197bd81c9d8cea22522639f09326e9e9bd74555a32f097b7648b3f65"
+    },
+    {
+      "case_id": "W3-R3-05",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ALTERNATIVES_SUBSTANTIVE",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-R3-05\\record.json",
+      "record_sha256": "6a14c78538b7b95bff64e38b16692b500b8f8aab1a1f0b26a9d6a4d0c3ce948a"
+    },
+    {
+      "case_id": "W3-R3-06",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "ORIGINAL_READER_UNBOUND",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-R3-06\\record.json",
+      "record_sha256": "9f27d5f51e1bdc506567921a41188d22d0bfb367ae3d42f7f5d4495433483b02"
+    },
+    {
+      "case_id": "W3-RUN-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "SEMANTIC_MATCH",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-RUN-01\\record.json",
+      "record_sha256": "c5918b0c955414d67d4838ea256b09c4462b7821e7215a93b2ab6624b1e36ae4"
+    },
+    {
+      "case_id": "W3-RUN-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "UNREPRODUCED",
+      "product_status": "NOT_COVERED",
+      "reason": "design fixture/oracle; product reclassification rejected; no independent product Case Owner/Host/runner",
+      "record_ref": "evidence\\W3D\\cases\\W3-RUN-02\\record.json",
+      "record_sha256": "1c43798a4428a0077598a0916a99c51e9fc743acfbe372f81701955b9d9c0613"
+    }
+  ],
+  "case_count": 16,
+  "case_design_pass": 16,
+  "case_product_pass": 0,
+  "fr": [
+    {
+      "fr": "EC-FR01",
+      "primary_case": "W3-FRZ-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FRZ-01\\record.json"
+    },
+    {
+      "fr": "EC-FR02",
+      "primary_case": "W3-FRZ-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FRZ-02\\record.json"
+    },
+    {
+      "fr": "EC-FR03",
+      "primary_case": "W3-CHK-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-CHK-01\\record.json"
+    },
+    {
+      "fr": "EC-FR04",
+      "primary_case": "W3-CHK-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-CHK-01\\record.json"
+    },
+    {
+      "fr": "EC-FR05",
+      "primary_case": "W3-RUN-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-RUN-01\\record.json"
+    },
+    {
+      "fr": "EC-FR06",
+      "primary_case": "W3-RUN-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-RUN-01\\record.json"
+    },
+    {
+      "fr": "EC-FR07",
+      "primary_case": "W3-RUN-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-RUN-02\\record.json"
+    },
+    {
+      "fr": "EC-FR08",
+      "primary_case": "W3-RUN-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-RUN-01\\record.json"
+    },
+    {
+      "fr": "EC-FR09",
+      "primary_case": "W3-RUN-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-RUN-01\\record.json"
+    },
+    {
+      "fr": "EC-FR10",
+      "primary_case": "W3-FAR-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-02\\record.json"
+    },
+    {
+      "fr": "EC-FR11",
+      "primary_case": "W3-R3-04",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-R3-04\\record.json"
+    },
+    {
+      "fr": "EC-FR12",
+      "primary_case": "W3-CHK-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-CHK-01\\record.json"
+    },
+    {
+      "fr": "EC-FR13",
+      "primary_case": "W3-FRZ-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FRZ-02\\record.json"
+    },
+    {
+      "fr": "EC-FR14",
+      "primary_case": "W3-FAR-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-01\\record.json"
+    },
+    {
+      "fr": "EC-FR15",
+      "primary_case": "W3-FR16-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FR16-01\\record.json"
+    },
+    {
+      "fr": "EC-FR16",
+      "primary_case": "W3-FR16-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FR16-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR01",
+      "primary_case": "W3-FRZ-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FRZ-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR02",
+      "primary_case": "W3-RUN-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-RUN-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR03",
+      "primary_case": "W3-RUN-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-RUN-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR04",
+      "primary_case": "W3-FAR-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-02\\record.json"
+    },
+    {
+      "fr": "FAR-FR05",
+      "primary_case": "W3-FAR-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-02\\record.json"
+    },
+    {
+      "fr": "FAR-FR06",
+      "primary_case": "W3-FR16-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FR16-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR07",
+      "primary_case": "W3-FAR-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR08",
+      "primary_case": "W3-FAR-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-02\\record.json"
+    },
+    {
+      "fr": "FAR-FR09",
+      "primary_case": "W3-FAR-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-02\\record.json"
+    },
+    {
+      "fr": "FAR-FR10",
+      "primary_case": "W3-FAR-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-02\\record.json"
+    },
+    {
+      "fr": "FAR-FR11",
+      "primary_case": "W3-FAR-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-02\\record.json"
+    },
+    {
+      "fr": "FAR-FR12",
+      "primary_case": "W3-FAR-02",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FAR-02\\record.json"
+    },
+    {
+      "fr": "FAR-FR13",
+      "primary_case": "W3-G2-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-G2-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR14",
+      "primary_case": "W3-G2-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-G2-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR15",
+      "primary_case": "W3-FR16-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FR16-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR16",
+      "primary_case": "W3-FR16-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FR16-01\\record.json"
+    },
+    {
+      "fr": "FAR-FR17",
+      "primary_case": "W3-FR17-01",
+      "design_status": "DESIGN_PASS",
+      "product_status": "NOT_COVERED",
+      "reasoned_nc": false,
+      "evidence": "evidence\\W3D\\cases\\W3-FR17-01\\record.json"
+    }
+  ],
+  "fr_count": 33,
+  "fuo": [
+    {
+      "id": "W3-CODEX-01",
+      "status": "DESIGN_EVIDENCE",
+      "evidence": [
+        "W3-FRZ-01",
+        "W3-FRZ-02"
+      ]
+    },
+    {
+      "id": "W3-CODEX-02",
+      "status": "DESIGN_EVIDENCE",
+      "evidence": [
+        "W3-RUN-01",
+        "W3-RUN-02"
+      ]
+    },
+    {
+      "id": "W3-CODEX-03",
+      "status": "EVIDENCE",
+      "evidence": [
+        "FINDINGS/FINDING_SET.json"
+      ]
+    },
+    {
+      "id": "W3-CODEX-04",
+      "status": "EVIDENCE",
+      "evidence": [
+        "far/FAR_GRAPH.json",
+        "ADVICE/DECISION_ADVICE.json"
+      ]
+    },
+    {
+      "id": "W3-CODEX-05",
+      "status": "EVIDENCE",
+      "evidence": [
+        "delta/W3_DELTA.json"
+      ]
+    },
+    {
+      "id": "W3-CODEX-06",
+      "status": "EVIDENCE",
+      "evidence": [
+        "repair/REPAIR_RECEIPT.json"
+      ]
+    }
+  ],
+  "acc": [
+    {
+      "id": "W3-A01",
+      "status": "DESIGN_EVIDENCE",
+      "product_status": "NOT_COVERED"
+    },
+    {
+      "id": "W3-A02",
+      "status": "DESIGN_EVIDENCE",
+      "product_status": "NOT_COVERED"
+    },
+    {
+      "id": "W3-A03",
+      "status": "EVIDENCE",
+      "product_status": "NOT_COVERED"
+    },
+    {
+      "id": "W3-A04",
+      "status": "EVIDENCE",
+      "product_status": "NOT_COVERED"
+    },
+    {
+      "id": "W3-A05",
+      "status": "EVIDENCE",
+      "product_status": "NOT_COVERED"
+    },
+    {
+      "id": "W3-A06",
+      "status": "EVIDENCE",
+      "product_status": "NOT_COVERED"
+    },
+    {
+      "id": "W3-A07",
+      "status": "EVIDENCE",
+      "product_status": "NOT_COVERED"
+    }
+  ],
+  "seams": [
+    {
+      "id": "SM01",
+      "status": "LOCAL_MATERIAL_CONSUMED",
+      "note": "direct file/process; no separate daemon"
+    },
+    {
+      "id": "SM02",
+      "status": "LOCAL_MATERIAL_CONSUMED",
+      "note": "direct file/process; no separate daemon"
+    },
+    {
+      "id": "SM03",
+      "status": "LOCAL_MATERIAL_CONSUMED",
+      "note": "direct file/process; no separate daemon"
+    },
+    {
+      "id": "SM04",
+      "status": "LOCAL_MATERIAL_CONSUMED",
+      "note": "direct file/process; no separate daemon"
+    },
+    {
+      "id": "SM05",
+      "status": "LOCAL_MATERIAL_CONSUMED",
+      "note": "direct file/process; no separate daemon"
+    },
+    {
+      "id": "SM06",
+      "status": "LOCAL_MATERIAL_CONSUMED",
+      "note": "direct file/process; no separate daemon"
+    },
+    {
+      "id": "SM07",
+      "status": "LOCAL_MATERIAL_CONSUMED",
+      "note": "direct file/process; no separate daemon"
+    }
+  ],
+  "n": [
+    {
+      "id": "N01",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N02",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N03",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N04",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N05",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N06",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N07",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N08",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N09",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N10",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N11",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    },
+    {
+      "id": "N12",
+      "status": "DESIGN_APPLICABLE",
+      "note": "W3 design evidence; original-domain profile items stay not covered"
+    }
+  ],
+  "j": [
+    {
+      "id": "J1",
+      "status": "READONLY_REQUALIFIED_PARTIAL",
+      "evidence": "W2RQ 12-case read-only; W2 protected writer untouched"
+    },
+    {
+      "id": "J2",
+      "status": "PARTIAL",
+      "evidence": "W3 delta/finding/FAR; W2 J2 items not fully re-run"
+    },
+    {
+      "id": "J3",
+      "status": "PARTIAL",
+      "evidence": "W3 repair/checker/consumer; ON/OFF two-route semantic success not established"
+    }
+  ],
+  "x": [
+    {
+      "id": "X01",
+      "status": "PARTIAL",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X02",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X03",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X04",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X05",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X06",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X07",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X08",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X09",
+      "status": "PARTIAL",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X10",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X11",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    },
+    {
+      "id": "X12",
+      "status": "EVIDENCE",
+      "note": "mapped to W3/W2 records; see coverage notes"
+    }
+  ],
+  "d": [
+    {
+      "id": "D1",
+      "status": "EXECUTED",
+      "note": "W3 isolated implementation at W3/impl, W3/check, W3/spec"
+    },
+    {
+      "id": "D2",
+      "status": "NOT_EXECUTED",
+      "note": "no shared W1 module modification was needed"
+    }
+  ],
+  "ops": [
+    {
+      "id": "O1",
+      "status": "EXECUTED"
+    },
+    {
+      "id": "O2",
+      "status": "EXECUTED"
+    },
+    {
+      "id": "O3",
+      "status": "UNBOUND",
+      "note": "product runner/Host not bound"
+    },
+    {
+      "id": "O4",
+      "status": "PARTIAL",
+      "note": "local FAR only; Fabric/ResearchWO unavailable"
+    },
+    {
+      "id": "O5",
+      "status": "PARTIAL",
+      "note": "local Guide2; original Guide/Bridge Host unbound"
+    },
+    {
+      "id": "O6",
+      "status": "NOT_ADMITTED",
+      "note": "no extra world-effect authority"
+    },
+    {
+      "id": "O7",
+      "status": "LOCAL_ONLY",
+      "note": "local commit; push blocked"
+    }
+  ],
+  "denominators": {
+    "W3_original_cases": {
+      "total": 16,
+      "product_pass": 0,
+      "design_pass": 16
+    },
+    "W2_original_cases": {
+      "total": 12,
+      "readonly_requalified": 12
+    },
+    "EC_FR": 16,
+    "FAR_FR": 17,
+    "EC_T26_X10": "NOT_RUN",
+    "FAR_T20": "NOT_RUN",
+    "FARP30": "NOT_RUN",
+    "C16_F5_T12": "NOT_RUN"
+  }
+}

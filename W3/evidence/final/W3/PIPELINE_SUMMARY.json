@@ -1,0 +1,35 @@
+{
+  "run_id": "W3D",
+  "intake_ok": true,
+  "cases_design_pass": 16,
+  "cases_total": 16,
+  "process_exit_match": 16,
+  "findings": 2,
+  "far_states": [
+    "BLOCKED_BY_AUTHORITY",
+    "ERROR",
+    "HIT",
+    "UNAVAILABLE",
+    "ZERO_RELEVANT_HIT"
+  ],
+  "delta": {
+    "p1_p2": "PARK_NO_DELTA",
+    "p1_p3": "NEW_MATERIAL_EVIDENCE"
+  },
+  "repair": "RED_TO_GREEN_WITH_RESTORE",
+  "candidate_tree_sha256": "85fc0be905c71ddb56221b3577e1909e5111a04e2b1e45ea78ac61a27101a7ca",
+  "claims": {
+    "PACK_PRIMARY_SELECTED": true,
+    "PACK_EXECUTABLE": true,
+    "W3_NF_VALIDATED": false,
+    "INDEPENDENT_PASS": false,
+    "W3_TECHNICALLY_READY": false,
+    "W3_EXECUTION_READY": false,
+    "W3_EXECUTION_READY_LOCAL_SCOPE": "LOCAL_ISOLATED_SCOPE_ONLY_NOT_GLOBAL",
+    "W4_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false,
+    "RELEASED": false
+  },
+  "closeout_sha256": "af8c4a0f41e1916284d4ff9ebc752ea6e3c2e9dd76749e5531befbfbb81e35be",
+  "handoff_sha256": "94ee56ff2d0c4753df65f27ea04fbc5d4a169dcc7e44bbe513e0325f533fcf8b"
+}

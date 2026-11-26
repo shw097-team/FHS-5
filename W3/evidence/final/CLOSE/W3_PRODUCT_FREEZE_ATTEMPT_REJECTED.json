@@ -1,0 +1,9 @@
+{
+  "schema": "FHS5.PLP.W3.ProductFreezeAttempt@1",
+  "state": "REJECTED_NOT_ADMISSIBLE",
+  "attempted": "Relabel the 16 design fixtures/oracles as PRODUCT_FROZEN_E2E with a delegated Case Owner",
+  "reviewer": "auto_review",
+  "reason": "design fixtures cannot be reclassified without a real independent Case Owner/Host/runner",
+  "workaround": false,
+  "consequence": "F2/F3 product validation stays NOT_CLAIMED"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "FHS5.PLP.W3.W4Inbound@1",
+  "from_stage": "W3",
+  "to_stage": "W4",
+  "handoff_id": "W3-HANDOFF-CLOSE",
+  "project_id": "FHS-5_PLP",
+  "work_id": "W3-NF-01",
+  "pack_ref": "FHS5-PLP/W3/PACK-NF-20261126-r2-CODEX-PRIMARY",
+  "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+  "candidate_commit": "PENDING_LOCAL_COMMIT",
+  "candidate_preimage": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+  "oracle_sha256": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
+  "case_set_sha256": "a33e2047eeae517073666786b381a2ec1ed047ccc478384b939e39243d2f74a4",
+  "evidence_ref": "evidence/W3D",
+  "evidence_manifest_sha256": "784ba52d06958b5a7c9ab57a29e677d0b64666533f9e3097c7251396a49df02e",
+  "checker_ref": {
+    "w2": "evidence/W2RQ/CHECKER_RECEIPT.json",
+    "w3": "evidence/W3D/CHECKER_RECEIPT.json"
+  },
+  "consumer_ref": "evidence/CLOSE/W4_CONSUMER.json",
+  "actual_readback": {
+    "argv": [
+      "python",
+      "W4/check/consumer_w4.py"
+    ],
+    "exit": 0,
+    "raw": "evidence/CLOSE/W4_CONSUMER.json",
+    "action": "READ_ONLY_W4_PREP",
+    "result": "PASS"
+  },
+  "next_legal_action": "W4 READ/DRAFT only; product Case Owner freeze and W4 named authority are missing",
+  "dependencies": [
+    "W3 product validation (blocked)",
+    "W4 entry adoption",
+    "W4 named execution authority"
+  ],
+  "resume_predicate": "same W3 candidate + product freeze + distinct checker + fresh consumer + W4 named authority",
+  "not_covered": [
+    "CASE_OWNER_FREEZE_MISSING",
+    "16 product cases",
+    "33 FR product pass",
+    "W2 protected writer",
+    "W4 execution"
+  ],
+  "readiness": {
+    "W4_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false
+  },
+  "publication_state": "PUSH_BLOCKED"
+}

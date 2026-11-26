@@ -1,0 +1,56 @@
+{
+  "schema": "FHS5.PLP.W3.F1F5ClosureLedger@1",
+  "closure_id": "CLOSE",
+  "F1": {
+    "status": "ACHIEVED_READONLY",
+    "w2_cases": 12,
+    "w2_pass": 12,
+    "verdict": "W2_UPSTREAM_REQUALIFIED_READONLY",
+    "W2_NF_VALIDATED": false,
+    "blocker": "W2 protected writer/gate/marker remains BLOCKED_NOT_ADMITTED; no original-domain W2 signer",
+    "evidence": [
+      "evidence/W2RQ/W2_REQUALIFICATION_MATRIX.json",
+      "evidence/W2RQ/W2_REQUAL_SEAL.json"
+    ],
+    "resume": "Owner grants a W2-scope named writer authority and an original-domain W2 signer; then R4/R6"
+  },
+  "F2": {
+    "status": "BLOCKED",
+    "blocker": "PRODUCT_CASE_OWNER_INDEPENDENCE_MISSING",
+    "detail": "The 16 adopted fixtures/oracles are PROPOSED_DESIGN. Relabeling them as a product freeze was rejected by the sandbox reviewer as overclaim; an independent product Case Owner, Host and runner are not available.",
+    "evidence": [
+      "evidence/CLOSE/W3_PRODUCT_FREEZE_ATTEMPT_REJECTED.json"
+    ],
+    "resume": "Owner names an independent product Case Owner + product Host/runner/principal and freezes new bytes before observation"
+  },
+  "F3": {
+    "status": "PARTIAL_DESIGN_ONLY",
+    "design_cases": 16,
+    "design_pass": 16,
+    "product_pass": 0,
+    "fr_design_join": 33,
+    "product_fr_pass": 0,
+    "blocker": "product freeze blocked (F2)"
+  },
+  "F4": {
+    "status": "PREPARED_NOT_READY",
+    "W4_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false,
+    "blocker": "W3 product validation not established; no W4 named execution authority"
+  },
+  "F5": {
+    "status": "LOCAL_COMMIT_PENDING",
+    "pushed": false,
+    "blocker": "remote credential egress needs explicit approval; prior attempts rejected by the sandbox reviewer"
+  },
+  "claims": {
+    "W2_NF_VALIDATED": false,
+    "W3_TECHNICALLY_READY": false,
+    "W3_EXECUTION_READY": false,
+    "W3_NF_VALIDATED": false,
+    "INDEPENDENT_PASS": false,
+    "W4_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false,
+    "RELEASED": false
+  }
+}

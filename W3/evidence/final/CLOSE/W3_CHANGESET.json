@@ -1,0 +1,135 @@
+{
+  "schema": "FHS5.PLP.W3.ChangeSet@2",
+  "closure_id": "CLOSE",
+  "pack_preimage_untouched": true,
+  "w2_protected_touched": [],
+  "files": [
+    {
+      "path": "W2/check/checker_w2.py",
+      "sha256": "25ac33c7a0f1d8f30866983c3b254ef0f8375bdff5fd957c556d101965cca388",
+      "bytes": 2725,
+      "op": "ADD"
+    },
+    {
+      "path": "W2/check/run_w2_case.py",
+      "sha256": "36a7a7828f96ae58fdbbd2555aad4854a3f7d88a26962f3e35240a55459e1df7",
+      "bytes": 1271,
+      "op": "ADD"
+    },
+    {
+      "path": "W2/check/run_w2_pipeline.py",
+      "sha256": "90f235c9994a67b67a8b8c4bec3219e59faaf177e6faee4a6cf815cfe4a9e1ca",
+      "bytes": 8590,
+      "op": "ADD"
+    },
+    {
+      "path": "W2/impl/w2_cases.py",
+      "sha256": "2ed73379922160c4cbd29000d485ddca7de719eec518831d5c1d03553a2046c8",
+      "bytes": 15179,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/check/checker_verify.py",
+      "sha256": "00bbdb755c005ca5f0275ea4073a59436178e7035c672bf6881b0d51d4eec438",
+      "bytes": 5424,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/check/consumer_verify.py",
+      "sha256": "1515a0c6d37f4f7232530188c9b6001f33793f0f6d41bd9523009d6cdb3f3371",
+      "bytes": 3640,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/check/run_pipeline.py",
+      "sha256": "b012c896d33b7be6812679b81e66136877d6129e79f9e32bc1729f32833b00f8",
+      "bytes": 45220,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/check/run_product_case.py",
+      "sha256": "9cf931829d28cc41551da900fcb166303460c0973cb22ad7cbef71298944ac21",
+      "bytes": 1412,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/check/run_product_pipeline.py",
+      "sha256": "af751bf545928c86f4a49aded2565e9279568668d1d5cc64bbe5648952f00e03",
+      "bytes": 11154,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/check/run_w3_case.py",
+      "sha256": "36adfa23c420034d8642955cbd8a0ffaa79ad33c189337f9428c6d0d760d0fb2",
+      "bytes": 2368,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/check/test_w3_contracts.py",
+      "sha256": "d7f7dbf2fc1c89071e65db3521755a72c8aac1c46645f435b7e02666a858823c",
+      "bytes": 7673,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/impl/w3_advice.py",
+      "sha256": "00e28adf06dcae5c98879378c25a99c67cbae044dc318c07a37412e793bafedf",
+      "bytes": 4059,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/impl/w3_cases.py",
+      "sha256": "42f476c77de085222e6b2fffe1897c3f6f47bd148dc39de41d7546f7b7c7f123",
+      "bytes": 21798,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/impl/w3_common.py",
+      "sha256": "ef727389b468cf0a33a3757473288860527d056edb9bb417cccd917a2781a0dd",
+      "bytes": 8683,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/impl/w3_far.py",
+      "sha256": "f2433f3761fbc5c8c3eabb35ba9d50bcc1c93f7fcf62b5eb42457b95495d2abe",
+      "bytes": 6544,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/impl/w3_guide2.py",
+      "sha256": "d92e0275397747b3b0bd43856efe094f562b11cfa27f2dbf7d2d6041f7f5a44e",
+      "bytes": 5275,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/impl/w3_intake.py",
+      "sha256": "c99779692a47e54211e110655923ea0df038d8e0837271ee96d79e95433c62a6",
+      "bytes": 17992,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/impl/w3_repair.py",
+      "sha256": "4a5845784510dde278d5bc487e35ab57901a42101e623a2be1c534bc7f79b38f",
+      "bytes": 2984,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/spec/W3_CASE_SET.json",
+      "sha256": "f97e28ab0d386dd0706c3a5d7ad63f40106672e09040807c6926a594eed1f36e",
+      "bytes": 5220,
+      "op": "ADD"
+    },
+    {
+      "path": "W3/spec/W3_RUNNER_BIND.json",
+      "sha256": "741e0347a93c005d24c249d5908c8207ee44fe95f04cf63d7d9de3c60968753c",
+      "bytes": 755,
+      "op": "ADD"
+    },
+    {
+      "path": "W4/check/consumer_w4.py",
+      "sha256": "8f03e2e7fe00c195cf6b018406a49510bba3d1da36dec9b9e3dd4689342b6701",
+      "bytes": 2753,
+      "op": "ADD"
+    }
+  ],
+  "file_count": 21
+}

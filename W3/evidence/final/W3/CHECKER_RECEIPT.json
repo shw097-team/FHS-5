@@ -1,0 +1,27 @@
+{
+  "schema": "FHS5.PLP.W3.CheckerReceipt@1",
+  "checker_role": "DISTINCT_READ_ONLY_CHECKER",
+  "checker_script_sha256": "00bbdb755c005ca5f0275ea4073a59436178e7035c672bf6881b0d51d4eec438",
+  "argv": [
+    "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "<RUN_ROOT>\\W3\\check\\checker_verify.py"
+  ],
+  "cwd": "<RUN_ROOT>",
+  "run_id": "W3D",
+  "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+  "pack_package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
+  "pack_directory_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df",
+  "pack_manifest_self_excluded": true,
+  "candidate_tree_sha256": "85fc0be905c71ddb56221b3577e1909e5111a04e2b1e45ea78ac61a27101a7ca",
+  "cases_checked": 16,
+  "errors": [],
+  "verdict": "PASS",
+  "strength": "DISTINCT_LOCAL_PROCESS_READONLY; NOT_ORIGINAL_DOMAIN_PRINCIPAL",
+  "independent_of_maker_process": true,
+  "signature_state": "LOCAL_UNSIGNED_HASH_BOUND",
+  "limitations": [
+    "same OS principal as the maker",
+    "design fixtures/oracles, not Case Owner product freeze",
+    "does not replace an original-domain Checker"
+  ]
+}

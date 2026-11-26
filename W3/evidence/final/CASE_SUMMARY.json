@@ -1,0 +1,251 @@
+{
+  "schema": "FHS5.PLP.W3.FinalCaseSummary@1",
+  "w2": [
+    {
+      "case_id": "W2-AUTH-01",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "FALSE_AUTHORITY",
+        "NOT_ADMITTED"
+      ],
+      "record_sha256": "f955412d05504f334a8f642eaa70b4f42b112e3f0926b246fe81243df1c2b92b"
+    },
+    {
+      "case_id": "W2-DELTA-01",
+      "kind": "POS",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "REUSE_LASTGOOD",
+        "DELTA_UNVERIFIED",
+        "PARK_NO_DELTA_CANDIDATE",
+        "NEW_MATERIAL_EVIDENCE"
+      ],
+      "record_sha256": "5d283a16107a0970864995fe53658ddb0533e8de6c80ee4cbb004aae22124efe"
+    },
+    {
+      "case_id": "W2-DEV-01",
+      "kind": "POS",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "DEV_VERIFIED",
+        "REVERSE_RESTORED"
+      ],
+      "record_sha256": "775c9b4cee66218a22563012df1cbdfbd80e5f9be1f2a66729d0ee239c64ce02"
+    },
+    {
+      "case_id": "W2-DEV-02",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "REPO_HEAD_MISMATCH"
+      ],
+      "record_sha256": "5dc75073ca4a1f450ba9d6b077fcd3903d018da0ed3a469148b5e1299e6a39c2"
+    },
+    {
+      "case_id": "W2-EFFECT-01",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "EFFECT_UNBOUND"
+      ],
+      "record_sha256": "11420ec371953d742a1aabc9162168906580f17f82f4c5ad754c9d9fc17d1615"
+    },
+    {
+      "case_id": "W2-OPS-01",
+      "kind": "POS",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "OPS_VERIFIED",
+        "RECOVERED_PRE_STATE"
+      ],
+      "record_sha256": "9765662c4ae6ea3a41a127be43e886098e15ba341ae52c5888cd503681fd83fc"
+    },
+    {
+      "case_id": "W2-OPS-02",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "RECOVERY_KIND_MISMATCH"
+      ],
+      "record_sha256": "39b6a04cec496bd3eba177380378bff7fade59c57d5bfecd04fe1f398b818d4e"
+    },
+    {
+      "case_id": "W2-R3-01",
+      "kind": "POS",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "THIRTEEN_ROWS",
+        "THREE_NF_ROWS",
+        "NULL_PRESERVED"
+      ],
+      "record_sha256": "67198ab278d074fd6131f65790c4e5c9e75a99a86592c12361609aebef456a2b"
+    },
+    {
+      "case_id": "W2-R3-02",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "NOT_ADMITTED"
+      ],
+      "record_sha256": "301601053b887101f80c0aac57636f1c532898171ed464423eaabfaf132ffee7"
+    },
+    {
+      "case_id": "W2-R3-03",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "WRITESET_UNBOUND"
+      ],
+      "record_sha256": "0b30b2daa4bcd9a563ee826ac0bc73e7b8704bca91265238bcacc84d1bdac18d"
+    },
+    {
+      "case_id": "W2-R3-04",
+      "kind": "EDGE",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "WORKSPACE_DRIFT_BOUNDED"
+      ],
+      "record_sha256": "e70af78590d561d02fba5fef4527ee4ec02e97859c2d87f918926c4cd06c4abf"
+    },
+    {
+      "case_id": "W2-RUNNER-01",
+      "kind": "NEG",
+      "verdict": "PASS",
+      "observed_tokens": [
+        "RUNNER_UNBOUND"
+      ],
+      "record_sha256": "6e2b8e5efefa9f94f47f186fd051d48584a1a3fbea2d236802c563691718a269"
+    }
+  ],
+  "w3": [
+    {
+      "case_id": "W3-CHK-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_AUTHORITY",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "804e5da26cada2b65bf98f1de93d66688f218ef209603f87925b2e512ee3b618"
+    },
+    {
+      "case_id": "W3-FAR-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "UNAVAILABLE",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "5f7d0c22e2f67370bf7cd7de0e588754f86c09a67a24d79ad1958216132aa1d6"
+    },
+    {
+      "case_id": "W3-FAR-02",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ALTERNATIVES_SUBSTANTIVE",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "33007e582f71931ccd00acbcfe4dc99b7ff5c35216bfa12df0d3a70b61081641"
+    },
+    {
+      "case_id": "W3-FR16-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "WRITE_SCOPE_VIOLATION",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "5742ee812c6c667849f530a0573beb6a250e5ddc5b24d1f5aaff945d01402d89"
+    },
+    {
+      "case_id": "W3-FR17-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_AUTHORITY",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "7ef3c8f80136fc5af31f4fda6c854a36deaedb0164f59e909eca1da1358fa3cf"
+    },
+    {
+      "case_id": "W3-FRZ-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "FREEZE_LEDGER_VERIFIED",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "e1683b4d47611a3ce2c32474bb4342c2e11b82c46ed405109a2e80f1d12cb3f9"
+    },
+    {
+      "case_id": "W3-FRZ-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FROZEN_IDENTITY_MISMATCH",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "0894c935f11d6d8a5caf075eb8d7534bd6df594825e192585f728c19279ad9ad"
+    },
+    {
+      "case_id": "W3-G2-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "DELTA_UNVERIFIED",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "7bc0b9fae91952df97d223c557d1294ede20c6acefcc8675dec0a05c208a540d"
+    },
+    {
+      "case_id": "W3-R3-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "NOT_COVERED",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "fe88cd3d2e2d8a40efcddd5ff6d5132eaf9722e1e8e0e942997309b5865bc694"
+    },
+    {
+      "case_id": "W3-R3-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "DELTA_UNVERIFIED",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "ac157a4c3cbb360446ea98656155fd42bdfac6db9711a29700e7771b82df024e"
+    },
+    {
+      "case_id": "W3-R3-03",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ZERO_RELEVANT_HIT",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "5d8a1fada4ae513672233b974dcdaf817e20400382230842e79aa48174e8cdc6"
+    },
+    {
+      "case_id": "W3-R3-04",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_INDEPENDENT",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "2d4109da197bd81c9d8cea22522639f09326e9e9bd74555a32f097b7648b3f65"
+    },
+    {
+      "case_id": "W3-R3-05",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ALTERNATIVES_SUBSTANTIVE",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "6a14c78538b7b95bff64e38b16692b500b8f8aab1a1f0b26a9d6a4d0c3ce948a"
+    },
+    {
+      "case_id": "W3-R3-06",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "ORIGINAL_READER_UNBOUND",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "9f27d5f51e1bdc506567921a41188d22d0bfb367ae3d42f7f5d4495433483b02"
+    },
+    {
+      "case_id": "W3-RUN-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "SEMANTIC_MATCH",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "c5918b0c955414d67d4838ea256b09c4462b7821e7215a93b2ab6624b1e36ae4"
+    },
+    {
+      "case_id": "W3-RUN-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "UNREPRODUCED",
+      "product_status": "NOT_COVERED",
+      "record_sha256": "1c43798a4428a0077598a0916a99c51e9fc743acfbe372f81701955b9d9c0613"
+    }
+  ]
+}

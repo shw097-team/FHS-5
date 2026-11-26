@@ -1,0 +1,65 @@
+{
+  "schema": "FHS5.PLP.W3.FreezeLedger.NF@1",
+  "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+  "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
+  "pins": {
+    "source": {
+      "value": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+      "kind": "W3 source_set over 28 sources",
+      "locator": "05_W3_SOURCE_MANIFEST.json#digest_contract.source_set_sha256"
+    },
+    "candidate": {
+      "value": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+      "kind": "W2 five-member verified product set (upstream frozen input)",
+      "locator": "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree\\24_W2_SCOPED_REPAIR_HERMES_20261126\\W2_FIVE_PINS.json",
+      "candidate_state": "W2_PARTIAL_UPSTREAM"
+    },
+    "evidence": {
+      "value": "cb9bc39d9a541db86571c3eda05db61674e69813029caa519054da054a2ca903",
+      "kind": "W3 pack external seal over manifest+tree",
+      "locator": "EXTERNAL_SEAL.json"
+    },
+    "oracle": {
+      "value": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
+      "kind": "digest over 16 design oracle rows (not product-frozen)",
+      "locator": "assets/oracles/*.json",
+      "design_state": "PROPOSED_DESIGN_ORACLE"
+    },
+    "case_set": {
+      "value": "a33e2047eeae517073666786b381a2ec1ed047ccc478384b939e39243d2f74a4",
+      "kind": "digest over plan index + 16 case ids",
+      "locator": "assets/schema/W3_PLAN_INDEX.json",
+      "design_state": "PROPOSED_DESIGN_FIXTURE"
+    }
+  },
+  "pins_distinct": true,
+  "pin_count": 5,
+  "fixture_time": "2026-11-26T14:57:25+08:00",
+  "host_policy": {
+    "host_id": "<HOST>",
+    "policy_epoch": "LOCAL-20261126",
+    "product_host": "UNBOUND"
+  },
+  "separate_fields": [
+    "pins",
+    "fixture_time",
+    "host_policy"
+  ],
+  "w2_upstream": {
+    "product_commit": "dada2354b7c25c8f4a316d9fae93827cef0d194e",
+    "delivery_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+    "status": "PARTIAL",
+    "writer_state": "BLOCKED_NOT_ADMITTED",
+    "oracle_status": "PARTIALLY_FROZEN",
+    "case_set_status": "CARRIED_NOT_REFROZEN",
+    "evidence_status": "SEALED_AFTER_OBSERVED"
+  },
+  "claim": "FROZEN_IDENTITY_STRUCTURE_ONLY",
+  "not_claimed": [
+    "W2_NF_VALIDATED",
+    "W3_TECHNICALLY_READY",
+    "W3_NF_VALIDATED"
+  ]
+}

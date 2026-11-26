@@ -1,0 +1,103 @@
+{
+  "schema": "FHS5.PLP.W3.DevReceipt@1",
+  "run_id": "W3D",
+  "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "decision_id": "W3-PACK-PRIMARY-20261126-01",
+  "intake": {
+    "ok": true,
+    "manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+    "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
+    "package_tree_entries": 42,
+    "counts": {
+      "files": 5,
+      "assets": 37,
+      "cases": 16,
+      "sources": 28
+    },
+    "issues": []
+  },
+  "freeze_ledger": {
+    "pin_count": 5,
+    "pins_distinct": true
+  },
+  "w2_matrix": {
+    "rows": 12,
+    "expected": 12,
+    "writer_state": "BLOCKED_NOT_ADMITTED"
+  },
+  "case_set": {
+    "count": 16,
+    "design_state": "PROPOSED_DESIGN"
+  },
+  "cases": {
+    "total": 16,
+    "design_pass": 16,
+    "design_fail": 0,
+    "product_validated": 0,
+    "product_case_state": "NOT_COVERED"
+  },
+  "findings": {
+    "count": 2,
+    "classes": [
+      "DATA_CONSUMPTION",
+      "SECURITY_AUTHORIZATION"
+    ],
+    "kind": "TEST_MUTANT_FINDING"
+  },
+  "far": {
+    "states": [
+      "BLOCKED_BY_AUTHORITY",
+      "ERROR",
+      "HIT",
+      "UNAVAILABLE",
+      "ZERO_RELEVANT_HIT"
+    ],
+    "all_five": true,
+    "rq": [
+      "RQ0",
+      "RQ1",
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ]
+  },
+  "advice": {
+    "defined": 10,
+    "used": [
+      "FIX_NOW",
+      "WAIT_ORIGINAL_AUTHORITY"
+    ],
+    "min_alternatives": 2,
+    "advice_is_grant": false
+  },
+  "delta": {
+    "p1_p2": "PARK_NO_DELTA",
+    "p1_p3": "NEW_MATERIAL_EVIDENCE",
+    "single_sha_rejected": true,
+    "caller_boolean_rejected": true
+  },
+  "repair": {
+    "verdict": "RED_TO_GREEN_WITH_RESTORE",
+    "restored": true,
+    "post_sha256": "ccd6f9b888f7495823d0050dd7815bdd7c1af6d8bb66b856e55c6b92edd8893c"
+  },
+  "claims": {
+    "PACK_PRIMARY_SELECTED": true,
+    "PACK_EXECUTABLE": true,
+    "W3_NF_VALIDATED": false,
+    "INDEPENDENT_PASS": false,
+    "W3_TECHNICALLY_READY": false,
+    "W3_EXECUTION_READY": false,
+    "W3_EXECUTION_READY_LOCAL_SCOPE": "LOCAL_ISOLATED_SCOPE_ONLY_NOT_GLOBAL",
+    "W4_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false,
+    "RELEASED": false
+  },
+  "not_claimed_reasons": [
+    "W2 is PARTIAL and the writer is BLOCKED_NOT_ADMITTED",
+    "the 16 fixtures/oracles are PROPOSED_DESIGN, not Case Owner product freeze",
+    "product Host/runner/principal is UNBOUND",
+    "Checker/Consumer are local distinct processes, not an original-domain principal"
+  ]
+}

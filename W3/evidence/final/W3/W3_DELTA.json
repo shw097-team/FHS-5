@@ -1,0 +1,262 @@
+{
+  "schema": "FHS5.PLP.W3.DeltaReceipt@1",
+  "p1_p2": {
+    "state": "PARK_NO_DELTA",
+    "candidate": true,
+    "before": {
+      "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+      "scope": "W3-NF-01",
+      "source_sha": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+      "repo_head": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+      "host_id": "<HOST>",
+      "policy_epoch": "LOCAL-20261126",
+      "oracle_sha": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
+      "world_raw_sha": "cd13d4ec01c85c3b0c80d11185c30d6d46bae5e58aeae257042ec12d50d6b6f7",
+      "first_fail": "NONE"
+    },
+    "after": {
+      "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+      "scope": "W3-NF-01",
+      "source_sha": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+      "repo_head": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+      "host_id": "<HOST>",
+      "policy_epoch": "LOCAL-20261126",
+      "oracle_sha": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
+      "world_raw_sha": "cd13d4ec01c85c3b0c80d11185c30d6d46bae5e58aeae257042ec12d50d6b6f7",
+      "first_fail": "NONE"
+    },
+    "changed_keys": [],
+    "receipts": [
+      {
+        "subject": {
+          "verified": true,
+          "kind": "identity"
+        },
+        "scope": {
+          "verified": true,
+          "kind": "identity"
+        },
+        "source_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\source_sha.txt",
+          "sha256": "230058974c32ec2bd5cc435dc18e6e0c3469abf2353d6c3f7342b7b8905bee07"
+        },
+        "repo_head": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\repo_head.txt",
+          "sha256": "110f4fefc5aec4d1fc7387c2a4e8598c29e6cdea4e35c9043d3295f4c2f8b23f"
+        },
+        "host_id": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\host_id.txt",
+          "sha256": "4c2d4709bc520dc32c64fb974ce70451ac5041249a6e3b63e2141d8801553a3b"
+        },
+        "policy_epoch": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\policy_epoch.txt",
+          "sha256": "de96744650b6dd93d1ff44e6d4ac1c6de09790745a9b5397bbf0c61759ace54e"
+        },
+        "oracle_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\oracle_sha.txt",
+          "sha256": "9b93c1ef40497540b27dac1cc086cb7327807e3c04430a8d56dab2dad0d01c40"
+        },
+        "world_raw_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\world_raw_sha.txt",
+          "sha256": "91e558e97eccdbbba4be19516753936a9f796d974336fcdfe8cc58b6331446a6"
+        },
+        "first_fail": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\first_fail.txt",
+          "sha256": "2438a5ca59dac15c0a89a409818696b730e925dfd548776d4879958ae8f65793"
+        }
+      },
+      {
+        "subject": {
+          "verified": true,
+          "kind": "identity"
+        },
+        "scope": {
+          "verified": true,
+          "kind": "identity"
+        },
+        "source_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P2\\source_sha.txt",
+          "sha256": "87e81117c07b03a8347fae945828a6e629171b1dfa52915671aa48e913d2c6b0"
+        },
+        "repo_head": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P2\\repo_head.txt",
+          "sha256": "a62a03d448463c681f48389534c3dc30978d2467dc72b7cde3df87a69676c996"
+        },
+        "host_id": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P2\\host_id.txt",
+          "sha256": "565b80544301d073494e2aedd06222f8d0031fc55f33af746312b41338308663"
+        },
+        "policy_epoch": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P2\\policy_epoch.txt",
+          "sha256": "b22ff3c4de20bd04b22deb9bdea60d203951e80f45e5d00665f822428c44a17a"
+        },
+        "oracle_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P2\\oracle_sha.txt",
+          "sha256": "03d3ce0704daf48f34431f7c2bcc51f5dcc3f640f8642cfc89585cd2cbc5008c"
+        },
+        "world_raw_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P2\\world_raw_sha.txt",
+          "sha256": "a0a301bb4e98c0cc5ddbdce879d39074d268ffc30e7f4c097825da4f4a8c4cf9"
+        },
+        "first_fail": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P2\\first_fail.txt",
+          "sha256": "5e0cd82f7cba5473fc44adbe294a5ff5a08e8850762af27ceec7ce21a52075af"
+        }
+      }
+    ],
+    "note": "PARK is a candidate, not an automatic close"
+  },
+  "p1_p3": {
+    "state": "NEW_MATERIAL_EVIDENCE",
+    "before": {
+      "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+      "scope": "W3-NF-01",
+      "source_sha": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+      "repo_head": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+      "host_id": "<HOST>",
+      "policy_epoch": "LOCAL-20261126",
+      "oracle_sha": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
+      "world_raw_sha": "cd13d4ec01c85c3b0c80d11185c30d6d46bae5e58aeae257042ec12d50d6b6f7",
+      "first_fail": "NONE"
+    },
+    "after": {
+      "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+      "scope": "W3-NF-01",
+      "source_sha": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+      "repo_head": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+      "host_id": "<HOST>",
+      "policy_epoch": "LOCAL-20261126",
+      "oracle_sha": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
+      "world_raw_sha": "0000000000000000000000000000000000000000000000000000000000000000",
+      "first_fail": "NONE"
+    },
+    "changed_keys": [
+      "world_raw_sha"
+    ],
+    "receipts": [
+      {
+        "subject": {
+          "verified": true,
+          "kind": "identity"
+        },
+        "scope": {
+          "verified": true,
+          "kind": "identity"
+        },
+        "source_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\source_sha.txt",
+          "sha256": "230058974c32ec2bd5cc435dc18e6e0c3469abf2353d6c3f7342b7b8905bee07"
+        },
+        "repo_head": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\repo_head.txt",
+          "sha256": "110f4fefc5aec4d1fc7387c2a4e8598c29e6cdea4e35c9043d3295f4c2f8b23f"
+        },
+        "host_id": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\host_id.txt",
+          "sha256": "4c2d4709bc520dc32c64fb974ce70451ac5041249a6e3b63e2141d8801553a3b"
+        },
+        "policy_epoch": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\policy_epoch.txt",
+          "sha256": "de96744650b6dd93d1ff44e6d4ac1c6de09790745a9b5397bbf0c61759ace54e"
+        },
+        "oracle_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\oracle_sha.txt",
+          "sha256": "9b93c1ef40497540b27dac1cc086cb7327807e3c04430a8d56dab2dad0d01c40"
+        },
+        "world_raw_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\world_raw_sha.txt",
+          "sha256": "91e558e97eccdbbba4be19516753936a9f796d974336fcdfe8cc58b6331446a6"
+        },
+        "first_fail": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\first_fail.txt",
+          "sha256": "2438a5ca59dac15c0a89a409818696b730e925dfd548776d4879958ae8f65793"
+        }
+      },
+      {
+        "subject": {
+          "verified": true,
+          "kind": "identity"
+        },
+        "scope": {
+          "verified": true,
+          "kind": "identity"
+        },
+        "source_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P3\\source_sha.txt",
+          "sha256": "c60cfa5284e431c141225342c508160ad636124c74d7c17491034c474c028469"
+        },
+        "repo_head": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P3\\repo_head.txt",
+          "sha256": "c181557f10f4652c9332e05e66755b3001cd3cd83c1c188ded24dbdd74abc21d"
+        },
+        "host_id": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P3\\host_id.txt",
+          "sha256": "16b9865587e6dd5614757664674b1f0ddeeacf9bc4b31e0c32de09380ff54f2a"
+        },
+        "policy_epoch": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P3\\policy_epoch.txt",
+          "sha256": "afd7396e85e0ecf8dcb39e8d2d1c617db187fc729909f1723d46fbadf8b96a08"
+        },
+        "oracle_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P3\\oracle_sha.txt",
+          "sha256": "bb42435f5904ce6d70e3aa722923e2ccc7f2793a6f7d192843ef944e703c0f30"
+        },
+        "world_raw_sha": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P3\\world_raw_sha.txt",
+          "sha256": "fc9057706312310f42308d8c184f5352680126ee385b6a7e39514742fc73135d"
+        },
+        "first_fail": {
+          "verified": true,
+          "ref": "<RUN_ROOT>\\evidence\\W3D\\delta\\P3\\first_fail.txt",
+          "sha256": "d638de0ea4221da9acd726db04bf3799a995cf7e9cba6499b871ed2244aa14d5"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "path": "<RUN_ROOT>\\evidence\\W3D\\delta\\w3_delta_verifier.py",
+    "sha256": "45e34dd49c24169f620f5c05f6678435b463714d232065dde769dd84969b3633",
+    "p1_p2_command": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\evidence\\W3D\\delta\\w3_delta_verifier.py",
+      "--p1",
+      "<RUN_ROOT>\\evidence\\W3D\\delta\\P1\\period.json",
+      "--p2",
+      "<RUN_ROOT>\\evidence\\W3D\\delta\\P2\\period.json",
+      "--out",
+      "<RUN_ROOT>\\evidence\\W3D\\delta\\VERIFIER_P1_P2.json"
+    ],
+    "p1_p2_exit": 0,
+    "p1_p3_exit": 0
+  },
+  "single_evidence_sha_rejected": true,
+  "caller_boolean_rejected": true,
+  "claim": "NO_DELTA_CANDIDATE_ONLY / NEW_MATERIAL_ON_CHANGE"
+}

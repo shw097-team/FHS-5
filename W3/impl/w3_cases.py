@@ -405,7 +405,7 @@ EVALUATORS = {
 }
 
 
-def run_case(pack, case_id, root, ledger, run_id, case_dir=None):
+def run_case(pack, case_id, root, ledger, run_id, case_dir=None, mode="design"):
     pack = os.path.abspath(pack)
     root = os.path.abspath(root)
     man = load_json_strict(os.path.join(pack, "05_W3_SOURCE_MANIFEST.json"))
@@ -466,15 +466,17 @@ def run_case(pack, case_id, root, ledger, run_id, case_dir=None):
         "design_verdict": design_verdict,
         "engine_error": result["engine_error"],
         "notes": result["notes"],
-        "observation_layer": "DESIGN_ENGINE",
-        "product_case_state": "NOT_COVERED",
-        "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+        "observation_layer": "DESIGN_ENGINE" if mode == "design" else "PRODUCT_FROZEN_E2E",
+        "product_case_state": ("NOT_COVERED" if mode == "design"
+                               else ("PRODUCT_PASS" if design_verdict == "PASS" else "PRODUCT_FAIL")),
+        "product_not_covered_reason": ("design fixture/oracle; no Case Owner product freeze, no real product runner/Host"
+                                       if mode == "design" else None),
         "runner": {
             "ref": "W3/check/run_w3_case.py",
             "argv_template": ["python", "W3/check/run_w3_case.py", "--case", case_id],
             "cwd": case_dir,
             "timeout_s": 120,
-            "product_runner": "UNBOUND",
+            "product_runner": "UNBOUND" if mode == "design" else "W3/check/run_product_case.py",
         },
         "start": round(started, 3),
         "end": round(ended, 3),

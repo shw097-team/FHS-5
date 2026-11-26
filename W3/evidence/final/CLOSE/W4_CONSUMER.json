@@ -1,0 +1,24 @@
+{
+  "schema": "FHS5.PLP.W4.InboundConsumerReceipt@1",
+  "consumer_role": "FRESH_W4_CONSUMER",
+  "consumer_script_sha256": "8f03e2e7fe00c195cf6b018406a49510bba3d1da36dec9b9e3dd4689342b6701",
+  "argv": [
+    "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "<RUN_ROOT>\\W4\\check\\consumer_w4.py"
+  ],
+  "cwd": "<RUN_ROOT>",
+  "inbound": {
+    "path": "<RUN_ROOT>\\evidence\\CLOSE\\W4_INBOUND.json",
+    "sha256": "ec93d4fdbc8f89c48e0781c6c650d353224565e4495ccf0b0cd92ba98c5ec8ae"
+  },
+  "cli_executed": true,
+  "input_writes": 0,
+  "missing_fields": [],
+  "next_action": "CASE_OWNER_FREEZE",
+  "verdict": "PASS",
+  "strength": "FRESH_LOCAL_PROCESS_PARSE_AND_USE; NOT_ORIGINAL_DOMAIN_CONSUMER",
+  "limitations": [
+    "same OS principal as the producer",
+    "W4 named execution authority not present"
+  ]
+}

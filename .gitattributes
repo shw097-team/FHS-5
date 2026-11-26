@@ -12,3 +12,8 @@ FHS-5_PLP_W3_CLOSEOUT.md -text
 FHS-5_PLP_W3_HANDOFF.md -text
 W3_PRODUCT_CURRENT.json -text
 W3_PUBLICATION_RECEIPT.json -text
+
+# W2/W4 final closure: exact LF bytes
+W2/** -text
+W4/** -text
+W3/evidence/final/** -text

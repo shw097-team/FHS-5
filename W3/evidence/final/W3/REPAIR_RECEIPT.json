@@ -1,0 +1,46 @@
+{
+  "schema": "FHS5.PLP.W3.RepairReceipt@1",
+  "probe": "isolated guard containment bug",
+  "pre_sha256": "71ac91908d47f00ae5f7fd552cd2c5457baf53b03bd1cd8ff39c3f68e8c70598",
+  "pre_tree_sha256": "c1e4184bc397d9ed3a7b812a2107781a181df252ba8ef3e701b2e288add61ccc",
+  "red_exit": 1,
+  "red_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "patch": {
+    "path": "guard.py",
+    "preimage_sha256": "71ac91908d47f00ae5f7fd552cd2c5457baf53b03bd1cd8ff39c3f68e8c70598",
+    "post_sha256": "ccd6f9b888f7495823d0050dd7815bdd7c1af6d8bb66b856e55c6b92edd8893c",
+    "bytes": 219,
+    "reverse_patch": {
+      "old": "    base = os.path.realpath(base)\n    p = os.path.realpath(os.path.join(base, rel))\n    if os.path.commonpath([base, p]) != base:\n        raise ValueError(\"INVALID_PATH\")\n    return p\n",
+      "new": "    # Intentionally vulnerable initial probe: no containment check.\n    return os.path.abspath(os.path.join(base, rel))\n"
+    }
+  },
+  "green_exit": 0,
+  "green_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "post_sha256": "ccd6f9b888f7495823d0050dd7815bdd7c1af6d8bb66b856e55c6b92edd8893c",
+  "post_tree_sha256": "fa7ad433e0a2a3cbcec8d612a0104f7310d0e7790aa8b2aa2d44e6b66379ab76",
+  "restored_sha256": "71ac91908d47f00ae5f7fd552cd2c5457baf53b03bd1cd8ff39c3f68e8c70598",
+  "restored_matches_preimage": true,
+  "red_after_restore_exit": 1,
+  "final_sha256": "ccd6f9b888f7495823d0050dd7815bdd7c1af6d8bb66b856e55c6b92edd8893c",
+  "final_tree_sha256": "fa7ad433e0a2a3cbcec8d612a0104f7310d0e7790aa8b2aa2d44e6b66379ab76",
+  "change_cone": {
+    "changed_paths": [
+      "W3/impl/w3_repair.py",
+      "probe/guard.py"
+    ],
+    "modules": [
+      "w3_repair"
+    ],
+    "affected_cases": [
+      "W3-FR16-01",
+      "W3-FR17-01"
+    ],
+    "scope_limited": true
+  },
+  "verdict": "RED_TO_GREEN_WITH_RESTORE",
+  "affected_retest": [
+    "W3-FR16-01",
+    "W3-FR17-01"
+  ]
+}

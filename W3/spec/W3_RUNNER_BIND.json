@@ -2,6 +2,7 @@
   "schema": "FHS5.PLP.W3.RunnerBind@1",
   "runner_ref": "W3/check/run_w3_case.py",
   "binary": "python.exe",
+  "binary_sha256": "205f8cea948de2e4bd39bce7e15433c27bf7b2c95de4f9af6f09bad4c37f74c5",
   "python_version": "3.11.9",
   "argv_template": [
     "python",
@@ -25,6 +26,5 @@
     "COMSPEC",
     "PATHEXT"
   ],
-  "design_state": "DESIGN_ENGINE_BOUND; product runner still UNBOUND",
-  "binary_sha256": "205f8cea948de2e4bd39bce7e15433c27bf7b2c95de4f9af6f09bad4c37f74c5"
+  "design_state": "DESIGN_ENGINE_BOUND; product runner still UNBOUND"
 }

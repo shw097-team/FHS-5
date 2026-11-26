@@ -1,0 +1,20 @@
+{
+  "schema": "FHS5.PLP.W2.RequalFreezeLedger@1",
+  "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "pins": {
+    "source": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+    "candidate": "2c4fdf05c755c9607f6857ae95a2ea5f125255e3",
+    "evidence": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+    "oracle": "7d2faad4db33a01b46f124660692dfe6f64f7ed3b019ed74ad23f73a5bfde49d",
+    "case_set": "ea90829f75177150fe0d36df39c63481db029fb3757b2f4fdff51f6e4dfcf4f8"
+  },
+  "pins_distinct": true,
+  "candidate_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+  "candidate_tree": "2c4fdf05c755c9607f6857ae95a2ea5f125255e3",
+  "candidate_aggregate_digest": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+  "aggregate_algorithm": "UNDECLARED_OLD_VALUE_PRESERVED",
+  "aggregate_reproducible": false,
+  "frozen_at": "2026-11-26T18:31:27+0800",
+  "case_owner": "CODEX delegated Case Owner"
+}
