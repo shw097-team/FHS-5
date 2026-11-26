@@ -1,0 +1,102 @@
+{
+  "schema": "FHS5.PLP.W3.ReceiveReceipt@1",
+  "consumer_id": "w3_clean_receive (isolated clone, no live worktree)",
+  "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "scope": "W2-NF-01",
+  "target_wave": "W3",
+  "commit": "ce4f10f50d2081698c45fc38b1149b9b3fb278a4",
+  "clone_root": "C:\\Users\\user\\AppData\\Local\\hermes\\cache\\scratch\\w3recv",
+  "five_pins": {
+    "source": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044",
+    "candidate": "768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59",
+    "evidence": "cc1eaf4536683a2efda99cbc011ab38afa8874e976b9ec4e5238b8b7b058641c",
+    "oracle": "fdb99b2a8853a2578847f99b8b0483402d9165280fd515fa664f39f2a0ca515c",
+    "case_set": "f79ac38673e2a6cfddf5a329e6bcf6a5dd6c45c42e6df9450ee176367772cbc5"
+  },
+  "checks": [
+    {
+      "check": "commit_is_the_frozen_one",
+      "ok": true,
+      "detail": "ce4f10f50d2081698c45fc38b1149b9b3fb278a4"
+    },
+    {
+      "check": "manifest_self_excluded",
+      "ok": true,
+      "detail": "14"
+    },
+    {
+      "check": "manifest_files_rehash",
+      "ok": true,
+      "detail": "{'bad': [], 'n': 14}"
+    },
+    {
+      "check": "pin.source_matches_pack",
+      "ok": true,
+      "detail": "921de70ca5f273d9bba0ed0d022bb7595e8824d7595e8373b2c43d5ccbbaa044"
+    },
+    {
+      "check": "pin.candidate_present",
+      "ok": true,
+      "detail": "{'clone': '768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59', 'pin': '768d6318861215886860ae3a30c9c30bdaec8bdd4732c63ff95996e675522a59'}"
+    },
+    {
+      "check": "pin.oracle_present",
+      "ok": true,
+      "detail": "fdb99b2a8853a2578847f99b8b0483402d9165280fd515fa664f39f2a0ca515c"
+    },
+    {
+      "check": "pin.case_set_present",
+      "ok": true,
+      "detail": "10"
+    },
+    {
+      "check": "consumed.cases_have_verdicts",
+      "ok": true,
+      "detail": "10"
+    },
+    {
+      "check": "consumed.cases_all_pass",
+      "ok": true,
+      "detail": "{'PASS': 10, 'FAIL': 0}"
+    },
+    {
+      "check": "consumed.nine_keys_present",
+      "ok": true,
+      "detail": "['subject', 'scope', 'source_sha', 'repo_head', 'host_id', 'policy_epoch', 'oracle_sha', 'world_raw_sha', 'first_fail']"
+    },
+    {
+      "check": "consumed.world_pre_post",
+      "ok": true,
+      "detail": "['44136fa355b3', '4ebfa5f7e7a6']"
+    },
+    {
+      "check": "consumed.recovery_distinct",
+      "ok": true,
+      "detail": "{'git_revert': False, 'git_reset': False, 'git_clean': False}"
+    },
+    {
+      "check": "consumed.no_grant_shipped",
+      "ok": true,
+      "detail": "NONE_GRANTED"
+    },
+    {
+      "check": "neg.wrong_source_pin_refused",
+      "ok": true,
+      "detail": "mutated pin detected"
+    },
+    {
+      "check": "neg.wrong_candidate_refused",
+      "ok": true,
+      "detail": "mutated candidate detected"
+    }
+  ],
+  "passed": 15,
+  "total": 15,
+  "verdict": "ACCEPTED",
+  "grant": "NOT_GRANTED — this receipt is technical reception only, not a W3 authorisation",
+  "limits": [
+    "no W3 protected effect was executed",
+    "policy_epoch is NOT_DECLARED_BY_HOST",
+    "J3 ON/OFF evidence is not part of this material"
+  ]
+}
