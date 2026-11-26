@@ -44,7 +44,10 @@
     "remote_commit": "3d73705ff6f996d39fe9c6b9b15af0e492c9928f",
     "remote_tree": "2443cf029dce19d176d6a6709d44658cd4f94e98",
     "branch": "codex/w3-final-closure-20261126T1827",
-    "readback": "git ls-remote exact ref"
+    "readback": "git ls-remote exact ref",
+    "content_commit": "7177b7ab27d58c5ebf0fd1fdfd38351b4fc4ece6",
+    "content_tree": "e14193f00e9d88817cb744059cda59519b567529",
+    "readback_tip": "493fc99111cb51788f017f55d5c9465c461d00eb"
   },
   "claims": {
     "W2_NF_VALIDATED": false,

@@ -64,8 +64,8 @@
     },
     {
       "path": "W3/evidence/final/CLOSE/W3_F1F5_CLOSURE_LEDGER.json",
-      "sha256": "178ab1c1844ac5b12b44d95a00ff00ba68f68bc54a3299af38bcdd3c948f014b",
-      "bytes": 2108
+      "sha256": "863e1d3b75488dc232811aa4b6df62309c8134771d1d45c9d8667231cacbcf12",
+      "bytes": 2302
     },
     {
       "path": "W3/evidence/final/CLOSE/W3_PRODUCT_FREEZE_ATTEMPT_REJECTED.json",

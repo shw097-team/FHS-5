@@ -62,6 +62,9 @@ W4 READ/DRAFT only; do not treat this handoff as a W4 grant.
 
 ## remote readback
 
+- content commit `7177b7ab27d58c5ebf0fd1fdfd38351b4fc4ece6`
+- content tree `e14193f00e9d88817cb744059cda59519b567529`
+
 - branch `codex/w3-final-closure-20261126T1827`
 - remote commit `3d73705ff6f996d39fe9c6b9b15af0e492c9928f`
 - remote tree `2443cf029dce19d176d6a6709d44658cd4f94e98`

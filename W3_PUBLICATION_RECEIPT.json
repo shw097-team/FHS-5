@@ -24,5 +24,7 @@
     "RELEASED": false
   },
   "remote_commit": "3d73705ff6f996d39fe9c6b9b15af0e492c9928f",
-  "remote_tree": "2443cf029dce19d176d6a6709d44658cd4f94e98"
+  "remote_tree": "2443cf029dce19d176d6a6709d44658cd4f94e98",
+  "remote_tip": "493fc99111cb51788f017f55d5c9465c461d00eb",
+  "remote_tip_tree": "442a0973eb170194a5767985f14de287607c9538"
 }
