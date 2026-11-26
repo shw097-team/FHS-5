@@ -1,0 +1,39 @@
+{
+  "schema": "FHS5.PLP.S1.PublicationReceipt@1",
+  "run_id": "S1_W0-W2_PACK_REVIEW_CODEX_20261126T214500",
+  "status": "PUBLISH_BLOCKED_PENDING_USER_APPROVAL",
+  "attempted_at": "2026-11-26T22:40:00+08:00",
+  "intended": {
+    "repo": "https://github.com/shw097-team/FHS-5",
+    "branch": "codex/s1-w0-w2-dd-primary-20261126T214500",
+    "base_commit": "c2d8084ba24dd8df3fa62259bba496f4fb9caa85",
+    "content_commit": "802a68ad8ba678985c7b477b71e9d2ec150af2e8",
+    "content_tree": "edcd6cb433b10dd308402c956ea9a748badf9c4e",
+    "delivery_commit": null
+  },
+  "push": {
+    "attempted": false,
+    "exit": null,
+    "reason": "platform policy rejected the push as external publication of project documents without explicit user approval; no push command executed and no workaround attempted",
+    "credential": "existing Git credential manager only; token file never read"
+  },
+  "remote_readback": {
+    "ls_remote": "N/A (not pushed)",
+    "ref": "N/A",
+    "blob_compare": "N/A"
+  },
+  "local_delivery": {
+    "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\S1_W0-W2_PACK_REVIEW_CODEX_20261126T214500",
+    "zip": "S1_W0-W2_PACK_REVIEW_CODEX_20261126T214500.zip",
+    "files": 86,
+    "content_commit_local_only": true
+  },
+  "preserved": [
+    "no force push",
+    "no ruleset/ACL change",
+    "no release",
+    "no second human signature",
+    "original packs and r1 candidate untouched"
+  ],
+  "next": "explicit user approval -> normal git push of this single branch, then git ls-remote + blob readback; otherwise delivery remains local"
+}
