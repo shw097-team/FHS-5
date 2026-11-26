@@ -50,7 +50,7 @@
 | `02_EVIDENCE/seals/S1_ADOPTION_RECORD.json` | 3906 | `831ebcaecf47ecd0fa8c484bd816179b4ee394d512dca4ab1b92162b76d23c81` | Owner 預授權落地／三包主用 |
 | `02_EVIDENCE/seals/S1_CURRENT_POINTER.json` | 1796 | `e804a68e7c4d71b6c9638935e4d850103541dbea96bff4191eeab8a383d494e2` | 當期主用／LastGood 指標 |
 | `02_EVIDENCE/S1_CODEX_REVIEW_RESULTS.json` | 10719 | `2e8e8cf4aeb7f8184b382fdde77bca54f71e6531f5b3dc7a5968ad74e4bc3861` | 機器可讀檢測／反證結果 |
-| `02_EVIDENCE/seals/S1_PUBLICATION_RECEIPT.json` | 1558 | `a14594ebdcb9bb526b577cc75195b190a7bdb4ffb630d4b56c5696f802b600c5` | 發布狀態／讀回（見 §7） |
+| `02_EVIDENCE/seals/S1_PUBLICATION_RECEIPT.json` | 2639 | `8db6a8519da2dd0273abb962b5c97e7ec8701ca137814146c33908cf1f6335d3` | 發布狀態／讀回（見 §7） |
 
 作者原證據保留：`02_EVIDENCE/W0_S1_證據附件.md`、`W1_S1_證據附件.md`、`W2_S1_證據附件.md`、`doc_results.json`（作者自檢，不作為本輪判定權威；本輪已獨立重跑）。
 
@@ -81,7 +81,7 @@
 
 ## 7｜GitHub 發布與遠端讀回
 
-- 狀態：`PUBLISH_BLOCKED_PENDING_USER_APPROVAL`｜Repo：`https://github.com/shw097-team/FHS-5`｜branch：`codex/s1-w0-w2-dd-primary-20261126T214500`
+- 狀態：`PUBLISH_BLOCKED_PENDING_DESTINATION_AUTHORIZATION`｜Repo：`https://github.com/shw097-team/FHS-5`｜branch：`codex/s1-w0-w2-dd-primary-20261126T214500`
 - push：未執行（platform policy rejected the push as external publication of project documents without explicit user approval; no push command executed and no workaround attempted）
 - content commit（本地）：`802a68ad8ba678985c7b477b71e9d2ec150af2e8`｜tree：`edcd6cb433b10dd308402c956ea9a748badf9c4e`
 - delivery commit：`PENDING（本地收據 commit）`
