@@ -1,0 +1,125 @@
+{
+  "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
+  "run_id": "20261126T1605",
+  "case_id": "W3-FRZ-01",
+  "kind": "POS",
+  "wp": "WM3-P01",
+  "requirement_refs": [
+    "W3-A01",
+    "W3-CODEX-01",
+    "EC-FR01",
+    "EC-FR02",
+    "FAR-FR01"
+  ],
+  "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "fixture_ref": "assets/fixtures/W3-FRZ-01.json",
+  "fixture_sha256": "2ea7be05d07cdb3e25e2f46f420f95ed86582fbf73d5ebda11c28115fef4de92",
+  "fixture_bytes": 2065,
+  "oracle_ref": "assets/oracles/W3-FRZ-01.json",
+  "oracle_sha256": "e17d90664f86d14764748822ed834e8301faa431a6eb5e3ec92c341edf464316",
+  "oracle_bytes": 1171,
+  "expected": {
+    "token": "FREEZE_LEDGER_VERIFIED",
+    "exit": 0,
+    "predicate": "all five pins reopen; source/candidate/evidence/oracle/case_set are distinct; no source byte changed; fixture/time/host/policy are separate fields"
+  },
+  "observed": {
+    "token": "FREEZE_LEDGER_VERIFIED",
+    "exit": 0,
+    "evidence": {
+      "pins": {
+        "source": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
+        "candidate": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+        "evidence": "cb9bc39d9a541db86571c3eda05db61674e69813029caa519054da054a2ca903",
+        "oracle": "686a2733925cf1d56fcff14ee1b982f0db55895a3647113a959f031b866d54f8",
+        "case_set": "a33e2047eeae517073666786b381a2ec1ed047ccc478384b939e39243d2f74a4"
+      },
+      "missing": [],
+      "distinct": true,
+      "source_bytes_unchanged": true,
+      "separate_fields": true,
+      "fixture_time": "2026-11-26T14:57:25+08:00",
+      "host_policy": {
+        "host_id": "<HOST>",
+        "policy_epoch": "LOCAL-20261126",
+        "product_host": "UNBOUND"
+      }
+    }
+  },
+  "design_verdict": "PASS",
+  "engine_error": false,
+  "notes": [],
+  "observation_layer": "DESIGN_ENGINE",
+  "product_case_state": "NOT_COVERED",
+  "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+  "runner": {
+    "ref": "W3/check/run_w3_case.py",
+    "argv_template": [
+      "python",
+      "W3/check/run_w3_case.py",
+      "--case",
+      "W3-FRZ-01"
+    ],
+    "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FRZ-01",
+    "timeout_s": 120,
+    "product_runner": "UNBOUND"
+  },
+  "start": 1795687424.948,
+  "end": 1795687424.975,
+  "timeout_s": 120,
+  "exit": 0,
+  "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FRZ-01\\stdout.txt",
+  "stdout_sha256": "61dc54b5e13c97bbc52f1fc63f34472d2f915a42a0b44dd83506c2a91f0871bc",
+  "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FRZ-01\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "world_raw_ref": null,
+  "world_raw_sha256": null,
+  "pre": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "post": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "host_id": "<HOST>",
+  "os_principal": "<LOCAL_USER>",
+  "policy_epoch": "LOCAL-20261126",
+  "actor": "W3_ENGINE",
+  "verification": "SELF_ENGINE_NOT_CHECKER",
+  "signature_state": "NONE",
+  "raw_sha256": "9d5047e3fc2aef007466a83284a5ac443bcc71108454f28a62d984d7d435ecf5",
+  "process_exit": 0,
+  "process": {
+    "argv": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\W3\\check\\run_w3_case.py",
+      "--pack",
+      "<RUN_ROOT>\\pack",
+      "--case",
+      "W3-FRZ-01",
+      "--root",
+      "<RUN_ROOT>",
+      "--run-id",
+      "20261126T1605",
+      "--ledger",
+      "<RUN_ROOT>\\evidence\\20261126T1605\\FREEZE_LEDGER.json",
+      "--w2-root",
+      "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree",
+      "--seal",
+      "<RUN_ROOT>\\pack_meta\\EXTERNAL_SEAL.json",
+      "--adoption",
+      "<RUN_ROOT>\\pack_meta\\W3_OWNER_ADOPTION.json",
+      "--current",
+      "<RUN_ROOT>\\pack_meta\\W3_CURRENT.json"
+    ],
+    "cwd": "<RUN_ROOT>",
+    "start": 1795687424.832,
+    "end": 1795687425.025,
+    "exit": 0,
+    "stdout_sha256": "989aa8f404712173b251b18078a9b234fd082890db8ef984f04f671db7f34933",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "expected_process_exit": 0,
+  "process_exit_matches": true
+}

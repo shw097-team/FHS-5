@@ -1,0 +1,29 @@
+{
+  "schema": "FHS5.PLP.W3.RunnerBind@1",
+  "runner_ref": "W3/check/run_w3_case.py",
+  "binary": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "python_version": "3.11.9",
+  "argv_template": [
+    "python",
+    "W3/check/run_w3_case.py",
+    "--case",
+    "<case_id>"
+  ],
+  "cwd": "<isolated run root>",
+  "timeout_s": 120,
+  "product_runner": "UNBOUND",
+  "host_id": "AUTHOR_LOCAL_WINDOWS",
+  "policy_epoch": "LOCAL-20261126",
+  "env_allowlist": [
+    "PATH",
+    "TEMP",
+    "TMP",
+    "PYTHONIOENCODING",
+    "PYTHONHASHSEED",
+    "SYSTEMROOT",
+    "WINDIR",
+    "COMSPEC",
+    "PATHEXT"
+  ],
+  "design_state": "DESIGN_ENGINE_BOUND; product runner still UNBOUND"
+}

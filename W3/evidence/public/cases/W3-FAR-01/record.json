@@ -1,0 +1,149 @@
+{
+  "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
+  "run_id": "20261126T1605",
+  "case_id": "W3-FAR-01",
+  "kind": "NEG",
+  "wp": "WM3-P04",
+  "requirement_refs": [
+    "W3-A04",
+    "FAR-FR07",
+    "EC-FR14"
+  ],
+  "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "fixture_ref": "assets/fixtures/W3-FAR-01.json",
+  "fixture_sha256": "f2107fadf360f449026f47e757d7a28cbb0a2aa72fc9bec43df73a5aae2799e2",
+  "fixture_bytes": 1310,
+  "oracle_ref": "assets/oracles/W3-FAR-01.json",
+  "oracle_sha256": "b7eb3f62208784e3bf8e17aa2561828dd82c48abb8f73a0f8d2cb2948128aca6",
+  "oracle_bytes": 1161,
+  "expected": {
+    "token": "UNAVAILABLE",
+    "exit": 2,
+    "predicate": "missing provider yields UNAVAILABLE with rows=null and zero_results=null; the injected zero becomes RESEARCH_REQUIRED; the reachable empty control is ZERO_RELEVANT_HIT with denominator"
+  },
+  "observed": {
+    "token": "UNAVAILABLE",
+    "exit": 0,
+    "evidence": {
+      "providers": [
+        {
+          "provider_id": "ABSENT_DB",
+          "query": "design-control",
+          "root": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-01\\far_01\\ABSENT_DB",
+          "scope": "W3-NF-01",
+          "attempted": true,
+          "reachable": false,
+          "denominator": null,
+          "rows": null,
+          "zero_results": null,
+          "state": "UNAVAILABLE",
+          "freshness": "FRESH_LOCAL_ENUMERATION",
+          "independence": "LOCAL_PROCESS_NOT_FABRIC",
+          "start": 1795687424.239,
+          "reason": "root_absent",
+          "end": 1795687424.239
+        },
+        {
+          "provider_id": "REACHABLE_EMPTY",
+          "query": "design-control",
+          "root": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-01\\far_01\\REACHABLE_EMPTY",
+          "scope": "W3-NF-01",
+          "attempted": true,
+          "reachable": true,
+          "denominator": 3,
+          "rows": 0,
+          "zero_results": 0,
+          "state": "ZERO_RELEVANT_HIT",
+          "freshness": "FRESH_LOCAL_ENUMERATION",
+          "independence": "LOCAL_PROCESS_NOT_FABRIC",
+          "start": 1795687424.239,
+          "sample": [],
+          "end": 1795687424.239
+        }
+      ],
+      "injected_claim": {
+        "accepted": false,
+        "token": "RESEARCH_REQUIRED",
+        "reason": "a zero-result claim cannot be labelled HIT",
+        "normalized_state": "ZERO_RELEVANT_HIT"
+      },
+      "unavailable_is_not_zero": true
+    }
+  },
+  "design_verdict": "PASS",
+  "engine_error": false,
+  "notes": [],
+  "observation_layer": "DESIGN_ENGINE",
+  "product_case_state": "NOT_COVERED",
+  "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+  "runner": {
+    "ref": "W3/check/run_w3_case.py",
+    "argv_template": [
+      "python",
+      "W3/check/run_w3_case.py",
+      "--case",
+      "W3-FAR-01"
+    ],
+    "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-01",
+    "timeout_s": 120,
+    "product_runner": "UNBOUND"
+  },
+  "start": 1795687424.236,
+  "end": 1795687424.239,
+  "timeout_s": 120,
+  "exit": 0,
+  "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-01\\stdout.txt",
+  "stdout_sha256": "63c178d7564f94d3fd391fa20776c4e3a58b90ce0dac930319c07b8b3d1976f5",
+  "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-01\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "world_raw_ref": null,
+  "world_raw_sha256": null,
+  "pre": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "post": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "host_id": "<HOST>",
+  "os_principal": "<LOCAL_USER>",
+  "policy_epoch": "LOCAL-20261126",
+  "actor": "W3_ENGINE",
+  "verification": "SELF_ENGINE_NOT_CHECKER",
+  "signature_state": "NONE",
+  "raw_sha256": "a170869d97ad0d5275d565d167b4b03e8b2a6a7b0cd9f255de5d7b6ef9219681",
+  "process_exit": 2,
+  "process": {
+    "argv": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\W3\\check\\run_w3_case.py",
+      "--pack",
+      "<RUN_ROOT>\\pack",
+      "--case",
+      "W3-FAR-01",
+      "--root",
+      "<RUN_ROOT>",
+      "--run-id",
+      "20261126T1605",
+      "--ledger",
+      "<RUN_ROOT>\\evidence\\20261126T1605\\FREEZE_LEDGER.json",
+      "--w2-root",
+      "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree",
+      "--seal",
+      "<RUN_ROOT>\\pack_meta\\EXTERNAL_SEAL.json",
+      "--adoption",
+      "<RUN_ROOT>\\pack_meta\\W3_OWNER_ADOPTION.json",
+      "--current",
+      "<RUN_ROOT>\\pack_meta\\W3_CURRENT.json"
+    ],
+    "cwd": "<RUN_ROOT>",
+    "start": 1795687424.12,
+    "end": 1795687424.29,
+    "exit": 2,
+    "stdout_sha256": "af45526f90cebab250da3cc48d8a0a5182f41c1ab00c84a6f4c884cd6bf065cc",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "expected_process_exit": 2,
+  "process_exit_matches": true
+}

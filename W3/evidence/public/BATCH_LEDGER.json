@@ -1,0 +1,124 @@
+{
+  "schema": "FHS5.PLP.W3.BatchLedger@1",
+  "entries": [
+    {
+      "batch_id": "W3-DEV-P01",
+      "targets": [
+        "W3/spec/W3_CASE_SET.json",
+        "W3/spec/W3_RUNNER_BIND.json"
+      ],
+      "op": "ADD",
+      "expected": {
+        "exit": 0,
+        "token": "INTAKE_VERIFIED"
+      },
+      "observed": {
+        "ok": true,
+        "issues": 0
+      },
+      "verdict": "PASS"
+    },
+    {
+      "batch_id": "W3-DEV-P02",
+      "targets": [
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-CHK-01\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-01\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-02\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FR16-01\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FR17-01\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FRZ-01\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FRZ-02\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-G2-01\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-01\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-02\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-03\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-04\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-05\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-06\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\record.json",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-02\\record.json"
+      ],
+      "op": "ADD",
+      "expected": {
+        "design_pass": 16
+      },
+      "observed": {
+        "design_pass": 16,
+        "process_exit_match": 16
+      },
+      "verdict": "PASS"
+    },
+    {
+      "batch_id": "W3-DEV-P03",
+      "targets": [
+        "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_a_stdout.txt",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_b_stdout.txt"
+      ],
+      "op": "ADD",
+      "expected": {
+        "findings": 2,
+        "failure_classes": 2
+      },
+      "observed": {
+        "findings": 2,
+        "failure_classes": 2,
+        "mutant": 2
+      },
+      "verdict": "PASS"
+    },
+    {
+      "batch_id": "W3-DEV-P04",
+      "targets": [
+        "<RUN_ROOT>\\evidence\\20261126T1605\\far\\FAR_GRAPH.json"
+      ],
+      "op": "ADD",
+      "expected": {
+        "states": 5
+      },
+      "observed": {
+        "states": 5,
+        "all_five": true
+      },
+      "verdict": "PASS"
+    },
+    {
+      "batch_id": "W3-DEV-P05",
+      "targets": [
+        "<RUN_ROOT>\\evidence\\20261126T1605\\ADVICE\\DECISION_ADVICE.json"
+      ],
+      "op": "ADD",
+      "expected": {
+        "advice_enum": 10,
+        "each_finding_alternatives": 2
+      },
+      "observed": {
+        "advice_enum": 10,
+        "decisions": 2,
+        "min_alternatives": 2
+      },
+      "verdict": "PASS"
+    },
+    {
+      "batch_id": "W3-DEV-P06",
+      "targets": [
+        "W3_DELTA.json",
+        "REPAIR_RECEIPT.json"
+      ],
+      "op": "ADD",
+      "expected": {
+        "no_delta": "PARK_NO_DELTA",
+        "delta": "NEW_MATERIAL_EVIDENCE",
+        "repair": "RED_TO_GREEN_WITH_RESTORE"
+      },
+      "observed": {
+        "p1_p2": "PARK_NO_DELTA",
+        "p1_p3": "NEW_MATERIAL_EVIDENCE",
+        "repair": "RED_TO_GREEN_WITH_RESTORE"
+      },
+      "verdict": "PASS"
+    }
+  ],
+  "decision_id": "W3-PACK-PRIMARY-20261126-01",
+  "scope": "W3-NF-01",
+  "subject_id": "FHS-5_PLP/W3/CONTROL_PACK"
+}

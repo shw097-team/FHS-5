@@ -1,0 +1,181 @@
+{
+  "schema": "FHS5.PLP.W3.PublicCaseSummary@1",
+  "cases": [
+    {
+      "case_id": "W3-CHK-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_AUTHORITY",
+      "expected_token": "FALSE_AUTHORITY",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "d0b46c8f1328d617100fec6ff405d2e9fa99bd21d372bf702506ad853153dc3a"
+    },
+    {
+      "case_id": "W3-FAR-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "UNAVAILABLE",
+      "expected_token": "UNAVAILABLE",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "abfd76f99e1ca00794aa050af54773da4ba592636211cd8f19692679d1890721"
+    },
+    {
+      "case_id": "W3-FAR-02",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ALTERNATIVES_SUBSTANTIVE",
+      "expected_token": "ALTERNATIVES_SUBSTANTIVE",
+      "process_exit": 0,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "ff113765ebcb8fddf95dae260ac6a405f90c28a4d29019c51f52e1ea4ec7397b"
+    },
+    {
+      "case_id": "W3-FR16-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "WRITE_SCOPE_VIOLATION",
+      "expected_token": "WRITE_SCOPE_VIOLATION",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "d4cbbdae8ec85ce83e8af804d6865976ef93da3186dd0c8af31d5e9355fbc7fd"
+    },
+    {
+      "case_id": "W3-FR17-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_AUTHORITY",
+      "expected_token": "FALSE_AUTHORITY",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "6bab7001a870388bbd3eeca7000519ca10b52309ea0aced74ad6f88be43b2497"
+    },
+    {
+      "case_id": "W3-FRZ-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "FREEZE_LEDGER_VERIFIED",
+      "expected_token": "FREEZE_LEDGER_VERIFIED",
+      "process_exit": 0,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "73bf80c652a59a79105b82c6855f9a9a69045676132279292706aba24c01655d"
+    },
+    {
+      "case_id": "W3-FRZ-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FROZEN_IDENTITY_MISMATCH",
+      "expected_token": "FROZEN_IDENTITY_MISMATCH",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "32a5fbfa0f4422b4d55a4aafbaebba653dee6060eff38e338d26753cb0b86e02"
+    },
+    {
+      "case_id": "W3-G2-01",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "DELTA_UNVERIFIED",
+      "expected_token": "DELTA_UNVERIFIED",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "cd0f9599c4498e7b1bcf9e32dc630d2a6f34e4f3b30a4815ed3a60b451f38a5a"
+    },
+    {
+      "case_id": "W3-R3-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "NOT_COVERED",
+      "expected_token": "NOT_COVERED",
+      "process_exit": 0,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "432eef6456ea4a889f9027ae1bab5f45c7edc3ddeee54a5618e146e22941cb54"
+    },
+    {
+      "case_id": "W3-R3-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "DELTA_UNVERIFIED",
+      "expected_token": "DELTA_UNVERIFIED",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "7589154d67251100e9753607098d047b669235345371b9117a8b7f059ff5b874"
+    },
+    {
+      "case_id": "W3-R3-03",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ZERO_RELEVANT_HIT",
+      "expected_token": "ZERO_RELEVANT_HIT",
+      "process_exit": 0,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "751c2621f61dc492f0a97dbc66b930a45eaf5706bb0c0477f0d057250351964c"
+    },
+    {
+      "case_id": "W3-R3-04",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "FALSE_INDEPENDENT",
+      "expected_token": "FALSE_INDEPENDENT",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "3d69a07de3ce9cb6df60acf803717ac16bf66b27f95d527cb7462c05c860ddbc"
+    },
+    {
+      "case_id": "W3-R3-05",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "ALTERNATIVES_SUBSTANTIVE",
+      "expected_token": "ALTERNATIVES_SUBSTANTIVE",
+      "process_exit": 0,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "ba066f76353a94185f54f3bd83852ae92d65f6c48b8e8722f1e6d51943955f25"
+    },
+    {
+      "case_id": "W3-R3-06",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "ORIGINAL_READER_UNBOUND",
+      "expected_token": "ORIGINAL_READER_UNBOUND",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "ca0de9719426562dc6128c2469d52ee7d1b0c6a616de369d3e9c7a3f9860d094"
+    },
+    {
+      "case_id": "W3-RUN-01",
+      "kind": "POS",
+      "design_verdict": "PASS",
+      "observed_token": "SEMANTIC_MATCH",
+      "expected_token": "SEMANTIC_MATCH",
+      "process_exit": 0,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "7ef9f308f4668144ca407073a849733fb5686907d44c48e5b5dd1c90c9b17c95"
+    },
+    {
+      "case_id": "W3-RUN-02",
+      "kind": "NEG",
+      "design_verdict": "PASS",
+      "observed_token": "UNREPRODUCED",
+      "expected_token": "UNREPRODUCED",
+      "process_exit": 2,
+      "process_exit_matches": true,
+      "product_case_state": "NOT_COVERED",
+      "record_sha256": "96d80c4a857d0fb061eba1e16178706f0147c2f11c8ad89d47790f9e8e2c5456"
+    }
+  ]
+}

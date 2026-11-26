@@ -1,0 +1,214 @@
+{
+  "schema": "FHS5.PLP.W3.CaseSet@1",
+  "subject_id": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+  "cases": [
+    {
+      "case_id": "W3-CHK-01",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "EC-FR12",
+        "EC-FR03",
+        "EC-FR04"
+      ],
+      "fixture": "assets/fixtures/W3-CHK-01.json",
+      "oracle": "assets/oracles/W3-CHK-01.json"
+    },
+    {
+      "case_id": "W3-FAR-01",
+      "kind": "NEG",
+      "wp": "WM3-P04",
+      "requirement_refs": [
+        "W3-A04",
+        "FAR-FR07",
+        "EC-FR14"
+      ],
+      "fixture": "assets/fixtures/W3-FAR-01.json",
+      "oracle": "assets/oracles/W3-FAR-01.json"
+    },
+    {
+      "case_id": "W3-FAR-02",
+      "kind": "POS",
+      "wp": "WM3-P05",
+      "requirement_refs": [
+        "W3-A04",
+        "W3-A05",
+        "FAR-FR08",
+        "FAR-FR09",
+        "FAR-FR10",
+        "FAR-FR11",
+        "FAR-FR12",
+        "EC-FR10",
+        "FAR-FR04",
+        "FAR-FR05"
+      ],
+      "fixture": "assets/fixtures/W3-FAR-02.json",
+      "oracle": "assets/oracles/W3-FAR-02.json"
+    },
+    {
+      "case_id": "W3-FR16-01",
+      "kind": "NEG",
+      "wp": "WM3-P03",
+      "requirement_refs": [
+        "W3-A07",
+        "EC-FR16",
+        "EC-FR15",
+        "FAR-FR06",
+        "FAR-FR15",
+        "FAR-FR16"
+      ],
+      "fixture": "assets/fixtures/W3-FR16-01.json",
+      "oracle": "assets/oracles/W3-FR16-01.json"
+    },
+    {
+      "case_id": "W3-FR17-01",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "FAR-FR17"
+      ],
+      "fixture": "assets/fixtures/W3-FR17-01.json",
+      "oracle": "assets/oracles/W3-FR17-01.json"
+    },
+    {
+      "case_id": "W3-FRZ-01",
+      "kind": "POS",
+      "wp": "WM3-P01",
+      "requirement_refs": [
+        "W3-A01",
+        "W3-CODEX-01",
+        "EC-FR01",
+        "EC-FR02",
+        "FAR-FR01"
+      ],
+      "fixture": "assets/fixtures/W3-FRZ-01.json",
+      "oracle": "assets/oracles/W3-FRZ-01.json"
+    },
+    {
+      "case_id": "W3-FRZ-02",
+      "kind": "NEG",
+      "wp": "WM3-P01",
+      "requirement_refs": [
+        "W3-A01",
+        "EC-FR02",
+        "EC-FR13"
+      ],
+      "fixture": "assets/fixtures/W3-FRZ-02.json",
+      "oracle": "assets/oracles/W3-FRZ-02.json"
+    },
+    {
+      "case_id": "W3-G2-01",
+      "kind": "NEG",
+      "wp": "WM3-P06",
+      "requirement_refs": [
+        "W3-A06",
+        "U-034",
+        "FAR-FR14",
+        "FAR-FR13"
+      ],
+      "fixture": "assets/fixtures/W3-G2-01.json",
+      "oracle": "assets/oracles/W3-G2-01.json"
+    },
+    {
+      "case_id": "W3-R3-01",
+      "kind": "POS",
+      "wp": "WM3-P01/WM3-P03",
+      "requirement_refs": [
+        "W3-A01",
+        "W3M-D06"
+      ],
+      "fixture": "assets/fixtures/W3-R3-01.json",
+      "oracle": "assets/oracles/W3-R3-01.json"
+    },
+    {
+      "case_id": "W3-R3-02",
+      "kind": "NEG",
+      "wp": "WM3-P06",
+      "requirement_refs": [
+        "W3-A06",
+        "W3M-D06"
+      ],
+      "fixture": "assets/fixtures/W3-R3-02.json",
+      "oracle": "assets/oracles/W3-R3-02.json"
+    },
+    {
+      "case_id": "W3-R3-03",
+      "kind": "POS",
+      "wp": "WM3-P04",
+      "requirement_refs": [
+        "W3-A04",
+        "W3M-D05"
+      ],
+      "fixture": "assets/fixtures/W3-R3-03.json",
+      "oracle": "assets/oracles/W3-R3-03.json"
+    },
+    {
+      "case_id": "W3-R3-04",
+      "kind": "NEG",
+      "wp": "WM3-P03/WM3-P06",
+      "requirement_refs": [
+        "W3-A07",
+        "W3M-D05",
+        "EC-FR11"
+      ],
+      "fixture": "assets/fixtures/W3-R3-04.json",
+      "oracle": "assets/oracles/W3-R3-04.json"
+    },
+    {
+      "case_id": "W3-R3-05",
+      "kind": "POS",
+      "wp": "WM3-P05",
+      "requirement_refs": [
+        "W3-A04",
+        "W3M-D02"
+      ],
+      "fixture": "assets/fixtures/W3-R3-05.json",
+      "oracle": "assets/oracles/W3-R3-05.json"
+    },
+    {
+      "case_id": "W3-R3-06",
+      "kind": "NEG",
+      "wp": "WM3-P01/WM3-P04",
+      "requirement_refs": [
+        "W3-A01",
+        "W3M-D07"
+      ],
+      "fixture": "assets/fixtures/W3-R3-06.json",
+      "oracle": "assets/oracles/W3-R3-06.json"
+    },
+    {
+      "case_id": "W3-RUN-01",
+      "kind": "POS",
+      "wp": "WM3-P02/WM3-P03",
+      "requirement_refs": [
+        "W3-A02",
+        "EC-FR05",
+        "EC-FR06",
+        "EC-FR08",
+        "EC-FR09",
+        "FAR-FR02",
+        "FAR-FR03"
+      ],
+      "fixture": "assets/fixtures/W3-RUN-01.json",
+      "oracle": "assets/oracles/W3-RUN-01.json"
+    },
+    {
+      "case_id": "W3-RUN-02",
+      "kind": "NEG",
+      "wp": "WM3-P02/WM3-P03",
+      "requirement_refs": [
+        "W3-A02",
+        "EC-FR06",
+        "EC-FR07"
+      ],
+      "fixture": "assets/fixtures/W3-RUN-02.json",
+      "oracle": "assets/oracles/W3-RUN-02.json"
+    }
+  ],
+  "count": 16,
+  "design_state": "PROPOSED_DESIGN"
+}

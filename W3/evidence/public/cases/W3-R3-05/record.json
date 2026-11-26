@@ -1,0 +1,185 @@
+{
+  "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
+  "run_id": "20261126T1605",
+  "case_id": "W3-R3-05",
+  "kind": "POS",
+  "wp": "WM3-P05",
+  "requirement_refs": [
+    "W3-A04",
+    "W3M-D02"
+  ],
+  "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "fixture_ref": "assets/fixtures/W3-R3-05.json",
+  "fixture_sha256": "ff731933792526da13c5188757027f63dfdbf452830559b8956e307edbb07bf2",
+  "fixture_bytes": 1427,
+  "oracle_ref": "assets/oracles/W3-R3-05.json",
+  "oracle_sha256": "6b14d77c459b6c4c64b4d68976db0338d6a5fecc544eb936aa83ee24ef224878",
+  "oracle_bytes": 1067,
+  "expected": {
+    "token": "ALTERNATIVES_SUBSTANTIVE",
+    "exit": 0,
+    "predicate": "two substantive alternatives with Fit/NoFit and owner/scope; no new root cause or license claim without evidence"
+  },
+  "observed": {
+    "token": "ALTERNATIVES_SUBSTANTIVE",
+    "exit": 0,
+    "evidence": {
+      "alternatives": [
+        {
+          "id": "ALT-A",
+          "type": "designate an existing candidate",
+          "fit": "G4 3 tests / SQS 5 cases + 14-req frozen oracle",
+          "nofit": "Owner says neither is in scope",
+          "owner": "Owner-delegated",
+          "scope": "W3-NF-01",
+          "evidence_refs": [
+            "CASE:W3-R3-05"
+          ],
+          "change_cone": [
+            "W3/spec/W3_CASE_SET.json"
+          ],
+          "rollback": "reverse patch / restore frozen case set",
+          "cost": "UNKNOWN",
+          "risk": "UNKNOWN"
+        },
+        {
+          "id": "ALT-B",
+          "type": "typed ReasonedNA",
+          "fit": "both candidates genuinely inapplicable",
+          "nofit": "N/A without a locatable reason",
+          "owner": "Owner-delegated",
+          "scope": "W3-NF-01",
+          "evidence_refs": [
+            "CASE:W3-R3-05"
+          ],
+          "change_cone": [
+            "W3/spec/W3_CASE_SET.json"
+          ],
+          "rollback": "reverse patch / restore frozen case set",
+          "cost": "UNKNOWN",
+          "risk": "UNKNOWN"
+        }
+      ],
+      "validation": {
+        "ok": true,
+        "token": "ALTERNATIVES_SUBSTANTIVE",
+        "errors": [],
+        "alternatives": [
+          {
+            "id": "ALT-A",
+            "type": "designate an existing candidate",
+            "fit": "G4 3 tests / SQS 5 cases + 14-req frozen oracle",
+            "nofit": "Owner says neither is in scope",
+            "owner": "Owner-delegated",
+            "scope": "W3-NF-01",
+            "evidence_refs": [
+              "CASE:W3-R3-05"
+            ],
+            "change_cone": [
+              "W3/spec/W3_CASE_SET.json"
+            ],
+            "rollback": "reverse patch / restore frozen case set",
+            "cost": "UNKNOWN",
+            "risk": "UNKNOWN"
+          },
+          {
+            "id": "ALT-B",
+            "type": "typed ReasonedNA",
+            "fit": "both candidates genuinely inapplicable",
+            "nofit": "N/A without a locatable reason",
+            "owner": "Owner-delegated",
+            "scope": "W3-NF-01",
+            "evidence_refs": [
+              "CASE:W3-R3-05"
+            ],
+            "change_cone": [
+              "W3/spec/W3_CASE_SET.json"
+            ],
+            "rollback": "reverse patch / restore frozen case set",
+            "cost": "UNKNOWN",
+            "risk": "UNKNOWN"
+          }
+        ],
+        "fit_nofit_present": true
+      },
+      "new_root_cause_claimed": false,
+      "license_claimed": false
+    }
+  },
+  "design_verdict": "PASS",
+  "engine_error": false,
+  "notes": [],
+  "observation_layer": "DESIGN_ENGINE",
+  "product_case_state": "NOT_COVERED",
+  "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+  "runner": {
+    "ref": "W3/check/run_w3_case.py",
+    "argv_template": [
+      "python",
+      "W3/check/run_w3_case.py",
+      "--case",
+      "W3-R3-05"
+    ],
+    "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-05",
+    "timeout_s": 120,
+    "product_runner": "UNBOUND"
+  },
+  "start": 1795687426.341,
+  "end": 1795687426.341,
+  "timeout_s": 120,
+  "exit": 0,
+  "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-05\\stdout.txt",
+  "stdout_sha256": "d6e266bf1b75627523da3e0c8612daeacc4e3c4c8632c9adf04e0d94aedc8e24",
+  "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-05\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "world_raw_ref": null,
+  "world_raw_sha256": null,
+  "pre": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "post": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "host_id": "<HOST>",
+  "os_principal": "<LOCAL_USER>",
+  "policy_epoch": "LOCAL-20261126",
+  "actor": "W3_ENGINE",
+  "verification": "SELF_ENGINE_NOT_CHECKER",
+  "signature_state": "NONE",
+  "raw_sha256": "d83a5578b43c78f09a0e532b8d3fcc5b8b05f920b13d6ab92daa48b6934abc35",
+  "process_exit": 0,
+  "process": {
+    "argv": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\W3\\check\\run_w3_case.py",
+      "--pack",
+      "<RUN_ROOT>\\pack",
+      "--case",
+      "W3-R3-05",
+      "--root",
+      "<RUN_ROOT>",
+      "--run-id",
+      "20261126T1605",
+      "--ledger",
+      "<RUN_ROOT>\\evidence\\20261126T1605\\FREEZE_LEDGER.json",
+      "--w2-root",
+      "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree",
+      "--seal",
+      "<RUN_ROOT>\\pack_meta\\EXTERNAL_SEAL.json",
+      "--adoption",
+      "<RUN_ROOT>\\pack_meta\\W3_OWNER_ADOPTION.json",
+      "--current",
+      "<RUN_ROOT>\\pack_meta\\W3_CURRENT.json"
+    ],
+    "cwd": "<RUN_ROOT>",
+    "start": 1795687426.231,
+    "end": 1795687426.393,
+    "exit": 0,
+    "stdout_sha256": "82446b65d20a7360cae29da21a3da04fbe7df59e0e0cf965df53fdef4b7d8936",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "expected_process_exit": 0,
+  "process_exit_matches": true
+}

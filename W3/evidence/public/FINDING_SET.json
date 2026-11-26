@@ -1,0 +1,132 @@
+{
+  "schema": "FHS5.PLP.W3.FindingSet@1",
+  "findings": [
+    {
+      "id": "F3-20261126T1605-01",
+      "severity": "P1",
+      "class": "SECURITY_AUTHORIZATION",
+      "subject_sha": "ee8c2664e481cb19fdcb68967b375f4ff3cd6d14b1b9116dabf7908b474747b6",
+      "command": [
+        "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_a.py",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\protected\\test_j1_strict.py"
+      ],
+      "exit": 0,
+      "raw_sha256": "c7125b139052f96ac623006a425c3369d1f5d063c995f771d169d47611e8d429",
+      "reproduction": "ISOLATED_TEST_MUTANT",
+      "finding_kind": "TEST_MUTANT_FINDING",
+      "expected": {
+        "token": "WRITE_SCOPE_VIOLATION",
+        "effect": "zero write"
+      },
+      "observed": {
+        "token": "WRITE_ALLOWED",
+        "wrote": "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\protected\\test_j1_strict.py",
+        "guard": "REMOVED"
+      },
+      "first_fail": "WRITE_SCOPE_VIOLATION not raised",
+      "raw_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_a_stdout.txt",
+      "case_id": "W3-FR16-01",
+      "change_cone": [
+        "W3/impl/w3_repair.py"
+      ],
+      "not_covered": "product protected target not touched; mutant isolated under evidence root"
+    },
+    {
+      "id": "F3-20261126T1605-02",
+      "severity": "P2",
+      "class": "DATA_CONSUMPTION",
+      "subject_sha": "ee8c2664e481cb19fdcb68967b375f4ff3cd6d14b1b9116dabf7908b474747b6",
+      "command": [
+        "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_b.py",
+        "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\ABSENT_DB"
+      ],
+      "exit": 0,
+      "raw_sha256": "446cf2f755087aacb03b412cb0d9e91cb2995ce77cccc136c579b74b7b14d0f9",
+      "reproduction": "ISOLATED_TEST_MUTANT",
+      "finding_kind": "TEST_MUTANT_FINDING",
+      "expected": {
+        "token": "UNAVAILABLE",
+        "rows": null,
+        "zero_results": null
+      },
+      "observed": {
+        "token": "ZERO_RELEVANT_HIT",
+        "state": "ZERO_RELEVANT_HIT",
+        "rows": 0,
+        "zero_results": 0,
+        "denominator": 0,
+        "reachable": false,
+        "root": "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\ABSENT_DB"
+      },
+      "first_fail": "absent provider collapsed to zero",
+      "raw_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_b_stdout.txt",
+      "case_id": "W3-FAR-01",
+      "change_cone": [
+        "W3/impl/w3_far.py"
+      ],
+      "not_covered": "no real Fabric/ResearchWO provider; local generic provider only"
+    }
+  ],
+  "traces": [
+    {
+      "finding_id": "F3-20261126T1605-01",
+      "case_id": "W3-FR16-01",
+      "requirement_refs": [
+        "W3-A07",
+        "EC-FR16"
+      ],
+      "fixture": "design",
+      "oracle": "design",
+      "expected": {
+        "token": "WRITE_SCOPE_VIOLATION",
+        "effect": "zero write"
+      },
+      "observed": {
+        "token": "WRITE_ALLOWED",
+        "wrote": "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\protected\\test_j1_strict.py",
+        "guard": "REMOVED"
+      },
+      "first_fail": "WRITE_SCOPE_VIOLATION not raised",
+      "alternatives_required": 2
+    },
+    {
+      "finding_id": "F3-20261126T1605-02",
+      "case_id": "W3-FAR-01",
+      "requirement_refs": [
+        "W3-A04",
+        "FAR-FR07"
+      ],
+      "fixture": "design",
+      "oracle": "design",
+      "expected": {
+        "token": "UNAVAILABLE",
+        "rows": null,
+        "zero_results": null
+      },
+      "observed": {
+        "token": "ZERO_RELEVANT_HIT",
+        "state": "ZERO_RELEVANT_HIT",
+        "rows": 0,
+        "zero_results": 0,
+        "denominator": 0,
+        "reachable": false,
+        "root": "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\ABSENT_DB"
+      },
+      "first_fail": "absent provider collapsed to zero",
+      "alternatives_required": 2
+    }
+  ],
+  "eight_fields": [
+    "id",
+    "severity",
+    "class",
+    "subject_sha",
+    "command",
+    "exit",
+    "raw_sha256",
+    "reproduction"
+  ],
+  "all_eight_present": true
+}

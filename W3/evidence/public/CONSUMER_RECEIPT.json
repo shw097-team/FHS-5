@@ -1,0 +1,51 @@
+{
+  "schema": "FHS5.PLP.W3.ConsumerReceipt@1",
+  "consumer_role": "FRESH_CONSUMER",
+  "consumer_script_sha256": "1515a0c6d37f4f7232530188c9b6001f33793f0f6d41bd9523009d6cdb3f3371",
+  "argv": [
+    "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "<RUN_ROOT>\\W3\\check\\consumer_verify.py"
+  ],
+  "cwd": "<RUN_ROOT>",
+  "run_id": "20261126T1605",
+  "cli_executed": true,
+  "input_writes": 0,
+  "consumed": {
+    "closeout": {
+      "path": "<RUN_ROOT>\\FHS-5_PLP_W3_CLOSEOUT.md",
+      "sha256": "ef347cb2791818c2f76d12b8148f99d39619465680dad097d0a3ad25235e72f0"
+    },
+    "handoff": {
+      "path": "<RUN_ROOT>\\FHS-5_PLP_W3_HANDOFF.md",
+      "sha256": "5951b1fe1cacdd540952544db2bc9caee0767f09039daad16bcf5d22b83e65c2"
+    },
+    "product_current": {
+      "path": "<RUN_ROOT>\\W3_PRODUCT_CURRENT.json",
+      "sha256": "8f34e2758fd68d02aac358fea26d5f123a1615fde133709e23041eb029dafa74"
+    }
+  },
+  "parsed_sections": {
+    "closeout_tokens": [
+      "W3_NF_VALIDATED",
+      "NOT_COVERED",
+      "下一合法動作",
+      "TEST_MUTANT_FINDING"
+    ],
+    "handoff_tokens": [
+      "from_stage",
+      "to_stage",
+      "pack_manifest_sha256",
+      "W4_TECHNICALLY_READY",
+      "NotCovered",
+      "next legal action"
+    ]
+  },
+  "next_action": "CASE_OWNER_FREEZE",
+  "verdict": "PASS",
+  "errors": [],
+  "strength": "FRESH_LOCAL_PROCESS_PARSE_AND_USE; NOT_ORIGINAL_DOMAIN_CONSUMER",
+  "limitations": [
+    "same OS principal as the maker",
+    "consumes design-layer closeout, not product-validated evidence"
+  ]
+}

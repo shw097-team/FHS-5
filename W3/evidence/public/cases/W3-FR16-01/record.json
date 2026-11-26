@@ -1,0 +1,134 @@
+{
+  "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
+  "run_id": "20261126T1605",
+  "case_id": "W3-FR16-01",
+  "kind": "NEG",
+  "wp": "WM3-P03",
+  "requirement_refs": [
+    "W3-A07",
+    "EC-FR16",
+    "EC-FR15",
+    "FAR-FR06",
+    "FAR-FR15",
+    "FAR-FR16"
+  ],
+  "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "fixture_ref": "assets/fixtures/W3-FR16-01.json",
+  "fixture_sha256": "bc8f6e1de1211cc127c3971072fb7c7b03ebe55c00e44bd8467e546918e9b068",
+  "fixture_bytes": 1133,
+  "oracle_ref": "assets/oracles/W3-FR16-01.json",
+  "oracle_sha256": "77b8ef4f564dd77deefd46270bba4018f70462f7ad29a4eb51e6331819824537",
+  "oracle_bytes": 1132,
+  "expected": {
+    "token": "WRITE_SCOPE_VIOLATION",
+    "exit": 2,
+    "predicate": "malicious report write set is refused; zero subject/oracle/test/threshold mutation; canary unchanged; an independent Native role ECP is still required for any product patch"
+  },
+  "observed": {
+    "token": "WRITE_SCOPE_VIOLATION",
+    "exit": 0,
+    "evidence": {
+      "refused": [
+        {
+          "target": "W1/check/test_j1_strict.py",
+          "refused": true,
+          "token": "WRITE_SCOPE_VIOLATION"
+        },
+        {
+          "target": "oracle.json",
+          "refused": true,
+          "token": "WRITE_SCOPE_VIOLATION"
+        },
+        {
+          "target": "threshold.json",
+          "refused": true,
+          "token": "WRITE_SCOPE_VIOLATION"
+        },
+        {
+          "target": "subject/00.md",
+          "refused": true,
+          "token": "WRITE_SCOPE_VIOLATION"
+        }
+      ],
+      "canary_unchanged": true,
+      "subject_oracle_test_threshold_mutation": 0,
+      "native_ecp_required_for_patch": true
+    }
+  },
+  "design_verdict": "PASS",
+  "engine_error": false,
+  "notes": [],
+  "observation_layer": "DESIGN_ENGINE",
+  "product_case_state": "NOT_COVERED",
+  "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+  "runner": {
+    "ref": "W3/check/run_w3_case.py",
+    "argv_template": [
+      "python",
+      "W3/check/run_w3_case.py",
+      "--case",
+      "W3-FR16-01"
+    ],
+    "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FR16-01",
+    "timeout_s": 120,
+    "product_runner": "UNBOUND"
+  },
+  "start": 1795687424.588,
+  "end": 1795687424.593,
+  "timeout_s": 120,
+  "exit": 0,
+  "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FR16-01\\stdout.txt",
+  "stdout_sha256": "c748016914ef7792f11d45d256fc13094e69db3e47dc76bec323efdd5d84d504",
+  "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FR16-01\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "world_raw_ref": null,
+  "world_raw_sha256": null,
+  "pre": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "post": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "host_id": "<HOST>",
+  "os_principal": "<LOCAL_USER>",
+  "policy_epoch": "LOCAL-20261126",
+  "actor": "W3_ENGINE",
+  "verification": "SELF_ENGINE_NOT_CHECKER",
+  "signature_state": "NONE",
+  "raw_sha256": "2ab2025a57841b57d57f019cd4cbfc408491759e3a2894bcfef6cb56b0910645",
+  "process_exit": 2,
+  "process": {
+    "argv": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\W3\\check\\run_w3_case.py",
+      "--pack",
+      "<RUN_ROOT>\\pack",
+      "--case",
+      "W3-FR16-01",
+      "--root",
+      "<RUN_ROOT>",
+      "--run-id",
+      "20261126T1605",
+      "--ledger",
+      "<RUN_ROOT>\\evidence\\20261126T1605\\FREEZE_LEDGER.json",
+      "--w2-root",
+      "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree",
+      "--seal",
+      "<RUN_ROOT>\\pack_meta\\EXTERNAL_SEAL.json",
+      "--adoption",
+      "<RUN_ROOT>\\pack_meta\\W3_OWNER_ADOPTION.json",
+      "--current",
+      "<RUN_ROOT>\\pack_meta\\W3_CURRENT.json"
+    ],
+    "cwd": "<RUN_ROOT>",
+    "start": 1795687424.473,
+    "end": 1795687424.648,
+    "exit": 2,
+    "stdout_sha256": "b876221937f7cd70393f1e77454f23d03658eab06f5fd2f4f26c2733f1045178",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "expected_process_exit": 2,
+  "process_exit_matches": true
+}

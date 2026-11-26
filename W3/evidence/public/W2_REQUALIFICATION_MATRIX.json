@@ -1,0 +1,195 @@
+{
+  "schema": "FHS5.PLP.W3.W2RequalificationMatrix@1",
+  "w2_subject": "FHS-5_PLP/W2/CONTROL_PACK",
+  "w2_scope": "W2-NF-01",
+  "rows": [
+    {
+      "case_id": "W2-DEV-01",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": false,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; re-run BLOCKED",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-DEV-02",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": false,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; re-run BLOCKED",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-OPS-01",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": false,
+      "proxy_only": true,
+      "static_rerun_allowed": false,
+      "verdict_reusable": false,
+      "reason": "no r3 case row; O04/O05 proxy on older receiver",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-OPS-02",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": false,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; re-run BLOCKED",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-EFFECT-01",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": false,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; re-run BLOCKED",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-AUTH-01",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": false,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; would pass for the wrong reason",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-RUNNER-01",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": true,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; static re-run allowed",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-DELTA-01",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": false,
+      "proxy_only": true,
+      "static_rerun_allowed": true,
+      "verdict_reusable": false,
+      "reason": "no r3 case row; delta disclosure is not a PASS",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-R3-01",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": true,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; static re-run allowed",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-R3-02",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": false,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; re-run BLOCKED",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-R3-03",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": false,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; re-run BLOCKED",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    },
+    {
+      "case_id": "W2-R3-04",
+      "w3_action": "READ_ONLY_CARRY",
+      "state": "NOT_REQUALIFIED",
+      "ledger_row_present": true,
+      "proxy_only": false,
+      "static_rerun_allowed": true,
+      "verdict_reusable": false,
+      "reason": "r3 PASS, raw:null; static re-run allowed",
+      "owner": "W2 Case Owner (UNBOUND)",
+      "resume": "W2-scope named re-authorisation + frozen oracle/case_set bytes"
+    }
+  ],
+  "row_count": 12,
+  "expected_rows": 12,
+  "summary": {
+    "product_commit": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+    "product_commit_id": "dada2354b7c25c8f4a316d9fae93827cef0d194e",
+    "delivery_commit": "3346076c69b00d65e48fdb9ddf894ac4cc09524b",
+    "aggregate_digest": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
+    "aggregate_algorithm": "UNDECLARED",
+    "aggregate_reproducible": false,
+    "r3_ledger_rows": 10,
+    "rows_without_case_row": [
+      "W2-OPS-01",
+      "W2-DELTA-01"
+    ],
+    "raw_attached_rows": 0,
+    "verdict_reuse": false,
+    "writer_state": "BLOCKED_NOT_ADMITTED",
+    "oracle": "PARTIALLY_FROZEN",
+    "case_set": "CARRIED_NOT_REFROZEN",
+    "evidence": "SEALED_AFTER_OBSERVED",
+    "required_actions": [
+      "R2 freeze",
+      "R3 raw seal",
+      "R4 W2-named writer grant",
+      "R5 retest",
+      "R6 distinct checker",
+      "R7 W2 owner verdict"
+    ],
+    "blocked": "W2_WRITER_BLOCKED",
+    "w3_effect": "W3_TECHNICALLY_READY cannot be claimed; W3 READ/DRAFT/isolated work continues"
+  },
+  "audit_evidence": {
+    "ref": "subagent_w2_audit.md",
+    "strength": "READ_ONLY_SUBAGENT_RECOMPUTED_BYTES",
+    "findings": [
+      "r3 ledger has 10 rows, not 12; all raw:null",
+      "W2-OPS-01/W2-DELTA-01 have no case row",
+      "r3 verdicts were produced on different gate/admission code",
+      "one pinned oracle locator is missing (30_VERIFY/raw/CHECKER_J1_ORACLE.json)",
+      "expected_pins.json pins the W1 receiver c6667402, not candidate 768d6318",
+      "the 8b4b aggregate digest is not reproducible; algorithm undeclared"
+    ]
+  },
+  "claim": "NO_W2_VERDICT_SIGNED"
+}

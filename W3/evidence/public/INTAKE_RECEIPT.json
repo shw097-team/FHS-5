@@ -1,0 +1,20 @@
+{
+  "schema": "FHS5.PLP.W3.IntakeReceipt@1",
+  "run_id": "20261126T1605",
+  "verified": true,
+  "manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
+  "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
+  "counts": {
+    "files": 5,
+    "assets": 37,
+    "cases": 16,
+    "sources": 28
+  },
+  "issues": [],
+  "remote_anchor": {
+    "branch": "codex/w3-pack-nf-primary-20261126",
+    "commit": "4f489a6aa74d055b087deb5146022da12a99cf86",
+    "readback": "git ls-remote (this run)"
+  },
+  "read_only": true
+}

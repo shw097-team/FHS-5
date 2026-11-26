@@ -1,0 +1,137 @@
+{
+  "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
+  "run_id": "20261126T1605",
+  "case_id": "W3-R3-02",
+  "kind": "NEG",
+  "wp": "WM3-P06",
+  "requirement_refs": [
+    "W3-A06",
+    "W3M-D06"
+  ],
+  "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "fixture_ref": "assets/fixtures/W3-R3-02.json",
+  "fixture_sha256": "54e37ff3c50b667d0b0a613ac8df10140d334e35d95cfcb30581764920a26de5",
+  "fixture_bytes": 1399,
+  "oracle_ref": "assets/oracles/W3-R3-02.json",
+  "oracle_sha256": "b5fc365df3d3a84de3072a2e1929d3199929f99fe3038180ebaad5943488a186",
+  "oracle_bytes": 1020,
+  "expected": {
+    "token": "DELTA_UNVERIFIED",
+    "exit": 2,
+    "predicate": "count-only historical series is not WorldRaw; no PARK; two same-scope real receipts are required"
+  },
+  "observed": {
+    "token": "DELTA_UNVERIFIED",
+    "exit": 0,
+    "evidence": {
+      "counts": [
+        {
+          "period": "p1",
+          "value": 276
+        },
+        {
+          "period": "p2",
+          "value": 275
+        },
+        {
+          "period": "p3",
+          "value": 317
+        },
+        {
+          "period": "p4",
+          "value": 316
+        },
+        {
+          "period": "p5",
+          "value": 318
+        },
+        {
+          "period": "p6",
+          "value": 319
+        }
+      ],
+      "world_raw_present": false,
+      "delta": {
+        "state": "DELTA_UNVERIFIED",
+        "reason": "single_evidence_sha is not a delta"
+      },
+      "park_emitted": false
+    }
+  },
+  "design_verdict": "PASS",
+  "engine_error": false,
+  "notes": [],
+  "observation_layer": "DESIGN_ENGINE",
+  "product_case_state": "NOT_COVERED",
+  "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+  "runner": {
+    "ref": "W3/check/run_w3_case.py",
+    "argv_template": [
+      "python",
+      "W3/check/run_w3_case.py",
+      "--case",
+      "W3-R3-02"
+    ],
+    "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-02",
+    "timeout_s": 120,
+    "product_runner": "UNBOUND"
+  },
+  "start": 1795687425.756,
+  "end": 1795687425.756,
+  "timeout_s": 120,
+  "exit": 0,
+  "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-02\\stdout.txt",
+  "stdout_sha256": "d86b05b3131c852fd397fbfed179ba36c7683dfca2f9bd640e52db09f52f6148",
+  "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-02\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "world_raw_ref": null,
+  "world_raw_sha256": null,
+  "pre": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "post": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "host_id": "<HOST>",
+  "os_principal": "<LOCAL_USER>",
+  "policy_epoch": "LOCAL-20261126",
+  "actor": "W3_ENGINE",
+  "verification": "SELF_ENGINE_NOT_CHECKER",
+  "signature_state": "NONE",
+  "raw_sha256": "d72ed35c9df8847ca20b4a4cabaad0d67aa0507e15a6fa6083b87c8a4a0224c0",
+  "process_exit": 2,
+  "process": {
+    "argv": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\W3\\check\\run_w3_case.py",
+      "--pack",
+      "<RUN_ROOT>\\pack",
+      "--case",
+      "W3-R3-02",
+      "--root",
+      "<RUN_ROOT>",
+      "--run-id",
+      "20261126T1605",
+      "--ledger",
+      "<RUN_ROOT>\\evidence\\20261126T1605\\FREEZE_LEDGER.json",
+      "--w2-root",
+      "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree",
+      "--seal",
+      "<RUN_ROOT>\\pack_meta\\EXTERNAL_SEAL.json",
+      "--adoption",
+      "<RUN_ROOT>\\pack_meta\\W3_OWNER_ADOPTION.json",
+      "--current",
+      "<RUN_ROOT>\\pack_meta\\W3_CURRENT.json"
+    ],
+    "cwd": "<RUN_ROOT>",
+    "start": 1795687425.644,
+    "end": 1795687425.807,
+    "exit": 2,
+    "stdout_sha256": "51ac41ba552ff2fc9b3399ed3f90e46d5e0eb28eef44729da73db80a95a7a13f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "expected_process_exit": 2,
+  "process_exit_matches": true
+}

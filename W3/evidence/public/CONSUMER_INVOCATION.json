@@ -1,0 +1,20 @@
+{
+  "exit": 0,
+  "distinct_process": true,
+  "cwd": "<RUN_ROOT>",
+  "start": "2026-11-26T18:03:48.5828887+08:00",
+  "receipt": "<RUN_ROOT>\\evidence\\20261126T1605\\CONSUMER_RECEIPT.json",
+  "argv": [
+    "python",
+    "W3/check/consumer_verify.py",
+    "--root",
+    "<RUN_ROOT>",
+    "--run-id",
+    "20261126T1605"
+  ],
+  "script_sha256_before_run": "1515a0c6d37f4f7232530188c9b6001f33793f0f6d41bd9523009d6cdb3f3371",
+  "input_writes": 0,
+  "schema": "FHS5.PLP.W3.ConsumerInvocation@1",
+  "end": "2026-11-26T18:03:48.6739962+08:00",
+  "script_path": "<RUN_ROOT>\\W3\\check\\consumer_verify.py"
+}

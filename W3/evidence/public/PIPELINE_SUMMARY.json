@@ -1,0 +1,35 @@
+{
+  "run_id": "20261126T1605",
+  "intake_ok": true,
+  "cases_design_pass": 16,
+  "cases_total": 16,
+  "process_exit_match": 16,
+  "findings": 2,
+  "far_states": [
+    "BLOCKED_BY_AUTHORITY",
+    "ERROR",
+    "HIT",
+    "UNAVAILABLE",
+    "ZERO_RELEVANT_HIT"
+  ],
+  "delta": {
+    "p1_p2": "PARK_NO_DELTA",
+    "p1_p3": "NEW_MATERIAL_EVIDENCE"
+  },
+  "repair": "RED_TO_GREEN_WITH_RESTORE",
+  "candidate_tree_sha256": "ee8c2664e481cb19fdcb68967b375f4ff3cd6d14b1b9116dabf7908b474747b6",
+  "claims": {
+    "PACK_PRIMARY_SELECTED": true,
+    "PACK_EXECUTABLE": true,
+    "W3_NF_VALIDATED": false,
+    "INDEPENDENT_PASS": false,
+    "W3_TECHNICALLY_READY": false,
+    "W3_EXECUTION_READY": false,
+    "W3_EXECUTION_READY_LOCAL_SCOPE": "LOCAL_ISOLATED_SCOPE_ONLY_NOT_GLOBAL",
+    "W4_TECHNICALLY_READY": false,
+    "W4_EXECUTION_READY": false,
+    "RELEASED": false
+  },
+  "closeout_sha256": "ef347cb2791818c2f76d12b8148f99d39619465680dad097d0a3ad25235e72f0",
+  "handoff_sha256": "5951b1fe1cacdd540952544db2bc9caee0767f09039daad16bcf5d22b83e65c2"
+}

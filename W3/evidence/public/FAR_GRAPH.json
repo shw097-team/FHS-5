@@ -1,0 +1,256 @@
+{
+  "schema": "FHS5.PLP.W3.FARRetrievalGraph@1",
+  "decision_question": {
+    "id": "DQ-01",
+    "question": "why did two isolated mutants violate the expected refusal?"
+  },
+  "rq0_4": [
+    {
+      "rq": "RQ0",
+      "question": "identity/scope/source join",
+      "answer": "BOUND",
+      "evidence": [
+        "05_W3_SOURCE_MANIFEST.json",
+        "EXTERNAL_SEAL.json"
+      ]
+    },
+    {
+      "rq": "RQ1",
+      "question": "what failed, with raw",
+      "answer": "BOUND",
+      "evidence": [
+        "F3-20261126T1605-01",
+        "F3-20261126T1605-02"
+      ]
+    },
+    {
+      "rq": "RQ2",
+      "question": "is the code path present",
+      "answer": "BOUND",
+      "evidence": [
+        "LOCAL_HIT"
+      ]
+    },
+    {
+      "rq": "RQ3",
+      "question": "is the binding/host actually served",
+      "answer": "UNBOUND",
+      "evidence": [
+        "ABSENT_DB"
+      ]
+    },
+    {
+      "rq": "RQ4",
+      "question": "denominator and coverage",
+      "answer": "BOUND",
+      "evidence": [
+        "LOCAL_HIT:2",
+        "LOCAL_ZERO:3",
+        "ABSENT_DB:None",
+        "OUTSIDE_ROOT:None",
+        "BAD_QUERY:None"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "F3-20261126T1605-01",
+      "kind": "Finding",
+      "raw_sha256": "c7125b139052f96ac623006a425c3369d1f5d063c995f771d169d47611e8d429"
+    },
+    {
+      "id": "F3-20261126T1605-02",
+      "kind": "Finding",
+      "raw_sha256": "446cf2f755087aacb03b412cb0d9e91cb2995ce77cccc136c579b74b7b14d0f9"
+    },
+    {
+      "id": "PROVIDER:LOCAL_HIT",
+      "kind": "Provider",
+      "state": "HIT",
+      "denominator": 2
+    },
+    {
+      "id": "PROVIDER:LOCAL_ZERO",
+      "kind": "Provider",
+      "state": "ZERO_RELEVANT_HIT",
+      "denominator": 3
+    },
+    {
+      "id": "PROVIDER:ABSENT_DB",
+      "kind": "Provider",
+      "state": "UNAVAILABLE",
+      "denominator": null
+    },
+    {
+      "id": "PROVIDER:OUTSIDE_ROOT",
+      "kind": "Provider",
+      "state": "BLOCKED_BY_AUTHORITY",
+      "denominator": null
+    },
+    {
+      "id": "PROVIDER:BAD_QUERY",
+      "kind": "Provider",
+      "state": "ERROR",
+      "denominator": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "F3-20261126T1605-01",
+      "to": "W3-FR16-01",
+      "type": "OBSERVED_IN"
+    },
+    {
+      "from": "F3-20261126T1605-01",
+      "to": "TRACE_UNBOUND",
+      "type": "REQUIREMENT"
+    },
+    {
+      "from": "F3-20261126T1605-02",
+      "to": "W3-FAR-01",
+      "type": "OBSERVED_IN"
+    },
+    {
+      "from": "F3-20261126T1605-02",
+      "to": "TRACE_UNBOUND",
+      "type": "REQUIREMENT"
+    },
+    {
+      "from": "DQ-01",
+      "to": "PROVIDER:LOCAL_HIT",
+      "type": "RETRIEVES"
+    },
+    {
+      "from": "DQ-01",
+      "to": "PROVIDER:LOCAL_ZERO",
+      "type": "RETRIEVES"
+    },
+    {
+      "from": "DQ-01",
+      "to": "PROVIDER:ABSENT_DB",
+      "type": "RETRIEVES"
+    },
+    {
+      "from": "DQ-01",
+      "to": "PROVIDER:OUTSIDE_ROOT",
+      "type": "RETRIEVES"
+    },
+    {
+      "from": "DQ-01",
+      "to": "PROVIDER:BAD_QUERY",
+      "type": "RETRIEVES"
+    }
+  ],
+  "providers": [
+    {
+      "provider_id": "LOCAL_HIT",
+      "query": "FALSE_AUTHORITY",
+      "root": "<RUN_ROOT>\\evidence\\20261126T1605\\far\\hit",
+      "scope": "W3-NF-01",
+      "attempted": true,
+      "reachable": true,
+      "denominator": 2,
+      "rows": 1,
+      "zero_results": null,
+      "state": "HIT",
+      "freshness": "FRESH_LOCAL_ENUMERATION",
+      "independence": "LOCAL_PROCESS_NOT_FABRIC",
+      "start": 1795687427.174,
+      "sample": [
+        "FALSE_AUTHORITY_refusal.txt"
+      ],
+      "end": 1795687427.175
+    },
+    {
+      "provider_id": "LOCAL_ZERO",
+      "query": "NEVER_PRESENT_TOKEN",
+      "root": "<RUN_ROOT>\\evidence\\20261126T1605\\far\\zero",
+      "scope": "W3-NF-01",
+      "attempted": true,
+      "reachable": true,
+      "denominator": 3,
+      "rows": 0,
+      "zero_results": 0,
+      "state": "ZERO_RELEVANT_HIT",
+      "freshness": "FRESH_LOCAL_ENUMERATION",
+      "independence": "LOCAL_PROCESS_NOT_FABRIC",
+      "start": 1795687427.175,
+      "sample": [],
+      "end": 1795687427.175
+    },
+    {
+      "provider_id": "ABSENT_DB",
+      "query": "anything",
+      "root": "<RUN_ROOT>\\evidence\\20261126T1605\\far\\absent",
+      "scope": "W3-NF-01",
+      "attempted": true,
+      "reachable": false,
+      "denominator": null,
+      "rows": null,
+      "zero_results": null,
+      "state": "UNAVAILABLE",
+      "freshness": "FRESH_LOCAL_ENUMERATION",
+      "independence": "LOCAL_PROCESS_NOT_FABRIC",
+      "start": 1795687427.175,
+      "reason": "root_absent",
+      "end": 1795687427.175
+    },
+    {
+      "provider_id": "OUTSIDE_ROOT",
+      "query": "MANIFEST",
+      "root": "<R>",
+      "scope": "W3-NF-01",
+      "attempted": true,
+      "reachable": true,
+      "denominator": null,
+      "rows": null,
+      "zero_results": null,
+      "state": "BLOCKED_BY_AUTHORITY",
+      "freshness": "FRESH_LOCAL_ENUMERATION",
+      "independence": "LOCAL_PROCESS_NOT_FABRIC",
+      "start": 1795687427.175,
+      "reason": "outside_allowed_roots",
+      "end": 1795687427.176
+    },
+    {
+      "provider_id": "BAD_QUERY",
+      "query": "[",
+      "root": "<RUN_ROOT>\\evidence\\20261126T1605\\far\\hit",
+      "scope": "W3-NF-01",
+      "attempted": true,
+      "reachable": true,
+      "denominator": null,
+      "rows": null,
+      "zero_results": null,
+      "state": "ERROR",
+      "freshness": "FRESH_LOCAL_ENUMERATION",
+      "independence": "LOCAL_PROCESS_NOT_FABRIC",
+      "start": 1795687427.176,
+      "reason": "bad_query:error",
+      "end": 1795687427.176
+    }
+  ],
+  "states_seen": [
+    "BLOCKED_BY_AUTHORITY",
+    "ERROR",
+    "HIT",
+    "UNAVAILABLE",
+    "ZERO_RELEVANT_HIT"
+  ],
+  "state_enum": [
+    "HIT",
+    "ZERO_RELEVANT_HIT",
+    "UNAVAILABLE",
+    "BLOCKED_BY_AUTHORITY",
+    "ERROR"
+  ],
+  "claim": "TYPED_RETRIEVAL_ONLY",
+  "states_sequence": [
+    "HIT",
+    "ZERO_RELEVANT_HIT",
+    "UNAVAILABLE",
+    "BLOCKED_BY_AUTHORITY",
+    "ERROR"
+  ],
+  "all_five_states": true
+}

@@ -1,0 +1,198 @@
+{
+  "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
+  "run_id": "20261126T1605",
+  "case_id": "W3-FAR-02",
+  "kind": "POS",
+  "wp": "WM3-P05",
+  "requirement_refs": [
+    "W3-A04",
+    "W3-A05",
+    "FAR-FR08",
+    "FAR-FR09",
+    "FAR-FR10",
+    "FAR-FR11",
+    "FAR-FR12",
+    "EC-FR10",
+    "FAR-FR04",
+    "FAR-FR05"
+  ],
+  "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "fixture_ref": "assets/fixtures/W3-FAR-02.json",
+  "fixture_sha256": "b894d39b74d14c48bc241fa12273229c32df18087d2b44ced54a460455881d61",
+  "fixture_bytes": 1662,
+  "oracle_ref": "assets/oracles/W3-FAR-02.json",
+  "oracle_sha256": "2831c3420f0bdaeb5f84b704b5eb7b6353e7bf949359625be1217f0f48a02bbd",
+  "oracle_bytes": 1127,
+  "expected": {
+    "token": "ALTERNATIVES_SUBSTANTIVE",
+    "exit": 0,
+    "predicate": "at least two different alternatives each with evidence, counterevidence, cost/risk (UNKNOWN allowed), ChangeCone, expected raw, owner and rollback; no fixed template"
+  },
+  "observed": {
+    "token": "ALTERNATIVES_SUBSTANTIVE",
+    "exit": 0,
+    "evidence": {
+      "alternatives": [
+        {
+          "id": "ALT-A",
+          "type": "BIND_EXISTING",
+          "fit": "real caller/ABI exists but slot unbound",
+          "nofit": "no caller found after search",
+          "evidence_refs": [
+            "DESIGN-RAW-B1",
+            "DESIGN-QUERY-B2"
+          ],
+          "owner": "Owner-delegated",
+          "scope": "W3-NF-01",
+          "change_cone": [
+            "W3/impl/BIND_EXISTING"
+          ],
+          "rollback": "per-file reverse patch / restore preimage",
+          "cost": "UNKNOWN",
+          "risk": "UNKNOWN"
+        },
+        {
+          "id": "ALT-B",
+          "type": "FIX_NOW",
+          "fit": "reproduced RED and genuine missing path",
+          "nofit": "existing code already covers the case",
+          "evidence_refs": [
+            "DESIGN-RAW-B1",
+            "DESIGN-QUERY-B2"
+          ],
+          "owner": "Owner-delegated",
+          "scope": "W3-NF-01",
+          "change_cone": [
+            "W3/impl/FIX_NOW"
+          ],
+          "rollback": "per-file reverse patch / restore preimage",
+          "cost": "UNKNOWN",
+          "risk": "UNKNOWN"
+        }
+      ],
+      "validation": {
+        "ok": true,
+        "token": "ALTERNATIVES_SUBSTANTIVE",
+        "errors": [],
+        "alternatives": [
+          {
+            "id": "ALT-A",
+            "type": "BIND_EXISTING",
+            "fit": "real caller/ABI exists but slot unbound",
+            "nofit": "no caller found after search",
+            "evidence_refs": [
+              "DESIGN-RAW-B1",
+              "DESIGN-QUERY-B2"
+            ],
+            "owner": "Owner-delegated",
+            "scope": "W3-NF-01",
+            "change_cone": [
+              "W3/impl/BIND_EXISTING"
+            ],
+            "rollback": "per-file reverse patch / restore preimage",
+            "cost": "UNKNOWN",
+            "risk": "UNKNOWN"
+          },
+          {
+            "id": "ALT-B",
+            "type": "FIX_NOW",
+            "fit": "reproduced RED and genuine missing path",
+            "nofit": "existing code already covers the case",
+            "evidence_refs": [
+              "DESIGN-RAW-B1",
+              "DESIGN-QUERY-B2"
+            ],
+            "owner": "Owner-delegated",
+            "scope": "W3-NF-01",
+            "change_cone": [
+              "W3/impl/FIX_NOW"
+            ],
+            "rollback": "per-file reverse patch / restore preimage",
+            "cost": "UNKNOWN",
+            "risk": "UNKNOWN"
+          }
+        ],
+        "fit_nofit_present": true
+      },
+      "counterevidence": [
+        "no caller found after search"
+      ]
+    }
+  },
+  "design_verdict": "PASS",
+  "engine_error": false,
+  "notes": [],
+  "observation_layer": "DESIGN_ENGINE",
+  "product_case_state": "NOT_COVERED",
+  "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+  "runner": {
+    "ref": "W3/check/run_w3_case.py",
+    "argv_template": [
+      "python",
+      "W3/check/run_w3_case.py",
+      "--case",
+      "W3-FAR-02"
+    ],
+    "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-02",
+    "timeout_s": 120,
+    "product_runner": "UNBOUND"
+  },
+  "start": 1795687424.414,
+  "end": 1795687424.414,
+  "timeout_s": 120,
+  "exit": 0,
+  "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-02\\stdout.txt",
+  "stdout_sha256": "21434af6f4ab3645f4e04faca1dcb57f920a1137818dcb6abd7d96169aeeaf8e",
+  "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-FAR-02\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "world_raw_ref": null,
+  "world_raw_sha256": null,
+  "pre": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "post": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "host_id": "<HOST>",
+  "os_principal": "<LOCAL_USER>",
+  "policy_epoch": "LOCAL-20261126",
+  "actor": "W3_ENGINE",
+  "verification": "SELF_ENGINE_NOT_CHECKER",
+  "signature_state": "NONE",
+  "raw_sha256": "7d0a3bcf69f1dd26536ba4d18df66c56ad5b76631bf72956ef37c36802217991",
+  "process_exit": 0,
+  "process": {
+    "argv": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\W3\\check\\run_w3_case.py",
+      "--pack",
+      "<RUN_ROOT>\\pack",
+      "--case",
+      "W3-FAR-02",
+      "--root",
+      "<RUN_ROOT>",
+      "--run-id",
+      "20261126T1605",
+      "--ledger",
+      "<RUN_ROOT>\\evidence\\20261126T1605\\FREEZE_LEDGER.json",
+      "--w2-root",
+      "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree",
+      "--seal",
+      "<RUN_ROOT>\\pack_meta\\EXTERNAL_SEAL.json",
+      "--adoption",
+      "<RUN_ROOT>\\pack_meta\\W3_OWNER_ADOPTION.json",
+      "--current",
+      "<RUN_ROOT>\\pack_meta\\W3_CURRENT.json"
+    ],
+    "cwd": "<RUN_ROOT>",
+    "start": 1795687424.299,
+    "end": 1795687424.465,
+    "exit": 0,
+    "stdout_sha256": "26286cb63ea20a5e8adc4255b2bcb78c8dd3f311de316f684c27785615314da4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "expected_process_exit": 0,
+  "process_exit_matches": true
+}

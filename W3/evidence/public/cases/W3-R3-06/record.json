@@ -1,0 +1,110 @@
+{
+  "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
+  "run_id": "20261126T1605",
+  "case_id": "W3-R3-06",
+  "kind": "NEG",
+  "wp": "WM3-P01/WM3-P04",
+  "requirement_refs": [
+    "W3-A01",
+    "W3M-D07"
+  ],
+  "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "fixture_ref": "assets/fixtures/W3-R3-06.json",
+  "fixture_sha256": "e33ba60504566a85cbf30b178436d7d973dba60e12db49286edc82f4d78dd13e",
+  "fixture_bytes": 1053,
+  "oracle_ref": "assets/oracles/W3-R3-06.json",
+  "oracle_sha256": "422f1e6f9ea5339b421838405e077da50334ac44f9898179713a6e9b736bf4c6",
+  "oracle_bytes": 1029,
+  "expected": {
+    "token": "ORIGINAL_READER_UNBOUND",
+    "exit": 2,
+    "predicate": "a Generic file read continues; the original-domain ACK is not claimed; no invented reader"
+  },
+  "observed": {
+    "token": "ORIGINAL_READER_UNBOUND",
+    "exit": 0,
+    "evidence": {
+      "acl_observation": "13/13",
+      "original_reader": null,
+      "generic_read_bytes": 79611,
+      "original_domain_ack_claimed": false,
+      "invented_reader": false
+    }
+  },
+  "design_verdict": "PASS",
+  "engine_error": false,
+  "notes": [],
+  "observation_layer": "DESIGN_ENGINE",
+  "product_case_state": "NOT_COVERED",
+  "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+  "runner": {
+    "ref": "W3/check/run_w3_case.py",
+    "argv_template": [
+      "python",
+      "W3/check/run_w3_case.py",
+      "--case",
+      "W3-R3-06"
+    ],
+    "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-06",
+    "timeout_s": 120,
+    "product_runner": "UNBOUND"
+  },
+  "start": 1795687426.516,
+  "end": 1795687426.516,
+  "timeout_s": 120,
+  "exit": 0,
+  "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-06\\stdout.txt",
+  "stdout_sha256": "a4907a5223266d2b9617c09fa69a2dd8beeca47a99359ad5518daa49d433c4d3",
+  "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-R3-06\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "world_raw_ref": null,
+  "world_raw_sha256": null,
+  "pre": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "post": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "host_id": "<HOST>",
+  "os_principal": "<LOCAL_USER>",
+  "policy_epoch": "LOCAL-20261126",
+  "actor": "W3_ENGINE",
+  "verification": "SELF_ENGINE_NOT_CHECKER",
+  "signature_state": "NONE",
+  "raw_sha256": "83c1f9e5d6c4f247e9cd6dea8e1152026f4480a4cedf2cac7319f3e514f1694e",
+  "process_exit": 2,
+  "process": {
+    "argv": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\W3\\check\\run_w3_case.py",
+      "--pack",
+      "<RUN_ROOT>\\pack",
+      "--case",
+      "W3-R3-06",
+      "--root",
+      "<RUN_ROOT>",
+      "--run-id",
+      "20261126T1605",
+      "--ledger",
+      "<RUN_ROOT>\\evidence\\20261126T1605\\FREEZE_LEDGER.json",
+      "--w2-root",
+      "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree",
+      "--seal",
+      "<RUN_ROOT>\\pack_meta\\EXTERNAL_SEAL.json",
+      "--adoption",
+      "<RUN_ROOT>\\pack_meta\\W3_OWNER_ADOPTION.json",
+      "--current",
+      "<RUN_ROOT>\\pack_meta\\W3_CURRENT.json"
+    ],
+    "cwd": "<RUN_ROOT>",
+    "start": 1795687426.402,
+    "end": 1795687426.566,
+    "exit": 2,
+    "stdout_sha256": "7a393c4421a801c29b3ef1654f3af555ecb2e0241729c95923245966abd2bbf8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "expected_process_exit": 2,
+  "process_exit_matches": true
+}

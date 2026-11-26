@@ -1,0 +1,135 @@
+{
+  "schema": "FHS5.PLP.W3.DecisionAdvice@1",
+  "advice_enum": [
+    "FIX_NOW",
+    "BIND_EXISTING",
+    "ACTIVATE_HOST",
+    "RUN_AFFECTED_TEST",
+    "FIX_PD",
+    "PI_CHANGE_REQUEST",
+    "WAIT_ORIGINAL_AUTHORITY",
+    "DEFER_TO_PHASE",
+    "RECOMMEND_CLOSE",
+    "PARK_UNTIL_DELTA"
+  ],
+  "decisions": [
+    {
+      "finding_id": "F3-20261126T1605-01",
+      "advice": "WAIT_ORIGINAL_AUTHORITY",
+      "guide2_alias": "AUTHORITY_REQUEST",
+      "advice_is_grant": false,
+      "evidence_precondition": "raw:c7125b139052f96ac623006a425c3369d1f5d063c995f771d169d47611e8d429",
+      "alternatives_ok": true,
+      "alternative_count": 2,
+      "alternatives": [
+        {
+          "id": "ALT-A",
+          "type": "BIND_EXISTING",
+          "fit": "the protected-write guard exists in W3/impl/w3_repair.py and refuses all four targets",
+          "nofit": "the mutant copy intentionally removed the guard",
+          "evidence_refs": [
+            "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_a_stdout.txt"
+          ],
+          "change_cone": [
+            "W3/impl/w3_repair.py"
+          ],
+          "cost": "S",
+          "risk": "LOW",
+          "owner": "W3 Maker",
+          "rollback": "reverse patch of the mutant only; product guard unchanged"
+        },
+        {
+          "id": "ALT-B",
+          "type": "WAIT_ORIGINAL_AUTHORITY",
+          "fit": "any product write to a protected subject/test needs an Owner grant",
+          "nofit": "no product protected write is required to fix the isolated harness",
+          "evidence_refs": [
+            "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_a_stdout.txt"
+          ],
+          "change_cone": [
+            "W2 protected (no write)"
+          ],
+          "cost": "UNKNOWN",
+          "risk": "UNKNOWN",
+          "owner": "Owner",
+          "rollback": "not applicable"
+        }
+      ],
+      "owner": "W3 Maker",
+      "next_operation": "READ_ONLY_REVIEW",
+      "stop_scope": [
+        "W3/impl/w3_repair.py"
+      ],
+      "resume_predicate": "same candidate/scope + real raw + distinct checker"
+    },
+    {
+      "finding_id": "F3-20261126T1605-02",
+      "advice": "FIX_NOW",
+      "guide2_alias": "CODE_FIX",
+      "advice_is_grant": false,
+      "evidence_precondition": "raw:446cf2f755087aacb03b412cb0d9e91cb2995ce77cccc136c579b74b7b14d0f9",
+      "alternatives_ok": true,
+      "alternative_count": 2,
+      "alternatives": [
+        {
+          "id": "ALT-A",
+          "type": "FIX_NOW",
+          "fit": "the absent-root branch demonstrably returns UNAVAILABLE in the product engine",
+          "nofit": "the mutant copy replaced the branch with a zero claim",
+          "evidence_refs": [
+            "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_b_stdout.txt"
+          ],
+          "change_cone": [
+            "W3/impl/w3_far.py"
+          ],
+          "cost": "S",
+          "risk": "LOW",
+          "owner": "W3 Maker",
+          "rollback": "reverse patch / restore preimage"
+        },
+        {
+          "id": "ALT-B",
+          "type": "BIND_EXISTING",
+          "fit": "the existing query_dir already types reachable vs unreachable",
+          "nofit": "a Fabric provider is still unbound",
+          "evidence_refs": [
+            "<RUN_ROOT>\\evidence\\20261126T1605\\mutants\\mutant_b_stdout.txt"
+          ],
+          "change_cone": [
+            "W3/impl/w3_far.py"
+          ],
+          "cost": "S",
+          "risk": "MEDIUM",
+          "owner": "FAR integraton",
+          "rollback": "revert binding, keep local provider"
+        }
+      ],
+      "owner": "W3 Maker",
+      "next_operation": "AFFECTED_RETEST",
+      "stop_scope": [
+        "W3/impl/w3_far.py"
+      ],
+      "resume_predicate": "same candidate/scope + real raw + distinct checker"
+    }
+  ],
+  "all_names_original": true,
+  "cover": 2,
+  "advice_is_grant": false,
+  "advice_names_defined": 10,
+  "advice_names_used": [
+    "FIX_NOW",
+    "WAIT_ORIGINAL_AUTHORITY"
+  ],
+  "alias_map": {
+    "FIX_NOW": "CODE_FIX",
+    "BIND_EXISTING": "BIND_REPAIR",
+    "ACTIVATE_HOST": "ACTIVATE_HOST",
+    "RUN_AFFECTED_TEST": "CASE_TEST",
+    "FIX_PD": "PD_CHANGE",
+    "PI_CHANGE_REQUEST": "PI_CHANGE",
+    "WAIT_ORIGINAL_AUTHORITY": "AUTHORITY_REQUEST",
+    "DEFER_TO_PHASE": "DEFER_TO_WAVE",
+    "RECOMMEND_CLOSE": "CLOSE_AFTER_ORIGINAL_ACK",
+    "PARK_UNTIL_DELTA": "PARK_NO_DELTA"
+  }
+}

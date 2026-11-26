@@ -1,0 +1,153 @@
+{
+  "schema": "FHS5.PLP.W3.CaseRunRecord.NF@1",
+  "run_id": "20261126T1605",
+  "case_id": "W3-RUN-01",
+  "kind": "POS",
+  "wp": "WM3-P02/WM3-P03",
+  "requirement_refs": [
+    "W3-A02",
+    "EC-FR05",
+    "EC-FR06",
+    "EC-FR08",
+    "EC-FR09",
+    "FAR-FR02",
+    "FAR-FR03"
+  ],
+  "subject": "FHS-5_PLP/W3/CONTROL_PACK",
+  "scope": "W3-NF-01",
+  "fixture_ref": "assets/fixtures/W3-RUN-01.json",
+  "fixture_sha256": "a13f479256e9d6f7ffb5beb77e7947ebb4a113fb9eb0b217a73cad61cec8779e",
+  "fixture_bytes": 1272,
+  "oracle_ref": "assets/oracles/W3-RUN-01.json",
+  "oracle_sha256": "34b9a16a3e1fca2fb45e2bfbed90f453b297386ec1dcffc6d763e31c0b2e1e80",
+  "oracle_bytes": 1120,
+  "expected": {
+    "token": "SEMANTIC_MATCH",
+    "exit": 0,
+    "predicate": "POS expected matches; NEG produces the expected refusal; Case PASS and operation-not-established are recorded separately; both raw records are independent"
+  },
+  "observed": {
+    "token": "SEMANTIC_MATCH",
+    "exit": 0,
+    "evidence": {
+      "records": [
+        {
+          "pair": "POS",
+          "argv": [
+            "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+            "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\pos_neg_child.py",
+            "POS"
+          ],
+          "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\raw_POS",
+          "exit": 0,
+          "stdout_sha256": "62b27f7c54febe3b16a3506c425470a6f36170926d2e26e7fef73e25e3a6329c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\raw_POS\\stdout.txt",
+          "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\raw_POS\\stderr.txt",
+          "expected_exit": 0,
+          "expected_token": "SEMANTIC_MATCH",
+          "token_observed": true,
+          "independent_raw": true
+        },
+        {
+          "pair": "NEG",
+          "argv": [
+            "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+            "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\pos_neg_child.py",
+            "NEG"
+          ],
+          "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\raw_NEG",
+          "exit": 2,
+          "stdout_sha256": "b58c565029a1bae37a05ea454116e51082298eda0739172e9c375089078a0c3e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\raw_NEG\\stdout.txt",
+          "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\raw_NEG\\stderr.txt",
+          "expected_exit": 2,
+          "expected_token": "REFUSAL_SEMANTIC_MATCH",
+          "token_observed": true,
+          "independent_raw": true
+        }
+      ],
+      "case_pass": true,
+      "operation_established": true,
+      "refusal_established": true
+    }
+  },
+  "design_verdict": "PASS",
+  "engine_error": false,
+  "notes": [
+    "POS and NEG are recorded separately; exit 0 alone is not PASS"
+  ],
+  "observation_layer": "DESIGN_ENGINE",
+  "product_case_state": "NOT_COVERED",
+  "product_not_covered_reason": "design fixture/oracle; no Case Owner product freeze, no real product runner/Host",
+  "runner": {
+    "ref": "W3/check/run_w3_case.py",
+    "argv_template": [
+      "python",
+      "W3/check/run_w3_case.py",
+      "--case",
+      "W3-RUN-01"
+    ],
+    "cwd": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01",
+    "timeout_s": 120,
+    "product_runner": "UNBOUND"
+  },
+  "start": 1795687426.688,
+  "end": 1795687426.793,
+  "timeout_s": 120,
+  "exit": 0,
+  "stdout_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\stdout.txt",
+  "stdout_sha256": "8e2d2886a53ba2d0ed8f7a9269a13b8a9f5ed439c503e25161e12ec1eead4b9c",
+  "stderr_ref": "<RUN_ROOT>\\evidence\\20261126T1605\\cases\\W3-RUN-01\\stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "world_raw_ref": null,
+  "world_raw_sha256": null,
+  "pre": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "post": {
+    "pack_tree_sha256": "f97238f57f52da3fba189d5f456706de37d63e213470e99c2b821ed7aa0388df"
+  },
+  "host_id": "<HOST>",
+  "os_principal": "<LOCAL_USER>",
+  "policy_epoch": "LOCAL-20261126",
+  "actor": "W3_ENGINE",
+  "verification": "SELF_ENGINE_NOT_CHECKER",
+  "signature_state": "NONE",
+  "raw_sha256": "03afeb4e9bacb0843e91cbe464242f83ec4a2bc87dce60c72c3a6177afffc9eb",
+  "process_exit": 0,
+  "process": {
+    "argv": [
+      "<USER>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "<RUN_ROOT>\\W3\\check\\run_w3_case.py",
+      "--pack",
+      "<RUN_ROOT>\\pack",
+      "--case",
+      "W3-RUN-01",
+      "--root",
+      "<RUN_ROOT>",
+      "--run-id",
+      "20261126T1605",
+      "--ledger",
+      "<RUN_ROOT>\\evidence\\20261126T1605\\FREEZE_LEDGER.json",
+      "--w2-root",
+      "<R>\\W2_NATIVE_RUNS\\20261126T1240_W2_SCOPED_REPAIR\\20_DEV\\worktree",
+      "--seal",
+      "<RUN_ROOT>\\pack_meta\\EXTERNAL_SEAL.json",
+      "--adoption",
+      "<RUN_ROOT>\\pack_meta\\W3_OWNER_ADOPTION.json",
+      "--current",
+      "<RUN_ROOT>\\pack_meta\\W3_CURRENT.json"
+    ],
+    "cwd": "<RUN_ROOT>",
+    "start": 1795687426.574,
+    "end": 1795687426.844,
+    "exit": 0,
+    "stdout_sha256": "359fc9b51d9bbe5f623a6bbd9603b3739017e3ba21eb7e5357893ab054d421ce",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "expected_process_exit": 0,
+  "process_exit_matches": true
+}
