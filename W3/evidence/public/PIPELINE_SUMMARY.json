@@ -17,7 +17,7 @@
     "p1_p3": "NEW_MATERIAL_EVIDENCE"
   },
   "repair": "RED_TO_GREEN_WITH_RESTORE",
-  "candidate_tree_sha256": "ee8c2664e481cb19fdcb68967b375f4ff3cd6d14b1b9116dabf7908b474747b6",
+  "candidate_tree_sha256": "74298ee8dc667a0f8fdbb6ad1e973556e7acef0b397a72b4f926d632b2ca5707",
   "claims": {
     "PACK_PRIMARY_SELECTED": true,
     "PACK_EXECUTABLE": true,

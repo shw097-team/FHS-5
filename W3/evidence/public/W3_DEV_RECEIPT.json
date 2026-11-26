@@ -99,5 +99,7 @@
     "the 16 fixtures/oracles are PROPOSED_DESIGN, not Case Owner product freeze",
     "product Host/runner/principal is UNBOUND",
     "Checker/Consumer are local distinct processes, not an original-domain principal"
-  ]
+  ],
+  "candidate_tree_sha256": "74298ee8dc667a0f8fdbb6ad1e973556e7acef0b397a72b4f926d632b2ca5707",
+  "candidate_tree_scope": "W3/impl+W3/check+W3/spec"
 }

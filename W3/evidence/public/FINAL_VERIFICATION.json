@@ -140,7 +140,7 @@
     {
       "check": "public_manifest_hashes",
       "ok": true,
-      "detail": "50 files"
+      "detail": "52 files"
     },
     {
       "check": "no_absolute_paths_in_public_W3",
@@ -182,7 +182,8 @@
     "tip_tree": "ced36ff895317f609ded57aabc18d67a8e473854",
     "handoff_commit": "70052ed81d8d6b29fbac1248960861e0ae639577",
     "lf_stable_commit": "a7100d0fdf424be7bf74d7806327ea509eeddfa4",
-    "final_commit": "dc78d5e32aa505b5212a686e55ac413ce551fd02",
-    "final_tree": "0a4a65ae9f8715460e65c32fdd14d685618cba4a"
+    "final_evidence_commit": "e971456b623605645e0ea66979479b2f9c7ae665",
+    "final_commit": "11b7832a5578c1e065f1c01e08516eecdc215dad",
+    "final_tree": "49e5a065cfc1a5e73cfcb9942d1528468911c54d"
   }
 }

@@ -1,23 +1,24 @@
-{
-  "exit": 0,
-  "distinct_process": true,
-  "cwd": "<RUN_ROOT>",
-  "start": "2026-11-26T18:03:48.3359422+08:00",
-  "receipt": "<RUN_ROOT>\\evidence\\20261126T1605\\CHECKER_RECEIPT.json",
-  "argv": [
-    "python",
-    "W3/check/checker_verify.py",
-    "--pack",
-    "<RUN_ROOT>\\pack",
-    "--ext-root",
-    "<RUN_ROOT>\\pack_meta",
-    "--root",
-    "<RUN_ROOT>",
-    "--run-id",
-    "20261126T1605"
-  ],
-  "script_sha256_before_run": "00bbdb755c005ca5f0275ea4073a59436178e7035c672bf6881b0d51d4eec438",
-  "schema": "FHS5.PLP.W3.CheckerInvocation@1",
-  "end": "2026-11-26T18:03:48.5828887+08:00",
-  "script_path": "<RUN_ROOT>\\W3\\check\\checker_verify.py"
+﻿{
+    "exit":  0,
+    "distinct_process":  true,
+    "rerun_reason":  "candidate tree pin changed after portable runner bind + LF stability",
+    "cwd":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605",
+    "start":  "2026-11-26T18:12:11.1786534+08:00",
+    "receipt":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\evidence\\20261126T1605\\CHECKER_RECEIPT.json",
+    "argv":  [
+                 "python",
+                 "W3/check/checker_verify.py",
+                 "--pack",
+                 "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\pack",
+                 "--ext-root",
+                 "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\pack_meta",
+                 "--root",
+                 "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605",
+                 "--run-id",
+                 "20261126T1605"
+             ],
+    "script_sha256_before_run":  "00bbdb755c005ca5f0275ea4073a59436178e7035c672bf6881b0d51d4eec438",
+    "schema":  "FHS5.PLP.W3.CheckerInvocation@1",
+    "end":  "2026-11-26T18:12:11.4078784+08:00",
+    "script_path":  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W3_EXEC_20261126T1605\\W3\\check\\checker_verify.py"
 }

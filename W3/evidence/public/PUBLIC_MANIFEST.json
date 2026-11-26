@@ -40,13 +40,13 @@
     },
     {
       "path": "W3/evidence/public/CHECKER_INVOCATION.json",
-      "sha256": "3a81469ee1362e02a8c435f68c32c11a5ea3619e6c4b431919f7953c8761f582",
-      "bytes": 659
+      "sha256": "2c977530a28e95f329c9bfaf9df7ff10ccb7999df2df35e4f18b0daf9206f0e4",
+      "bytes": 1304
     },
     {
       "path": "W3/evidence/public/CHECKER_RECEIPT.json",
-      "sha256": "5e6c6157bc803eee520abe2a92b967dda88aa333b6e08624cfad660c7daf9676",
-      "bytes": 1202
+      "sha256": "33288180708187868a912421a95d13d97810a9469ecee0994adb730e7e4d9ea5",
+      "bytes": 1329
     },
     {
       "path": "W3/evidence/public/CONSUMER_INVOCATION.json",
@@ -70,8 +70,8 @@
     },
     {
       "path": "W3/evidence/public/FINAL_VERIFICATION.json",
-      "sha256": "48330506ad4eb7b632178c3622dcbb90573eaa9469d4f7b1f1e9185d4acd987d",
-      "bytes": 3843
+      "sha256": "c8c5f078afddb787871e3c79eb646cd5d3105a4ae5c52f00209854730276cd28",
+      "bytes": 3916
     },
     {
       "path": "W3/evidence/public/FINDING_SET.json",
@@ -95,7 +95,7 @@
     },
     {
       "path": "W3/evidence/public/PIPELINE_SUMMARY.json",
-      "sha256": "ced84e19dd7a3bb22cc89ba98f8698b6d1d7a79314f0e0d3166259051d60dbf2",
+      "sha256": "5cca402f871a1cbc1c6ac4875501120c4e6fd976bcd268d6aa96d0cd6d3291e0",
       "bytes": 1042
     },
     {
@@ -130,8 +130,8 @@
     },
     {
       "path": "W3/evidence/public/W3_DEV_RECEIPT.json",
-      "sha256": "dae9e4041ae6259ce83240abbd35f7923a847181087025b1db35adad8d2a2598",
-      "bytes": 2533
+      "sha256": "a29ea97460c861051a7965f54b0bb374dfe0a016229076f27e418388fd9e91a9",
+      "bytes": 2682
     },
     {
       "path": "W3/evidence/public/cases/W3-CHK-01/record.json",

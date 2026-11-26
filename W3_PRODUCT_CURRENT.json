@@ -5,7 +5,7 @@
   "artifact_id": "FHS5-PLP/W3/PRODUCT-NF-20261126-20261126T1605",
   "pack_manifest_sha256": "9c34251936067a027d2dfc31cd28540336df27c110311590369e49773ddd96c4",
   "package_tree_sha256": "96c4d3a49ea7e579e601b64b8e4df8173f44c614bdef2910d6fe96a05235bd08",
-  "candidate_tree_sha256": "ee8c2664e481cb19fdcb68967b375f4ff3cd6d14b1b9116dabf7908b474747b6",
+  "candidate_tree_sha256": "74298ee8dc667a0f8fdbb6ad1e973556e7acef0b397a72b4f926d632b2ca5707",
   "five_pins": {
     "source": "fb3d2eada010506c8d491c88df9536fa52c5b553c6eef5d589a30edfc3a59102",
     "candidate": "8b4b4068313ae4d3ab066d6951add31d225d360ac053771d7d611621101ed8d7",
@@ -21,5 +21,6 @@
     "W4_EXECUTION_READY": false
   },
   "next_legal_action": "Case Owner freezes real 16 fixtures/oracles + names a product runner/Host; then re-run P02-P06",
-  "updated_at": "2026-11-26T18:03:47+0800"
+  "updated_at": "2026-11-26T18:03:47+0800",
+  "candidate_tree_scope": "W3/impl+W3/check+W3/spec"
 }
