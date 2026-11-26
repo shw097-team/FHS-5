@@ -4,3 +4,11 @@ W1/** -text
 22_W2_CLOSURE_HERMES_20261126/** -text
 23_W2_FINAL_CLOSURE_HERMES_20261126/** -text
 24_W2_SCOPED_REPAIR_HERMES_20261126/** -text
+
+# W3 delivery: preserve exact LF bytes for hash-bound evidence
+W3/** -text
+openspec/** -text
+FHS-5_PLP_W3_CLOSEOUT.md -text
+FHS-5_PLP_W3_HANDOFF.md -text
+W3_PRODUCT_CURRENT.json -text
+W3_PUBLICATION_RECEIPT.json -text

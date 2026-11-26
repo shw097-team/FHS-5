@@ -89,7 +89,7 @@
     },
     {
       "path": "W3/evidence/public/PUBLIC_MANIFEST.json",
-      "sha256": "8c43451eab5310e2b7e773e40340aa190beba2308d90b5960af72002134f7494",
+      "sha256": "fa2b5c50330571781922c3878708c4e2b0925e50a12ac91ccf774297ca66548c",
       "bytes": 8826
     },
     {
@@ -114,7 +114,7 @@
     },
     {
       "path": "W3/evidence/public/W3_CHANGESET.json",
-      "sha256": "d2b0648d0ddce4079978ca6825b0bcb13e56d015eb4f36b79a1c4f6c85ab5d02",
+      "sha256": "c7500f366664d64633f90e9f880ff93c40f6ff0ef1d997252f84209ac1422ec3",
       "bytes": 2975
     },
     {
@@ -254,8 +254,8 @@
     },
     {
       "path": "W3/spec/W3_RUNNER_BIND.json",
-      "sha256": "0070da4f203062a9507cddd75354d23d3fd7ccb15c149e106e3eba68de26c9ed",
-      "bytes": 729
+      "sha256": "ba8287960374d2b80e34cdc5050bf994a0b9eb1d7559bfd1cb227a24dfdc948e",
+      "bytes": 725
     }
   ]
 }

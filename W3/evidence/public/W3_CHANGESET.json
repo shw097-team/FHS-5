@@ -88,8 +88,8 @@
     },
     {
       "path": "W3/spec/W3_RUNNER_BIND.json",
-      "sha256": "0070da4f203062a9507cddd75354d23d3fd7ccb15c149e106e3eba68de26c9ed",
-      "bytes": 729,
+      "sha256": "ba8287960374d2b80e34cdc5050bf994a0b9eb1d7559bfd1cb227a24dfdc948e",
+      "bytes": 725,
       "op": "ADD"
     }
   ],
