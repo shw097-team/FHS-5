@@ -261,79 +261,9 @@
  },
  "files": [
   {
-   "path": "_patch1.py",
-   "bytes": 583,
-   "sha256": "1a4f1643d98f43d8be0865c7364026a29aa83cdbca137dc363ebffa7b760f1de"
-  },
-  {
-   "path": "_patch10.py",
-   "bytes": 874,
-   "sha256": "ab6a750742a3f4b9c8129734ad2076a0af35b9a46be5186f16af5ee074927a31"
-  },
-  {
-   "path": "_patch11.py",
-   "bytes": 1122,
-   "sha256": "be5a0f788aec011804bdea9c4eccee74881db3c45bf5ebf94d5ae3bf6ce18eb2"
-  },
-  {
-   "path": "_patch12.py",
-   "bytes": 1382,
-   "sha256": "89c330f393311a81930d1b748c8bc73e655dee06ab80014d6f229a2eacdf9325"
-  },
-  {
-   "path": "_patch13.py",
-   "bytes": 900,
-   "sha256": "40a67dcafa07f95e7e1ede4b79951144d7fd107e7586d4ecc0a9881ecb2e78f8"
-  },
-  {
-   "path": "_patch14.py",
-   "bytes": 3716,
-   "sha256": "187973a2f371ad6a011731a961a35e88de04bcb845d45292dac654d5c0f95f78"
-  },
-  {
-   "path": "_patch2.py",
-   "bytes": 531,
-   "sha256": "2cef92097316797bb72494776504b985ab42bbc44756226e3307082bdb9e2cd6"
-  },
-  {
-   "path": "_patch3.py",
-   "bytes": 1397,
-   "sha256": "713fd08db52e418ebbef8099665ab6eabc8b004e23ba19fa5b598b212c5f8169"
-  },
-  {
-   "path": "_patch4.py",
-   "bytes": 1870,
-   "sha256": "0d62652992866ac257869daf087ba630db1de6feefb265ffaaf58081e461fef4"
-  },
-  {
-   "path": "_patch5.py",
-   "bytes": 1611,
-   "sha256": "b1477718b22f078ccb796b7a471d4b015c38e7b314d0dfc6107b6a3f62a4a789"
-  },
-  {
-   "path": "_patch6.py",
-   "bytes": 1268,
-   "sha256": "ba19e59f0c0815172acf97569ff82617607ff5a13db155adf8b84c63bf61f4b3"
-  },
-  {
-   "path": "_patch7.py",
-   "bytes": 2796,
-   "sha256": "2823f71192772f98ab500ebc597700aaa2f5ebdb6994901acb9a4a154dd2f4a2"
-  },
-  {
-   "path": "_patch8.py",
-   "bytes": 745,
-   "sha256": "d3306eab85e48892d631596da6e01c0bee12b52de1d49ccc8c03c1151642370b"
-  },
-  {
-   "path": "_patch9.py",
-   "bytes": 1901,
-   "sha256": "841a8bbb4f3df99f31d54e038af4fcfed431b332c67eac0bf8694fb959634f01"
-  },
-  {
-   "path": "_probe_add.py",
-   "bytes": 1115,
-   "sha256": "62c809bd0889c66e1102ff7ed6336dbac317399cbe0f7439ad5943537fa1ddce"
+   "path": ".gitignore",
+   "bytes": 79,
+   "sha256": "4bb4c39f34f5834bec6bec3d0df4d14179bda0fc1015be5df2d899cd64d57e09"
   },
   {
    "path": "check/checker.py",
@@ -351,9 +281,44 @@
    "sha256": "57943a9276cc24e5fccf749a3406390d7121de82309cffff01419fd94dccb56d"
   },
   {
+   "path": "CLOSEOUT_W0.md",
+   "bytes": 1468,
+   "sha256": "ae888faea4088815fc4d83ebad7c66e56796ee49ecee343baa358c8bfc8ade16"
+  },
+  {
+   "path": "CLOSEOUT_W1.md",
+   "bytes": 2234,
+   "sha256": "aeb83c474ad6024b1f277a2893b0a629151576bf486726fdf4e3b0ff0731bea0"
+  },
+  {
+   "path": "CLOSEOUT_W2.md",
+   "bytes": 3025,
+   "sha256": "8bedee0379f0e1a8d0226c179780ccde402aa51f4dc760968b2181604186fed2"
+  },
+  {
    "path": "evidence/CHECKER.json",
    "bytes": 5780,
-   "sha256": "d63d4f671fb6d040b74d79f201ac2d3091ea0e1603645347f7105a972ff1a605"
+   "sha256": "258ae1f6968850b27a720fc63072d9f22bd01cabbd95a457a9e95afa428d578e"
+  },
+  {
+   "path": "HANDOFF_W0.md",
+   "bytes": 491,
+   "sha256": "764a2b90fddb14b90dce346cf59dce3be573bda0ea809befe47d9d06af72197f"
+  },
+  {
+   "path": "HANDOFF_W1.md",
+   "bytes": 580,
+   "sha256": "e3d601f11f8b1859d554da158e42cadfc035bf8a762fa8b39deefb7ab96ffc64"
+  },
+  {
+   "path": "HANDOFF_W2.md",
+   "bytes": 618,
+   "sha256": "c73f4fb3b2891d3cbac14a9c2a5ee3c1b6feed4cb16defcbd1572e353a0af01a"
+  },
+  {
+   "path": "INDEX.md",
+   "bytes": 2452,
+   "sha256": "aa2cf725c91a2270a40d8fd830e307bfa0d6047404082368f335f1dff6b78277"
   },
   {
    "path": "lib/g3pack.py",
@@ -364,6 +329,16 @@
    "path": "lib/redact.py",
    "bytes": 1066,
    "sha256": "d5bd1bff4c9dceb264a11b6a8d8c6e4118cd5fb2774961eb449194ebce4826ea"
+  },
+  {
+   "path": "PUBLICATION_RECEIPT.json",
+   "bytes": 1066,
+   "sha256": "2177af6b0262ac872487011b6403b35e6171a1aadb0f1125ca4225a4b46d7595"
+  },
+  {
+   "path": "README.md",
+   "bytes": 2167,
+   "sha256": "ace031a3b29112c47718b744727e50a94428c8e557f62b6827b83173ac444551"
   },
   {
    "path": "runs/w0/raw/OFF.json",
@@ -701,7 +676,7 @@
    "sha256": "fe67bda35055f490d010f6fb337165f2b69067ba6ba154149b8c4cf1cb4ecf5e"
   }
  ],
- "count": 88,
+ "count": 83,
  "self_excluded": [
   "evidence/EVIDENCE_MANIFEST.json",
   "evidence/SEAL.json",

@@ -1,6 +1,6 @@
 {
  "schema": "FHS5.PLP.G3.OuterSeal@1",
- "manifest_sha256": "56bf848c172ccdf2c85976c7522e1f4cb4d2796f09974fefa0a8b346ec14f4f3",
+ "manifest_sha256": "825ebb600570132e3b417782a3236d6d91d0d198c6c5ae3c07b941d4edaeb126",
  "candidate": "cfc7a1aac11b452bcef6b158bc38e0db7e082762d0305132242606a68f37be63",
  "packs": {
   "W0": {
@@ -16,7 +16,7 @@
    "tree_sha256": "957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c"
   }
  },
- "files": 88,
+ "files": 83,
  "redacted_jsons": 58,
  "note": "outer seal; the manifest does not embed this file"
 }
