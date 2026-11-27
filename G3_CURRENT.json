@@ -4,8 +4,8 @@
  "branch": "codex/w0-w2-g3-native-20261127",
  "pre_hygiene_head": "4a125e08594e32db588bf59f659a1f138e167c13",
  "delivery_root": "G3_20261127",
- "content_commit": "aad5a6de58ddba8d58b558f375be6e53db7ea7ef",
- "docs_commit": "9c6bb8987a4128de47d303e322016d1a419ba553",
+ "content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
+ "docs_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
  "adopted_primary": "36_W2_S2S3_FINAL_CODEX_20261127 (W2_CURRENT.json) unchanged",
  "waves": {
   "W0": "W0_DONE 44/44 (scoped)",
@@ -37,21 +37,30 @@
  ],
  "next_session": "read G3_20261127/CLOSEOUT_W0.md and HANDOFF_W0.md; W1 minimal checklist under runs/w0_close_20261127/w1_out_pos",
  "w0_closeout": {
-  "content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
+  "content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
   "run_root": "G3_20261127/runs/w0_close_20261127/13",
-  "final_consumer": "20261127T230849-a4b187dd",
-  "final_consumer_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
-  "evidence_manifest_sha256": "5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da",
-  "handoff_sha256": "9f9ae2340212ec5b3171dcf26a9fa85db34aa2da79452bc0d86a389685d17613",
+  "final_consumer": "20261127T234153-ecdbff08",
+  "final_consumer_receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
+  "evidence_manifest_sha256": "0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527",
+  "handoff_sha256": "3e5d6104d6fccbe7d46a5484b26340247f13054358e9ab8dd81b27f5ae92673d",
   "g17": "PASS",
   "w1_minimal": "PASS (44 items)",
   "verdict": "W0_DONE (scoped; not W1-W4/MVP/release)",
-  "docs_evidence_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
+  "docs_evidence_commit": "T2B_COMMIT_SEE_GIT_LOG",
   "push": {
-   "attempted": true,
-   "result": "unable to get password from user",
-   "remote_head_readback": "0099e95373be712e542a058693fdefba31c863c7",
-   "state": "LOCAL_ONLY"
-  }
+   "t1": {
+    "attempted": true,
+    "result": "PUSHED",
+    "remote_head_readback": "5496cf55bc04b8409359f882952bd872f1ddbb88"
+   },
+   "t2": {
+    "attempted": false,
+    "state": "LOCAL_T2B_PENDING_PUSH"
+   }
+  },
+  "t1_content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
+  "t1_docs_evidence_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
+  "t1_push_metadata": "5496cf55bc04b8409359f882952bd872f1ddbb88",
+  "nf_t01_observation": "CPython audit loader/open/child/os.system/loopback/ctypes; OS-level NotCovered"
  }
 }

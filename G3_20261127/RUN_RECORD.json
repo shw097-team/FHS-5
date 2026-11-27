@@ -30,11 +30,17 @@
   "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
   "oracle": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
   "pack": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
-  "content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
-  "reproduction": "copy 13_W0_NF_CODEX_20261125 -> run root; git clone 02_CANDIDATE/repo.bundle + checkout bb66a27; guide --contracts 03_PARTIES/tpm; guide_resume; bridge_run; native_context; collab_chain full/negatives; record_affected NF-T01/07/08; consumer --allow-pending-t10; consumer_negatives; finalize_t10; evidence_manifest; consumer --publish-manifest; challenge --mode full; G17; w1_min_consume",
-  "final_consumer": "20261127T230849-a4b187dd",
-  "final_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
-  "evidence_manifest_sha256": "5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da",
-  "verdict": "W0_DONE (scoped)"
+  "content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
+  "reproduction": "copy 13 -> run root; clone bundle + checkout bb66a27; guide --contracts; guide_resume; bridge_run; native_context; collab_chain full/negatives; record_affected NF-T01/07/08; consumer --allow-pending-t10; consumer_negatives; finalize_t10; evidence_manifest; consumer --publish-manifest (P7); challenge --mode full; G17; w1_min_consume",
+  "final_consumer": "20261127T234153-ecdbff08",
+  "final_receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
+  "evidence_manifest_sha256": "0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527",
+  "verdict": "W0_DONE (scoped)",
+  "t1_content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
+  "t1_docs_evidence_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
+  "t1_push_metadata": "5496cf55bc04b8409359f882952bd872f1ddbb88",
+  "t2_content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
+  "handoff_sha256": "3e5d6104d6fccbe7d46a5484b26340247f13054358e9ab8dd81b27f5ae92673d",
+  "nf_t01_observation": "CPython audit loader/open/child/os.system/loopback/ctypes; OS-level NotCovered"
  }
 }

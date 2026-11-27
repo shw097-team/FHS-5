@@ -68,3 +68,16 @@
 | M3 Decision | contract_context＋native_context 真實消費；`--root`＋bundle 重建 candidate；clean clone 803 checks |
 | Impact | tools、NF-T01/T08 receipts、Evidence／Consumer manifests、HANDOFF freeze、delivery docs |
 | last_good_ref | Oracle `112f2902…`；Candidate `bb66a27`；evidence `50c158e3…` |
+
+## W0-CLOSEOUT-DELTA-20261127（T2/T3）
+
+| 欄 | 內容 |
+|---|---|
+| Change | W0 closeout delta：NF-T01 child／network observation、既有 40 案／NF-T08／T10/G17/W1 核銷、GitHub 交付 |
+| NF-T01 | 保留 double-fail 拒絕、reviewer 動態定位、缺件 FAIL；新增 CPython audit observer（loader/import/open/call/child/os.system/loopback/ctypes），positive probe 全 true、absent-control 真拒；OFF 實跑 child=2（僅 guide→git 唯讀）、network=0、native=0、legacy attempts=0 |
+| NF-T01 ceiling | OS-level sandbox、native 孫程序、`-S/-E/-I`、kernel egress、audit 只觀測不阻止；不以 Python audit 冒充 OS 隔離 |
+| T3 核銷 | 40/40 reused receipts byte-identical；NF-T08 frozen contracts/Guide/chain 23/23/NEG 9/9/live NEG；T10 staging→finalize→final 無循環；G17 zero-read；W1 44 items |
+| Final evidence | manifest `0ebbccf1…`；final consumer P7 `20261127T234153-ecdbff08`（863 checks，`consumed=true`）；receipt `14008922…`；handoff `3e5d6104…` |
+| Docs fix | OpenSpec 41→40、NF-T05 reused；handoff G17 路徑 `07_CONSUMER/G17`；754 evidence 檔；INDEX 表頭與 checkpoint 對齊 |
+| Push | T1 credential-assisted push：0099e95 → 5496cf5；T2 delta 後再推最終 commit 並回讀（見 CLOSEOUT／final report） |
+| last_good_ref | Oracle `112f2902…`；Candidate `bb66a276…`；pack `e3772aee…`；content baseline `f1732144…` |

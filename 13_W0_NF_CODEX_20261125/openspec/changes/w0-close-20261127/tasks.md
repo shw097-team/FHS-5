@@ -4,7 +4,7 @@
 
 - [x] 1.1 Confirm byte-exact source vs stale run-root contracts/oracle and record the root cause.
 - [x] 1.2 Create a fresh `runs/w0_close_20261127/13` copy and materialise the candidate bundle at `bb66a27`.
-- [x] 1.3 Record the 41 reused same-position receipts and the affected set.
+- [x] 1.3 Record the 40 reused same-position receipts and the affected set.
 
 ## 2. NF-T01
 
@@ -27,7 +27,7 @@
 ## 5. Checker and delivery
 
 - [x] 5.1 Independent checker reads frozen expected plus actual raw and emits a verdict.
-- [x] 5.2 Rebuild summary/evidence manifest/handoff from 41 reused plus new affected receipts.
+- [x] 5.2 Rebuild summary/evidence manifest/handoff from 40 reused plus new affected receipts.
 - [x] 5.3 Update W0 CLOSEOUT/HANDOFF/Actual ChangeSet, commit and read back the branch if authorised.
 ## 6. Closeout evidence
 

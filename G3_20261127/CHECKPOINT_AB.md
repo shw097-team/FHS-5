@@ -4,8 +4,8 @@
 
 | 項 | 狀態 |
 |---|---|
-| W0 AsBuilt | **DONE 44/44**（scoped；NF-T01/08/10 已閉合） |
-| W0 Consumer／G17／W1 minimal | PASS（final `20261127T230849-a4b187dd`） |
+| W0 AsBuilt | **DONE 44/44**（scoped；NF-T01/07/08/10 受影重跑；NF-T01 audit observation） |
+| W0 Consumer／G17／W1 minimal | PASS（final P7 `20261127T234153-ecdbff08`，863 checks） |
 | W1 AsBuilt | 12/13；67 ECP 51 observed／10 NOT_ADMITTED |
 | W1 第二包 | PASS；Reviewer findings 0 |
 | To-Be 回寫 | CLOSEOUT／HANDOFF／INDEX 已按真狀態更新 |
