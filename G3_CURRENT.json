@@ -17,8 +17,16 @@
  "entry": {
   "index": "G3_20261127/INDEX.md",
   "checkpoint": "G3_20261127/CHECKPOINT_AB.md",
-  "closeouts": ["G3_20261127/CLOSEOUT_W0.md", "G3_20261127/CLOSEOUT_W1.md", "G3_20261127/CLOSEOUT_W2.md"],
-  "handoffs": ["G3_20261127/HANDOFF_W0.md", "G3_20261127/HANDOFF_W1.md", "G3_20261127/HANDOFF_W2.md"],
+  "closeouts": [
+   "G3_20261127/CLOSEOUT_W0.md",
+   "G3_20261127/CLOSEOUT_W1.md",
+   "G3_20261127/CLOSEOUT_W2.md"
+  ],
+  "handoffs": [
+   "G3_20261127/HANDOFF_W0.md",
+   "G3_20261127/HANDOFF_W1.md",
+   "G3_20261127/HANDOFF_W2.md"
+  ],
   "hygiene": "G3_20261127/HYGIENE_REPORT.md",
   "run_record": "G3_20261127/RUN_RECORD.json"
  },
