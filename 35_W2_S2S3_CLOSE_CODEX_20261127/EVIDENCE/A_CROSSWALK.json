@@ -1,0 +1,51 @@
+{
+ "schema": "FHS5.PLP.W2.Crosswalk13plus3@1",
+ "original_manifest_sha256": "81daac8ff3f47566d18cc7ebdaee9625ff5ca000b71caac3226841b124f6099b",
+ "original_sha_ok": true,
+ "original_requirement_ids": [
+  "W2-B01",
+  "W2-B02",
+  "W2-B03",
+  "W2-B04",
+  "W2-B05",
+  "W2-B06",
+  "W2-B07",
+  "W2-B08",
+  "W2-B09",
+  "W2-B10",
+  "W2-B11",
+  "W2-B12",
+  "W2-B13",
+  "W2-NF-A",
+  "W2-NF-B",
+  "W2-NF-C"
+ ],
+ "parsed_ids": [
+  "W2-B01",
+  "W2-B02",
+  "W2-B03",
+  "W2-B04",
+  "W2-B05",
+  "W2-B06",
+  "W2-B07",
+  "W2-B08",
+  "W2-B09",
+  "W2-B10",
+  "W2-B11",
+  "W2-B12",
+  "W2-B13",
+  "W2-NF-A",
+  "W2-NF-B",
+  "W2-NF-C"
+ ],
+ "parsed_count": 16,
+ "missing_in_original": [],
+ "owner_mismatch": [
+  "W2-B04",
+  "W2-B05"
+ ],
+ "dag_present": true,
+ "dev_ops_locators_present": true,
+ "subcases_present": true,
+ "verdict": "PASS"
+}

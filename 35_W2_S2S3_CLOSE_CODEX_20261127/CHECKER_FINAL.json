@@ -1,0 +1,80 @@
+{
+ "schema": "FHS5.PLP.W3.CheckerVerdict@5",
+ "verdict": "PASS",
+ "failed": [],
+ "checks": [
+  {
+   "check": "pins_match_tree",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "evidence_seal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "abi_ok",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "dag_9",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "runner_per_case",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "n04_pass_runner",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "n04_fail_closed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w1_67_complete",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w1_67_no_unverified",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w0_off_pass",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w0_consume_typed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_cases_7",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "n06_four",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "suite_115",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "count": 14,
+ "candidate": "b845efa64ff2b8bc84d555c9e3aa8426d8234bc8f257cc6da777ffa1c270dcaa",
+ "claim_ceiling": "W0 OFF; W1 67 ECP; W2 ABI/N04/N06; W0 S1 consume blocked (typed); W2 not validated"
+}

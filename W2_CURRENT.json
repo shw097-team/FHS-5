@@ -12,14 +12,14 @@
     "status": "ADOPTED_PRIMARY_USE_DO_NOT_MODIFY"
   },
   "current_delivery": {
-    "dir": "34_W2_S2S3_FINAL_CODEX_20261127",
-    "closeout": "34_W2_S2S3_FINAL_CODEX_20261127/FHS-5_PLP_W2_CLOSEOUT.md",
-    "handoff": "34_W2_S2S3_FINAL_CODEX_20261127/FHS-5_PLP_W2_HANDOFF.md",
-    "five_pins": "34_W2_S2S3_FINAL_CODEX_20261127/FIVE_PINS.json",
-    "closure_matrix": "34_W2_S2S3_FINAL_CODEX_20261127/CLOSURE_MATRIX.json",
-    "checker": "34_W2_S2S3_FINAL_CODEX_20261127/CHECKER_FINAL.json",
-    "consumer": "34_W2_S2S3_FINAL_CODEX_20261127/W3_CONSUMER.json",
-    "candidate_aggregate_digest": "cb66d77bc8e1282cd18c1d8ebaa55f49ee1059dba55bc1cd33f0d097671a6794",
+    "dir": "35_W2_S2S3_CLOSE_CODEX_20261127",
+    "closeout": "35_W2_S2S3_CLOSE_CODEX_20261127/FHS-5_PLP_W2_CLOSEOUT.md",
+    "handoff": "35_W2_S2S3_CLOSE_CODEX_20261127/FHS-5_PLP_W2_HANDOFF.md",
+    "five_pins": "35_W2_S2S3_CLOSE_CODEX_20261127/FIVE_PINS.json",
+    "closure_matrix": "35_W2_S2S3_CLOSE_CODEX_20261127/CLOSURE_MATRIX.json",
+    "checker": "35_W2_S2S3_CLOSE_CODEX_20261127/CHECKER_FINAL.json",
+    "consumer": "35_W2_S2S3_CLOSE_CODEX_20261127/W3_CONSUMER.json",
+    "candidate_aggregate_digest": "b845efa64ff2b8bc84d555c9e3aa8426d8234bc8f257cc6da777ffa1c270dcaa",
     "members": 16
   },
   "git": {
@@ -36,9 +36,9 @@
     "W3_EXECUTION_READY": "NOT_CLAIMED",
     "INDEPENDENT_PASS": "NOT_CLAIMED",
     "RELEASED": "NOT_CLAIMED",
-    "reason": "N09 operation segment not under current contract; W0 fresh consume not rerun"
+    "reason": "N09 operation not under current contract; W0 S1 consumer absent"
   },
-  "next_owner": "W3 P01 (see the handoff)",
+  "next_owner": "S4（上位回寫）；W3 技術接續以 35_ 為輸入",
   "candidate_members": [
     "W1/impl/s1_reader.py",
     "W1/impl/req_parse.py",

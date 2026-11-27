@@ -1,0 +1,20 @@
+{
+ "schema": "FHS5.PLP.W0.ConsumeProbe@1",
+ "accepted": false,
+ "first_fail": "W0_CONSUMER_PIN_IS_NF_PACK",
+ "findings": [
+  {
+   "id": "W0_CONSUMER_PIN_IS_NF",
+   "pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+   "s1_pack": "97017494984e1d1a3b1b62de61f28c6ab0aea7a7f1caf67f65925039033c5e98"
+  },
+  {
+   "id": "CONSUMER_RECEIPT_SHA_DRIFT",
+   "pinned": "37d567e8b5c6f7a80edcbf61aa68df3569d316a66263122f17405dabdee24fb3",
+   "actual": "7ca6b761952c5cc5bc861305df5665d120b324de49000b91bfed9778cd7e7b1e"
+  }
+ ],
+ "receipts_44": "PASS 44 (13_/05_TQAEP/receipts)",
+ "claims_803": 803,
+ "required_input": "an S1-bound W0 consumer receipt (pins 97017494, 803 checks re-run against S1)"
+}

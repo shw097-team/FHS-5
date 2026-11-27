@@ -1,0 +1,66 @@
+{
+ "schema": "FHS5.PLP.W2S3.N06Fixtures@1",
+ "rows": [
+  {
+   "fixture": "before",
+   "timeout": true,
+   "exit": null,
+   "stdout": "",
+   "seconds": 0.62,
+   "files": [],
+   "classification": "F-TO-BEFORE",
+   "reason": "no file written",
+   "expected_class": "F-TO-BEFORE",
+   "verdict": "PASS"
+  },
+  {
+   "fixture": "partial",
+   "timeout": true,
+   "exit": null,
+   "stdout": "",
+   "seconds": 0.7,
+   "files": [
+    "a.txt",
+    "b.txt"
+   ],
+   "classification": "F-PARTIAL",
+   "reason": "2/3 files",
+   "expected_class": "F-PARTIAL",
+   "verdict": "PASS"
+  },
+  {
+   "fixture": "wrong",
+   "timeout": false,
+   "exit": 0,
+   "stdout": "done",
+   "seconds": 0.06,
+   "files": [
+    "a.txt",
+    "b.txt",
+    "c.txt"
+   ],
+   "classification": "F-EXIT0-WRONG",
+   "reason": "exit0 wrong bytes",
+   "expected_class": "F-EXIT0-WRONG",
+   "verdict": "PASS"
+  },
+  {
+   "fixture": "after",
+   "timeout": true,
+   "exit": null,
+   "stdout": "",
+   "seconds": 1.22,
+   "files": [
+    "a.txt",
+    "b.txt",
+    "c.txt"
+   ],
+   "classification": "F-TO-AFTER",
+   "reason": "full set",
+   "expected_class": "F-TO-AFTER",
+   "verdict": "PASS"
+  }
+ ],
+ "failed": [],
+ "verdict": "PASS"
+}

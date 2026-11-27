@@ -300,6 +300,7 @@ def build_contracts(pack_root: str, work_identity: dict) -> dict:
     if profile_name.startswith("S1-") and not cases:
         import contracts_s1 as _c1
         _amap = {a["path"]: a for a in (man.get("assets") or [])}
+        _runners = _c1.parse_runner_table(case_text)
         for _c in _c1.parse_cases(case_text):
             _fx = re.search(r"`([^`]+)`", _c.get("fixture_ref") or "")
             _or = re.search(r"`([^`]+)`", _c.get("oracle_ref") or "")
@@ -307,6 +308,8 @@ def build_contracts(pack_root: str, work_identity: dict) -> dict:
                           "requirement": _c.get("requirement_refs"),
                           "fixture_sha256": (_amap.get(_fx.group(1)) or {}).get("sha256") if _fx else None,
                           "oracle_sha256": (_amap.get(_or.group(1)) or {}).get("sha256") if _or else None,
+                          "runner": (_runners.get(_c["id"]) or {}).get("runner"),
+                          "runner_status": (_runners.get(_c["id"]) or {}).get("runner_status"),
                           "source": "03_W2_TQAEP.md#1.N"})
     want_cases = expect.get("cases")
     if want_cases and len(cases) != want_cases:

@@ -211,9 +211,10 @@ def build_contracts(root, ident=None) -> dict:
     _runners = contracts_s1.parse_runner_table(_tq_doc)
     for _c in _cases:
         _r = _runners.get(_c["id"], {})
-        _c["fixture_ref"] = _c["fixture_ref"] or _r.get("fixture", "")
-        _c["oracle_ref"] = _c["oracle_ref"] or _r.get("oracle", "")
-        _c["runner"] = _c["runner"] or _r.get("runner", "")
+        _c["fixture_ref"] = _r.get("fixture") or _c["fixture_ref"]
+        _c["oracle_ref"] = _r.get("oracle") or _c["oracle_ref"]
+        _c["runner"] = _r.get("runner") or _c["runner"]
+        _c["runner_status"] = _r.get("runner_status", "")
     _jgroups, _nmap = contracts_s1.parse_jn(_tq_doc)
     _ops = contracts_s1.parse_ops(_ops_doc)
     views["PD"] = {
@@ -270,7 +271,8 @@ def build_contracts(root, ident=None) -> dict:
     views["TQAEP"] = {
         "cases": [{"case_id": c["id"], "kind": c["kind"],
                    "fixture": c["fixture_ref"], "oracle": c["oracle_ref"],
-                   "runner": c["runner"], "requirement_refs": c["requirement_refs"]}
+                   "runner": c["runner"], "runner_status": c.get("runner_status"),
+                   "requirement_refs": c["requirement_refs"]}
                   for c in _cases],
         "case_count": len(_cases),
         "case_rows": _cases,

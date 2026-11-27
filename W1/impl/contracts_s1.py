@@ -197,6 +197,7 @@ def parse_runner_table(tqaep):
             c = _cells(line)
             if len(c) >= 4 and c[0].startswith("W2-"):
                 rows[c[0]] = {"fixture": c[1], "oracle": c[2], "runner": c[3],
+                              "runner_status": c[4] if len(c) > 4 else "",
                               "source": "03_W2_TQAEP.md#4"}
     return rows
 
