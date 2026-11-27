@@ -145,7 +145,7 @@
   {
    "check": "w1_suite_115",
    "ok": true,
-   "detail": "['Ran 115 tests in 15.063s']"
+   "detail": "['Ran 115 tests in 14.933s']"
   },
   {
    "check": "w2_12_of_12",
@@ -222,6 +222,7 @@
    "case_set_sha256": "a78e689d42265851eba8ea0deb6f125eac4da591c47e49c2f89f610051a16aaf"
   }
  },
- "checker_id": "g3-checker-independent-20261127",
- "note": "checker re-derives predicates from packs/raws; it does not trust runner verdicts"
+ "checker_id": "g3-checker-separate-process-20261127",
+ "principal_scope": "SEPARATE_PROCESS_SAME_PRINCIPAL",
+ "note": "checker re-derives predicates from packs/raws and does not trust runner verdicts; it is a separate process but the same OS principal, so this is NOT INDEPENDENT_PASS"
 }

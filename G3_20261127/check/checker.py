@@ -163,8 +163,10 @@ def main(argv=None):
                          "tree_sha256": packs[w]["tree_sha256"],
                          "case_set_sha256": packs[w]["case_set_sha256"]}
                      for w in packs},
-           "checker_id": "g3-checker-independent-20261127",
-           "note": "checker re-derives predicates from packs/raws; it does not trust runner verdicts"}
+           "checker_id": "g3-checker-separate-process-20261127",
+           "principal_scope": "SEPARATE_PROCESS_SAME_PRINCIPAL",
+           "note": ("checker re-derives predicates from packs/raws and does not trust runner verdicts; "
+                    "it is a separate process but the same OS principal, so this is NOT INDEPENDENT_PASS")}
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n",
                            encoding="utf-8", newline="\n")

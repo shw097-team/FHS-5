@@ -8,7 +8,7 @@
 | 內容 commit | `aad5a6de58ddba8d58b558f375be6e53db7ea7ef` |
 | 交付 commit（docs） | `9c6bb8987a4128de47d303e322016d1a419ba553` |
 | LastGood | `a2281bf`（未改動）；本輪未 force push、未 merge main |
-| Checker | `evidence/CHECKER.json`：PASS／40 checks |
+| Checker | `evidence/CHECKER.json`：PASS／40 checks（SEPARATE_PROCESS_SAME_PRINCIPAL） |
 | Consumer | `evidence/W3_CONSUMER.json`：ACCEPT |
 | W3 | technical `READY`；execution `NOT_ADMITTED` |
 
@@ -19,11 +19,11 @@
 | source W0 | `baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d` |
 | source W1 | `f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc` |
 | source W2 | `7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0` |
-| candidate aggregate | `ba4039b57d4a2b43083598c80e68223a2e28d6e158668d308c34c80dd8d54bae`（56 成員） |
+| candidate aggregate | `341fec38f02b9b6134c0483a463620ff4ad61ea2dbf8fcced6df4930eac89cf9`（56 成員） |
 | oracle W0／W1／W2 | `da6fa6f3615f4043…`／`9e5c6a83b719c400…`／`a78e689d42265851…` |
 | case set | W0 44／W1 13／W2 12 |
-| evidence manifest | `5b5fd4f2c4fb26bb24577e41340fb0015138acc5d83773520192f812a4c92653` |
-| seal | `1a7f8d0c1f16e3db457453b66951c13831fbc21119e1e47655a9836370ad6a6c` |
+| evidence manifest | `7c37982edd26fe07d5633fba11f2e57ba6dbff467691ad57137c55de8567278a` |
+| seal | `5ed0b31f647738496cf7aa512a540c0466bf63eb18c430988f2c75e732ace624` |
 
 ## 已驗／未驗 ledger
 

@@ -1,6 +1,6 @@
 {
  "schema": "FHS5.PLP.G3.EvidenceManifest@1",
- "candidate": "ba4039b57d4a2b43083598c80e68223a2e28d6e158668d308c34c80dd8d54bae",
+ "candidate": "341fec38f02b9b6134c0483a463620ff4ad61ea2dbf8fcced6df4930eac89cf9",
  "pins": {
   "schema": "FHS5.PLP.G3.FivePins@1",
   "source": {
@@ -44,7 +44,7 @@
     },
     {
      "path": "G3_20261127/check/checker.py",
-     "sha256": "5336bc707741f494c614283669cf99466e8678cac70c0188434691d915656dca"
+     "sha256": "736d32e00779b53da8c7583e0638790e8e06a009b2405bce4fba1efb5c859194"
     },
     {
      "path": "G3_20261127/check/consumer.py",
@@ -236,7 +236,7 @@
     }
    ],
    "count": 56,
-   "aggregate": "ba4039b57d4a2b43083598c80e68223a2e28d6e158668d308c34c80dd8d54bae",
+   "aggregate": "341fec38f02b9b6134c0483a463620ff4ad61ea2dbf8fcced6df4930eac89cf9",
    "modified_product": [
     "W1/check/w2_dev_gate.py",
     "W1/impl/host_facade.py"
@@ -262,8 +262,8 @@
  "files": [
   {
    "path": "evidence/CHECKER.json",
-   "bytes": 5780,
-   "sha256": "19f8e31823c92f3c8754d1cc999a991dc5ab9592696248a6d120324b0e80a3d8"
+   "bytes": 5925,
+   "sha256": "a44a139ce60e3cd5c7f14d95d5d922da52f3ed8e0dff5f5494fbfdb5f6828c9d"
   },
   {
    "path": "runs/w0/raw/OFF.json",

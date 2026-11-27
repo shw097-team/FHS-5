@@ -34,8 +34,8 @@ DEV 使用新決策 `W2-G3-OWNER-20261127-05`（isolated world、exact 2 target�
 
 ## Checker／Consumer
 
-- 獨立 Checker：**40 檢查 PASS**（PASS）。
-- fresh W3 Consumer：**ACCEPT**。
+- 分離 Checker（同 principal）：**40 檢查 PASS**（PASS）。
+- fresh process Consumer（同 principal）：**ACCEPT**。
 
 ## 判定
 
