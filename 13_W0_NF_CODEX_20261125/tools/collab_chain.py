@@ -87,6 +87,7 @@ def validate(ds: dict) -> tuple[bool, str | None, dict]:
     cc = ds["guide_start"].get("contract_context")
     contract_pins = {k: lib.sha_file(lib.PARTIES / "tpm" / f"{k}.json")
                      for k in ("pi", "pd", "dev_ecp", "ops_ecp")}
+    ck("TPM-CONTRACTS-FROZEN", contracts == contract_pins, "TPM_CONTRACT_DRIFT")
     ck("TPM-GUIDE-CONTRACT-CONSUMED",
        bool(cc) and cc.get("pins") == contract_pins
        and cc.get("source_manifest_match") is True

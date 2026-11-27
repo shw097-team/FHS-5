@@ -2,10 +2,18 @@
 # -*- coding: utf-8 -*-
 """W1 consumer v3: fail-closed verification of identity, pack, seal, W0M,
 candidate, oracle, handoff, evidence-manifest contents and path confinement
-BEFORE any product CLI runs. One unique run directory per invocation."""
+BEFORE any product CLI runs. One unique run directory per invocation.
+
+Standalone receipt gate (G17 / NF-T10, no harness side effects):
+  consumer.py --verify-receipt <path> --expected-receipt-sha <sha256>
+              [--downstream-marker <path>]
+Hashes the receipt bytes first; a mismatch returns exit 3 with
+status RECEIPT_SHA_MISMATCH and never parses the receipt nor runs git/CLI.
+"""
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -15,9 +23,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import lib
-
-CONSUMER_ROOT = lib.ROOT / "07_CONSUMER"
+# lib is imported lazily inside main(): the standalone --verify-receipt gate
+# must not trigger lib's import-time mkdir side effects.
 EXPECT = {
     "schema": "FHS5.PLP.W0.SourceManifest.NF@1",
     "project_id": "FHS-5_PLP",
@@ -73,6 +80,54 @@ def confined(root: Path, rel: str) -> Path:
     if not target.is_relative_to(root.resolve()):
         raise ValueError("PATH_OUTSIDE")
     return target
+
+
+HEX64 = re.compile(r"[0-9a-f]{64}")
+
+
+def verify_receipt_gate(receipt_path: str, expected_sha: str,
+                        marker_path: str | None) -> int:
+    """Hash the receipt bytes and stop. Never parse on mismatch.
+
+    The only path opened is the receipt itself. On mismatch no marker is
+    written, no run directory is created and no git/product CLI is invoked.
+    """
+    receipt = Path(receipt_path)
+    expected = (expected_sha or "").strip().lower()
+    base = {"mode": "verify-receipt", "receipt": str(receipt),
+            "expected_receipt_sha256": expected}
+    if not HEX64.fullmatch(expected):
+        print(json.dumps({**base, "status": "EXPECTED_SHA_INVALID"},
+                         ensure_ascii=False))
+        return 2
+    if not receipt.is_file():
+        print(json.dumps({**base, "status": "RECEIPT_MISSING"},
+                         ensure_ascii=False))
+        return 4
+    raw = receipt.read_bytes()
+    got = hashlib.sha256(raw).hexdigest()
+    if got != expected:
+        print(json.dumps({**base, "status": "RECEIPT_SHA_MISMATCH",
+                          "observed_sha256": got, "bytes": len(raw),
+                          "receipt_parsed": False, "downstream_read": False,
+                          "marker_written": False}, ensure_ascii=False))
+        return 3
+    out = {**base, "status": "RECEIPT_SHA_OK", "observed_sha256": got,
+           "bytes": len(raw), "receipt_parsed": False,
+           "downstream_read": False, "marker_written": False}
+    if marker_path:
+        marker = Path(marker_path)
+        marker.parent.mkdir(parents=True, exist_ok=True)
+        payload = {**out, "verified_at": now(),
+                   "downstream_effect": "marker_only"}
+        marker.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+                          encoding="utf-8")
+        out["marker_written"] = True
+        out["downstream_marker"] = str(marker)
+        out["downstream_marker_sha256"] = hashlib.sha256(
+            marker.read_bytes()).hexdigest()
+    print(json.dumps(out, ensure_ascii=False))
+    return 0
 
 
 def run_validation(pack: Path, repo: Path, handoff: Path, evidence: Path,
@@ -260,8 +315,9 @@ def run_validation(pack: Path, repo: Path, handoff: Path, evidence: Path,
 
 
 def main():
+    global lib
     ap = argparse.ArgumentParser()
-    ap.add_argument("--root", default=str(lib.ROOT))
+    ap.add_argument("--root")
     ap.add_argument("--pack")
     ap.add_argument("--repo")
     ap.add_argument("--handoff")
@@ -272,9 +328,18 @@ def main():
     ap.add_argument("--allow-pending-t10", action="store_true")
     ap.add_argument("--expect-reject", action="store_true")
     ap.add_argument("--publish-manifest", action="store_true")
+    ap.add_argument("--verify-receipt")
+    ap.add_argument("--expected-receipt-sha")
+    ap.add_argument("--downstream-marker")
     a = ap.parse_args()
 
-    delivery_root = Path(a.root).resolve()
+    if a.verify_receipt:
+        return verify_receipt_gate(a.verify_receipt,
+                                   a.expected_receipt_sha or "",
+                                   a.downstream_marker)
+
+    import lib
+    delivery_root = Path(a.root).resolve() if a.root else lib.ROOT.resolve()
     pack = Path(a.pack).resolve() if a.pack else delivery_root / "01_PACK" / "FHS-5_PLP_W0_NATIVE_FIRST"
     handoff = Path(a.handoff).resolve() if a.handoff else delivery_root / "09_DELIVERY" / "W0_HANDOFF.md"
     evidence = (Path(a.evidence_manifest).resolve() if a.evidence_manifest
@@ -356,7 +421,11 @@ def main():
     lib.write_json(receipt_path, receipt)
     if consumed:
         lib.write_json(out_root / "LATEST.json",
-                       {"run_id": run_id, "receipt": str(receipt_path)})
+                       {"run_id": run_id, "receipt": str(receipt_path),
+                        "receipt_sha256": lib.sha_file(receipt_path),
+                        "handoff_sha256": receipt["handoff_sha256"],
+                        "evidence_manifest_sha256": receipt["evidence_manifest_sha256"],
+                        "candidate_commit": (info.get("candidate") or {}).get("head")})
 
     if a.publish_manifest and consumed:
         raw = {p.name: lib.sha_file(p) for p in sorted((run_dir / "raw").glob("*")) if p.is_file()}
