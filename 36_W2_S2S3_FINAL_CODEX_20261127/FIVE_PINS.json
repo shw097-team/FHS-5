@@ -1,0 +1,112 @@
+{
+ "schema": "FHS5.PLP.W2.FivePins@6",
+ "source": {
+  "s1_commit": "5ea16d379cc4b58835ff8c783f4b5e3ca2a60c43",
+  "w0": "97017494984e1d1a3b1b62de61f28c6ab0aea7a7f1caf67f65925039033c5e98",
+  "w0_nf_upstream": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "w1": "d1c741533bea41b8d786ec870b6f66323739a65ebdafd241545dc4afa9dff28c",
+  "w2": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b"
+ },
+ "candidate": {
+  "members": [
+   {
+    "path": "W1/impl/s1_reader.py",
+    "bytes": 9191,
+    "sha256": "d60f3dcbc39ad2192a4e2b209861d4deb5f77c320ebfe5eeb638fc050d812e82"
+   },
+   {
+    "path": "W1/impl/req_parse.py",
+    "bytes": 2449,
+    "sha256": "1dcc98cb5d0ed9b22b08925bda1a8de83da615be350db499acaf88dfbb3c83b9"
+   },
+   {
+    "path": "W1/impl/contracts_s1.py",
+    "bytes": 7534,
+    "sha256": "0de23de83f34b387cd9163694b63a6df60d7ca266b208b84e4d9de34f46de3ec"
+   },
+   {
+    "path": "W1/impl/nf_reader.py",
+    "bytes": 24751,
+    "sha256": "1f7649438b5ea776c5058bb69fb6c66816763fbd693706b3dc6a4556ee092020"
+   },
+   {
+    "path": "W1/impl/w2_nf_reader.py",
+    "bytes": 14458,
+    "sha256": "55ffaf778e1a6c4be5ca4f43952294cbbd4cc60d127864520c425b5d419fc097"
+   },
+   {
+    "path": "W1/impl/tpm_contracts_nf.py",
+    "bytes": 22586,
+    "sha256": "ea6b589a9d809f1fc9979bfc837ac7c1168656d77ff271ab8b8c0b8b1c7fd6f5"
+   },
+   {
+    "path": "W1/check/w2_admission.py",
+    "bytes": 11548,
+    "sha256": "e961b8d1dd46d7725392ac05e92d3e473c855b1b0473fab97dd084afccb47695"
+   },
+   {
+    "path": "W1/check/w2_dev_gate.py",
+    "bytes": 16684,
+    "sha256": "9f0503a7dda2132f65c2bdc8a35a251d522f9d7b2a7efae53edd8a834cffa0ef"
+   },
+   {
+    "path": "W1/check/w2_receiver.py",
+    "bytes": 43052,
+    "sha256": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595"
+   },
+   {
+    "path": "W1/check/packloc.py",
+    "bytes": 1755,
+    "sha256": "704b96af2b841166ad1c8e1607e6e9d49940edc790835d3efe499d8338d52872"
+   },
+   {
+    "path": "W1/check/run_off_task.py",
+    "bytes": 6057,
+    "sha256": "c3d92d68de8c548430d8030018dc8573f84c43f61fa6f04a11a819263751d9f9"
+   },
+   {
+    "path": "W1/check/test_w2_gate.py",
+    "bytes": 7540,
+    "sha256": "7fe373bcfc8a0694155d325bf226333293cb3b1f4154456156a3591c27494a57"
+   },
+   {
+    "path": "W1/check/test_s1_schema.py",
+    "bytes": 3854,
+    "sha256": "cf70191a0e709b7a8938903e0cdb566ba11c50a6a6a06345fe4daf26e3431901"
+   },
+   {
+    "path": "W1/check/test_s1_contracts.py",
+    "bytes": 3536,
+    "sha256": "d7d40e2d696116528e4ecdb9d327b0ef837e97ae668ba099cef8dea26450cab5"
+   },
+   {
+    "path": "W1/check/test_j1_receiver.py",
+    "bytes": 20337,
+    "sha256": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+   },
+   {
+    "path": "W1/check/test_j1_strict.py",
+    "bytes": 6622,
+    "sha256": "2967464025d650bc6a82a23019e0b5427b98f16a08acaf957c57b8b8aac17dd4"
+   }
+  ],
+  "count": 16,
+  "aggregate_canonical": "b845efa64ff2b8bc84d555c9e3aa8426d8234bc8f257cc6da777ffa1c270dcaa",
+  "aggregate_historical": "5b24c982127cf6e0b34ab853b1f2d6b106461e7aee1f839bdc955b82b11060ed"
+ },
+ "oracle": {
+  "w2_oracles": 12,
+  "ops_oracle": "OPS_ORACLE_FROZEN.json"
+ },
+ "case_set": {
+  "w2_cases": 12,
+  "j_subgroups": 18,
+  "n_cases": 12,
+  "w1_ecp": 67,
+  "dag_edges": 9
+ },
+ "evidence": {
+  "manifest_sha256": "aee5feeecd186abd2bda8dab7e2e67eea616ac703573b21fd79c6bfdce89a138",
+  "seal_sha256": "068f8f2a149ff1ee622325be83ee3e1d167a05c85b737f649f755d984591321b"
+ }
+}

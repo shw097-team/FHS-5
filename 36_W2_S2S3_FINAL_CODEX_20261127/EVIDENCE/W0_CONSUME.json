@@ -1,0 +1,59 @@
+{
+ "schema": "FHS5.PLP.W0.S1Consume@2",
+ "accepted": true,
+ "first_fail": null,
+ "checks": {
+  "s1_pack": {
+   "manifest": "97017494984e1d1a3b1b62de61f28c6ab0aea7a7f1caf67f65925039033c5e98",
+   "tree": "b5b67fd1c24586cdad78f908cba17b4b39e66a19a417d5d83daa8b765fe58ff1",
+   "seal": true,
+   "counts": {
+    "pack_files": 5,
+    "dev": null,
+    "ops": null,
+    "cases": 24,
+    "assets": 0,
+    "sources": 10,
+    "holds": 14
+   }
+  },
+  "lineage": {
+   "nf_pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+   "fixed_commit": "ae05a74514d2c310f82bbf9bb1a2009078f11c87",
+   "declared": true
+  },
+  "locator": {
+   "manifest_locator": "07_CONSUMER/clean_receive/receipt.json",
+   "resolved": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\W2_NATIVE_RUNS\\S2S3_20261127_W0CONSUME\\13\\07_CONSUMER\\clean_receive\\receipt.json",
+   "contained": true,
+   "pinned": "37d567e8b5c6f7a80edcbf61aa68df3569d316a66263122f17405dabdee24fb3",
+   "actual": "37d567e8b5c6f7a80edcbf61aa68df3569d316a66263122f17405dabdee24fb3"
+  },
+  "receipt": {
+   "schema": "FHS5.W0NF.ConsumerReceipt@3",
+   "validation_ok": true,
+   "consumed": true,
+   "check_count": 803,
+   "checks_failed": 0,
+   "rejected": 0,
+   "cli": {
+    "executed": true,
+    "pos_exit": 0,
+    "neg_exit": 2,
+    "pos_stdout_sha": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33",
+    "neg_stdout_sha": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
+    "semantics_ok": true
+   }
+  },
+  "receipts": {
+   "count": 44,
+   "unique": 44,
+   "verdicts": {
+    "PASS": 44
+   }
+  },
+  "semantic_wp": 14
+ },
+ "w0_pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\s2s3prod-20261126T225929\\S1_PACKS\\FHS-5_PLP_W0_NATIVE_FIRST",
+ "note": "S1 pack verified by S1 pin+seal; NF receipt verified by its own pin; lineage via upstream.original_manifest_sha256"
+}

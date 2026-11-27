@@ -1,0 +1,69 @@
+{
+ "schema": "FHS5.PLP.W2.N04HostLedger@2",
+ "work_order": "WO-W2-N04-N09-20261127",
+ "stages": {
+  "Selected": {
+   "artifact": "selected.json",
+   "sha256": "3eb3497cdc30021510cbb2be7a9d8763b86cfae70e25efb4292fac92f3dea32c"
+  },
+  "Loaded": {
+   "argv_exit": 0,
+   "stderr": "",
+   "artifact": "loaded_contracts.json",
+   "sha256": "524df4abb795f17313abc4d4640c082920a5d5eea930ff2ba000b18240db47ba"
+  },
+  "Installed": {
+   "status": "REASONED_NA_NATIVE_ENTRY"
+  },
+  "Bound": {
+   "work_order": "WO-W2-N04-N09-20261127"
+  },
+  "Invoked": {
+   "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "tools/serve.py"
+   ],
+   "exit": 0,
+   "stdout": "{\"served\": true, \"cases\": 12}",
+   "stderr": ""
+  },
+  "ActualServed": {
+   "artifact": "served_bundle.json",
+   "sha256": "b8c5ba5a7ec5efb80e70db1ad719aee014f320f9817d88839b3847a2e744ee68"
+  },
+  "Consumed": {
+   "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "tools/consume.py"
+   ],
+   "exit": 0,
+   "stdout": "{\"consumed\": true, \"case\": \"W2-DEV-01\", \"runner\": \"RUN-DEV-01\"}",
+   "stderr": "",
+   "artifact": "consumed_decision.json",
+   "sha256": "bae9e9789e1550033c695145c43869475455db376303748c7381e5f15b673501",
+   "decision": {
+    "accepted": true,
+    "first_fail": null,
+    "scope_bound_operation": {
+     "case": "W2-DEV-01",
+     "kind": "POS",
+     "runner": "RUN-DEV-01",
+     "runner_status": "BUILD_MINIMAL",
+     "fixture": "assets/fixtures/W2-DEV-01.json",
+     "fixture_sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001",
+     "oracle": "assets/oracles/W2-DEV-01.json",
+     "oracle_sha256": "48df3438c53b8358082f9896a77d1dffd959c7525f98706642550ce789087edb",
+     "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+     "scope": "W2-NF-01"
+    },
+    "next_legal_action": "RUN W2-DEV-01 via RUN-DEV-01 (BUILD_MINIMAL)"
+   }
+  }
+ },
+ "negative": {
+  "exit": 2,
+  "first_fail": "ORACLE_MISSING",
+  "next": "STOP_SCOPED:ORACLE_MISSING"
+ },
+ "verdict": "PASS"
+}

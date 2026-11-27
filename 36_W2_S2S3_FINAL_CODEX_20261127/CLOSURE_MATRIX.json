@@ -1,0 +1,121 @@
+{
+ "schema": "FHS5.PLP.W0W2.ClosureMatrix@9",
+ "rows": [
+  {
+   "wave": "W0",
+   "id": "OFF",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W0_OFF.json"
+  },
+  {
+   "wave": "W0",
+   "id": "44_receipts",
+   "status": "REUSE_VERIFIED",
+   "ev": "13_/05_TQAEP/receipts"
+  },
+  {
+   "wave": "W0",
+   "id": "fresh_consume",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W0_CONSUME.json (803/0, locator fixed)"
+  },
+  {
+   "wave": "W0",
+   "id": "consume_negative",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W0_CONSUME_NEG.json"
+  },
+  {
+   "wave": "W1",
+   "id": "67_ECP",
+   "status": "REUSE_VERIFIED",
+   "ev": "EVIDENCE/W1_ECP67.json",
+   "detail": {
+    "REUSE_VERIFIED": 18,
+    "PARTIAL": 46,
+    "REASONED_NA": 1,
+    "DEFERRED": 2
+   }
+  },
+  {
+   "wave": "W1",
+   "id": "suite",
+   "status": "RERUN_PASS",
+   "ev": "115 passed"
+  },
+  {
+   "wave": "W1",
+   "id": "host_second_pack",
+   "status": "REUSE_VERIFIED",
+   "ev": "18_"
+  },
+  {
+   "wave": "W2",
+   "id": "ABI",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W2_CLI_V5.json"
+  },
+  {
+   "wave": "W2",
+   "id": "runner_binding",
+   "status": "PARTIAL",
+   "ev": "EVIDENCE/W2_RUNNER_BINDING.json (12 IDs, 0 executable)"
+  },
+  {
+   "wave": "W2",
+   "id": "N04",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/N04_LEDGER.json"
+  },
+  {
+   "wave": "W2",
+   "id": "N06",
+   "status": "RERUN_PASS",
+   "ev": "4/4"
+  },
+  {
+   "wave": "W2",
+   "id": "N09",
+   "status": "STOP_SCOPED",
+   "ev": "34_/N09 (contracts_to_operation=false)"
+  },
+  {
+   "wave": "W2",
+   "id": "cases_7",
+   "status": "RERUN_PASS",
+   "ev": "EVIDENCE/W2_CASES.json"
+  },
+  {
+   "wave": "W2",
+   "id": "cases_4",
+   "status": "REUSE_VERIFIED",
+   "ev": "DEV-01/02, OPS-01, DELTA-01"
+  },
+  {
+   "wave": "W2",
+   "id": "R3-04",
+   "status": "REUSE_NOT_RERUN",
+   "ev": "318/317 ledger"
+  }
+ ],
+ "counts": {
+  "RERUN_PASS": 8,
+  "REUSE_VERIFIED": 4,
+  "PARTIAL": 1,
+  "STOP_SCOPED": 1,
+  "REUSE_NOT_RERUN": 1
+ },
+ "ecp67": {
+  "REUSE_VERIFIED": 18,
+  "PARTIAL": 46,
+  "REASONED_NA": 1,
+  "DEFERRED": 2
+ },
+ "verdicts": {
+  "W0": "DONE",
+  "W1": "PARTIAL",
+  "W2": "PARTIAL",
+  "W2_NF_VALIDATED": false
+ },
+ "w0_basis": "S1 entry + OFF PASS + fresh consume PASS (803/0) + 44 receipts"
+}

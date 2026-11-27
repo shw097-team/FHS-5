@@ -1,0 +1,88 @@
+{
+ "schema": "FHS5.PLP.W2S3.Cases@3",
+ "rows": [
+  {
+   "case": "W2-RUNNER-01",
+   "kind": "NEG",
+   "expected": "RUNNER_UNBOUND",
+   "observed": "RUNNER_UNBOUND",
+   "verdict": "PASS",
+   "raw": {
+    "executed": false,
+    "raw": null
+   }
+  },
+  {
+   "case": "W2-OPS-02",
+   "kind": "NEG",
+   "expected": "RECOVERY_KIND_MISMATCH",
+   "observed": "RECOVERY_KIND_MISMATCH",
+   "verdict": "PASS",
+   "raw": {
+    "first_fail": "RECOVERY_KIND_MISMATCH",
+    "git_head_unchanged": true,
+    "file_unchanged": true
+   }
+  },
+  {
+   "case": "W2-R3-01",
+   "kind": "POS",
+   "expected": "PASS",
+   "observed": "PASS",
+   "verdict": "PASS",
+   "raw": {
+    "draft_rows": 13,
+    "nf_entries": [
+     "W2-NF-A",
+     "W2-NF-B",
+     "W2-NF-C"
+    ],
+    "actual_kept_null": true
+   }
+  },
+  {
+   "case": "W2-R3-02",
+   "kind": "NEG",
+   "expected": "NOT_ADMITTED",
+   "observed": "NOT_ADMITTED",
+   "verdict": "PASS",
+   "raw": {
+    "g4_files": true
+   }
+  },
+  {
+   "case": "W2-R3-03",
+   "kind": "NEG",
+   "expected": "WRITE_SET_UNBOUND",
+   "observed": "WRITE_SET_UNBOUND",
+   "verdict": "PASS",
+   "raw": {
+    "exists_after": false
+   }
+  },
+  {
+   "case": "W2-EFFECT-01",
+   "kind": "NEG",
+   "expected": "EFFECT_UNBOUND",
+   "observed": "EFFECT_UNBOUND",
+   "verdict": "PASS",
+   "raw": {
+    "mode": "WRITE",
+    "wrote": []
+   }
+  },
+  {
+   "case": "W2-AUTH-01",
+   "kind": "NEG",
+   "expected": "PASS",
+   "observed": "PASS",
+   "verdict": "PASS",
+   "raw": {
+    "wrong_domain": "PRINCIPAL_DOMAIN_MISMATCH",
+    "forged_receipt": "FALSE_AUTHORITY"
+   }
+  }
+ ],
+ "failed": [],
+ "verdict": "PASS"
+}

@@ -1,0 +1,95 @@
+{
+ "schema": "FHS5.PLP.W3.CheckerVerdict@6",
+ "verdict": "PASS",
+ "failed": [],
+ "checks": [
+  {
+   "check": "pins_match_tree",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "evidence_seal",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w0_consume_accepted",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "check": "w0_locator",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w0_lineage",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w0_neg_same_entry",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w0_off_pass",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w1_67_all_raw",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w1_no_not_verified",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_runner_12_distinct",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_runner_not_claimed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "abi_ok",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "dag_9",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "n04_pass",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "n04_fail_closed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_cases_7",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "suite_115",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "count": 17,
+ "candidate": "b845efa64ff2b8bc84d555c9e3aa8426d8234bc8f257cc6da777ffa1c270dcaa",
+ "claim_ceiling": "W0 DONE (OFF+consume+44/803); W1 67 raw-bound (18 pass/46 partial); W2 ABI/N04 pending runner+operation"
+}

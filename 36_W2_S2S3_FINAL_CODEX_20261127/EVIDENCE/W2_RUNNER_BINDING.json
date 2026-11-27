@@ -1,0 +1,94 @@
+{
+ "schema": "FHS5.PLP.W2.RunnerBinding@1",
+ "count": 12,
+ "distinct_runners": 12,
+ "executable_bound": 0,
+ "verdict": "BUILD_MINIMAL_PENDING",
+ "note": "Runner IDs are correctly bound per case; no executable exists yet, so no execution is claimed",
+ "rows": [
+  {
+   "case": "W2-DEV-01",
+   "runner": "RUN-DEV-01",
+   "status": "BUILD_MINIMAL",
+   "executable_bound": false,
+   "next_legal_action": "BUILD_MINIMAL: implement and bind RUN-DEV-01"
+  },
+  {
+   "case": "W2-DEV-02",
+   "runner": "RUN-DEV-02",
+   "status": "BUILD_MINIMAL",
+   "executable_bound": false,
+   "next_legal_action": "BUILD_MINIMAL: implement and bind RUN-DEV-02"
+  },
+  {
+   "case": "W2-OPS-01",
+   "runner": "RUN-OPS-01",
+   "status": "BUILD_MINIMAL",
+   "executable_bound": false,
+   "next_legal_action": "BUILD_MINIMAL: implement and bind RUN-OPS-01"
+  },
+  {
+   "case": "W2-OPS-02",
+   "runner": "RUN-OPS-02",
+   "status": "BUILD_MINIMAL",
+   "executable_bound": false,
+   "next_legal_action": "BUILD_MINIMAL: implement and bind RUN-OPS-02"
+  },
+  {
+   "case": "W2-EFFECT-01",
+   "runner": "RUN-EFFECT-01",
+   "status": "PREFLIGHT_ONLY",
+   "executable_bound": false,
+   "next_legal_action": "PREFLIGHT_ONLY: no execution without grant"
+  },
+  {
+   "case": "W2-AUTH-01",
+   "runner": "RUN-AUTH-01",
+   "status": "PREFLIGHT_ONLY",
+   "executable_bound": false,
+   "next_legal_action": "PREFLIGHT_ONLY: no execution without grant"
+  },
+  {
+   "case": "W2-RUNNER-01",
+   "runner": "RUN-RUNNER-01",
+   "status": "PREFLIGHT_ONLY",
+   "executable_bound": false,
+   "next_legal_action": "PREFLIGHT_ONLY: no execution without grant"
+  },
+  {
+   "case": "W2-DELTA-01",
+   "runner": "RUN-DELTA-01",
+   "status": "PREFLIGHT_ONLY",
+   "executable_bound": false,
+   "next_legal_action": "PREFLIGHT_ONLY: no execution without grant"
+  },
+  {
+   "case": "W2-R3-01",
+   "runner": "RUN-R3-01",
+   "status": "PREFLIGHT_ONLY",
+   "executable_bound": false,
+   "next_legal_action": "PREFLIGHT_ONLY: no execution without grant"
+  },
+  {
+   "case": "W2-R3-02",
+   "runner": "RUN-R3-02",
+   "status": "PREFLIGHT_ONLY",
+   "executable_bound": false,
+   "next_legal_action": "PREFLIGHT_ONLY: no execution without grant"
+  },
+  {
+   "case": "W2-R3-03",
+   "runner": "RUN-R3-03",
+   "status": "PREFLIGHT_ONLY",
+   "executable_bound": false,
+   "next_legal_action": "PREFLIGHT_ONLY: no execution without grant"
+  },
+  {
+   "case": "W2-R3-04",
+   "runner": "RUN-R3-04",
+   "status": "PREFLIGHT_ONLY",
+   "executable_bound": false,
+   "next_legal_action": "PREFLIGHT_ONLY: no execution without grant"
+  }
+ ]
+}

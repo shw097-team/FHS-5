@@ -1,0 +1,10 @@
+{
+ "schema": "FHS5.PLP.W0.S1ConsumeNeg@1",
+ "accepted": false,
+ "first_fail": "RECEIPT_SHA_MISMATCH",
+ "checks": {
+  "pinned": "37d567e8b5c6f7a80edcbf61aa68df3569d316a66263122f17405dabdee24fb3",
+  "actual": "6a76567c218fde9972b76f707b864286bb02005df83294f850e814a0ea5b31fb"
+ },
+ "note": "same locator, tampered bytes; a real second invocation of the same check"
+}

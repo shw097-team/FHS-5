@@ -1,0 +1,50 @@
+{
+ "schema": "FHS5.PLP.W2.EvidenceManifest@6",
+ "round": "FINAL2-20261127",
+ "files": {
+  "A_CROSSWALK.json": {
+   "sha256": "4a2d551cc1c0e7cf3c35dc7e1879f0ceabc36c0237bb2091fa0bcb5228b46869",
+   "bytes": 816
+  },
+  "N04_LEDGER.json": {
+   "sha256": "d146ebb41f4bbe5e9fb471d254fc2883c6443876f37365d14fdd93dfd87e97ab",
+   "bytes": 2049
+  },
+  "N06_UNKNOWN.json": {
+   "sha256": "a2d61da9334a03805346b67792934add16443a67aa1c9278709c165c26a14812",
+   "bytes": 1186
+  },
+  "TESTS_Q1.stdout.txt": {
+   "sha256": "0459f9348ce4d4537ebb9ac823e37bb992d5f3a3dcfd2270c5a4580ba8f39b1c",
+   "bytes": 189
+  },
+  "W0_CONSUME.json": {
+   "sha256": "6bcca6972168d0aab6def52ebca88f529383498a8bf4245e3571799e435db383",
+   "bytes": 1876
+  },
+  "W0_CONSUME_NEG.json": {
+   "sha256": "ed33c70c07eb0926970846c5032d8587553939dd8ed7735d2baf2acec8cb250d",
+   "bytes": 364
+  },
+  "W0_OFF.json": {
+   "sha256": "aac8603bcf74ac73fa43f23ace6b196f9c99fb3fe954d4517092a99e0d95ca84",
+   "bytes": 435
+  },
+  "W1_ECP67.json": {
+   "sha256": "d65182e5e283f887aeeeca0baf910303d0b030f4550125011d79b337df015517",
+   "bytes": 61816
+  },
+  "W2_CASES.json": {
+   "sha256": "f36408261d1f65e4618073436b19b45afb4821da8a1be4c011ef08b2abeed039",
+   "bytes": 1602
+  },
+  "W2_CLI_V5.json": {
+   "sha256": "f2b004ca4fef84fc4f44ef954dfa3a684065b86d6f0d5f1fe1f288bd427dc940",
+   "bytes": 57346
+  },
+  "W2_RUNNER_BINDING.json": {
+   "sha256": "5d4b771258da552e0df58d9f483dbffac737c19eb18aaa4b27deab2274c86157",
+   "bytes": 2559
+  }
+ }
+}
