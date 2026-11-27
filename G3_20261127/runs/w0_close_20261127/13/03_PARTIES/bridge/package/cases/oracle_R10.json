@@ -1,0 +1,9 @@
+{
+  "case": "SAMPLE-R10",
+  "fixture": "case_ok.md",
+  "expected": {
+    "output": true,
+    "exit": 0,
+    "status": "COMPLETE"
+  }
+}

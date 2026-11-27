@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-m",
+    "briefcheck",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root",
+    "--input",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\outside\\canary.md",
+    "--sha256",
+    "3970625c5531f5bd55a07b36781e26730772ed13be9af01ea0818cfc7400f2e7"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root",
+  "exit": 3,
+  "stdout_sha256": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T06:41:49+00:00"
+}

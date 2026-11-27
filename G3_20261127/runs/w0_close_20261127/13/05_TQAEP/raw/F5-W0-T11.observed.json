@@ -1,0 +1,10 @@
+{
+  "gate": {
+    "exit": 3,
+    "status": "FALSE_AUTHORITY",
+    "admitted": false,
+    "noop": true
+  },
+  "pre": "4459a0b100ff243487a6d4794f0c28bec7e230824df0efd89d9eb311a2d175bd",
+  "post": "4459a0b100ff243487a6d4794f0c28bec7e230824df0efd89d9eb311a2d175bd"
+}

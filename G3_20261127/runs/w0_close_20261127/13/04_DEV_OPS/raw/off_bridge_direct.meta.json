@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-c",
+    "import sys,json; sys.path.insert(0,r'C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools'); import off_bridge; print(json.dumps(off_bridge.native_facts(),ensure_ascii=False,sort_keys=True))"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+  "exit": 0,
+  "stdout_sha256": "ba65d47629f20487c0b8eb42c43ec94f775322acdef66a955e7cb85c7ee40fdb",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T06:41:53+00:00"
+}

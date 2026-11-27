@@ -1,0 +1,1 @@
+{"controls": [{"got": false, "name": "mutant_detected", "ok": true, "want": false}], "controls_ok": true, "exit": 0, "observed": {"oracle_frozen": true, "suite_exit": 0}, "status": "RUNNER_OK"}

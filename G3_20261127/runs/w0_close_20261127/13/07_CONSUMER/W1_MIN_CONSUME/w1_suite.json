@@ -1,0 +1,10 @@
+{
+  "schema": "FHS5.W1.MinimalConsumeSuite@1",
+  "pos": true,
+  "wrong_pin": true,
+  "wrong_scope": true,
+  "partial_handoff": true,
+  "items": 44,
+  "checklist": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\w1_out_pos\\w1_checklist.json",
+  "verdict": "PASS"
+}

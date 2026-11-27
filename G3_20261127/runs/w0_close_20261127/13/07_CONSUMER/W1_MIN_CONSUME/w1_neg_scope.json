@@ -1,0 +1,15 @@
+{
+  "exit": 3,
+  "payload": {
+    "status": "REJECTED",
+    "code": "SCOPE_MISMATCH",
+    "detail": {
+      "requested": "W1",
+      "handoff_work_id": "FHS-5_PLP/W0",
+      "handoff_wave": "FHS-5_PLP/W0"
+    },
+    "output_written": false
+  },
+  "stderr": "",
+  "verdict": "PASS"
+}

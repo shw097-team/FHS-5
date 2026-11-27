@@ -1,0 +1,9 @@
+{
+  "case": "SAMPLE-R6",
+  "fixture": "case_ok.md",
+  "expected": {
+    "bad_sha": true,
+    "exit": 3,
+    "status": "SHA_MISMATCH"
+  }
+}

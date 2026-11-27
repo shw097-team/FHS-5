@@ -1,0 +1,29 @@
+{
+  "schema": "FHS5.W0NF.ConsumerReceipt@2",
+  "consumer_id": "W1-consumer/CODEX-Native-1 (separate process)",
+  "pack": "01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "handoff": "09_DELIVERY\\W0_HANDOFF.md",
+  "evidence_manifest": "10_EVIDENCE\\EVIDENCE_MANIFEST.json",
+  "good": {
+    "files_ok": true,
+    "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+    "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "handoff": {
+      "handoff_present": true,
+      "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+      "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
+      "evidence": "cb71b632df003372658e5ecf9f833f70b5c4f3b82739ffbd5223f5f8b679305c",
+      "pins_ok": true
+    },
+    "pos_neg_ok": true,
+    "accepted": true
+  },
+  "wrong_pin_refused": true,
+  "consumed": true,
+  "actual_action": "re-read pack manifest+files, handoff pins, evidence manifest; re-ran POS/NEG",
+  "not_claimed": [
+    "HERMES/GPT host execution",
+    "W1 product execution",
+    "release"
+  ]
+}

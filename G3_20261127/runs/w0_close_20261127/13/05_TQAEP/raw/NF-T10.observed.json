@@ -1,0 +1,4 @@
+{
+  "status": "PENDING_CONSUMER",
+  "reason": "consumer/checker staged: consumer runs after the checker and finalizes this case"
+}

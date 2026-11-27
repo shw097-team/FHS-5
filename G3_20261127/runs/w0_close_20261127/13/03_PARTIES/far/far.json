@@ -1,0 +1,140 @@
+{
+  "schema": "FHS5.W0NF.FAR@2",
+  "claim_ceiling": "BUILD_MINIMAL_FAR_REFERENCE",
+  "finding": {
+    "id": "CH-F-W0NF-001",
+    "severity": "MAJOR",
+    "class": "fail_open_invalid_root",
+    "subject_sha": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+    "command": "python -m briefcheck --root <missing> --input case_ok.md --sha256 0000000000000000000000000000000000000000000000000000000000000000",
+    "exit": 1,
+    "raw_sha256": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428",
+    "reproduction": "Clone candidate at 5eab43d and run briefcheck with a missing --root; it raises FileNotFoundError and exits 1 instead of INVALID_PATH/3.",
+    "source": "CHALLENGE_PREPATCH",
+    "dev_finding_id": "F-W0NF-001"
+  },
+  "challenge_ref": "03_PARTIES/challenge/challenge_prepatch.json",
+  "rq": {
+    "RQ0": {
+      "question": "raw command/exit/reproduction?",
+      "answer": "yes",
+      "evidence": "437052578c5cabb0b77e1c5218d77281dc488204260cc67141e3737113bf0518"
+    },
+    "RQ1": {
+      "question": "reproduced on frozen candidate?",
+      "answer": "yes",
+      "candidate": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36"
+    },
+    "RQ2": {
+      "question": "root cause localized?",
+      "answer": "uncaught Path.resolve(strict=True)"
+    },
+    "RQ3": {
+      "question": "affected cone?",
+      "answer": [
+        "briefcheck.py:main",
+        "R11 missing-root test"
+      ],
+      "note": "R12 (root is a file) already returned INVALID_PATH pre-patch; not affected"
+    },
+    "RQ4": {
+      "question": "external source needed?",
+      "answer": "no"
+    },
+    "RQ5": {
+      "question": "at least two alternatives?",
+      "answer": 3
+    },
+    "RQ6": {
+      "question": "security impact?",
+      "answer": "traceback discloses absolute paths; fail-open exit code"
+    },
+    "RQ7": {
+      "question": "compatibility?",
+      "answer": "no schema change; existing statuses preserved"
+    },
+    "RQ8": {
+      "question": "next?",
+      "answer": "12' patch + affected retest"
+    }
+  },
+  "alternatives": [
+    {
+      "id": "ALT-1",
+      "name": "wrap root resolve in try/except OSError and require is_dir",
+      "cost": "low",
+      "risk": "low",
+      "chosen": true,
+      "reason": "minimal, local, keeps exit contract, no new dependency"
+    },
+    {
+      "id": "ALT-2",
+      "name": "pre-validate with os.path.isdir before resolve",
+      "cost": "low",
+      "risk": "medium",
+      "reason": "TOCTOU window and still needs exception handling for races"
+    },
+    {
+      "id": "ALT-3",
+      "name": "catch all exceptions at top level and emit INVALID_FORMAT",
+      "cost": "low",
+      "risk": "high",
+      "chosen": false,
+      "reason": "masks programming errors and mislabels invalid paths"
+    }
+  ],
+  "chosen": "ALT-1",
+  "advice": {
+    "root_cause": "Path(a.root).resolve(strict=True) is called before any guard; missing root raises OSError",
+    "reproduce": "Clone candidate at 5eab43d and run briefcheck with a missing --root; it raises FileNotFoundError and exits 1 instead of INVALID_PATH/3.",
+    "minimal_patch": "try/except OSError around resolve; require root.is_dir()",
+    "test": "R11 missing root; R12 root is a file; full suite",
+    "security": "fail closed with INVALID_PATH; no path disclosure in stdout/stderr",
+    "compat": "unchanged JSON schema and exit codes",
+    "docs": "requirements NEG already lists absolute/dotdot; add invalid-root note in candidate README",
+    "rollback": "git -C 02_CANDIDATE/repo reset --hard 5eab43de2d3f67d6afbb1c5f6bc390e2c391da36 (DEV only)",
+    "monitor": "affected cone only: R11/R12 + full suite",
+    "next": "12' candidate v3; challenge re-runs POS/NEG/security"
+  },
+  "keys": [
+    "finding_id",
+    "root_cause",
+    "alternatives",
+    "chosen",
+    "risk",
+    "next",
+    "evidence"
+  ],
+  "risk": "medium before patch (wrong exit + path leak); low after fail-closed patch",
+  "next": "12' patch (candidate v3) + affected retest",
+  "evidence": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428",
+  "source_status": {
+    "status": "HIT_LOCAL",
+    "zero_results": false,
+    "unavailable_behavior": {
+      "status": "UNAVAILABLE",
+      "zero_results": null,
+      "advice": "RESEARCH_REQUIRED"
+    }
+  },
+  "close_policy": {
+    "no_raw": {
+      "exit": 3,
+      "status": "FALSE_CLOSE",
+      "reason": "no raw evidence"
+    },
+    "with_raw_in_scope": {
+      "exit": 0,
+      "status": "CLOSE_PERMITTED"
+    },
+    "out_of_scope": {
+      "exit": 3,
+      "status": "FALSE_CLOSE",
+      "reason": "outside owner scope"
+    }
+  },
+  "not_covered": [
+    "Fabric three-source profile",
+    "FAR-T20/FARP30/local35 denominators"
+  ]
+}

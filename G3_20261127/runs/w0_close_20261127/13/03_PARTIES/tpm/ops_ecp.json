@@ -1,0 +1,29 @@
+{
+  "contract": "OPS_ECP",
+  "contract_id": "FHS5-W0NF-OPS-20261125-01",
+  "dev_ref": "FHS5-W0NF-DEV-20261125-01",
+  "host": "CODEX-LOCAL-dab97dce04ed",
+  "principal": "principal-12dc3e86dd73445f",
+  "policy": "FHS5-CODEX-FIRST-2026-11-25",
+  "effect_scope": [
+    "SOURCE_READ",
+    "DEV_WRITE_IN_REPO",
+    "LOCAL_CLI_RUN",
+    "REVERSIBLE_OUTPUT_WRITE",
+    "OUTPUT_RESTORE"
+  ],
+  "output_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\04_DEV_OPS\\output",
+  "recovery": "delete only this run's output file; preimage restore for modified repo files",
+  "excluded": [
+    "external deploy",
+    "ACL/registry change",
+    "publisher release",
+    "user data"
+  ],
+  "source_refs": [
+    {
+      "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/02_W0_OPS_ECP.md",
+      "sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747"
+    }
+  ]
+}

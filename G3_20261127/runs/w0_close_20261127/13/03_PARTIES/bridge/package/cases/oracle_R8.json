@@ -1,0 +1,8 @@
+{
+  "case": "SAMPLE-R8",
+  "fixture": "case_malformed.md",
+  "expected": {
+    "exit": 3,
+    "status": "INVALID_FORMAT"
+  }
+}

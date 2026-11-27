@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-m",
+    "briefcheck",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\06_CHECKER\\smoke\\root",
+    "--input",
+    "case_malformed.md",
+    "--sha256",
+    "9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\06_CHECKER\\smoke\\root",
+  "exit": 3,
+  "stdout_sha256": "31ea3919426bc333317773a65bed5cbbc2941322ac1003ee30aa7553fa909aee",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T05:40:12+00:00"
+}

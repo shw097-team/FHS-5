@@ -1,0 +1,1 @@
+{"controls": [{"got": true, "name": "control", "ok": true, "want": true}], "controls_ok": true, "exit": 0, "observed": {"challenge_checks": 32, "dev": "PASS", "far_alternatives": 3}, "status": "COMBINED_OK"}

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-X",
+    "importtime",
+    "-m",
+    "briefcheck",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root",
+    "--input",
+    "case_ok.md",
+    "--sha256",
+    "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root",
+  "exit": 0,
+  "stdout_sha256": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33",
+  "stderr_sha256": "37fbf601f20305cc6d8c576c2794bd7d6c2627a168db354363a3acaa723d3d4e",
+  "timestamp": "2026-11-25T05:18:19+00:00"
+}

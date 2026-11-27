@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\integrity_gate.py",
+    "--path",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\mutated_requirements.md",
+    "--expected",
+    "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\02_CANDIDATE\\repo",
+  "exit": 3,
+  "stdout_sha256": "5f36a9e4d50c00ee0d753b7d4a4c322496b74a9417f9f1a30650e91da527ee26",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-25T06:41:49+00:00"
+}

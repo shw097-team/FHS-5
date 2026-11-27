@@ -1,0 +1,22 @@
+{
+  "exit": 0,
+  "payload": {
+    "status": "W1_CHECKLIST_READY",
+    "items": 44,
+    "outputs": {
+      "w1_checklist.json": {
+        "sha256": "49bd3a839820afebcdfbcfe70078acdcb5f18679b7be4174997ebc2dc66df3f2",
+        "bytes": 37421
+      },
+      "w1_checklist.md": {
+        "sha256": "fe92e3cc39ae708d7592312823e324c1380e689368337d144860f309d93ba0bb",
+        "bytes": 6886
+      }
+    },
+    "readback_ok": true
+  },
+  "stderr": "",
+  "items": 44,
+  "checklist": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\w1_out_pos\\w1_checklist.json",
+  "verdict": "PASS"
+}

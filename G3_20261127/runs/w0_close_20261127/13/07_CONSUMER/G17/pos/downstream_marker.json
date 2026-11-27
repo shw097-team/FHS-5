@@ -1,0 +1,13 @@
+{
+  "mode": "verify-receipt",
+  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230331-fc8b5edd\\receipt.json",
+  "expected_receipt_sha256": "a43e1f65b7f933bc760520caea185adcd0c26605a9e0d06dead87e1143641525",
+  "status": "RECEIPT_SHA_OK",
+  "observed_sha256": "a43e1f65b7f933bc760520caea185adcd0c26605a9e0d06dead87e1143641525",
+  "bytes": 126717,
+  "receipt_parsed": false,
+  "downstream_read": false,
+  "marker_written": false,
+  "verified_at": "2026-11-27T15:04:42+00:00",
+  "downstream_effect": "marker_only"
+}

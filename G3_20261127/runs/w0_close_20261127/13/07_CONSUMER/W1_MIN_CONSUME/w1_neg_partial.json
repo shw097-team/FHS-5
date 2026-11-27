@@ -1,0 +1,11 @@
+{
+  "exit": 3,
+  "payload": {
+    "status": "REJECTED",
+    "code": "HANDOFF_INCOMPLETE",
+    "detail": "missing section: not_covered",
+    "output_written": false
+  },
+  "stderr": "",
+  "verdict": "PASS"
+}

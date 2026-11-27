@@ -1,0 +1,8 @@
+{
+  "case": "SAMPLE-R3",
+  "fixture": "case_dup.md",
+  "expected": {
+    "exit": 3,
+    "status": "INVALID_DUP"
+  }
+}

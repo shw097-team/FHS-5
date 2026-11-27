@@ -1,0 +1,57 @@
+{
+  "run_id": "NF-T10-20261127T225545",
+  "case_id": "NF-T10",
+  "candidate_ref": "02_CANDIDATE/repo",
+  "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "source_refs": [
+    {
+      "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "path": "02_CANDIDATE/repo/requirements.md",
+      "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ],
+  "fixture_sha": null,
+  "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13",
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\consumer.py",
+    "--handoff",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\09_DELIVERY\\W0_HANDOFF.md",
+    "--evidence-manifest",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
+    "--evidence-root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13",
+    "--allow-pending-t10"
+  ],
+  "runtime": "consumer positive run 20261127T225645-015592e8",
+  "exit": 0,
+  "stdout_sha": "b1f0e3324a957ae339cb9a04a512de613758ea33b26ea772238d14a92fa0e051",
+  "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "pre_state": null,
+  "post_state": null,
+  "recovery_ref": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T225645-015592e8\\receipt.json",
+  "expected": {
+    "consumer": "consumed",
+    "negatives": "NEGATIVES_REJECTED"
+  },
+  "observed": {
+    "consumer_run_id": "20261127T225645-015592e8",
+    "consumer_receipt_sha256": "6690425f0ec49b9f7120ff05f1af952ce8103225e6a9638acba34097fd52e91b",
+    "checks": 810,
+    "negatives": "NEGATIVES_REJECTED",
+    "negative_count": 10,
+    "cli_executed": true
+  },
+  "verdict": "PASS",
+  "first_fail": "",
+  "checker_identity": "maker-run; independent check in 06_CHECKER",
+  "consumer_ref": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T225645-015592e8\\receipt.json",
+  "not_covered": [
+    "HERMES/GPT host execution"
+  ],
+  "execution_kind": "staged-consumer"
+}

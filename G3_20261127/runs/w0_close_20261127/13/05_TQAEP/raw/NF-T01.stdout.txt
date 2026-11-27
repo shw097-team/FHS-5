@@ -1,0 +1,43 @@
+{
+  "verdict": "PASS",
+  "control_ok": true,
+  "gates": {
+    "import_control_ok": true,
+    "reviewer_positive_ok": true,
+    "reviewer_negative_ok": true,
+    "reviewer_gate": true,
+    "false_parity_rejected": true,
+    "all_entries_ok": true,
+    "unbound": []
+  },
+  "entries": [
+    [
+      "briefcheck_pos",
+      true
+    ],
+    [
+      "briefcheck_neg",
+      true
+    ],
+    [
+      "reviewer",
+      true
+    ],
+    [
+      "reviewer_negative_control",
+      true
+    ],
+    [
+      "guide",
+      true
+    ],
+    [
+      "bridge_inspect",
+      true
+    ],
+    [
+      "bridge_explain",
+      true
+    ]
+  ]
+}

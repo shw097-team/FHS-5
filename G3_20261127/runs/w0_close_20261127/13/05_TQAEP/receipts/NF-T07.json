@@ -1,0 +1,71 @@
+{
+  "run_id": "NF-T07-20261127T225450",
+  "case_id": "NF-T07",
+  "candidate_ref": "02_CANDIDATE/repo",
+  "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "source_refs": [
+    {
+      "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "path": "02_CANDIDATE/repo/requirements.md",
+      "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ],
+  "fixture_sha": null,
+  "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\05_TQAEP\\tmp\\root",
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\policy_cli.py",
+    "--case",
+    "NF-T07"
+  ],
+  "runtime": "Python 3.11.9 | targeted affected replay",
+  "exit": 0,
+  "stdout_sha": "bc6fe904811b560cda36dced6b677ae126dc6e1289bcd13fd0b30c1e5428c08e",
+  "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "pre_state": null,
+  "post_state": null,
+  "recovery_ref": null,
+  "expected": {
+    "status": "PARTIES_INVOKED",
+    "exit": 0
+  },
+  "observed": {
+    "exit": 0,
+    "status": "PARTIES_INVOKED",
+    "observed": {
+      "bridge_exits": {
+        "compare": "0",
+        "explain": "0",
+        "inspect": "0",
+        "render": "0"
+      },
+      "challenge_checks": 32,
+      "checks": {
+        "bridge_four_exit0": true,
+        "challenge_invoked": true,
+        "far_finding_pinned": true,
+        "guide_invoked": true,
+        "tpm_invoked": true
+      },
+      "tpm_runs": 1
+    },
+    "controls": [
+      {
+        "got": false,
+        "name": "one_missing_detected",
+        "ok": true,
+        "want": false
+      }
+    ]
+  },
+  "verdict": "PASS",
+  "first_fail": "",
+  "checker_identity": "maker-run; independent check in 06_CHECKER",
+  "consumer_ref": null,
+  "not_covered": [],
+  "execution_kind": "policy-cli"
+}

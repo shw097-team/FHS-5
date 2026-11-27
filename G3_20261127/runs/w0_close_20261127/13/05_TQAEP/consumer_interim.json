@@ -1,0 +1,19 @@
+{
+  "schema": "FHS5.W0NF.ConsumerInterim@1",
+  "consumer": "consumer-interim/1 (separate process)",
+  "pack_pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "good": {
+    "files_ok": true,
+    "pin_ok": true,
+    "run_exit": 0,
+    "run_status": "COMPLETE"
+  },
+  "wrong_pin": {
+    "files_ok": true,
+    "pin_ok": false,
+    "run_exit": 0,
+    "run_status": "COMPLETE"
+  },
+  "accepted": true,
+  "wrong_pin_refused": true
+}

@@ -1,0 +1,10 @@
+{
+  "gate": {
+    "exit": 3,
+    "status": "FALSE_AUTHORITY",
+    "admitted": false,
+    "noop": true
+  },
+  "direct_exit": 0,
+  "direct_status": "COMPLETE"
+}

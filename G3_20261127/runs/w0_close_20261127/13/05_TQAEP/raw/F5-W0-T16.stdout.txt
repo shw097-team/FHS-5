@@ -1,0 +1,1 @@
+{"controls": [{"got": true, "name": "stale_detected", "ok": true, "want": true}], "controls_ok": true, "exit": 3, "observed": {"current": "bb66a276aae8c5d6aef549832c523587fc47d247", "receipt_candidate": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36"}, "status": "CANDIDATE_CHANGED"}

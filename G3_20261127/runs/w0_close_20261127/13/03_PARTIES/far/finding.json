@@ -1,0 +1,12 @@
+{
+  "id": "CH-F-W0NF-001",
+  "severity": "MAJOR",
+  "class": "fail_open_invalid_root",
+  "subject_sha": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+  "command": "python -m briefcheck --root <missing> --input case_ok.md --sha256 0000000000000000000000000000000000000000000000000000000000000000",
+  "exit": 1,
+  "raw_sha256": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428",
+  "reproduction": "Clone candidate at 5eab43d and run briefcheck with a missing --root; it raises FileNotFoundError and exits 1 instead of INVALID_PATH/3.",
+  "source": "CHALLENGE_PREPATCH",
+  "dev_finding_id": "F-W0NF-001"
+}

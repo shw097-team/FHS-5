@@ -1,0 +1,253 @@
+{
+  "run_id": "NF-T08-20261127T225450",
+  "case_id": "NF-T08",
+  "candidate_ref": "02_CANDIDATE/repo",
+  "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "source_refs": [
+    {
+      "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+      "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+    },
+    {
+      "path": "02_CANDIDATE/repo/requirements.md",
+      "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+    }
+  ],
+  "fixture_sha": null,
+  "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\02_CANDIDATE\\repo",
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\collab_chain.py",
+    "--mode",
+    "full"
+  ],
+  "runtime": "Python 3.11.9 | targeted affected replay",
+  "exit": 0,
+  "stdout_sha": "11788a64a69fe64570346ada8ea05a9dbd2ac9803a3372649a252c800868bd50",
+  "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "pre_state": null,
+  "post_state": null,
+  "recovery_ref": null,
+  "expected": {
+    "chain": "COMBINED_OK",
+    "negatives": "NEGATIVES_REJECTED"
+  },
+  "observed": {
+    "chain_verdict": "COMBINED_OK",
+    "chain_exit": 0,
+    "negatives_verdict": "NEGATIVES_REJECTED",
+    "negatives_exit": 0,
+    "failure_code": null,
+    "segments": [
+      {
+        "from": "SOURCE",
+        "to": "TPM",
+        "pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+      },
+      {
+        "from": "TPM",
+        "to": "GUIDE",
+        "pin": "21ceac2a0abef24eba83cb0ca8776c0ebfb114f3b5428e75489f9ee3369e37e3"
+      },
+      {
+        "from": "GUIDE",
+        "to": "BRIDGE",
+        "pin": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+      },
+      {
+        "from": "BRIDGE",
+        "to": "NATIVE",
+        "pin": "3003b44cf1eac48aae09d81402f4583c331b1b80f12a4937d6a62f78249795cf"
+      },
+      {
+        "from": "NATIVE",
+        "to": "CHALLENGE",
+        "pin": "4be2c1114bab4c2e99492c6126214d9462ebeb99f3f8ffec36d8bfb1cb78b428"
+      },
+      {
+        "from": "CHALLENGE",
+        "to": "FAR",
+        "pin": "CH-F-W0NF-001"
+      },
+      {
+        "from": "FAR",
+        "to": "GUIDE-RESUME",
+        "pin": "ALT-1"
+      },
+      {
+        "from": "GUIDE-RESUME",
+        "to": "RETEST",
+        "pin": "40c212262987b994ccf65998cc7de56c2c1c11d14f49cb852c40cd9f38168e80"
+      }
+    ],
+    "checks": [
+      {
+        "id": "SOURCE-PINS",
+        "ok": true
+      },
+      {
+        "id": "TPM-CONTRACTS",
+        "ok": true
+      },
+      {
+        "id": "TPM-REVIEWER",
+        "ok": true
+      },
+      {
+        "id": "TPM-SOURCE-LINK",
+        "ok": true
+      },
+      {
+        "id": "TPM-CONTRACTS-FROZEN",
+        "ok": true
+      },
+      {
+        "id": "TPM-GUIDE-CONTRACT-CONSUMED",
+        "ok": true
+      },
+      {
+        "id": "BRIDGE-NATIVE-CONTEXT-CONSUMED",
+        "ok": true
+      },
+      {
+        "id": "GUIDE-START",
+        "ok": true
+      },
+      {
+        "id": "BRIDGE-READ",
+        "ok": true
+      },
+      {
+        "id": "DEV-PREIMAGE",
+        "ok": true
+      },
+      {
+        "id": "DEV-RED",
+        "ok": true
+      },
+      {
+        "id": "PATCH-DELTA",
+        "ok": true
+      },
+      {
+        "id": "RETEST",
+        "ok": true
+      },
+      {
+        "id": "CHALLENGE-FROZEN",
+        "ok": true
+      },
+      {
+        "id": "CHALLENGE-RAW",
+        "ok": true
+      },
+      {
+        "id": "FAR-CONSUMES",
+        "ok": true
+      },
+      {
+        "id": "FAR-ALTERNATIVES",
+        "ok": true
+      },
+      {
+        "id": "GUIDE-RESUME",
+        "ok": true
+      },
+      {
+        "id": "GUIDE-EVIDENCE",
+        "ok": true
+      },
+      {
+        "id": "SUBJECT",
+        "ok": true
+      },
+      {
+        "id": "ORACLE",
+        "ok": true
+      },
+      {
+        "id": "ORACLE-SOURCE",
+        "ok": true
+      },
+      {
+        "id": "RETEST-CANDIDATE",
+        "ok": true
+      }
+    ],
+    "negative_cases": [
+      [
+        "missing_raw",
+        "RAW_MISMATCH",
+        true
+      ],
+      [
+        "wrong_candidate",
+        "GUIDE_RESUME_MISMATCH",
+        true
+      ],
+      [
+        "wrong_oracle",
+        "RETEST_ORACLE_DRIFT",
+        true
+      ],
+      [
+        "no_challenge",
+        "CHALLENGE_UNBOUND",
+        true
+      ],
+      [
+        "wrong_finding",
+        "FINDING_MISMATCH",
+        true
+      ],
+      [
+        "no_patch_delta",
+        "PREIMAGE_MISMATCH",
+        true
+      ],
+      [
+        "cross_subject",
+        "SUBJECT_MISMATCH",
+        true
+      ],
+      [
+        "contracts_not_consumed",
+        "CONTRACT_CONTEXT_MISSING",
+        true
+      ],
+      [
+        "context_not_consumed",
+        "CONTEXT_NOT_CONSUMED",
+        true
+      ]
+    ]
+  },
+  "verdict": "PASS",
+  "first_fail": "",
+  "checker_identity": "maker-run; independent check in 06_CHECKER",
+  "consumer_ref": null,
+  "not_covered": [],
+  "execution_kind": "composite-collab-chain",
+  "sub_runs": {
+    "chain": {
+      "argv": [
+        "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\collab_chain.py",
+        "--mode",
+        "full"
+      ],
+      "exit": 0
+    },
+    "negatives": {
+      "argv": [
+        "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\collab_chain.py",
+        "--mode",
+        "negatives"
+      ],
+      "exit": 0
+    }
+  },
+  "artifact": "03_PARTIES/collab/chain.json"
+}

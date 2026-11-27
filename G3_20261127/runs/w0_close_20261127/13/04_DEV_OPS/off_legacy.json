@@ -1,0 +1,219 @@
+{
+  "schema": "FHS5.W0NF.OffLegacy@1",
+  "harness_revision": "t01-nf01-r1",
+  "tool_sha256": "b451baba38e3f1a6f9c52d0b503f0952db9f7bdc30f0a2d13766cfee5dc231c3",
+  "profile": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\off_profile",
+  "blocked_prefixes": [
+    "hgk",
+    "fabric",
+    "sbl",
+    "fhs",
+    "pipd",
+    "hermes"
+  ],
+  "control": {
+    "blocked": true,
+    "allowed": true,
+    "blocked_stderr": " line 1, in <module>\r\n  File \"C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\off_profile\\sitecustomize.py\", line 12, in find_spec\r\n    raise ImportError(\"FHS5_LEGACY_BLOCKED:\" + fullname)\r\nImportError: FHS5_LEGACY_BLOCKED:hgk_core\r\n"
+  },
+  "reviewer": {
+    "resolved": "C:\\Users\\user\\.codex\\plugins\\cache\\created-by-me-remote\\plp-tpm-review\\1.0.1\\scripts\\review_core.py",
+    "resolution": "PREFERRED_VERSION:1.0.1",
+    "cache_root": "C:\\Users\\user\\.codex\\plugins\\cache\\created-by-me-remote\\plp-tpm-review",
+    "request": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\03_PARTIES\\tpm\\review-request.json",
+    "input_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\03_PARTIES\\tpm\\input",
+    "plugin_version": "1.0.1",
+    "script_sha256": "3d24cf0df34bf14d26ba6d17bdbeb3455c22cde4faa1c60860c1916e61f5bbe7"
+  },
+  "gates": {
+    "import_control_ok": true,
+    "reviewer_positive_ok": true,
+    "reviewer_negative_ok": true,
+    "reviewer_gate": true,
+    "false_parity_rejected": true,
+    "all_entries_ok": true,
+    "unbound": []
+  },
+  "entries": [
+    {
+      "name": "briefcheck_pos",
+      "on_exit": 0,
+      "off_exit": 0,
+      "on_expected": true,
+      "off_expected": true,
+      "same_semantics": true,
+      "blocked_attempts": [],
+      "ok": true,
+      "on_semantics": [
+        "COMPLETE",
+        [
+          "A",
+          "B"
+        ],
+        []
+      ],
+      "off_semantics": [
+        "COMPLETE",
+        [
+          "A",
+          "B"
+        ],
+        []
+      ]
+    },
+    {
+      "name": "briefcheck_neg",
+      "on_exit": 2,
+      "off_exit": 2,
+      "on_expected": true,
+      "off_expected": true,
+      "same_semantics": true,
+      "blocked_attempts": [],
+      "ok": true,
+      "on_semantics": [
+        "MISSING",
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ],
+      "off_semantics": [
+        "MISSING",
+        [
+          "A"
+        ],
+        [
+          "B"
+        ]
+      ]
+    },
+    {
+      "name": "reviewer",
+      "on_exit": 0,
+      "off_exit": 0,
+      "on_expected": true,
+      "off_expected": true,
+      "same_semantics": true,
+      "blocked_attempts": [],
+      "ok": true,
+      "on_semantics": [
+        "REVIEW_SOURCE_LOCATED_ONLY",
+        0,
+        "UNBOUND",
+        "NOT_ASSERTED",
+        10
+      ],
+      "off_semantics": [
+        "REVIEW_SOURCE_LOCATED_ONLY",
+        0,
+        "UNBOUND",
+        "NOT_ASSERTED",
+        10
+      ],
+      "kind": "positive_parity"
+    },
+    {
+      "name": "reviewer_negative_control",
+      "on_exit": 2,
+      "off_exit": 2,
+      "on_expected": true,
+      "off_expected": true,
+      "same_semantics": true,
+      "blocked_attempts": [],
+      "ok": true,
+      "on_semantics": [
+        "REVIEW_FAIL_CLOSED",
+        "OUTPUT_ROOT_NOT_FOUND"
+      ],
+      "off_semantics": [
+        "REVIEW_FAIL_CLOSED",
+        "OUTPUT_ROOT_NOT_FOUND"
+      ],
+      "kind": "negative_control",
+      "false_parity_rejected": true,
+      "requires_reviewer_positive": true
+    },
+    {
+      "name": "guide",
+      "on_exit": 0,
+      "off_exit": 0,
+      "on_expected": true,
+      "off_expected": true,
+      "same_semantics": true,
+      "blocked_attempts": [],
+      "ok": true,
+      "on_semantics": [
+        "PACKAGE_FIRST",
+        true,
+        null
+      ],
+      "off_semantics": [
+        "PACKAGE_FIRST",
+        true,
+        null
+      ]
+    },
+    {
+      "name": "bridge_inspect",
+      "on_exit": 0,
+      "off_exit": 0,
+      "on_expected": true,
+      "off_expected": true,
+      "same_semantics": true,
+      "blocked_attempts": [],
+      "ok": true,
+      "on_semantics": [
+        0,
+        24
+      ],
+      "off_semantics": [
+        0,
+        24
+      ],
+      "kind": "positive_parity"
+    },
+    {
+      "name": "bridge_explain",
+      "on_exit": 0,
+      "off_exit": 0,
+      "on_expected": true,
+      "off_expected": true,
+      "same_semantics": true,
+      "blocked_attempts": [],
+      "ok": true,
+      "on_semantics": [
+        "SAMPLE-R1",
+        "SAMPLE-R10",
+        "SAMPLE-R2",
+        "SAMPLE-R3",
+        "SAMPLE-R5",
+        "SAMPLE-R6",
+        "SAMPLE-R7",
+        "SAMPLE-R8",
+        "SAMPLE-R9"
+      ],
+      "off_semantics": [
+        "SAMPLE-R1",
+        "SAMPLE-R10",
+        "SAMPLE-R2",
+        "SAMPLE-R3",
+        "SAMPLE-R5",
+        "SAMPLE-R6",
+        "SAMPLE-R7",
+        "SAMPLE-R8",
+        "SAMPLE-R9"
+      ],
+      "kind": "positive_parity"
+    }
+  ],
+  "verdict": "PASS",
+  "not_covered": [
+    "Fabric/Legacy full provider set",
+    "other hosts",
+    "OS-level process/mount isolation: only a PYTHONPATH sitecustomize import blocker is used",
+    "network egress: python-level import observation only, no syscall/network tracing",
+    "grandchild processes that scrub PYTHONPATH are not observed"
+  ]
+}

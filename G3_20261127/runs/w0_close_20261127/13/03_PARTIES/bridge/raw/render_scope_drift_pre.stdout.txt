@@ -1,0 +1,88 @@
+{
+  "schema": "FHS5.PLP.W1.AgentContext@author-reference-1",
+  "claim_ceiling": "AUTHOR_REFERENCE_IMPL_ONLY",
+  "target_host": "Codex",
+  "host_stage": "DOCUMENT_CONTEXT_ONLY",
+  "scope_echo": "FHS-5/W0/B0-NF",
+  "subject_echo": "FHS-5_PLP/W0",
+  "context_utf8": "# FHS-5_PLP W1 Contract Context\n\n- claim_ceiling: `AUTHOR_REFERENCE_IMPL_ONLY`\n- subject_id: `FHS-5_PLP/W0`\n- scope: `FHS-5/W0/B0-NF`\n- target_host: `Codex`\n- host_stage: `DOCUMENT_CONTEXT_ONLY`\n- permission_state: `NONE_GRANTED`\n- original_reader: `UNBOUND`\n- consumed: `false`\n\n## SAMPLE-R1 (POS)\nsource: `SAMPLE-R1` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:64ed7ab89c4a501deada05ab5163e1f6542f7e22fd251b5e5367e3f6a900712e state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> SAMPLE-R1｜受權 root 內 UTF-8 Markdown；input 為 root 內相對路徑；核 SHA-256。\n\n## SAMPLE-R2 (NEG)\nsource: `SAMPLE-R2` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:fd6c1100b215b1b5d41dd70fb6dede0b15e68ec3bd82476f942f11e29e5c5d66 state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> A和B各有獨立必要 Child；SAMPLE-R2｜parent PASS 若且唯若 A、B 都存在、已勾選且唯一。\n\n## SAMPLE-R3 (NEG)\nsource: `SAMPLE-R3` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:9d097fb3b4133be8dfa9abf69ade6fe9e833014a269ec40ecc9b1e0ab31a9f4a state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> SAMPLE-R3｜stdout 為穩定 UTF-8 JSON：`source_sha256`, `provided`, `missing`, `status`；不回寫來源；exit 0=完整，2=缺項，3=無效/越權。\n\n## SAMPLE-R5 (NEG)\nsource: `SAMPLE-R5` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:9a959002e741da95afd73fd4bf8525578b95a6bb384dd1b061d3cb2a5b4f7212 state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> SAMPLE-R5\n\n## SAMPLE-R6 (NEG)\nsource: `SAMPLE-R6` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:4843893e3f5c3b5c4dd9afff67ffe87fb75e90afa441c6c5c955cc08f0cb8e6e state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> SAMPLE-R6\n\n## SAMPLE-R7 (NEG)\nsource: `SAMPLE-R7` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:654ce8f0deb973eed4dca11f726dcbd23ff0fdb6278ce02fa46c3df935cd1c1f state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> SAMPLE-R7\n\n## SAMPLE-R8 (NEG)\nsource: `SAMPLE-R8` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:9a7bc5aabef670a7bc982b3826c5f638a73495f6f02cb43427ab8eafc26baf7a state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> SAMPLE-R8\n\n## SAMPLE-R9 (POS)\nsource: `SAMPLE-R9` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:f884d3bae42e1af09b0071aad0295a1e3dfddf0515a256412ae9dc9aabc658a8 state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> SAMPLE-R9\n\n## SAMPLE-R10 (POS)\nsource: `SAMPLE-R10` sha256:fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c L1–L1 clause_sha256:755e1bac70bb2bdf2f47fd0661046af19ba96fe3592acf0013625ca3f19855e3 state:AUTHOR_FIXTURE_NOT_LIVE\n> quoted clause:\n> SAMPLE-R10\n",
+  "context_sha256": "3003b44cf1eac48aae09d81402f4583c331b1b80f12a4937d6a62f78249795cf",
+  "source_locators": [
+    {
+      "case_id": "SAMPLE-R1",
+      "requirement_ref": "SAMPLE-R1",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "64ed7ab89c4a501deada05ab5163e1f6542f7e22fd251b5e5367e3f6a900712e"
+    },
+    {
+      "case_id": "SAMPLE-R2",
+      "requirement_ref": "SAMPLE-R2",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "fd6c1100b215b1b5d41dd70fb6dede0b15e68ec3bd82476f942f11e29e5c5d66"
+    },
+    {
+      "case_id": "SAMPLE-R3",
+      "requirement_ref": "SAMPLE-R3",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "9d097fb3b4133be8dfa9abf69ade6fe9e833014a269ec40ecc9b1e0ab31a9f4a"
+    },
+    {
+      "case_id": "SAMPLE-R5",
+      "requirement_ref": "SAMPLE-R5",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "9a959002e741da95afd73fd4bf8525578b95a6bb384dd1b061d3cb2a5b4f7212"
+    },
+    {
+      "case_id": "SAMPLE-R6",
+      "requirement_ref": "SAMPLE-R6",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "4843893e3f5c3b5c4dd9afff67ffe87fb75e90afa441c6c5c955cc08f0cb8e6e"
+    },
+    {
+      "case_id": "SAMPLE-R7",
+      "requirement_ref": "SAMPLE-R7",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "654ce8f0deb973eed4dca11f726dcbd23ff0fdb6278ce02fa46c3df935cd1c1f"
+    },
+    {
+      "case_id": "SAMPLE-R8",
+      "requirement_ref": "SAMPLE-R8",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "9a7bc5aabef670a7bc982b3826c5f638a73495f6f02cb43427ab8eafc26baf7a"
+    },
+    {
+      "case_id": "SAMPLE-R9",
+      "requirement_ref": "SAMPLE-R9",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "f884d3bae42e1af09b0071aad0295a1e3dfddf0515a256412ae9dc9aabc658a8"
+    },
+    {
+      "case_id": "SAMPLE-R10",
+      "requirement_ref": "SAMPLE-R10",
+      "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+      "line_start": 1,
+      "line_end": 1,
+      "clause_sha256": "755e1bac70bb2bdf2f47fd0661046af19ba96fe3592acf0013625ca3f19855e3"
+    }
+  ],
+  "untrusted_markers": [],
+  "permission_state": "NONE_GRANTED",
+  "consumed": false,
+  "native_state": "NOT_OBSERVED"
+}

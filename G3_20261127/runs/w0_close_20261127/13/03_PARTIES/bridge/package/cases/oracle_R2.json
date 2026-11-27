@@ -1,0 +1,14 @@
+{
+  "case": "SAMPLE-R2",
+  "fixture": "case_missing.md",
+  "expected": {
+    "exit": 2,
+    "status": "MISSING",
+    "provided": [
+      "A"
+    ],
+    "missing": [
+      "B"
+    ]
+  }
+}

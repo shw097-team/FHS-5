@@ -1,0 +1,93 @@
+{
+  "schema": "FHS5.W0NF.ConsumerNegatives@1",
+  "positive": {
+    "exit": 0,
+    "run_id": "20261127T225645-015592e8",
+    "consumed": true,
+    "checks": 810
+  },
+  "negative_cases": [
+    {
+      "name": "wrong_pack",
+      "expected": "PIN_MISMATCH_PACK",
+      "got": "PIN_MISMATCH_PACK",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225646-15783531"
+    },
+    {
+      "name": "wrong_candidate",
+      "expected": "PIN_MISMATCH_CANDIDATE",
+      "got": "PIN_MISMATCH_CANDIDATE",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225647-0be590b8"
+    },
+    {
+      "name": "wrong_oracle",
+      "expected": "PIN_MISMATCH_ORACLE",
+      "got": "PIN_MISMATCH_ORACLE",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225647-d271dd18"
+    },
+    {
+      "name": "wrong_evidence",
+      "expected": "PIN_MISMATCH_EVIDENCE",
+      "got": "PIN_MISMATCH_EVIDENCE",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225648-1670e55f"
+    },
+    {
+      "name": "mutated_raw",
+      "expected": "EVIDENCE_HASH_MISMATCH",
+      "got": "EVIDENCE_HASH_MISMATCH",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225649-ee94c71a"
+    },
+    {
+      "name": "missing_file",
+      "expected": "MISSING_FILE",
+      "got": "MISSING_FILE",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225651-b017f953"
+    },
+    {
+      "name": "bad_schema",
+      "expected": "EVIDENCE_SCHEMA",
+      "got": "EVIDENCE_SCHEMA",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225652-c00a4f23"
+    },
+    {
+      "name": "duplicate_pin",
+      "expected": "DUPLICATE_PIN",
+      "got": "DUPLICATE_PIN",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225653-8547a272"
+    },
+    {
+      "name": "cross_subject",
+      "expected": "EVIDENCE_CANDIDATE_MISMATCH",
+      "got": "EVIDENCE_CANDIDATE_MISMATCH",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225654-1fabf96c"
+    },
+    {
+      "name": "path_escape",
+      "expected": "PATH_DOTDOT",
+      "got": "PATH_DOTDOT",
+      "rejected": true,
+      "cli_executed": false,
+      "run_id": "20261127T225655-127ff5bd"
+    }
+  ],
+  "all_rejected": true,
+  "verdict": "NEGATIVES_REJECTED"
+}

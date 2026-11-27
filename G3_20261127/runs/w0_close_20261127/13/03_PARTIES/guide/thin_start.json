@@ -1,0 +1,110 @@
+{
+  "schema": "FHS5.W0NF.GuideThinStart@1",
+  "mode": "PACKAGE_FIRST",
+  "goal": "Complete W0 B0-NF five-party loop",
+  "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "pack_digest": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "files": [
+    {
+      "path": "00_W0_PI_PD.md",
+      "ok": true,
+      "sha256": "40abf88cc97691fcb4effdc84a8bf874b50c984645b224a1f37dd4e670222e11"
+    },
+    {
+      "path": "01_W0_DEV_ECP.md",
+      "ok": true,
+      "sha256": "76242a989c974186afd0694c6ad68b429de4227518351b352765de5901a5eee6"
+    },
+    {
+      "path": "02_W0_OPS_ECP.md",
+      "ok": true,
+      "sha256": "e3b203cdf1514b84b23ba35a6170786f42e0fd3f3beab16c72cc75ccd093b747"
+    },
+    {
+      "path": "03_W0_TQAEP.md",
+      "ok": true,
+      "sha256": "d1c47e06ee084ca70b39c6036104481b4f34e0cd3b33f1d35fdde8c37c9dbafb"
+    },
+    {
+      "path": "04_W0_START_THIN_PROMPT.md",
+      "ok": true,
+      "sha256": "61535d7af0f8167bc152a088bda3ff6173014b3261711e8f75f0a22e1ca83554"
+    }
+  ],
+  "pack_ok": true,
+  "body_missing": [],
+  "scope_requested": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "scope_allowed": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "scope_verdict": "IN_SCOPE",
+  "scope_exit": 0,
+  "done": [
+    "five-party individual+combined",
+    "DEV/OPS readback",
+    "Challenge/FAR",
+    "OFF",
+    "consumer"
+  ],
+  "limits": [
+    "local CODEX scope",
+    "no external admin/release",
+    "no HERMES/GPT host claim"
+  ],
+  "delta_keys": [
+    "source_sha",
+    "candidate_sha",
+    "evidence_sha",
+    "requirement_ids",
+    "case_ids",
+    "findings",
+    "next_action",
+    "stop_conditions",
+    "not_covered"
+  ],
+  "delta": {
+    "source_sha": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+    "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "evidence_sha": null,
+    "requirement_ids": [
+      "SAMPLE-R1",
+      "SAMPLE-R2",
+      "SAMPLE-R3",
+      "SAMPLE-R4"
+    ],
+    "case_ids": [
+      "F5-W0-T01",
+      "F5-W0-T03",
+      "F5-W0-T06",
+      "F5-W0-T13",
+      "NF-T01"
+    ],
+    "findings": [],
+    "next_action": "execute B0 current READY slice",
+    "stop_conditions": [
+      "pack digest mismatch",
+      "no write-set/preimage",
+      "path escape/secret",
+      "false permit"
+    ],
+    "not_covered": [
+      "HERMES/GPT host execution",
+      "full U26/QA26/38+28/C16 denominators",
+      "release"
+    ]
+  },
+  "contract_context": {
+    "pins": {
+      "pi": "43ea6ea2093bc9ebb6a82c8cc189b5d360f3ae6332e227018a2ad25d88b60e52",
+      "pd": "01de8c3032da4f8191884d6642977ad496136967420e7fbfa183c2256b4e8961",
+      "dev_ecp": "72e37bf93b2b214ed7642deae310a3aca08eec6bf1764234680d561830222a68",
+      "ops_ecp": "241538cd949e6aeacd07f55550fa7af7aa8fcfbd99030f14210898e3ad9274a8"
+    },
+    "requirement_ids": [
+      "SAMPLE-R1",
+      "SAMPLE-R2",
+      "SAMPLE-R3",
+      "SAMPLE-R4"
+    ],
+    "source_manifest_match": true,
+    "contract_count": 4
+  }
+}

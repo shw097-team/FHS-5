@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\collab_chain.py",
+    "--mode",
+    "full"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\05_TQAEP\\tmp\\root",
+  "exit": 0,
+  "stdout_sha256": "11788a64a69fe64570346ada8ea05a9dbd2ac9803a3372649a252c800868bd50",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-27T14:54:50+00:00"
+}

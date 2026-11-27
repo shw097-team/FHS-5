@@ -1,0 +1,32 @@
+{
+  "schema": "FHS5.W0NF.G17.NEG@2",
+  "original_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230849-a4b187dd\\receipt.json",
+  "original_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+  "mutated_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\G17\\neg\\receipt.mutated.json",
+  "mutated_sha256": "4e70701c241eeea3cecbffdac5c3141b9d8c024530b791c7a4013871a419a3b5",
+  "mutation": {
+    "offset": 63358,
+    "xor": "0x01",
+    "single_byte": true,
+    "size_unchanged": true
+  },
+  "gate": {
+    "exit": 3,
+    "payload": {
+      "mode": "verify-receipt",
+      "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\G17\\neg\\receipt.mutated.json",
+      "expected_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+      "status": "RECEIPT_SHA_MISMATCH",
+      "observed_sha256": "4e70701c241eeea3cecbffdac5c3141b9d8c024530b791c7a4013871a419a3b5",
+      "bytes": 126717,
+      "receipt_parsed": false,
+      "downstream_read": false,
+      "marker_written": false
+    },
+    "stdout": "{\"mode\": \"verify-receipt\", \"receipt\": \"C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\worktrees\\\\g3-20261127\\\\G3_20261127\\\\runs\\\\w0_close_20261127\\\\13\\\\07_CONSUMER\\\\G17\\\\neg\\\\receipt.mutated.json\", \"expected_receipt_sha256\": \"2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8\", \"status\": \"RECEIPT_SHA_MISMATCH\", \"observed_sha256\": \"4e70701c241eeea3cecbffdac5c3141b9d8c024530b791c7a4013871a419a3b5\", \"bytes\": 126717, \"receipt_parsed\": false, \"downstream_read\": false, \"marker_written\": false}\n",
+    "stderr": ""
+  },
+  "marker": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\g17_markers\\neg_downstream_marker.json",
+  "marker_exists": false,
+  "verdict": "PASS"
+}

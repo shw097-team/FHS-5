@@ -1,0 +1,1 @@
+{"verdict": "PASS", "cases": 8, "host": {"system": "Linux", "release": "6.6.87.2-microsoft-standard-WSL2", "python": "3.12.3", "uid": 1000, "cwd_fs": 2096, "note": "WSL2 ext4 temp root; real POSIX symlinks; no privilege change"}}

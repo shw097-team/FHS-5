@@ -1,0 +1,97 @@
+{
+  "schema": "FHS5.W0NF.BriefcheckOracle@2",
+  "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "candidate_commit": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+  "fixtures": {
+    "case_ambiguous.md": "01eb4f730a6abedf73cab7a23c309b734e52e255f23acc8883061987029dd221",
+    "case_bad_path.md": "66da16f375f3eed88719783f0128c22102440d6a390ded73c865ef2780c18f31",
+    "case_bad_utf8.md": "551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313",
+    "case_dup.md": "bb62042e22a0d3ffd1310a2b19a2917d22114a6b726bd0fee88429de7ef2d4ee",
+    "case_malformed.md": "9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508",
+    "case_missing.md": "eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019",
+    "case_ok.md": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece"
+  },
+  "cases": {
+    "R1": {
+      "fixture": "case_ok.md",
+      "exit": 0,
+      "status": "COMPLETE",
+      "provided": [
+        "A",
+        "B"
+      ],
+      "missing": []
+    },
+    "R2": {
+      "fixture": "case_missing.md",
+      "exit": 2,
+      "status": "MISSING",
+      "provided": [
+        "A"
+      ],
+      "missing": [
+        "B"
+      ]
+    },
+    "R3": {
+      "fixture": "case_dup.md",
+      "exit": 3,
+      "status": "INVALID_DUP"
+    },
+    "R5": {
+      "fixture": "case_bad_utf8.md",
+      "exit": 3,
+      "status": "INVALID_ENCODING"
+    },
+    "R6": {
+      "fixture": "case_ok.md",
+      "bad_sha": true,
+      "exit": 3,
+      "status": "SHA_MISMATCH"
+    },
+    "R7": {
+      "fixture": "case_ambiguous.md",
+      "exit": 3,
+      "status": "INVALID_FORMAT"
+    },
+    "R8": {
+      "fixture": "case_malformed.md",
+      "exit": 3,
+      "status": "INVALID_FORMAT"
+    },
+    "R9": {
+      "fixture": "case_ok.md",
+      "twice": true,
+      "exit": 0,
+      "status": "COMPLETE"
+    },
+    "R10": {
+      "fixture": "case_ok.md",
+      "output": true,
+      "exit": 0,
+      "status": "COMPLETE"
+    }
+  },
+  "path_expected": {
+    "exit": 3,
+    "status": "INVALID_PATH",
+    "canary": "OUTSIDE_CANARY_DO_NOT_READ"
+  },
+  "json_schema_keys": [
+    "source_sha256",
+    "provided",
+    "missing",
+    "status"
+  ],
+  "status_enum": [
+    "COMPLETE",
+    "MISSING",
+    "INVALID_DUP",
+    "INVALID_PATH",
+    "INVALID_ENCODING",
+    "SHA_MISMATCH",
+    "INVALID_FORMAT"
+  ],
+  "frozen_at": "2026-11-25T05:00:00+00:00"
+}

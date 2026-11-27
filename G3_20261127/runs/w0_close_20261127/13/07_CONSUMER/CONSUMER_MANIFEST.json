@@ -1,0 +1,34 @@
+{
+  "schema": "FHS5.W0NF.ConsumerManifest@2",
+  "run_id": "20261127T230849-a4b187dd",
+  "consumer_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230849-a4b187dd\\receipt.json",
+  "consumer_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+  "evidence_manifest_sha256": "5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da",
+  "handoff_sha256": "9f9ae2340212ec5b3171dcf26a9fa85db34aa2da79452bc0d86a389685d17613",
+  "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "candidate": {
+    "head": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "tree": "b69c54ded7ee10b7424c4900acbf6125b1ce025b"
+  },
+  "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+  "consumed": true,
+  "raw": {
+    "materialize_checkout.meta.json": "7a4ea19846978185fb8b6799b2bf3aabd615e637738d1acf85669c41dac868b3",
+    "materialize_checkout.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "materialize_checkout.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "materialize_clone.meta.json": "0675d8469865968b733b8b7abe9637bb3b978a8a7d42cc18fa21718248903583",
+    "materialize_clone.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "materialize_clone.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neg.meta.json": "9176b875e1276f67ab84f82bc7ad5f8b3f0e24534a7433fdb785a7ffffd8d0aa",
+    "neg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "neg.stdout.txt": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
+    "pos.meta.json": "d62664732e2c86a922969a4a222de9239ef7eb0effa3b9847dc0e87f9ad98fa8",
+    "pos.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pos.stdout.txt": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33"
+  },
+  "not_claimed": [
+    "HERMES/GPT host execution",
+    "W1 product execution",
+    "release"
+  ]
+}

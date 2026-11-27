@@ -1,0 +1,6 @@
+{
+  "verdict": "COMBINED_OK",
+  "failure": null,
+  "checks": 23,
+  "failed": []
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Projects\Agent_Workspace\FHS-5_Workspace\13_W0_NF_CODEX_20261125\05_TQAEP\tmp\prepatch_v2\briefcheck.py", line 67, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Projects\Agent_Workspace\FHS-5_Workspace\13_W0_NF_CODEX_20261125\05_TQAEP\tmp\prepatch_v2\briefcheck.py", line 17, in main
+    root = Path(a.root).resolve(strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 993, in resolve
+    s = os.path.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 696, in realpath
+FileNotFoundError: [WinError 2] 系統找不到指定的檔案。: 'C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\prepatch_v2\\no_root'

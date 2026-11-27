@@ -8,12 +8,12 @@
  "docs_commit": "9c6bb8987a4128de47d303e322016d1a419ba553",
  "adopted_primary": "36_W2_S2S3_FINAL_CODEX_20261127 (W2_CURRENT.json) unchanged",
  "waves": {
-  "W0": "PARTIAL 41/44",
+  "W0": "W0_DONE 44/44 (scoped)",
   "W1": "SCOPED_PARTIAL 12/13; ECP 51 observed/10 NOT_ADMITTED",
   "W2": "NOT_ADMITTED 9+3",
   "W3": "NOT_ADMITTED"
  },
- "not_promoted_reason": "wave acceptance not achieved; no ISSUED protected-effect grant; W3 grant absent",
+ "not_promoted_reason": "W1-W3 wave acceptance not achieved; W0 closed scoped; no ISSUED protected-effect grant; W3 grant absent",
  "entry": {
   "index": "G3_20261127/INDEX.md",
   "checkpoint": "G3_20261127/CHECKPOINT_AB.md",
@@ -31,10 +31,20 @@
   "run_record": "G3_20261127/RUN_RECORD.json"
  },
  "blockers": [
-  "W0 NF-T01 cold OFF contract; NF-T08 contract context; NF-T10 binding",
   "W1 Hermes/ChatGPT/GPT WORK; second OS principal",
   "W2 OWNER/ISSUER exact ISSUED grant for -05/-06",
   "W3 exact grant after W2 admitted"
  ],
- "next_session": "read G3_CURRENT.json -> G3_20261127/INDEX.md -> HANDOFF_W*.md"
+ "next_session": "read G3_20261127/CLOSEOUT_W0.md and HANDOFF_W0.md; W1 minimal checklist under runs/w0_close_20261127/w1_out_pos",
+ "w0_closeout": {
+  "content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
+  "run_root": "G3_20261127/runs/w0_close_20261127/13",
+  "final_consumer": "20261127T230849-a4b187dd",
+  "final_consumer_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+  "evidence_manifest_sha256": "5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da",
+  "handoff_sha256": "9f9ae2340212ec5b3171dcf26a9fa85db34aa2da79452bc0d86a389685d17613",
+  "g17": "PASS",
+  "w1_minimal": "PASS (44 items)",
+  "verdict": "W0_DONE (scoped; not W1-W4/MVP/release)"
+ }
 }

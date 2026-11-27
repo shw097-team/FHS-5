@@ -1,0 +1,14 @@
+{
+  "exit": 3,
+  "payload": {
+    "status": "REJECTED",
+    "code": "PIN_MISMATCH_ORACLE",
+    "detail": {
+      "expected": "0000000000000000000000000000000000000000000000000000000000000000",
+      "actual": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6"
+    },
+    "output_written": false
+  },
+  "stderr": "",
+  "verdict": "PASS"
+}

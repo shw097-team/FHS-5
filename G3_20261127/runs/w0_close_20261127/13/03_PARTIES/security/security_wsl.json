@@ -1,0 +1,84 @@
+{
+  "schema": "FHS5.W0NF.SecurityPosix@1",
+  "host": {
+    "system": "Linux",
+    "release": "6.6.87.2-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "uid": 1000,
+    "cwd_fs": 2096,
+    "note": "WSL2 ext4 temp root; real POSIX symlinks; no privilege change"
+  },
+  "symlink_supported": true,
+  "cases": [
+    {
+      "input": "case_ok.md",
+      "exit": 0,
+      "status": "COMPLETE",
+      "stdout_sha": "1f2d49dab24d98e413992bd8d6f00fd93888f5ab9c163ddbcfac6d16b00c5f8d",
+      "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leak": false
+    },
+    {
+      "input": "inside_link",
+      "exit": 0,
+      "status": "COMPLETE",
+      "stdout_sha": "1f2d49dab24d98e413992bd8d6f00fd93888f5ab9c163ddbcfac6d16b00c5f8d",
+      "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leak": false
+    },
+    {
+      "input": "../outside/canary.md",
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "stdout_sha": "8b3a1c455cb37379979812228e81263918507c56e0f095ec186810f95514f973",
+      "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leak": false
+    },
+    {
+      "input": "/tmp/w0nf_symlink_mw6_45ma/outside/canary.md",
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "stdout_sha": "8b3a1c455cb37379979812228e81263918507c56e0f095ec186810f95514f973",
+      "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leak": false
+    },
+    {
+      "input": "\\\\localhost\\share\\canary.md",
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "stdout_sha": "8b3a1c455cb37379979812228e81263918507c56e0f095ec186810f95514f973",
+      "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leak": false
+    },
+    {
+      "input": "escape_file",
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "stdout_sha": "8b3a1c455cb37379979812228e81263918507c56e0f095ec186810f95514f973",
+      "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leak": false
+    },
+    {
+      "input": "escape_dir/canary.md",
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "stdout_sha": "8b3a1c455cb37379979812228e81263918507c56e0f095ec186810f95514f973",
+      "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leak": false
+    },
+    {
+      "input": "rel_link",
+      "exit": 3,
+      "status": "INVALID_PATH",
+      "stdout_sha": "8b3a1c455cb37379979812228e81263918507c56e0f095ec186810f95514f973",
+      "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "leak": false
+    }
+  ],
+  "canary_sha_before": "fbc459563eb074f6df1c3d208024e179eb00181735a39d4b3a46aa28be565b56",
+  "canary_sha_after": "fbc459563eb074f6df1c3d208024e179eb00181735a39d4b3a46aa28be565b56",
+  "source_sha_before": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+  "source_sha_after": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+  "positive_control_inside_link": true,
+  "verdict": "PASS"
+}

@@ -1,0 +1,1 @@
+{"mode": "PACKAGE_FIRST", "pack_ok": true, "scope": "IN_SCOPE", "resume": "HOLD_NO_DELTA"}

@@ -24,5 +24,17 @@
   "unknown": "python G3_20261127/W2/run_unknown.py --out G3_20261127/runs/w2/raw/unknown",
   "n09": "python G3_20261127/W2/n09_chain.py"
  },
- "lifecycle": "scratch is reproducible and removed; evidence roots are retained; no unique byte was deleted"
+ "lifecycle": "scratch is reproducible and removed; evidence roots are retained; no unique byte was deleted",
+ "w0_closeout_20261127": {
+  "run_root": "G3_20261127/runs/w0_close_20261127/13",
+  "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "oracle": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+  "pack": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
+  "reproduction": "copy 13_W0_NF_CODEX_20261125 -> run root; git clone 02_CANDIDATE/repo.bundle + checkout bb66a27; guide --contracts 03_PARTIES/tpm; guide_resume; bridge_run; native_context; collab_chain full/negatives; record_affected NF-T01/07/08; consumer --allow-pending-t10; consumer_negatives; finalize_t10; evidence_manifest; consumer --publish-manifest; challenge --mode full; G17; w1_min_consume",
+  "final_consumer": "20261127T230849-a4b187dd",
+  "final_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+  "evidence_manifest_sha256": "5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da",
+  "verdict": "W0_DONE (scoped)"
+ }
 }

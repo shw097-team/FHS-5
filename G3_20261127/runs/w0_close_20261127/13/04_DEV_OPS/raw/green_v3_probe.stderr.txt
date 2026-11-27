@@ -1,0 +1,7 @@
+test_missing_root_is_invalid_path (test_invalid_root.InvalidRoot.test_missing_root_is_invalid_path) ... ok
+test_root_file_is_invalid_path (test_invalid_root.InvalidRoot.test_root_file_is_invalid_path) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.178s
+
+OK
