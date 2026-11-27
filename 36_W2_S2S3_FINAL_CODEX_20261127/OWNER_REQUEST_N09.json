@@ -1,0 +1,62 @@
+{
+ "schema": "FHS5.PLP.W2.OwnerDecisionRequest@1",
+ "request_id": "W2-S2S3-REQUEST-20261127-04",
+ "issuer": "Human Owner (single)",
+ "status": "PENDING_OWNER_DECISION",
+ "purpose": "one minimal protected OPS effect so that N09 contracts_to_operation can become true",
+ "work_order": "WO-W2-N09-20261127",
+ "subject_id": "FHS-5_PLP/W2/CONTROL_PACK",
+ "scope": "W2-NF-01",
+ "case_operation": "W2-OPS-01 / RUN-OPS-01 / OPS-O03",
+ "source": {
+  "s1_w2_manifest": "911d06c98eef8edea13bf0c82956a55d420daa93e7599f3344f317a84486b65b",
+  "s1_commit": "5ea16d379cc4b58835ff8c783f4b5e3ca2a60c43",
+  "candidate_aggregate": "b845efa64ff2b8bc84d555c9e3aa8426d8234bc8f257cc6da777ffa1c270dcaa",
+  "upstream_input": "18_W1_NF_CODEX_20261126T000627 (W1 delivery)"
+ },
+ "host": {
+  "host_id": "DESKTOP-57EO414",
+  "principal": "desktop-57eo414\\user",
+  "policy_epoch": "NOT_DECLARED_BY_HOST",
+  "receiver": "W1/check/w2_receiver.py:receive"
+ },
+ "root": "C:/Projects/Agent_Workspace/FHS-5_Workspace/W2_NATIVE_RUNS/S2S3_20261127_N09/out",
+ "exact_targets": [
+  {
+   "path": "<run_id>",
+   "operation": "CREATE"
+  }
+ ],
+ "prestate": "absent (parent exists; target must not exist)",
+ "allowed_operations": [
+  "OPS-O03 receiver effect via verify_delivery->consume_verified->receive",
+  "OPS-O04 post readback",
+  "OPS-O05 delete-created-only compensation"
+ ],
+ "recovery": {
+  "kind": "DELETE_CREATED_ONLY",
+  "rule": "delete only files whose digest matches the creation inventory; never follow links",
+  "forbidden": [
+   "GIT_REVERT",
+   "GIT_RESET",
+   "GIT_CLEAN",
+   "WHOLE_REPO_ROLLBACK",
+   "RELEASE"
+  ]
+ },
+ "expiry": "2026-11-28T23:59:59+08:00",
+ "forbidden_effects": [
+  "external deploy",
+  "release",
+  "irreversible effect",
+  "any path outside the target",
+  "any change to W1 delivery or S1 packs"
+ ],
+ "required_preconditions": [
+  "S1 W2 pack verified (manifest 911d06c9, seal ok)",
+  "receiver production run under the new decision (no self-minted trust)",
+  "pre-state absent verified before effect",
+  "live revocation check at use time"
+ ],
+ "resume_predicate": "Owner-signed decision bound to this request_id; then O03 receipt with contract_ref to the S1 W2 pack"
+}
