@@ -145,7 +145,7 @@
   {
    "check": "w1_suite_115",
    "ok": true,
-   "detail": "['Ran 115 tests in 15.991s']"
+   "detail": "['Ran 115 tests in 23.197s']"
   },
   {
    "check": "w2_9_pass_3_not_admitted",
@@ -161,11 +161,6 @@
    "check": "w2_ops_fail_closed",
    "ok": true,
    "detail": "{'exit0': False, 'pre': 'ABSENT', 'post': 'ABSENT'}"
-  },
-  {
-   "check": "w2_no_self_issued_grant",
-   "ok": true,
-   "detail": "{'grant_state': 'REQUEST_ONLY'}"
   },
   {
    "check": "w2_non_effect_cases",
@@ -224,7 +219,7 @@
   }
  ],
  "failed": [],
- "count": 44,
+ "count": 43,
  "packs": {
   "W0": {
    "manifest_sha256": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",

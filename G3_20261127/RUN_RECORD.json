@@ -1,0 +1,28 @@
+{
+ "schema": "FHS5.PLP.G3.RunRecord@1",
+ "pre_hygiene_head": "4a125e08594e32db588bf59f659a1f138e167c13",
+ "retained": {
+  "w0_full/13": "sealed-pack 44-case run root: 01_PACK, 02_CANDIDATE/repo, 05_TQAEP receipts/raw, 07_CONSUMER, 10_EVIDENCE. NOT scratch; retained despite .gitignore.",
+  "w0_full/delivery": "committed evidence subset (summary/receipts/raw/consumer/manifest)",
+  "w2/raw": "W2 case raws + UNKNOWN_FOUR + N09_CHAIN",
+  "w2_selfauth_prior/raw": "prior self-auth evidence, retained for historical transparency; not a grant",
+  "w1/raw": "13 cases, API/Guide/host/ECP measured, SECOND_PACK"
+ },
+ "deleted": {
+  "w0/world": "briefcheck fixture world, reproducible from pack fixtures",
+  "w0/off": "cold-OFF scratch",
+  "w0/cli": "copy of briefcheck_min.py; source remains in the control pack",
+  "w2/dev/world": "isolated DEV repo clone; rebuilt by run_w2.py",
+  "w2_selfauth_prior/dev": "prior world clone; raw retained",
+  "w2_selfauth_prior/ops": "empty prior output root",
+  "pycache": "bytecode caches"
+ },
+ "reproduction": {
+  "w0_full": "copy 13_W0_NF_CODEX_20261125 -> run root; git clone 02_CANDIDATE/repo.bundle; python tools/tqaep_run.py; evidence_manifest.py; consumer.py --allow-pending-t10",
+  "w1": "python G3_20261127/W1/run_w1.py --pack <W1 pack> --out G3_20261127/runs/w1",
+  "w2": "python G3_20261127/W2/run_w2.py --pack <W2 pack> --out G3_20261127/runs/w2 (protected effects NOT_ADMITTED without ISSUED grant)",
+  "unknown": "python G3_20261127/W2/run_unknown.py --out G3_20261127/runs/w2/raw/unknown",
+  "n09": "python G3_20261127/W2/n09_chain.py"
+ },
+ "lifecycle": "scratch is reproducible and removed; evidence roots are retained; no unique byte was deleted"
+}

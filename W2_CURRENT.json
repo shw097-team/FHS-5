@@ -62,5 +62,16 @@
     "state": "GENERATION_2",
     "note": "DEV/OPS decisions expire 2026-11-27T23:59:59+08:00; no new protected effect this round"
   },
-  "working_branch": "codex/w0-w2-s2-s3-20261126T225929"
+  "working_branch": "codex/w0-w2-s2-s3-20261126T225929",
+  "candidate_pointers": [
+    {
+      "id": "G3-FINAL-DELTA-20261127",
+      "path": "G3_20261127",
+      "pointer": "G3_CURRENT.json",
+      "state": "CANDIDATE_NOT_PROMOTED",
+      "branch": "codex/w0-w2-g3-native-20261127",
+      "reason": "W0 41/44; W1 12/13 + 51/67; W2 9+3 NOT_ADMITTED; W3 NOT_ADMITTED",
+      "does_not_replace": "current_delivery (36_)"
+    }
+  ]
 }

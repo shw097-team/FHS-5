@@ -1,0 +1,32 @@
+{
+ "schema": "FHS5.PLP.G3.CurrentPointer@1",
+ "state": "CANDIDATE_NOT_PROMOTED",
+ "branch": "codex/w0-w2-g3-native-20261127",
+ "pre_hygiene_head": "4a125e08594e32db588bf59f659a1f138e167c13",
+ "delivery_root": "G3_20261127",
+ "content_commit": "aad5a6de58ddba8d58b558f375be6e53db7ea7ef",
+ "docs_commit": "9c6bb8987a4128de47d303e322016d1a419ba553",
+ "adopted_primary": "36_W2_S2S3_FINAL_CODEX_20261127 (W2_CURRENT.json) unchanged",
+ "waves": {
+  "W0": "PARTIAL 41/44",
+  "W1": "SCOPED_PARTIAL 12/13; ECP 51 observed/10 NOT_ADMITTED",
+  "W2": "NOT_ADMITTED 9+3",
+  "W3": "NOT_ADMITTED"
+ },
+ "not_promoted_reason": "wave acceptance not achieved; no ISSUED protected-effect grant; W3 grant absent",
+ "entry": {
+  "index": "G3_20261127/INDEX.md",
+  "checkpoint": "G3_20261127/CHECKPOINT_AB.md",
+  "closeouts": ["G3_20261127/CLOSEOUT_W0.md", "G3_20261127/CLOSEOUT_W1.md", "G3_20261127/CLOSEOUT_W2.md"],
+  "handoffs": ["G3_20261127/HANDOFF_W0.md", "G3_20261127/HANDOFF_W1.md", "G3_20261127/HANDOFF_W2.md"],
+  "hygiene": "G3_20261127/HYGIENE_REPORT.md",
+  "run_record": "G3_20261127/RUN_RECORD.json"
+ },
+ "blockers": [
+  "W0 NF-T01 cold OFF contract; NF-T08 contract context; NF-T10 binding",
+  "W1 Hermes/ChatGPT/GPT WORK; second OS principal",
+  "W2 OWNER/ISSUER exact ISSUED grant for -05/-06",
+  "W3 exact grant after W2 admitted"
+ ],
+ "next_session": "read G3_CURRENT.json -> G3_20261127/INDEX.md -> HANDOFF_W*.md"
+}

@@ -313,8 +313,8 @@
  "files": [
   {
    "path": "evidence/CHECKER.json",
-   "bytes": 6688,
-   "sha256": "06fa2adbedd522f0b4fb962a384fe7eb74249a5c5896ea38b148dbb3a224c0e9"
+   "bytes": 6578,
+   "sha256": "43667598ab2de445f5ef0021ec1db9e11acf75ae5b53c64200e5f1052d133ffd"
   },
   {
    "path": "runs/w0/raw/OFF.json",
@@ -2332,16 +2332,6 @@
    "sha256": "fa83ebe352c4fb1f03591abaadd138db94d33a6e506335caae647ebd41f04990"
   },
   {
-   "path": "runs/w2_selfauth_prior/dev/patch.diff",
-   "bytes": 71363,
-   "sha256": "34a2e69266d8eb31c617c68df4f5b5289edc780a126cf9d6cea1a55dfe635163"
-  },
-  {
-   "path": "runs/w2_selfauth_prior/dev/ws.json",
-   "bytes": 230,
-   "sha256": "1d9b97c4c8160ead871d8ac3f180eb6832c3effcee79c580a36527ee03470e98"
-  },
-  {
    "path": "runs/w2_selfauth_prior/raw/_idem1_first.json",
    "bytes": 5247,
    "sha256": "3fffe5160f57a99dd8d786e1002a2e06dcf080b10940dcc92be96d7a37fda826"
@@ -2472,7 +2462,7 @@
    "sha256": "02be4986e7f503e78f079821e147f8856bdaec01cdcf69466d88f256d8ce2fdc"
   }
  ],
- "count": 432,
+ "count": 430,
  "self_excluded": [
   "evidence/EVIDENCE_MANIFEST.json",
   "evidence/SEAL.json",

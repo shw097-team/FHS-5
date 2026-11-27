@@ -289,8 +289,8 @@
   "W2": "957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c"
  },
  "evidence": {
-  "manifest_sha256": "8479f7ab5ac51f1828e697e2fc8303b0b16e635ecced786e4ae783cf4e60c1ce",
-  "seal_sha256": "25851d14dd5ccd1cce30b255cb4bc579b38eb1c4941b53a12b4681dcb577e88d"
+  "manifest_sha256": "c2c5ae8808416b06c8846c52ad2869a0caf7ebb8fee2fff8b9758870e4a60c62",
+  "seal_sha256": "08705b48702f8f3b614de3b910bbf2deeb2a499f9ad259885049bf262b675edf"
  },
  "dependencies": {
   "W0": {

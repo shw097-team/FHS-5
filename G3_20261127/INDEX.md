@@ -22,8 +22,8 @@
 | candidate aggregate | `3490388ef7cce32a5cbfcfd46c174cddbd610bb818886bc24a165b7ccbb0043b`（60 成員） |
 | oracle aggregate W0／W1／W2 | `45632470e5a3…`／`a741098618a2…`／`70cbc5017a39…` |
 | case set W0／W1／W2 | 44／13／12 |
-| evidence manifest | `8479f7ab5ac51f1828e697e2fc8303b0b16e635ecced786e4ae783cf4e60c1ce` |
-| seal | `25851d14dd5ccd1cce30b255cb4bc579b38eb1c4941b53a12b4681dcb577e88d` |
+| evidence manifest | `c2c5ae8808416b06c8846c52ad2869a0caf7ebb8fee2fff8b9758870e4a60c62` |
+| seal | `08705b48702f8f3b614de3b910bbf2deeb2a499f9ad259885049bf262b675edf` |
 
 ## 已驗／未驗
 
