@@ -61,9 +61,13 @@ def main(argv=None):
                        "first_case": first, "first_fixture_sha256":
                        sha((p.root / p.cases[0]["fixture"]).read_bytes())},
             "readback": {"fixture_case": fx.get("case_id"), "fixture_kind": fx.get("kind")},
-            "host": {"host_id": os.environ.get("COMPUTERNAME", "UNKNOWN"),
-                     "principal": os.environ.get("USERNAME", "UNKNOWN"),
-                     "python": sys.version.split()[0]},
+            "host": {"host_id": hashlib.sha256(os.environ.get("COMPUTERNAME", "UNKNOWN").encode()).hexdigest()[:12],
+                     "principal": "principal-" + hashlib.sha256(os.environ.get("USERNAME", "UNKNOWN").encode()).hexdigest()[:16],
+                     "os": sys.platform,
+                     "python": sys.version.split()[0],
+                     "policy_epoch": None,
+                     "epoch_state": "NOT_DECLARED_BY_HOST",
+                     "epoch_probe": "no host policy service; recorded as not declared"},
             "created_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         }
         material = {"schema": "FHS5.PLP.W2.EffectMaterial@1",

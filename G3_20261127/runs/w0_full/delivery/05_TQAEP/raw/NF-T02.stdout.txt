@@ -1,0 +1,1 @@
+{"controls": [{"got": true, "name": "detect_reader", "ok": true, "want": true}], "controls_ok": true, "exit": 0, "observed": {"no_original_reader": true, "source_pin_ok": true}, "status": "NATIVE_READ_OK"}

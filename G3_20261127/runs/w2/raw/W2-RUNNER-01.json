@@ -1,5 +1,5 @@
 {
- "run_id": "W2-W2-RUNNER-01-20261127T161946",
+ "run_id": "W2-W2-RUNNER-01-20261127T182215",
  "case_id": "W2-RUNNER-01",
  "kind": "NEG",
  "expected": {
@@ -11,7 +11,7 @@
    "subject": "FHS-5_PLP/W2/CONTROL_PACK",
    "scope": "W2-NF-01",
    "source_sha": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",
-   "repo_head": "a2281bf5542d53ed67b678c0d5b91d0793cc81c4",
+   "repo_head": "7f726618a370caf3723c8f9ea5d0af7d9bfc75f9",
    "host_id": "<HOST>",
    "policy_epoch": "G3-20261127",
    "oracle_sha": "da6fa6f3615f4043c90045089ee355c5888036d2900e3cdf646e9120e7db2d81",
@@ -22,11 +22,11 @@
    "subject": "FHS-5_PLP/W2/CONTROL_PACK",
    "scope": "W2-NF-01",
    "source_sha": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
-   "repo_head": "a2281bf5542d53ed67b678c0d5b91d0793cc81c4",
+   "repo_head": "7f726618a370caf3723c8f9ea5d0af7d9bfc75f9",
    "host_id": "<HOST>",
    "policy_epoch": "G3-20261127",
    "oracle_sha": "9e5c6a83b719c400c8d38e82156f494de8d3da65e9ccf32cef3c6c2b8dfd8262",
-   "world_raw_sha": "201eb03770e7e551f1173b7d72573d6ff87eacaf1a07bd2cfa1496d03c255e87",
+   "world_raw_sha": "ee355186315e55c670a6a68598814881757283227c88165242582adb26d93b09",
    "first_fail": "NONE"
   },
   "same": {

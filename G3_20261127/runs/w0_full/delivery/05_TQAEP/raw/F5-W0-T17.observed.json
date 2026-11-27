@@ -1,0 +1,13 @@
+{
+ "exit": 3,
+ "status": "UNREPRODUCED",
+ "missing": [
+  "candidate_sha",
+  "cwd",
+  "argv",
+  "exit",
+  "stdout_sha",
+  "expected",
+  "observed"
+ ]
+}

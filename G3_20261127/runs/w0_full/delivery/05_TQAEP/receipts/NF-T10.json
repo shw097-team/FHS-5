@@ -1,0 +1,51 @@
+{
+ "run_id": "NF-T10-20261127T181714",
+ "case_id": "NF-T10",
+ "candidate_ref": "02_CANDIDATE/repo",
+ "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+ "source_refs": [
+  {
+   "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+   "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+  },
+  {
+   "path": "02_CANDIDATE/repo/requirements.md",
+   "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+  }
+ ],
+ "fixture_sha": null,
+ "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\02_CANDIDATE\\repo",
+ "argv": [
+  "python",
+  "tools/consumer.py",
+  "--post-checker"
+ ],
+ "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+ "exit": 0,
+ "stdout_sha": "e5e5d82c2c6c77f65a004b4876e031a555f7a8b260b8f4b969b9f40bbe20f4f1",
+ "stderr_sha": null,
+ "pre_state": null,
+ "post_state": null,
+ "recovery_ref": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\07_CONSUMER\\runs\\20261125T153721-8ca1126e\\receipt.json",
+ "expected": {
+  "consumer": "consumed",
+  "negatives": "NEGATIVES_REJECTED"
+ },
+ "observed": {
+  "consumer_run_id": "20261125T153721-8ca1126e",
+  "consumer_receipt_sha256": "5821b7fcc39f84173b3b24b67d1d24ef6aa47a3d2ddc330517bb889fe740832b",
+  "checks": 803,
+  "negatives": "NEGATIVES_REJECTED",
+  "negative_count": 10,
+  "cli_executed": true
+ },
+ "verdict": "PASS",
+ "first_fail": "",
+ "checker_identity": "maker-run; independent check in 06_CHECKER",
+ "consumer_ref": null,
+ "not_covered": [
+  "HERMES/GPT host execution"
+ ],
+ "execution_kind": "staged-consumer"
+}

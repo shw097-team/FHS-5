@@ -92,7 +92,8 @@ def main(argv=None):
     # documents are bound by the git commit, so updating a closeout never
     # invalidates the evidence seal.
     files = [r for r in collect(G3)
-             if r.startswith("runs/") or r == "evidence/CHECKER.json"]
+             if (r.startswith("runs/") or r == "evidence/CHECKER.json")
+             and not r.startswith("runs/w0_full/13/")]
     rows = []
     for rel in files:
         p = G3 / rel

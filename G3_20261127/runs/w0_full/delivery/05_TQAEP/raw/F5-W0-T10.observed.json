@@ -1,0 +1,9 @@
+{
+ "exit": 3,
+ "status": "GATE_CYCLE_CANDIDATE",
+ "cycle_edge": [
+  "POST_READBACK",
+  "OP12"
+ ],
+ "executed": false
+}

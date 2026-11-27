@@ -355,10 +355,10 @@ def main(argv=None):
                {"seven": "host/pre/argv/post/parse/compensation/readback"})
     out_root = env["ops_out"]
     pre_world = tree_digest(out_root)
-    host = {"host_id": os.environ.get("COMPUTERNAME", "UNKNOWN"),
-            "principal": os.environ.get("USERNAME", "UNKNOWN"),
+    host = {"host_id": "CODEX-NATIVE-LOCAL",
+            "principal": "principal-local",
             "os": sys.platform, "python": sys.version.split()[0],
-            "policy_epoch": "G3-20261127"}
+            "policy_epoch": None, "epoch_state": "NOT_DECLARED_BY_HOST"}
     ops = run([PY, str(HERE / "ops_receiver.py"), "--pack", str(pack.root),
                "--lib", str(G3 / "lib"), "--out", str(out_root),
                "--runid", f"OPS-A-{time.strftime('%Y%m%dT%H%M%S')}",

@@ -1,0 +1,9 @@
+{
+ "exit": 3,
+ "status": "PHASE_OVERREACH_CANDIDATE",
+ "edge": [
+  "W0_READ",
+  "W4_RELEASE"
+ ],
+ "legal_read": true
+}

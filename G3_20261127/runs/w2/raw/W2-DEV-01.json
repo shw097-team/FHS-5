@@ -1,5 +1,5 @@
 {
- "run_id": "W2-W2-DEV-01-20261127T161939",
+ "run_id": "W2-W2-DEV-01-20261127T182207",
  "case_id": "W2-DEV-01",
  "kind": "POS",
  "expected": {
@@ -45,7 +45,7 @@
     "W1/check/test_j1_receiver.py"
    ],
    "exit": 0,
-   "stderr_tail": "d (__main__.J1ReceiverTests.test_j1_t07_unlisted_entry_refused)\nA file the manifest never names must not reach a product call. ... ok\ntest_j1_t08_reparse_alias_refused (__main__.J1ReceiverTests.test_j1_t08_reparse_alias_refused)\nA junction inside the root that aliases a listed path is refused. ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 4.894s\n\nOK\n",
+   "stderr_tail": "d (__main__.J1ReceiverTests.test_j1_t07_unlisted_entry_refused)\nA file the manifest never names must not reach a product call. ... ok\ntest_j1_t08_reparse_alias_refused (__main__.J1ReceiverTests.test_j1_t08_reparse_alias_refused)\nA junction inside the root that aliases a listed path is refused. ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 5.735s\n\nOK\n",
    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "reverse": {

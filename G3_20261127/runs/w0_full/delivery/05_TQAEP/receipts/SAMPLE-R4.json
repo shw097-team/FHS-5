@@ -1,0 +1,217 @@
+{
+ "run_id": "SAMPLE-R4-20261127T181705",
+ "case_id": "SAMPLE-R4",
+ "candidate_ref": "02_CANDIDATE/repo",
+ "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+ "source_refs": [
+  {
+   "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+   "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+  },
+  {
+   "path": "02_CANDIDATE/repo/requirements.md",
+   "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+  }
+ ],
+ "fixture_sha": "66da16f375f3eed88719783f0128c22102440d6a390ded73c865ef2780c18f31",
+ "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\02_CANDIDATE\\repo",
+ "argv": [
+  "python",
+  "tools/tqaep_run.py",
+  "--case",
+  "SAMPLE-R4"
+ ],
+ "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+ "exit": 3,
+ "stdout_sha": "941a26818e95fb4259ef9d19c19870f9b468739979770ba41b4ee442e376bd00",
+ "stderr_sha": null,
+ "pre_state": {
+  "outside_canary_sha": "3970625c5531f5bd55a07b36781e26730772ed13be9af01ea0818cfc7400f2e7"
+ },
+ "post_state": {
+  "outside_canary_sha": "3970625c5531f5bd55a07b36781e26730772ed13be9af01ea0818cfc7400f2e7"
+ },
+ "recovery_ref": null,
+ "expected": {
+  "exit": 3,
+  "status": "INVALID_PATH",
+  "no_canary_leak": true
+ },
+ "observed": {
+  "dotdot": {
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "ok": true,
+   "leak": false,
+   "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "absolute": {
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "ok": true,
+   "leak": false,
+   "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "unc": {
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "ok": true,
+   "leak": false,
+   "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "junction": {
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "ok": true,
+   "leak": false,
+   "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "wsl_symlink": {
+   "verdict": "PASS",
+   "cases": [
+    [
+     "case_ok.md",
+     0,
+     "COMPLETE"
+    ],
+    [
+     "inside_link",
+     0,
+     "COMPLETE"
+    ],
+    [
+     "../outside/canary.md",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "/tmp/w0nf_symlink_mw6_45ma/outside/canary.md",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "\\\\localhost\\share\\canary.md",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "escape_file",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "escape_dir/canary.md",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "rel_link",
+     3,
+     "INVALID_PATH"
+    ]
+   ],
+   "host": {
+    "system": "Linux",
+    "release": "6.6.87.2-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "uid": 1000,
+    "cwd_fs": 2096,
+    "note": "WSL2 ext4 temp root; real POSIX symlinks; no privilege change"
+   },
+   "positive_control_inside_link": true
+  }
+ },
+ "verdict": "PASS",
+ "first_fail": "",
+ "checker_identity": "maker-run; independent check in 06_CHECKER",
+ "consumer_ref": null,
+ "not_covered": [],
+ "junction_tested": true,
+ "symlink_tested": true,
+ "execution_kind": "composite-path-suite",
+ "sub_runs": {
+  "dotdot": {
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "ok": true,
+   "leak": false,
+   "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "absolute": {
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "ok": true,
+   "leak": false,
+   "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "unc": {
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "ok": true,
+   "leak": false,
+   "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "junction": {
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "ok": true,
+   "leak": false,
+   "stdout_sha": "afc1d53f9df123658758b19e7175b66b37e9b188f94e7613af802b64ed021cfb"
+  },
+  "wsl_symlink": {
+   "verdict": "PASS",
+   "cases": [
+    [
+     "case_ok.md",
+     0,
+     "COMPLETE"
+    ],
+    [
+     "inside_link",
+     0,
+     "COMPLETE"
+    ],
+    [
+     "../outside/canary.md",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "/tmp/w0nf_symlink_mw6_45ma/outside/canary.md",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "\\\\localhost\\share\\canary.md",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "escape_file",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "escape_dir/canary.md",
+     3,
+     "INVALID_PATH"
+    ],
+    [
+     "rel_link",
+     3,
+     "INVALID_PATH"
+    ]
+   ],
+   "host": {
+    "system": "Linux",
+    "release": "6.6.87.2-microsoft-standard-WSL2",
+    "python": "3.12.3",
+    "uid": 1000,
+    "cwd_fs": 2096,
+    "note": "WSL2 ext4 temp root; real POSIX symlinks; no privilege change"
+   },
+   "positive_control_inside_link": true
+  }
+ }
+}

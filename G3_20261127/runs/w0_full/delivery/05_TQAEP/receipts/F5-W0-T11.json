@@ -1,0 +1,79 @@
+{
+ "run_id": "F5-W0-T11-20261127T181706",
+ "case_id": "F5-W0-T11",
+ "candidate_ref": "02_CANDIDATE/repo",
+ "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+ "source_refs": [
+  {
+   "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+   "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+  },
+  {
+   "path": "02_CANDIDATE/repo/requirements.md",
+   "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+  }
+ ],
+ "fixture_sha": null,
+ "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\02_CANDIDATE\\repo",
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\tools\\policy_cli.py",
+  "--case",
+  "T11",
+  "--sentinel",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\05_TQAEP\\tmp\\noop_sentinel.txt"
+ ],
+ "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+ "exit": 3,
+ "stdout_sha": "9bc442c5198a251cb9aab05f51c22826e45efcb75421a0a4aeb373a22b288fcc",
+ "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "pre_state": null,
+ "post_state": null,
+ "recovery_ref": null,
+ "expected": {
+  "exit": 3,
+  "status": "FALSE_AUTHORITY",
+  "controls_ok": true
+ },
+ "observed": {
+  "exit": 3,
+  "status": "FALSE_AUTHORITY",
+  "controls": [
+   {
+    "got": "FALSE_AUTHORITY",
+    "name": "fake",
+    "ok": true,
+    "want": "FALSE_AUTHORITY"
+   },
+   {
+    "got": "ADMITTED",
+    "name": "valid",
+    "ok": true,
+    "want": "ADMITTED"
+   },
+   {
+    "got": true,
+    "name": "no_write",
+    "ok": true,
+    "want": true
+   }
+  ],
+  "observed": {
+   "gate": {
+    "admitted": false,
+    "exit": 3,
+    "noop": true,
+    "status": "FALSE_AUTHORITY"
+   },
+   "post": "4459a0b100ff243487a6d4794f0c28bec7e230824df0efd89d9eb311a2d175bd",
+   "pre": "4459a0b100ff243487a6d4794f0c28bec7e230824df0efd89d9eb311a2d175bd"
+  }
+ },
+ "verdict": "PASS",
+ "first_fail": "",
+ "checker_identity": "maker-run; independent check in 06_CHECKER",
+ "consumer_ref": null,
+ "not_covered": [],
+ "execution_kind": "subprocess"
+}

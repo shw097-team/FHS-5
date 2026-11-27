@@ -1,0 +1,17 @@
+{
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\tools\\policy_cli.py",
+  "--case",
+  "T05",
+  "--pack",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
+  "--requested",
+  "<HOME>\\Downloads\\FHS-5"
+ ],
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\05_TQAEP\\tmp\\root",
+ "exit": 3,
+ "stdout_sha256": "efa5db089faea8efb5d5031c433625b20eeaf95989fd034a4e0ab2db84170572",
+ "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "timestamp": "2026-11-27T10:17:06+00:00"
+}

@@ -1,0 +1,56 @@
+{
+ "run_id": "F5-W0-T02-20261127T181705",
+ "case_id": "F5-W0-T02",
+ "candidate_ref": "02_CANDIDATE/repo",
+ "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+ "source_refs": [
+  {
+   "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+   "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+  },
+  {
+   "path": "02_CANDIDATE/repo/requirements.md",
+   "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+  }
+ ],
+ "fixture_sha": null,
+ "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\02_CANDIDATE\\repo",
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\tools\\integrity_gate.py",
+  "--path",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\05_TQAEP\\tmp\\mutated_requirements.md",
+  "--expected",
+  "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+ ],
+ "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+ "exit": 3,
+ "stdout_sha": "5f36a9e4d50c00ee0d753b7d4a4c322496b74a9417f9f1a30650e91da527ee26",
+ "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "pre_state": {
+  "source_sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+ },
+ "post_state": {
+  "mutated_sha256": "00b5466ff3a0fa5ebe8bfbfe8f2af152b3a27564878022a4ea1f4374c57a6b98"
+ },
+ "recovery_ref": null,
+ "expected": {
+  "exit": 3,
+  "status": "SOURCE_INTEGRITY_FAILED",
+  "old_trace_reused": false
+ },
+ "observed": {
+  "exit": 3,
+  "status": "SOURCE_INTEGRITY_FAILED",
+  "expected": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c",
+  "actual": "00b5466ff3a0fa5ebe8bfbfe8f2af152b3a27564878022a4ea1f4374c57a6b98",
+  "old_trace_reused": false
+ },
+ "verdict": "PASS",
+ "first_fail": "",
+ "checker_identity": "maker-run; independent check in 06_CHECKER",
+ "consumer_ref": null,
+ "not_covered": [],
+ "execution_kind": "subprocess"
+}

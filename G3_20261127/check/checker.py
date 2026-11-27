@@ -144,6 +144,32 @@ def main(argv=None):
     checks.append(check("w2_ops_compensation_not_git",
                         ob2["seven"]["6_compensation"]["kind"] == "DELETE_CREATED_ONLY"))
 
+    # ---- full W0 44, measured ECP, second pack, UNKNOWN, N09
+    w0full = jl(runs / "w0_full" / "W0_FULL_RESULT.json")
+    checks.append(check("w0_full_44", w0full["counts"]["total"] == 44
+                        and w0full["counts"]["pass"] == 44
+                        and w0full["counts"]["fail"] == 0, w0full["counts"]))
+    checks.append(check("w0_full_consumer", w0full["consumer"]["consumed"] is True
+                        and w0full["consumer"]["checks"] == 803
+                        and not w0full["consumer"]["failed"],
+                        w0full["consumer"]))
+    ecp = jl(runs / "w1" / "raw" / "ECP67_MEASURED.json")
+    checks.append(check("w1_ecp67_measured", ecp["count"] == 67
+                        and sum(ecp["counts"].values()) == 67
+                        and ecp["counts"].get("OBSERVED_THIS_RUN", 0) >= 60,
+                        ecp["counts"]))
+    second = jl(runs / "w1" / "raw" / "SECOND_PACK.json")
+    checks.append(check("w1_second_pack", second["verdict"] == "PASS"
+                        and second["distinct"]
+                        and second["packages"][1]["case_count"] == 12,
+                        second["packages"][1]["views"]))
+    unk = jl(runs / "w2" / "raw" / "unknown" / "UNKNOWN_FOUR.json")
+    checks.append(check("w2_unknown_four", unk["verdict"] == "PASS"
+                        and len(set(unk["classes"].values())) == 4, unk["classes"]))
+    n09 = jl(runs / "w2" / "raw" / "N09_CHAIN.json")
+    checks.append(check("w2_n09_chain", n09["verdict"] == "PASS",
+                        n09["first_fail"]))
+
     # no PASS with a first_fail, no FAIL counted as PASS
     for w in ("w0", "w1", "w2"):
         for res in runs.joinpath(w).glob("*_RESULT.json"):

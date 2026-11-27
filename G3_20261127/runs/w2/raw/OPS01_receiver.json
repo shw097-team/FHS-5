@@ -8,17 +8,17 @@
   "--out",
   "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\ops\\out",
   "--runid",
-  "OPS-A-20261127T161946",
+  "OPS-A-20261127T182215",
   "--result",
   "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\OPS01_receiver.json"
  ],
  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2",
- "run_id": "OPS-A-20261127T161946",
- "started_at": "2026-11-27T16:19:46+0800",
+ "run_id": "OPS-A-20261127T182215",
+ "started_at": "2026-11-27T18:22:15+0800",
  "exit": 0,
  "receipt": {
   "schema": "FHS5.PLP.W2.BindingReceipt@1",
-  "run_id": "OPS-A-20261127T161946",
+  "run_id": "OPS-A-20261127T182215",
   "subject": "FHS-5_PLP/W2/CONTROL_PACK",
   "source_subject": "FHS-5_PLP/W2",
   "scope": "W2-NF-01",
@@ -40,13 +40,17 @@
    "fixture_kind": "POS"
   },
   "host": {
-   "host_id": "<HOST>",
-   "principal": "<USER>",
-   "python": "3.11.9"
+   "host_id": "dab97dce04ed",
+   "principal": "principal-04f8996da763b7a9",
+   "os": "win32",
+   "python": "3.11.9",
+   "policy_epoch": null,
+   "epoch_state": "NOT_DECLARED_BY_HOST",
+   "epoch_probe": "no host policy service; recorded as not declared"
   },
-  "created_at": "2026-11-27T16:19:46+0800"
+  "created_at": "2026-11-27T18:22:15+0800"
  },
  "material_sha256": "6ff635b03326d5ada4aceb930c2a152747300f4d6f035d29a11475c5ce128d8f",
- "receipt_sha256": "30cfe275ad5337ee78bf03123f53adcdb2d29b16b06999f4c7f72df5c8d591c0",
- "elapsed_ms": 36
+ "receipt_sha256": "b1e4c7520361b37adcda816eea44f15b183a202e14869f498a985a6d48992bdf",
+ "elapsed_ms": 44
 }

@@ -1,0 +1,119 @@
+{
+ "schema": "FHS5.PLP.W2.UnknownFour@1",
+ "rows": [
+  {
+   "scenario": "to_before",
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\unknown\\worker.py",
+    "to_before",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\unknown\\F-TO-BEFORE"
+   ],
+   "exit": null,
+   "timed_out": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "pre_world": "c9d1f693b93e41cb2ed3498acf243cf39c60c3f7fbbdb4be7726bdcc2d0990fe",
+   "post_world": "c9d1f693b93e41cb2ed3498acf243cf39c60c3f7fbbdb4be7726bdcc2d0990fe",
+   "files": {
+    "world.txt": "PRE"
+   },
+   "class": "TO_BEFORE",
+   "decision": "RETRY_ALLOWED_ONCE",
+   "compensation": {
+    "kind": "RESTORE_PREIMAGE_OR_DELETE_CREATED",
+    "ok": true,
+    "digest": "c9d1f693b93e41cb2ed3498acf243cf39c60c3f7fbbdb4be7726bdcc2d0990fe"
+   },
+   "verdict": "PASS"
+  },
+  {
+   "scenario": "to_after",
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\unknown\\worker.py",
+    "to_after",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\unknown\\F-TO-AFTER"
+   ],
+   "exit": null,
+   "timed_out": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "pre_world": "c9d1f693b93e41cb2ed3498acf243cf39c60c3f7fbbdb4be7726bdcc2d0990fe",
+   "post_world": "c6d4b00e26f5919b4b45ab8506e6b4ec6219066bd57a5ad9e0b2b722790e236d",
+   "files": {
+    "world.txt": "POST"
+   },
+   "class": "TO_AFTER",
+   "decision": "RECONCILE_VERIFIED_NO_RETRY",
+   "compensation": {
+    "kind": "RESTORE_PREIMAGE_OR_DELETE_CREATED",
+    "ok": true,
+    "digest": "c9d1f693b93e41cb2ed3498acf243cf39c60c3f7fbbdb4be7726bdcc2d0990fe"
+   },
+   "verdict": "PASS"
+  },
+  {
+   "scenario": "partial",
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\unknown\\worker.py",
+    "partial",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\unknown\\F-PARTIAL"
+   ],
+   "exit": null,
+   "timed_out": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "pre_world": "8ecc0b9a1da2a7edca7473c0e869dee2799e6c246fcd4fc164ec0926cc961d50",
+   "post_world": "7a8f9ab52a0fe33318fbac25d5430b90ab61bd25cb86a9c601b0220395f3a220",
+   "files": {
+    "a.txt": "POST-A",
+    "b.txt": "PRE-B",
+    "world.txt": "PRE"
+   },
+   "class": "PARTIAL",
+   "decision": "COMPENSATE_OR_STOP",
+   "compensation": {
+    "kind": "RESTORE_PREIMAGE_OR_DELETE_CREATED",
+    "ok": true,
+    "digest": "8ecc0b9a1da2a7edca7473c0e869dee2799e6c246fcd4fc164ec0926cc961d50"
+   },
+   "verdict": "PASS"
+  },
+  {
+   "scenario": "exit0_wrong",
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\unknown\\worker.py",
+    "exit0_wrong",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\unknown\\F-EXIT0-WRONG"
+   ],
+   "exit": 0,
+   "timed_out": false,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "pre_world": "c9d1f693b93e41cb2ed3498acf243cf39c60c3f7fbbdb4be7726bdcc2d0990fe",
+   "post_world": "3b855cab0c54751c094277a4ee977217389da06f931c32c28ecf4ef3c622886b",
+   "files": {
+    "world.txt": "WRONG"
+   },
+   "class": "EXIT0_WRONG",
+   "decision": "EFFECT_NOT_VERIFIED",
+   "compensation": {
+    "kind": "RESTORE_PREIMAGE_OR_DELETE_CREATED",
+    "ok": true,
+    "digest": "c9d1f693b93e41cb2ed3498acf243cf39c60c3f7fbbdb4be7726bdcc2d0990fe"
+   },
+   "verdict": "PASS"
+  }
+ ],
+ "classes": {
+  "to_before": "TO_BEFORE",
+  "to_after": "TO_AFTER",
+  "partial": "PARTIAL",
+  "exit0_wrong": "EXIT0_WRONG"
+ },
+ "verdict": "PASS",
+ "note": "real subprocess timeouts/partial/exit0; WorldRaw pre/post; compensation readback"
+}

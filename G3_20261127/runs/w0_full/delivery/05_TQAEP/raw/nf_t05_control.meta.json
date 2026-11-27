@@ -1,0 +1,14 @@
+{
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "-X",
+  "importtime",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\scope_probe.py",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\03_PARTIES\\bridge\\explain.json"
+ ],
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+ "exit": 0,
+ "stdout_sha256": "7470bbe1873ae4ccf178799f697ec6786532640558eed72fb95ed68aab662a97",
+ "stderr_sha256": "93f109fb216925b5e2fe310a52b89efd3c62ccf07c87dbeabe0a9728da0d6080",
+ "timestamp": "2026-11-25T05:42:03+00:00"
+}

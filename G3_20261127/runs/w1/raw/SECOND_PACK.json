@@ -1,0 +1,118 @@
+{
+ "schema": "FHS5.PLP.W1.SecondPack@1",
+ "packages": [
+  {
+   "wave": "W1",
+   "subject": "FHS-5_PLP/W1",
+   "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\FHS-5_PLP_W0-W2_第三代Native-first_執行控制包_FINAL\\01_BODY\\FHS-5_PLP_W1_NATIVE_FIRST",
+   "views": {
+    "PI": 12,
+    "PD": 8,
+    "DEV": 7,
+    "OPS": 7,
+    "TQAEP": 8
+   },
+   "case_count": 13,
+   "clauses": 19,
+   "review": {
+    "findings": [],
+    "first_fail": null
+   },
+   "thin_prompt_sha256": "7aa64b91348c0830ef7111b4d0fdc0ef81e5dec7fba97bbd730b0c4a46c49660",
+   "permission_state": "NONE_GRANTED"
+  },
+  {
+   "wave": "W2",
+   "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+   "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\FHS-5_PLP_W0-W2_第三代Native-first_執行控制包_FINAL\\01_BODY\\FHS-5_PLP_W2_NATIVE_FIRST",
+   "views": {
+    "PI": 12,
+    "PD": 8,
+    "DEV": 7,
+    "OPS": 7,
+    "TQAEP": 8
+   },
+   "case_count": 12,
+   "clauses": 47,
+   "review": {
+    "findings": [
+     {
+      "id": "R-001",
+      "severity": "high",
+      "class": "contract_missing_field",
+      "subject_sha": "df6b40be33840ae23bc28266f23d1f10bdf64a65826bd641571621ac86562b4a",
+      "command": "review:contract",
+      "exit": 1,
+      "raw_sha256": "9637b1084926e3dfa5bda920cde910dfbc897226f30f854c2a27554c2b081567",
+      "reproduction": "review:contract",
+      "subject_path": "DEV",
+      "expected": {
+       "missing": []
+      },
+      "observed": {
+       "view": "DEV",
+       "missing": [
+        "rows"
+       ]
+      },
+      "change_cone": [
+       "W1/impl/tpm_contracts_nf.py"
+      ],
+      "raw": {
+       "observed": {
+        "view": "DEV",
+        "missing": [
+         "rows"
+        ]
+       },
+       "expected": {
+        "missing": []
+       },
+       "subject_path": "DEV"
+      }
+     },
+     {
+      "id": "R-001",
+      "severity": "high",
+      "class": "contract_missing_field",
+      "subject_sha": "4410b02df11b25a2208f45fd71fb67b92aa3cdf58b286cdbb0985a9633ec40e8",
+      "command": "review:contract",
+      "exit": 1,
+      "raw_sha256": "aabab524ec89773da28054b8d83dc08807f5a53a7e59c580837622d2c8b1ce7f",
+      "reproduction": "review:contract",
+      "subject_path": "OPS",
+      "expected": {
+       "missing": []
+      },
+      "observed": {
+       "view": "OPS",
+       "missing": [
+        "rows"
+       ]
+      },
+      "change_cone": [
+       "W1/impl/tpm_contracts_nf.py"
+      ],
+      "raw": {
+       "observed": {
+        "view": "OPS",
+        "missing": [
+         "rows"
+        ]
+       },
+       "expected": {
+        "missing": []
+       },
+       "subject_path": "OPS"
+      }
+     }
+    ],
+    "first_fail": "R-001"
+   },
+   "thin_prompt_sha256": "7a4861a4c1274049557f7f1538620afcbcdfb1c35e0911cbd5784acada1cda21",
+   "permission_state": "NONE_GRANTED"
+  }
+ ],
+ "distinct": true,
+ "verdict": "PASS"
+}

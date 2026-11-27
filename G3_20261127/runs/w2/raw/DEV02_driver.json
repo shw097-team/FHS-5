@@ -11,7 +11,7 @@
   "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\DEV02_driver.json"
  ],
  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world",
- "live_head": "670195217e44833f3c8536ca337eebda98abab78",
+ "live_head": "dd961d30fe11e2121c6a48d3e8bffd0128932ae2",
  "write_set": [
   {
    "path": "W1/check/w2_receiver.py",
@@ -26,12 +26,12 @@
  "admission": {
   "ok": true,
   "decision_id": "W2-G3-OWNER-20261127-05",
-  "subject_sha256": "28455d13807d850f638dec01dc2a238c0e891d54dcb28db781dfa38cdb158d60",
+  "subject_sha256": "d3d40df6025b494355e94a795d55065ab54d080672a9b5267a3c9662a009555f",
   "verified_from": {
    "decision": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world\\W1\\authority\\decisions\\DEV.json",
    "sha256": "8166cce13a15efe5a24de10e5cac4b512aa9e2a28d650b65f1e49fc4c22bf332",
    "trust": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world\\W1\\authority\\trust.json",
-   "trust_sha256": "1339dae079ab4d2ca8a7660ca88cde101d0ccbcce65178956c54c6f862e7dcee"
+   "trust_sha256": "e467a8d81f67a5dd0a1efc91855d208e59edc0c0bd90491bbb458648a492db7f"
   }
  },
  "check": {
@@ -57,7 +57,7 @@
    {
     "check": "repo_head",
     "ok": false,
-    "detail": "{'asserted': '1111111111111111111111111111111111111111', 'live': '670195217e44833f3c8536ca337eebda98abab78'}"
+    "detail": "{'asserted': '1111111111111111111111111111111111111111', 'live': 'dd961d30fe11e2121c6a48d3e8bffd0128932ae2'}"
    }
   ],
   "wrote": [],

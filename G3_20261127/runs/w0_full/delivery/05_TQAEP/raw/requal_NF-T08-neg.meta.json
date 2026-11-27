@@ -1,0 +1,13 @@
+{
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\tools\\collab_chain.py",
+  "--mode",
+  "negatives"
+ ],
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125",
+ "exit": 0,
+ "stdout_sha256": "a7f96f63d19647513eb838d7cc1a4a260dd045682b7b0f0d4b5fbf34434c05db",
+ "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "timestamp": "2026-11-25T07:22:47+00:00"
+}

@@ -1,0 +1,93 @@
+{
+ "schema": "FHS5.W0NF.ConsumerNegatives@1",
+ "positive": {
+  "exit": 0,
+  "run_id": "20261125T153721-8ca1126e",
+  "consumed": true,
+  "checks": 803
+ },
+ "negative_cases": [
+  {
+   "name": "wrong_pack",
+   "expected": "PIN_MISMATCH_PACK",
+   "got": "PIN_MISMATCH_PACK",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153722-fc213387"
+  },
+  {
+   "name": "wrong_candidate",
+   "expected": "PIN_MISMATCH_CANDIDATE",
+   "got": "PIN_MISMATCH_CANDIDATE",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153723-73e3e30a"
+  },
+  {
+   "name": "wrong_oracle",
+   "expected": "PIN_MISMATCH_ORACLE",
+   "got": "PIN_MISMATCH_ORACLE",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153724-b856114c"
+  },
+  {
+   "name": "wrong_evidence",
+   "expected": "PIN_MISMATCH_EVIDENCE",
+   "got": "PIN_MISMATCH_EVIDENCE",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153725-3e5c3230"
+  },
+  {
+   "name": "mutated_raw",
+   "expected": "EVIDENCE_HASH_MISMATCH",
+   "got": "EVIDENCE_HASH_MISMATCH",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153726-12bae3b9"
+  },
+  {
+   "name": "missing_file",
+   "expected": "MISSING_FILE",
+   "got": "MISSING_FILE",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153727-ec524596"
+  },
+  {
+   "name": "bad_schema",
+   "expected": "EVIDENCE_SCHEMA",
+   "got": "EVIDENCE_SCHEMA",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153728-99d1656c"
+  },
+  {
+   "name": "duplicate_pin",
+   "expected": "DUPLICATE_PIN",
+   "got": "DUPLICATE_PIN",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153729-f46ea14a"
+  },
+  {
+   "name": "cross_subject",
+   "expected": "EVIDENCE_CANDIDATE_MISMATCH",
+   "got": "EVIDENCE_CANDIDATE_MISMATCH",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153730-073673f5"
+  },
+  {
+   "name": "path_escape",
+   "expected": "PATH_DOTDOT",
+   "got": "PATH_DOTDOT",
+   "rejected": true,
+   "cli_executed": false,
+   "run_id": "20261125T153732-6e9ccd9f"
+  }
+ ],
+ "all_rejected": true,
+ "verdict": "NEGATIVES_REJECTED"
+}

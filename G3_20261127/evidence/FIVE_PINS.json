@@ -16,6 +16,14 @@
     "sha256": "2714c49d49bb0b27717e47ad40ae180c87b3a9dbfb89f5f2bf452b851ee5b347"
    },
    {
+    "path": "G3_20261127/W1/run_ecp.py",
+    "sha256": "5555ce89f4b13ff6a760fc1f437adf85ca56d66f0d5964a587a97f8c5cfc16d4"
+   },
+   {
+    "path": "G3_20261127/W1/run_second_pack.py",
+    "sha256": "90ff6c74804fcef0942a962d10fc881b0a67cde5a14dcd6484960d0f9e94dfaf"
+   },
+   {
     "path": "G3_20261127/W1/run_w1.py",
     "sha256": "f9952e37a67207eb5747c34a0db99e966f48c70ed7d15a79625f311dcfab2ee4"
    },
@@ -28,20 +36,28 @@
     "sha256": "61884fdbe76f07d752208e56686a417c555f30641f37b7f0dd1168fe4e533423"
    },
    {
+    "path": "G3_20261127/W2/n09_chain.py",
+    "sha256": "2c8c764f56928fa654c693e9ca5ed80bd5296eb6dbf1d1f9ef7a24eb469a3996"
+   },
+   {
     "path": "G3_20261127/W2/ops_consumer.py",
     "sha256": "ef5e1da1a7e6dcfb7be9164125cb4e3805e1f561cd1d79d754957a7e33fe56bd"
    },
    {
     "path": "G3_20261127/W2/ops_receiver.py",
-    "sha256": "bce36a18183fdb4f25eb645c09867f8b4594f524a4be896ef325c754f9d7d96c"
+    "sha256": "c2291ce9f7b3a41839d066eb055ae9a085196b3d301b22e7bed342f2afd9babd"
+   },
+   {
+    "path": "G3_20261127/W2/run_unknown.py",
+    "sha256": "1db13171e8529e883a5c9791a0d024df0a833c4f988247e6579550f98570a851"
    },
    {
     "path": "G3_20261127/W2/run_w2.py",
-    "sha256": "fe67bda35055f490d010f6fb337165f2b69067ba6ba154149b8c4cf1cb4ecf5e"
+    "sha256": "f58c53da0c6c1cc78ac6768ff0ac54292282f8fa00c3d53081e26079584fcf73"
    },
    {
     "path": "G3_20261127/check/checker.py",
-    "sha256": "736d32e00779b53da8c7583e0638790e8e06a009b2405bce4fba1efb5c859194"
+    "sha256": "3fca7eecaa4aa4ce83d83e62d6e308072abb6ea7b229f57c719b0dda04b8476f"
    },
    {
     "path": "G3_20261127/check/consumer.py",
@@ -49,7 +65,7 @@
    },
    {
     "path": "G3_20261127/check/finalize.py",
-    "sha256": "0f1d32d14f64fd1bbf954a3aaa32b8c52f9547c08747387e9951fb5e1b3adad1"
+    "sha256": "8bf89971c052f147daf68e7fb6d5496f98e76a444fd05ffd7c936cafbb406c27"
    },
    {
     "path": "G3_20261127/lib/g3pack.py",
@@ -209,7 +225,7 @@
    },
    {
     "path": "W1/impl/tpm_contracts_nf.py",
-    "sha256": "ea6b589a9d809f1fc9979bfc837ac7c1168656d77ff271ab8b8c0b8b1c7fd6f5"
+    "sha256": "5058e39fc005c94335993cd366a4ed481d2c5e9afd660d757a18065b63410e8d"
    },
    {
     "path": "W1/impl/w1_bridge_reference.py",
@@ -232,8 +248,8 @@
     "sha256": "55ffaf778e1a6c4be5ca4f43952294cbbd4cc60d127864520c425b5d419fc097"
    }
   ],
-  "count": 56,
-  "aggregate": "341fec38f02b9b6134c0483a463620ff4ad61ea2dbf8fcced6df4930eac89cf9",
+  "count": 60,
+  "aggregate": "4874c347226afd33b204f5b0fae05f44fbeae6ac8e46d086d3420baf3a4d6988",
   "modified_product": [
    "W1/check/w2_dev_gate.py",
    "W1/impl/host_facade.py"
@@ -255,7 +271,7 @@
   "W2": "957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c"
  },
  "evidence": {
-  "manifest_sha256": "7c37982edd26fe07d5633fba11f2e57ba6dbff467691ad57137c55de8567278a",
-  "seal_sha256": "5ed0b31f647738496cf7aa512a540c0466bf63eb18c430988f2c75e732ace624"
+  "manifest_sha256": "e5299bbb553eabdc9b6d2b1192436fda97a514f39124159a7c07204119150966",
+  "seal_sha256": "f6dc5bb9aac2b6265b97fb12ddf9c7f2f3b3e5e91edb0434b707629704633703"
  }
 }

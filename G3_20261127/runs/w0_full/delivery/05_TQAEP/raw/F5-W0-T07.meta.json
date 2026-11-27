@@ -1,0 +1,13 @@
+{
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\tools\\policy_cli.py",
+  "--case",
+  "T07"
+ ],
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\05_TQAEP\\tmp\\root",
+ "exit": 3,
+ "stdout_sha256": "7c9ff1305e05648b8349f4c6083c0ed8816322852ed4c21a1275c920b76b9072",
+ "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "timestamp": "2026-11-27T10:17:06+00:00"
+}

@@ -1,0 +1,1 @@
+{"controls": [{"got": true, "name": "wrong_pin_control", "ok": true, "want": true}], "controls_ok": true, "exit": 0, "observed": {"accepted": true, "wrong_pin_refused": true}, "status": "CONSUMER_OK"}

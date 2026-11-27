@@ -1,5 +1,5 @@
 {
- "run_id": "W2-W2-OPS-01-20261127T161946",
+ "run_id": "W2-W2-OPS-01-20261127T182215",
  "case_id": "W2-OPS-01",
  "kind": "POS",
  "expected": {
@@ -8,11 +8,12 @@
  "observed": {
   "seven": {
    "1_host": {
-    "host_id": "<HOST>",
-    "principal": "<USER>",
+    "host_id": "CODEX-NATIVE-LOCAL",
+    "principal": "principal-local",
     "os": "win32",
     "python": "3.11.9",
-    "policy_epoch": "G3-20261127"
+    "policy_epoch": null,
+    "epoch_state": "NOT_DECLARED_BY_HOST"
    },
    "2_pre_world": "ABSENT",
    "3_effect_argv_exit": {
@@ -26,16 +27,16 @@
      "--out",
      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\ops\\out",
      "--runid",
-     "OPS-A-20261127T161946",
+     "OPS-A-20261127T182215",
      "--result",
      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\OPS01_receiver.json"
     ],
     "exit": 0
    },
-   "4_post_world": "f877c0142b692c456d9ac02fce278909f441cb1ac1e122a7cdf724947b191655",
+   "4_post_world": "c23b3a76320c66cda3cbd9045164754630166a0d00bf31cd08a6a3a26197228c",
    "5_receiver_parse_use": {
     "schema": "FHS5.PLP.W2.BindingReceipt@1",
-    "run_id": "OPS-A-20261127T161946",
+    "run_id": "OPS-A-20261127T182215",
     "subject": "FHS-5_PLP/W2/CONTROL_PACK",
     "source_subject": "FHS-5_PLP/W2",
     "scope": "W2-NF-01",
@@ -57,11 +58,15 @@
      "fixture_kind": "POS"
     },
     "host": {
-     "host_id": "<HOST>",
-     "principal": "<USER>",
-     "python": "3.11.9"
+     "host_id": "dab97dce04ed",
+     "principal": "principal-04f8996da763b7a9",
+     "os": "win32",
+     "python": "3.11.9",
+     "policy_epoch": null,
+     "epoch_state": "NOT_DECLARED_BY_HOST",
+     "epoch_probe": "no host policy service; recorded as not declared"
     },
-    "created_at": "2026-11-27T16:19:46+0800"
+    "created_at": "2026-11-27T18:22:15+0800"
    },
    "6_compensation": {
     "kind": "DELETE_CREATED_ONLY",
@@ -89,7 +94,7 @@
     "readback": true
    },
    "all_ok": true,
-   "receipt_sha256": "30cfe275ad5337ee78bf03123f53adcdb2d29b16b06999f4c7f72df5c8d591c0",
+   "receipt_sha256": "b1e4c7520361b37adcda816eea44f15b183a202e14869f498a985a6d48992bdf",
    "material_sha256": "6ff635b03326d5ada4aceb930c2a152747300f4d6f035d29a11475c5ce128d8f",
    "subject": "FHS-5_PLP/W2/CONTROL_PACK",
    "scope": "W2-NF-01",

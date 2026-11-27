@@ -1,0 +1,57 @@
+{
+ "schema": "FHS5.W0NF.ConsumerManifest@3",
+ "run_id": "clean-234-20261125154058",
+ "receiving_position": "fresh git clone of the published commit; candidate rebuilt from repo.bundle",
+ "consumer_receipt": "07_CONSUMER/clean_receive/receipt.json",
+ "consumer_receipt_sha256": "37d567e8b5c6f7a80edcbf61aa68df3569d316a66263122f17405dabdee24fb3",
+ "handoff_sha256": "21ed226738abbd75b72871f1c6173b83de5cadab661f2d366df8d7e547ff4579",
+ "evidence_manifest_sha256": "50c158e3725e36d912703d2a2d8d8aa2c1b7f6b01200bd9ffb9e78a0a61abb93",
+ "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+ "candidate": {
+  "head": "bb66a276aae8c5d6aef549832c523587fc47d247",
+  "tree": "b69c54ded7ee10b7424c4900acbf6125b1ce025b",
+  "preimage": "5eab43de2d3f67d6afbb1c5f6bc390e2c391da36",
+  "fixtures": {
+   "case_ambiguous.md": "01eb4f730a6abedf73cab7a23c309b734e52e255f23acc8883061987029dd221",
+   "case_bad_path.md": "66da16f375f3eed88719783f0128c22102440d6a390ded73c865ef2780c18f31",
+   "case_bad_utf8.md": "551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313",
+   "case_dup.md": "bb62042e22a0d3ffd1310a2b19a2917d22114a6b726bd0fee88429de7ef2d4ee",
+   "case_malformed.md": "9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508",
+   "case_missing.md": "eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019",
+   "case_ok.md": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece"
+  }
+ },
+ "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+ "consumed": true,
+ "raw": {
+  "materialize_checkout.meta.json": "88b8bd3e1541b11da60deba6cf6802ba1a31077f2d41e74f603f38d17ddffd65",
+  "materialize_checkout.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "materialize_checkout.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "materialize_clone.meta.json": "4e20a3e5133cad0f40c86c06ba548010246ca81988827b99309cd5418d424c92",
+  "materialize_clone.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "materialize_clone.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "neg.meta.json": "84bf9734f3cea240ac439b5a11576d43819e1aff8b3a2265c45a8bf4fb3e0b1d",
+  "neg.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "neg.stdout.txt": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
+  "pos.meta.json": "fc36e4eef50db4777e2a8fb218ac0d305b68de65c892da1fc0542adb7a6729e0",
+  "pos.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "pos.stdout.txt": "e5c5a14016570de187414dde33d3edb88e2d85f3b04b1851b0fbd6a3c0153c33"
+ },
+ "claims": {
+  "W1_technical": "W1_TECHNICALLY_READY",
+  "W1_execution": "NOT_CLAIMED",
+  "release": "NOT_CLAIMED",
+  "different_principal_independence": "NOT_CLAIMED",
+  "other_hosts": "NOT_CLAIMED"
+ },
+ "claim_derivation": {
+  "receipt_consumed": true,
+  "receipt_validated": true,
+  "checks": 803,
+  "handoff_bytes_match": true,
+  "evidence_bytes_match": true,
+  "negatives_rejected": true,
+  "evidence_B0": true,
+  "evidence_W0": true
+ }
+}

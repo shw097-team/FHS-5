@@ -26,7 +26,7 @@ import w1_nf_reader as base
 NFError = base.NFError
 
 ROW_RE = re.compile(r"^\|\s*`((?:DEV|OPS)-[A-Z]+-\d{2})`\s*\|(.+)\|\s*$")
-CASE_ROW_RE = re.compile(r"^\|\s*`(W1-[A-Z0-9]+-\d{2})`\s*\|(.+)\|\s*$")
+CASE_ROW_RE = re.compile(r"^\|\s*`(W[0-9]-[A-Z0-9]+-\d{2})`([^|]*)\|")
 FIELD_RE = re.compile(r"\*\*([A-Za-z_ ]+)\*\*\s*[：:]\s*(.+)$")
 JOB_RE = re.compile(r"Job to be done[^*\n]{0,12}[：:]\s*(.+)$")
 
@@ -180,6 +180,21 @@ def resolve_profile(man: dict) -> tuple[str, dict]:
             return name, prof
     if isinstance(schema, str) and ".SourceManifest.NF@" in schema:
         return "GENERIC", PROFILES["GENERIC"]
+    if (isinstance(schema, str) and schema.startswith("FHS5.PLP.W")
+            and schema.endswith("SourceManifest@2")):
+        w = schema.split(".")[2]
+        d = man.get("denominators") or {}
+        return "G3-" + w, {
+            "schema": schema,
+            "expect": {"dev": d.get("dev"), "ops": d.get("ops"),
+                       "cases": man.get("case_count"),
+                       "pack_files": 5,
+                       "assets": len(man.get("assets") or [])},
+            "dev_file": f"01_{w}_DEV_ECP.md", "ops_file": f"02_{w}_OPS_ECP.md",
+            "case_file": f"03_{w}_TQAEP.md", "pi_file": f"00_{w}_PI_PD.md",
+            "start_file": f"04_{w}_START_THIN_PROMPT.md",
+            "sections": ("GOAL", "SOURCE", "SPEC", "EXECUTE", "HARNESS LOOP",
+                         "DONE", "STOP", "RESUME")}
     for name, prof in S1_PROFILES.items():
         if prof["schema"] == schema:
             return name, prof
@@ -284,8 +299,12 @@ def build_contracts(pack_root: str, work_identity: dict) -> dict:
     for a in man.get("assets") or []:
         asset_map.setdefault(a.get("case_id"), {})[a.get("kind")] = a
     case_text = texts.get(prof.get("case_file", ""), "")
+    seen_cases = set()
     for cr in _table_rows(case_text, CASE_ROW_RE):
         cid = cr["id"]
+        if cid in seen_cases:
+            continue
+        seen_cases.add(cid)
         cells = cr["cells"] + [""] * (7 - len(cr["cells"]))
         ent = asset_map.get(cid) or {}
         if ent.get("oracle"):

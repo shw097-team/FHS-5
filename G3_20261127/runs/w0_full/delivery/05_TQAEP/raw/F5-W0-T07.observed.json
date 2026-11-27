@@ -1,0 +1,15 @@
+{
+ "schema": {
+  "exit": 3,
+  "status": "SCHEMA_UNSUPPORTED",
+  "observed": "PLP.REVIEW.REQUEST@99",
+  "supported": "PLP.REVIEW.REQUEST@2"
+ },
+ "roundtrip": {
+  "exit": 0,
+  "status": "PRESERVED",
+  "unknown_fields": [
+   "x_required_security"
+  ]
+ }
+}

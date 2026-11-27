@@ -4,3 +4,6 @@ runs/*/off/
 runs/_scratch/
 __pycache__/
 *.pyc
+runs/w0_full/13/
+runs/**/candidate/
+UsersuserAppDataLocalTemp*

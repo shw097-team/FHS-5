@@ -1,0 +1,59 @@
+{
+ "run_id": "NF-T04-20261127T181710",
+ "case_id": "NF-T04",
+ "candidate_ref": "02_CANDIDATE/repo",
+ "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
+ "source_refs": [
+  {
+   "path": "01_PACK/FHS-5_PLP_W0_NATIVE_FIRST/05_W0_SOURCE_MANIFEST.json",
+   "sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+  },
+  {
+   "path": "02_CANDIDATE/repo/requirements.md",
+   "sha256": "fc46088355071109d6dc4051da4db25d3246000515ea1f254be14d78121d294c"
+  }
+ ],
+ "fixture_sha": null,
+ "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\02_CANDIDATE\\repo",
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\tools\\policy_cli.py",
+  "--case",
+  "NF-T04"
+ ],
+ "runtime": "Python 3.11.9 | Windows-10-10.0.26200-SP0",
+ "exit": 0,
+ "stdout_sha": "4913da9dc0d936f1351c2df7118dafb9557886f9595e5832be190deb58139156",
+ "stderr_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "pre_state": null,
+ "post_state": null,
+ "recovery_ref": null,
+ "expected": {
+  "exit": 0,
+  "status": "RUNNER_OK",
+  "controls_ok": true
+ },
+ "observed": {
+  "exit": 0,
+  "status": "RUNNER_OK",
+  "controls": [
+   {
+    "got": false,
+    "name": "mutant_detected",
+    "ok": true,
+    "want": false
+   }
+  ],
+  "observed": {
+   "oracle_frozen": true,
+   "suite_exit": 0
+  }
+ },
+ "verdict": "PASS",
+ "first_fail": "",
+ "checker_identity": "maker-run; independent check in 06_CHECKER",
+ "consumer_ref": null,
+ "not_covered": [],
+ "execution_kind": "subprocess"
+}

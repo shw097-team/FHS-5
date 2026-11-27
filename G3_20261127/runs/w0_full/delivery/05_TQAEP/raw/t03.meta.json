@@ -1,0 +1,18 @@
+{
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "-m",
+  "briefcheck",
+  "--root",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\05_TQAEP\\tmp\\root",
+  "--input",
+  "case_missing.md",
+  "--sha256",
+  "eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019"
+ ],
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_full\\13\\05_TQAEP\\tmp\\root",
+ "exit": 2,
+ "stdout_sha256": "dbd05eac0af0ae117e0674780bce2b19871f63f7c332b96df4ad155d5903de3d",
+ "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "timestamp": "2026-11-27T10:17:05+00:00"
+}

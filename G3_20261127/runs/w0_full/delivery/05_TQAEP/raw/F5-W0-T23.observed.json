@@ -1,0 +1,9 @@
+{
+ "scan": {
+  "exit": 3,
+  "status": "SECRET_LEAK",
+  "redacted_contains_secret": false,
+  "raw_public_sha_allowed": false
+ },
+ "secret_in_receipt": false
+}
