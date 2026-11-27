@@ -3,6 +3,7 @@
 - **verdict**：`W0_DONE`（scoped：local CODEX／Windows、Generic B0-NF、44/44；非 W1–W4、非整體 MVP、非 release）
 - **branch**：`codex/w0-w2-g3-native-20261127`
 - **content commit**：`f173214428f1d3b4ea3819182ddb8a6a67cc34f1`
+- **docs/evidence commit**：`dda7779464abf3b6d7cbaeee8a9fbcc93c471137`
 - **pack_manifest_sha256**：`e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8`
 - **w0m_amendment_sha256**：`c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5`
 - **candidate_commit**：`bb66a276aae8c5d6aef549832c523587fc47d247`
@@ -37,4 +38,4 @@ W1–W4 全分母、FHS 485、HERMES／GPT Host、不同 principal 簽章、Publ
 
 ## push
 
-本 HANDOFF 先本地 commit；如既有合法 GitHub 授權有效，僅推施工分支並回讀。未回讀前不宣推送成功。不得 force／merge main／改 `W2_CURRENT`。
+本 HANDOFF 已在本地 commit（content `f1732144…`、docs/evidence `dda7779…`）。push 嘗試回 `unable to get password from user`，remote HEAD 回讀仍為 `0099e953…`；本輪為本地合規交付，未繞過憑證。不 force／merge main／改 `W2_CURRENT`。

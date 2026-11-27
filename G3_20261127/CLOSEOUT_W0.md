@@ -3,7 +3,8 @@
 - 控制包：`W0-G3-PCNF-r2`／`PCNF-W0W2-ADOPT-20261127-01`
 - 分支：`codex/w0-w2-g3-native-20261127`
 - content commit：`f173214428f1d3b4ea3819182ddb8a6a67cc34f1`
-- 本 C/H 由後續 docs commit 固定；push 狀態以 `PUBLICATION_STATUS.md`／remote readback 為準，未回讀前不宣推送成功。
+- docs/evidence commit：`dda7779464abf3b6d7cbaeee8a9fbcc93c471137`
+- push readback（2026-11-27）：`git push origin HEAD:refs/heads/codex/w0-w2-g3-native-20261127` 回 `unable to get password from user`；`git ls-remote` 仍為 `0099e95373be712e542a058693fdefba31c863c7`。本輪為**本地合規交付**，未繞過憑證、未 force、未改 main/W2_CURRENT。
 - 最終 run root：`C:\Projects\Agent_Workspace\FHS-5_Workspace\worktrees\g3-20261127\G3_20261127\runs\w0_close_20261127\13`
 - 最終 handoff：`09_DELIVERY/W0_HANDOFF.md`（sha256 `9f9ae2340212ec5b3171dcf26a9fa85db34aa2da79452bc0d86a389685d17613`）
 - 最終 evidence：`10_EVIDENCE/EVIDENCE_MANIFEST.json`（sha256 `5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da`）

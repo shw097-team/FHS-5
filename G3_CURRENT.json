@@ -45,6 +45,13 @@
   "handoff_sha256": "9f9ae2340212ec5b3171dcf26a9fa85db34aa2da79452bc0d86a389685d17613",
   "g17": "PASS",
   "w1_minimal": "PASS (44 items)",
-  "verdict": "W0_DONE (scoped; not W1-W4/MVP/release)"
+  "verdict": "W0_DONE (scoped; not W1-W4/MVP/release)",
+  "docs_evidence_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
+  "push": {
+   "attempted": true,
+   "result": "unable to get password from user",
+   "remote_head_readback": "0099e95373be712e542a058693fdefba31c863c7",
+   "state": "LOCAL_ONLY"
+  }
  }
 }
