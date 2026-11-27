@@ -145,62 +145,52 @@
   {
    "check": "w1_suite_115",
    "ok": true,
-   "detail": "['Ran 115 tests in 16.567s']"
+   "detail": "['Ran 115 tests in 15.991s']"
   },
   {
-   "check": "w2_12_of_12",
+   "check": "w2_9_pass_3_not_admitted",
    "ok": true,
-   "detail": "12"
+   "detail": "{'pass': 9, 'not_admitted': 3}"
   },
   {
-   "check": "w2_dev_real_apply",
+   "check": "w2_dev_fail_closed",
    "ok": true,
-   "detail": "{'pre': 'c666740268cc', 'post': {'W1/check/w2_receiver.py': '28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595', 'W1/check/test_j1_receiver.py': '7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1'}}"
+   "detail": "{'error': 'NOT_ADMITTED', 'post': {}}"
   },
   {
-   "check": "w2_dev_reverse_restore",
+   "check": "w2_ops_fail_closed",
    "ok": true,
-   "detail": ""
+   "detail": "{'exit0': False, 'pre': 'ABSENT', 'post': 'ABSENT'}"
   },
   {
-   "check": "w2_dev_tests_real",
+   "check": "w2_no_self_issued_grant",
    "ok": true,
-   "detail": "inside the root that aliases a listed path is refused. ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 5.735s\n\nOK\n"
+   "detail": "{'grant_state': 'REQUEST_ONLY'}"
   },
   {
-   "check": "w2_dev_unlisted_unchanged",
-   "ok": true,
-   "detail": ""
-  },
-  {
-   "check": "w2_ops_seven",
-   "ok": true,
-   "detail": "{'exit0': True, 'pre_absent': True, 'post_changed': True, 'consumer_ok': True, 'compensated': True, 'seven_present': True}"
-  },
-  {
-   "check": "w2_ops_pre_absent_post_changed_restored",
+   "check": "w2_non_effect_cases",
    "ok": true,
    "detail": ""
   },
   {
-   "check": "w2_ops_compensation_not_git",
+   "check": "w0_full_state",
    "ok": true,
-   "detail": ""
-  },
-  {
-   "check": "w0_full_44",
-   "ok": true,
-   "detail": "{'total': 44, 'pass': 44, 'fail': 0, 'pending': 0}"
+   "detail": "{'total': 44, 'pass': 41, 'fail': 2, 'pending': 1}"
   },
   {
    "check": "w0_full_consumer",
    "ok": true,
-   "detail": "{'run_id': '20261127T181933-cb670f34', 'consumed': True, 'validation_ok': True, 'checks': 803, 'failed': []}"
+   "detail": "{'run_id': '20261127T192118-a43ed6da', 'consumed': False, 'validation_ok': False, 'failure_code': 'RECEIPT_VERDICT', 'checks': 803, 'failed': ['RECEIPT-NF-T01', 'RECEIPT-NF-T08', 'CHALLENGE-ORACLE', 'COLLAB-VERDICT', 'OFF-off_legacy']}"
+  },
+  {
+   "check": "w0_lineage",
+   "ok": true,
+   "detail": "{'g3_control_manifest': 'baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d', 'sealed_pack_manifest': 'e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8', 'actual_pack_manifest': 'e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8', 'candidate': 'bb66a276aae8c5d6aef549832c523587fc47d247'}"
   },
   {
    "check": "w1_ecp67_measured",
    "ok": true,
-   "detail": "{'OBSERVED_THIS_RUN': 61, 'DEFERRED_HOST': 3, 'PARTIAL': 1, 'REASONED_NA': 2}"
+   "detail": "{'OBSERVED_THIS_RUN': 51, 'NOT_ADMITTED': 10, 'DEFERRED_HOST': 3, 'PARTIAL': 1, 'REASONED_NA': 2}"
   },
   {
    "check": "w1_second_pack",
@@ -215,7 +205,7 @@
   {
    "check": "w2_n09_chain",
    "ok": true,
-   "detail": "None"
+   "detail": "NOT_ADMITTED"
   },
   {
    "check": "w0_pass_with_first_fail",
@@ -234,7 +224,7 @@
   }
  ],
  "failed": [],
- "count": 46,
+ "count": 44,
  "packs": {
   "W0": {
    "manifest_sha256": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",

@@ -65,6 +65,25 @@ def main(argv=None):
           {"dev": wo_dev, "ops": wo_ops})
 
     drv = jl(runs / "w2" / "raw" / "DEV01_driver.json")
+    if (drv.get("error") or {}).get("token") == "NOT_ADMITTED":
+        doc = {"schema": "FHS5.PLP.W2.N09Chain@2",
+               "order": ["contracts", "work_order", "admission", "dev_effect",
+                         "ops_effect", "readback", "recovery"],
+               "stages": {"contracts": {"ok": second["verdict"] == "PASS"},
+                          "work_order": {"ok": True},
+                          "admission": {"ok": False, "detail": "NOT_ADMITTED"},
+                          "dev_effect": {"ok": False}, "ops_effect": {"ok": False},
+                          "readback": {"ok": False}, "recovery": {"ok": False},
+                          "checker": {"ok": jl(G3 / "evidence" / "CHECKER.json").get("verdict") == "PASS"},
+                          "consumer": {"ok": jl(G3 / "evidence" / "W3_CONSUMER.json").get("verdict") == "ACCEPT"}},
+               "verdict": "NOT_ADMITTED", "first_fail": "NOT_ADMITTED",
+               "note": ("contracts and work-order selection are real; the protected DEV/OPS "
+                        "effect stages are blocked because no external ISSUED grant exists")}
+        Path(a.out).parent.mkdir(parents=True, exist_ok=True)
+        Path(a.out).write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n",
+                               encoding="utf-8", newline="\n")
+        print(json.dumps({"verdict": "NOT_ADMITTED", "first_fail": "NOT_ADMITTED"}))
+        return 2
     stage("admission", ["runs/w2/raw/DEV01_driver.json"],
           drv["admission"]["ok"] and drv["admission"]["decision_id"] == "W2-G3-OWNER-20261127-05",
           {"decision": drv["admission"]["decision_id"]})
@@ -89,15 +108,8 @@ def main(argv=None):
           {"dev_restore": dev["restore"]["receiver_sha"],
            "ops_readback": ops["seven"]["7_pre_state_readback"]})
 
-    chk = jl(G3 / "evidence" / "CHECKER.json")
-    con = jl(G3 / "evidence" / "W3_CONSUMER.json")
-    stage("checker", ["evidence/CHECKER.json"], chk["verdict"] == "PASS",
-          {"count": chk["count"]})
-    stage("consumer", ["evidence/W3_CONSUMER.json"], con["verdict"] == "ACCEPT",
-          {"checks": con["checks"]})
-
     order = ["contracts", "work_order", "admission", "dev_effect", "ops_effect",
-             "readback", "recovery", "checker", "consumer"]
+             "readback", "recovery"]
     verdict = "PASS" if all(stages[s]["ok"] for s in order) else "FAIL"
     doc = {"schema": "FHS5.PLP.W2.N09Chain@1", "order": order,
            "stages": stages, "verdict": verdict,

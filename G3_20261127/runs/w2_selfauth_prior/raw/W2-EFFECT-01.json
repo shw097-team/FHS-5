@@ -1,0 +1,39 @@
+{
+ "run_id": "W2-W2-EFFECT-01-20261127T182215",
+ "case_id": "W2-EFFECT-01",
+ "kind": "NEG",
+ "expected": {
+  "token": "EFFECT_UNBOUND",
+  "calls": 0
+ },
+ "observed": {
+  "attempts": [
+   {
+    "token": "OPAQUE",
+    "path": null,
+    "token_out": "EFFECT_UNBOUND"
+   },
+   {
+    "token": "PATH_INFERRED_READ",
+    "path": "docs/readme.md",
+    "token_out": "EFFECT_UNBOUND"
+   },
+   {
+    "token": "",
+    "path": null,
+    "token_out": "EFFECT_UNBOUND"
+   },
+   {
+    "token": null,
+    "path": "../outside",
+    "token_out": "EFFECT_UNBOUND"
+   }
+  ],
+  "effect_calls": 0,
+  "default_read": false
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}

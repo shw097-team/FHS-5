@@ -29,7 +29,7 @@
    ],
    "decision": {
     "path": "decisions/DEV.json",
-    "sha256": "abde6b84d92d15ed6806ad6c9c81c999019d75948ba0d9f03e8d4309a920f5e1",
+    "sha256": "751580c7816682966781f84fd311a811a3195ee291a87ffe9c05fbb7396bd906",
     "decision_id": "W2-S2S3-OWNER-20261126-02",
     "schema": "FHS5.PLP.W2.OwnerDecision@local-2",
     "subject_id": "FHS-5_PLP/W2/CONTROL_PACK"
@@ -51,7 +51,7 @@
    ],
    "decision": {
     "path": "decisions/OPS.json",
-    "sha256": "bbb7ab6529725475869acd0995b31c6023c023be4e1634d9d868569e433cc515",
+    "sha256": "fd54cf6b21ee0010c96b234958e7eca0a5d42bb9241d3959e7545d6f786436d5",
     "decision_id": "W2-S2S3-OWNER-20261127-03",
     "schema": "FHS5.PLP.W2.OwnerDecision@local-3",
     "subject_id": "FHS-5_PLP/W2/CONTROL_PACK"

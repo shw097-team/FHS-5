@@ -57,6 +57,7 @@ def scenario(base: Path, name: str, kind: str) -> dict:
         (d / "b.txt").write_text("PRE-B\n", encoding="utf-8")
     worker = base / "worker.py"
     worker.write_text(WORKER, encoding="utf-8", newline="\n")
+    pre_files = {p.name: p.read_bytes() for p in d.glob("*") if p.is_file()}
     pre = tree(d)
     argv = [PY, str(worker), kind, str(d)]
     timed_out = False
@@ -74,21 +75,27 @@ def scenario(base: Path, name: str, kind: str) -> dict:
     post = tree(d)
     files = {p.name: p.read_text(encoding="utf-8").strip()
              for p in d.glob("*.txt")}
-    if kind in ("to_before",):
-        cls = "TO_BEFORE" if post == pre else "MIXED"
-        decision = "RETRY_ALLOWED_ONCE"
-    elif kind in ("to_after",):
-        cls = "TO_AFTER" if files.get("world.txt") == "POST" else "UNKNOWN"
-        decision = "RECONCILE_VERIFIED_NO_RETRY"
-    elif kind == "partial":
-        cls = "PARTIAL" if files.get("a.txt") == "POST-A" and files.get("b.txt") == "PRE-B" else "UNKNOWN"
-        decision = "COMPENSATE_OR_STOP"
+    # Classification is derived from observed state only, never from `kind`.
+    if post == pre:
+        cls = "TO_BEFORE" if timed_out else "MIXED"
+    elif files.get("world.txt") == "POST":
+        cls = "TO_AFTER"
+    elif files.get("a.txt") == "POST-A" and files.get("b.txt") == "PRE-B":
+        cls = "PARTIAL"
+    elif exit_code == 0 and files.get("world.txt") not in (None, "POST"):
+        cls = "EXIT0_WRONG"
     else:
-        cls = "EXIT0_WRONG" if exit_code == 0 and files.get("world.txt") == "WRONG" else "UNKNOWN"
-        decision = "EFFECT_NOT_VERIFIED"
-    # compensation: restore pre bytes for created/modified files
-    (d / "world.txt").write_text("PRE\n", encoding="utf-8")
-    (d / "a.txt").unlink(missing_ok=True)
+        cls = "UNKNOWN"
+    decision = {"TO_BEFORE": "RETRY_ALLOWED_ONCE",
+                "TO_AFTER": "RECONCILE_VERIFIED_NO_RETRY",
+                "PARTIAL": "COMPENSATE_OR_STOP",
+                "EXIT0_WRONG": "EFFECT_NOT_VERIFIED"}.get(cls, "STOP_SCOPED")
+    # compensation: restore the saved preimage, delete files that did not exist
+    for name, data in pre_files.items():
+        (d / name).write_bytes(data)
+    for p in list(d.glob("*")):
+        if p.is_file() and p.name not in pre_files:
+            p.unlink()
     comp = tree(d)
     restored = comp == pre
     return {"scenario": kind, "argv": argv, "exit": exit_code,

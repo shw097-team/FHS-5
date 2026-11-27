@@ -1,0 +1,18 @@
+{
+ "run_id": "W2-W2-AUTH-01-20261127T182215",
+ "case_id": "W2-AUTH-01",
+ "kind": "NEG",
+ "expected": {
+  "token": "FALSE_AUTHORITY|NOT_ADMITTED",
+  "effect": 0
+ },
+ "observed": {
+  "token": "FALSE_AUTHORITY",
+  "effect_count": 0,
+  "pre_post_unchanged": true
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}

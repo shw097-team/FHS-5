@@ -1,6 +1,6 @@
 {
  "schema": "FHS5.PLP.G3.W2.Run@1",
- "run_id": "W2-G3-20261127T182215",
+ "run_id": "W2-G3-20261127T191508",
  "candidate": "W2-G3-PCNF-r2",
  "source_manifest_sha256": "7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0",
  "pack_tree_sha256": "957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c",
@@ -8,20 +8,20 @@
  "cases": [
   {
    "case_id": "W2-DEV-01",
-   "verdict": "PASS",
-   "first_fail": null,
+   "verdict": "NOT_ADMITTED",
+   "first_fail": "NOT_ADMITTED",
    "raw": "raw/W2-DEV-01.json"
   },
   {
    "case_id": "W2-DEV-02",
-   "verdict": "PASS",
-   "first_fail": null,
+   "verdict": "NOT_ADMITTED",
+   "first_fail": "NOT_ADMITTED",
    "raw": "raw/W2-DEV-02.json"
   },
   {
    "case_id": "W2-OPS-01",
-   "verdict": "PASS",
-   "first_fail": null,
+   "verdict": "NOT_ADMITTED",
+   "first_fail": "NOT_ADMITTED",
    "raw": "raw/W2-OPS-01.json"
   },
   {
@@ -79,7 +79,7 @@
    "raw": "raw/W2-R3-04.json"
   }
  ],
- "pass": 12,
+ "pass": 9,
  "total": 12,
  "dev": {
   "base": "9fae9257a3402928efbe6ff0cd66f45761f52846",
@@ -90,7 +90,8 @@
   "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\ops\\out",
   "compensated": true
  },
- "verdict": "PASS",
+ "verdict": "NOT_ADMITTED",
+ "not_admitted": 3,
  "not_claimed": [
   "W2_NF_VALIDATED",
   "other Hosts",

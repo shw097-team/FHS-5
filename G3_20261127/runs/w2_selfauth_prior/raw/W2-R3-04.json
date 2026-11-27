@@ -1,0 +1,23 @@
+{
+ "run_id": "W2-W2-R3-04-20261127T182215",
+ "case_id": "W2-R3-04",
+ "kind": "EDGE",
+ "expected": {
+  "token": "WORKSPACE_DRIFT_BOUNDED"
+ },
+ "observed": {
+  "ok": true,
+  "token": "WORKSPACE_DRIFT_BOUNDED",
+  "workspace_files": 318,
+  "closeout_entries": 317,
+  "periods": [
+   "W0-20261125",
+   "W1-20261126"
+  ],
+  "same_candidate": false
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}

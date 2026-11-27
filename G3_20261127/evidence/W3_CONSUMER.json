@@ -1,7 +1,9 @@
 {
- "schema": "FHS5.PLP.G3.W3ConsumerReadback@1",
- "verdict": "ACCEPT",
- "accepted": true,
+ "schema": "FHS5.PLP.G3.W3ConsumerReadback@2",
+ "verdict": "BLOCKED_NOT_ADMITTED",
+ "accepted": false,
+ "evidence_accepted": true,
+ "admitted": false,
  "checks": {
   "manifest_sha": true,
   "seal_binds_candidate": true,
@@ -9,23 +11,29 @@
   "file_hashes": true,
   "checker_pass": true,
   "wrong_pin_refused": true,
-  "w2_12": true,
-  "dev_post_matches": true,
-  "dev_restored": true,
-  "ops_post_then_pre": true,
-  "ops_consumed": true
+  "w0_partial_state": true,
+  "w2_not_admitted": true,
+  "dev_fail_closed": true,
+  "ops_fail_closed": true,
+  "ecp_measured": true
  },
  "used": {
-  "candidate": "4874c347226afd33b204f5b0fae05f44fbeae6ac8e46d086d3420baf3a4d6988",
-  "manifest_sha256": "e5299bbb553eabdc9b6d2b1192436fda97a514f39124159a7c07204119150966",
+  "candidate": "3490388ef7cce32a5cbfcfd46c174cddbd610bb818886bc24a165b7ccbb0043b",
+  "manifest_sha256": "8479f7ab5ac51f1828e697e2fc8303b0b16e635ecced786e4ae783cf4e60c1ce",
   "packs": {
    "W0": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",
    "W1": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
    "W2": "7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0"
   },
   "w2_cases": 12,
-  "dev_base": "9fae9257a3402928efbe6ff0cd66f45761f52846",
-  "dev_preimage": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+  "w2_not_admitted": 3,
+  "ecp": {
+   "OBSERVED_THIS_RUN": 51,
+   "NOT_ADMITTED": 10,
+   "DEFERRED_HOST": 3,
+   "PARTIAL": 1,
+   "REASONED_NA": 2
+  }
  },
  "consumer_id": "g3-w3-consumer-20261127",
  "not_claimed": [

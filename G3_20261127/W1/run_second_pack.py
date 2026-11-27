@@ -64,7 +64,10 @@ def main(argv=None):
     a_pack = build("W1", "FHS-5_PLP/W1", "FHS-5/W1")
     b_pack = build("W2", "FHS-5_PLP/W2/CONTROL_PACK", "FHS-5/W2")
     ok = (a_pack["case_count"] == 13 and b_pack["case_count"] == 12
-          and a_pack["review"].get("verdict") in ("PASS", "OK", None)
+          and not a_pack["review"].get("findings")
+          and not b_pack["review"].get("findings")
+          and a_pack["review"].get("first_fail") is None
+          and b_pack["review"].get("first_fail") is None
           and a_pack["permission_state"] == "NONE_GRANTED"
           and b_pack["permission_state"] == "NONE_GRANTED")
     doc = {"schema": "FHS5.PLP.W1.SecondPack@1", "packages": [a_pack, b_pack],

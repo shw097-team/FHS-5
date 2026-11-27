@@ -1,5 +1,5 @@
 {
- "run_id": "W2-W2-OPS-01-20261127T182215",
+ "run_id": "W2-W2-OPS-01-20261127T191508",
  "case_id": "W2-OPS-01",
  "kind": "POS",
  "expected": {
@@ -27,82 +27,36 @@
      "--out",
      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\ops\\out",
      "--runid",
-     "OPS-A-20261127T182215",
+     "OPS-A-20261127T191508",
      "--result",
      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\OPS01_receiver.json"
     ],
-    "exit": 0
+    "exit": 2
    },
-   "4_post_world": "c23b3a76320c66cda3cbd9045164754630166a0d00bf31cd08a6a3a26197228c",
-   "5_receiver_parse_use": {
-    "schema": "FHS5.PLP.W2.BindingReceipt@1",
-    "run_id": "OPS-A-20261127T182215",
-    "subject": "FHS-5_PLP/W2/CONTROL_PACK",
-    "source_subject": "FHS-5_PLP/W2",
-    "scope": "W2-NF-01",
-    "candidate": "W2-G3-PCNF-r2",
-    "pins": {
-     "manifest_sha256": "7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0",
-     "tree_sha256": "957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c",
-     "case_set_sha256": "a78e689d42265851eba8ea0deb6f125eac4da591c47e49c2f89f610051a16aaf"
-    },
-    "parsed": {
-     "files": 5,
-     "assets": 25,
-     "cases": 12,
-     "first_case": "W2-DEV-01",
-     "first_fixture_sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001"
-    },
-    "readback": {
-     "fixture_case": "W2-DEV-01",
-     "fixture_kind": "POS"
-    },
-    "host": {
-     "host_id": "dab97dce04ed",
-     "principal": "principal-04f8996da763b7a9",
-     "os": "win32",
-     "python": "3.11.9",
-     "policy_epoch": null,
-     "epoch_state": "NOT_DECLARED_BY_HOST",
-     "epoch_probe": "no host policy service; recorded as not declared"
-    },
-    "created_at": "2026-11-27T18:22:15+0800"
-   },
+   "4_post_world": "ABSENT",
+   "5_receiver_parse_use": null,
    "6_compensation": {
     "kind": "DELETE_CREATED_ONLY",
-    "ok": true
+    "ok": false
    },
    "7_pre_state_readback": "ABSENT"
   },
   "checks": {
-   "exit0": true,
+   "exit0": false,
    "pre_absent": true,
-   "post_changed": true,
-   "consumer_ok": true,
-   "compensated": true,
-   "seven_present": true
+   "post_changed": false,
+   "consumer_ok": false,
+   "compensated": false,
+   "seven_present": false
   },
   "consumer": {
-   "consumer_id": "g3-w2-ops-consumer-20261127",
-   "checks": {
-    "schema": true,
-    "subject": true,
-    "scope": true,
-    "cases": true,
-    "pins": true,
-    "material_cases": true,
-    "readback": true
-   },
-   "all_ok": true,
-   "receipt_sha256": "b1e4c7520361b37adcda816eea44f15b183a202e14869f498a985a6d48992bdf",
-   "material_sha256": "6ff635b03326d5ada4aceb930c2a152747300f4d6f035d29a11475c5ce128d8f",
-   "subject": "FHS-5_PLP/W2/CONTROL_PACK",
-   "scope": "W2-NF-01",
-   "action": "parse+use+field-compare+readback"
-  }
+   "all_ok": false,
+   "error": "TARGET_NOT_CREATED"
+  },
+  "authority": "REQUEST_ONLY; external ISSUED grant absent"
  },
- "verdict": "PASS",
- "first_fail": null,
+ "verdict": "NOT_ADMITTED",
+ "first_fail": "NOT_ADMITTED",
  "observation_layer": "PRODUCT_EFFECT_ACTUAL",
  "not_covered": [
   "other Hosts",

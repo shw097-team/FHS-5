@@ -1,0 +1,23 @@
+{
+ "run_id": "W2-W2-R3-03-20261127T182215",
+ "case_id": "W2-R3-03",
+ "kind": "NEG",
+ "expected": {
+  "token": "WRITESET_UNBOUND",
+  "writes": 0
+ },
+ "observed": {
+  "token": "WRITESET_UNBOUND",
+  "historical": {
+   "source": "G4/CH-07",
+   "bytes": 125,
+   "sha256": "13df86fa8b75dc454351e584f8d2f363b0323f8c9b6948851ea40c1428e4423a"
+  },
+  "live": null,
+  "receiver_sha": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}

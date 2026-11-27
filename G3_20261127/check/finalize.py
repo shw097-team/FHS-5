@@ -81,11 +81,28 @@ def main(argv=None):
             "aggregate": candidate_agg,
             "modified_product": ["W1/check/w2_dev_gate.py", "W1/impl/host_facade.py"],
         },
-        "oracle": {w: packs[w]["case_set_sha256"] for w in packs},
-        "case_set": {"W0": 44, "W1": 13, "W2": 12},
+        "oracle": {}, "case_set": {},
         "pack_tree": {w: packs[w]["tree_sha256"] for w in packs},
         "evidence": {},
     }
+
+    for w, v in packs.items():
+        pk = v["pack"]
+        orows, crows = [], []
+        for c in pk.cases:
+            orel = c.get("oracle")
+            if orel:
+                a = pk.asset(orel)
+                osha = a["sha256"] if a else sha_file(pk.root / orel)
+                orows.append(f"{c['case_id']}|{osha}")
+            crows.append(f"{c['case_id']}|{c.get('fixture')}|{c.get('oracle')}")
+        pins["oracle"][w] = {"count": len(orows),
+                             "aggregate": sha("\n".join(sorted(orows)).encode())}
+        pins["case_set"][w] = {"count": len(crows),
+                               "aggregate": sha("\n".join(sorted(crows)).encode())}
+    pins["dependencies"] = {w: {"manifest_sha256": packs[w]["manifest_sha256"],
+                                "tree_sha256": packs[w]["tree_sha256"]} for w in packs}
+    pins["runtime"] = {"python": sys.version.split()[0]}
 
     # 3. evidence manifest (manifest and seal are self-excluded)
     # The manifest binds evidence/raw and the checker verdict only.  Narrative

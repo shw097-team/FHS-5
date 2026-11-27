@@ -1,0 +1,172 @@
+{
+ "argv": [
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\W2\\dev_driver.py",
+  "--world",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world",
+  "--ws",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\ws.json",
+  "--patch",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\patch.diff",
+  "--out",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\DEV01_driver.json"
+ ],
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world",
+ "live_head": "dd961d30fe11e2121c6a48d3e8bffd0128932ae2",
+ "write_set": [
+  {
+   "path": "W1/check/w2_receiver.py",
+   "operation": "MODIFY",
+   "preimage_sha256": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+  },
+  {
+   "path": "W1/check/test_j1_receiver.py",
+   "operation": "ADD"
+  }
+ ],
+ "admission": {
+  "ok": true,
+  "decision_id": "W2-G3-OWNER-20261127-05",
+  "subject_sha256": "d3d40df6025b494355e94a795d55065ab54d080672a9b5267a3c9662a009555f",
+  "verified_from": {
+   "decision": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world\\W1\\authority\\decisions\\DEV.json",
+   "sha256": "8166cce13a15efe5a24de10e5cac4b512aa9e2a28d650b65f1e49fc4c22bf332",
+   "trust": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world\\W1\\authority\\trust.json",
+   "trust_sha256": "e467a8d81f67a5dd0a1efc91855d208e59edc0c0bd90491bbb458648a492db7f"
+  }
+ },
+ "check": {
+  "ok": true,
+  "first_fail": null,
+  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world",
+  "checks": [
+   {
+    "check": "effect_token",
+    "ok": true,
+    "detail": "REPOSITORY_WRITE"
+   },
+   {
+    "check": "admission",
+    "ok": true,
+    "detail": "8166cce13a15efe5a24de10e5cac4b512aa9e2a28d650b65f1e49fc4c22bf332"
+   },
+   {
+    "check": "scope",
+    "ok": true,
+    "detail": "W2-NF-01"
+   },
+   {
+    "check": "repo_head",
+    "ok": true,
+    "detail": "dd961d30fe11e2121c6a48d3e8bffd0128932ae2"
+   },
+   {
+    "check": "preimage:W1/check/w2_receiver.py",
+    "ok": true,
+    "detail": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+   },
+   {
+    "check": "preimage:W1/check/test_j1_receiver.py",
+    "ok": true,
+    "detail": "absent"
+   },
+   {
+    "check": "dirty_preservation",
+    "ok": true,
+    "detail": "0 dirty in write set"
+   },
+   {
+    "check": "recovery_kind",
+    "ok": true,
+    "detail": "REVERSE_PATCH_ON_COPY"
+   }
+  ],
+  "wrote": [],
+  "product_calls": 0,
+  "mode": "WRITE",
+  "writes_allowed": true
+ },
+ "apply": {
+  "ok": true,
+  "first_fail": null,
+  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world",
+  "checks": [
+   {
+    "check": "effect_token",
+    "ok": true,
+    "detail": "REPOSITORY_WRITE"
+   },
+   {
+    "check": "admission",
+    "ok": true,
+    "detail": "8166cce13a15efe5a24de10e5cac4b512aa9e2a28d650b65f1e49fc4c22bf332"
+   },
+   {
+    "check": "scope",
+    "ok": true,
+    "detail": "W2-NF-01"
+   },
+   {
+    "check": "repo_head",
+    "ok": true,
+    "detail": "dd961d30fe11e2121c6a48d3e8bffd0128932ae2"
+   },
+   {
+    "check": "preimage:W1/check/w2_receiver.py",
+    "ok": true,
+    "detail": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+   },
+   {
+    "check": "preimage:W1/check/test_j1_receiver.py",
+    "ok": true,
+    "detail": "absent"
+   },
+   {
+    "check": "dirty_preservation",
+    "ok": true,
+    "detail": "0 dirty in write set"
+   },
+   {
+    "check": "recovery_kind",
+    "ok": true,
+    "detail": "REVERSE_PATCH_ON_COPY"
+   },
+   {
+    "check": "patch_structure",
+    "ok": true,
+    "detail": [
+     "W1/check/test_j1_receiver.py",
+     "W1/check/w2_receiver.py"
+    ]
+   },
+   {
+    "check": "post_readback",
+    "ok": true,
+    "detail": {
+     "unchanged": []
+    }
+   }
+  ],
+  "wrote": [
+   "W1/check/test_j1_receiver.py",
+   "W1/check/w2_receiver.py"
+  ],
+  "product_calls": 0,
+  "mode": "WRITE",
+  "writes_allowed": true,
+  "preimage_sha256": {
+   "W1/check/w2_receiver.py": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+  },
+  "postimage_sha256": {
+   "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+   "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+  },
+  "recovery_kind": "REVERSE_PATCH_ON_COPY"
+ },
+ "post": {
+  "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+  "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+ },
+ "status_porcelain": "1 .M N... 100644 100644 100644 406b20ac527609d976f93c62cd9cdfbc2f7015a1 406b20ac527609d976f93c62cd9cdfbc2f7015a1 W1/check/w2_receiver.py\n? W1/check/test_j1_receiver.py\n",
+ "diff_stat": " W1/check/w2_receiver.py | 991 ++++++++++++++++++++++++++++++++++++++++++------\n 1 file changed, 882 insertions(+), 109 deletions(-)\n",
+ "exit": 0
+}

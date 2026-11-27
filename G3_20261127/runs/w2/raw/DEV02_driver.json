@@ -11,7 +11,7 @@
   "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\DEV02_driver.json"
  ],
  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world",
- "live_head": "dd961d30fe11e2121c6a48d3e8bffd0128932ae2",
+ "live_head": "802c2ebd6e2d944443fc14626e8f24385cdf72fa",
  "write_set": [
   {
    "path": "W1/check/w2_receiver.py",
@@ -23,47 +23,10 @@
    "operation": "ADD"
   }
  ],
- "admission": {
-  "ok": true,
-  "decision_id": "W2-G3-OWNER-20261127-05",
-  "subject_sha256": "d3d40df6025b494355e94a795d55065ab54d080672a9b5267a3c9662a009555f",
-  "verified_from": {
-   "decision": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world\\W1\\authority\\decisions\\DEV.json",
-   "sha256": "8166cce13a15efe5a24de10e5cac4b512aa9e2a28d650b65f1e49fc4c22bf332",
-   "trust": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world\\W1\\authority\\trust.json",
-   "trust_sha256": "e467a8d81f67a5dd0a1efc91855d208e59edc0c0bd90491bbb458648a492db7f"
-  }
+ "error": {
+  "type": "AdmissionError",
+  "token": "NOT_ADMITTED",
+  "detail": "NOT_ADMITTED: grant_state=REQUEST_ONLY"
  },
- "check": {
-  "ok": false,
-  "first_fail": "REPO_HEAD_MISMATCH",
-  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\dev\\world",
-  "checks": [
-   {
-    "check": "effect_token",
-    "ok": true,
-    "detail": "REPOSITORY_WRITE"
-   },
-   {
-    "check": "admission",
-    "ok": true,
-    "detail": "8166cce13a15efe5a24de10e5cac4b512aa9e2a28d650b65f1e49fc4c22bf332"
-   },
-   {
-    "check": "scope",
-    "ok": true,
-    "detail": "W2-NF-01"
-   },
-   {
-    "check": "repo_head",
-    "ok": false,
-    "detail": "{'asserted': '1111111111111111111111111111111111111111', 'live': 'dd961d30fe11e2121c6a48d3e8bffd0128932ae2'}"
-   }
-  ],
-  "wrote": [],
-  "product_calls": 0,
-  "mode": "WRITE",
-  "writes_allowed": true
- },
- "exit": 0
+ "exit": 2
 }

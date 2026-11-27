@@ -41,5 +41,7 @@
   "W2_NF_VALIDATED",
   "W3_TECHNICALLY_READY",
   "RELEASED"
- ]
+ ],
+ "grant_state": "ISSUED",
+ "issuer_state": "UNIT_TEST_FIXTURE_DO_NOT_USE_FOR_PROTECTED_EFFECT"
 }

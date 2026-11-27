@@ -1,40 +1,35 @@
-# W2 CLOSEOUT（G3，2026-11-27）
+# W2 CLOSEOUT（G3-FINAL-DELTA，2026-11-27）
 
-- candidate：`W2-G3-PCNF-r2`；source manifest `7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0`
-- pack tree `957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c`；case set `a78e689d42265851eba8ea0deb6f125eac4da591c47e49c2f89f610051a16aaf`
-- raw：`G3_20261127/runs/w2/`
+- candidate：`W2-G3-PCNF-r2`；manifest `7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0`
 
-## 12 原案：**12/12 PASS**
+## 真結果：**9 PASS＋3 NOT_ADMITTED**
 
-DEV-01：base `9fae9257a3402928efbe6ff0cd66f45761f52846`、preimage `c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0`（9336 B）、MODIFY＋ADD、post `28bc674b564102b4…`、8 tests、reverse/restore、unlisted 不變。
-OPS-01：pre `ABSENT`→receipt/material→consumer `all_ok`→`DELETE_CREATED_ONLY`→`ABSENT`；七觀測齊。
-其餘 10 案（DEV-02／OPS-02／EFFECT／AUTH／RUNNER／DELTA／R3-01..04）皆有真 observed 與 token。
+| 類 | 案 |
+|---|---|
+| PASS | `W2-EFFECT-01`、`W2-AUTH-01`、`W2-RUNNER-01`、`W2-DELTA-01`、`W2-R3-01..04`、`W2-OPS-02`（共 9） |
+| NOT_ADMITTED | `W2-DEV-01`、`W2-DEV-02`、`W2-OPS-01` |
 
-## UNKNOWN 四類（OPS-O06／W2-CODEX-04）
+## R04 信任邊界修復
 
-`runs/w2/raw/unknown/UNKNOWN_FOUR.json`：**PASS**；classes `{'to_before': 'TO_BEFORE', 'to_after': 'TO_AFTER', 'partial': 'PARTIAL', 'exit0_wrong': 'EXIT0_WRONG'}`。
-每類為真 subprocess（timeout／partial／exit0）、WorldRaw pre/post、compensation 讀回。
+- `run_w2.py` 不再自簽 Owner Decision；decision 標 `grant_state=REQUEST_ONLY`、`issuer_state=PENDING_EXTERNAL_ISSUER`。
+- `w2_admission` 對非 `ISSUED` 一律 `NOT_ADMITTED`。
+- `dev_driver.py` 移除 caller 設定 `WRITE_ROOT`／`ALLOWED_OPS`。
+- `ops_receiver.py` 需外部 `--admission` 且 `grant_state=ISSUED`，否則 exit 2。
+- 結果：DEV／OPS effect 皆 fail-closed；前輪 self-auth 證據保留於 `runs/w2_selfauth_prior/`，不作為 grant。
 
-## N09 端到端因果鏈
+## UNKNOWN 四類
 
-`runs/w2/raw/N09_CHAIN.json`：**PASS**；九階段
-contracts→work_order→admission→dev_effect→ops_effect→readback→recovery→checker→consumer，
-每階段有真實檔案與 SHA。`first_fail=None`。
+`PASS`；分類**只由 observed state**（pre/post/exit）推導，非 `kind`；補償以 saved preimage 還原。
 
-## 授權
+## N09
 
-DEV `W2-G3-OWNER-20261127-05`、OPS `-06`（isolated roots）；舊 `-01..-04` revoked；`policy_epoch` 誠實記為 `NOT_DECLARED_BY_HOST`。
+`NOT_ADMITTED`（`first_fail=NOT_ADMITTED`）。已切斷與 Checker/Consumer 的循環：N09 只到 recovery，Checker 後驗，Consumer 再下游。
 
 ## Checker／Consumer
 
-- 分離 Checker：**PASS／46 checks**（SEPARATE_PROCESS_SAME_PRINCIPAL）。
-- fresh process Consumer：**ACCEPT**。
+- Checker：**PASS／44 checks**。
+- Consumer：**BLOCKED_NOT_ADMITTED**（`evidence_accepted=True`、`admitted=False`）。
 
 ## 判定
 
-**`W2_SCOPED_VALIDATED`**（本 candidate／本 CODEX local host）。
-`W3_TECHNICAL_READY=true`；`W3_ADMITTED=false`（未取得 W3 exact grant，未執行 W3 effect）。
-
-## 未閉項
-
-其他 Host、Publisher／Release、原域 DEV ECP、W3 effect。
+**`W2_NOT_ADMITTED`**。需外部 Owner／Issuer 對 exact operation（DEV `-05`／OPS `-06`）簽發 `grant_state=ISSUED` 後，才可重跑受保護效果並申請 W3。

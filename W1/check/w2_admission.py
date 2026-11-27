@@ -176,6 +176,9 @@ def _evaluate_state(doc, cfg, repo_root, now=None):
     did = doc.get("decision_id")
     if did in REVOKED:
         raise AdmissionError(REVOKED[did], did)
+    if str(doc.get("grant_state") or "") != "ISSUED":
+        raise AdmissionError("NOT_ADMITTED",
+                             "grant_state=" + str(doc.get("grant_state") or "REQUEST_ONLY"))
     try:
         end = _dt.datetime.fromisoformat(str(cfg.get("not_after") or doc.get("expiry")))
     except ValueError as exc:

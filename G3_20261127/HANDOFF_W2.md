@@ -1,7 +1,6 @@
 # W2 HANDOFF
 
-- 已驗：12/12、DEV true apply/test/reverse/restore、OPS true effect/compensation、UNKNOWN 四類、N09 九階段、Checker 46、Consumer ACCEPT。
-- raw：`runs/w2/raw/`（含 `UNKNOWN_FOUR.json`、`N09_CHAIN.json`）。
-- 未驗：其他 Host、Publisher/Release、原域 DEV ECP、W3 effect。
-- 下一合法 action：以 `evidence/W3_CONSUMER.json` 作 W3 P01 輸入；取得 W3 exact grant 後才可執行 W3。
-- 不得：把 `W2_SCOPED_VALIDATED` 當 RELEASE；把舊 grant 帶入 W3。
+- 真狀態：9 PASS＋3 NOT_ADMITTED；N09 NOT_ADMITTED；UNKNOWN 4/4。
+- 授權：`AUTHORITY_REQUEST` DEV `-05`／OPS `-06`（REQUEST_ONLY）。
+- 下一合法 action：Owner／Issuer 對 exact target/prestate/recovery 簽發 `ISSUED`，再重跑 DEV-01／DEV-02／OPS-01，重算 N09 與 Checker。
+- 不得：以 prompt、runner 或本地檔案自簽 grant。

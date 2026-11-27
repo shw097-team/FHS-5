@@ -53,33 +53,47 @@ def main(argv=None):
     checks["file_hashes"] = recomputed
     checks["checker_pass"] = checker["verdict"] == "PASS"
 
-    # wrong-pin negative: a self-consistent but altered seal must be refused
+    def verify_seal(manifest_path: Path, seal_obj: dict) -> bool:
+        return sha_file(manifest_path) == seal_obj.get("manifest_sha256")
+
     bad = copy.deepcopy(seal)
     bad["manifest_sha256"] = "0" * 64
-    checks["wrong_pin_refused"] = bad["manifest_sha256"] != sha_file(ev / "EVIDENCE_MANIFEST.json")
+    checks["wrong_pin_refused"] = not verify_seal(ev / "EVIDENCE_MANIFEST.json", bad)
 
     w2 = jl(runs / "w2" / "W2_RESULT.json")
-    checks["w2_12"] = w2["pass"] == 12
-    dev = jl(runs / "w2" / "raw" / "W2-DEV-01.json")["observed"]
-    ops = jl(runs / "w2" / "raw" / "W2-OPS-01.json")["observed"]
-    checks["dev_post_matches"] = dev["post_actual"] == dev["post_expected"]
-    checks["dev_restored"] = dev["restore"]["receiver_sha"] == dev["preimage"]["sha256"]
-    checks["ops_post_then_pre"] = (ops["seven"]["2_pre_world"] == "ABSENT"
-                                   and ops["seven"]["7_pre_state_readback"] == "ABSENT"
-                                   and ops["seven"]["4_post_world"] != "ABSENT")
-    checks["ops_consumed"] = ops["consumer"]["all_ok"] is True
+    dev = jl(runs / "w2" / "raw" / "W2-DEV-01.json")
+    ops = jl(runs / "w2" / "raw" / "W2-OPS-01.json")
+    ecp = jl(runs / "w1" / "raw" / "ECP67_MEASURED.json")
+    w0f = jl(G3 / "runs" / "w0_full" / "W0_FULL_RESULT.json")
+    checks["w0_partial_state"] = (w0f["counts"]["pass"] == 41
+                                  and w0f["counts"]["fail"] == 2
+                                  and w0f["verdict"] == "PARTIAL")
+    checks["w2_not_admitted"] = w2["verdict"] == "NOT_ADMITTED" and w2.get("not_admitted") == 3
+    checks["dev_fail_closed"] = (dev["verdict"] == "NOT_ADMITTED"
+                                 and dev["observed"]["post_actual"] == {})
+    checks["ops_fail_closed"] = (ops["verdict"] == "NOT_ADMITTED"
+                                 and ops["observed"]["checks"].get("exit0") is False)
+    checks["ecp_measured"] = (ecp["count"] == 67
+                              and ecp["counts"].get("OBSERVED_THIS_RUN", 0) >= 50)
 
-    accepted = all(checks.values())
-    doc = {"schema": "FHS5.PLP.G3.W3ConsumerReadback@1",
-           "verdict": "ACCEPT" if accepted else "REFUSE",
+    evidence_accepted = all(checks.values())
+    admitted = w2["verdict"] != "NOT_ADMITTED"
+    w0_closed = w0f["verdict"] == "DONE"
+    accepted = evidence_accepted and admitted and w0_closed
+    doc = {"schema": "FHS5.PLP.G3.W3ConsumerReadback@2",
+           "verdict": ("ACCEPT" if accepted else
+                       ("BLOCKED_NOT_ADMITTED" if evidence_accepted and not admitted
+                        else "REFUSE_NOT_CLOSED")),
            "accepted": accepted,
+           "evidence_accepted": evidence_accepted,
+           "admitted": admitted,
            "checks": checks,
            "used": {"candidate": pins["candidate"]["aggregate"],
                     "manifest_sha256": seal["manifest_sha256"],
                     "packs": pins["source"],
                     "w2_cases": 12,
-                    "dev_base": w2["dev"]["base"],
-                    "dev_preimage": w2["dev"]["preimage_sha256"]},
+                    "w2_not_admitted": w2.get("not_admitted"),
+                    "ecp": ecp["counts"]},
            "consumer_id": "g3-w3-consumer-20261127",
            "not_claimed": ["W3 execution", "Release", "independent external principal"]}
     Path(a.out).write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n",

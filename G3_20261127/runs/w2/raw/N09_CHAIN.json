@@ -1,5 +1,5 @@
 {
- "schema": "FHS5.PLP.W2.N09Chain@1",
+ "schema": "FHS5.PLP.W2.N09Chain@2",
  "order": [
   "contracts",
   "work_order",
@@ -7,177 +7,39 @@
   "dev_effect",
   "ops_effect",
   "readback",
-  "recovery",
-  "checker",
-  "consumer"
+  "recovery"
  ],
  "stages": {
   "contracts": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "runs/w1/raw/SECOND_PACK.json",
-     "exists": true,
-     "sha256": "7a28946333929d0ff714fb03fa558d451dddfde303ddbd6daa45e93adc59e1c1"
-    }
-   ],
-   "detail": {
-    "views": {
-     "PI": 12,
-     "PD": 8,
-     "DEV": 7,
-     "OPS": 7,
-     "TQAEP": 8
-    },
-    "cases": 12
-   }
+   "ok": true
   },
   "work_order": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "runs/w2/dev/ws.json",
-     "exists": true,
-     "sha256": "1d9b97c4c8160ead871d8ac3f180eb6832c3effcee79c580a36527ee03470e98"
-    }
-   ],
-   "detail": {
-    "dev": {
-     "project_id": "FHS-5_PLP",
-     "subject_id": "FHS-5_PLP/W2",
-     "scope": "W2-NF-01",
-     "profile": "GENERIC_CODEX_NATIVE_FIRST",
-     "wave": "W2",
-     "operation_id": "RUN-DEV-01",
-     "case_id": "W2-DEV-01"
-    },
-    "ops": {
-     "project_id": "FHS-5_PLP",
-     "subject_id": "FHS-5_PLP/W2",
-     "scope": "W2-NF-01",
-     "profile": "GENERIC_CODEX_NATIVE_FIRST",
-     "wave": "W2",
-     "operation_id": "RUN-OPS-01",
-     "case_id": "W2-OPS-01"
-    }
-   }
+   "ok": true
   },
   "admission": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "runs/w2/raw/DEV01_driver.json",
-     "exists": true,
-     "sha256": "c6558ebdde134b418f0ad061e88b80f4342ffdca7b588975f484dbdad039f0ef"
-    }
-   ],
-   "detail": {
-    "decision": "W2-G3-OWNER-20261127-05"
-   }
+   "ok": false,
+   "detail": "NOT_ADMITTED"
   },
   "dev_effect": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "runs/w2/raw/W2-DEV-01.json",
-     "exists": true,
-     "sha256": "6811c9e241a6e885f905a57f665730260c38ac9f9a488a6d5c115888057e33d9"
-    }
-   ],
-   "detail": {
-    "post": {
-     "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
-     "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
-    }
-   }
+   "ok": false
   },
   "ops_effect": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "runs/w2/raw/W2-OPS-01.json",
-     "exists": true,
-     "sha256": "f623d02a21d3660fa48385a2e45477868a249b59e72eea6213cd0d95498525ce"
-    },
-    {
-     "ref": "runs/w2/raw/OPS01_receiver.json",
-     "exists": true,
-     "sha256": "3508317a243f73bc3451c50b63b57ba1fa6bd947f1e4453b35f61cde89f98ef6"
-    }
-   ],
-   "detail": {
-    "pre": "ABSENT",
-    "post": "c23b3a76320c66cda3cbd9045164754630166a0d00bf31cd08a6a3a26197228c"
-   }
+   "ok": false
   },
   "readback": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "runs/w2/raw/OPS01_consumer.json",
-     "exists": true,
-     "sha256": "7eadab6060685ae78f8073d43c942adf3b42e61c2e3da3955809fd92abccccaf"
-    }
-   ],
-   "detail": {
-    "tests": "Ran 8 tests",
-    "consumer": "g3-w2-ops-consumer-20261127"
-   }
+   "ok": false
   },
   "recovery": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "runs/w2/raw/W2-DEV-01.json",
-     "exists": true,
-     "sha256": "6811c9e241a6e885f905a57f665730260c38ac9f9a488a6d5c115888057e33d9"
-    }
-   ],
-   "detail": {
-    "dev_restore": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
-    "ops_readback": "ABSENT"
-   }
+   "ok": false
   },
   "checker": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "evidence/CHECKER.json",
-     "exists": true,
-     "sha256": "a44a139ce60e3cd5c7f14d95d5d922da52f3ed8e0dff5f5494fbfdb5f6828c9d"
-    }
-   ],
-   "detail": {
-    "count": 40
-   }
+   "ok": true
   },
   "consumer": {
-   "ok": true,
-   "refs": [
-    {
-     "ref": "evidence/W3_CONSUMER.json",
-     "exists": true,
-     "sha256": "ecc43408708afc05fafe8753969191c9a8d7b7a982aaeec89c2f09a6ae918c20"
-    }
-   ],
-   "detail": {
-    "checks": {
-     "manifest_sha": true,
-     "seal_binds_candidate": true,
-     "file_count": true,
-     "file_hashes": true,
-     "checker_pass": true,
-     "wrong_pin_refused": true,
-     "w2_12": true,
-     "dev_post_matches": true,
-     "dev_restored": true,
-     "ops_post_then_pre": true,
-     "ops_consumed": true
-    }
-   }
+   "ok": true
   }
  },
- "verdict": "PASS",
- "first_fail": null,
- "note": "orchestration receipt over real artifacts; no new effect"
+ "verdict": "NOT_ADMITTED",
+ "first_fail": "NOT_ADMITTED",
+ "note": "contracts and work-order selection are real; the protected DEV/OPS effect stages are blocked because no external ISSUED grant exists"
 }

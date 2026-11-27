@@ -28,12 +28,26 @@ def main(argv=None):
     ap.add_argument("--out", required=True)
     ap.add_argument("--runid", required=True)
     ap.add_argument("--result", required=True)
+    ap.add_argument("--admission")
     a = ap.parse_args(argv)
     sys.path.insert(0, a.lib)
     import g3pack  # noqa: E402
 
     t0 = time.time()
     out = Path(a.out).resolve()
+    adm = None
+    if a.admission and Path(a.admission).is_file():
+        try:
+            adm = json.loads(Path(a.admission).read_text(encoding="utf-8"))
+        except Exception:
+            adm = None
+    if not adm or str(adm.get("grant_state") or "") != "ISSUED":
+        result = {"argv": sys.argv, "cwd": str(Path.cwd()), "run_id": a.runid,
+                  "exit": 2, "error": "NOT_ADMITTED: no ISSUED external admission"}
+        Path(a.result).write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n",
+                                  encoding="utf-8", newline="\n")
+        print(json.dumps({"exit": 2, "error": "NOT_ADMITTED"}))
+        return 2
     result = {"argv": sys.argv, "cwd": str(Path.cwd()), "run_id": a.runid,
               "started_at": time.strftime("%Y-%m-%dT%H:%M:%S%z")}
     try:

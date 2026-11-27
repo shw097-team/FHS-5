@@ -1,766 +1,694 @@
 {
- "schema": "FHS5.PLP.W1.ECPMeasured@1",
+ "schema": "FHS5.PLP.W1.ECPMeasured@2",
  "count": 67,
  "counts": {
-  "OBSERVED_THIS_RUN": 61,
+  "OBSERVED_THIS_RUN": 51,
+  "NOT_ADMITTED": 10,
   "DEFERRED_HOST": 3,
   "PARTIAL": 1,
   "REASONED_NA": 2
  },
  "rows": [
   {
-   "id": "DEV-ADP-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/GUIDE_SLICE.json"
-   ],
-   "observed": "advice not a grant",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-ADP-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "live snapshot W1/impl"
-   ],
-   "observed": "read-only call changed 0 bytes",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-ADP-03",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "115 tests: test_body_resolver"
-   ],
-   "observed": "path/UTF8/dup/oversize NEG",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-ADP-04",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/HOST_LEDGER.json"
-   ],
-   "observed": "stages from actual invoke",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
    "id": "DEV-APP-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pack",
    "evidence": [
-    "runs/w1/W1_RESULT.json",
-    "runs/w2/W2_RESULT.json"
+    "runs/w1/W1_RESULT.json"
    ],
-   "observed": "pack/domain applicability recorded",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "DEV-EFF-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "eff",
    "evidence": [
     "runs/w2/raw/W2-EFFECT-01.json"
    ],
-   "observed": "typed effects; unknown rejected",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-IDEM-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/_idem1_second.json"
-   ],
-   "observed": "second apply refused; wrote=0",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-IDEM-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/unknown/UNKNOWN_FOUR.json"
-   ],
-   "observed": "one TO_BEFORE retry then restore",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-IDEM-03",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "LastGood untouched; reverse/restore",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-OP-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "repo ctx",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-OP-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "preimage table",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-OP-03",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "exact 2-file write set",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-OP-04",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/API_SLICE.json",
-    "115 tests"
-   ],
-   "observed": "API POS/NEG",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-OP-05",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "postimage + 8 tests",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "DEV-OP-06",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/HOST_LEDGER.json",
-    "runs/w2/raw/OPS01_consumer.json"
-   ],
-   "observed": "consumer readback",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-PERM-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-AUTH-01.json"
-   ],
-   "observed": "no grant => FALSE_AUTHORITY",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-POST-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/W1-R3-01.json"
-   ],
-   "observed": "5+1 digests",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-POST-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/W1-R3-01.json"
-   ],
-   "observed": "26 asset join",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-POST-03",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/W1-R3-01.json"
-   ],
-   "observed": "identity 6 keys",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-POST-04",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "G3_20261127/CLOSEOUT_W*.md"
-   ],
-   "observed": "claims match observed",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-POST-05",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w0/raw/R4-variants.json"
-   ],
-   "observed": "outside canary unchanged",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "DEV-PRE-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "live_head",
    "evidence": [
-    "runs/w2/raw/W2-DEV-01.json",
-    "runs/w1/raw/W1-R3-01.json"
+    "runs/w2/raw/DEV01_driver.json"
    ],
-   "observed": "live HEAD/branch/status",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "DEV-PRE-02",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "preimage",
    "evidence": [
     "runs/w2/raw/W2-DEV-01.json"
    ],
-   "observed": "preimage 9336B c6667402",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "DEV-PRE-03",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "op/effect join via admission",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-PRE-04",
-   "verdict": "OBSERVED_THIS_RUN",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "admission",
    "evidence": [
     "runs/w2/raw/DEV01_driver.json"
    ],
-   "observed": "decision -05 + isolated root",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "protected effect unbound",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-PRE-04",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "admission",
+   "evidence": [
+    "runs/w2/raw/DEV01_driver.json"
+   ],
+   "observed": "protected effect unbound",
+   "predicate_complete": true
   },
   {
    "id": "DEV-PRE-05",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "tests",
    "evidence": [
-    "runs/w2/raw/W2-OPS-01.json"
+    "115 tests"
    ],
-   "observed": "python/git/isolated root",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-PROH-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "git diff a2281bf..HEAD -- W1"
-   ],
-   "observed": "only 2 named repairs",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-PROH-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "G3_20261127/evidence/FIVE_PINS.json"
-   ],
-   "observed": "oracle/case-set pins unchanged",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-PROH-03",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w0/raw/R4-variants.json",
-    "secret scan"
-   ],
-   "observed": "no outside read; no secret",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-PROH-04",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "reverse patch, no git revert",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-RB-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "gate/guard verify",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-RB-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "G3_20261127/evidence/EVIDENCE_MANIFEST.json"
-   ],
-   "observed": "raw join",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-RB-03",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/W2-DEV-01.json"
-   ],
-   "observed": "SHA replay",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "DEV-RB-04",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "evidence/CHECKER.json"
-   ],
-   "observed": "separate process, same principal",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "DEV-WS-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "guide",
    "evidence": [
     "runs/w1/raw/GUIDE_SLICE.json"
    ],
-   "observed": "thin/advice non-grant",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "DEV-WS-02",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "api",
    "evidence": [
     "runs/w1/raw/API_SLICE.json"
    ],
-   "observed": "5 MD reader + 4 APIs",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "DEV-WS-03",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "api",
    "evidence": [
     "runs/w1/raw/API_SLICE.json"
    ],
-   "observed": "84 clauses with spans",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "DEV-WS-04",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "host",
    "evidence": [
     "runs/w1/raw/HOST_LEDGER.json"
    ],
-   "observed": "host facade 7 stages",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-PROH-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "gitdiff",
+   "evidence": [
+    "git diff a2281bf..HEAD"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-PROH-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pins",
+   "evidence": [
+    "evidence/FIVE_PINS.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-PROH-03",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "no_secret",
+   "evidence": [
+    "secret scan"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-PROH-04",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "no_revert",
+   "evidence": [
+    "runs/w2/raw/W2-DEV-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-OP-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "live_head",
+   "evidence": [
+    "runs/w2/raw/DEV01_driver.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-OP-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "preimage",
+   "evidence": [
+    "runs/w2/raw/W2-DEV-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-OP-03",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "dev_effect",
+   "evidence": [
+    "runs/w2/raw/W2-DEV-01.json"
+   ],
+   "observed": "protected effect unbound",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-OP-04",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "api",
+   "evidence": [
+    "runs/w1/raw/API_SLICE.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-OP-05",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "dev_effect",
+   "evidence": [
+    "runs/w2/raw/W2-DEV-01.json"
+   ],
+   "observed": "protected effect unbound",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-OP-06",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "dev_effect",
+   "evidence": [
+    "runs/w2/raw/W2-DEV-01.json"
+   ],
+   "observed": "protected effect unbound",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-ADP-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "guide",
+   "evidence": [
+    "runs/w1/raw/GUIDE_SLICE.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-ADP-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "api",
+   "evidence": [
+    "runs/w1/raw/API_SLICE.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-ADP-03",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "tests",
+   "evidence": [
+    "115 tests"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-ADP-04",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "host",
+   "evidence": [
+    "runs/w1/raw/HOST_LEDGER.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-POST-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pack",
+   "evidence": [
+    "runs/w1/raw/W1-R3-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-POST-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pack",
+   "evidence": [
+    "runs/w1/raw/W1-R3-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-POST-03",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pack",
+   "evidence": [
+    "runs/w1/raw/W1-R3-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-POST-04",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pins",
+   "evidence": [
+    "CLOSEOUT/INDEX"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-POST-05",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "outside",
+   "evidence": [
+    "runs/w0/raw/R4-variants.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-RB-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pack",
+   "evidence": [
+    "runs/w1/W1_RESULT.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-RB-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pins",
+   "evidence": [
+    "evidence/EVIDENCE_MANIFEST.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-RB-03",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "preimage",
+   "evidence": [
+    "runs/w2/raw/W2-DEV-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-RB-04",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pins",
+   "evidence": [
+    "evidence/CHECKER.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-IDEM-01",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "dev_effect",
+   "evidence": [
+    "runs/w2/raw/W2-DEV-01.json"
+   ],
+   "observed": "protected effect unbound",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-IDEM-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "unknown",
+   "evidence": [
+    "runs/w2/raw/unknown/UNKNOWN_FOUR.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-IDEM-03",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "pins",
+   "evidence": [
+    "a2281bf untouched"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "DEV-PERM-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "auth",
+   "evidence": [
+    "runs/w2/raw/W2-AUTH-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-APP-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_host",
    "evidence": [
-    "runs/w1/raw/HOST_LEDGER.json"
+    "runs/w2/raw/W2-OPS-01.json"
    ],
-   "observed": "CODEX applicable; others deferred",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-CON-01",
-   "verdict": "DEFERRED_HOST",
-   "evidence": [
-    "02_W1_OPS_ECP.md Host matrix"
-   ],
-   "observed": "ChatGPT not mounted",
-   "predicate_complete": true,
-   "prior_disposition": "REASONED_NA",
-   "resume": "owner: next session; resume: same evidence class"
-  },
-  {
-   "id": "OPS-CON-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/HOST_LEDGER.json"
-   ],
-   "observed": "CODEX 7 stages",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-CON-03",
-   "verdict": "DEFERRED_HOST",
-   "evidence": [
-    "W1-HERMES-01 DEFERRED"
-   ],
-   "observed": "Kanban/Delegation/Swarm unbound",
-   "predicate_complete": true,
-   "prior_disposition": "DEFERRED",
-   "resume": "owner: next session; resume: same evidence class"
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-EFF-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_request",
    "evidence": [
-    "runs/w2/raw/OPS01_receiver.json"
+    "runs/w2/W2_RESULT.json"
    ],
-   "observed": "CREATE host effect",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-OP-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/OPS01_receiver.json"
-   ],
-   "observed": "no install; REASONED_NA_NATIVE_ENTRY",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-OP-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/HOST_LEDGER.json"
-   ],
-   "observed": "no plugin load claimed",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-OP-03",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/OPS01_receiver.json"
-   ],
-   "observed": "scope echo",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-OP-04",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/OPS01_receiver.json"
-   ],
-   "observed": "argv/exit",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-OP-05",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/OPS01_receiver.json"
-   ],
-   "observed": "receipt/material bytes",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-OP-06",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/OPS01_consumer.json"
-   ],
-   "observed": "independent consumer",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-POST-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/HOST_LEDGER.json"
-   ],
-   "observed": "7-stage row",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-POST-02",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w1/raw/HOST_LEDGER.json"
-   ],
-   "observed": "evidence classes",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
-  },
-  {
-   "id": "OPS-POST-03",
-   "verdict": "PARTIAL",
-   "evidence": [
-    "runs/w2/raw/OPS01_consumer.json"
-   ],
-   "observed": "same principal, separate process",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": "owner: next session; resume: same evidence class"
-  },
-  {
-   "id": "OPS-POST-04",
-   "verdict": "DEFERRED_HOST",
-   "evidence": [
-    "W1-HERMES-01 DEFERRED"
-   ],
-   "observed": "Hermes 3-child unbound",
-   "predicate_complete": true,
-   "prior_disposition": "DEFERRED",
-   "resume": "owner: next session; resume: same evidence class"
-  },
-  {
-   "id": "OPS-POST-05",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "runs/w2/raw/OPS01_receiver.json"
-   ],
-   "observed": "no install/service raw claimed",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-PRE-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_host",
    "evidence": [
     "runs/w2/raw/W2-OPS-01.json"
    ],
-   "observed": "host/principal/os/python",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-PRE-02",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_host",
    "evidence": [
     "runs/w2/raw/W2-OPS-01.json"
    ],
-   "observed": "isolated output root",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-PRE-03",
-   "verdict": "OBSERVED_THIS_RUN",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "admission",
    "evidence": [
     "runs/w2/raw/DEV01_driver.json"
    ],
-   "observed": "decision -06",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "protected effect unbound",
+   "predicate_complete": true
   },
   {
    "id": "OPS-PRE-04",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_epoch",
    "evidence": [
     "runs/w2/raw/OPS01_receiver.json"
    ],
-   "observed": "epoch_state=NOT_DECLARED_BY_HOST + probe",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-PRE-05",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_request",
    "evidence": [
-    "runs/w2/raw/OPS01_receiver.json"
+    "runs/w2/W2_RESULT.json"
    ],
-   "observed": "receipt schema + readback",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-CON-01",
+   "verdict": "DEFERRED_HOST",
+   "predicate": "defer",
+   "evidence": [
+    "ChatGPT not mounted"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-CON-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "host",
+   "evidence": [
+    "runs/w1/raw/HOST_LEDGER.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-CON-03",
+   "verdict": "DEFERRED_HOST",
+   "predicate": "defer",
+   "evidence": [
+    "Hermes not mounted"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-OP-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_host",
+   "evidence": [
+    "runs/w2/raw/W2-OPS-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-OP-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "host",
+   "evidence": [
+    "runs/w1/raw/HOST_LEDGER.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-OP-03",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_request",
+   "evidence": [
+    "runs/w2/W2_RESULT.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-OP-04",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_request",
+   "evidence": [
+    "runs/w2/W2_RESULT.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-OP-05",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "ops_effect",
+   "evidence": [
+    "runs/w2/raw/W2-OPS-01.json"
+   ],
+   "observed": "protected effect unbound",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-OP-06",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "ops_effect",
+   "evidence": [
+    "runs/w2/raw/W2-OPS-01.json"
+   ],
+   "observed": "protected effect unbound",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-POST-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "host",
+   "evidence": [
+    "runs/w1/raw/HOST_LEDGER.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-POST-02",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "evidence_classes",
+   "evidence": [
+    "runs/w1/raw/HOST_LEDGER.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-POST-03",
+   "verdict": "PARTIAL",
+   "predicate": "partial",
+   "evidence": [
+    "same principal"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-POST-04",
+   "verdict": "DEFERRED_HOST",
+   "predicate": "defer",
+   "evidence": [
+    "Hermes three child"
+   ],
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-POST-05",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_host",
+   "evidence": [
+    "runs/w2/raw/W2-OPS-01.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-RB-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_host",
    "evidence": [
     "runs/w2/raw/W2-OPS-01.json"
    ],
-   "observed": "container probe",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-RB-02",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "ops_host",
    "evidence": [
-    "runs/w2/raw/OPS01_consumer.json"
+    "runs/w2/raw/W2-OPS-01.json"
    ],
-   "observed": "host readback",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-REC-01",
    "verdict": "REASONED_NA",
+   "predicate": "na",
    "evidence": [
     "no install"
    ],
-   "observed": "install recovery not applicable",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": "owner: next session; resume: same evidence class"
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-REC-02",
    "verdict": "REASONED_NA",
+   "predicate": "na",
    "evidence": [
     "no registration"
    ],
-   "observed": "registration recovery not applicable",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": "owner: next session; resume: same evidence class"
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-REC-03",
-   "verdict": "OBSERVED_THIS_RUN",
+   "verdict": "NOT_ADMITTED",
+   "predicate": "ops_effect",
    "evidence": [
     "runs/w2/raw/W2-OPS-01.json"
    ],
-   "observed": "output restore/compensation",
-   "predicate_complete": true,
-   "prior_disposition": "PARTIAL",
-   "resume": ""
+   "observed": "protected effect unbound",
+   "predicate_complete": true
   },
   {
    "id": "OPS-REC-04",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "unknown",
    "evidence": [
     "runs/w2/raw/unknown/UNKNOWN_FOUR.json"
    ],
-   "observed": "four classes reconciled",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
-  },
-  {
-   "id": "OPS-RESUME-01",
-   "verdict": "OBSERVED_THIS_RUN",
-   "evidence": [
-    "evidence/CHECKER.json",
-    "evidence/W3_CONSUMER.json"
-   ],
-   "observed": "typed resume record",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
   },
   {
    "id": "OPS-STOP-01",
    "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "stop",
    "evidence": [
     "runs/w1/raw/W1-HERMES-01.json"
    ],
-   "observed": "only affected host stopped",
-   "predicate_complete": true,
-   "prior_disposition": "REUSE_VERIFIED",
-   "resume": ""
+   "observed": "",
+   "predicate_complete": true
+  },
+  {
+   "id": "OPS-RESUME-01",
+   "verdict": "OBSERVED_THIS_RUN",
+   "predicate": "resume",
+   "evidence": [
+    "evidence/CHECKER.json",
+    "evidence/W3_CONSUMER.json"
+   ],
+   "observed": "",
+   "predicate_complete": true
   }
  ],
  "basis": {
-  "w0_full": {
+  "w0": {
    "total": 44,
    "pass": 44,
    "fail": 0,
    "pending": 0
   },
-  "w1": 12,
-  "w2": 12,
+  "w2_verdict": "NOT_ADMITTED",
   "checker": "PASS",
   "consumer": "ACCEPT"
  }

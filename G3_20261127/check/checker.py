@@ -115,48 +115,66 @@ def main(argv=None):
     checks.append(check("w1_suite_115", suite.returncode == 0 and n == 115, ran[-1:] or ""))
 
 
-    # ---- W2
+    # ---- W2 (protected effects are NOT_ADMITTED; fail-closed is the predicate)
     w2 = jl(runs / "w2" / "W2_RESULT.json")
-    checks.append(check("w2_12_of_12", w2["pass"] == 12, w2["pass"]))
+    checks.append(check("w2_9_pass_3_not_admitted",
+                        w2["pass"] == 9 and w2.get("not_admitted") == 3
+                        and w2["verdict"] == "NOT_ADMITTED",
+                        {"pass": w2["pass"], "not_admitted": w2.get("not_admitted")}))
     dev = jl(runs / "w2" / "raw" / "W2-DEV-01.json")
     ob = dev["observed"]
-    checks.append(check("w2_dev_real_apply", ob["apply"]["ok"]
-                        and ob["post_actual"] == ob["post_expected"]
-                        and ob["preimage"]["sha256"]
-                        == (ob["apply"].get("preimage_sha256") or {}).get("W1/check/w2_receiver.py"),
-                        {"pre": ob["preimage"]["sha256"][:12],
+    drv = jl(runs / "w2" / "raw" / "DEV01_driver.json")
+    checks.append(check("w2_dev_fail_closed",
+                        dev["verdict"] == "NOT_ADMITTED"
+                        and (drv.get("error") or {}).get("token") == "NOT_ADMITTED"
+                        and ob["post_actual"] == {}
+                        and ob["restore"]["receiver_sha"] == ob["preimage"]["sha256"],
+                        {"error": (drv.get("error") or {}).get("token"),
                          "post": ob["post_actual"]}))
-    checks.append(check("w2_dev_reverse_restore", ob["checks"]["reverse_ok"]
-                        and ob["restore"]["receiver_sha"] == ob["preimage"]["sha256"]
-                        and ob["restore"]["test_absent"]))
-    checks.append(check("w2_dev_tests_real", ob["checks"]["tests_ok"]
-                        and "Ran 8 tests" in ob["tests"]["stderr_tail"],
-                        ob["tests"]["stderr_tail"][-160:]))
-    checks.append(check("w2_dev_unlisted_unchanged", ob["unlisted_unchanged"]))
     ops = jl(runs / "w2" / "raw" / "W2-OPS-01.json")
     ob2 = ops["observed"]
-    checks.append(check("w2_ops_seven", all(ob2["checks"].values())
-                        and len(ob2["seven"]) == 7, ob2["checks"]))
-    checks.append(check("w2_ops_pre_absent_post_changed_restored",
-                        ob2["seven"]["2_pre_world"] == "ABSENT"
-                        and ob2["seven"]["4_post_world"] != ob2["seven"]["2_pre_world"]
-                        and ob2["seven"]["7_pre_state_readback"] == "ABSENT"))
-    checks.append(check("w2_ops_compensation_not_git",
-                        ob2["seven"]["6_compensation"]["kind"] == "DELETE_CREATED_ONLY"))
+    checks.append(check("w2_ops_fail_closed",
+                        ops["verdict"] == "NOT_ADMITTED"
+                        and ob2["checks"].get("exit0") is False
+                        and ob2["seven"]["4_post_world"] == ob2["seven"]["2_pre_world"],
+                        {"exit0": ob2["checks"].get("exit0"),
+                         "pre": ob2["seven"]["2_pre_world"],
+                         "post": ob2["seven"]["4_post_world"]}))
+    world = runs / "w2" / "dev" / "world"
+    dec = world / "W1" / "authority" / "decisions" / "DEV.json"
+    if dec.is_file():
+        d = jl(dec)
+        checks.append(check("w2_no_self_issued_grant",
+                            d.get("grant_state") == "REQUEST_ONLY"
+                            and d.get("issuer_state") == "PENDING_EXTERNAL_ISSUER",
+                            {"grant_state": d.get("grant_state")}))
+    checks.append(check("w2_non_effect_cases",
+                        all(c["verdict"] == "PASS" for c in w2["cases"]
+                            if c["case_id"] not in ("W2-DEV-01", "W2-DEV-02", "W2-OPS-01"))))
 
     # ---- full W0 44, measured ECP, second pack, UNKNOWN, N09
     w0full = jl(runs / "w0_full" / "W0_FULL_RESULT.json")
-    checks.append(check("w0_full_44", w0full["counts"]["total"] == 44
-                        and w0full["counts"]["pass"] == 44
-                        and w0full["counts"]["fail"] == 0, w0full["counts"]))
-    checks.append(check("w0_full_consumer", w0full["consumer"]["consumed"] is True
-                        and w0full["consumer"]["checks"] == 803
-                        and not w0full["consumer"]["failed"],
+    checks.append(check("w0_full_state", w0full["counts"]["total"] == 44
+                        and w0full["counts"]["pass"] == 41
+                        and w0full["counts"]["fail"] == 2
+                        and w0full["counts"]["pending"] == 1
+                        and {f["case"] for f in w0full["failures"]} == {"NF-T01", "NF-T08"}
+                        and w0full["verdict"] == "PARTIAL", w0full["counts"]))
+    checks.append(check("w0_full_consumer", w0full["consumer"]["consumed"] is False
+                        and w0full["consumer"]["failure_code"] == "RECEIPT_VERDICT"
+                        and "RECEIPT-NF-T01" in w0full["consumer"]["failed"],
                         w0full["consumer"]))
+    checks.append(check("w0_lineage", w0full["lineage"]["sealed_pack_manifest"]
+                        == w0full["lineage"]["actual_pack_manifest"]
+                        == "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8"
+                        and w0full["lineage"]["g3_control_manifest"] !=
+                        w0full["lineage"]["sealed_pack_manifest"],
+                        w0full["lineage"]))
     ecp = jl(runs / "w1" / "raw" / "ECP67_MEASURED.json")
     checks.append(check("w1_ecp67_measured", ecp["count"] == 67
                         and sum(ecp["counts"].values()) == 67
-                        and ecp["counts"].get("OBSERVED_THIS_RUN", 0) >= 60,
+                        and ecp["counts"].get("OBSERVED_THIS_RUN", 0) >= 50
+                        and ecp["counts"].get("NOT_ADMITTED", 0) >= 10,
                         ecp["counts"]))
     second = jl(runs / "w1" / "raw" / "SECOND_PACK.json")
     checks.append(check("w1_second_pack", second["verdict"] == "PASS"
@@ -167,7 +185,8 @@ def main(argv=None):
     checks.append(check("w2_unknown_four", unk["verdict"] == "PASS"
                         and len(set(unk["classes"].values())) == 4, unk["classes"]))
     n09 = jl(runs / "w2" / "raw" / "N09_CHAIN.json")
-    checks.append(check("w2_n09_chain", n09["verdict"] == "PASS",
+    checks.append(check("w2_n09_chain", n09["verdict"] == "NOT_ADMITTED"
+                        and n09["first_fail"] == "NOT_ADMITTED",
                         n09["first_fail"]))
 
     # no PASS with a first_fail, no FAIL counted as PASS

@@ -1,7 +1,6 @@
 # W0 HANDOFF
 
-- 已驗：44/44（24+10+10）、consumer 803/0、SAMPLE/R4/R10/OFF。
-- raw：`runs/w0_full/delivery/`、`runs/w0/raw/`。
-- 未驗：HERMES/GPT host、FHS 485。
-- 下一合法 action：接受 W0 DONE 作 W1 上游；或指定 FHS Profile 另驗。
-- 不得：把 44/44 當 B0 全產品驗收；把 SAMPLE 當全部。
+- 真狀態：41 PASS／2 FAIL（NF-T01、NF-T08）／1 pending（NF-T10）；consumer 拒絕。
+- raw：`runs/w0_full/delivery/`；摘要 `W0_FULL_RESULT.json`。
+- 下一合法 action：補 NF-T08 契約上下文、修 NF-T01 cold OFF、重綁 NF-T10；或接受 W0 PARTIAL。
+- 不得：把前輪 44/44（d3e5 pack）當 sealed pack 結果。

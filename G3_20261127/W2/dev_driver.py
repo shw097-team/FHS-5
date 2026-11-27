@@ -35,8 +35,6 @@ def main(argv=None):
     if a.stale_preimage:
         ws = [dict(e) for e in ws]
         ws[0]["preimage_sha256"] = "0" * 64
-    A.WRITE_ROOT = str(world)
-    A.ALLOWED_OPS = tuple((e["path"], e["operation"].upper()) for e in ws)
     head = subprocess.run(["git", "-C", str(world), "rev-parse", "HEAD"],
                           capture_output=True, text=True).stdout.strip()
     out = {"argv": sys.argv, "cwd": str(Path.cwd()), "live_head": head,

@@ -1,5 +1,5 @@
 {
- "run_id": "W2-W2-DEV-02-20261127T182214",
+ "run_id": "W2-W2-DEV-02-20261127T191508",
  "case_id": "W2-DEV-02",
  "kind": "NEG",
  "expected": {
@@ -8,14 +8,15 @@
  },
  "observed": {
   "caller_head": "1111111111111111111111111111111111111111",
-  "live_head": "dd961d30fe11e2121c6a48d3e8bffd0128932ae2",
-  "first_fail": "REPO_HEAD_MISMATCH",
-  "wrote": [],
+  "live_head": "802c2ebd6e2d944443fc14626e8f24385cdf72fa",
+  "first_fail": null,
+  "wrote": null,
   "receiver_sha": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
-  "test_absent": true
+  "test_absent": true,
+  "authority": "REQUEST_ONLY"
  },
- "verdict": "PASS",
- "first_fail": null,
+ "verdict": "NOT_ADMITTED",
+ "first_fail": "NOT_ADMITTED",
  "observation_layer": "PRODUCT_CASE",
  "not_covered": []
 }

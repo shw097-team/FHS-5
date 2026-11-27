@@ -1,27 +1,56 @@
 {
- "schema": "FHS5.PLP.G3.W0FullRun@1",
+ "schema": "FHS5.PLP.G3.W0FullRun@2",
  "run_root": "G3_20261127/runs/w0_full/delivery",
  "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
  "counts": {
   "total": 44,
-  "pass": 44,
-  "fail": 0,
-  "pending": 0
+  "pass": 41,
+  "fail": 2,
+  "pending": 1
  },
  "cohorts": {
   "original": 24,
   "NF": 10,
   "SAMPLE": 10
  },
+ "failures": [
+  {
+   "case": "NF-T01",
+   "first_fail": "PASS",
+   "observed": "exit 3; cold OFF contract mismatch"
+  },
+  {
+   "case": "NF-T08",
+   "first_fail": "UNREPRODUCED",
+   "observed": "CONTRACT_CONTEXT_MISSING; negatives NEGATIVE_LEAK"
+  }
+ ],
+ "pending": [
+  "NF-T10"
+ ],
  "consumer": {
-  "run_id": "20261127T181933-cb670f34",
-  "consumed": true,
-  "validation_ok": true,
+  "run_id": "20261127T192118-a43ed6da",
+  "consumed": false,
+  "validation_ok": false,
+  "failure_code": "RECEIPT_VERDICT",
   "checks": 803,
-  "failed": []
+  "failed": [
+   "RECEIPT-NF-T01",
+   "RECEIPT-NF-T08",
+   "CHALLENGE-ORACLE",
+   "COLLAB-VERDICT",
+   "OFF-off_legacy"
+  ]
+ },
+ "lineage": {
+  "g3_control_manifest": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",
+  "sealed_pack_manifest": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "actual_pack_manifest": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+  "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247"
  },
  "materialization": "git clone 02_CANDIDATE/repo.bundle; checkout bb66a27",
- "note": "fresh 44-case run in an isolated copy; historical 13_ receipts untouched",
+ "verdict": "PARTIAL",
+ "note": "sealed pack restored; 41/44 pass; NF-T01/NF-T08 fail and NF-T10 pending; consumer rejects accordingly",
  "not_covered": [
   "HERMES/GPT host execution",
   "FHS 485 full regression"

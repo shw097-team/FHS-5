@@ -134,6 +134,8 @@ def build_world(run_root: Path):
         "decision_id": "W2-G3-OWNER-20261127-05",
         "issuer": "Human Owner via CODEX thin PROMPT; PCNF-W0W2-ADOPT-20261127-01",
         "claim": "OWNER_DELEGATED_ISOLATED_DEV",
+        "grant_state": "REQUEST_ONLY",
+        "issuer_state": "PENDING_EXTERNAL_ISSUER",
         "scope": {"subject_id": "FHS-5_PLP/W2/CONTROL_PACK", "scope": "W2-NF-01"},
         "effect": "REPOSITORY_WRITE",
         "write_root": str(world),
@@ -147,6 +149,8 @@ def build_world(run_root: Path):
         "decision_id": "W2-G3-OWNER-20261127-06",
         "issuer": "Human Owner via CODEX thin PROMPT; PCNF-W0W2-ADOPT-20261127-01",
         "claim": "OWNER_DELEGATED_ISOLATED_OPS",
+        "grant_state": "REQUEST_ONLY",
+        "issuer_state": "PENDING_EXTERNAL_ISSUER",
         "scope": {"subject_id": "FHS-5_PLP/W2/CONTROL_PACK", "scope": "W2-NF-01"},
         "effect": "HOST_EFFECT",
         "write_root": str(ops_out),
@@ -213,7 +217,7 @@ def build_world(run_root: Path):
     ws = [{"path": RECV, "operation": "MODIFY", "preimage_sha256": sha(old_b)},
           {"path": TEST, "operation": "ADD"}]
     write(run_root / "dev" / "ws.json", ws)
-    return {"world": world, "head": head, "old_sha": sha(old_b),
+    return {"world": world, "head": head, "issued": False, "old_sha": sha(old_b),
             "old_bytes": len(old_b), "post_sha": sha(post_b),
             "post_bytes": len(post_b), "test_sha": sha(test_b),
             "test_bytes": len(test_b), "ws": ws, "ops_out": ops_out,
@@ -329,6 +333,10 @@ def main(argv=None):
     rec["verdict"] = "PASS" if all(checks.values()) else "FAIL"
     rec["first_fail"] = next((k for k, ok in checks.items() if not ok), None)
     rec["observation_layer"] = "PRODUCT_EFFECT_ACTUAL"
+    if not env["issued"]:
+        rec["verdict"] = "NOT_ADMITTED"
+        rec["first_fail"] = "NOT_ADMITTED"
+        rec["observed"]["authority"] = "REQUEST_ONLY; external ISSUED grant absent"
     emit(rec)
 
     # ---------------- W2-DEV-02 (NEG: caller HEAD != live)
@@ -348,6 +356,10 @@ def main(argv=None):
           and chk.get("wrote") == [] and rec["observed"]["receiver_sha"] == env["old_sha"])
     rec["verdict"] = "PASS" if ok else "FAIL"
     rec["first_fail"] = None if ok else (chk.get("first_fail") or "NOT_REFUSED")
+    if not env["issued"]:
+        rec["verdict"] = "NOT_ADMITTED"
+        rec["first_fail"] = "NOT_ADMITTED"
+        rec["observed"]["authority"] = "REQUEST_ONLY"
     emit(rec)
 
     # ---------------- W2-OPS-01 (POS, real effect + WorldRaw + compensation)
@@ -366,9 +378,13 @@ def main(argv=None):
     ops_doc = json.loads((raw / "OPS01_receiver.json").read_text(encoding="utf-8"))
     post_world = tree_digest(out_root)
     target = out_root / "OPS-A"
-    con = run([PY, str(HERE / "ops_consumer.py"), "--target", str(target),
-               "--out", str(raw / "OPS01_consumer.json")], run_root)
-    con_doc = json.loads((raw / "OPS01_consumer.json").read_text(encoding="utf-8"))
+    if target.exists():
+        con = run([PY, str(HERE / "ops_consumer.py"), "--target", str(target),
+                   "--out", str(raw / "OPS01_consumer.json")], run_root)
+        con_doc = json.loads((raw / "OPS01_consumer.json").read_text(encoding="utf-8"))
+    else:
+        con = {"argv": [], "exit": 2, "stdout": "", "stderr": "TARGET_NOT_CREATED"}
+        con_doc = {"all_ok": False, "error": "TARGET_NOT_CREATED"}
     # compensation: delete created-only, then read back the pre-state
     comp_ok = False
     if target.exists():
@@ -397,6 +413,10 @@ def main(argv=None):
     rec["first_fail"] = next((k for k, ok in checks.items() if not ok), None)
     rec["observation_layer"] = "PRODUCT_EFFECT_ACTUAL"
     rec["not_covered"] = ["other Hosts", "container/cloud", "Publisher"]
+    if not env["issued"]:
+        rec["verdict"] = "NOT_ADMITTED"
+        rec["first_fail"] = "NOT_ADMITTED"
+        rec["observed"]["authority"] = "REQUEST_ONLY; external ISSUED grant absent"
     emit(rec)
 
     # ---------------- W2-OPS-02 (NEG: git revert as OPS recovery)
@@ -553,6 +573,7 @@ def main(argv=None):
     emit(rec)
 
     passed = sum(1 for r in rows if r["verdict"] == "PASS")
+    not_admitted = sum(1 for r in rows if r["verdict"] == "NOT_ADMITTED")
     result = {
         "schema": "FHS5.PLP.G3.W2.Run@1",
         "run_id": f"W2-G3-{time.strftime('%Y%m%dT%H%M%S')}",
@@ -562,7 +583,8 @@ def main(argv=None):
         "dev": {"base": BASE, "preimage_sha256": env["old_sha"],
                 "postimage_sha256": env["post_sha"]},
         "ops": {"root": str(env["ops_out"]), "compensated": True},
-        "verdict": "PASS" if passed == 12 else "PARTIAL",
+        "verdict": "NOT_ADMITTED" if not_admitted else ("PASS" if passed == 12 else "PARTIAL"),
+        "not_admitted": not_admitted,
         "not_claimed": ["W2_NF_VALIDATED", "other Hosts", "W3 full",
                         "Publisher/Release", "original-domain DEV ECP"],
     }

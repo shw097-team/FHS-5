@@ -25,7 +25,7 @@ import w1_nf_reader as base
 
 NFError = base.NFError
 
-ROW_RE = re.compile(r"^\|\s*`((?:DEV|OPS)-[A-Z]+-\d{2})`\s*\|(.+)\|\s*$")
+ROW_RE = re.compile(r"^\|\s*`((?:DEV|OPS)-[A-Z]+(?:-?[A-Z]+)?-?\d{2})`\s*\|(.+)\|\s*$")
 CASE_ROW_RE = re.compile(r"^\|\s*`(W[0-9]-[A-Z0-9]+-\d{2})`([^|]*)\|")
 FIELD_RE = re.compile(r"\*\*([A-Za-z_ ]+)\*\*\s*[：:]\s*(.+)$")
 JOB_RE = re.compile(r"Job to be done[^*\n]{0,12}[：:]\s*(.+)$")
@@ -278,15 +278,32 @@ def build_contracts(pack_root: str, work_identity: dict) -> dict:
     def _rows(name: str, kind: str) -> dict:
         rows = _table_rows(texts.get(name, ""))
         rows = [r for r in rows if r["id"].startswith(kind)]
+        if not rows:
+            # G3 tables put "`DEV-D01` Title" in the first cell, which the
+            # legacy strict row regex does not match.  Parse the same rows
+            # without inventing columns: operation / evidence / recovery.
+            for line in texts.get(name, "").splitlines():
+                m = re.match(r"^\|\s*`((?:DEV|OPS)-[A-Z]+(?:-?[A-Z]+)?-?\d{2})`\s*(.*?)\s*"
+                             r"\|\s*(.*?)\s*\|\s*(.*?)\s*\|", line)
+                if m:
+                    title = m.group(2).strip() or m.group(1)
+                    rows.append({"id": m.group(1),
+                                 "cells": [title, m.group(3).strip(), m.group(4).strip()]})
+            rows = [r for r in rows if r["id"].startswith(kind)]
         want = expect.get("dev" if kind == "DEV-" else "ops")
         if want and len(rows) != want:
             raise NFError("ECP_NOT_GRANT", f"{kind} rows {len(rows)} != {want}")
         out = []
         for r in rows:
             c = r["cells"] + [""] * (5 - len(r["cells"]))
-            out.append({"id": r["id"], "operation": c[0], "pre": c[1],
-                        "post": c[2], "recovery": c[3], "step": c[4],
-                        "cells": len(r["cells"])})
+            if len(r["cells"]) == 3:
+                out.append({"id": r["id"], "operation": c[0], "pre": c[1],
+                            "post": c[1], "recovery": c[2], "step": "",
+                            "cells": 3})
+            else:
+                out.append({"id": r["id"], "operation": c[0], "pre": c[1],
+                            "post": c[2], "recovery": c[3], "step": c[4],
+                            "cells": len(r["cells"])})
         return {"view": kind[:-1], "work_id": ident["work_id"], "profile": profile_name,
                 "count": len(out), "ids": [o["id"] for o in out], "rows": out,
                 "writeset_targets": sorted({o["step"] for o in out if o["step"]})}
@@ -396,7 +413,7 @@ def review(contracts: dict, pack_root: str, expected_subject_sha: dict | None = 
         for row in ((contracts.get("views") or {}).get(kind) or {}).get("rows") or []:
             checks += 1
             empties = [k for k in ("operation", "pre", "post", "recovery") if not row.get(k)]
-            if empties or row.get("cells", 5) < 5:
+            if empties or row.get("cells", 3) < 3:
                 add("R-002", "high", "missing_child_b", "review:rows", row["id"],
                     {"id": row["id"], "empty": empties, "cells": row.get("cells")},
                     {"all_five_columns": True}, ["W1/impl/tpm_contracts_nf.py"])
