@@ -1,0 +1,22 @@
+{
+ "schema": "FHS5.PLP.G3.PublicationReceipt@1",
+ "branch": "codex/w0-w2-g3-native-20261127",
+ "remote": "https://github.com/shw097-team/FHS-5.git",
+ "content_commit": "aad5a6de58ddba8d58b558f375be6e53db7ea7ef",
+ "docs_commit": "9c6bb8987a4128de47d303e322016d1a419ba553",
+ "status": "PUSH_BLOCKED_PENDING_EXPLICIT_CREDENTIAL_APPROVAL",
+ "reason": "no credential helper is configured and the local key file read was rejected by the policy reviewer; the exact push was not attempted without approval",
+ "remote_ref_created": false,
+ "remote_readback": null,
+ "local_delivery": {
+  "runs": "G3_20261127/runs/{w0,w1,w2}/raw",
+  "pins": "G3_20261127/evidence/FIVE_PINS.json",
+  "manifest": "G3_20261127/evidence/EVIDENCE_MANIFEST.json",
+  "seal": "G3_20261127/evidence/SEAL.json",
+  "checker": "G3_20261127/evidence/CHECKER.json",
+  "consumer": "G3_20261127/evidence/W3_CONSUMER.json"
+ },
+ "checker_verdict": "PASS",
+ "consumer_verdict": "ACCEPT",
+ "next": "explicit approval to use C:\\Projects\\Agent_Workspace\\API KEY\\GITHUB-REPO_SHW097-4.txt for this exact push"
+}

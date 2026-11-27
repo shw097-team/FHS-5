@@ -6,7 +6,7 @@
 | 基準 | S2/S3 `a2281bf5542d53ed67b678c0d5b91d0793cc81c4`（`codex/w0-w2-s2-s3-20261126T225929`） |
 | 施工分支 | `codex/w0-w2-g3-native-20261127` |
 | 內容 commit | `aad5a6de58ddba8d58b558f375be6e53db7ea7ef` |
-| 交付 commit | 見本檔最後更新之 commit（docs commit） |
+| 交付 commit（docs） | `9c6bb8987a4128de47d303e322016d1a419ba553` |
 | LastGood | `a2281bf`（未改動）；本輪未 force push、未 merge main |
 | Checker | `evidence/CHECKER.json`：PASS／40 checks |
 | Consumer | `evidence/W3_CONSUMER.json`：ACCEPT |
