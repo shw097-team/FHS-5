@@ -1,11 +1,11 @@
 # W0 -> W1 minimal consume checklist
 
-- generated_at: `2026-11-27T15:42:07+00:00`
+- generated_at: `2026-11-27T16:05:02+00:00`
 - scope: `FHS-5_PLP/W0`
 - pack_manifest_sha256: `e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8`
 - candidate_commit: `bb66a276aae8c5d6aef549832c523587fc47d247`
 - oracle_sha256: `112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6`
-- evidence_manifest_sha256: `0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527`
+- evidence_manifest_sha256: `12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a`
 - cases: 44
 
 ## next_legal_action

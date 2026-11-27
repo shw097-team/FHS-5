@@ -1,0 +1,11 @@
+{
+  "schema": "FHS5.W0.G17.FullSuite@1",
+  "pos": true,
+  "neg_byte": true,
+  "neg_locator": true,
+  "audit_zero_outside_read": true,
+  "receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+  "items": 44,
+  "checklist_sha256": "96e66d6fd7901007cbdd8d7855a49a498a5bcf9e0fd58fb28f2c92242ab1d318",
+  "verdict": "PASS"
+}

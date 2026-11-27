@@ -1,8 +1,8 @@
 {
-  "run_id": "20261127T234153-ecdbff08",
-  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T234153-ecdbff08\\receipt.json",
-  "receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
-  "handoff_sha256": "3e5d6104d6fccbe7d46a5484b26340247f13054358e9ab8dd81b27f5ae92673d",
-  "evidence_manifest_sha256": "0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527",
+  "run_id": "20261128T000245-5dc3792c",
+  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+  "receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+  "handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+  "evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
   "candidate_commit": "bb66a276aae8c5d6aef549832c523587fc47d247"
 }

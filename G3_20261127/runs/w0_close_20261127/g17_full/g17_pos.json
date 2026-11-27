@@ -1,0 +1,44 @@
+{
+  "schema": "FHS5.W0.G17.FullPOS@1",
+  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+  "expected_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+  "run": {
+    "exit": 0,
+    "stdout": {
+      "status": "W1_CHECKLIST_READY",
+      "items": 44,
+      "outputs": {
+        "w1_checklist.json": {
+          "sha256": "96e66d6fd7901007cbdd8d7855a49a498a5bcf9e0fd58fb28f2c92242ab1d318",
+          "bytes": 39439
+        },
+        "w1_checklist.md": {
+          "sha256": "9dedaa12136fb78250df3b8827e6f46d8647e1f18095d7e597fe5f86d4867057",
+          "bytes": 6886
+        }
+      },
+      "readback_ok": true,
+      "receipt_gate": {
+        "consumer_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER",
+        "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+        "expected_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+        "observed_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+        "receipt_bytes": 136017,
+        "receipt_parsed": true,
+        "receipt_consumed": true,
+        "receipt_run_id": "20261128T000245-5dc3792c",
+        "receipt_handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+        "receipt_evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
+        "latest_run_id": null
+      }
+    },
+    "stderr": ""
+  },
+  "consume_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\w1_out_pos\\consume_receipt.json",
+  "consume_receipt_sha256": "cc872413ef62dde438efdc382994af83645693099d9986b53902a287e6d7166a",
+  "checklist": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\w1_out_pos\\w1_checklist.json",
+  "checklist_sha256": "96e66d6fd7901007cbdd8d7855a49a498a5bcf9e0fd58fb28f2c92242ab1d318",
+  "items": 44,
+  "readback_ok": true,
+  "verdict": "PASS"
+}

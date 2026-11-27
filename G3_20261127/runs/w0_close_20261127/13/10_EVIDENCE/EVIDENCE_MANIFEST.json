@@ -1,6 +1,6 @@
 {
   "schema": "FHS5.W0NF.EvidenceManifest@1",
-  "generated_at": "2026-11-27T15:40:33+00:00",
+  "generated_at": "2026-11-27T16:02:45+00:00",
   "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "candidate": {
@@ -3920,8 +3920,8 @@
     },
     {
       "path": "tools/finalize_t10.py",
-      "bytes": 10443,
-      "sha256": "3c45b7f4992c022bb0a75bcfdbc6feffba267d795361d6fc20d3f705d4f26832"
+      "bytes": 10762,
+      "sha256": "49a73944f848b4d519a211e089abc0fdcc2d373619e42c6fee3068d1f36fa156"
     },
     {
       "path": "tools/guide.py",
@@ -4035,8 +4035,8 @@
     },
     {
       "path": "tools/w1_min_consume.py",
-      "bytes": 23604,
-      "sha256": "d8a34a47a2495ee59377ef899e74e07ef03ee0921c8f0c3541ca5ad93c94c671"
+      "bytes": 27581,
+      "sha256": "7da57bb8f451285c21052176965b1d240b49d73d90a8e077342a803db4da6d8e"
     }
   ]
 }

@@ -197,6 +197,97 @@ def render_md(checklist: dict) -> bytes:
     return ("\n".join(lines) + "\n").encode("utf-8")
 
 
+def resolve_and_verify_receipt(args, root, handoff_path, evidence_path):
+    """Trusted delivery pin -> confined locator -> bytes SHA -> parse -> verdict.
+
+    The receipt is never opened before the locator is confined to the consumer
+    root and the expected digest is resolved from an explicit pin or the
+    delivery's CONSUMER_MANIFEST. LATEST.receipt is a locator only; its digest
+    is not accepted as the expected value by itself.
+    """
+    consumer_root = (Path(args.consumer_root).resolve()
+                     if getattr(args, "consumer_root", None)
+                     else (root / "07_CONSUMER").resolve())
+    if not consumer_root.is_dir():
+        raise Reject("CONSUMER_ROOT_MISSING", str(consumer_root))
+    latest = {}
+    if getattr(args, "receipt", None):
+        rp = Path(args.receipt)
+        if not rp.is_absolute():
+            rp = consumer_root / rp
+        rp = rp.resolve()
+    else:
+        latest_path = consumer_root / "LATEST.json"
+        if not latest_path.is_file():
+            raise Reject("RECEIPT_LOCATOR_MISSING", str(latest_path))
+        latest = load_json(latest_path)
+        loc = latest.get("receipt")
+        if not loc:
+            raise Reject("RECEIPT_LOCATOR_MISSING", "LATEST.receipt")
+        rp = Path(loc)
+        if not rp.is_absolute():
+            rp = consumer_root / rp
+        rp = rp.resolve()
+    # Confinement is a refusal condition, not an informational field.
+    if not rp.is_relative_to(consumer_root):
+        raise Reject("RECEIPT_LOCATOR_OUTSIDE",
+                     {"receipt": str(rp), "consumer_root": str(consumer_root)})
+    expected = (getattr(args, "expected_receipt_sha", None) or "").strip().lower()
+    if expected and not HEX64.fullmatch(expected):
+        raise Reject("EXPECTED_RECEIPT_SHA_INVALID", expected)
+    if not expected:
+        cm_path = consumer_root / "CONSUMER_MANIFEST.json"
+        if cm_path.is_file():
+            cm = load_json(cm_path)
+            cm_receipt = cm.get("consumer_receipt")
+            if cm_receipt:
+                cp = Path(cm_receipt)
+                if not cp.is_absolute():
+                    cp = consumer_root / cp
+                if cp.resolve() == rp:
+                    expected = (cm.get("consumer_receipt_sha256") or "").strip().lower()
+        if not expected:
+            raise Reject("EXPECTED_RECEIPT_SHA_REQUIRED", {"receipt": str(rp)})
+    if not rp.is_file():
+        raise Reject("RECEIPT_MISSING", str(rp))
+    if not evidence_path.is_file():
+        raise Reject("EVIDENCE_MISSING", str(evidence_path))
+    raw = rp.read_bytes()
+    got = sha_bytes(raw)
+    if got != expected:
+        raise Reject("RECEIPT_SHA_MISMATCH",
+                     {"expected": expected, "observed": got, "receipt": str(rp)})
+    try:
+        rec = json.loads(raw.decode("utf-8"))
+    except Exception as exc:
+        raise Reject("RECEIPT_PARSE_ERROR", str(exc))
+    if rec.get("consumed") is not True or rec.get("validation_ok") is not True:
+        raise Reject("RECEIPT_NOT_CONSUMED",
+                     {"consumed": rec.get("consumed"),
+                      "validation_ok": rec.get("validation_ok")})
+    if rec.get("handoff_sha256") != sha_file(handoff_path):
+        raise Reject("RECEIPT_HANDOFF_MISMATCH",
+                     {"receipt": rec.get("handoff_sha256"),
+                      "current": sha_file(handoff_path)})
+    if rec.get("evidence_manifest_sha256") != sha_file(evidence_path):
+        raise Reject("RECEIPT_EVIDENCE_MISMATCH",
+                     {"receipt": rec.get("evidence_manifest_sha256"),
+                      "current": sha_file(evidence_path)})
+    gate = {
+        "consumer_root": str(consumer_root),
+        "receipt": str(rp),
+        "expected_receipt_sha256": expected,
+        "observed_receipt_sha256": got,
+        "receipt_bytes": len(raw),
+        "receipt_parsed": True,
+        "receipt_consumed": True,
+        "receipt_run_id": rec.get("run_id"),
+        "receipt_handoff_sha256": rec.get("handoff_sha256"),
+        "receipt_evidence_manifest_sha256": rec.get("evidence_manifest_sha256"),
+        "latest_run_id": latest.get("run_id"),
+    }
+    return gate, rec
+
 def consume(args) -> dict:
     handoff_path = Path(args.handoff).resolve()
     if not handoff_path.is_file():
@@ -231,6 +322,9 @@ def consume(args) -> dict:
     if "W1" not in target:
         raise Reject("SCOPE_MISMATCH", {"target_consumer": target})
 
+    evidence_path = root / "10_EVIDENCE" / "EVIDENCE_MANIFEST.json"
+    receipt_gate, verified_receipt = resolve_and_verify_receipt(
+        args, root, handoff_path, evidence_path)
     pack_dir = root / "01_PACK" / "FHS-5_PLP_W0_NATIVE_FIRST"
     pack_manifest = pack_dir / "05_W0_SOURCE_MANIFEST.json"
     if not pack_manifest.is_file():
@@ -312,7 +406,7 @@ def consume(args) -> dict:
                 or sha_file(repo / "fixtures" / name) != exp:
             raise Reject("FIXTURE_MISMATCH", name)
 
-    evidence_path = root / "10_EVIDENCE" / "EVIDENCE_MANIFEST.json"
+    # evidence_path resolved before the receipt gate
     if not evidence_path.is_file():
         raise Reject("PIN_MISMATCH_EVIDENCE", "evidence manifest missing")
     evd = load_json(evidence_path)
@@ -346,24 +440,17 @@ def consume(args) -> dict:
             or summary.get("pack_manifest_sha256") != pack_sha:
         raise Reject("PIN_MISMATCH_SUMMARY", None)
 
-    # The legacy 803-check consumer is not a precondition here (this script is
-    # the fresh consumer). Record, not trust, any existing finalization so the
-    # W1 side can see whether summary.finalized_t10 points inside this tree.
-    consumer_info = {"legacy_latest_present": False}
-    latest_path = root / "07_CONSUMER" / "LATEST.json"
-    if latest_path.is_file():
-        latest = load_json(latest_path)
-        consumer_info["legacy_latest_present"] = True
-        consumer_info["legacy_run_id"] = latest.get("run_id")
-        lr = Path(latest.get("receipt") or "")
-        consumer_info["legacy_receipt"] = str(lr)
-        consumer_info["legacy_receipt_in_input_root"] = lr.is_file() and \
-            lr.resolve().is_relative_to(root)
-        if lr.is_file():
-            old = load_json(lr)
-            consumer_info["legacy_receipt_handoff_sha_match"] = \
-                old.get("handoff_sha256") == sha_file(handoff_path)
-            consumer_info["legacy_consumed"] = old.get("consumed")
+    consumer_info = {
+        "receipt_gate": receipt_gate,
+        "legacy_latest_present": True,
+        "legacy_run_id": receipt_gate.get("latest_run_id") or receipt_gate.get("receipt_run_id"),
+        "legacy_receipt": receipt_gate["receipt"],
+        "legacy_receipt_in_input_root": True,
+        "legacy_receipt_handoff_sha_match": True,
+        "legacy_consumed": True,
+        "verified_receipt_parsed": True,
+        "verified_receipt_used": True,
+    }
     fin = summary.get("finalized_t10") or {}
     if fin.get("consumer_run_id"):
         fin_receipt = root / "07_CONSUMER" / "runs" / str(fin["consumer_run_id"]) \
@@ -372,7 +459,6 @@ def consume(args) -> dict:
         consumer_info["finalized_receipt_present"] = fin_receipt.is_file()
         consumer_info["finalized_matches_latest"] = \
             fin["consumer_run_id"] == consumer_info.get("legacy_run_id")
-
     seen = set()
     for e in indexed:
         rel = e.get("path")
@@ -472,6 +558,7 @@ def consume(args) -> dict:
             "evidence_manifest_sha256": evd_sha,
             "case_set": field_from(text, "case_set", raw=True),
             "legacy_consumer": consumer_info,
+            "receipt_gate": receipt_gate,
         },
         "next_legal_action": section(text, "next_legal_action"),
         "dependencies": section(text, "dependencies"),
@@ -525,7 +612,8 @@ def consume(args) -> dict:
     if (out_root / "consume_receipt.json").read_bytes() != receipt_bytes:
         raise Reject("READBACK_MISMATCH", "consume_receipt.json")
     return {"status": "W1_CHECKLIST_READY", "items": len(items),
-            "outputs": receipt["outputs"], "readback_ok": True}
+            "outputs": receipt["outputs"], "readback_ok": True,
+            "receipt_gate": receipt_gate}
 
 
 def main() -> int:
@@ -535,6 +623,9 @@ def main() -> int:
     ap.add_argument("--repo")
     ap.add_argument("--out-root", required=True)
     ap.add_argument("--scope", default="W0")
+    ap.add_argument("--receipt")
+    ap.add_argument("--expected-receipt-sha")
+    ap.add_argument("--consumer-root")
     a = ap.parse_args()
     try:
         result = consume(a)

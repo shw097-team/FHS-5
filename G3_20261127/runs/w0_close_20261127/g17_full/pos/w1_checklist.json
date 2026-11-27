@@ -1,0 +1,999 @@
+{
+  "schema": "FHS5.W1.MinimalConsumeChecklist@1",
+  "generated_by": "tools/w1_min_consume.py",
+  "generated_at": "2026-11-27T16:02:59+00:00",
+  "scope": "FHS-5_PLP/W0",
+  "requested_scope": "W0",
+  "w0": {
+    "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\09_DELIVERY\\W0_HANDOFF.md",
+    "handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+    "handoff_id": "W0-NF-HANDOFF-20261125-03",
+    "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+    "w0m_amendment_sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+    "candidate_commit": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "candidate_tree": "b69c54ded7ee10b7424c4900acbf6125b1ce025b",
+    "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+    "evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
+    "case_set": "SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44",
+    "legacy_consumer": {
+      "receipt_gate": {
+        "consumer_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER",
+        "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+        "expected_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+        "observed_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+        "receipt_bytes": 136017,
+        "receipt_parsed": true,
+        "receipt_consumed": true,
+        "receipt_run_id": "20261128T000245-5dc3792c",
+        "receipt_handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+        "receipt_evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
+        "latest_run_id": null
+      },
+      "legacy_latest_present": true,
+      "legacy_run_id": "20261128T000245-5dc3792c",
+      "legacy_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+      "legacy_receipt_in_input_root": true,
+      "legacy_receipt_handoff_sha_match": true,
+      "legacy_consumed": true,
+      "verified_receipt_parsed": true,
+      "verified_receipt_used": true,
+      "finalized_run_id": "20261127T225645-015592e8",
+      "finalized_receipt_present": true,
+      "finalized_matches_latest": false
+    },
+    "receipt_gate": {
+      "consumer_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER",
+      "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+      "expected_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+      "observed_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+      "receipt_bytes": 136017,
+      "receipt_parsed": true,
+      "receipt_consumed": true,
+      "receipt_run_id": "20261128T000245-5dc3792c",
+      "receipt_handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+      "receipt_evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
+      "latest_run_id": null
+    }
+  },
+  "next_legal_action": "W1 以本 pins 為基線 requalify 14 HOLD／R3-CR，先做來源與 W1M 差額，不重跑 W0；W1 產品施工另需上位採納與 W1M／下一包一致。",
+  "dependencies": "- W1M／W1 下一包與本 W0 pins 一致。\n- W1 必要入口、能力與授權（未具時 `W1_EXECUTION_READY=NOT_CLAIMED`）。\n- Bridge 38＋28、C16 等完整分母另案。",
+  "resume_predicate": "W1M 受影條款正式採納；或真實 W0 pin／candidate／oracle 變更需 requalify；或 Owner 提供 W1 入口／授權。",
+  "not_covered": [
+    "W1–W4 全分母、FHS 485、HERMES／GPT Host、不同 principal 簽章、Publisher/Release。"
+  ],
+  "claim_ceiling": {
+    "w0_consumer_receipts_reverified": true,
+    "w0_case_expected_unchanged": true,
+    "w1_execution": "NOT_CLAIMED",
+    "w1_full_wave": "NOT_CLAIMED",
+    "release": "NOT_CLAIMED"
+  },
+  "items": [
+    {
+      "case_id": "SAMPLE-R1",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_ok.md exit=0 status=COMPLETE"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=0 status=COMPLETE",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R1.json",
+      "receipt_sha256": "d1481de39514bc6e9e19255ac72b2cc11e45dcae0bd8e8b2a7bf58d26ef51ca9",
+      "run_id": "SAMPLE-R1-20261125T144147",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R2",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_missing.md exit=2 status=MISSING"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=2 status=MISSING",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R2.json",
+      "receipt_sha256": "0afe72d2794efa467da043df6765a65d2a3d2ada78c51c659d45758b27d18eb8",
+      "run_id": "SAMPLE-R2-20261125T144147",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R3",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_dup.md exit=3 status=INVALID_DUP"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=3 status=INVALID_DUP",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R3.json",
+      "receipt_sha256": "e938cfbaf7d4e400a42faceddb574de33ccd07518b956c4aa8ad1bdb08a44e77",
+      "run_id": "SAMPLE-R3-20261125T144148",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R5",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_bad_utf8.md exit=3 status=INVALID_ENCODING"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=3 status=INVALID_ENCODING",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R5.json",
+      "receipt_sha256": "9c3715fc1dbec8e2ecb4921afba31a10190d372c4b6eebe03befea438b5031cb",
+      "run_id": "SAMPLE-R5-20261125T144148",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R6",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_ok.md exit=3 status=SHA_MISMATCH"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=3 status=SHA_MISMATCH",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R6.json",
+      "receipt_sha256": "22208d571a39685e719cf2981e316b8b6628423bb9a8dfd4288df739fc20c7c9",
+      "run_id": "SAMPLE-R6-20261125T144148",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R7",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_ambiguous.md exit=3 status=INVALID_FORMAT"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=3 status=INVALID_FORMAT",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R7.json",
+      "receipt_sha256": "6f2dc4865715cfc9fb7468d96afb2448bdccbd5910450b31c13eb88cc9e9ce79",
+      "run_id": "SAMPLE-R7-20261125T144148",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R8",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_malformed.md exit=3 status=INVALID_FORMAT"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=3 status=INVALID_FORMAT",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R8.json",
+      "receipt_sha256": "5f1f29a2623c4f29470088fb5f330f14a3441c8aa91d3d770c13a2de39209d2f",
+      "run_id": "SAMPLE-R8-20261125T144148",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R9",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_ok.md exit=0 status=COMPLETE"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=0 status=COMPLETE",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R9.json",
+      "receipt_sha256": "adb789cac900ed0795a68a3c837591867155f3134a156716a59b1e683a72f7d2",
+      "run_id": "SAMPLE-R9-20261125T144148",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R10",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "05_TQAEP/oracle.json",
+        "text": "fixture=case_ok.md exit=0 status=COMPLETE"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": "exit=0 status=COMPLETE",
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R10.json",
+      "receipt_sha256": "25d384d1df3a9c2e65d2ce1ed509e892c09842f7e410c0eb1c30d85246324ba8",
+      "run_id": "SAMPLE-R10-20261125T144148",
+      "raw_refs": [],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "SAMPLE-R4",
+      "kind": "SAMPLE",
+      "requirement_atom": {
+        "source": "requirements.md",
+        "text": "同一 source 執行兩次結果相同；可在受權 output root 作一次可逆寫入並 readback。"
+      },
+      "expected_first_fail": "",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/SAMPLE-R4.json",
+      "receipt_sha256": "62205659f9dd48f38ff176c4b53152f8b7ced45dacfa6e37474fb76bed6d98d9",
+      "run_id": "SAMPLE-R4-20261125T144149",
+      "raw_refs": [
+        "SAMPLE-R4.observed.json"
+      ],
+      "w1_use": "baseline_evidence"
+    },
+    {
+      "case_id": "F5-W0-T01",
+      "kind": "POS",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T01` POS | KEEP | 真 source bytes＋合法 READ | source SHA/span/root 一致；無 OPS/Publisher Gate；`0`／`READ_OK` | 真 file read＋hash；source inventory | `SOURCE_IDENTITY` | 無（B0 必需）",
+        "requirements": []
+      },
+      "expected_first_fail": "SOURCE_IDENTITY",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T01.json",
+      "receipt_sha256": "03dcc70fe8035bf5ec368a82e28baf67f23e7918fc88cf96ec005b05d6baf992",
+      "run_id": "F5-W0-T01-20261125T144149",
+      "raw_refs": [
+        "F5-W0-T01.observed.json"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T02",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T02` NEG | KEEP | source 改一 byte | `SOURCE_INTEGRITY_FAILED`；舊 trace 不沿用；`3` | mutation fixture；expected hash mismatch | `SOURCE_INTEGRITY_FAILED` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "SOURCE_INTEGRITY_FAILED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T02.json",
+      "receipt_sha256": "d09a4d8b070b6704a673a046c73c8d4e690b2eafc02b11244c9912408edb61f1",
+      "run_id": "F5-W0-T02-20261125T144149",
+      "raw_refs": [
+        "F5-W0-T02.observed.json"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T03",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T03` NEG | KEEP | A 有、B 缺 | parent 不 PASS；`missing=[\"B\"]`；`2` | `case_missing.md`；CLI/Reviewer | `REQUIRED_CHILD_MISSING` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "REQUIRED_CHILD_MISSING",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T03.json",
+      "receipt_sha256": "14d39c4a9c1803b85660fb8cfed462d4c0d16172afd65c63baf9b03f719f3450",
+      "run_id": "F5-W0-T03-20261125T144149",
+      "raw_refs": [],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T04",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T04` NEG | REPLACE | 自造 OriginalID/Reader ACK | 不得升格；合法 direct READ 不被阻；`no-op` | 假 ID/receipt 不接受 | `FALSE_AUTHORITY` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "FALSE_AUTHORITY",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T04.json",
+      "receipt_sha256": "6f88cf981b639e742314095400b3a788eb853b7c950c8f355e0bd601bc96243d",
+      "run_id": "F5-W0-T04-20261125T144149",
+      "raw_refs": [
+        "F5-W0-T04.meta.json",
+        "F5-W0-T04.observed.json",
+        "F5-W0-T04.stderr.txt",
+        "F5-W0-T04.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T05",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T05` NEG | KEEP | Guide 擴 Scope A→B | scope/write-set 不變；clarify/拒 | ThinStart mutation；compare allowlist | `GUIDE_SCOPE_DRIFT` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "GUIDE_SCOPE_DRIFT",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T05.json",
+      "receipt_sha256": "93ac2bd6792e0590fcfe6e4a03f63e54ee4b6c3873123e93ccbfdfdb5486f40c",
+      "run_id": "F5-W0-T05-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T05.meta.json",
+        "F5-W0-T05.observed.json",
+        "F5-W0-T05.stderr.txt",
+        "F5-W0-T05.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T06",
+      "kind": "SEC",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T06` SEC | KEEP＋強化 | `../`、absolute、UNC、symlink/junction/reparse | 不讀 root 外；source hash 不變；`3/INVALID_PATH` | §03.2 path 生成＋outside canary | `BRIDGE_BOUNDARY_FAIL` | symlink 建立失敗時該子例 `NOT_VERIFIED`",
+        "requirements": []
+      },
+      "expected_first_fail": "BRIDGE_BOUNDARY_FAIL",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T06.json",
+      "receipt_sha256": "bedc2ac302452ca9acde5986de6e681cf30326faa64f04d7c16e27bcd7693ff2",
+      "run_id": "F5-W0-T06-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T06.observed.json"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T07",
+      "kind": "EDGE",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T07` EDGE | OPTIONAL | legacy proposal-1→2 或 unknown required field | 舊相容另帳；新版 reject/保真，不靜默丟 | 新 consumer unknown-schema 負例 | `SCHEMA_UNSUPPORTED` | Legacy proposal 半 `DEFER`",
+        "requirements": []
+      },
+      "expected_first_fail": "SCHEMA_UNSUPPORTED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T07.json",
+      "receipt_sha256": "e0792c58578efa597fab75ce71d3371157a4b8b1d7a3bd4c0cd01ada1ddce454",
+      "run_id": "F5-W0-T07-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T07.meta.json",
+        "F5-W0-T07.observed.json",
+        "F5-W0-T07.stderr.txt",
+        "F5-W0-T07.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T08",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T08` NEG | KEEP | code 可見但 Host 未 bound | `BIND/ACTIVATE`，不判 CODE_MISSING | capability probe；no synthetic missing | `HOST_CAPABILITY_UNBOUND` | HERMES 專屬 activation 移至 Compatibility，不阻 CODEX",
+        "requirements": []
+      },
+      "expected_first_fail": "HOST_CAPABILITY_UNBOUND",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T08.json",
+      "receipt_sha256": "2cb10dad5e843c1bd2edb786c7c27b4b44657bb4be8f851a69ce50e66d7e8b4a",
+      "run_id": "F5-W0-T08-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T08.meta.json",
+        "F5-W0-T08.observed.json",
+        "F5-W0-T08.stderr.txt",
+        "F5-W0-T08.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T09",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T09` NEG | KEEP | 注入 W4 Release 作 W0 READ 前置 | `PHASE_OVERREACH_CANDIDATE`；READ 可走 | 靜態 DAG/trace review | `PHASE_OVERREACH_CANDIDATE` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "PHASE_OVERREACH_CANDIDATE",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T09.json",
+      "receipt_sha256": "9c030b245503d026ddbd63bddb643692cbd259c71b6f5551abec56afcdc8f6ed",
+      "run_id": "F5-W0-T09-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T09.meta.json",
+        "F5-W0-T09.observed.json",
+        "F5-W0-T09.stderr.txt",
+        "F5-W0-T09.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T10",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T10` NEG | KEEP | 同操作 post-readback 作 admission 前置 | cycle；不執行該 effect | DAG edge review；`12`/`12'` 區分 | `GATE_CYCLE_CANDIDATE` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "GATE_CYCLE_CANDIDATE",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T10.json",
+      "receipt_sha256": "bf46ebedf06dab2e34982dc71987af451b59ff8bdde0e6bf847c68cd1d2ea43a",
+      "run_id": "F5-W0-T10-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T10.meta.json",
+        "F5-W0-T10.observed.json",
+        "F5-W0-T10.stderr.txt",
+        "F5-W0-T10.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T11",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T11` NEG | REPLACE | `permit=true`／越 write-set／無真 grant | no-op；pre/post 不變；`NOT_ADMITTED` | 真權限檢查；假 permit 實驗 | `FALSE_AUTHORITY` | 真 grant 若未取得，只驗 no-op 半",
+        "requirements": []
+      },
+      "expected_first_fail": "FALSE_AUTHORITY",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T11.json",
+      "receipt_sha256": "48c16e76438bdd6e3f733f30e159cce0550df81ca8396999e7344271be4561c0",
+      "run_id": "F5-W0-T11-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T11.meta.json",
+        "F5-W0-T11.observed.json",
+        "F5-W0-T11.stderr.txt",
+        "F5-W0-T11.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T12",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T12` NEG | REPLACE | unknown effect alias | `EFFECT_MAPPING_UNVERIFIED`，不默認 READ | no-op 負例；不建 Registry | `EFFECT_MAPPING_UNVERIFIED` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "EFFECT_MAPPING_UNVERIFIED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T12.json",
+      "receipt_sha256": "a8b2c72111a71e7ca297a55a3e9db7b206eadc57e6e46d5b38b976e2ece27a7b",
+      "run_id": "F5-W0-T12-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T12.meta.json",
+        "F5-W0-T12.observed.json",
+        "F5-W0-T12.stderr.txt",
+        "F5-W0-T12.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T13",
+      "kind": "POS",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T13` POS | KEEP | 真授權 DEV/OPS | pre/post/readback/recovery 正確；`0` | 多筆受界可逆 DEV＋本地 CODEX OPS | `EFFECT_NOT_VERIFIED` | 外部 Host/Legacy Profile 另驗",
+        "requirements": []
+      },
+      "expected_first_fail": "EFFECT_NOT_VERIFIED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T13.json",
+      "receipt_sha256": "0b61087da2c3d9238bbb1dd52d8adedf21d224c08813cefc7ad237434d0eeaa9",
+      "run_id": "F5-W0-T13-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T13.observed.json"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T14",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T14` NEG | KEEP | exit 0 但 output/state 錯 | `EFFECT_NOT_VERIFIED` | controlled mutation；checker 判 semantic | `EFFECT_NOT_VERIFIED` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "EFFECT_NOT_VERIFIED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T14.json",
+      "receipt_sha256": "a6c8ca2809dc862605b0e35005d5543fcc718de9b1d0a50522b82925f0110b7e",
+      "run_id": "F5-W0-T14-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T14.meta.json",
+        "F5-W0-T14.observed.json",
+        "F5-W0-T14.stderr.txt",
+        "F5-W0-T14.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T15",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T15` NEG | KEEP | Challenge 改 subject/oracle | 拒收；該證據不採用 | hash mismatch/candidate mutation | `ORACLE_DRIFT` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "ORACLE_DRIFT",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T15.json",
+      "receipt_sha256": "aea879b4c2f0fcc1b09036d887eddb9ecd2c5186ed9e3dec648603bd29cb5065",
+      "run_id": "F5-W0-T15-20261125T144150",
+      "raw_refs": [
+        "F5-W0-T15.meta.json",
+        "F5-W0-T15.observed.json",
+        "F5-W0-T15.stderr.txt",
+        "F5-W0-T15.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T16",
+      "kind": "EDGE",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T16` EDGE | KEEP | candidate 變更重用舊 raw | frozen identity mismatch；只重驗受影 | new candidate digest；stale raw | `CANDIDATE_CHANGED` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "CANDIDATE_CHANGED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T16.json",
+      "receipt_sha256": "96b00a365ee4cdb34b7a8e230e89ad55f4575b671abd58ad0c5cbfda525e63cb",
+      "run_id": "F5-W0-T16-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T16.meta.json",
+        "F5-W0-T16.observed.json",
+        "F5-W0-T16.stderr.txt",
+        "F5-W0-T16.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T17",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T17` NEG | KEEP | 只有文字，無 argv/exit/raw | `UNREPRODUCED/NOT_PROVEN` | negative input；no raw | `UNREPRODUCED` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "UNREPRODUCED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T17.json",
+      "receipt_sha256": "d01d92ddbe511b99cb4c2f4ae7400657d40206ff5db168651639b92bfb136654",
+      "run_id": "F5-W0-T17-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T17.meta.json",
+        "F5-W0-T17.observed.json",
+        "F5-W0-T17.stderr.txt",
+        "F5-W0-T17.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T18",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T18` NEG | KEEP | source 不可達卻 `zero_results` | `RESEARCH_REQUIRED/ABSTAIN`；不填 0 | simulated unavailable；status split | `ZERO_FROM_UNAVAILABLE` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "ZERO_FROM_UNAVAILABLE",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T18.json",
+      "receipt_sha256": "eb803affaa00fe1fcc50112d475349aa02062e21111a77b853cf350d2b923a5a",
+      "run_id": "F5-W0-T18-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T18.meta.json",
+        "F5-W0-T18.observed.json",
+        "F5-W0-T18.stderr.txt",
+        "F5-W0-T18.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T19",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T19` NEG | REPLACE | FAR 無真 raw 或越 Owner scope 自 CLOSE | 不 `FIX_NOW/CLOSE` | advice policy test；scope check | `FALSE_CLOSE` | Fabric 三源 `DEFER`",
+        "requirements": []
+      },
+      "expected_first_fail": "FALSE_CLOSE",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T19.json",
+      "receipt_sha256": "3f07b9dedec01712992fc998e36f658974f37785fd2abb22b174f4a6b25cd0f4",
+      "run_id": "F5-W0-T19-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T19.meta.json",
+        "F5-W0-T19.observed.json",
+        "F5-W0-T19.stderr.txt",
+        "F5-W0-T19.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T20",
+      "kind": "EDGE",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T20` EDGE | KEEP | 同名 FirstFail 但有新 raw | 不直接 PARK；重鑑定受影 | old/new raw pair；delta check | `NO_DELTA_REWRITE_DENIED` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "NO_DELTA_REWRITE_DENIED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T20.json",
+      "receipt_sha256": "1b9ccca8bc8cbb27bdf4630e9a8ec110783e1c53f9ff929bc9497c76cd93487b",
+      "run_id": "F5-W0-T20-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T20.meta.json",
+        "F5-W0-T20.observed.json",
+        "F5-W0-T20.stderr.txt",
+        "F5-W0-T20.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T21",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T21` NEG | KEEP／簡化 | 無新 delta 反覆重派 | 停同質重派；不建 PARK service | retry log；same key | `NO_DELTA_REWRITE_DENIED` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "NO_DELTA_REWRITE_DENIED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T21.json",
+      "receipt_sha256": "d9d004b9d89bdbf4e1eb13399d44c48e68babe256f022fb110364bb11c7038db",
+      "run_id": "F5-W0-T21-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T21.meta.json",
+        "F5-W0-T21.observed.json",
+        "F5-W0-T21.stderr.txt",
+        "F5-W0-T21.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T22",
+      "kind": "NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T22` NEG | KEEP | Guide CLOSE 但無 Checker/Publisher | 不得 RELEASE；`CLOSEOUT_ADVICE` | closeout advice test；no publisher | `RELEASE_NOT_CLAIMED` | Publisher",
+        "requirements": []
+      },
+      "expected_first_fail": "RELEASE_NOT_CLAIMED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T22.json",
+      "receipt_sha256": "e8e013d7501aad53856b32a89e7f1ec525d366300bbbc6b28aec40ddd4e0210c",
+      "run_id": "F5-W0-T22-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T22.meta.json",
+        "F5-W0-T22.observed.json",
+        "F5-W0-T22.stderr.txt",
+        "F5-W0-T22.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T23",
+      "kind": "SEC",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T23` SEC | KEEP | 包內 secret sentinel | 不外流；redaction；不入 raw | secret sentinel fixture；scan | `SECRET_LEAK`／`EVIDENCE_LAUNDERING` | 無",
+        "requirements": []
+      },
+      "expected_first_fail": "SECRET_LEAK",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T23.json",
+      "receipt_sha256": "5f33c812d483964389c81c09bbcc85d317a9d8a1aa27081ffa2882d0b0678211",
+      "run_id": "F5-W0-T23-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T23.meta.json",
+        "F5-W0-T23.observed.json",
+        "F5-W0-T23.stderr.txt",
+        "F5-W0-T23.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "F5-W0-T24",
+      "kind": "POS/NEG",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`F5-W0-T24` POS/NEG | KEEP＋profile | Generic OFF READ；FHS 缺適用 ID | Generic 可 READ；FHS 適用子集缺 ID 拒；485 全量 DEFER | OFF cold start；profile applicability | `PROFILE_GATE_DRIFT` | FHS 485 全量 `DEFER`",
+        "requirements": []
+      },
+      "expected_first_fail": "PROFILE_GATE_DRIFT",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/F5-W0-T24.json",
+      "receipt_sha256": "f8ab2d71c569b4c14d3dee7b4575f1c2fdf79d4600d33592187064abdf9ca80f",
+      "run_id": "F5-W0-T24-20261125T144151",
+      "raw_refs": [
+        "F5-W0-T24.meta.json",
+        "F5-W0-T24.observed.json",
+        "F5-W0-T24.stderr.txt",
+        "F5-W0-T24.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T01",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T01/R08` | 隔離 profile 不載入 HGK/FABRIC/SBL/FHS/PIPD；cold-off B0 read/test；記 load/import/call trace | 同 scope parity；無 hard import | `ARCHITECTURE_REWORK_REQUIRED` | Fabric 原 Profile `DEFER`",
+        "requirements": [
+          "R08"
+        ]
+      },
+      "expected_first_fail": "ARCHITECTURE_REWORK_REQUIRED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T01.json",
+      "receipt_sha256": "dadf0ae16958a823a1cd9dbf6cea00d5ff7bc16c828189f4ea62d7a701c19265",
+      "run_id": "NF-T01-20261127T234011",
+      "raw_refs": [
+        "NF-T01.meta.json",
+        "NF-T01.observed.json",
+        "NF-T01.stderr.txt",
+        "NF-T01.stdout.txt",
+        "requal_NF-T01.meta.json",
+        "requal_NF-T01.stderr.txt",
+        "requal_NF-T01.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T02",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T02/R01/R03` | 無 OriginalReader；真 file/Git pin；Bridge/direct；hash/path 負例 | source SHA/span；越界拒 | `FALSE_READER` | 假 Reader 前置/安全被移除",
+        "requirements": [
+          "R01",
+          "R03"
+        ]
+      },
+      "expected_first_fail": "FALSE_READER",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T02.json",
+      "receipt_sha256": "0f6db5b624b8a772e9b86d41f6ef8a9807fe0d36bf5c23361179532e4d4ee591",
+      "run_id": "NF-T02-20261125T144153",
+      "raw_refs": [
+        "NF-T02.meta.json",
+        "NF-T02.observed.json",
+        "NF-T02.stderr.txt",
+        "NF-T02.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T03",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T03/R04/R10` | 無 EffectRegistry/Issuer service；真 sandbox/OS gain；write/run＋restore；越權 no-op | pre/post/readback/recovery；越權無效 | `EFFECT_NOT_VERIFIED` | 無法安全執行/誤允許",
+        "requirements": [
+          "R04",
+          "R10"
+        ]
+      },
+      "expected_first_fail": "EFFECT_NOT_VERIFIED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T03.json",
+      "receipt_sha256": "0934e2b8ff06c4f1ed1b0f7b05a8f47193b181c117665cb9d7d2be440d318af5",
+      "run_id": "NF-T03-20261125T144153",
+      "raw_refs": [
+        "NF-T03.meta.json",
+        "NF-T03.observed.json",
+        "NF-T03.stderr.txt",
+        "NF-T03.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T04",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T04/R05` | 無 CaseRegistry/Runner；stdlib/repo runner POS/NEG；checker 不改 oracle | argv/exit/raw；oracle 先凍結 | `RUNNER_UNBOUND` | 無法實跑/假驗收",
+        "requirements": [
+          "R05"
+        ]
+      },
+      "expected_first_fail": "RUNNER_UNBOUND",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T04.json",
+      "receipt_sha256": "1b133517a54f0d2f36b0d8ce42596d8efce83ea26a581865ebf04db1f5db7d95",
+      "run_id": "NF-T04-20261125T144153",
+      "raw_refs": [
+        "NF-T04.meta.json",
+        "NF-T04.observed.json",
+        "NF-T04.stderr.txt",
+        "NF-T04.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T05",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T05/R03/R08` | Bridge OFF；direct pack read；與 ON 比較 | direct 可完成；Bridge 專屬另驗 | `OFF_PARITY_UNPROVEN` | Bridge ON 專屬案 `DEFER`",
+        "requirements": [
+          "R03",
+          "R08"
+        ]
+      },
+      "expected_first_fail": "OFF_PARITY_UNPROVEN",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T05.json",
+      "receipt_sha256": "44baaa500bc6d6e905aad2b7b39aa4e003f9550e298876e34b8a271691df8686",
+      "run_id": "NF-T05-20261125T144153",
+      "raw_refs": [
+        "NF-T05.meta.json",
+        "NF-T05.observed.json",
+        "NF-T05.stderr.txt",
+        "NF-T05.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T06",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T06/R06/R07` | FAR OFF；明確 bug direct patch/retest；FAR ON 另驗兩方案 | 明確錯不被研究 gate 卡死 | `FALSE_RESEARCH_GATE` | FAR ON 的 Fabric 專屬 `DEFER`",
+        "requirements": [
+          "R06",
+          "R07"
+        ]
+      },
+      "expected_first_fail": "FALSE_RESEARCH_GATE",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T06.json",
+      "receipt_sha256": "f4c13fe6d8d36ff279be28d2d305add01a43d8f1f6e2d409af1e41b1205d71d8",
+      "run_id": "NF-T06-20261125T144156",
+      "raw_refs": [
+        "NF-T06.meta.json",
+        "NF-T06.observed.json",
+        "NF-T06.stderr.txt",
+        "NF-T06.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T07",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T07/R01–R06` | 五方 individual：TPM/Reviewer、Guide、Bridge、Challenge、FAR | 每方真輸入/輸出/consumer | `FALSE_CAPABILITY` | 未安裝的方 `NotCovered`",
+        "requirements": [
+          "R01",
+          "R06"
+        ]
+      },
+      "expected_first_fail": "FALSE_CAPABILITY",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T07.json",
+      "receipt_sha256": "5ae4f94c902bd6fde76bc339012b873eea855fc8f828df984afb0f7373df4f78",
+      "run_id": "NF-T07-20261127T225450",
+      "raw_refs": [
+        "NF-T07.meta.json",
+        "NF-T07.observed.json",
+        "NF-T07.stderr.txt",
+        "NF-T07.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T08",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T08/R01–R07` | 真協作：req→四契約→start→run→frozen challenge→research→patch→resume→retest | 每段真 raw；NotCovered 明列 | `UNREPRODUCED` | 外部 Host/Legacy 另驗",
+        "requirements": [
+          "R01",
+          "R07"
+        ]
+      },
+      "expected_first_fail": "UNREPRODUCED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T08.json",
+      "receipt_sha256": "acec518386b8fea8171e8c11f5849991b86f9af689edba4162e92b0427a8cdfb",
+      "run_id": "NF-T08-20261127T225450",
+      "raw_refs": [
+        "NF-T08-chain.meta.json",
+        "NF-T08-chain.stderr.txt",
+        "NF-T08-chain.stdout.txt",
+        "NF-T08-negatives.meta.json",
+        "NF-T08-negatives.stderr.txt",
+        "NF-T08-negatives.stdout.txt",
+        "NF-T08.meta.json",
+        "NF-T08.observed.json"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T09",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T09/R07` | 真 red/controlled mutation→patch→new candidate→affected regression | 實質差額；同質停 | `NO_DELTA_REWRITE_DENIED` | 無",
+        "requirements": [
+          "R07"
+        ]
+      },
+      "expected_first_fail": "NO_DELTA_REWRITE_DENIED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T09.json",
+      "receipt_sha256": "2f585fa806556ada0a94b3aa730e024bee5d80b2639c63fd2d099e91825fef5a",
+      "run_id": "NF-T09-20261125T144156",
+      "raw_refs": [
+        "NF-T09.meta.json",
+        "NF-T09.observed.json",
+        "NF-T09.stderr.txt",
+        "NF-T09.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    },
+    {
+      "case_id": "NF-T10",
+      "kind": "NF",
+      "requirement_atom": {
+        "source": "03_W0_TQAEP.md",
+        "text": "`NF-T10/R09` | 新 session/consumer 真讀 pack/pin/raw/next；錯版拒 | consumer action/readback；W1 差額 | `HANDOFF_UNCONSUMED` | W1 准入另層",
+        "requirements": [
+          "R09"
+        ]
+      },
+      "expected_first_fail": "HANDOFF_UNCONSUMED",
+      "oracle_expectation": null,
+      "w0_verdict": "PASS",
+      "receipt": "05_TQAEP/receipts/NF-T10.json",
+      "receipt_sha256": "39770f2447852ff4dece491598ef385ad3e3eef3ec0cdb337fba984affdb2227",
+      "run_id": "NF-T10-20261127T225545",
+      "raw_refs": [
+        "NF-T10.meta.json",
+        "NF-T10.observed.json",
+        "NF-T10.stderr.txt",
+        "NF-T10.stdout.txt"
+      ],
+      "w1_use": "negative_guard"
+    }
+  ]
+}

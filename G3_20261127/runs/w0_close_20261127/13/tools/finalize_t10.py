@@ -46,10 +46,17 @@ def verify_receipt_via_consumer(receipt: Path, expected_sha: str) -> dict:
 
 
 def resolve_receipt(args, consumer_root: Path) -> tuple[Path, str, str | None]:
+    consumer_root = consumer_root.resolve()
+    def confined(p: Path) -> Path:
+        rp = p.resolve()
+        if not rp.is_relative_to(consumer_root):
+            raise Reject("RECEIPT_LOCATOR_OUTSIDE",
+                         {"receipt": str(rp), "consumer_root": str(consumer_root)})
+        return rp
     if args.consumer_receipt:
-        return Path(args.consumer_receipt).resolve(), "explicit", None
+        return confined(Path(args.consumer_receipt)), "explicit", None
     if args.consumer_run:
-        return (consumer_root / "runs" / args.consumer_run / "receipt.json").resolve(), \
+        return confined(consumer_root / "runs" / args.consumer_run / "receipt.json"), \
             "explicit-run", None
     latest_path = consumer_root / "LATEST.json"
     if not latest_path.is_file():
@@ -64,8 +71,9 @@ def resolve_receipt(args, consumer_root: Path) -> tuple[Path, str, str | None]:
         candidates.append(consumer_root / "runs" / str(run_id) / "receipt.json")
     for cand in candidates:
         cand = cand if cand.is_absolute() else (consumer_root / cand)
-        if cand.is_file():
-            return cand.resolve(), "latest", latest.get("receipt_sha256")
+        rp = confined(cand)
+        if rp.is_file():
+            return rp, "latest", latest.get("receipt_sha256")
     raise Reject("RECEIPT_MISSING", {"latest": latest})
 
 

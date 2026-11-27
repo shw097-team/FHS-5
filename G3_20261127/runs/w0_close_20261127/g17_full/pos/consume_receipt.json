@@ -1,0 +1,104 @@
+{
+  "schema": "FHS5.W1.MinimalConsumeReceipt@1",
+  "status": "W1_CHECKLIST_READY",
+  "generated_at": "2026-11-27T16:02:59+00:00",
+  "fresh_process": {
+    "pid": 23676,
+    "python": "3.11.9",
+    "argv": [
+      "tools\\w1_min_consume.py",
+      "--handoff",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\09_DELIVERY\\W0_HANDOFF.md",
+      "--root",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13",
+      "--repo",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\W1_MIN_CONSUME\\w1_candidate",
+      "--out-root",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\g17_full\\pos",
+      "--scope",
+      "W0",
+      "--receipt",
+      "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+      "--expected-receipt-sha",
+      "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c"
+    ],
+    "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13"
+  },
+  "inputs": {
+    "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\09_DELIVERY\\W0_HANDOFF.md",
+    "handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+    "handoff_id": "W0-NF-HANDOFF-20261125-03",
+    "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
+    "w0m_amendment_sha256": "c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5",
+    "candidate_commit": "bb66a276aae8c5d6aef549832c523587fc47d247",
+    "candidate_tree": "b69c54ded7ee10b7424c4900acbf6125b1ce025b",
+    "oracle_sha256": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
+    "evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
+    "case_set": "SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44",
+    "legacy_consumer": {
+      "receipt_gate": {
+        "consumer_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER",
+        "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+        "expected_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+        "observed_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+        "receipt_bytes": 136017,
+        "receipt_parsed": true,
+        "receipt_consumed": true,
+        "receipt_run_id": "20261128T000245-5dc3792c",
+        "receipt_handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+        "receipt_evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
+        "latest_run_id": null
+      },
+      "legacy_latest_present": true,
+      "legacy_run_id": "20261128T000245-5dc3792c",
+      "legacy_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+      "legacy_receipt_in_input_root": true,
+      "legacy_receipt_handoff_sha_match": true,
+      "legacy_consumed": true,
+      "verified_receipt_parsed": true,
+      "verified_receipt_used": true,
+      "finalized_run_id": "20261127T225645-015592e8",
+      "finalized_receipt_present": true,
+      "finalized_matches_latest": false
+    },
+    "receipt_gate": {
+      "consumer_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER",
+      "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261128T000245-5dc3792c\\receipt.json",
+      "expected_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+      "observed_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+      "receipt_bytes": 136017,
+      "receipt_parsed": true,
+      "receipt_consumed": true,
+      "receipt_run_id": "20261128T000245-5dc3792c",
+      "receipt_handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+      "receipt_evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
+      "latest_run_id": null
+    }
+  },
+  "outputs": {
+    "w1_checklist.json": {
+      "sha256": "f76435fe0cb9a45f4f4d80ecf53dd37b5e47a81a40528aa5f4db3c062e2d571c",
+      "bytes": 39439
+    },
+    "w1_checklist.md": {
+      "sha256": "d881187639b9b5137c8e15d1b399897ec740d5788ecb69f7f15aa5c8452a145b",
+      "bytes": 6886
+    }
+  },
+  "items": 44,
+  "readback_ok": true,
+  "claim_ceiling": {
+    "w0_consumer_receipts_reverified": true,
+    "w0_case_expected_unchanged": true,
+    "w1_execution": "NOT_CLAIMED",
+    "w1_full_wave": "NOT_CLAIMED",
+    "release": "NOT_CLAIMED"
+  },
+  "not_claimed": [
+    "W1 execution",
+    "W1 full wave",
+    "W2-W4",
+    "release",
+    "different principal"
+  ]
+}

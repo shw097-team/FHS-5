@@ -1,0 +1,27 @@
+{
+  "schema": "FHS5.W0.G17.FullNEG@1",
+  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\g17_neg_20261128\\receipt.json",
+  "expected_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+  "mutation": {
+    "offset": 68008,
+    "xor": "0x01",
+    "single_byte": true,
+    "size_unchanged": true
+  },
+  "run": {
+    "exit": 3,
+    "stdout": {
+      "status": "REJECTED",
+      "code": "RECEIPT_SHA_MISMATCH",
+      "detail": {
+        "expected": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+        "observed": "4cbdca0a91abc7c9486fed313290e4a29be0d4bb1373a3b7d645a47d51010c99",
+        "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\g17_neg_20261128\\receipt.json"
+      },
+      "output_written": false
+    },
+    "stderr": ""
+  },
+  "output_written": false,
+  "verdict": "PASS"
+}

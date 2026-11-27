@@ -1,0 +1,28 @@
+{
+  "schema": "FHS5.W0.G17.FullLocatorNEG@1",
+  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\g17_full\\outside\\receipt.json",
+  "run": {
+    "exit": 3,
+    "stdout": {
+      "status": "REJECTED",
+      "code": "RECEIPT_LOCATOR_OUTSIDE",
+      "detail": {
+        "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\g17_full\\outside\\receipt.json",
+        "consumer_root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER"
+      },
+      "output_written": false
+    },
+    "stderr": ""
+  },
+  "audit": {
+    "exit": 3,
+    "outside_receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\g17_full\\outside\\receipt.json",
+    "outside_opened": false,
+    "outside_open_count": 0,
+    "opens_total": 20,
+    "consumer_stdout_tail": "{\"status\": \"REJECTED\", \"code\": \"RECEIPT_LOCATOR_OUTSIDE\", \"detail\": {\"receipt\": \"C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\worktrees\\\\g3-20261127\\\\G3_20261127\\\\runs\\\\w0_close_20261127\\\\g17_full\\\\outside\\\\receipt.json\", \"consumer_root\": \"C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\worktrees\\\\g3-20261127\\\\G3_20261127\\\\runs\\\\w0_close_20261127\\\\13\\\\07_CONSUMER\"}, \"output_written\": false}\n"
+  },
+  "audit_zero_outside_read": true,
+  "output_written": false,
+  "verdict": "PASS"
+}
