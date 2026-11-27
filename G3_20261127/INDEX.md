@@ -5,13 +5,13 @@
 | 控制包 | `FHS-5_PLP_W0-W2_執行控制包_FINAL` |
 | 基準 | `a2281bf`；本輪基線 `ef40abf` |
 | 分支 | `codex/w0-w2-g3-native-20261127` |
-| 內容 commit | `c421c5a7856e397b37170f5401b9f7fe973b74fa` |
-| 文件 commit | `fad50e1f3500107c8847e874dcb23ae4ec7a7a59`（T2 docs/evidence；T1 `dda7779`） |
-| 遠端 head | `fad50e1…`（T2 push readback；T2c metadata 另記） |
+| 內容 commit | `a8c37de6796e875dd82b0a55ae19303cd02ed5f2` |
+| 文件 commit | T3 docs/evidence 本 commit（T2 `fad50e1`；T1 `dda7779`） |
+| 遠端 head | T3 push readback（final report）；T2 `fad50e1…`、T2c `f60c15e…` |
 | Checker | `PASS／32 checks` |
-| Consumer | `PASS／44/44`（final P7 `20261127T234153-ecdbff08`, 863 checks） |
+| Consumer | `PASS／44/44`（final P8 `20261128T000245-5dc3792c`, 863 checks） |
 | W0 | **DONE 44/44**（scoped） |
-| W0 closeout | `c421c5a…`；run `G3_20261127/runs/w0_close_20261127`；NF-T01 audit observation |
+| W0 closeout | `a8c37de…`；run `G3_20261127/runs/w0_close_20261127`；G17 full W1 consumer PASS |
 | W1 | **SCOPED_PARTIAL**：12/13；67 ECP 51 observed |
 | W2 | **NOT_ADMITTED**：9 PASS＋3 NOT_ADMITTED |
 | W3 | **NOT_ADMITTED** |
@@ -24,7 +24,7 @@
 | candidate aggregate | `3490388ef7cce32a5cbfcfd46c174cddbd610bb818886bc24a165b7ccbb0043b`（60 成員） |
 | oracle aggregate W0／W1／W2 | `45632470e5a3…`／`a741098618a2…`／`70cbc5017a39…` |
 | case set W0／W1／W2 | 44／13／12 |
-| evidence manifest | `0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527` |
+| evidence manifest | `12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a` |
 | seal | `7609533485270797f202e2f38fb594cbcef33c9485df7c9bcf6be926e06c272e` |
 
 ## 已驗／未驗

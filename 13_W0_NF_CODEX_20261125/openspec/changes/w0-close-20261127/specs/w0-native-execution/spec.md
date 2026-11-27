@@ -63,3 +63,19 @@ The handoff MUST carry pack, candidate, evidence, oracle and consumer pins, and 
 
 - **WHEN** a required receipt or handoff section is missing
 - **THEN** the consumer returns a typed partial refusal and does not acknowledge consumption
+
+## ADDED Requirements
+
+### Requirement: Receipt gate on the real W1 consumer path
+
+The real W1 Consumer MUST confine the receipt locator to the consumer root, resolve a trusted expected receipt digest before reading, hash the receipt bytes, and only then parse and use the receipt. A failure MUST occur before checklist output or any downstream product effect.
+
+#### Scenario: Single-byte receipt mutation
+
+- **WHEN** a valid receipt copy is changed by one byte and the trusted expected digest is unchanged
+- **THEN** the same W1 Consumer entry returns `RECEIPT_SHA_MISMATCH`, writes no checklist, and does not parse the receipt
+
+#### Scenario: Outside receipt locator
+
+- **WHEN** the receipt locator resolves outside the consumer root
+- **THEN** the consumer returns `RECEIPT_LOCATOR_OUTSIDE` before reading the locator target, with zero outside read

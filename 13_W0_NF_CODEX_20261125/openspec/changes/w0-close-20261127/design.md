@@ -20,3 +20,7 @@ The 40 unaffected receipts keep their original candidate `bb66a27`, oracle `112f
 ## Claim ceiling
 
 This change closes only the current W0 blockers. It does not claim W1-W4 completion, different-principal signatures, other hosts, release or the complete FHS-5 MVP.
+
+## G17 main-path wiring
+
+The standalone `consumer.py --verify-receipt` gate remains a component test. The real G17 POS/NEG path is the full `w1_min_consume.py` entry: handoff pins -> confined receipt locator -> trusted expected digest -> bytes SHA -> parse -> receipt pins/verdict -> 44-item checklist/readback. The expected digest is an explicit pin or the delivery's `CONSUMER_MANIFEST`; the mutated receipt cannot supply its own expected. The locator is confined to `07_CONSUMER` before `is_file`/read, so an outside path is refused before content access.

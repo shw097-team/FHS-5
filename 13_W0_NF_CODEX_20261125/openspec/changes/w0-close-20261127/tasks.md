@@ -33,3 +33,13 @@
 
 - [x] 6.1 Content commit `f173214428f1d3b4ea3819182ddb8a6a67cc34f1`; final consumer `20261127T230849-a4b187dd` (811 checks); evidence `5307b70c…`; G17/W1 minimal PASS.
 - [x] 6.2 C/H `G3_20261127/CLOSEOUT_W0.md`／`HANDOFF_W0.md`；push 未回讀前不宣成功。
+
+
+## 7. G17 true consumer entry
+
+- [x] 7.1 Confine the receipt locator to `07_CONSUMER` before any `is_file`/read in `w1_min_consume.py`.
+- [x] 7.2 Resolve the expected receipt digest from an explicit pin or `CONSUMER_MANIFEST`, then hash the bytes before parse.
+- [x] 7.3 Parse/use the verified receipt on the real W1 Consumer path and generate the 44-item checklist with readback.
+- [x] 7.4 Same-entry single-byte NEG returns `RECEIPT_SHA_MISMATCH` with zero checklist/output.
+- [x] 7.5 Outside locator returns `RECEIPT_LOCATOR_OUTSIDE` before content read; audit shows zero outside read.
+- [x] 7.6 P8 final consumer / W1 consume / G17 full suite recorded; C/H and INDEX updated.

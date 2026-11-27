@@ -30,17 +30,21 @@
   "candidate": "bb66a276aae8c5d6aef549832c523587fc47d247",
   "oracle": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
   "pack": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
-  "content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
+  "content_commit": "a8c37de6796e875dd82b0a55ae19303cd02ed5f2",
   "reproduction": "copy 13 -> run root; clone bundle + checkout bb66a27; guide --contracts; guide_resume; bridge_run; native_context; collab_chain full/negatives; record_affected NF-T01/07/08; consumer --allow-pending-t10; consumer_negatives; finalize_t10; evidence_manifest; consumer --publish-manifest (P7); challenge --mode full; G17; w1_min_consume",
-  "final_consumer": "20261127T234153-ecdbff08",
-  "final_receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
-  "evidence_manifest_sha256": "0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527",
+  "final_consumer": "20261128T000245-5dc3792c",
+  "final_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+  "evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
   "verdict": "W0_DONE (scoped)",
   "t1_content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
   "t1_docs_evidence_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
   "t1_push_metadata": "5496cf55bc04b8409359f882952bd872f1ddbb88",
   "t2_content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
-  "handoff_sha256": "3e5d6104d6fccbe7d46a5484b26340247f13054358e9ab8dd81b27f5ae92673d",
-  "nf_t01_observation": "CPython audit loader/open/child/os.system/loopback/ctypes; OS-level NotCovered"
+  "handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+  "nf_t01_observation": "CPython audit loader/open/child/os.system/loopback/ctypes; OS-level NotCovered",
+  "t3_content_commit": "a8c37de6796e875dd82b0a55ae19303cd02ed5f2",
+  "w1_checklist_sha256": "96e66d6fd7901007cbdd8d7855a49a498a5bcf9e0fd58fb28f2c92242ab1d318",
+  "w1_consume_receipt_sha256": "cc872413ef62dde438efdc382994af83645693099d9986b53902a287e6d7166a",
+  "g17_full": "PASS (POS / single-byte NEG / outside locator / audit zero outside read)"
  }
 }

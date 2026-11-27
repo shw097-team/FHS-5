@@ -4,8 +4,8 @@
  "branch": "codex/w0-w2-g3-native-20261127",
  "pre_hygiene_head": "4a125e08594e32db588bf59f659a1f138e167c13",
  "delivery_root": "G3_20261127",
- "content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
- "docs_commit": "fad50e1f3500107c8847e874dcb23ae4ec7a7a59",
+ "content_commit": "a8c37de6796e875dd82b0a55ae19303cd02ed5f2",
+ "docs_commit": "T3_DOCS_THIS_COMMIT",
  "adopted_primary": "36_W2_S2S3_FINAL_CODEX_20261127 (W2_CURRENT.json) unchanged",
  "waves": {
   "W0": "W0_DONE 44/44 (scoped)",
@@ -37,32 +37,35 @@
  ],
  "next_session": "read G3_20261127/CLOSEOUT_W0.md and HANDOFF_W0.md; W1 minimal checklist under runs/w0_close_20261127/w1_out_pos",
  "w0_closeout": {
-  "content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
+  "content_commit": "a8c37de6796e875dd82b0a55ae19303cd02ed5f2",
   "run_root": "G3_20261127/runs/w0_close_20261127/13",
-  "final_consumer": "20261127T234153-ecdbff08",
-  "final_consumer_receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
-  "evidence_manifest_sha256": "0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527",
-  "handoff_sha256": "3e5d6104d6fccbe7d46a5484b26340247f13054358e9ab8dd81b27f5ae92673d",
-  "g17": "PASS",
+  "final_consumer": "20261128T000245-5dc3792c",
+  "final_consumer_receipt_sha256": "1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c",
+  "evidence_manifest_sha256": "12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a",
+  "handoff_sha256": "20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5",
+  "g17": "PASS (full W1 consumer POS/NEG/locator)",
   "w1_minimal": "PASS (44 items)",
   "verdict": "W0_DONE (scoped; not W1-W4/MVP/release)",
-  "docs_evidence_commit": "fad50e1f3500107c8847e874dcb23ae4ec7a7a59",
+  "docs_evidence_commit": "T3_DOCS_THIS_COMMIT",
   "push": {
    "t1": {
-    "attempted": true,
     "result": "PUSHED",
     "remote_head_readback": "5496cf55bc04b8409359f882952bd872f1ddbb88"
    },
    "t2": {
-    "attempted": true,
     "result": "PUSHED",
-    "remote_head_readback": "fad50e1f3500107c8847e874dcb23ae4ec7a7a59"
+    "remote_head_readback": "fad50e1f3500107c8847e874dcb23ae4ec7a7a59",
+    "metadata": "f60c15e58ac73e0c825172be08066b7290bbe261"
    },
-   "metadata": "T2C_LOCAL_METADATA_READBACK"
+   "t3": {
+    "state": "PUSH_T3_DOCS_PENDING"
+   }
   },
   "t1_content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
   "t1_docs_evidence_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
   "t1_push_metadata": "5496cf55bc04b8409359f882952bd872f1ddbb88",
-  "nf_t01_observation": "CPython audit loader/open/child/os.system/loopback/ctypes; OS-level NotCovered"
+  "nf_t01_observation": "CPython audit loader/open/child/os.system/loopback/ctypes; OS-level NotCovered",
+  "w1_checklist_sha256": "96e66d6fd7901007cbdd8d7855a49a498a5bcf9e0fd58fb28f2c92242ab1d318",
+  "w1_consume_receipt_sha256": "cc872413ef62dde438efdc382994af83645693099d9986b53902a287e6d7166a"
  }
 }

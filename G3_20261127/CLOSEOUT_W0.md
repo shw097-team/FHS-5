@@ -1,17 +1,21 @@
-# W0 CLOSEOUT（W0 final closeout delta，2026-11-27）
+# W0 CLOSEOUT（G17 真消費入口與最終結案，2026-11-28）
 
 - 控制包：`W0-G3-PCNF-r2`／`PCNF-W0W2-ADOPT-20261127-01`
 - 分支：`codex/w0-w2-g3-native-20261127`
-- T1 content commit：`f173214428f1d3b4ea3819182ddb8a6a67cc34f1`
-- T1 docs/evidence commit：`dda7779464abf3b6d7cbaeee8a9fbcc93c471137`
-- T1 push metadata：`5496cf55bc04b8409359f882952bd872f1ddbb88`
-- T2 content commit：`c421c5a7856e397b37170f5401b9f7fe973b74fa`
-- T2 docs/evidence commit：`fad50e1f3500107c8847e874dcb23ae4ec7a7a59`
-- T2 push readback：`5496cf5 → fad50e1`；remote head `fad50e1`。本 T2c metadata commit 只記錄 readback，不變更內容。
+- T1 content：`f173214428f1d3b4ea3819182ddb8a6a67cc34f1`
+- T1 docs/evidence：`dda7779464abf3b6d7cbaeee8a9fbcc93c471137`
+- T1 metadata：`5496cf55bc04b8409359f882952bd872f1ddbb88`
+- T2 content：`c421c5a7856e397b37170f5401b9f7fe973b74fa`
+- T2 docs/evidence：`fad50e1f3500107c8847e874dcb23ae4ec7a7a59`
+- T2c metadata：`f60c15e58ac73e0c825172be08066b7290bbe261`
+- T3 content：`a8c37de6796e875dd82b0a55ae19303cd02ed5f2`
+- T3 docs/evidence：本檔所在 commit（以 `git log -- G3_20261127/CLOSEOUT_W0.md` 回讀）
 - 最終 run root：`C:\Projects\Agent_Workspace\FHS-5_Workspace\worktrees\g3-20261127\G3_20261127\runs\w0_close_20261127\13`
-- 最終 handoff：`09_DELIVERY/W0_HANDOFF.md`（sha256 `3e5d6104d6fccbe7d46a5484b26340247f13054358e9ab8dd81b27f5ae92673d`）
-- 最終 evidence：`10_EVIDENCE/EVIDENCE_MANIFEST.json`（sha256 `0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527`）
-- 最終 consumer P7：run `20261127T234153-ecdbff08`，**863 checks**，`consumed=true`，receipt sha256 `1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2`
+- 最終 handoff：`09_DELIVERY/W0_HANDOFF.md`（sha256 `20b82d765425f9761437b14f562cc507d4d5ebb0456568d708351177d14e69c5`）
+- 最終 evidence：`10_EVIDENCE/EVIDENCE_MANIFEST.json`（sha256 `12ddc3c3f9b6805d1c9657e2e110a5ef87231bd6b78c090b1d94c6ad3fc0e26a`）
+- 最終 consumer P8：run `20261128T000245-5dc3792c`，**863 checks**，`consumed=true`，receipt sha256 `1b4bbcc96df5ecde55dcf5c8337b493fbf5fff13b09e053d83ab021dd2e2a63c`
+- 最終 W1 consume：`w1_out_pos/`，44 items、readback true；checklist sha256 `96e66d6fd7901007cbdd8d7855a49a498a5bcf9e0fd58fb28f2c92242ab1d318`；consume receipt sha256 `cc872413ef62dde438efdc382994af83645693099d9986b53902a287e6d7166a`
+- G17 full suite：**PASS**（`g17_full/G17_SUMMARY.json`）
 
 ## 真結果：`W0_DONE`（scoped）
 
@@ -19,51 +23,57 @@
 
 | 項 | 結果 |
 |---|---|
-| 44 案 | **44 PASS／0 FAIL／0 pending**（40 同位復用＋4 受影重跑） |
-| NF-T01 | **PASS**：double-fail 不再 PASS；reviewer positive／negative gate 成立；新增 CPython audit loader/open/child/os.system/loopback/ctypes 觀測；positive probe 全 true、absent-control 真拒；OFF `legacy_import_attempts=[]`、`child_events=2`（僅 guide→git 唯讀）、`network_events=0`、`native_events=0` |
-| NF-T08 | **PASS**：frozen four contracts（`43ea6ea2…`／`01de8c30…`／`72e37bf9…`／`241538cd…`）→ Guide `--contracts`；chain **COMBINED_OK 23/23**；NEG **9/9**；live one-byte NEG `CONTRACT_CONTEXT_MISSING` |
-| NF-T10 | **PASS**：staging `20261127T225645-015592e8`（810 checks）供 finalize；final P7 `20261127T234153-ecdbff08`（863 checks）44/44 接受 |
-| G17 | **PASS**：同 final consumer entry；POS `RECEIPT_SHA_OK`；單 byte NEG exit 3 `RECEIPT_SHA_MISMATCH`；marker 未寫；audit `zero_outside_read=true`、`process_or_network_events=[]` |
-| 獨立 Checker | **PASS 32 checks／0 findings** |
-| fresh W1 minimal | 44 items、`readback_ok=true`；wrong pin／scope／partial 全 typed 拒 |
-| 同位核銷 | 40/40 reused receipts **byte-identical**；`0/40` 與 stale `w0_full/13` 相同；NF-T05 `off_bridge.json` `31f0694c…` byte-identical |
-| 血緣 | pack `e3772aee…`；candidate `bb66a276…`；preimage `5eab43de…`；oracle `112f2902…`；W0M `c9b1ca9b…` |
+| 44 案 | **44 PASS／0 FAIL／0 pending**（40 同位復用＋4 受影重跑：NF-T01/07/08/10） |
+| G17 | **PASS**：同一完整 W1 Consumer 入口；POS 真 receipt parse/use/checklist/readback；單 byte NEG `RECEIPT_SHA_MISMATCH`；outside locator `RECEIPT_LOCATOR_OUTSIDE`；audit `outside_opened=false` |
+| NF-T01 | **PASS**：double-fail 拒絕、reviewer gate、CPython audit loader/open/child/os.system/loopback/ctypes；OFF legacy `0`、network `0`、native `0`、child `2`（僅 guide→git 唯讀） |
+| NF-T08 | **PASS**：frozen four contracts `43ea/01de/72e3/2415`、Guide `--contracts`、chain **23/23**、NEG **9/9**、live one-byte NEG `CONTRACT_CONTEXT_MISSING` |
+| NF-T10 | **PASS**：staging `20261127T225645-015592e8`（810 checks）→ finalize → P8 `20261128T000245-5dc3792c`（863 checks）44/44 |
+| Checker | **PASS 32 checks／0 findings** |
+| 同位核銷 | 40/40 reused receipts byte-identical；`0/40` 與 stale `w0_full/13` 相同；NF-T05 `31f0694c…` byte-identical |
+| W1 | 44 items、readback；wrong pin／scope／partial 仍 typed 拒；`raw_refs` 10 個 SAMPLE 為空但 `receipt`＋`receipt_sha256` locator 有效 |
 
-## 三案與 T2/T3
+## G17 真消費入口（本輪）
 
-### NF-T01（T2 補證）
+- BUG-1：`consumer.py --verify-receipt` 是 standalone 支路，POS `receipt_parsed=false`、`downstream_effect=marker_only`，不是完整產品入口。
+- BUG-2：`w1_min_consume.py` 的 LATEST receipt locator 只計算 `is_file()` 後就 `load_json`，confinement 未成為拒絕條件。
+- 修補：
+  - `w1_min_consume.py` 主路新增：handoff pins → `07_CONSUMER` locator confinement → trusted expected（explicit pin 或 `CONSUMER_MANIFEST`）→ receipt bytes SHA → 同一份 verified bytes parse → receipt handoff/evidence/consumed/validation → 44-item checklist/readback。
+  - `finalize_t10.py` 的 receipt locator 同樣先 confinement，再 `is_file`/load。
+  - `consumer.py --verify-receipt` 保留為元件測試，不再作為 G17 唯一實證。
+- POS（P8 receipt `1b4bbcc…`，expected 同值）：exit `0`；`receipt_parsed=true`、`receipt_consumed=true`；checklist 44 items、readback true；checklist `96e66d6f…`；consume receipt `cc872413…`。
+- NEG 單 byte（consumer_root 內同一 receipt 複本，offset 半長 XOR 1，expected 不變）：exit `3` `RECEIPT_SHA_MISMATCH`；`output_written=false`、無 checklist。
+- NEG outside locator：exit `3` `RECEIPT_LOCATOR_OUTSIDE`；audit `outside_opened=false`、`outside_open_count=0`；無 checklist。
+- 證據：`g17_full/g17_pos.json`、`g17_neg_byte.json`、`g17_neg_locator.json`、`G17_SUMMARY.json`、`audit_locator.py`。
 
-- 真缺陷：`reviewer_double_fail_negative` 在 ON/OFF 雙方 expectation 皆 false 時仍 `ok=True`；reviewer 固定舊 plugin path；缺件跳過仍可 PASS。
-- 最小修：動態 reviewer locator；double-fail 改必經 negative control 並與 positive 綁定；缺件 `bound=false`＋FAIL；結構守衛禁止假 `ok`。
-- T2 新觀測：`tools/off_audit_site/sitecustomize.py`＋`tools/off_audit_probe.py`；CPython `sys.addaudithook` 記錄 import/open/subprocess/os.system/socket/ctypes；positive probe 觸發 blocked legacy import、child、grandchild、os.system、loopback roundtrip、native dlopen，absent-control 為空且被拒。
-- OFF 實跑：legacy import attempts `[]`；child events `2`（guide→`git rev-parse` 唯讀 helper）；network `0`；native `0`；產品 ON/OFF 語義仍成功。
-- 強制失敗：reviewer cache 不存在、reviewer positive fail、genuine double-fail 皆 exit 3／FAIL。
-- Raw／證據：`13/04_DEV_OPS/raw/audit/*.jsonl`、`04_DEV_OPS/off_legacy.json`、`agents/t2/EVIDENCE/`（若已落盤）。
-- Ceiling：OS-level sandbox、native 孫程序、`-S/-E/-I`／scrubbed env、native library 內部 kernel egress、audit 只觀測不阻止，均列 `not_covered`；不以 Python audit 冒充 OS 隔離。
+## 三案與既有成果
+
+### NF-T01（T2）
+
+- 真缺陷：double-fail 仍 `ok=True`；reviewer 固定舊 path；缺件跳過。
+- 修：動態 reviewer locator；double-fail negative control 與 positive 綁定；缺件 FAIL；CPython audit observer＋probe。
+- 證據：`04_DEV_OPS/off_legacy.json`、`04_DEV_OPS/raw/audit/*.jsonl`、`agents/t2/EVIDENCE/`。
+- Ceiling：OS sandbox／ACL／mount、native 孫程序、`-S/-E/-I`／scrubbed env、native library kernel egress 未覆蓋；audit 只觀測不阻止。
 
 ### NF-T08
 
-- 直接根因：舊 `w0_full/13` 的四契約是 LF／舊生成物（pi 1330 B），與 byte-exact CRLF 契約（pi 1477 B、`43ea…`）不符；oracle 亦被重生為 `31dc…`。不是四契約語義缺陷。
-- 處置：fresh run root 恢復凍結四契約，**不重生**、不改 oracle；Guide `--contracts` 實傳；Guide Resume／Bridge／Native／Challenge/FAR/patch/retest 皆同位置驗證。
-- 實跑：pins == 四實檔；`source_manifest_match=true`；requirement IDs 4（SAMPLE-R1..R4）；chain 23 checks；NEG 9/9 各自 expected code。
-- 收緊：`TPM-CONTRACTS-FROZEN` 反向核對 `tpm_gate.contracts`；live NEG 只改 `pi.json` 1 byte，chain 真拒 `CONTRACT_CONTEXT_MISSING`，FAR/retest 零效果。
-- Ceiling：chain 是 pin／欄位消費驗證，不是契約內容簽章；契約目錄＋Guide＋tpm_gate 全同步重寫仍需外部 canonical anchor。
+- 舊 `w0_full/13` 四契約為 LF／舊生成物（pi 1330 B），與 byte-exact CRLF（pi 1477 B、`43ea…`）不符；oracle 亦為 `31dc…`。不是契約語義缺陷。
+- 恢復 frozen contracts（不重生、不改 oracle）；Guide `--contracts`；chain 23/23；NEG 9/9；`TPM-CONTRACTS-FROZEN` 反向核對；live one-byte NEG `CONTRACT_CONTEXT_MISSING`。
+- Ceiling：chain 是 pin／欄位消費驗證，不是契約內容簽章；全鏈同步重寫仍需外部 canonical anchor。
 
-### NF-T10／G17／W1
+### NF-T10／W1
 
-- CP-D08：staging `20261127T225645-015592e8`（810 checks）→ finalize NF-T10 → final P7 `20261127T234153-ecdbff08`（863 checks）44/44 接受。
-- `finalize_t10.py` 不默讀舊 `negatives.positive.run_id`；current receipt／run／LATEST＋SHA gate；stale 皆 typed 拒、零寫入。
-- G17 同入口：POS `RECEIPT_SHA_OK`＋marker；單 byte NEG exit 3 `RECEIPT_SHA_MISMATCH`、`receipt_parsed=false`、marker 不存在；audit zero outside read／zero process。
-- fresh W1：`w1_min_consume.py` 獨立 clone／process 真讀 handoff/pack/seal/W0M/repo/oracle/evidence/summary/44 receipts/raw，產出 44 項 checklist 並 readback；wrong pin `PIN_MISMATCH_ORACLE`、wrong scope `SCOPE_MISMATCH`、partial `HANDOFF_INCOMPLETE` 皆 exit 3、zero output。
-- Raw：`13/07_CONSUMER/G17/`、`13/07_CONSUMER/W1_MIN_CONSUME/`、`13/07_CONSUMER/runs/20261127T234153-ecdbff08/`、`CONSUMER_MANIFEST.json`。
+- CP-D08：staging 810 checks → finalize NF-T10（staging receipt `6690425f…`）→ P8 863 checks 44/44。
+- `finalize_t10.py` 支援 explicit receipt／run／LATEST＋SHA gate；stale 皆 `STALE_*` 零寫入；本輪另補 locator confinement。
+- W1 minimal：`w1_min_consume.py` 獨立 clone／process 真讀 handoff/pack/seal/W0M/repo/oracle/evidence/summary/44 receipts/raw；44 items、readback；wrong pin／scope／partial 真拒。
+- 10 個 SAMPLE item 的 `raw_refs` 為空，但 `receipt`＋`receipt_sha256` 已提供有效 receipt locator；不另造 raw。
 
-## T3 核銷（唯讀）
+## T3 核銷與文件修正
 
-- 40 案：40/40 receipt byte-identical 於 source 13；`0/40` 相同於 stale `w0_full/13`；artifact/raw 全同；NF-T05 byte-identical。
-- NF-T08：frozen contracts、tpm_gate、Guide pins、source_manifest_match、4 IDs、chain 23/23、NEG 9/9、live NEG 全成立；frozen-control 亦 22/22。
-- NF-T10/G17/W1：staging receipt SHA `6690425f…` 與 NF-T10 綁定值一致；final P7 另立、無循環；G17/W1 成立。
-- Manifest/Checker/Git：T3 對 702 檔逐一重算全對（T2 後為 754 檔，新 manifest `0ebbccf1…`）；challenge 32/0；`W2_CURRENT` 與 candidate 產品 0 變動。
-- T3 文件差額已修：OpenSpec 41→40、NF-T05 reused；handoff G17 路徑 `07_CONSUMER/G17`；evidence 檔數 754；INDEX 表頭與 checkpoint 對齊；UPSTREAM_CHANGESET 追加本輪 delta。
+- 40 案：40/40 receipt byte-identical；0/40 與 `w0_full/13` 相同；artifact/raw 全同；NF-T05 byte-identical。
+- NF-T08：frozen contracts／tpm_gate／Guide pins／source_manifest_match／4 IDs／chain 23/23／NEG 9/9／live NEG 全成立。
+- NF-T10/G17/W1：staging receipt 與 NF-T10 綁定值一致；P8 另立、無循環；G17/W1 成立。
+- 文件：OpenSpec 41→40、NF-T05 reused；handoff G17 路徑 `07_CONSUMER/G17`；INDEX 表頭／checkpoint／evidence 754 檔對齊；UPSTREAM_CHANGESET 已追加 delta；新增 `validate_w0_close_20261127.log`。
+- Canonical 內層 `13/09_DELIVERY/W0_CLOSEOUT.md` 是歷史交付；本 `G3_20261127/CLOSEOUT_W0.md` 才是當期正式 C/H。
 
 ## 同位復用與受影
 
@@ -75,59 +85,51 @@
 
 原 14 WP、10 FUO、A/B/C、DEV/OPS/TQAEP 必要證據沿用同位 raw；A（READ/DRAFT）成立，B 為 local scoped DEV/OPS 既有證據，C 的 Profile/HOLD 保留。原 44 分母、ID、kind、expected 未改。
 
-## 實際變更（Actual ChangeSet）
+## Actual ChangeSet（本輪）
 
 | 路徑 | 變更 | 理由 |
 |---|---|---|
-| `tools/off_legacy.py` | 修 | double-fail 拒絕、reviewer 動態定位、缺件 FAIL、audit 整合 |
-| `tools/off_audit_probe.py` | 新 | loader/child/os.system/loopback/ctypes positive probe |
-| `tools/off_audit_site/sitecustomize.py` | 新 | CPython audit observer＋import blocker |
-| `tools/off_audit_site` | 新 | observation site（隨 tools 進 manifest） |
-| `tools/collab_chain.py` | 修 | `TPM-CONTRACTS-FROZEN` |
-| `tools/consumer.py` | 修 | `--verify-receipt` G17/T10 gate |
-| `tools/finalize_t10.py` | 修 | current receipt／run／LATEST＋SHA gate |
-| `tools/w1_min_consume.py` | 新 | fresh W1 minimal consume |
-| `tools/record_affected.py` | 新 | 只重錄受影 case |
-| `openspec/changes/w0-close-20261127/` | 新/修 | 既有 OpenSpec flow 最小 W0 delta；41→40 修正 |
-| `05_TQAEP/{summary.json,receipts/,oracle.json}` | 更新 | 40 復用＋4 新 receipt；summary 44/44 |
-| `09_DELIVERY/W0_HANDOFF.md` | 更新 | evidence pin、actual readback、readiness、G17/754 檔 |
-| `10_EVIDENCE/EVIDENCE_MANIFEST.json` | 重建 | 754 files／44 receipts；sha `0ebbccf1…` |
-| `07_CONSUMER/` | 新 run／G17／W1 | P7 receipt 863 checks、G17、W1 |
-| `G3_20261127/{CLOSEOUT_W0,HANDOFF_W0,INDEX,CHECKPOINT_AB,RUN_RECORD}.md/json` | 更新 | T4 正式交付 |
+| `tools/w1_min_consume.py` | 修 | receipt locator confinement／trusted expected／bytes SHA／parse 接入真正主路 |
+| `tools/finalize_t10.py` | 修 | receipt locator 先 confinement 再讀 |
+| `tools/consumer.py` | 保留 | `--verify-receipt` 作元件測試；G17 不再以其為唯一實證 |
+| `05_TQAEP`／`10_EVIDENCE` | 更新 | P8 受影 consumer、evidence `12ddc3c…` |
+| `07_CONSUMER` | 新增 P8 run | `20261128T000245-5dc3792c`、g17_neg receipt |
+| `w1_out_pos/` | 更新 | 44-item checklist `96e66d6f…`、consume receipt `cc872413…` |
+| `g17_full/` | 新增 | POS／NEG byte／NEG locator／audit／summary |
+| `G3_20261127/{CLOSEOUT_W0,HANDOFF_W0,INDEX,CHECKPOINT_AB,RUN_RECORD}` | 更新 | 正式交付與 G17 結案 |
+| `G3_CURRENT.json` | 更新 | W0 DONE、P8/G17 pins、push readback |
 
 ## LastGood／rebuild／recovery
 
-- LastGood：candidate `bb66a276…`（preimage `5eab43de…`）、pack `e3772aee…`、oracle `112f2902…`、frozen contracts `43ea/01de/72e3/2415`。
-- Rebuild：copy byte-exact 13 → run root；clone bundle＋checkout；Guide `--contracts` → Resume → Bridge → Native → chain → record_affected NF-T01/07/08 → consumer staging/negatives/finalize → evidence → final consumer → challenge → G17 → W1。
-- Recovery：不改 sealed pack/oracle/expected；失敗只回原 candidate/preimage 與凍結 artifacts；不 force push、不改 main/W2_CURRENT。
+- LastGood：candidate `bb66a276…`、preimage `5eab43de…`、pack `e3772aee…`、oracle `112f2902…`、frozen contracts `43ea/01de/72e3/2415`。
+- Rebuild：copy 13 → run root；clone bundle＋checkout；Guide `--contracts` → Resume → Bridge → Native → chain → record_affected → consumer staging/negatives/finalize → evidence → final consumer P8 → G17 full → W1 consume。
+- Recovery：不改 sealed pack/oracle/expected；不 force push、不改 main/W2_CURRENT。
 
 ## 日後待升級區（非封存、非 PASS）
 
 | 原 ID／路徑 | 原意 | 當期原因 | 替代／保留 | 恢復條件 |
 |---|---|---|---|---|
-| 舊 `off_legacy.py` 固定 1.0.1 路徑 | 真 OFF reviewer | 已動態 locator | 舊 bytes 在 Git 歷史 | 固定版本重現 |
-| `runs/w0_full/13` LF 契約／重生 oracle | 舊 41/44 run | byte drift，不作當期證據 | 保留歷史；新 run root 才是證據 | 歷史追溯 |
-| `runs/w0_full/delivery` 子集 | 舊交付 | 缺 01_PACK/09_DELIVERY/02_CANDIDATE，不能作 consumer root | 保留；新 run root | 重建完整交付 |
-| 契約外部 canonical anchor | 防 coherent rewrite | chain 已核 tpm_gate；全鏈同步重寫仍需外部錨 | 列 finding／claim ceiling | 未來 trust-root |
-| OS 級 child/network 隔離 | OFF 全效果觀測 | 目前 CPython audit 觀測；非 OS sandbox | 列 NotCovered | Native/OS sandbox 能力 |
+| OS sandbox／ACL／mount | OFF 全效果觀測 | 目前 CPython audit | NotCovered | Native/OS sandbox 能力 |
+| native 孫程序／kernel egress | 全 child/network 觀測 | 目前 Python audit 邊界 | NotCovered | OS/ETW 能力 |
+| 契約外部 canonical anchor | 防 coherent rewrite | chain 已核 tpm_gate，全鏈同步重寫仍需外部錨 | claim ceiling | 未來 trust-root |
 | 不同 principal、其他 Host、FHS 485、W4 Publisher | 原 Profile／波次 | 非當期 W0 Generic 必要 | 原帳保留 | 原波次／授權 |
-| 舊 803-check consumer | W0→W1 接受 | 保留並擴充 receipt gate | 現行 consumer | 完整相容性研究 |
+| 原 14 HOLD／12 R3-CR／WM2E | 原帳 | 只處置直接受影 | 保留 | 原波次 |
+| 舊 `w0_full/13`／舊 delivery 子集 | 舊 41/44 run | stale bytes／不可作 consumer root | 歷史保留 | 歷史追溯 |
 
-## 未閉合／claim ceiling
+## Claim ceiling
 
-- 原 14 HOLD／12 R3-CR／WM2E 未全數關閉；只處置直接受影者，其餘依原表保留。
 - 不宣 W1–W4 完成、Checkpoint A 全部完成、W2/W3 准入、FHS-5 整體 MVP、release、不同 principal、其他 Host、FHS 485、Fabric/Legacy 全量。
-- NF-T01 OS-level child/network 隔離未成立；NF-T08 契約內容簽章／全鏈 synchronous rewrite 未解；NF-T10 只宣 W1 minimal consume，不宣 W1 產品執行。
-- 遠端交付：T1 `0099e95 → 5496cf5`；T2 `5496cf5 → fad50e1`（content `c421c5a`＋docs `fad50e1`），remote head 回讀 `fad50e1`；T2c metadata commit 只記 readback。
+- NF-T01 OS-level 隔離未成立；NF-T08 契約內容簽章／全鏈同步重寫未解；NF-T10 只宣 W1 minimal consume，不宣 W1 產品執行。
+- G17 已接真 W1 Consumer 主路；standalone gate 僅元件測試。
 
 ## OpenSpec／子代理／PC10
 
-- OpenSpec：既有 `13_W0_NF_CODEX_20261125/openspec` root 的 `w0-close-20261127` 更新；`openspec validate --strict` valid；未重 init。
-- 子代理：T1（交付/憑證）、T2（NF-T01 觀測）、T3（核銷）各自 scratch；Maker／Checker／Consumer 分責；不同 principal 未宣。
-- PC10：NF-T01、NF-T08、NF-T10 各一次有新材料的實質修補；未重設 failure budget。
+- OpenSpec：`13_W0_NF_CODEX_20261125/openspec` 的 `w0-close-20261127` 更新；`openspec validate --strict` valid；未重 init。
+- 子代理：T1 交付/憑證、T2 NF-T01 觀測、T3 核銷；Maker／Checker／Consumer 分責；不同 principal 未宣。
+- PC10：G17 同一根因群（完整性未接入主路）一次有新材料的實質修補；未重設 budget。
 
 ## 下一步（W1 最小）
 
-1. 讀 `07_CONSUMER/W1_MIN_CONSUME/w1_out_pos/w1_checklist.json`（44 items）與 `09_DELIVERY/W0_HANDOFF.md`。
-2. 以 W0 pins 為基線 requalify 原 14 HOLD／R3-CR；先做來源與 W1M 差額，不重跑 W0。
+1. 讀 `w1_out_pos/w1_checklist.json`（44 items）與 `09_DELIVERY/W0_HANDOFF.md`。
+2. 以本 pins 為基線 requalify 原 14 HOLD／R3-CR；不重跑 W0。
 3. W1 產品施工另需上位採納、W1M／下一包一致與真入口／授權。
