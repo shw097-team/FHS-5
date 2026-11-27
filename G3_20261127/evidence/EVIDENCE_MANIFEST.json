@@ -1,6 +1,6 @@
 {
  "schema": "FHS5.PLP.G3.EvidenceManifest@1",
- "candidate": "cfc7a1aac11b452bcef6b158bc38e0db7e082762d0305132242606a68f37be63",
+ "candidate": "ba4039b57d4a2b43083598c80e68223a2e28d6e158668d308c34c80dd8d54bae",
  "pins": {
   "schema": "FHS5.PLP.G3.FivePins@1",
   "source": {
@@ -52,7 +52,7 @@
     },
     {
      "path": "G3_20261127/check/finalize.py",
-     "sha256": "57943a9276cc24e5fccf749a3406390d7121de82309cffff01419fd94dccb56d"
+     "sha256": "0f1d32d14f64fd1bbf954a3aaa32b8c52f9547c08747387e9951fb5e1b3adad1"
     },
     {
      "path": "G3_20261127/lib/g3pack.py",
@@ -236,7 +236,7 @@
     }
    ],
    "count": 56,
-   "aggregate": "cfc7a1aac11b452bcef6b158bc38e0db7e082762d0305132242606a68f37be63",
+   "aggregate": "ba4039b57d4a2b43083598c80e68223a2e28d6e158668d308c34c80dd8d54bae",
    "modified_product": [
     "W1/check/w2_dev_gate.py",
     "W1/impl/host_facade.py"
@@ -261,84 +261,9 @@
  },
  "files": [
   {
-   "path": ".gitignore",
-   "bytes": 79,
-   "sha256": "4bb4c39f34f5834bec6bec3d0df4d14179bda0fc1015be5df2d899cd64d57e09"
-  },
-  {
-   "path": "check/checker.py",
-   "bytes": 8622,
-   "sha256": "5336bc707741f494c614283669cf99466e8678cac70c0188434691d915656dca"
-  },
-  {
-   "path": "check/consumer.py",
-   "bytes": 3600,
-   "sha256": "3f5eccc0f8d8125cf9867569ee102c3f2fd2e1baa1f8308ccf609c2d5e68409e"
-  },
-  {
-   "path": "check/finalize.py",
-   "bytes": 5254,
-   "sha256": "57943a9276cc24e5fccf749a3406390d7121de82309cffff01419fd94dccb56d"
-  },
-  {
-   "path": "CLOSEOUT_W0.md",
-   "bytes": 1468,
-   "sha256": "ae888faea4088815fc4d83ebad7c66e56796ee49ecee343baa358c8bfc8ade16"
-  },
-  {
-   "path": "CLOSEOUT_W1.md",
-   "bytes": 2234,
-   "sha256": "aeb83c474ad6024b1f277a2893b0a629151576bf486726fdf4e3b0ff0731bea0"
-  },
-  {
-   "path": "CLOSEOUT_W2.md",
-   "bytes": 3025,
-   "sha256": "8bedee0379f0e1a8d0226c179780ccde402aa51f4dc760968b2181604186fed2"
-  },
-  {
    "path": "evidence/CHECKER.json",
    "bytes": 5780,
-   "sha256": "258ae1f6968850b27a720fc63072d9f22bd01cabbd95a457a9e95afa428d578e"
-  },
-  {
-   "path": "HANDOFF_W0.md",
-   "bytes": 491,
-   "sha256": "764a2b90fddb14b90dce346cf59dce3be573bda0ea809befe47d9d06af72197f"
-  },
-  {
-   "path": "HANDOFF_W1.md",
-   "bytes": 580,
-   "sha256": "e3d601f11f8b1859d554da158e42cadfc035bf8a762fa8b39deefb7ab96ffc64"
-  },
-  {
-   "path": "HANDOFF_W2.md",
-   "bytes": 618,
-   "sha256": "c73f4fb3b2891d3cbac14a9c2a5ee3c1b6feed4cb16defcbd1572e353a0af01a"
-  },
-  {
-   "path": "INDEX.md",
-   "bytes": 2452,
-   "sha256": "aa2cf725c91a2270a40d8fd830e307bfa0d6047404082368f335f1dff6b78277"
-  },
-  {
-   "path": "lib/g3pack.py",
-   "bytes": 10437,
-   "sha256": "f3bd4621a2fd21cba18b69c964984f4e0f9c84ee4262d13146e6faa516ae17b4"
-  },
-  {
-   "path": "lib/redact.py",
-   "bytes": 1066,
-   "sha256": "d5bd1bff4c9dceb264a11b6a8d8c6e4118cd5fb2774961eb449194ebce4826ea"
-  },
-  {
-   "path": "PUBLICATION_RECEIPT.json",
-   "bytes": 1066,
-   "sha256": "2177af6b0262ac872487011b6403b35e6171a1aadb0f1125ca4225a4b46d7595"
-  },
-  {
-   "path": "README.md",
-   "bytes": 2167,
-   "sha256": "ace031a3b29112c47718b744727e50a94428c8e557f62b6827b83173ac444551"
+   "sha256": "19f8e31823c92f3c8754d1cc999a991dc5ab9592696248a6d120324b0e80a3d8"
   },
   {
    "path": "runs/w0/raw/OFF.json",
@@ -634,49 +559,9 @@
    "path": "runs/w2/W2_RESULT.json",
    "bytes": 2318,
    "sha256": "8273ca20057751e98f00fa36c483292f48e663442bc4910d373bf90ae5cb5d3a"
-  },
-  {
-   "path": "W0/run_w0.py",
-   "bytes": 14872,
-   "sha256": "9485003c683f4291eb0d577e29281f4162cca39f02846dae9ea9e4d4a2f8d945"
-  },
-  {
-   "path": "W1/guards.py",
-   "bytes": 2657,
-   "sha256": "2714c49d49bb0b27717e47ad40ae180c87b3a9dbfb89f5f2bf452b851ee5b347"
-  },
-  {
-   "path": "W1/run_w1.py",
-   "bytes": 25132,
-   "sha256": "f9952e37a67207eb5747c34a0db99e966f48c70ed7d15a79625f311dcfab2ee4"
-  },
-  {
-   "path": "W2/dev_driver.py",
-   "bytes": 3527,
-   "sha256": "a1c2e925f8193e429ce6bb14f0d649ddc04fc49aeefdf23c83c51d0d10ebf8b7"
-  },
-  {
-   "path": "W2/guards.py",
-   "bytes": 5203,
-   "sha256": "61884fdbe76f07d752208e56686a417c555f30641f37b7f0dd1168fe4e533423"
-  },
-  {
-   "path": "W2/ops_consumer.py",
-   "bytes": 1961,
-   "sha256": "ef5e1da1a7e6dcfb7be9164125cb4e3805e1f561cd1d79d754957a7e33fe56bd"
-  },
-  {
-   "path": "W2/ops_receiver.py",
-   "bytes": 4225,
-   "sha256": "bce36a18183fdb4f25eb645c09867f8b4594f524a4be896ef325c754f9d7d96c"
-  },
-  {
-   "path": "W2/run_w2.py",
-   "bytes": 25866,
-   "sha256": "fe67bda35055f490d010f6fb337165f2b69067ba6ba154149b8c4cf1cb4ecf5e"
   }
  ],
- "count": 83,
+ "count": 60,
  "self_excluded": [
   "evidence/EVIDENCE_MANIFEST.json",
   "evidence/SEAL.json",

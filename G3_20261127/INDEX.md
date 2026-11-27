@@ -19,11 +19,11 @@
 | source W0 | `baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d` |
 | source W1 | `f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc` |
 | source W2 | `7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0` |
-| candidate aggregate | `cfc7a1aac11b452bcef6b158bc38e0db7e082762d0305132242606a68f37be63`（56 成員） |
+| candidate aggregate | `ba4039b57d4a2b43083598c80e68223a2e28d6e158668d308c34c80dd8d54bae`（56 成員） |
 | oracle W0／W1／W2 | `da6fa6f3615f4043…`／`9e5c6a83b719c400…`／`a78e689d42265851…` |
 | case set | W0 44／W1 13／W2 12 |
-| evidence manifest | `56bf848c172ccdf2c85976c7522e1f4cb4d2796f09974fefa0a8b346ec14f4f3` |
-| seal | `40d6e0715e77aa1e06edaa0e3f4efe4e7d06f955ff8d2974f51bffeeb7ac6942` |
+| evidence manifest | `5b5fd4f2c4fb26bb24577e41340fb0015138acc5d83773520192f812a4c92653` |
+| seal | `1a7f8d0c1f16e3db457453b66951c13831fbc21119e1e47655a9836370ad6a6c` |
 
 ## 已驗／未驗 ledger
 

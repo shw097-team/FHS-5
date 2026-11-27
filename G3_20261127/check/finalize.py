@@ -88,11 +88,11 @@ def main(argv=None):
     }
 
     # 3. evidence manifest (manifest and seal are self-excluded)
-    files = collect(G3)
-    files = [r for r in files if r not in ("evidence/EVIDENCE_MANIFEST.json",
-                                           "evidence/SEAL.json",
-                                           "evidence/FIVE_PINS.json",
-                                           "evidence/W3_CONSUMER.json")]
+    # The manifest binds evidence/raw and the checker verdict only.  Narrative
+    # documents are bound by the git commit, so updating a closeout never
+    # invalidates the evidence seal.
+    files = [r for r in collect(G3)
+             if r.startswith("runs/") or r == "evidence/CHECKER.json"]
     rows = []
     for rel in files:
         p = G3 / rel

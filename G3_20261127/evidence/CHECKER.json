@@ -145,7 +145,7 @@
   {
    "check": "w1_suite_115",
    "ok": true,
-   "detail": "['Ran 115 tests in 14.679s']"
+   "detail": "['Ran 115 tests in 15.063s']"
   },
   {
    "check": "w2_12_of_12",
