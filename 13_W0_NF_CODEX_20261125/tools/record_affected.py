@@ -67,9 +67,12 @@ def record_off():
                          and neg.get("requires_reviewer_positive") is True),
         "entry": neg,
     }
+    ctrl = out.get("control") or {}
+    allowed_ok = (ctrl.get("allowed") is True
+                  or (ctrl.get("allowed_noprofile") is True
+                      and ctrl.get("allowed_audit_only") is True))
     ok = (r["exit"] == 0 and out.get("verdict") == "PASS"
-          and (out.get("control") or {}).get("blocked") is True
-          and (out.get("control") or {}).get("allowed") is True
+          and ctrl.get("blocked") is True and allowed_ok
           and bool(entries) and all(e.get("ok") is True for e in entries)
           and double["rejected"])
     return base(
@@ -77,7 +80,9 @@ def record_off():
         {"status": "PASS", "exit": 0, "double_fail": "REJECTED"},
         {"verdict": out.get("verdict"), "exit": r["exit"],
          "control": out.get("control"), "entries": entries,
-         "double_fail_control": double},
+         "double_fail_control": double,
+         "gates": out.get("gates"), "observer": out.get("observer"),
+         "off_totals": out.get("off_totals")},
         "PASS" if ok else "FAIL",
         "" if ok else "OFF_CONTRACT_MISMATCH",
         argv=r["argv"], exit=r["exit"], stdout_sha=r["stdout_sha256"],

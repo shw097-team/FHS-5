@@ -1,14 +1,14 @@
 {
   "schema": "FHS5.W0NF.ConsumerReceipt@3",
-  "run_id": "20261127T230849-a4b187dd",
-  "created_at": "2026-11-27T15:08:50+00:00",
+  "run_id": "20261127T234153-ecdbff08",
+  "created_at": "2026-11-27T15:41:55+00:00",
   "consumer_id": "W1-consumer/CODEX-Native-1 (separate process)",
   "pack": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\01_PACK\\FHS-5_PLP_W0_NATIVE_FIRST",
-  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230849-a4b187dd\\candidate",
+  "repo": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T234153-ecdbff08\\candidate",
   "handoff": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\09_DELIVERY\\W0_HANDOFF.md",
-  "handoff_sha256": "9f9ae2340212ec5b3171dcf26a9fa85db34aa2da79452bc0d86a389685d17613",
+  "handoff_sha256": "3e5d6104d6fccbe7d46a5484b26340247f13054358e9ab8dd81b27f5ae92673d",
   "evidence_manifest": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\10_EVIDENCE\\EVIDENCE_MANIFEST.json",
-  "evidence_manifest_sha256": "5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da",
+  "evidence_manifest_sha256": "0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527",
   "validation_ok": true,
   "failure_code": null,
   "checks": [
@@ -172,7 +172,7 @@
       "id": "EVIDENCE-PIN",
       "ok": true,
       "detail": {
-        "sha": "5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da"
+        "sha": "0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527"
       }
     },
     {
@@ -198,7 +198,7 @@
     {
       "id": "EVIDENCE-FILE-COUNT",
       "ok": true,
-      "detail": 702
+      "detail": 754
     },
     {
       "id": "EVIDENCE-FILE-01_PACK/EXTERNAL_SEAL.json",
@@ -946,9 +946,109 @@
       "detail": "04_DEV_OPS/patch_12prime.diff"
     },
     {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/probe/grandchild.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/probe/grandchild.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/probe/off_audit_probe.result.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/probe/off_audit_probe.result.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/probe/off_audit_probe_absent.result.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/probe/off_audit_probe_absent.result.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/probe/probe_marker.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/probe/probe_marker.txt"
+    },
+    {
       "id": "EVIDENCE-FILE-04_DEV_OPS/probe/test_invalid_root.py",
       "ok": true,
       "detail": "04_DEV_OPS/probe/test_invalid_root.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_audit_probe.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_audit_probe.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_bridge_explain_audit.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_bridge_explain_audit.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_bridge_explain_off.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_bridge_explain_off.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_bridge_inspect_audit.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_bridge_inspect_audit.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_bridge_inspect_off.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_bridge_inspect_off.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_briefcheck_neg_audit.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_briefcheck_neg_audit.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_briefcheck_neg_off.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_briefcheck_neg_off.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_briefcheck_pos_audit.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_briefcheck_pos_audit.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_briefcheck_pos_off.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_briefcheck_pos_off.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_control_audit_only.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_control_audit_only.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_guide_audit.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_guide_audit.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_guide_off.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_guide_off.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_reviewer_audit.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_reviewer_audit.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_reviewer_negative_control_audit.jso",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_reviewer_negative_control_audit.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_reviewer_negative_control_off.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_reviewer_negative_control_off.jsonl"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/audit/off_reviewer_off.jsonl",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/audit/off_reviewer_off.jsonl"
     },
     {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/green_v3.meta.json",
@@ -1071,6 +1171,36 @@
       "detail": "04_DEV_OPS/raw/o5_marked.stdout.txt"
     },
     {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_audit_probe.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_audit_probe.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_audit_probe.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_audit_probe.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_audit_probe.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_audit_probe.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_audit_probe_absent.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_audit_probe_absent.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_audit_probe_absent.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_audit_probe_absent.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_audit_probe_absent.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_audit_probe_absent.stdout.txt"
+    },
+    {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_control.meta.json",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_bridge_control.meta.json"
@@ -1101,6 +1231,21 @@
       "detail": "04_DEV_OPS/raw/off_bridge_direct.stdout.txt"
     },
     {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_audit.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_audit.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_audit.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_audit.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_audit.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_explain_audit.stdout.txt"
+    },
+    {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_off.meta.json",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_bridge_explain_off.meta.json"
@@ -1129,6 +1274,21 @@
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_explain_on.stdout.txt",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_bridge_explain_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_audit.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_audit.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_audit.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_audit.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_audit.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_bridge_inspect_audit.stdout.txt"
     },
     {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_bridge_inspect_off.meta.json",
@@ -1176,6 +1336,21 @@
       "detail": "04_DEV_OPS/raw/off_bridge_on.stdout.txt"
     },
     {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_audit.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_audit.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_audit.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_audit.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_audit.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_neg_audit.stdout.txt"
+    },
+    {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_off.meta.json",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_briefcheck_neg_off.meta.json"
@@ -1204,6 +1379,21 @@
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_neg_on.stdout.txt",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_briefcheck_neg_on.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_audit.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_audit.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_audit.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_audit.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_audit.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_briefcheck_pos_audit.stdout.txt"
     },
     {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_briefcheck_pos_off.meta.json",
@@ -1249,6 +1439,21 @@
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_allowed.stdout.txt",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_control_allowed.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_audit_only.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_audit_only.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_audit_only.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_audit_only.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_audit_only.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_control_audit_only.stdout.txt"
     },
     {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_control_blocked.meta.json",
@@ -1341,6 +1546,21 @@
       "detail": "04_DEV_OPS/raw/off_far_suite.stdout.txt"
     },
     {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_audit.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_audit.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_audit.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_audit.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_audit.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_guide_audit.stdout.txt"
+    },
+    {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_guide_off.meta.json",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_guide_off.meta.json"
@@ -1371,6 +1591,21 @@
       "detail": "04_DEV_OPS/raw/off_guide_on.stdout.txt"
     },
     {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_audit.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_audit.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_audit.stderr.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_audit.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_audit.stdout.txt",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_audit.stdout.txt"
+    },
+    {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_double_fail.meta.json",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_reviewer_double_fail.meta.json"
@@ -1384,6 +1619,21 @@
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_double_fail.stdout.txt",
       "ok": true,
       "detail": "04_DEV_OPS/raw/off_reviewer_double_fail.stdout.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_negative_control_audit.meta.json",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_negative_control_audit.meta.json"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_negative_control_audit.stderr.tx",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_negative_control_audit.stderr.txt"
+    },
+    {
+      "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_negative_control_audit.stdout.tx",
+      "ok": true,
+      "detail": "04_DEV_OPS/raw/off_reviewer_negative_control_audit.stdout.txt"
     },
     {
       "id": "EVIDENCE-FILE-04_DEV_OPS/raw/off_reviewer_negative_control_off.meta.json",
@@ -1794,7 +2044,7 @@
       "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T16.stdout.txt",
       "ok": true,
       "detail": "05_TQAEP/raw/F5-W0-T16.stdout.txt"
-    },
+  ! },
     {
       "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T17.meta.json",
       "ok": true,
@@ -1938,7 +2188,7 @@
     {
       "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T24.meta.json",
       "ok": true,
-      "eetail": "05_TQAEP/raw/F5-W0-T24.meta.json"
+      "detail": "05_TQAEP/raw/F5-W0-T24.meta.json"
     },
     {
       "id": "EVIDENCE-FILE-05_TQAEP/raw/F5-W0-T24.observed.json",
@@ -3629,6 +3879,16 @@
       "id": "EVIDENCE-FILE-tools/native_context.py",
       "ok": true,
       "detail": "tools/native_context.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/off_audit_probe.py",
+      "ok": true,
+      "detail": "tools/off_audit_probe.py"
+    },
+    {
+      "id": "EVIDENCE-FILE-tools/off_audit_site/sitecustomize.py",
+      "ok": true,
+      "detail": "tools/off_audit_site/sitecustomize.py"
     },
     {
       "id": "EVIDENCE-FILE-tools/off_bridge.py",

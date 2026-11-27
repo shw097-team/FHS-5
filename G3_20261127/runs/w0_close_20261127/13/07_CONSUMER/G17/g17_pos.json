@@ -1,27 +1,27 @@
 {
   "schema": "FHS5.W0NF.G17.POS@2",
-  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230849-a4b187dd\\receipt.json",
-  "receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+  "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T234153-ecdbff08\\receipt.json",
+  "receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
   "gate": {
     "exit": 0,
     "payload": {
       "mode": "verify-receipt",
-      "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230849-a4b187dd\\receipt.json",
-      "expected_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+      "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T234153-ecdbff08\\receipt.json",
+      "expected_receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
       "status": "RECEIPT_SHA_OK",
-      "observed_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
-      "bytes": 126717,
+      "observed_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
+      "bytes": 136017,
       "receipt_parsed": false,
       "downstream_read": false,
       "marker_written": true,
       "downstream_marker": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\g17_markers\\pos_downstream_marker.json",
-      "downstream_marker_sha256": "7f533eadb3b75a8eb549608153a77e147c0713f86526deb79d423c55d6f05783"
+      "downstream_marker_sha256": "7b458a802d7797191a880f095957881bfb5f0c64cef62b4148c04f8f98b075d8"
     },
-    "stdout": "{\"mode\": \"verify-receipt\", \"receipt\": \"C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\worktrees\\\\g3-20261127\\\\G3_20261127\\\\runs\\\\w0_close_20261127\\\\13\\\\07_CONSUMER\\\\runs\\\\20261127T230849-a4b187dd\\\\receipt.json\", \"expected_receipt_sha256\": \"2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8\", \"status\": \"RECEIPT_SHA_OK\", \"observed_sha256\": \"2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8\", \"bytes\": 126717, \"receipt_parsed\": false, \"downstream_read\": false, \"marker_written\": true, \"downstream_marker\": \"C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\worktrees\\\\g3-20261127\\\\G3_20261127\\\\runs\\\\w0_close_20261127\\\\g17_markers\\\\pos_downstream_marker.json\", \"downstream_marker_sha256\": \"7f533eadb3b75a8eb549608153a77e147c0713f86526deb79d423c55d6f05783\"}\n",
+    "stdout": "{\"mode\": \"verify-receipt\", \"receipt\": \"C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\worktrees\\\\g3-20261127\\\\G3_20261127\\\\runs\\\\w0_close_20261127\\\\13\\\\07_CONSUMER\\\\runs\\\\20261127T234153-ecdbff08\\\\receipt.json\", \"expected_receipt_sha256\": \"1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2\", \"status\": \"RECEIPT_SHA_OK\", \"observed_sha256\": \"1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2\", \"bytes\": 136017, \"receipt_parsed\": false, \"downstream_read\": false, \"marker_written\": true, \"downstream_marker\": \"C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\worktrees\\\\g3-20261127\\\\G3_20261127\\\\runs\\\\w0_close_20261127\\\\g17_markers\\\\pos_downstream_marker.json\", \"downstream_marker_sha256\": \"7b458a802d7797191a880f095957881bfb5f0c64cef62b4148c04f8f98b075d8\"}\n",
     "stderr": ""
   },
   "marker": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\g17_markers\\pos_downstream_marker.json",
   "marker_exists": true,
-  "marker_sha256": "7f533eadb3b75a8eb549608153a77e147c0713f86526deb79d423c55d6f05783",
+  "marker_sha256": "7b458a802d7797191a880f095957881bfb5f0c64cef62b4148c04f8f98b075d8",
   "verdict": "PASS"
 }

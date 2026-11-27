@@ -1,0 +1,66 @@
+{
+  "schema": "FHS5.W0NF.AuditProbe@1",
+  "pid": 21852,
+  "ppid": 23848,
+  "off_profile": true,
+  "audit_env_set": false,
+  "blocked_import": {
+    "expect": "blocked",
+    "blocked": true,
+    "imported": false,
+    "error": "FHS5_LEGACY_BLOCKED:hgk_core",
+    "ok": true
+  },
+  "open_marker": {
+    "path": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\probe\\probe_marker.txt",
+    "bytes": 20,
+    "sha256": "5b873013a2693f455b2648bc0dc28ac1e0808c9338948f06b5b63d574a3743fe",
+    "readback_ok": true,
+    "ok": true
+  },
+  "child": {
+    "exit": 0,
+    "stdout": "CHILD_OK",
+    "ok": true
+  },
+  "grandchild": {
+    "exit": 0,
+    "stdout": "GRANDCHILD_OK",
+    "file": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\probe\\grandchild.txt",
+    "file_body": "GRANDCHILD",
+    "ok": true
+  },
+  "loopback": {
+    "port": 8741,
+    "sent": "PING",
+    "received": "PONG",
+    "server_received": [
+      "PING"
+    ],
+    "errors": [],
+    "ok": true
+  },
+  "ctypes_load": {
+    "library": "kernel32",
+    "pid": 21852,
+    "tick": 107581796,
+    "resolved_pointer": true,
+    "ok": true
+  },
+  "os_system": {
+    "command": "cmd /c exit 7",
+    "rc": 7,
+    "errorlevel": 0,
+    "ok": true
+  },
+  "action_results": {
+    "blocked_import": true,
+    "open_marker": true,
+    "child": true,
+    "grandchild": true,
+    "loopback": true,
+    "ctypes_load": true,
+    "os_system": true
+  },
+  "all_ok": true
+}

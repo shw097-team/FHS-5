@@ -12,7 +12,7 @@
 - **candidate_preimage**：`5eab43de2d3f67d6afbb1c5f6bc390e2c391da36`
 - **oracle_sha256**：`0000000000000000000000000000000000000000000000000000000000000000`
 - **evidence_ref**：`10_EVIDENCE/EVIDENCE_MANIFEST.json`
-- **evidence_manifest_sha256**：`5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da`
+- **evidence_manifest_sha256**：`0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527`
 - **consumer_manifest_sha256**：SEE `07_CONSUMER/CONSUMER_MANIFEST.sha256`
 - **case_set**：SAMPLE 10＋`F5-W0-T01..24`＋`NF-T01..10` = 44
 - **target_consumer**：W1 / CODEX Native（`tools/consumer.py`，`W1-consumer/CODEX-Native-1`）
@@ -23,12 +23,12 @@
 | 欄 | 值 |
 |---|---|
 | argv | `python tools/consumer.py --root . --allow-pending-t10`（staging）→ `python tools/consumer.py --root . --publish-manifest`（final） |
-| exit | staging `0`；final `0`（以 `07_CONSUMER/CONSUMER_MANIFEST.json` 與 `07_CONSUMER/LATEST.json` 為準） |
+| exit | staging `0`；final `0`（以 `07_CONSUMER/LATEST.json` 與 `CONSUMER_MANIFEST.json` 為準） |
 | raw | `07_CONSUMER/runs/<run_id>/raw/pos.*`、`neg.*`；`07_CONSUMER/neg_raw/consumer_positive.*` |
-| action | 先核 identity／pack／seal／W0M／candidate／oracle／handoff／evidence 701 檔索引與路徑，再重跑 POS/NEG |
-| result | staging 810 checks、`consumed=true`（NF-T10 pending）；final 44/44、`consumed=true`；10 負例全部 fail-closed 且 `cli_executed=false`；G17 見 `06_CHECKER/G17` |
+| action | 核 identity／pack／seal／W0M／candidate／oracle／handoff／evidence **754 檔**索引與路徑，再重跑 POS/NEG |
+| result | staging 810 checks、`consumed=true`（T10 pending）；final 44/44、`consumed=true`；10 負例 fail-closed 且 `cli_executed=false`；G17 在 `07_CONSUMER/G17/` |
 | t10 | `NF-T10` 由 `20261127T225645-015592e8` finalize；final consumer run 見 `07_CONSUMER/LATEST.json` |
-| affected | `NF-T01`／`NF-T07`／`NF-T08`／`NF-T10` 以 byte-exact source＋materialized `bb66a276…` 重跑；其餘 40 案同位復用 |
+| affected | `NF-T01`／`NF-T07`／`NF-T08`／`NF-T10` 受影重跑；`NF-T01` 含 CPython audit loader/open/child/os.system/loopback/ctypes 觀測；其餘 40 案同位復用 |
 ## next_legal_action
 
 W1 以本 pins 為基線 requalify 14 HOLD／R3-CR，先做來源與 W1M 差額，不重跑 W0；W1 產品施工另需上位採納與 W1M／下一包一致。
@@ -51,10 +51,10 @@ W1–W4 全分母、FHS 485、HERMES／GPT Host、不同 principal 簽章、Publ
 
 | 層 | 值 | 理由 |
 |---|---|---|
-| `w1_technical_readiness` | `W1_TECHNICALLY_READY` | W0 44/44（40 同位復用＋4 受影重跑）＋真 handoff＋staging/final consumer 真讀回 |
+| `w1_technical_readiness` | `W1_TECHNICALLY_READY` | W0 44/44（40 同位復用＋4 受影重跑；NF-T01 audit observation）＋真 handoff＋staging/final consumer 真讀回 |
 | `w1_execution_readiness` | `NOT_CLAIMED` | 尚缺上位採納、W1M／下一包一致與 W1 真入口／授權 |
 
-fresh W1 minimal consume：見 `07_CONSUMER/W1_MIN_CONSUME.json`（parse/use/readback；wrong pin/scope/partial 真拒）；不代表 W1 產品執行或 W1 完成。
+fresh W1 minimal consume：見 `07_CONSUMER/W1_MIN_CONSUME/`（44 items、parse/use/readback；wrong pin/scope/partial 真拒）；不代表 W1 產品執行或 W1 完成。
 ## publication_state
 
 本輪先本地 commit 並回讀；如既有合法 GitHub 推送授權有效，僅推 `codex/w0-w2-g3-native-20261127` 施工分支並回讀 commit，不 force、不 merge main、不改 `W2_CURRENT`。實際狀態以 `PUBLICATION_STATUS.md` 與 `G3_CURRENT.json` 為準。

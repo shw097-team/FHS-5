@@ -1,0 +1,4 @@
+{"pid": 27484, "ppid": 23848, "event": "import", "args": ["usercustomize", "None"]}
+{"pid": 27484, "ppid": 23848, "event": "import", "args": ["hgk_core", "None"]}
+{"pid": 27484, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\off_legacy_src\\__pycache__\\hgk_core.cpython-311.pyc", "r"]}
+{"pid": 27484, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\off_legacy_src\\hgk_core.py", "r"]}

@@ -1,11 +1,11 @@
 # W0 -> W1 minimal consume checklist
 
-- generated_at: `2026-11-27T15:09:06+00:00`
+- generated_at: `2026-11-27T15:42:07+00:00`
 - scope: `FHS-5_PLP/W0`
 - pack_manifest_sha256: `e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8`
 - candidate_commit: `bb66a276aae8c5d6aef549832c523587fc47d247`
 - oracle_sha256: `112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6`
-- evidence_manifest_sha256: `5307b70ce521e90fcbea79cbccf5cc2bfad3228f59a2a5fce1aa6228cbf8e7da`
+- evidence_manifest_sha256: `0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527`
 - cases: 44
 
 ## next_legal_action
@@ -50,7 +50,7 @@ W1 以本 pins 為基線 requalify 14 HOLD／R3-CR，先做來源與 W1M 差額�
 | `F5-W0-T22` | NEG | `RELEASE_NOT_CLAIMED` | PASS | `e8e013d7501a` | `F5-W0-T22.meta.json`, `F5-W0-T22.observed.json`, `F5-W0-T22.stderr.txt`, `F5-W0-T22.stdout.txt` |
 | `F5-W0-T23` | SEC | `SECRET_LEAK` | PASS | `5f33c812d483` | `F5-W0-T23.meta.json`, `F5-W0-T23.observed.json`, `F5-W0-T23.stderr.txt`, `F5-W0-T23.stdout.txt` |
 | `F5-W0-T24` | POS/NEG | `PROFILE_GATE_DRIFT` | PASS | `f8ab2d71c569` | `F5-W0-T24.meta.json`, `F5-W0-T24.observed.json`, `F5-W0-T24.stderr.txt`, `F5-W0-T24.stdout.txt` |
-| `NF-T01` | NF | `ARCHITECTURE_REWORK_REQUIRED` | PASS | `e483abd52f7d` | `NF-T01.meta.json`, `NF-T01.observed.json`, `NF-T01.stderr.txt`, `NF-T01.stdout.txt`, `requal_NF-T01.meta.json`, `requal_NF-T01.stderr.txt`, `requal_NF-T01.stdout.txt` |
+| `NF-T01` | NF | `ARCHITECTURE_REWORK_REQUIRED` | PASS | `dadf0ae16958` | `NF-T01.meta.json`, `NF-T01.observed.json`, `NF-T01.stderr.txt`, `NF-T01.stdout.txt`, `requal_NF-T01.meta.json`, `requal_NF-T01.stderr.txt`, `requal_NF-T01.stdout.txt` |
 | `NF-T02` | NF | `FALSE_READER` | PASS | `0f6db5b624b8` | `NF-T02.meta.json`, `NF-T02.observed.json`, `NF-T02.stderr.txt`, `NF-T02.stdout.txt` |
 | `NF-T03` | NF | `EFFECT_NOT_VERIFIED` | PASS | `0934e2b8ff06` | `NF-T03.meta.json`, `NF-T03.observed.json`, `NF-T03.stderr.txt`, `NF-T03.stdout.txt` |
 | `NF-T04` | NF | `RUNNER_UNBOUND` | PASS | `1b133517a54f` | `NF-T04.meta.json`, `NF-T04.observed.json`, `NF-T04.stderr.txt`, `NF-T04.stdout.txt` |

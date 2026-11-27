@@ -5,23 +5,23 @@
       "schema": "FHS5.W0NF.ReceiptGateAudit@1",
       "target": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\consumer.py",
       "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13",
-      "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230849-a4b187dd\\receipt.json",
+      "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T234153-ecdbff08\\receipt.json",
       "exit": 0,
       "gate_stdout": {
         "mode": "verify-receipt",
-        "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230849-a4b187dd\\receipt.json",
-        "expected_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+        "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T234153-ecdbff08\\receipt.json",
+        "expected_receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
         "status": "RECEIPT_SHA_OK",
-        "observed_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
-        "bytes": 126717,
+        "observed_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
+        "bytes": 136017,
         "receipt_parsed": false,
         "downstream_read": false,
         "marker_written": true,
         "downstream_marker": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\g17_markers\\pos_downstream_marker.json",
-        "downstream_marker_sha256": "c2d2f4dd53bce22a9406ea32f792de1cbeef2cc7158e1ecfdb8dcab77b0eb0ca"
+        "downstream_marker_sha256": "7b458a802d7797191a880f095957881bfb5f0c64cef62b4148c04f8f98b075d8"
       },
       "root_opens": [
-        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T230849-a4b187dd\\receipt.json",
+        "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\runs\\20261127T234153-ecdbff08\\receipt.json",
         "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\consumer.py"
       ],
       "unexpected_root_opens": [],
@@ -41,10 +41,10 @@
       "gate_stdout": {
         "mode": "verify-receipt",
         "receipt": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\07_CONSUMER\\G17\\neg\\receipt.mutated.json",
-        "expected_receipt_sha256": "2be63f0da8e97961c067920664aa3df217bd366654bcb16ef280ed824ef327b8",
+        "expected_receipt_sha256": "1400892233a1246abcf5aefdcba846bbb7bfa3084998a6284e555b9865fd7db2",
         "status": "RECEIPT_SHA_MISMATCH",
-        "observed_sha256": "4e70701c241eeea3cecbffdac5c3141b9d8c024530b791c7a4013871a419a3b5",
-        "bytes": 126717,
+        "observed_sha256": "ee13c666d7486916dbe0bfdac74923ff87bce5c404bc69d37b6b0672515c363e",
+        "bytes": 136017,
         "receipt_parsed": false,
         "downstream_read": false,
         "marker_written": false

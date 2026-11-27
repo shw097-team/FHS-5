@@ -1,11 +1,11 @@
 {
   "schema": "FHS5.W0NF.TQAEPResult@1",
-  "generated_at": "2026-11-27T14:55:26+00:00",
+  "generated_at": "2026-11-27T15:40:11+00:00",
   "candidate_sha": "bb66a276aae8c5d6aef549832c523587fc47d247",
   "pack_manifest_sha256": "e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8",
   "oracle_sha": "112f2902656f1122720ef275ac954e3422f896267f144f27d321fa138be382c6",
   "case_set_sha": "9624e71d5eb33714619fee0b764abe091eb66995346404a8cd8d43e3ffec7512",
-  "receipts_index_sha": "bd96922bd1c31d2472f41dceb305a4017bf66454c7ef3346f2407c54748059a9",
+  "receipts_index_sha": "276320b4f41d88a60aef226376ab0cf47cebd5cf429382ae0b5f746582e8f870",
   "fixtures": {
     "junction_ok": true,
     "junction_detail": "Junction created for C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQAEP\\tmp\\root\\escape_dir <<===>> C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\13_W0_NF_CODEX_20261125\\05_TQA",
@@ -297,5 +297,5 @@
     "NF-T08",
     "NF-T10"
   ],
-  "affected_note": "40 unaffected same-position receipts reused; NF-T01/NF-T07/NF-T08/NF-T10 re-run from byte-exact source and materialised candidate bb66a276; T10 finalised from the pre-final consumer receipt, then accepted by the final consumer"
+  "affected_note": "40 unaffected same-position receipts reused; NF-T01/NF-T07/NF-T08/NF-T10 re-run from byte-exact source and materialised candidate bb66a276; NF-T01 now includes CPython audit observation of loader/open/child/os.system/loopback/ctypes with positive and absent controls; T10 finalised from the pre-final consumer receipt, then accepted by the final consumer"
 }

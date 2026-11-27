@@ -1,14 +1,53 @@
 {
   "verdict": "PASS",
   "control_ok": true,
+  "observer": {
+    "probe_ok": true,
+    "absent_rejected": true,
+    "live_all": true,
+    "transparent": true
+  },
+  "off_totals": {
+    "legacy_import_attempts": [],
+    "child_events": 2,
+    "network_events": 0,
+    "native_events": 0,
+    "observed_pids": [
+      1784,
+      2156,
+      6288,
+      6300,
+      9300,
+      18000,
+      18536
+    ],
+    "opened_files": 226,
+    "child_commands": [
+      {
+        "exe": "None",
+        "argv": "git -C C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\02_CANDIDATE\\repo rev-parse HEAD",
+        "name": "git",
+        "ok": true
+      }
+    ],
+    "child_commands_allowed": true
+  },
   "gates": {
     "import_control_ok": true,
+    "blocker_blocks_with_flag": true,
+    "blocker_allows_without_flag": true,
+    "observer_probe_ok": true,
+    "observer_absent_rejected": true,
+    "observer_live_all_runs": true,
+    "observer_transparent": true,
+    "off_no_forbidden_import": true,
+    "off_child_commands_allowed": true,
+    "off_no_forbidden_effect": true,
     "reviewer_positive_ok": true,
     "reviewer_negative_ok": true,
     "reviewer_gate": true,
     "false_parity_rejected": true,
-    "all_entries_ok": true,
-    "unbound": []
+    "all_entries_ok": true
   },
   "entries": [
     [

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Users\\user\\.codex\\plugins\\cache\\created-by-me-remote\\plp-tpm-review\\1.0.1\\scripts\\review_core.py",
+    "--request",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\03_PARTIES\\tpm\\review-request.json",
+    "--input-root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\03_PARTIES\\tpm\\input",
+    "--outroot",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\05_TQAEP\\tmp\\off_review_audit"
+  ],
+  "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13",
+  "exit": 0,
+  "stdout_sha256": "15cc4372f2d0481a4dbccf8be810a4b008bc7287bfc920f67cbd74899247916d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timestamp": "2026-11-27T15:40:05+00:00"
+}

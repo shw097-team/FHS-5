@@ -1,0 +1,111 @@
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["usercustomize", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\off_audit_probe.py", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\tools\\off_audit_probe.py", "rb"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["__future__", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\__future__.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["argparse", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\argparse.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["warnings", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\warnings.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["gettext", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\gettext.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["ctypes", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\ctypes\\__pycache__\\__init__.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_ctypes", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_ctypes", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_ctypes.pyd"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["struct", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\struct.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_struct", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "ctypes.dlopen", "args": ["kernel32"]}
+{"pid": 2732, "ppid": 23848, "event": "ctypes.dlsym", "args": ["<WinDLL 'kernel32', handle 7ffa88590000 at 0x1d986701ad0>", "GetLastError"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["ctypes._endian", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\ctypes\\__pycache__\\_endian.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["hashlib", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\hashlib.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_hashlib", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_hashlib", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_hashlib.pyd"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_blake2", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["socket", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\socket.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_socket", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_socket", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_socket.pyd"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["selectors", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\selectors.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["collections.abc", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\collections\\__pycache__\\abc.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["math", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["select", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["select", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\select.pyd"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["errno", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["subprocess", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\subprocess.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["locale", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\locale.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_locale", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["signal", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\signal.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["threading", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\threading.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_weakrefset", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\_weakrefset.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["contextlib", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\contextlib.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["fcntl", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["msvcrt", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["pathlib", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\pathlib.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["fnmatch", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\fnmatch.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["posixpath", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["posix", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["urllib.parse", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["urllib", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\urllib\\__pycache__\\__init__.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\urllib\\__pycache__\\parse.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["ipaddress", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\ipaddress.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["shutil", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\shutil.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["zlib", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["bz2", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\bz2.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_compression", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\_compression.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_bz2", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_bz2", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_bz2.pyd"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["lzma", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\lzma.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_lzma", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["_lzma", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\_lzma.pyd"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["hgk_core", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\05_TQAEP\\tmp\\off_trace.jsonl", "a"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\probe\\probe_marker.txt", "w"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\probe\\probe_marker.txt", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["4", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["5", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "subprocess.Popen", "args": ["None", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -c print('CHILD_OK')"]}
+{"pid": 2732, "ppid": 23848, "event": "_winapi.CreateProcess", "args": ["None", "\u0002", "None"]}
+{"pid": 18156, "ppid": 2732, "event": "import", "args": ["usercustomize", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["4", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["5", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "subprocess.Popen", "args": ["None", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -c \"\nimport os, sys\npath = os.path.join(sys.argv[1], \\\"grandchild.txt\\\")\nwith open(path, \\\"w\\\", encoding=\\\"utf-8\\\") as fh:\n    fh.write(\\\"GRANDCHILD\\\")\nprint(\\\"GRANDCHILD_OK\\\""]}
+{"pid": 2732, "ppid": 23848, "event": "_winapi.CreateProcess", "args": ["None", "\u0002", "None"]}
+{"pid": 19676, "ppid": 2732, "event": "import", "args": ["usercustomize", "None"]}
+{"pid": 19676, "ppid": 2732, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\probe\\grandchild.txt", "w"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\probe\\grandchild.txt", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "socket.__new__", "args": ["<socket>", "2"]}
+{"pid": 2732, "ppid": 23848, "event": "socket.bind", "args": ["<socket>", "('127.0.0.1', 0)"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["encodings.idna", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\encodings\\__pycache__\\idna.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["stringprep", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__pycache__\\stringprep.cpython-311.pyc", "r"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["unicodedata", "None"]}
+{"pid": 2732, "ppid": 23848, "event": "import", "args": ["unicodedata", "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python311\\DLLs\\unicodedata.pyd"]}
+{"pid": 2732, "ppid": 23848, "event": "socket.getaddrinfo", "args": ["127.0.0.1", "8739"]}
+{"pid": 2732, "ppid": 23848, "event": "socket.__new__", "args": ["<socket>", "2"]}
+{"pid": 2732, "ppid": 23848, "event": "socket.connect", "args": ["<socket>", "('127.0.0.1', 8739)"]}
+{"pid": 2732, "ppid": 23848, "event": "ctypes.dlopen", "args": ["kernel32"]}
+{"pid": 2732, "ppid": 23848, "event": "ctypes.dlsym", "args": ["<CDLL 'kernel32', handle 7ffa88590000 at 0x1d986389610>", "GetCurrentProcessId"]}
+{"pid": 2732, "ppid": 23848, "event": "ctypes.dlsym", "args": ["<CDLL 'kernel32', handle 7ffa88590000 at 0x1d986389610>", "GetTickCount"]}
+{"pid": 2732, "ppid": 23848, "event": "os.system", "args": ["cmd /c exit 7"]}
+{"pid": 2732, "ppid": 23848, "event": "open", "args": ["C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0_close_20261127\\13\\04_DEV_OPS\\probe\\off_audit_probe.result.json", "w"]}
