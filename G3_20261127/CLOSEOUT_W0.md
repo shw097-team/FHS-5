@@ -6,7 +6,8 @@
 - T1 docs/evidence commit：`dda7779464abf3b6d7cbaeee8a9fbcc93c471137`
 - T1 push metadata：`5496cf55bc04b8409359f882952bd872f1ddbb88`
 - T2 content commit：`c421c5a7856e397b37170f5401b9f7fe973b74fa`
-- T2 docs/evidence commit：本檔所在 commit（T2b；以 `git log -- G3_20261127/CLOSEOUT_W0.md` 回讀）
+- T2 docs/evidence commit：`fad50e1f3500107c8847e874dcb23ae4ec7a7a59`
+- T2 push readback：`5496cf5 → fad50e1`；remote head `fad50e1`。本 T2c metadata commit 只記錄 readback，不變更內容。
 - 最終 run root：`C:\Projects\Agent_Workspace\FHS-5_Workspace\worktrees\g3-20261127\G3_20261127\runs\w0_close_20261127\13`
 - 最終 handoff：`09_DELIVERY/W0_HANDOFF.md`（sha256 `3e5d6104d6fccbe7d46a5484b26340247f13054358e9ab8dd81b27f5ae92673d`）
 - 最終 evidence：`10_EVIDENCE/EVIDENCE_MANIFEST.json`（sha256 `0ebbccf1f09837629b3cb2960dd476c440937f77cc80d4e8ee3d8fdcd3a92527`）
@@ -117,7 +118,7 @@
 - 原 14 HOLD／12 R3-CR／WM2E 未全數關閉；只處置直接受影者，其餘依原表保留。
 - 不宣 W1–W4 完成、Checkpoint A 全部完成、W2/W3 准入、FHS-5 整體 MVP、release、不同 principal、其他 Host、FHS 485、Fabric/Legacy 全量。
 - NF-T01 OS-level child/network 隔離未成立；NF-T08 契約內容簽章／全鏈 synchronous rewrite 未解；NF-T10 只宣 W1 minimal consume，不宣 W1 產品執行。
-- 遠端交付：T1 已 push `0099e95 → 5496cf5` 並回讀；T2 delta `c421c5a` 與本 T2b docs commit 需再推，最終 remote head 見 final report。未回讀前不宣 T2 遠端成功。
+- 遠端交付：T1 `0099e95 → 5496cf5`；T2 `5496cf5 → fad50e1`（content `c421c5a`＋docs `fad50e1`），remote head 回讀 `fad50e1`；T2c metadata commit 只記 readback。
 
 ## OpenSpec／子代理／PC10
 

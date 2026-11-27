@@ -6,7 +6,8 @@
 | 基準 | `a2281bf`；本輪基線 `ef40abf` |
 | 分支 | `codex/w0-w2-g3-native-20261127` |
 | 內容 commit | `c421c5a7856e397b37170f5401b9f7fe973b74fa` |
-| 文件 commit | `dda7779464abf3b6d7cbaeee8a9fbcc93c471137`（T1；T2 docs commit 見 git log） |
+| 文件 commit | `fad50e1f3500107c8847e874dcb23ae4ec7a7a59`（T2 docs/evidence；T1 `dda7779`） |
+| 遠端 head | `fad50e1…`（T2 push readback；T2c metadata 另記） |
 | Checker | `PASS／32 checks` |
 | Consumer | `PASS／44/44`（final P7 `20261127T234153-ecdbff08`, 863 checks） |
 | W0 | **DONE 44/44**（scoped） |

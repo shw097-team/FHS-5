@@ -6,7 +6,7 @@
 - **T1 docs/evidence**：`dda7779464abf3b6d7cbaeee8a9fbcc93c471137`
 - **T1 push metadata**：`5496cf55bc04b8409359f882952bd872f1ddbb88`
 - **T2 content**：`c421c5a7856e397b37170f5401b9f7fe973b74fa`
-- **T2 docs/evidence**：本檔所在 commit（以 `git log -- G3_20261127/HANDOFF_W0.md` 回讀）
+- **T2 docs/evidence**：`fad50e1f3500107c8847e874dcb23ae4ec7a7a59`
 - **pack_manifest_sha256**：`e3772aeed0ac1460a55b5c3659eda3d939a01ad393926b74a3d552ec7b0b97d8`
 - **w0m_amendment_sha256**：`c9b1ca9bbcd5ce87fdbcb0fc373cb8c36d1ad8d404b55c4f7311fc6c2bbddfd5`
 - **candidate_commit**：`bb66a276aae8c5d6aef549832c523587fc47d247`
@@ -20,7 +20,8 @@
 - **G17**：POS／單 byte NEG／zero-read audit 全 PASS（`07_CONSUMER/G17/`）
 - **fresh W1 minimal**：44 items、readback_ok；`07_CONSUMER/W1_MIN_CONSUME/`；checklist sha256 `49bd3a83…`（P7 重跑後）
 - **independent checker**：`03_PARTIES/challenge/challenge.json` PASS 32 checks／0 findings
-- **remote（T1）**：`0099e95… → 5496cf5…`，已回讀；T2 delta 後再推（見 final report）
+- **remote（T1）**：`0099e95… → 5496cf5…`
+- **remote（T2）**：`5496cf5… → fad50e1…`，已回讀；T2c metadata commit 只記 readback
 
 ## next minimal W1 action
 

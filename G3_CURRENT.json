@@ -5,7 +5,7 @@
  "pre_hygiene_head": "4a125e08594e32db588bf59f659a1f138e167c13",
  "delivery_root": "G3_20261127",
  "content_commit": "c421c5a7856e397b37170f5401b9f7fe973b74fa",
- "docs_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
+ "docs_commit": "fad50e1f3500107c8847e874dcb23ae4ec7a7a59",
  "adopted_primary": "36_W2_S2S3_FINAL_CODEX_20261127 (W2_CURRENT.json) unchanged",
  "waves": {
   "W0": "W0_DONE 44/44 (scoped)",
@@ -46,7 +46,7 @@
   "g17": "PASS",
   "w1_minimal": "PASS (44 items)",
   "verdict": "W0_DONE (scoped; not W1-W4/MVP/release)",
-  "docs_evidence_commit": "T2B_COMMIT_SEE_GIT_LOG",
+  "docs_evidence_commit": "fad50e1f3500107c8847e874dcb23ae4ec7a7a59",
   "push": {
    "t1": {
     "attempted": true,
@@ -54,9 +54,11 @@
     "remote_head_readback": "5496cf55bc04b8409359f882952bd872f1ddbb88"
    },
    "t2": {
-    "attempted": false,
-    "state": "LOCAL_T2B_PENDING_PUSH"
-   }
+    "attempted": true,
+    "result": "PUSHED",
+    "remote_head_readback": "fad50e1f3500107c8847e874dcb23ae4ec7a7a59"
+   },
+   "metadata": "T2C_LOCAL_METADATA_READBACK"
   },
   "t1_content_commit": "f173214428f1d3b4ea3819182ddb8a6a67cc34f1",
   "t1_docs_evidence_commit": "dda7779464abf3b6d7cbaeee8a9fbcc93c471137",
