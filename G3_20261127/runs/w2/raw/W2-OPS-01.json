@@ -1,0 +1,107 @@
+{
+ "run_id": "W2-W2-OPS-01-20261127T161946",
+ "case_id": "W2-OPS-01",
+ "kind": "POS",
+ "expected": {
+  "seven": "host/pre/argv/post/parse/compensation/readback"
+ },
+ "observed": {
+  "seven": {
+   "1_host": {
+    "host_id": "<HOST>",
+    "principal": "<USER>",
+    "os": "win32",
+    "python": "3.11.9",
+    "policy_epoch": "G3-20261127"
+   },
+   "2_pre_world": "ABSENT",
+   "3_effect_argv_exit": {
+    "argv": [
+     "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+     "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\W2\\ops_receiver.py",
+     "--pack",
+     "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\FHS-5_PLP_W0-W2_第三代Native-first_執行控制包_FINAL\\01_BODY\\FHS-5_PLP_W2_NATIVE_FIRST",
+     "--lib",
+     "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\lib",
+     "--out",
+     "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\ops\\out",
+     "--runid",
+     "OPS-A-20261127T161946",
+     "--result",
+     "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w2\\raw\\OPS01_receiver.json"
+    ],
+    "exit": 0
+   },
+   "4_post_world": "f877c0142b692c456d9ac02fce278909f441cb1ac1e122a7cdf724947b191655",
+   "5_receiver_parse_use": {
+    "schema": "FHS5.PLP.W2.BindingReceipt@1",
+    "run_id": "OPS-A-20261127T161946",
+    "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+    "source_subject": "FHS-5_PLP/W2",
+    "scope": "W2-NF-01",
+    "candidate": "W2-G3-PCNF-r2",
+    "pins": {
+     "manifest_sha256": "7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0",
+     "tree_sha256": "957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c",
+     "case_set_sha256": "a78e689d42265851eba8ea0deb6f125eac4da591c47e49c2f89f610051a16aaf"
+    },
+    "parsed": {
+     "files": 5,
+     "assets": 25,
+     "cases": 12,
+     "first_case": "W2-DEV-01",
+     "first_fixture_sha256": "dea304084db5b8d81a9bc5c6c94e7e940cabbab277dcb2a14b8f416b4671a001"
+    },
+    "readback": {
+     "fixture_case": "W2-DEV-01",
+     "fixture_kind": "POS"
+    },
+    "host": {
+     "host_id": "<HOST>",
+     "principal": "<USER>",
+     "python": "3.11.9"
+    },
+    "created_at": "2026-11-27T16:19:46+0800"
+   },
+   "6_compensation": {
+    "kind": "DELETE_CREATED_ONLY",
+    "ok": true
+   },
+   "7_pre_state_readback": "ABSENT"
+  },
+  "checks": {
+   "exit0": true,
+   "pre_absent": true,
+   "post_changed": true,
+   "consumer_ok": true,
+   "compensated": true,
+   "seven_present": true
+  },
+  "consumer": {
+   "consumer_id": "g3-w2-ops-consumer-20261127",
+   "checks": {
+    "schema": true,
+    "subject": true,
+    "scope": true,
+    "cases": true,
+    "pins": true,
+    "material_cases": true,
+    "readback": true
+   },
+   "all_ok": true,
+   "receipt_sha256": "30cfe275ad5337ee78bf03123f53adcdb2d29b16b06999f4c7f72df5c8d591c0",
+   "material_sha256": "6ff635b03326d5ada4aceb930c2a152747300f4d6f035d29a11475c5ce128d8f",
+   "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+   "scope": "W2-NF-01",
+   "action": "parse+use+field-compare+readback"
+  }
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_EFFECT_ACTUAL",
+ "not_covered": [
+  "other Hosts",
+  "container/cloud",
+  "Publisher"
+ ]
+}

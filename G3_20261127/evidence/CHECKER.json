@@ -1,0 +1,227 @@
+{
+ "schema": "FHS5.PLP.G3.Checker@1",
+ "verdict": "PASS",
+ "checks": [
+  {
+   "check": "pack_W0_verify",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "pack_W0_cases",
+   "ok": true,
+   "detail": "{'files': 5, 'assets': 8, 'cases': 44, 'work_orders': 44}"
+  },
+  {
+   "check": "pack_W0_manifest_sha",
+   "ok": true,
+   "detail": "baa516b56755"
+  },
+  {
+   "check": "pack_W1_verify",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "pack_W1_cases",
+   "ok": true,
+   "detail": "{'files': 5, 'assets': 26, 'cases': 13, 'work_orders': 13}"
+  },
+  {
+   "check": "pack_W1_manifest_sha",
+   "ok": true,
+   "detail": "f00b4ee93611"
+  },
+  {
+   "check": "pack_W2_verify",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "pack_W2_cases",
+   "ok": true,
+   "detail": "{'files': 5, 'assets': 25, 'cases': 12, 'work_orders': 12}"
+  },
+  {
+   "check": "pack_W2_manifest_sha",
+   "ok": true,
+   "detail": "7bdc4a0acb49"
+  },
+  {
+   "check": "w0_10_of_10",
+   "ok": true,
+   "detail": "10"
+  },
+  {
+   "check": "w0_SAMPLE-R1",
+   "ok": true,
+   "detail": "{'exit': 0, 'status': 'COMPLETE'}"
+  },
+  {
+   "check": "w0_SAMPLE-R2",
+   "ok": true,
+   "detail": "{'exit': 2, 'status': 'MISSING'}"
+  },
+  {
+   "check": "w0_SAMPLE-R3",
+   "ok": true,
+   "detail": "{'exit': 3, 'status': 'INVALID_DUP'}"
+  },
+  {
+   "check": "w0_SAMPLE-R4",
+   "ok": true,
+   "detail": "{'exit': 3, 'status': 'INVALID_PATH'}"
+  },
+  {
+   "check": "w0_SAMPLE-R5",
+   "ok": true,
+   "detail": "{'exit': 3, 'status': 'INVALID_ENCODING'}"
+  },
+  {
+   "check": "w0_SAMPLE-R6",
+   "ok": true,
+   "detail": "{'exit': 3, 'status': 'SHA_MISMATCH'}"
+  },
+  {
+   "check": "w0_SAMPLE-R7",
+   "ok": true,
+   "detail": "{'exit': 3, 'status': 'INVALID_FORMAT'}"
+  },
+  {
+   "check": "w0_SAMPLE-R8",
+   "ok": true,
+   "detail": "{'exit': 3, 'status': 'INVALID_FORMAT'}"
+  },
+  {
+   "check": "w0_SAMPLE-R9",
+   "ok": true,
+   "detail": "{'exit': 0, 'status': 'COMPLETE'}"
+  },
+  {
+   "check": "w0_SAMPLE-R10",
+   "ok": true,
+   "detail": "{'exit': 0, 'status': 'COMPLETE'}"
+  },
+  {
+   "check": "w0_r4_variants",
+   "ok": true,
+   "detail": "{'junction': True, 'n': 4}"
+  },
+  {
+   "check": "w0_r10_output",
+   "ok": true,
+   "detail": "out/result.json"
+  },
+  {
+   "check": "w0_receipts_44",
+   "ok": true,
+   "detail": "{'original': 24, 'NF': 10, 'SAMPLE': 10}"
+  },
+  {
+   "check": "w0_off_positive_control",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "w1_12_pass_1_deferred",
+   "ok": true,
+   "detail": "{'pass': 12, 'deferred': 1}"
+  },
+  {
+   "check": "w1_api_full_body",
+   "ok": true,
+   "detail": "{'clauses': 84, 'negatives': 167, 'exceptions': 27}"
+  },
+  {
+   "check": "w1_guide_two_periods",
+   "ok": true,
+   "detail": "{'nine_keys': ['subject', 'scope', 'source_sha', 'repo_head', 'host_id', 'policy_epoch', 'oracle_sha', 'world_raw_sha', 'first_fail'], 'same': 'PARK_NO_DELTA', 'delta': 'NEW_MATERIAL_EVIDENCE', 'changed': ['world_raw_sha'], 'missing': 'DELTA_UNVERIFIED', 'pass': True}"
+  },
+  {
+   "check": "w1_host_consumed",
+   "ok": true,
+   "detail": "{'Selected': 'OBSERVED_LOCAL', 'Loaded': 'OBSERVED_LOCAL', 'Installed': 'REASONED_NA_NATIVE_ENTRY', 'Bound': 'OBSERVED_LOCAL', 'Invoked': 'OBSERVED_LOCAL', 'ActualServed': 'OBSERVED_LOCAL', 'Consumed': 'OBSERVED_LOCAL'}"
+  },
+  {
+   "check": "w1_suite_115",
+   "ok": true,
+   "detail": "['Ran 115 tests in 14.950s']"
+  },
+  {
+   "check": "w2_12_of_12",
+   "ok": true,
+   "detail": "12"
+  },
+  {
+   "check": "w2_dev_real_apply",
+   "ok": true,
+   "detail": "{'pre': 'c666740268cc', 'post': {'W1/check/w2_receiver.py': '28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595', 'W1/check/test_j1_receiver.py': '7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1'}}"
+  },
+  {
+   "check": "w2_dev_reverse_restore",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_dev_tests_real",
+   "ok": true,
+   "detail": "inside the root that aliases a listed path is refused. ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 4.894s\n\nOK\n"
+  },
+  {
+   "check": "w2_dev_unlisted_unchanged",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_ops_seven",
+   "ok": true,
+   "detail": "{'exit0': True, 'pre_absent': True, 'post_changed': True, 'consumer_ok': True, 'compensated': True, 'seven_present': True}"
+  },
+  {
+   "check": "w2_ops_pre_absent_post_changed_restored",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w2_ops_compensation_not_git",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "w0_pass_with_first_fail",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "w1_pass_with_first_fail",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "w2_pass_with_first_fail",
+   "ok": true,
+   "detail": "[]"
+  }
+ ],
+ "failed": [],
+ "count": 40,
+ "packs": {
+  "W0": {
+   "manifest_sha256": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",
+   "tree_sha256": "e21ad49c2ab1742bd2a0d2f2dfd973522bbf755c820127b4936b8d432776b71d",
+   "case_set_sha256": "da6fa6f3615f4043c90045089ee355c5888036d2900e3cdf646e9120e7db2d81"
+  },
+  "W1": {
+   "manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+   "tree_sha256": "22fa47302ebcbb185b98b2c5d0a2bfa90b68becf31cd9f393be4d2ebdd669004",
+   "case_set_sha256": "9e5c6a83b719c400c8d38e82156f494de8d3da65e9ccf32cef3c6c2b8dfd8262"
+  },
+  "W2": {
+   "manifest_sha256": "7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0",
+   "tree_sha256": "957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c",
+   "case_set_sha256": "a78e689d42265851eba8ea0deb6f125eac4da591c47e49c2f89f610051a16aaf"
+  }
+ },
+ "checker_id": "g3-checker-independent-20261127",
+ "note": "checker re-derives predicates from packs/raws; it does not trust runner verdicts"
+}

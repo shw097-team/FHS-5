@@ -1,0 +1,305 @@
+{
+ "identity": {
+  "project_id": "FHS-5_PLP",
+  "subject_id": "FHS-5_PLP/W1",
+  "scope": "W1-NF-01",
+  "wave_id": "W1",
+  "batch_id": "FHS-5/W1",
+  "profile": "GENERIC_CODEX_NATIVE_FIRST"
+ },
+ "manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "files": [
+  {
+   "path": "00_W1_PI_PD.md",
+   "bytes": 43853,
+   "sha256": "9c675eaad7b147b4cf854fc97e2c79d387418b87068f34f4185f2b130a46780d",
+   "lines": 468
+  },
+  {
+   "path": "01_W1_DEV_ECP.md",
+   "bytes": 25875,
+   "sha256": "6e1652cd14a0b5a278690ed45d50ec7c9b8b5a80b0629e4b65af27828ba2664a",
+   "lines": 283
+  },
+  {
+   "path": "02_W1_OPS_ECP.md",
+   "bytes": 16267,
+   "sha256": "7bb35da7276de8e552fd8f7a315cd704495b77eb1401f8ddde65452658255ecd",
+   "lines": 179
+  },
+  {
+   "path": "03_W1_TQAEP.md",
+   "bytes": 25102,
+   "sha256": "9058d7a2c7e1bf00734c3b15526ceff052390b7747bfbb132018cc9fa0b112e2",
+   "lines": 295
+  },
+  {
+   "path": "04_W1_START_THIN_PROMPT.md",
+   "bytes": 2030,
+   "sha256": "93c17ddf1ee8a8131ecebcfcac40e51fb4c5753732ed065e1adba94ee05ba7ad",
+   "lines": 34
+  }
+ ],
+ "assets": [
+  {
+   "path": "assets/fixtures/W1-ABI-01.json",
+   "bytes": 822,
+   "sha256": "a0e18b8bfabc41c97d7b2ab368cbda5e6e310d35fd2713cbde4e62868b4de196",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-ABI-02.json",
+   "bytes": 800,
+   "sha256": "9a62f6d1912f1ebf707202882c47916f4e9bcae1420a820fa031358a022f9ae6",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-API-01.json",
+   "bytes": 768,
+   "sha256": "5d94e2ddb9cce903900b66ba55e03cf434d899eab321914c0d87ce0817bf0745",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-HERMES-01.json",
+   "bytes": 776,
+   "sha256": "8f9f784917c312770e052406e59e06aa7cc35296e176fe06cdd8ba7cd730d79a",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-HOST-01.json",
+   "bytes": 769,
+   "sha256": "168aa72567745ebce907c951076323fd2db527e35502ec1ed912f309632a3fda",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-HOST-02.json",
+   "bytes": 786,
+   "sha256": "9159143898ac741d8726390d60e776d3065ab40e7cfd3d48027d861c6f5ccea9",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-HOST-03.json",
+   "bytes": 739,
+   "sha256": "1d7de26b5528bf6819d9647d52cc54e6c40c1b9adafb752f216422e6d41cc1a6",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-R3-01.json",
+   "bytes": 796,
+   "sha256": "c786785e330bf09060b60fe9e8767f637345331f51ab512f1e00a59d210d54bf",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-R3-02.json",
+   "bytes": 744,
+   "sha256": "52a2009c258c18faa016c8a4a813ca6ac10c2f3b8dc9dcdb60064ed5be0c5f3d",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-R3-03.json",
+   "bytes": 879,
+   "sha256": "066909b9f3228bca6064a0e4437e3e06183b2e63806ab6653a2323038e0a42ba",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-R3-04.json",
+   "bytes": 802,
+   "sha256": "c6cc18e9c9459f3d7ee260973cb8a4d95d246685ece659675b443120c2534a36",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-R3-05.json",
+   "bytes": 769,
+   "sha256": "59552d7790f88b818f79883d42a5894dfc8a295b80957c5d2eff06ce3f592da2",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/fixtures/W1-SEC-01.json",
+   "bytes": 774,
+   "sha256": "3a0c56efde4454937375624e485e92f975f68e4862d10b9de4bc8e7c5ab0fc67",
+   "role": "fixture"
+  },
+  {
+   "path": "assets/oracles/W1-ABI-01.json",
+   "bytes": 565,
+   "sha256": "09e608cd0fae844eac6caac5e5ed5d8f100b1ef484c9f1d21066305865867f19",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-ABI-02.json",
+   "bytes": 549,
+   "sha256": "ea236a6629f8f12222f5d90140a9d2362488b8449da998b4f1d6f1ed6ec90c2f",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-API-01.json",
+   "bytes": 520,
+   "sha256": "0d3c5e3256dd4c6cfba30788c5c875222efa0fea50b5d1f842f09fd01ef97443",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-HERMES-01.json",
+   "bytes": 524,
+   "sha256": "101103bdcc2475558c02de4162efb5e10a93aa729db8a4b5e4315d928be9edbf",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-HOST-01.json",
+   "bytes": 512,
+   "sha256": "c92846be150cfcfbd9400e5bf23d50ad73b1ca897d10e921ad3120e387573e68",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-HOST-02.json",
+   "bytes": 551,
+   "sha256": "0af129228279a3b0fa80bd00a696175c6aa649ac7ad2e5f239b434ae0ffaa9fe",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-HOST-03.json",
+   "bytes": 545,
+   "sha256": "f91f4fbb09a9c66c2f6f6aee9848f9774bc98d3a1c9195c48c6d95aabb55cf6f",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-R3-01.json",
+   "bytes": 519,
+   "sha256": "6f256ac33dafe2a7c21d7cb5a39c099578ba60427d03d280c6923277877d4be3",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-R3-02.json",
+   "bytes": 543,
+   "sha256": "6c3b0182b44a2fc850eac9773c85047fb7ba38aae9b533bf04228c5677853aac",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-R3-03.json",
+   "bytes": 557,
+   "sha256": "ce7e1e2092f85091bf9e95337092de7af4b1df8e1e81e1718815007df5ed6caa",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-R3-04.json",
+   "bytes": 560,
+   "sha256": "b8321db4c322bff2e04baf85d914aa4b4a5360c669987ccb5aeebf8e0aa13eda",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-R3-05.json",
+   "bytes": 557,
+   "sha256": "1c6ccd0a53d14f40058fef76ee51d89762c00290280333e3b452c37d43f10b45",
+   "role": "oracle"
+  },
+  {
+   "path": "assets/oracles/W1-SEC-01.json",
+   "bytes": 568,
+   "sha256": "284675cc464e870b419ffe5e5cec54a9a252cffcf5238b32c020d5b5b45fc82d",
+   "role": "oracle"
+  }
+ ],
+ "cases": [
+  {
+   "case_id": "W1-HOST-01",
+   "kind": null
+  },
+  {
+   "case_id": "W1-HOST-02",
+   "kind": null
+  },
+  {
+   "case_id": "W1-HOST-03",
+   "kind": null
+  },
+  {
+   "case_id": "W1-HERMES-01",
+   "kind": null
+  },
+  {
+   "case_id": "W1-ABI-01",
+   "kind": null
+  },
+  {
+   "case_id": "W1-ABI-02",
+   "kind": null
+  },
+  {
+   "case_id": "W1-SEC-01",
+   "kind": null
+  },
+  {
+   "case_id": "W1-API-01",
+   "kind": null
+  },
+  {
+   "case_id": "W1-R3-01",
+   "kind": null
+  },
+  {
+   "case_id": "W1-R3-02",
+   "kind": null
+  },
+  {
+   "case_id": "W1-R3-03",
+   "kind": null
+  },
+  {
+   "case_id": "W1-R3-04",
+   "kind": null
+  },
+  {
+   "case_id": "W1-R3-05",
+   "kind": null
+  }
+ ],
+ "requirements": [
+  {
+   "id": "B0",
+   "role": "architecture blueprint"
+  },
+  {
+   "id": "B2",
+   "role": "program ADR PC01-10"
+  },
+  {
+   "id": "B4",
+   "role": "direct repair SPEC"
+  },
+  {
+   "id": "M0",
+   "role": "W0 design"
+  },
+  {
+   "id": "M1",
+   "role": "W1 design"
+  },
+  {
+   "id": "M2",
+   "role": "W2 design"
+  },
+  {
+   "id": "N07",
+   "role": "original W0M"
+  },
+  {
+   "id": "N08",
+   "role": "original W1M"
+  },
+  {
+   "id": "N09",
+   "role": "original W2M"
+  },
+  {
+   "id": "CTRL",
+   "role": "this task control pack"
+  },
+  {
+   "id": "PROMPT",
+   "role": "this task thin prompt"
+  },
+  {
+   "id": "HIST-05",
+   "role": "historical original 05 (exact pin, non-competing)"
+  }
+ ]
+}

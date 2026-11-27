@@ -1,0 +1,20 @@
+{
+ "nine_keys": [
+  "subject",
+  "scope",
+  "source_sha",
+  "repo_head",
+  "host_id",
+  "policy_epoch",
+  "oracle_sha",
+  "world_raw_sha",
+  "first_fail"
+ ],
+ "same": "PARK_NO_DELTA",
+ "delta": "NEW_MATERIAL_EVIDENCE",
+ "changed": [
+  "world_raw_sha"
+ ],
+ "missing": "DELTA_UNVERIFIED",
+ "pass": true
+}

@@ -1,0 +1,47 @@
+{
+ "run_id": "W1-W1-HOST-01-20261127T162258",
+ "case_id": "W1-HOST-01",
+ "kind": "POS",
+ "requirement_ref": "W1M §09.1 L889-908; U-017",
+ "subject_id": "FHS-5_PLP/W1",
+ "scope": "W1-NF-01",
+ "candidate": "W1-G3-PCNF-r2",
+ "source_manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "pack_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "case_set_sha256": "9e5c6a83b719c400c8d38e82156f494de8d3da65e9ccf32cef3c6c2b8dfd8262",
+ "expected": {
+  "consumed_raw": "consumer_id, consumed_sha256, readback_at"
+ },
+ "observed": {
+  "host_kind": "CODEX_NATIVE_LOCAL",
+  "stages": {
+   "Selected": "OBSERVED_LOCAL",
+   "Loaded": "OBSERVED_LOCAL",
+   "Installed": "REASONED_NA_NATIVE_ENTRY",
+   "Bound": "OBSERVED_LOCAL",
+   "Invoked": "OBSERVED_LOCAL",
+   "ActualServed": "OBSERVED_LOCAL",
+   "Consumed": "OBSERVED_LOCAL"
+  },
+  "consumed_sha256": "0bb1ffe49e11271a7310cc1db37c7aa007b183388e6936cf38275f131fef4629",
+  "served_sha256": "d4707449ba6b87ffa9d44f2a95b7a8f85b752bc97fdff9d177d914061a04e5c6",
+  "readback": {
+   "consumer_id": "g3-w1-consumer-20261127",
+   "action": "parse+use+readback",
+   "subject": "FHS-5_PLP/W1",
+   "scope": "W1-NF-01",
+   "manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+   "cases_seen": 13,
+   "first_case": "W1-HOST-01",
+   "readback_at": "2026-11-27T16:22:58+0800"
+  }
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "CONSUMER_ACTUAL",
+ "not_covered": [
+  "original external Host",
+  "GPT CHAT/WORK",
+  "HERMES"
+ ]
+}

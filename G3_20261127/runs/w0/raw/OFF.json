@@ -1,0 +1,19 @@
+{
+ "positive_control": {
+  "exit": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\off\\off_wrapper.py\", line 14, in <module>\n    exec(compile(sys.argv[2], '<off-control>', 'exec'), {'__name__': '__main__'})\n  File \"<off-control>\", line 1, in <module>\n  File \"<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1138, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 1078, in _find_spec\n  File \"C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\off\\off_wrapper.py\", line 9, in find_spec\n    raise ImportError('BLOCKED_IMPORT:' + name)\nImportError: BLOCKED_IMPORT:fabric\n",
+  "verdict": "PASS"
+ },
+ "off_run": {
+  "exit": 0,
+  "stdout": "{\"exit\":0,\"missing\":[],\"provided\":[\"A\",\"B\"],\"sha256\":\"8d128a095e76f452a45292a1df9ad965872760b4bc59b0dc3eb8523631369d11\",\"status\":\"COMPLETE\"}\n",
+  "verdict": "PASS"
+ },
+ "blocked_imports": [],
+ "positive_control_blocked": [
+  "fabric"
+ ],
+ "forbidden_imports_zero": true,
+ "verdict": "PASS",
+ "note": "cold subprocess; provider modules blocked by meta_path; positive control proves the blocker fires"
+}

@@ -1,0 +1,30 @@
+{
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\cli\\briefcheck.py",
+  "--root",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\world\\root",
+  "--input",
+  "case_ok.md",
+  "--output",
+  "out/result.json"
+ ],
+ "exit": 0,
+ "output": "out/result.json",
+ "output_created": true,
+ "output_sha256": "e53d0b1cc16959bd2c149e6158d71f19cfe7c288a8626015a985102e0bcbc8a6",
+ "source_sha_before": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+ "source_sha_after": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+ "deleted_to_absent": true,
+ "parsed": {
+  "exit": 0,
+  "missing": [],
+  "provided": [
+   "A",
+   "B"
+  ],
+  "sha256": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+  "status": "COMPLETE"
+ },
+ "verdict": "PASS"
+}

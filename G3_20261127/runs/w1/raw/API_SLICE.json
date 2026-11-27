@@ -1,0 +1,48 @@
+{
+ "files": 5,
+ "clauses": 84,
+ "negatives": 167,
+ "exceptions": 27,
+ "sample": {
+  "clause": "00_W1_PI_PD.md#G3-5 產品契約",
+  "heading": "G3-5 產品契約",
+  "span": [
+   56,
+   59
+  ],
+  "text_sha256": "97db1e6ded86b4843ef132aeaab8511fea37feae0abb6e8b6f1f8918753de23b"
+ },
+ "context_sha256": "951d85f372d26395f68b8a27d1ae29fb1408409a71370c5411309a255aeeecee",
+ "compare_same": {
+  "schema": "FHS5.PLP.W1.BridgeCompare@1",
+  "comparable": true,
+  "subject_id": "FHS-5_PLP/W1",
+  "scope": "W1-NF-01",
+  "added": [],
+  "removed": [],
+  "changed": [],
+  "unknown_fields": [],
+  "state": "PARK_NO_DELTA_CANDIDATE",
+  "semantic_inference": false
+ },
+ "compare_delta": {
+  "schema": "FHS5.PLP.W1.BridgeCompare@1",
+  "comparable": true,
+  "subject_id": "FHS-5_PLP/W1",
+  "scope": "W1-NF-01",
+  "added": [],
+  "removed": [],
+  "changed": [
+   {
+    "path": "00_W1_PI_PD.md",
+    "before_sha256": "9c675eaad7b147b4cf854fc97e2c79d387418b87068f34f4185f2b130a46780d",
+    "after_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "exact_tuple": true
+   }
+  ],
+  "unknown_fields": [],
+  "state": "NEW_MATERIAL_EVIDENCE",
+  "semantic_inference": false
+ },
+ "all_have_span": true
+}

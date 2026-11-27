@@ -1,0 +1,18 @@
+{
+ "run_id": "W2-W2-OPS-02-20261127T161946",
+ "case_id": "W2-OPS-02",
+ "kind": "NEG",
+ "expected": {
+  "token": "RECOVERY_KIND_MISMATCH",
+  "effect": 0
+ },
+ "observed": {
+  "token": "RECOVERY_KIND_MISMATCH",
+  "spy": [],
+  "world": "ABSENT"
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}

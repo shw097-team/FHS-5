@@ -1,0 +1,146 @@
+{
+ "cells": [
+  {
+   "host": "CODEX",
+   "stage": "Selected",
+   "state": "OBSERVED_LOCAL"
+  },
+  {
+   "host": "CODEX",
+   "stage": "Loaded",
+   "state": "OBSERVED_LOCAL"
+  },
+  {
+   "host": "CODEX",
+   "stage": "Installed",
+   "state": "REASONED_NA_NATIVE_ENTRY"
+  },
+  {
+   "host": "CODEX",
+   "stage": "Bound",
+   "state": "OBSERVED_LOCAL"
+  },
+  {
+   "host": "CODEX",
+   "stage": "Invoked",
+   "state": "OBSERVED_LOCAL"
+  },
+  {
+   "host": "CODEX",
+   "stage": "ActualServed",
+   "state": "OBSERVED_LOCAL"
+  },
+  {
+   "host": "CODEX",
+   "stage": "Consumed",
+   "state": "OBSERVED_LOCAL"
+  },
+  {
+   "host": "GPT_CHAT",
+   "stage": "Selected",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_CHAT",
+   "stage": "Loaded",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_CHAT",
+   "stage": "Installed",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_CHAT",
+   "stage": "Bound",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_CHAT",
+   "stage": "Invoked",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_CHAT",
+   "stage": "ActualServed",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_CHAT",
+   "stage": "Consumed",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_WORK",
+   "stage": "Selected",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_WORK",
+   "stage": "Loaded",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_WORK",
+   "stage": "Installed",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_WORK",
+   "stage": "Bound",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_WORK",
+   "stage": "Invoked",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_WORK",
+   "stage": "ActualServed",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "GPT_WORK",
+   "stage": "Consumed",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "HERMES",
+   "stage": "Selected",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "HERMES",
+   "stage": "Loaded",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "HERMES",
+   "stage": "Installed",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "HERMES",
+   "stage": "Bound",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "HERMES",
+   "stage": "Invoked",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "HERMES",
+   "stage": "ActualServed",
+   "state": "NOT_OBSERVED"
+  },
+  {
+   "host": "HERMES",
+   "stage": "Consumed",
+   "state": "NOT_OBSERVED"
+  }
+ ],
+ "count": 28,
+ "observed": 7
+}

@@ -1,0 +1,28 @@
+{
+ "run_id": "W2-W2-R3-02-20261127T161946",
+ "case_id": "W2-R3-02",
+ "kind": "NEG",
+ "expected": {
+  "token": "NOT_ADMITTED"
+ },
+ "observed": {
+  "token": "NOT_ADMITTED",
+  "g4": {
+   "post_bytes": 444,
+   "post_sha256": "9961be52e60b092a8927704cdc1df0fee4178283d4d494017994ea5f1c92b2da",
+   "pre_bytes": 125,
+   "pre_sha256": "13df86fa8b75dc454351e584f8d2f363b0323f8c9b6948851ea40c1428e4423a",
+   "test_bytes": 547,
+   "test_sha256": "e2eec52a8edcd67f0b89320c743f12027cce26e1d23528652ca6f5563a1c0162",
+   "tests_reported": 3,
+   "exit_reported": 0,
+   "has_license": false,
+   "has_git": false
+  },
+  "admitted_as_w2": false
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}

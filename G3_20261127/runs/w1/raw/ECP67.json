@@ -1,0 +1,699 @@
+{
+ "schema": "FHS5.PLP.W1.ECPLedger@1",
+ "count": 67,
+ "counts": {
+  "OBSERVED_THIS_RUN": 15,
+  "REUSE_VERIFIED": 13,
+  "PARTIAL": 36,
+  "REASONED_NA": 1,
+  "DEFERRED": 2
+ },
+ "this_run_observed": 15,
+ "rows": [
+  {
+   "id": "DEV-ADP-01",
+   "source_ref": "01_W1_DEV_ECP.md#L127",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N03.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/GUIDE_SLICE.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-ADP-02",
+   "source_ref": "01_W1_DEV_ECP.md#L128",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N02.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "DEV-ADP-03",
+   "source_ref": "01_W1_DEV_ECP.md#L129",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N10.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-API-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-ADP-04",
+   "source_ref": "01_W1_DEV_ECP.md#L130",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N04.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-HOST-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-APP-01",
+   "source_ref": "01_W1_DEV_ECP.md#L106",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-EFF-01",
+   "source_ref": "01_W1_DEV_ECP.md#L107",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-IDEM-01",
+   "source_ref": "01_W1_DEV_ECP.md#L140",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "DEV-IDEM-02",
+   "source_ref": "01_W1_DEV_ECP.md#L141",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "DEV-IDEM-03",
+   "source_ref": "01_W1_DEV_ECP.md#L142",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "DEV-OP-01",
+   "source_ref": "01_W1_DEV_ECP.md#L121",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-R3-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-OP-02",
+   "source_ref": "01_W1_DEV_ECP.md#L122",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-OP-03",
+   "source_ref": "01_W1_DEV_ECP.md#L123",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N04.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "DEV-OP-04",
+   "source_ref": "01_W1_DEV_ECP.md#L124",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N04.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-API-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-OP-05",
+   "source_ref": "01_W1_DEV_ECP.md#L125",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N04.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "DEV-OP-06",
+   "source_ref": "01_W1_DEV_ECP.md#L126",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/raw/N04.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-HOST-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-PERM-01",
+   "source_ref": "01_W1_DEV_ECP.md#L143",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-HOST-02.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-POST-01",
+   "source_ref": "01_W1_DEV_ECP.md#L131",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-R3-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-POST-02",
+   "source_ref": "01_W1_DEV_ECP.md#L132",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/cases.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-R3-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-POST-03",
+   "source_ref": "01_W1_DEV_ECP.md#L133",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-R3-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-POST-04",
+   "source_ref": "01_W1_DEV_ECP.md#L134",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/cases.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-POST-05",
+   "source_ref": "01_W1_DEV_ECP.md#L135",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-PRE-01",
+   "source_ref": "01_W1_DEV_ECP.md#L108",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-R3-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-PRE-02",
+   "source_ref": "01_W1_DEV_ECP.md#L109",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-PRE-03",
+   "source_ref": "01_W1_DEV_ECP.md#L110",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-PRE-04",
+   "source_ref": "01_W1_DEV_ECP.md#L111",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-PRE-05",
+   "source_ref": "01_W1_DEV_ECP.md#L112",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/inspect.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-PROH-01",
+   "source_ref": "01_W1_DEV_ECP.md#L117",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/how_to/independent_check.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-PROH-02",
+   "source_ref": "01_W1_DEV_ECP.md#L118",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/how_to/independent_check.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-R3-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-PROH-03",
+   "source_ref": "01_W1_DEV_ECP.md#L119",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/how_to/independent_check.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-PROH-04",
+   "source_ref": "01_W1_DEV_ECP.md#L120",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/how_to/independent_check.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-RB-01",
+   "source_ref": "01_W1_DEV_ECP.md#L136",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/how_to/independent_check.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-R3-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-RB-02",
+   "source_ref": "01_W1_DEV_ECP.md#L137",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/how_to/independent_check.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-RB-03",
+   "source_ref": "01_W1_DEV_ECP.md#L138",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/how_to/independent_check.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-RB-04",
+   "source_ref": "01_W1_DEV_ECP.md#L139",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/how_to/independent_check.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "DEV-WS-01",
+   "source_ref": "01_W1_DEV_ECP.md#L113",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N03.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "DEV-WS-02",
+   "source_ref": "01_W1_DEV_ECP.md#L114",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N02.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "DEV-WS-03",
+   "source_ref": "01_W1_DEV_ECP.md#L115",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N10.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-API-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "DEV-WS-04",
+   "source_ref": "01_W1_DEV_ECP.md#L116",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "OBSERVED",
+   "observed_ref": "raw/W1-HOST-01.json",
+   "disposition": "OBSERVED_THIS_RUN",
+   "resume": "",
+   "observed_verdict": "PASS"
+  },
+  {
+   "id": "OPS-APP-01",
+   "source_ref": "02_W1_OPS_ECP.md#L90",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-CON-01",
+   "source_ref": "02_W1_OPS_ECP.md#L97",
+   "prior_disposition": "REASONED_NA",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REASONED_NA",
+   "resume": ""
+  },
+  {
+   "id": "OPS-CON-02",
+   "source_ref": "02_W1_OPS_ECP.md#L98",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-CON-03",
+   "source_ref": "02_W1_OPS_ECP.md#L99",
+   "prior_disposition": "DEFERRED",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "DEFERRED",
+   "resume": ""
+  },
+  {
+   "id": "OPS-EFF-01",
+   "source_ref": "02_W1_OPS_ECP.md#L91",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-OP-01",
+   "source_ref": "02_W1_OPS_ECP.md#L100",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-OP-02",
+   "source_ref": "02_W1_OPS_ECP.md#L101",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-OP-03",
+   "source_ref": "02_W1_OPS_ECP.md#L102",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-OP-04",
+   "source_ref": "02_W1_OPS_ECP.md#L103",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-OP-05",
+   "source_ref": "02_W1_OPS_ECP.md#L104",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-OP-06",
+   "source_ref": "02_W1_OPS_ECP.md#L105",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-POST-01",
+   "source_ref": "02_W1_OPS_ECP.md#L106",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-POST-02",
+   "source_ref": "02_W1_OPS_ECP.md#L107",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-POST-03",
+   "source_ref": "02_W1_OPS_ECP.md#L108",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-POST-04",
+   "source_ref": "02_W1_OPS_ECP.md#L109",
+   "prior_disposition": "DEFERRED",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "DEFERRED",
+   "resume": ""
+  },
+  {
+   "id": "OPS-POST-05",
+   "source_ref": "02_W1_OPS_ECP.md#L110",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-PRE-01",
+   "source_ref": "02_W1_OPS_ECP.md#L92",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-PRE-02",
+   "source_ref": "02_W1_OPS_ECP.md#L93",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-PRE-03",
+   "source_ref": "02_W1_OPS_ECP.md#L94",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-PRE-04",
+   "source_ref": "02_W1_OPS_ECP.md#L95",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-PRE-05",
+   "source_ref": "02_W1_OPS_ECP.md#L96",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-RB-01",
+   "source_ref": "02_W1_OPS_ECP.md#L111",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-RB-02",
+   "source_ref": "02_W1_OPS_ECP.md#L112",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/host/host_receipt.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-REC-01",
+   "source_ref": "02_W1_OPS_ECP.md#L113",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "OPS-REC-02",
+   "source_ref": "02_W1_OPS_ECP.md#L114",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "OPS-REC-03",
+   "source_ref": "02_W1_OPS_ECP.md#L115",
+   "prior_disposition": "PARTIAL",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "PARTIAL",
+   "resume": ""
+  },
+  {
+   "id": "OPS-REC-04",
+   "source_ref": "02_W1_OPS_ECP.md#L116",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "OPS-RESUME-01",
+   "source_ref": "02_W1_OPS_ECP.md#L118",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  },
+  {
+   "id": "OPS-STOP-01",
+   "source_ref": "02_W1_OPS_ECP.md#L117",
+   "prior_disposition": "REUSE_VERIFIED",
+   "prior_evidence": "evidence/raw/N11.json",
+   "this_run": "NOT_REOBSERVED",
+   "observed_ref": null,
+   "disposition": "REUSE_VERIFIED",
+   "resume": ""
+  }
+ ]
+}

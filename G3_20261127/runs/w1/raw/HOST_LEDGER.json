@@ -1,0 +1,86 @@
+{
+ "schema": "FHS5.PLP.W1.HostLedger@1",
+ "rows": {
+  "CODEX": {
+   "Selected": "OBSERVED_LOCAL",
+   "Loaded": "OBSERVED_LOCAL",
+   "Installed": "REASONED_NA_NATIVE_ENTRY",
+   "Bound": "OBSERVED_LOCAL",
+   "Invoked": "OBSERVED_LOCAL",
+   "ActualServed": "OBSERVED_LOCAL",
+   "Consumed": "OBSERVED_LOCAL"
+  },
+  "GPT_CHAT": {
+   "Selected": "NOT_OBSERVED",
+   "Loaded": "NOT_OBSERVED",
+   "Installed": "NOT_OBSERVED",
+   "Bound": "NOT_OBSERVED",
+   "Invoked": "NOT_OBSERVED",
+   "ActualServed": "NOT_OBSERVED",
+   "Consumed": "NOT_OBSERVED"
+  },
+  "GPT_WORK": {
+   "Selected": "NOT_OBSERVED",
+   "Loaded": "NOT_OBSERVED",
+   "Installed": "NOT_OBSERVED",
+   "Bound": "NOT_OBSERVED",
+   "Invoked": "NOT_OBSERVED",
+   "ActualServed": "NOT_OBSERVED",
+   "Consumed": "NOT_OBSERVED"
+  },
+  "HERMES": {
+   "Selected": "NOT_OBSERVED",
+   "Loaded": "NOT_OBSERVED",
+   "Installed": "NOT_OBSERVED",
+   "Bound": "NOT_OBSERVED",
+   "Invoked": "NOT_OBSERVED",
+   "ActualServed": "NOT_OBSERVED",
+   "Consumed": "NOT_OBSERVED"
+  }
+ },
+ "evidence": {
+  "CODEX": {
+   "Selected": {
+    "host_id": "CODEX-NATIVE-LOCAL",
+    "version": "3.11.9"
+   },
+   "Loaded": {
+    "slots": [
+     "W1"
+    ],
+    "loaded_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc"
+   },
+   "Installed": {
+    "reason": "REASONED_NA_NATIVE_ENTRY"
+   },
+   "Bound": {
+    "binding_ref": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\FHS-5_PLP_W0-W2_第三代Native-first_執行控制包_FINAL\\01_BODY\\FHS-5_PLP_W1_NATIVE_FIRST",
+    "scope": "W1-NF-01"
+   },
+   "Invoked": {
+    "argv": [
+     "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+     "-c",
+     "import sys,json,hashlib;sys.path.insert(0,'C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\worktrees\\\\g3-20261127\\\\G3_20261127\\\\lib');import g3pack;v=g3pack.verify_pack('C:\\\\Projects\\\\Agent_Workspace\\\\FHS-5_Workspace\\\\FHS-5_PLP_W0-W2_第三代Native-first_執行控制包_FINAL\\\\01_BODY\\\\FHS-5_PLP_W1_NATIVE_FIRST');print(json.dumps({'ok':v['ok'],'manifest':v['manifest_sha256'],'cases':v['counts']['cases']}))"
+    ],
+    "exit": 0,
+    "stdout_sha256": "4d75c2b9ef8589c0e0a43cf6a40a34a3f625d919983db8fabb6e8950532e68e1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "ActualServed": {
+    "served_bytes_sha256": "d4707449ba6b87ffa9d44f2a95b7a8f85b752bc97fdff9d177d914061a04e5c6",
+    "scope_echo": "W1-NF-01",
+    "served_at": "2026-11-27T16:22:58+0800"
+   },
+   "Consumed": {
+    "consumer_id": "g3-w1-consumer-20261127",
+    "consumed_sha256": "0bb1ffe49e11271a7310cc1db37c7aa007b183388e6936cf38275f131fef4629",
+    "action": "parse+use+readback",
+    "readback_at": "2026-11-27T16:22:58+0800"
+   }
+  },
+  "GPT_CHAT": {},
+  "GPT_WORK": {},
+  "HERMES": {}
+ }
+}

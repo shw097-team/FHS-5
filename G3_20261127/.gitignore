@@ -1,0 +1,6 @@
+runs/*/dev/world/
+runs/*/world/
+runs/*/off/
+runs/_scratch/
+__pycache__/
+*.pyc

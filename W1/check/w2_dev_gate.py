@@ -253,22 +253,46 @@ def parse_patch(patch_text):
             if m.group(1) == "deleted file mode":
                 deleted = True
             continue
+        if ln.startswith("--- /dev/null") or ln.startswith("+++ /dev/null"):
+            if ln.startswith("--- /dev/null") and new_file:
+                cur = {"path": None, "a": ["/dev/null"], "b": []}
+                continue
+            raise GateError("PATCH_OP_UNSUPPORTED", "null target")
         h = _FILE_HDR.match(ln)
         if h:
             side, path = h.group(2), h.group(3)
             if path == "/dev/null":
+                # A new file is the only legal null side, and only on a/.
+                if side == "a" and new_file:
+                    cur = {"path": None, "a": ["/dev/null"], "b": []}
+                    continue
                 raise GateError("PATCH_OP_UNSUPPORTED", "null target")
             if path.startswith("/") or "\\" in path or ".." in path.split("/"):
                 raise GateError("PATCH_PATH_INVALID", path)
             if side == "a":
+                if new_file:
+                    cur = {"path": None, "a": ["/dev/null"], "b": []}
+                    continue
                 cur = {"path": path, "a": [path], "b": []}
             else:
-                if cur is None or cur["path"] != path:
+                if cur is None:
+                    raise GateError("PATCH_PATH_MISMATCH",
+                                    f"b/{path} without matching a/")
+                if cur["path"] is None:
+                    if not new_file:
+                        raise GateError("PATCH_PATH_MISMATCH",
+                                        f"b/{path} without a/")
+                    cur["path"] = path
+                    cur["b"].append(path)
+                    cur["operation"] = "ADD"
+                    out[path] = cur
+                    cur = None
+                    continue
+                if cur["path"] != path:
                     raise GateError("PATCH_PATH_MISMATCH",
                                     f"b/{path} without matching a/")
                 cur["b"].append(path)
-                cur["operation"] = "DELETE" if deleted else (
-                    "ADD" if new_file else "MODIFY")
+                cur["operation"] = "DELETE" if deleted else "MODIFY"
                 out[path] = cur
                 cur = None
     return out

@@ -1,0 +1,408 @@
+{
+ "root": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\13_W0_NF_CODEX_20261125\\05_TQAEP\\receipts",
+ "count": 44,
+ "cohorts": {
+  "original": 24,
+  "NF": 10,
+  "SAMPLE": 10
+ },
+ "all_verified": true,
+ "rows": [
+  {
+   "file": "F5-W0-T01.json",
+   "bytes": 2014,
+   "sha256": "03dcc70fe8035bf5ec368a82e28baf67f23e7918fc88cf96ec005b05d6baf992",
+   "case_id": "F5-W0-T01",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T02.json",
+   "bytes": 2261,
+   "sha256": "d09a4d8b070b6704a673a046c73c8d4e690b2eafc02b11244c9912408edb61f1",
+   "case_id": "F5-W0-T02",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T03.json",
+   "bytes": 2105,
+   "sha256": "14d39c4a9c1803b85660fb8cfed462d4c0d16172afd65c63baf9b03f719f3450",
+   "case_id": "F5-W0-T03",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T04.json",
+   "bytes": 2253,
+   "sha256": "6f88cf981b639e742314095400b3a788eb853b7c950c8f355e0bd601bc96243d",
+   "case_id": "F5-W0-T04",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T05.json",
+   "bytes": 2333,
+   "sha256": "93ac2bd6792e0590fcfe6e4a03f63e54ee4b6c3873123e93ccbfdfdb5486f40c",
+   "case_id": "F5-W0-T05",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T06.json",
+   "bytes": 5466,
+   "sha256": "bedc2ac302452ca9acde5986de6e681cf30326faa64f04d7c16e27bcd7693ff2",
+   "case_id": "F5-W0-T06",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T07.json",
+   "bytes": 2593,
+   "sha256": "e0792c58578efa597fab75ce71d3371157a4b8b1d7a3bd4c0cd01ada1ddce454",
+   "case_id": "F5-W0-T07",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T08.json",
+   "bytes": 1868,
+   "sha256": "2cb10dad5e843c1bd2edb786c7c27b4b44657bb4be8f851a69ce50e66d7e8b4a",
+   "case_id": "F5-W0-T08",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T09.json",
+   "bytes": 2421,
+   "sha256": "9c030b245503d026ddbd63bddb643692cbd259c71b6f5551abec56afcdc8f6ed",
+   "case_id": "F5-W0-T09",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T10.json",
+   "bytes": 2399,
+   "sha256": "bf46ebedf06dab2e34982dc71987af451b59ff8bdde0e6bf847c68cd1d2ea43a",
+   "case_id": "F5-W0-T10",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T11.json",
+   "bytes": 2507,
+   "sha256": "48c16e76438bdd6e3f733f30e159cce0550df81ca8396999e7344271be4561c0",
+   "case_id": "F5-W0-T11",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T12.json",
+   "bytes": 2298,
+   "sha256": "a8b2c72111a71e7ca297a55a3e9db7b206eadc57e6e46d5b38b976e2ece27a7b",
+   "case_id": "F5-W0-T12",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T13.json",
+   "bytes": 1808,
+   "sha256": "0b61087da2c3d9238bbb1dd52d8adedf21d224c08813cefc7ad237434d0eeaa9",
+   "case_id": "F5-W0-T13",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T14.json",
+   "bytes": 2350,
+   "sha256": "a6c8ca2809dc862605b0e35005d5543fcc718de9b1d0a50522b82925f0110b7e",
+   "case_id": "F5-W0-T14",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T15.json",
+   "bytes": 2549,
+   "sha256": "aea879b4c2f0fcc1b09036d887eddb9ecd2c5186ed9e3dec648603bd29cb5065",
+   "case_id": "F5-W0-T15",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T16.json",
+   "bytes": 2291,
+   "sha256": "96b00a365ee4cdb34b7a8e230e89ad55f4575b671abd58ad0c5cbfda525e63cb",
+   "case_id": "F5-W0-T16",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T17.json",
+   "bytes": 2304,
+   "sha256": "d01d92ddbe511b99cb4c2f4ae7400657d40206ff5db168651639b92bfb136654",
+   "case_id": "F5-W0-T17",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T18.json",
+   "bytes": 2328,
+   "sha256": "eb803affaa00fe1fcc50112d475349aa02062e21111a77b853cf350d2b923a5a",
+   "case_id": "F5-W0-T18",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T19.json",
+   "bytes": 2434,
+   "sha256": "3f07b9dedec01712992fc998e36f658974f37785fd2abb22b174f4a6b25cd0f4",
+   "case_id": "F5-W0-T19",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T20.json",
+   "bytes": 2226,
+   "sha256": "1b9ccca8bc8cbb27bdf4630e9a8ec110783e1c53f9ff929bc9497c76cd93487b",
+   "case_id": "F5-W0-T20",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T21.json",
+   "bytes": 2236,
+   "sha256": "d9d004b9d89bdbf4e1eb13399d44c48e68babe256f022fb110364bb11c7038db",
+   "case_id": "F5-W0-T21",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T22.json",
+   "bytes": 2619,
+   "sha256": "e8e013d7501aad53856b32a89e7f1ec525d366300bbbc6b28aec40ddd4e0210c",
+   "case_id": "F5-W0-T22",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T23.json",
+   "bytes": 2380,
+   "sha256": "5f33c812d483964389c81c09bbcc85d317a9d8a1aa27081ffa2882d0b0678211",
+   "case_id": "F5-W0-T23",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "F5-W0-T24.json",
+   "bytes": 2703,
+   "sha256": "f8ab2d71c569b4c14d3dee7b4575f1c2fdf79d4600d33592187064abdf9ca80f",
+   "case_id": "F5-W0-T24",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T01.json",
+   "bytes": 2880,
+   "sha256": "508717dc57d6a7b5707c78818c0c394820f70a31886103c01c2b7b9396cf6b72",
+   "case_id": "NF-T01",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T02.json",
+   "bytes": 1882,
+   "sha256": "0f6db5b624b8a772e9b86d41f6ef8a9807fe0d36bf5c23361179532e4d4ee591",
+   "case_id": "NF-T02",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T03.json",
+   "bytes": 1875,
+   "sha256": "0934e2b8ff06c4f1ed1b0f7b05a8f47193b181c117665cb9d7d2be440d318af5",
+   "case_id": "NF-T03",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T04.json",
+   "bytes": 1865,
+   "sha256": "1b133517a54f0d2f36b0d8ce42596d8efce83ea26a581865ebf04db1f5db7d95",
+   "case_id": "NF-T04",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T05.json",
+   "bytes": 1691,
+   "sha256": "44baaa500bc6d6e905aad2b7b39aa4e003f9550e298876e34b8a271691df8686",
+   "case_id": "NF-T05",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T06.json",
+   "bytes": 1616,
+   "sha256": "f4c13fe6d8d36ff279be28d2d305add01a43d8f1f6e2d409af1e41b1205d71d8",
+   "case_id": "NF-T06",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T07.json",
+   "bytes": 2213,
+   "sha256": "d8b8ae350ea326d0e9f2ae84b345272e350ff290ea7298beeff97a7616ce96a1",
+   "case_id": "NF-T07",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T08.json",
+   "bytes": 3433,
+   "sha256": "e4af577f954b8b148acde768e1c97f6c6c1d825791b35a1e6e84d9e4cf779f5c",
+   "case_id": "NF-T08",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T09.json",
+   "bytes": 1868,
+   "sha256": "2f585fa806556ada0a94b3aa730e024bee5d80b2639c63fd2d099e91825fef5a",
+   "case_id": "NF-T09",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "NF-T10.json",
+   "bytes": 1817,
+   "sha256": "4ad413287d59624db4629bc797945dd77a295814bf17c9e192505e2818092816",
+   "case_id": "NF-T10",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R1.json",
+   "bytes": 2264,
+   "sha256": "d1481de39514bc6e9e19255ac72b2cc11e45dcae0bd8e8b2a7bf58d26ef51ca9",
+   "case_id": "SAMPLE-R1",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R10.json",
+   "bytes": 2524,
+   "sha256": "25d384d1df3a9c2e65d2ce1ed509e892c09842f7e410c0eb1c30d85246324ba8",
+   "case_id": "SAMPLE-R10",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R2.json",
+   "bytes": 2279,
+   "sha256": "0afe72d2794efa467da043df6765a65d2a3d2ada78c51c659d45758b27d18eb8",
+   "case_id": "SAMPLE-R2",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R3.json",
+   "bytes": 2201,
+   "sha256": "e938cfbaf7d4e400a42faceddb574de33ccd07518b956c4aa8ad1bdb08a44e77",
+   "case_id": "SAMPLE-R3",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R4.json",
+   "bytes": 5720,
+   "sha256": "62205659f9dd48f38ff176c4b53152f8b7ced45dacfa6e37474fb76bed6d98d9",
+   "case_id": "SAMPLE-R4",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R5.json",
+   "bytes": 2181,
+   "sha256": "9c3715fc1dbec8e2ecb4921afba31a10190d372c4b6eebe03befea438b5031cb",
+   "case_id": "SAMPLE-R5",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R6.json",
+   "bytes": 2189,
+   "sha256": "22208d571a39685e719cf2981e316b8b6628423bb9a8dfd4288df739fc20c7c9",
+   "case_id": "SAMPLE-R6",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R7.json",
+   "bytes": 2213,
+   "sha256": "6f2dc4865715cfc9fb7468d96afb2448bdccbd5910450b31c13eb88cc9e9ce79",
+   "case_id": "SAMPLE-R7",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R8.json",
+   "bytes": 2199,
+   "sha256": "5f1f29a2623c4f29470088fb5f330f14a3441c8aa91d3d770c13a2de39209d2f",
+   "case_id": "SAMPLE-R8",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  },
+  {
+   "file": "SAMPLE-R9.json",
+   "bytes": 2214,
+   "sha256": "adb789cac900ed0795a68a3c837591867155f3134a156716a59b1e683a72f7d2",
+   "case_id": "SAMPLE-R9",
+   "verdict": "PASS",
+   "missing_keys": [],
+   "state": "REUSE_VERIFIED"
+  }
+ ]
+}

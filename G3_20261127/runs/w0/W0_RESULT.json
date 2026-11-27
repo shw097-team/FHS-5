@@ -1,0 +1,113 @@
+{
+ "schema": "FHS5.PLP.G3.W0.Run@1",
+ "run_id": "W0-G3-20261127T160525",
+ "candidate": "W0-G3-PCNF-r2",
+ "source_manifest_sha256": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",
+ "pack_tree_sha256": "e21ad49c2ab1742bd2a0d2f2dfd973522bbf755c820127b4936b8d432776b71d",
+ "case_set_sha256": "da6fa6f3615f4043c90045089ee355c5888036d2900e3cdf646e9120e7db2d81",
+ "samples": {
+  "pass": 10,
+  "total": 10,
+  "rows": [
+   {
+    "case_id": "SAMPLE-R1",
+    "verdict": "PASS",
+    "exit": 0,
+    "status": "COMPLETE",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R1.json"
+   },
+   {
+    "case_id": "SAMPLE-R2",
+    "verdict": "PASS",
+    "exit": 2,
+    "status": "MISSING",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R2.json"
+   },
+   {
+    "case_id": "SAMPLE-R3",
+    "verdict": "PASS",
+    "exit": 3,
+    "status": "INVALID_DUP",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R3.json"
+   },
+   {
+    "case_id": "SAMPLE-R4",
+    "verdict": "PASS",
+    "exit": 3,
+    "status": "INVALID_PATH",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R4.json"
+   },
+   {
+    "case_id": "SAMPLE-R5",
+    "verdict": "PASS",
+    "exit": 3,
+    "status": "INVALID_ENCODING",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R5.json"
+   },
+   {
+    "case_id": "SAMPLE-R6",
+    "verdict": "PASS",
+    "exit": 3,
+    "status": "SHA_MISMATCH",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R6.json"
+   },
+   {
+    "case_id": "SAMPLE-R7",
+    "verdict": "PASS",
+    "exit": 3,
+    "status": "INVALID_FORMAT",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R7.json"
+   },
+   {
+    "case_id": "SAMPLE-R8",
+    "verdict": "PASS",
+    "exit": 3,
+    "status": "INVALID_FORMAT",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R8.json"
+   },
+   {
+    "case_id": "SAMPLE-R9",
+    "verdict": "PASS",
+    "exit": 0,
+    "status": "COMPLETE",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R9.json"
+   },
+   {
+    "case_id": "SAMPLE-R10",
+    "verdict": "PASS",
+    "exit": 0,
+    "status": "COMPLETE",
+    "first_fail": null,
+    "raw": "raw/SAMPLE-R10.json"
+   }
+  ]
+ },
+ "r4_variants": "PASS",
+ "r10_output": "PASS",
+ "receipts_44": {
+  "count": 44,
+  "cohorts": {
+   "original": 24,
+   "NF": 10,
+   "SAMPLE": 10
+  },
+  "all_verified": true
+ },
+ "off": "PASS",
+ "verdict": "PASS",
+ "not_claimed": [
+  "F5-W0-T01..T24 product rerun",
+  "NF-T01..T10 product rerun",
+  "B0 product validation",
+  "independent checker"
+ ]
+}

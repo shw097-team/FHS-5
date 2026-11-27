@@ -1,0 +1,29 @@
+{
+ "run_id": "W1-W1-HERMES-01-20261127T162258",
+ "case_id": "W1-HERMES-01",
+ "kind": "POS",
+ "requirement_ref": "W1M §09.1; U-028",
+ "subject_id": "FHS-5_PLP/W1",
+ "scope": "W1-NF-01",
+ "candidate": "W1-G3-PCNF-r2",
+ "source_manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "pack_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "case_set_sha256": "9e5c6a83b719c400c8d38e82156f494de8d3da65e9ccf32cef3c6c2b8dfd8262",
+ "expected": {
+  "children": "kanban/delegation/swarm each raw"
+ },
+ "observed": {
+  "token": "REQUIRED_CHILD_MISSING",
+  "host": "HERMES",
+  "blocker": "HERMES_HOST_UNBOUND"
+ },
+ "verdict": "DEFERRED",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": [
+  "HERMES Kanban",
+  "HERMES Delegation",
+  "HERMES Swarm"
+ ],
+ "note": "real falsifier observed (REQUIRED_CHILD_MISSING on merged set); POS cannot be claimed without the Hermes host"
+}

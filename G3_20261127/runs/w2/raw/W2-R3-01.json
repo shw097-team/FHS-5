@@ -1,0 +1,35 @@
+{
+ "run_id": "W2-W2-R3-01-20261127T161946",
+ "case_id": "W2-R3-01",
+ "kind": "POS",
+ "expected": {
+  "rows": 13,
+  "nf": 3,
+  "nulls": "preserved"
+ },
+ "observed": {
+  "rows": 13,
+  "nf": 3,
+  "owners": [
+   "Effect Owner",
+   "Repo Owner",
+   "Host/OS Owner",
+   "Repo+Issuer",
+   "Host+OS",
+   "Original Issuer",
+   "Original Issuer",
+   "Original Issuer",
+   "Repo/OPS Owner",
+   "Reader Owner",
+   "Checker",
+   "Publisher",
+   "Repo/Host Owner"
+  ],
+  "all_actual_null": true,
+  "token": "NULL_PRESERVED"
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}

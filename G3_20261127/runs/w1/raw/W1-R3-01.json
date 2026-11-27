@@ -1,0 +1,37 @@
+{
+ "run_id": "W1-W1-R3-01-20261127T162258",
+ "case_id": "W1-R3-01",
+ "kind": "POS",
+ "requirement_ref": "W1M §09.1; D01/D07",
+ "subject_id": "FHS-5_PLP/W1",
+ "scope": "W1-NF-01",
+ "candidate": "W1-G3-PCNF-r2",
+ "source_manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "pack_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "case_set_sha256": "9e5c6a83b719c400c8d38e82156f494de8d3da65e9ccf32cef3c6c2b8dfd8262",
+ "expected": {
+  "inspect": "5+1 files, 26 assets, identity, case set"
+ },
+ "observed": {
+  "files": 5,
+  "assets": 26,
+  "cases": 13,
+  "work_orders": 13,
+  "manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+  "tree_sha256": "22fa47302ebcbb185b98b2c5d0a2bfa90b68becf31cd9f393be4d2ebdd669004",
+  "case_set_sha256": "9e5c6a83b719c400c8d38e82156f494de8d3da65e9ccf32cef3c6c2b8dfd8262",
+  "identity": {
+   "project_id": "FHS-5_PLP",
+   "subject_id": "FHS-5_PLP/W1",
+   "scope": "W1-NF-01",
+   "wave_id": "W1",
+   "batch_id": "FHS-5/W1",
+   "profile": "GENERIC_CODEX_NATIVE_FIRST"
+  },
+  "errors": []
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_INSPECT_ACTUAL",
+ "not_covered": []
+}

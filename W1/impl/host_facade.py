@@ -47,6 +47,7 @@ REQUIRED_EVIDENCE = {
 DENY_HINTS = {
     "Loaded": ("skill", "skill_bytes", "readme"),
     "Installed": ("probe", "local_probe", "container", "skill"),
+    "Invoked": ("skill", "skill_bytes", "readme"),
     "ActualServed": ("exit0", "exit_zero", "hash"),
     "Consumed": ("hash_only", "sha_only", "manifest_hash"),
 }
@@ -78,6 +79,7 @@ def record(led: dict, host: str, stage: str, evidence: dict,
     for hint in DENY_HINTS.get(stage, ()):
         if hint in kind:
             token = {"Loaded": "HOST_PENDING", "Installed": "HOST_PENDING",
+                     "Invoked": "HOST_PENDING",
                      "ActualServed": "SERVED_UNVERIFIED",
                      "Consumed": "CONSUMER_UNVERIFIED"}[stage]
             raise StageDenied(token, f"{stage} rejects evidence kind {kind}")

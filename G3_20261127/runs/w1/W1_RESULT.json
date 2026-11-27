@@ -1,0 +1,129 @@
+{
+ "schema": "FHS5.PLP.G3.W1.Run@1",
+ "run_id": "W1-G3-20261127T162258",
+ "candidate": "W1-G3-PCNF-r2",
+ "source_manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "pack_tree_sha256": "22fa47302ebcbb185b98b2c5d0a2bfa90b68becf31cd9f393be4d2ebdd669004",
+ "case_set_sha256": "9e5c6a83b719c400c8d38e82156f494de8d3da65e9ccf32cef3c6c2b8dfd8262",
+ "cases": [
+  {
+   "case_id": "W1-R3-01",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-R3-01.json"
+  },
+  {
+   "case_id": "W1-HOST-01",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-HOST-01.json"
+  },
+  {
+   "case_id": "W1-HOST-02",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-HOST-02.json"
+  },
+  {
+   "case_id": "W1-HOST-03",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-HOST-03.json"
+  },
+  {
+   "case_id": "W1-R3-02",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-R3-02.json"
+  },
+  {
+   "case_id": "W1-ABI-01",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-ABI-01.json"
+  },
+  {
+   "case_id": "W1-ABI-02",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-ABI-02.json"
+  },
+  {
+   "case_id": "W1-SEC-01",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-SEC-01.json"
+  },
+  {
+   "case_id": "W1-API-01",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-API-01.json"
+  },
+  {
+   "case_id": "W1-R3-03",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-R3-03.json"
+  },
+  {
+   "case_id": "W1-R3-05",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-R3-05.json"
+  },
+  {
+   "case_id": "W1-R3-04",
+   "verdict": "PASS",
+   "first_fail": null,
+   "raw": "raw/W1-R3-04.json"
+  },
+  {
+   "case_id": "W1-HERMES-01",
+   "verdict": "DEFERRED",
+   "first_fail": null,
+   "raw": "raw/W1-HERMES-01.json"
+  }
+ ],
+ "pass": 12,
+ "deferred": 1,
+ "total": 13,
+ "guide": {
+  "nine_keys": [
+   "subject",
+   "scope",
+   "source_sha",
+   "repo_head",
+   "host_id",
+   "policy_epoch",
+   "oracle_sha",
+   "world_raw_sha",
+   "first_fail"
+  ],
+  "same": "PARK_NO_DELTA",
+  "delta": "NEW_MATERIAL_EVIDENCE",
+  "changed": [
+   "world_raw_sha"
+  ],
+  "missing": "DELTA_UNVERIFIED",
+  "pass": true
+ },
+ "ecp67": {
+  "count": 67,
+  "counts": {
+   "OBSERVED_THIS_RUN": 15,
+   "REUSE_VERIFIED": 13,
+   "PARTIAL": 36,
+   "REASONED_NA": 1,
+   "DEFERRED": 2
+  },
+  "this_run_observed": 15
+ },
+ "verdict": "PASS",
+ "not_claimed": [
+  "W1_NF_VALIDATED",
+  "original external Host",
+  "HERMES three-child POS",
+  "W2 protected effect"
+ ]
+}

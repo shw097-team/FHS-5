@@ -1,0 +1,18 @@
+{
+ "consumer_id": "g3-w2-ops-consumer-20261127",
+ "checks": {
+  "schema": true,
+  "subject": true,
+  "scope": true,
+  "cases": true,
+  "pins": true,
+  "material_cases": true,
+  "readback": true
+ },
+ "all_ok": true,
+ "receipt_sha256": "30cfe275ad5337ee78bf03123f53adcdb2d29b16b06999f4c7f72df5c8d591c0",
+ "material_sha256": "6ff635b03326d5ada4aceb930c2a152747300f4d6f035d29a11475c5ce128d8f",
+ "subject": "FHS-5_PLP/W2/CONTROL_PACK",
+ "scope": "W2-NF-01",
+ "action": "parse+use+field-compare+readback"
+}

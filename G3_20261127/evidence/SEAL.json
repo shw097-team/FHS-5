@@ -1,0 +1,22 @@
+{
+ "schema": "FHS5.PLP.G3.OuterSeal@1",
+ "manifest_sha256": "56bf848c172ccdf2c85976c7522e1f4cb4d2796f09974fefa0a8b346ec14f4f3",
+ "candidate": "cfc7a1aac11b452bcef6b158bc38e0db7e082762d0305132242606a68f37be63",
+ "packs": {
+  "W0": {
+   "manifest_sha256": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",
+   "tree_sha256": "e21ad49c2ab1742bd2a0d2f2dfd973522bbf755c820127b4936b8d432776b71d"
+  },
+  "W1": {
+   "manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+   "tree_sha256": "22fa47302ebcbb185b98b2c5d0a2bfa90b68becf31cd9f393be4d2ebdd669004"
+  },
+  "W2": {
+   "manifest_sha256": "7bdc4a0acb497944450d89a2c347d26ca4ac8593f6ee47ac229215a80ff227e0",
+   "tree_sha256": "957013dd9d1152b5dd259c5d08a068b976ad2b3ef6251a9507128daf75a1bb0c"
+  }
+ },
+ "files": 88,
+ "redacted_jsons": 58,
+ "note": "outer seal; the manifest does not embed this file"
+}

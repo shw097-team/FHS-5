@@ -1,0 +1,80 @@
+{
+ "variants": [
+  {
+   "variant": "dotdot",
+   "input": "../outside/canary.md",
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "canary_leak": false,
+   "verdict": "PASS",
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\cli\\briefcheck.py",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\world\\root",
+    "--input",
+    "../outside/canary.md"
+   ],
+   "stdout": "{\"exit\":3,\"status\":\"INVALID_PATH\"}\n",
+   "stderr": ""
+  },
+  {
+   "variant": "absolute",
+   "input": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\world\\outside\\canary.md",
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "canary_leak": false,
+   "verdict": "PASS",
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\cli\\briefcheck.py",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\world\\root",
+    "--input",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\world\\outside\\canary.md"
+   ],
+   "stdout": "{\"exit\":3,\"status\":\"INVALID_PATH\"}\n",
+   "stderr": ""
+  },
+  {
+   "variant": "unc",
+   "input": "\\\\localhost\\share\\canary.md",
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "canary_leak": false,
+   "verdict": "PASS",
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\cli\\briefcheck.py",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\world\\root",
+    "--input",
+    "\\\\localhost\\share\\canary.md"
+   ],
+   "stdout": "{\"exit\":3,\"status\":\"INVALID_PATH\"}\n",
+   "stderr": ""
+  },
+  {
+   "variant": "junction",
+   "input": "escape_dir/canary.md",
+   "exit": 3,
+   "status": "INVALID_PATH",
+   "canary_leak": false,
+   "verdict": "PASS",
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\cli\\briefcheck.py",
+    "--root",
+    "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\world\\root",
+    "--input",
+    "escape_dir/canary.md"
+   ],
+   "stdout": "{\"exit\":3,\"status\":\"INVALID_PATH\"}\n",
+   "stderr": ""
+  }
+ ],
+ "canary_sha_before": "3970625c5531f5bd55a07b36781e26730772ed13be9af01ea0818cfc7400f2e7",
+ "canary_sha_after": "3970625c5531f5bd55a07b36781e26730772ed13be9af01ea0818cfc7400f2e7",
+ "junction_created": true,
+ "verdict": "PASS"
+}

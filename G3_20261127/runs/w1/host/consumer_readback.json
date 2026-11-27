@@ -1,0 +1,10 @@
+{
+ "consumer_id": "g3-w1-consumer-20261127",
+ "action": "parse+use+readback",
+ "subject": "FHS-5_PLP/W1",
+ "scope": "W1-NF-01",
+ "manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "cases_seen": 13,
+ "first_case": "W1-HOST-01",
+ "readback_at": "2026-11-27T16:22:58+0800"
+}

@@ -1,0 +1,66 @@
+{
+ "argv": [
+  "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\cli\\briefcheck.py",
+  "--root",
+  ".",
+  "--input",
+  "case_ok.md",
+  "--output",
+  "out/result.json"
+ ],
+ "cwd": "C:\\Projects\\Agent_Workspace\\FHS-5_Workspace\\worktrees\\g3-20261127\\G3_20261127\\runs\\w0\\world\\root",
+ "exit": 0,
+ "stdout": "{\"exit\":0,\"missing\":[],\"provided\":[\"A\",\"B\"],\"sha256\":\"9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece\",\"status\":\"COMPLETE\"}\n",
+ "stderr": "",
+ "stdout_sha256": "e53d0b1cc16959bd2c149e6158d71f19cfe7c288a8626015a985102e0bcbc8a6",
+ "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+ "elapsed_ms": 110,
+ "run_id": "W0-SAMPLE-R10-20261127T160525",
+ "case_id": "SAMPLE-R10",
+ "kind": "POS",
+ "candidate": "W0-G3-PCNF-r2",
+ "source_manifest_sha256": "baa516b5675589c1a329cd5f65970d8d6c12b7892dd7c079115e1251c9e6e96d",
+ "fixture": "case_ok.md",
+ "oracle": "assets/oracles/W0_SAMPLE_ORACLE.json",
+ "expected": {
+  "exit": 0,
+  "status": "COMPLETE"
+ },
+ "observed": {
+  "exit": 0,
+  "status": "COMPLETE",
+  "missing": []
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "pre_sha": {
+  "case_ambiguous.md": "01eb4f730a6abedf73cab7a23c309b734e52e255f23acc8883061987029dd221",
+  "case_bad_path.md": "66da16f375f3eed88719783f0128c22102440d6a390ded73c865ef2780c18f31",
+  "case_bad_utf8.md": "551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313",
+  "case_dup.md": "bb62042e22a0d3ffd1310a2b19a2917d22114a6b726bd0fee88429de7ef2d4ee",
+  "case_malformed.md": "9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508",
+  "case_missing.md": "eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019",
+  "case_ok.md": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece"
+ },
+ "post_sha": {
+  "case_ambiguous.md": "01eb4f730a6abedf73cab7a23c309b734e52e255f23acc8883061987029dd221",
+  "case_bad_path.md": "66da16f375f3eed88719783f0128c22102440d6a390ded73c865ef2780c18f31",
+  "case_bad_utf8.md": "551adbc58f3958e9f27b02de17499fdddc646ae3fa9b8baf3af307c977854313",
+  "case_dup.md": "bb62042e22a0d3ffd1310a2b19a2917d22114a6b726bd0fee88429de7ef2d4ee",
+  "case_malformed.md": "9aaa933b54226cb6e8351617ef0b028dba2d55e73fdb7a4e1c4f8b379b987508",
+  "case_missing.md": "eb8e4ff0aa7eaa190bfe61b24c84aa7101d93d55d9a919fe2437aca27bd9f019",
+  "case_ok.md": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece"
+ },
+ "source_unchanged": true,
+ "parsed": {
+  "exit": 0,
+  "missing": [],
+  "provided": [
+   "A",
+   "B"
+  ],
+  "sha256": "9ce5ceefb25ece9ec8c785fa4aac5c45efc5eb363aa7df9aa573c38ad21eaece",
+  "status": "COMPLETE"
+ }
+}

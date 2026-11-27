@@ -1,0 +1,25 @@
+{
+ "run_id": "W1-W1-R3-02-20261127T162258",
+ "case_id": "W1-R3-02",
+ "kind": "NEG",
+ "requirement_ref": "W1M §09.1; B02 §09",
+ "subject_id": "FHS-5_PLP/W1",
+ "scope": "W1-NF-01",
+ "candidate": "W1-G3-PCNF-r2",
+ "source_manifest_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "pack_sha256": "f00b4ee93611e738e409d40758aa320b0bfec3ef0a01fea04dbf5bcb9f1566dc",
+ "case_set_sha256": "9e5c6a83b719c400c8d38e82156f494de8d3da65e9ccf32cef3c6c2b8dfd8262",
+ "expected": {
+  "token": "HOST_PENDING",
+  "effect": 0
+ },
+ "observed": {
+  "token": "HOST_PENDING",
+  "stage": "Loaded",
+  "evidence": "skill_bytes"
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}

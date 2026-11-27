@@ -1,0 +1,99 @@
+{
+ "run_id": "W2-W2-DEV-01-20261127T161939",
+ "case_id": "W2-DEV-01",
+ "kind": "POS",
+ "expected": {
+  "apply": "MODIFY+ADD exact",
+  "tests": "exit 0",
+  "reverse": "preimage",
+  "restore": "absent+preimage",
+  "unlisted": "unchanged"
+ },
+ "observed": {
+  "base": "9fae9257a3402928efbe6ff0cd66f45761f52846",
+  "preimage": {
+   "bytes": 9336,
+   "sha256": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+  },
+  "post_expected": {
+   "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+   "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+  },
+  "post_actual": {
+   "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+   "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+  },
+  "apply": {
+   "ok": true,
+   "first_fail": null,
+   "wrote": [
+    "W1/check/test_j1_receiver.py",
+    "W1/check/w2_receiver.py"
+   ],
+   "preimage_sha256": {
+    "W1/check/w2_receiver.py": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0"
+   },
+   "postimage_sha256": {
+    "W1/check/w2_receiver.py": "28bc674b564102b44bfa196ed0d2ce8d78f88018e8670b1d7c02bf0640244595",
+    "W1/check/test_j1_receiver.py": "7a364a28d2ea295e69e2623761137016130a1a7cdee205d56a118c45ef46a1e1"
+   },
+   "recovery_kind": "REVERSE_PATCH_ON_COPY"
+  },
+  "tests": {
+   "argv": [
+    "<HOME>\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "W1/check/test_j1_receiver.py"
+   ],
+   "exit": 0,
+   "stderr_tail": "d (__main__.J1ReceiverTests.test_j1_t07_unlisted_entry_refused)\nA file the manifest never names must not reach a product call. ... ok\ntest_j1_t08_reparse_alias_refused (__main__.J1ReceiverTests.test_j1_t08_reparse_alias_refused)\nA junction inside the root that aliases a listed path is refused. ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 4.894s\n\nOK\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "reverse": {
+   "ok": true,
+   "first_fail": null,
+   "checks": [
+    {
+     "check": "reverse_apply",
+     "ok": true,
+     "detail": ""
+    },
+    {
+     "check": "restored_matches_preimage",
+     "ok": true,
+     "detail": {
+      "W1/check/w2_receiver.py": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+      "W1/check/test_j1_receiver.py": null
+     }
+    }
+   ],
+   "restored": {
+    "W1/check/w2_receiver.py": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+    "W1/check/test_j1_receiver.py": null
+   }
+  },
+  "restore": {
+   "receiver_sha": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+   "test_absent": true,
+   "reverse_exit": 0,
+   "reverse_stderr": ""
+  },
+  "unlisted_unchanged": true,
+  "checks": {
+   "driver_exit": true,
+   "check_ok": true,
+   "apply_ok": true,
+   "wrote_exact": true,
+   "post_match": true,
+   "tests_ok": true,
+   "reverse_ok": true,
+   "restored_preimage": true,
+   "restored_absence": true,
+   "unlisted_unchanged": true,
+   "git_not_reset": true
+  }
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_EFFECT_ACTUAL",
+ "not_covered": []
+}

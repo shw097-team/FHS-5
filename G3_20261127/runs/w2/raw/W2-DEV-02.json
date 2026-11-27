@@ -1,0 +1,21 @@
+{
+ "run_id": "W2-W2-DEV-02-20261127T161946",
+ "case_id": "W2-DEV-02",
+ "kind": "NEG",
+ "expected": {
+  "token": "REPO_HEAD_MISMATCH",
+  "writes": 0
+ },
+ "observed": {
+  "caller_head": "1111111111111111111111111111111111111111",
+  "live_head": "670195217e44833f3c8536ca337eebda98abab78",
+  "first_fail": "REPO_HEAD_MISMATCH",
+  "wrote": [],
+  "receiver_sha": "c666740268cce914819e2ba43a0dbd9413de709792ee2c8338b0b67e895c74f0",
+  "test_absent": true
+ },
+ "verdict": "PASS",
+ "first_fail": null,
+ "observation_layer": "PRODUCT_CASE",
+ "not_covered": []
+}
